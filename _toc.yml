@@ -3,5 +3,4 @@ root: intro
 parts:
   - caption: Introduction to Computer Programming
     chapters:
-      - file: 1_1_Week 1
-      - file: test
+      - file: 1_0_Introduction_to_Python_and_Jupyter
