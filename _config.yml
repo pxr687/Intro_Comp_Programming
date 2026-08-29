@@ -31,10 +31,10 @@ html:
   use_edit_page_button: true
   use_repository_button: true
   use_issues_button: true
-  baseurl: https://pxr687.github.io/intro_comp_prog
+  baseurl: https://github.com/pxr687/Intro_Comp_Programming
 
 repository:
-  url: https://github.com/pxr687/intro_comp_prog
+  url: https://github.com/pxr687/Intro_Comp_Programming
   branch: main
 
 launch_buttons:
