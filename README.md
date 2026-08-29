@@ -4,4 +4,6 @@ Textbook for the September 2026 Introduction to Computer Programming course at G
 
 ### To re-build Github Pages
 
+`jupyter-book build .`
+
 `ghp-import -n -p -f _build/html`
