@@ -1,6 +1,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Intro to Computer Programming
+  - caption: Introduction to Computer Programming
     chapters:
-      - file: 0_0_week_1
+      - file: 1_1_Week 1
+      - file: test
