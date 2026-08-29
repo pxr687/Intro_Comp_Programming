@@ -35,7 +35,7 @@ html:
 
 repository:
   url: https://github.com/pxr687/intro_comp_prog
-  branch: main
+  branch: HEAD
 
 launch_buttons:
   # The interface interactive links will activate ["classic", "jupyterlab"]
