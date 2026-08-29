@@ -1,0 +1,6 @@
+format: jb-book
+root: intro
+parts:
+  - caption: Intro to Computer Programming
+    chapters:
+      - file: 0_0_week_1
