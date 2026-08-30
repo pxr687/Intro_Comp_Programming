@@ -1,4 +1,6 @@
 # Introduction to Computer Programming
 
-Textbook for the September 2026 Introduction to Computer Programming course
+Welcome to the textbook for the September 2026 Introduction to Computer Programming course
 at Global Academy, Siam University.
+
+You can download any page by clicking this icon: ![](
