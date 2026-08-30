@@ -4,7 +4,7 @@ parts:
   - caption: Week 1
     chapters:
       - file: 1_0_Introduction_to_Python_and_Jupyter
-        file: 1_0_Class_Rule
-        file: 1_2_Class_Grades_Assignments_Exams
-        file: 1_3_Introduction_to_Python_and_Jupyter
-        file: 1_4_Jupyter_Notebooks
+      - file: 1_0_Class_Rules
+      - file: 1_2_Class_Grades_Assignments_Exams
+      - file: 1_3_Introduction_to_Python_and_Jupyter
+      - file: 1_4_Jupyter_Notebooks
