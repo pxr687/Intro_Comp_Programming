@@ -174,7 +174,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 1</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weeks 1 + 2</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_0_Class_Rules.html">Class Rules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_2_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
@@ -282,7 +282,7 @@
       
       
       
-      <li><a href="https://github.com/pxr687/Intro_Comp_Programming/edit/main/1_3_Introduction_to_Python_and_Jupyter.ipynb" target="_blank"
+      <li><a href="https://github.com/pxr687/Intro_Comp_Programming/edit/main/1_3_Introduction_to_Python_and_Jupyter.Rmd" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -329,7 +329,7 @@
       
       
       
-      <li><a href="_sources/1_3_Introduction_to_Python_and_Jupyter.ipynb" target="_blank"
+      <li><a href="_sources/1_3_Introduction_to_Python_and_Jupyter.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -339,7 +339,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.Rmd</span>
 </a>
 </li>
       
@@ -427,7 +427,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">Jupyter Notebooks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">Markdown cells</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Code cells</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-code">More code</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
 </li>
@@ -464,201 +465,109 @@ writing code that is clear and simple.</p></li>
 <p><em>Brett et al, 2023</em></p>
 </div></blockquote>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/python_growth.JPG" />
-Image from <a class="reference external" href="https://stackoverflow.blog/2017/09/06/incredible-growth-python">here</a>.</p>
+(Image from <a class="reference external" href="https://stackoverflow.blog/2017/09/06/incredible-growth-python">here</a>)</p>
+<p>Have a look at <a class="reference external" href="https://docs.python.org/3/faq/general.html">this page</a> for some extra information about Python, including why it is called “Python”!</p>
 </section>
 <section id="jupyter-notebooks">
 <h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Link to this heading">#</a></h2>
-<p>This textbook is written using Jupyter Notebooks. For a lot of this class, these are the files we will use to write and run Python code.</p>
-<p>Throughout this textbook you should run the code yourself. Click this button at the top of the page to get started:</p>
+<p>This textbook is written using Jupyter Notebooks. Inside a Jupyter Notebook (an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file) we can write and run Python code. We will do this for the start of this course. Later, we will install Python on your personal laptop.</p>
+<p>When using this textbook you should run the code yourself, do not just read the text.</p>
+<p>Click this button at the top of the page to launch Binder, where you can run the Python code as well as read the text:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG" /></p>
 <p>Or click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_3_Introduction_to_Python_and_Jupyter.ipynb">here 🚀</a>.</p>
+<p><strong>Note:</strong> it can take a few minutes to launch the notebook online…</p>
 </section>
 <section id="markdown-cells">
 <h2>Markdown cells<a class="headerlink" href="#markdown-cells" title="Link to this heading">#</a></h2>
+<p>Jupyter Notebooks are made from <em>cells</em>.</p>
+<p>Your are reading the text in a <em>Markdown</em> cell.</p>
+<p>We can put text, images, tables and <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html">web hyperlinks</a> inside a Markdown cell.</p>
+<p>A Markdown cell does NOT run code.</p>
+<p>Everything you have read in this book so far is inside of a Markdown cell.</p>
 </section>
 <section id="code-cells">
 <h2>Code cells<a class="headerlink" href="#code-cells" title="Link to this heading">#</a></h2>
-</section>
-<section id="more-code">
-<h2>More code<a class="headerlink" href="#more-code" title="Link to this heading">#</a></h2>
+<p>The cell below is a code cell.</p>
+<p>As you would expect, this cell runs code. We will now see our first bit of Python code!</p>
+<p><em>Note</em>: you can press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> on your keyboard to run a code cell:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/data/gender_stats.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country_name</th>
-      <th>country_code</th>
-      <th>fert_rate</th>
-      <th>gdp_us_billion</th>
-      <th>health_exp_per_cap</th>
-      <th>health_exp_pub</th>
-      <th>prim_ed_girls</th>
-      <th>mat_mort_ratio</th>
-      <th>population</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Aruba</td>
-      <td>ABW</td>
-      <td>1.66325</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>48.721939</td>
-      <td>NaN</td>
-      <td>0.103744</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Afghanistan</td>
-      <td>AFG</td>
-      <td>4.95450</td>
-      <td>19.961015</td>
-      <td>161.138034</td>
-      <td>2.834598</td>
-      <td>40.109708</td>
-      <td>444.00</td>
-      <td>32.715838</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Angola</td>
-      <td>AGO</td>
-      <td>6.12300</td>
-      <td>111.936542</td>
-      <td>254.747970</td>
-      <td>2.447546</td>
-      <td>NaN</td>
-      <td>501.25</td>
-      <td>26.937545</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Albania</td>
-      <td>ALB</td>
-      <td>1.76925</td>
-      <td>12.327586</td>
-      <td>574.202694</td>
-      <td>2.836021</td>
-      <td>47.201082</td>
-      <td>29.25</td>
-      <td>2.888280</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Andorra</td>
-      <td>AND</td>
-      <td>NaN</td>
-      <td>3.197538</td>
-      <td>4421.224933</td>
-      <td>7.260281</td>
-      <td>47.123345</td>
-      <td>NaN</td>
-      <td>0.079547</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>Kosovo</td>
-      <td>XKX</td>
-      <td>2.14250</td>
-      <td>6.804620</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1.813820</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>Yemen, Rep.</td>
-      <td>YEM</td>
-      <td>4.22575</td>
-      <td>36.819337</td>
-      <td>207.949700</td>
-      <td>1.417836</td>
-      <td>44.470076</td>
-      <td>399.75</td>
-      <td>26.246608</td>
-    </tr>
-    <tr>
-      <th>213</th>
-      <td>South Africa</td>
-      <td>ZAF</td>
-      <td>2.37525</td>
-      <td>345.209888</td>
-      <td>1123.142656</td>
-      <td>4.241441</td>
-      <td>48.516298</td>
-      <td>143.75</td>
-      <td>54.177209</td>
-    </tr>
-    <tr>
-      <th>214</th>
-      <td>Zambia</td>
-      <td>ZMB</td>
-      <td>5.39425</td>
-      <td>24.280990</td>
-      <td>185.556359</td>
-      <td>2.687290</td>
-      <td>49.934484</td>
-      <td>233.75</td>
-      <td>15.633220</td>
-    </tr>
-    <tr>
-      <th>215</th>
-      <td>Zimbabwe</td>
-      <td>ZWE</td>
-      <td>3.94300</td>
-      <td>15.495514</td>
-      <td>115.519881</td>
-      <td>2.695188</td>
-      <td>49.529875</td>
-      <td>398.00</td>
-      <td>15.420964</td>
-    </tr>
-  </tbody>
-</table>
-<p>216 rows × 9 columns</p>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
 </div>
-<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_test.ipynb">here🚀</a> to launch the exercise online.</p>
-<p>OR click <a class="reference internal" href="exercise_test.html"><span class="std std-doc">here</span></a>, if you want to download it to use on your own computer.</p>
+</div>
+</div>
+<p>What happened here?</p>
+<p>When I (or you!) pressed <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> my Jupyter Notebook sent the input (<code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span></code>) to the Python compiler (also called an interpreted).</p>
+<p>The compiler added 2 and 2 together, and showed me the output.</p>
+<p>Here is some more, simple Python code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world!
+</pre></div>
+</div>
+</div>
+</div>
+<p>What happened here?</p>
+<p>When I (or you!) pressed <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> my Jupyter Notebook sent the input - this time the input is text, not numbers - to the Python interpreter.</p>
+<p>The text is inside the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function. All this does is takes input and…prints it out, as you probably guessed!</p>
+<p>We will talk more lateer about text and numbers in Python, for now, try changing the text in the cell below to make it say something you want it to say:</p>
+<p><em>Note</em>: one Python rule is that you have to put text in quotes, <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'</span></code>. You will get an error message if you do not.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Change this text!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Change this text!
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have seen how to put code inside code cells.</p>
+<p>We can also write <em>comments</em> inside code cells. A comment is <strong>NOT</strong> sent to the Python compiler. This means it is <strong>NOT</strong> run as Python code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment. It is not run as Python code, even when we press `Shift + Enter`</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comments are useful for <em>humans</em>. They explain what the code does:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment. It is not run as Python code, even when we press `Shift + Enter`</span>
+<span class="c1"># This comment explains what the code does. It prints out &quot;Hello class!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello class!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello class!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
+</section>
+<section id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
+<p>We will now do our first Python exercise!</p>
+<p><em>Note</em>: your assignments, tests and exams will also be a bit like this.</p>
+<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_1_python_jupyter_intro.ipynb">here 🚀</a> to launch the exercise.</p>
 <section id="references">
 <h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
 <p>Brett, M., Rush, P., Adhikari, A., Denero, J., &amp; Wagner, D. (2023). <em>Our tools.</em> In <em>Coding for data.</em> <a class="reference external" href="https://odsti.github.io/cfd-textbook/the_software.html">https://odsti.github.io/cfd-textbook/the_software.html</a></p>
@@ -734,7 +643,8 @@ Image from <a class="reference external" href="https://stackoverflow.blog/2017/0
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">Jupyter Notebooks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">Markdown cells</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Code cells</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-code">More code</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
 </li>
