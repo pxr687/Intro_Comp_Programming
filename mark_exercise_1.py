@@ -82,7 +82,7 @@ def check_answer_5(answer_5,
 
 # Utility answers for testing within exercise notebook (MUST BE COMMENTED OUT)
 # answer_1 = 100 * 22
-# answer_2 = "Siam University"
+# answer_2 = "SIAM UNIVERSITY"
 # answer_3 = 1000/27
 # answer_4 = "This is a fine answer"
 # answer_5 = 100*100*2
