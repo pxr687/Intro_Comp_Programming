@@ -7,3 +7,9 @@ Textbook for the September 2026 Introduction to Computer Programming course at G
 `jupyter-book build .`
 
 `ghp-import -n -p -f _build/html`
+
+### For each new Exercise
+
+`exercise_X_TEMPLATE.ipynb` is a template for the exercise notebook. 
+
+`mark_exercise_X.py` is a marking template.
