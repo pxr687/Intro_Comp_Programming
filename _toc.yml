@@ -1,7 +1,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Week 1
+  - caption: Weeks 1 + 2
     chapters:
       - file: 1_0_Introduction_to_Python_and_Jupyter
       - file: 1_0_Class_Rules
