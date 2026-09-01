@@ -17,6 +17,6 @@ You can also download any page, to use on your own computer, by clicking this ic
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download.JPG)
 
-## Important note
+## Note on the inspiration for this textbook
 
-This textbook is inspired by, and sometimes adapts content from the excellent [*Coding for Data*, by Brett et al (2023)](https://odsti.github.io/cfd-textbook).
+This textbook is inspired by, and sometimes adapts content from the excellent [*Coding for Data*, by Brett et al (2023)](https://odsti.github.io/cfd-textbook) - I encourage you to also check out that textbook. Where content is adapted, this is noted clearly at the beginning of the page. Please see [here](https://github.com/odsti/cfd-textbook/blob/main/license.md) for more information.

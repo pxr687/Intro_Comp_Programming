@@ -3,9 +3,8 @@ root: intro
 parts:
   - caption: Weeks 1 + 2
     chapters:
-      - file: 1_0_Introduction_to_Python_and_Jupyter
       - file: 1_0_Class_Rules
       - file: 1_2_Class_Grades_Assignments_Exams
       - file: 1_3_Introduction_to_Python_and_Jupyter
-      - file: 1_4_Variables
-      - file: 1_5_Jupyter_Notebooks
+      - file: 1_4_More_Jupyter_Notebooks
+      - file: 1_5_Variables
