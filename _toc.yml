@@ -8,3 +8,4 @@ parts:
       - file: 1_3_Introduction_to_Python_and_Jupyter
       - file: 1_4_More_Jupyter_Notebooks
       - file: 1_5_Variables
+      - file: 1_6_Variables_Datatypes_Functions
