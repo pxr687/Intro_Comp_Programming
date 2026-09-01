@@ -15,7 +15,7 @@ jupyter:
 <!-- #region -->
 # Introduction to Python and Jupyter Notebook 
 
-*Note*: This pages cites and draws inspiration from [Brett et al, 2023](https://odsti.github.io/cfd-textbook/the_software.html).
+*Note*: This pages cites and draws inspiration from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/the_software.html).
 
 ## Python
 

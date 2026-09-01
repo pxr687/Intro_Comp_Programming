@@ -14,7 +14,7 @@ jupyter:
 
 # More on Jupyter Notebooks
 
-*Note*: this page is adapted from [Brett et al (2023)](https://odsti.github.io/cfd-textbook/more_on_jupyter.html).
+*Note*: this page is adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/more_on_jupyter.html).
 
 How does Jupyter Notebook work? It has two parts:
 
