@@ -371,7 +371,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -387,6 +389,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-for-data-and-berkeley-foundations-of-data-science-license">Coding for Data and Berkeley Foundations of Data Science license</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -398,8 +408,34 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="license">
 <h1>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h1>
-<p>The material for this course is licensed under the CC-BY 4.0 license,
+<p>Where not otherwise stated, the material for this course is licensed under the CC-BY 4.0 license,
 available at <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">https://creativecommons.org/licenses/by/4.0</a>.</p>
+<section id="coding-for-data-and-berkeley-foundations-of-data-science-license">
+<h2>Coding for Data and Berkeley Foundations of Data Science license<a class="headerlink" href="#coding-for-data-and-berkeley-foundations-of-data-science-license" title="Link to this heading">#</a></h2>
+<p>This textbook is partly adapted from the <a class="reference external" href="https://odsti.github.io/cfd-textbook/intro.html">Coding for Data</a> textbook,
+by Matthew Brett, Peter Rush, Ani Adhikari, John Denero and David Wagner (2023).</p>
+<p>Please see the Coding for Data <a class="reference external" href="https://github.com/odsti/cfd-textbook/blob/main/license.md">License</a>, a
+quote from which is below:</p>
+<blockquote>
+<div><p>Various elements of this course are derived from the <a class="reference external" href="https://www.inferentialthinking.com">excellent
+textbook</a> for UC Berkeley’s
+course <a class="reference external" href="http://data8.org">Foundations of Data Science</a>.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Specifically, the versions of the Berkeley pages that I am using here
+come from last commit in that repository that is licensed with
+a Creative Commons CC-BY-NC license -
+<a class="reference external" href="https://github.com/data-8/textbook/commit/64b20f0">64b20f0</a>. The
+subsequent commit -
+<a class="reference external" href="https://github.com/data-8/textbook/commit/710ed4e">710ed4e</a> -
+relicensed the work with a CC-BY-NC-ND license, forbidding derivative
+works.</p>
+<p>I’ve indicated every page derived from the Berkeley course, at the
+bottom of the page. These pages follow the same CC-BY-NC license as
+the original - see <a class="reference external" href="https://github.com/data-8/textbook/blob/64b20f0452a31545d9fbc8f34a9e86035cd56e45/README.md">the README for commit
+64b20f0</a>.</p>
+</div></blockquote>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -439,6 +475,21 @@ available at <a class="reference external" href="https://creativecommons.org/lic
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-for-data-and-berkeley-foundations-of-data-science-license">Coding for Data and Berkeley Foundations of Data Science license</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -448,7 +499,7 @@ available at <a class="reference external" href="https://creativecommons.org/lic
   <div class="footer-item">
     
 <p class="component-author">
-By Peter Rush (partly adapted from material by Matthew Brett, Peter Rush, Ani Adhikari, John Denero, David Wagner)
+By Peter Rush (partly adapted from material by Matthew Brett, Peter Rush, Ani Adhikari, John Denero and David Wagner)
 </p>
 
   </div>

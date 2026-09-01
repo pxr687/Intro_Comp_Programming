@@ -165,6 +165,6 @@ Variables are very, very, very important in coding. They make our code easy to u
 
 We will now do our first Python exercise!
 
-*Note*: your assignments, [tests and exams](1_2_Class_Grades_Assignments_Exams) will also be a bit like this.
+*Note*: your [assignments, tests and exams](1_2_Class_Grades_Assignments_Exams) will also be a bit like this.
 
 Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_1_python_jupyter_intro.ipynb) to launch the exercise.
