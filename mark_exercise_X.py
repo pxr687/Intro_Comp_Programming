@@ -1,5 +1,6 @@
 from jupyprint import jupyprint
 from marking_sub_functions import soft_assert, sub_check, award_marks
+from mark_exercise_var import mk_var
 import numpy as np
 
 # SET TOTAL MARKS FOR EXERCISE
@@ -23,20 +24,26 @@ total_marks = 5
 
 ###############################################################################
 
-# Utility answers for testing within exercise notebook (MUST BE COMMENTED OUT)
-# answer_1 = ...
-# answer_2 = ...
-# answer_3 = ...
-# answer_4 = ...
-# answer_5 = ...
-
 ### MARKING
 def mark_all(answer_1, 
              answer_2, 
              answer_3,
              answer_4,
              answer_5,
-             return_mark = True):
+             return_mark=True,
+             test_all=False):
+    
+    if test_all==True:
+        usr_k = input()
+        if usr_k == mk_var():
+            # Utility answers for testing within exercise notebook
+            jupyprint(np.array([    
+                    answer_1 := <ans>,
+                    answer_2 := <ans>,
+                    answer_3 := <ans>,
+                    answer_4 := <ans>,
+                    answer_5 := <ans>]))
+            
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),
                   check_answer_3(answer_3, return_mark=return_mark),
