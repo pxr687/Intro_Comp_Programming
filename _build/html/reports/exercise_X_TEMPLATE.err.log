@@ -36,18 +36,23 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_1(answer_1)
+# RUN THIS CELL - DO NOT CHANGE THE CODE.
+import mark_exercise_X
+import numpy as np
 ------------------
 
 
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 3[39m
-[32m      1[39m [38;5;66;03m# DO NOT CHANGE THIS CODE.[39;00m
-[32m      2[39m [38;5;66;03m# RUN THIS CELL TO MARK YOUR ANSWER.[39;00m
-[32m----> [39m[32m3[39m [43mmark_exercise_X[49m[43m.[49m[43mcheck_answer_1[49m(answer_1)
+Traceback [36m(most recent call last)[39m:
 
-[31mAttributeError[39m: module 'mark_exercise_X' has no attribute 'check_answer_1'
+  File [92m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\IPython\core\interactiveshell.py:3699[39m in [95mrun_code[39m
+    exec(code_obj, self.user_global_ns, self.user_ns)
+
+[36m  [39m[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
+[31m    [39m[31mimport mark_exercise_X[39m
+
+  [36mFile [39m[32m~\Intro_Comp_Programming\mark_exercise_X.py:41[39m
+[31m    [39m[31manswer_1 := <ans>,[39m
+                ^
+[31mSyntaxError[39m[31m:[39m invalid syntax
+
 

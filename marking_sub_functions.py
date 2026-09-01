@@ -1,6 +1,10 @@
 from jupyprint import jupyprint
+import numpy as np
 
 # FUNCTIONS TO USE WITHIN QUESTION SPECIFIC FUNCTIONS
+def pre_define_blanks_ans(n_ans):
+    return np.repeat(-99999999999, n_ans)
+                     
 def soft_assert(condition, warning_text, return_mark=False):
     if (condition == False):
         jupyprint("*"+warning_text+"*")

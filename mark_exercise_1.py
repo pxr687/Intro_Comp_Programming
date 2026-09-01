@@ -1,13 +1,13 @@
 from jupyprint import jupyprint
-from marking_sub_functions import soft_assert, sub_check, award_marks
+from marking_sub_functions import soft_assert, sub_check, award_marks, pre_define_blanks_ans
 from mark_exercise_var import mk_var
 import numpy as np
 
 # SET TOTAL MARKS FOR EXERCISE
 total_marks = 5
 
-def pre_define_blanks_ans(n_ans):
-    return np.repeat(..., n_ans)
+def pre_define_blanks(n_ans):
+    return  pre_define_blanks_ans(n_ans)
 
 ### FUNCTIONS TO MARK EACH QUESTION
 

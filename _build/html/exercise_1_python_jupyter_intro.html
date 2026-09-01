@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Exercise 1 &#8212; Introduction to Computer Programming</title>
+    <title>Instructions &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -179,7 +179,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_0_Class_Rules.html">Class Rules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_2_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_3_Introduction_to_Python_and_Jupyter.html">Introduction to Python and Jupyter Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_4_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_4_Variables.html">Variables - Thinking Like a Computer</a></li>
 </ul>
 
     </div>
@@ -413,7 +413,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercise 1</h1>
+    <h1>Instructions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -423,7 +423,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Instructions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-introduction-to-python-and-jupyter">Exercise 1 - Introduction to Python and Jupyter</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-next-cell-to-mark-your-answer">Run the next cell to mark your answer.</a></li>
 </ul>
@@ -459,13 +460,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><strong>First, run this cell</strong>:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="instructions">
+<h1>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h1>
+<p><strong>First, run the code cell below</strong>:</p>
 <p>Click on the cell, then press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_1</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_1</span>
+<span class="n">ansewer_1</span><span class="p">,</span> <span class="n">answer_2</span><span class="p">,</span> <span class="n">answer_3</span><span class="p">,</span> <span class="n">answer_4</span><span class="p">,</span> <span class="n">answer_5</span><span class="p">,</span> <span class="o">=</span> <span class="n">mark_exercise_1</span><span class="o">.</span><span class="n">pre_define_blanks_ans</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -475,15 +479,17 @@ document.write(`
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_2</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> or you will <strong>NOT</strong> get a mark.</p>
 <p>…</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_50</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_50</span></code> or you will <strong>NOT</strong> get a mark.</p>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-1">
-<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h1>
+<p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">me_and_my_cat</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">me_and_my_cat</span></code> or you will <strong>NOT</strong> get a mark.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exercise-1-introduction-to-python-and-jupyter">
+<h1>Exercise 1 - Introduction to Python and Jupyter<a class="headerlink" href="#exercise-1-introduction-to-python-and-jupyter" title="Link to this heading">#</a></h1>
 <p>If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png" /></p>
 <p>Your can view you work by uploading the file here: <a class="reference external" href="https://code-format.com/ipynb-viewer">https://code-format.com/ipynb-viewer</a></p>
 <p>Later in the course we will install Python on your own laptop 🙂.</p>
 <section id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h2>
-<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> which contains the answer of <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">22</span></code></p>
+<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> which contains the result of <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">22</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
@@ -510,16 +516,16 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">mark_exercise_1</span><span class="o">.</span><span class="n">check_answer_1</span><span class="p">(</span><span class="n">answer_1</span><span class="p">)</span>
 
-<span class="nn">File ~\Intro_Comp_Programming\mark_exercise_1.py:27,</span> in <span class="ni">check_answer_1</span><span class="nt">(answer_1, return_mark)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="n">question_name</span> <span class="o">=</span> <span class="s2">&quot;Question 1&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="n">marks_available</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="ne">---&gt; </span><span class="mi">27</span> <span class="n">Q1_conditions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">soft_assert</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span><span class="mi">100</span> <span class="o">*</span> <span class="mi">22</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>                           <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">question_name</span><span class="si">}</span><span class="s2"> is not correct!, `answer_1` is the wrong number!&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>                             <span class="n">return_mark</span><span class="o">=</span><span class="n">return_mark</span><span class="p">)])</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">mark</span> <span class="o">=</span> <span class="n">sub_check</span><span class="p">(</span><span class="n">question_name</span><span class="p">,</span> 
-<span class="g g-Whitespace">     </span><span class="mi">31</span>                  <span class="n">Q1_conditions</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span>                  <span class="n">return_mark</span><span class="o">=</span><span class="n">return_mark</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="k">return</span> <span class="n">award_marks</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="n">marks_available</span><span class="o">=</span><span class="n">marks_available</span><span class="p">)</span>
+<span class="nn">File ~\Intro_Comp_Programming\mark_exercise_1.py:31,</span> in <span class="ni">check_answer_1</span><span class="nt">(answer_1, return_mark)</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="n">question_name</span> <span class="o">=</span> <span class="s2">&quot;Question 1&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">marks_available</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="ne">---&gt; </span><span class="mi">31</span> <span class="n">Q1_conditions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">soft_assert</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span><span class="mi">100</span> <span class="o">*</span> <span class="mi">22</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span>                           <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">question_name</span><span class="si">}</span><span class="s2"> is not correct!, `answer_1` is the wrong number!&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span>                             <span class="n">return_mark</span><span class="o">=</span><span class="n">return_mark</span><span class="p">)])</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="n">mark</span> <span class="o">=</span> <span class="n">sub_check</span><span class="p">(</span><span class="n">question_name</span><span class="p">,</span> 
+<span class="g g-Whitespace">     </span><span class="mi">35</span>                  <span class="n">Q1_conditions</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span>                  <span class="n">return_mark</span><span class="o">=</span><span class="n">return_mark</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="k">return</span> <span class="n">award_marks</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="n">marks_available</span><span class="o">=</span><span class="n">marks_available</span><span class="p">)</span>
 
 <span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\_core\numeric.py:2496,</span> in <span class="ni">isclose</span><span class="nt">(a, b, rtol, atol, equal_nan)</span>
 <span class="g g-Whitespace">   </span><span class="mi">2492</span>         <span class="nb">print</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
@@ -539,7 +545,7 @@ document.write(`
 </section>
 <section id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h2>
-<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> which contains the text <code class="docutils literal notranslate"><span class="pre">Siam</span> <span class="pre">University</span></code>:</p>
+<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> which contains the text <code class="docutils literal notranslate"><span class="pre">SIAM</span> <span class="pre">UNIVERSITY</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
@@ -611,7 +617,7 @@ document.write(`
 </section>
 <section id="question-5">
 <h2>Question 5<a class="headerlink" href="#question-5" title="Link to this heading">#</a></h2>
-<p>The variable <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> be the answer to this one hundred multiplied by one hundren multiplied by two.</p>
+<p>Make variable <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> equal one hundred multiplied by one hundred multiplied by two.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here.</span>
@@ -697,7 +703,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 1</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Instructions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-introduction-to-python-and-jupyter">Exercise 1 - Introduction to Python and Jupyter</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-next-cell-to-mark-your-answer">Run the next cell to mark your answer.</a></li>
 </ul>

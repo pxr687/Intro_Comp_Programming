@@ -49,16 +49,16 @@ mark_exercise_1.check_answer_1(answer_1)
 [32m      2[39m [38;5;66;03m# RUN THIS CELL TO MARK YOUR ANSWER.[39;00m
 [32m----> [39m[32m3[39m [43mmark_exercise_1[49m[43m.[49m[43mcheck_answer_1[49m[43m([49m[43manswer_1[49m[43m)[49m
 
-[36mFile [39m[32m~\Intro_Comp_Programming\mark_exercise_1.py:27[39m, in [36mcheck_answer_1[39m[34m(answer_1, return_mark)[39m
-[32m     25[39m question_name = [33m"[39m[33mQuestion 1[39m[33m"[39m
-[32m     26[39m marks_available = [32m1[39m
-[32m---> [39m[32m27[39m Q1_conditions = np.array([soft_assert([43mnp[49m[43m.[49m[43misclose[49m[43m([49m[43manswer_1[49m[43m,[49m[32;43m100[39;49m[43m [49m[43m*[49m[43m [49m[32;43m22[39;49m[43m)[49m,
-[32m     28[39m                           [33mf[39m[33m"[39m[38;5;132;01m{[39;00mquestion_name[38;5;132;01m}[39;00m[33m is not correct!, `answer_1` is the wrong number![39m[33m"[39m,
-[32m     29[39m                             return_mark=return_mark)])
-[32m     30[39m mark = sub_check(question_name, 
-[32m     31[39m                  Q1_conditions,
-[32m     32[39m                  return_mark=return_mark)
-[32m     33[39m [38;5;28;01mreturn[39;00m award_marks(mark, marks_available=marks_available)
+[36mFile [39m[32m~\Intro_Comp_Programming\mark_exercise_1.py:31[39m, in [36mcheck_answer_1[39m[34m(answer_1, return_mark)[39m
+[32m     29[39m question_name = [33m"[39m[33mQuestion 1[39m[33m"[39m
+[32m     30[39m marks_available = [32m1[39m
+[32m---> [39m[32m31[39m Q1_conditions = np.array([soft_assert([43mnp[49m[43m.[49m[43misclose[49m[43m([49m[43manswer_1[49m[43m,[49m[32;43m100[39;49m[43m [49m[43m*[49m[43m [49m[32;43m22[39;49m[43m)[49m,
+[32m     32[39m                           [33mf[39m[33m"[39m[38;5;132;01m{[39;00mquestion_name[38;5;132;01m}[39;00m[33m is not correct!, `answer_1` is the wrong number![39m[33m"[39m,
+[32m     33[39m                             return_mark=return_mark)])
+[32m     34[39m mark = sub_check(question_name, 
+[32m     35[39m                  Q1_conditions,
+[32m     36[39m                  return_mark=return_mark)
+[32m     37[39m [38;5;28;01mreturn[39;00m award_marks(mark, marks_available=marks_available)
 
 [36mFile [39m[32m~\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\_core\numeric.py:2496[39m, in [36misclose[39m[34m(a, b, rtol, atol, equal_nan)[39m
 [32m   2492[39m         [38;5;28mprint[39m(err_msg)
