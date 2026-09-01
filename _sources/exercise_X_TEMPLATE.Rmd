@@ -12,7 +12,9 @@ jupyter:
     name: python3
 ---
 
-# Instructions
+# Exercise X
+
+## Instructions
 
 **First, run this cell**:
 
@@ -35,8 +37,6 @@ If the question says "make a variable called `answer_2`" you **MUST** call you v
 
 If the question says "make a variable called `answer_50`" you **MUST** call you variable `answer_50` or you will **NOT** get a mark.
 
-
-# Exercise X
 
 If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file.
 

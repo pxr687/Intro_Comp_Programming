@@ -12,7 +12,9 @@ jupyter:
     name: python3
 ---
 
-# Instructions
+# Exercise 1 - Introduction to Python and Jupyter
+
+## Instructions
 
 **First, run the code cell below**:
 
@@ -37,8 +39,6 @@ If the question says "make a variable called `answer_50`" you **MUST** call you 
 
 If the question says "make a variable called `me_and_my_cat`" you **MUST** call you variable `me_and_my_cat` or you will **NOT** get a mark.
 
-
-# Exercise 1 - Introduction to Python and Jupyter
 
 If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file.
 
