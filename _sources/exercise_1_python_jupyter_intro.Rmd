@@ -22,7 +22,7 @@ Click on the cell, then press `Shift + Enter`:
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
 import mark_exercise_1
-ansewer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_1.pre_define_blanks_ans(5)
+answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_1.pre_define_blanks(5)
 ```
 
 **THIS SUPER IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 

@@ -49,7 +49,7 @@ This textbook is written using Jupyter Notebooks. Inside a Jupyter Notebook (an 
 
 When using this textbook you should run the code yourself - do not just read the text. 
 
-Click this button at the top of the page to launch Binder, where you can run the Python code as well as read the text:
+Click this button at the top of the page to launch this page Binder, where you can run the Python code as well as read the text:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
 
@@ -85,9 +85,9 @@ As you would expect, this cell runs code. We will now see our first bit of Pytho
 
 What happened here? 
 
-When I (or you!) pressed `Shift + Enter` my Jupyter Notebook sent the input (`2 + 2`) to the Python compiler (also called an interpreted).
+When I (or you!) pressed `Shift + Enter` Jupyter Notebook sent the input (`2 + 2`) to the Python compiler (also called an interpreter).
 
-The compiler added 2 and 2 together, and showed me the output.
+The compiler added 2 and 2 together, and showed the output.
 
 Here is some more, simple Python code:
 
@@ -109,13 +109,15 @@ We will talk more lateer about text and numbers in Python, for now, try changing
 print("Change this text!")
 ```
 
-We have seen how to put code inside code cells.
+We have seen how to run code in code cells.
 
-We can also write *comments* inside code cells. A comment is **NOT** sent to the Python compiler. This means it is **NOT** run as Python code:
+We can also write *comments* inside code cells. A comment is **NOT** sent to the Python compiler. This means it is **NOT** run as Python code. To make a comment, we put the `#` symbol at the start of the line:
 
 ```{python}
 # This is a comment. It is not run as Python code, even when we press `Shift + Enter`
 ```
+
+So, when you run a cell which only has comments inside...nothing happens!
 
 Comments are useful for *humans*. They explain what the code does:
 

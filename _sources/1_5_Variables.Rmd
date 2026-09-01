@@ -12,9 +12,9 @@ jupyter:
     name: python3
 ---
 
-# Variables - Thinking Like a Computer
+# Variables - thinking like a computer (scientist)
 
-*Note*: this page is inspired and partly based on [Brett et al (2023)](https://odsti.github.io/cfd-textbook/variables_intro.html).
+*Note*: this page is inspired and partly adapted from [Brett et al (2023)](https://odsti.github.io/cfd-textbook/variables_intro.html).
 
 Imagine a person called Aaron. Aaron is studying in the United Kingdom. He wants to make a budget, so that he does not spend too much money each month.
 
@@ -158,11 +158,13 @@ Importantly, in assignment statements, the `=` is called the *assignment operato
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/variable_assignment_all.png)
 
 
+Variables are very, very, very important in coding. They make our code easy to understand, and they avoid mistakes and errors.
+
+
 ## Exercise 1 - Python, Jupyter and Variables
 
 We will now do our first Python exercise!
 
-*Note*: your assignments, tests and exams will also be a bit like this.
+*Note*: your assignments, [tests and exams](1_2_Class_Grades_Assignments_Exams) will also be a bit like this.
 
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_1_python_jupyter_intro.ipynb) to launch the exercise
-   
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_1_python_jupyter_intro.ipynb) to launch the exercise.
