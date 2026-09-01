@@ -1,0 +1,87 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.17.3
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# More on Jupyter Notebooks
+
+*Note*: this page is inspired and partly based on [Brett et al (2023)](https://odsti.github.io/cfd-textbook/using_jupyter.html).
+
+[Comments, keywords, literals, error messages, getting help]
+
+```{python}
+# This is a comment, it is not code.
+print("This is code, it is not a comment!")
+```
+
+```{python}
+"text"
+```
+
+```{python}
+"t" in "text"
+```
+
+```{python}
+"r" in "text"
+```
+
+```{python tags=c("raises-exception")}
+text
+```
+
+Error messages can be confusing! Actually they can be really annoying. BUT they are your friend.
+
+When you fix an error, try to understand WHY the error happened.
+
+For now, you can think that this error happened because I broke this rule:
+
+> One Python rule is that you have to put text in quotes, `"` or `'`. You will get an error message if you do not.
+
+We will look more at this error later.
+
+
+## Getting help in Python
+
+Sometimes, when you write Python code, you will feel like this:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/help_me.png)
+
+However, Python has great built-in ways to get help.
+
+One way is to use the `?` symbol.
+
+This will show you information
+
+```{python}
+# ?print
+```
+
+```{python}
+help(1)
+```
+
+## First exercise
+
+[Explain format]
+
+[All assignments, tests and exams will be done using exercises like this]
+
+```{python}
+import pandas as pd
+
+pd.read_csv("https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/data/gender_stats.csv")
+```
+
+## References
+
+Brett, M., Rush, P., Adhikari, A., Denero, J., & Wagner, D. (2023). *Using Jupyter*. In *Coding for Data*. https://odsti.github.io/cfd-textbook/using_jupyter.html

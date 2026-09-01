@@ -7,7 +7,7 @@ We will use this textbook for every class. It has what you need to learn, and ex
 
 *IMPORTANT:* You must be connected to the internet for this textbook to work properly. Images and data are downloaded from online.
 
-## Writing code yourself, using this textbook
+## Writing and running code yourself, using this textbook
 
 You can run the code, write your own code, and write answers to exercises by clicking this icon at the top of any page:
 
@@ -16,7 +16,3 @@ You can run the code, write your own code, and write answers to exercises by cli
 You can also download any page, to use on your own computer, by clicking this icon at the top of the page: 
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download.JPG)
-
-```python
-
-```
