@@ -1,6 +1,6 @@
 from jupyprint import jupyprint
 from marking_sub_functions import soft_assert, sub_check, award_marks, pre_define_blanks_ans
-from mark_exercise_var import mk_var
+from mk_var import mk_var
 import numpy as np
 
 # SET TOTAL MARKS FOR EXERCISE

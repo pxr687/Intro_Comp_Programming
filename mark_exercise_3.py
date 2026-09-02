@@ -1,6 +1,6 @@
 from jupyprint import jupyprint
 from marking_sub_functions import soft_assert, sub_check, award_marks, pre_define_blanks_ans
-from mark_exercise_var import mk_var
+from mk_var import mk_var
 import numpy as np
 
 # SET TOTAL MARKS FOR EXERCISE
@@ -25,6 +25,20 @@ def pre_define_blanks(n_ans):
 #                      return_mark=return_mark)
 #     return award_marks(mark, marks_available=marks_available)
 
+def check_answer_1(pop_thailand, 
+                   return_mark=False):
+    question_name = "Question 1"
+    answer_name = "pop_thailand"
+    marks_available = 1
+    conditions = np.array([soft_assert(np.isclose(pop_thailand, 71_600_000),
+                              f"{question_name} is not correct! `{answer_name}` should equal 71,600,000!",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
+
 ###############################################################################
 
 ### MARKING
@@ -41,7 +55,7 @@ def mark_all(answer_1,
         if usr_k == mk_var():
             # Utility answers for testing within exercise notebook
             jupyprint(np.array([    
-                    answer_1 := -999,
+                    answer_1 := -71600000,
                     answer_2 := -999,
                     answer_3 := -999,
                     answer_4 := -999,
