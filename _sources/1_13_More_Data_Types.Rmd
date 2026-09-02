@@ -24,3 +24,8 @@ Do this in the context of writing functions.
 *Remember*: your [assignments, tests and exams](1_2_Class_Grades_Assignments_Exams) will also be a bit like this.
 
 Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_7_more_data_types.ipynb) to launch the exercise.
+
+
+----------------------------------------------------------
+
+[🏡](https://pxr687.github.io/Intro_Comp_Programming/intro.html).

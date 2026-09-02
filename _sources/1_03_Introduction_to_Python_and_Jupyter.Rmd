@@ -55,7 +55,7 @@ Click this button at the top of the page to launch this page Binder, where you c
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
 
-Or click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_3_Introduction_to_Python_and_Jupyter.ipynb). 
+Or click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_03_Introduction_to_Python_and_Jupyter.ipynb). 
 
 **Note:** it can take a few minutes to launch the notebook online...
 
@@ -132,3 +132,8 @@ print("Hello class!")
 ### References
 
 Brett, M., Rush, P., Adhikari, A., Denero, J., & Wagner, D. (2023). *Our tools.* In *Coding for data.* https://odsti.github.io/cfd-textbook/the_software.html
+
+
+----------------------------------------------------------
+
+[🏡](https://pxr687.github.io/Intro_Comp_Programming/intro.html).

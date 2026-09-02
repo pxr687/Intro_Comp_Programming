@@ -141,3 +141,8 @@ help(print)
 ## References
 
 Brett, M., Rush, P., Adhikari, A., Denero, J., & Wagner, D. (2023). *Using Jupyter*. In *Coding for Data*. https://odsti.github.io/cfd-textbook/using_jupyter.html
+
+
+----------------------------------------------------------
+
+[🏡](https://pxr687.github.io/Intro_Comp_Programming/intro.html).
