@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Exercise 2 - Expressions &#8212; Introduction to Computer Programming</title>
+    <title>Exercise 3 - Data Types, Comparison Operators and Functions &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -58,8 +58,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'exercise_2_expressions';</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/exercise_2_expressions.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'exercise_3_datatypes_comparison_functions';</script>
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/exercise_3_datatypes_comparison_functions.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -244,7 +244,7 @@
       
       
       
-      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2_expressions.ipynb" target="_blank"
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_3_datatypes_comparison_functions.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +275,7 @@
       
       
       
-      <li><a href="_sources/exercise_2_expressions.Rmd" target="_blank"
+      <li><a href="_sources/exercise_3_datatypes_comparison_functions.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +359,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercise 2 - Expressions</h1>
+    <h1>Exercise 3 - Data Types, Comparison Operators and Functions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -369,7 +369,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 2 - Expressions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 3 - Data Types, Comparison Operators and Functions</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-next-cell-to-mark-your-answer">Run the next cell to mark your answer.</a></li>
@@ -409,9 +409,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="exercise-2-expressions">
-<h1>Exercise 2 - Expressions<a class="headerlink" href="#exercise-2-expressions" title="Link to this heading">#</a></h1>
-<p>If you need help, open the <em><a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_06_Expressions.html">textbook page</a></em> for this exercise.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-3-data-types-comparison-operators-and-functions">
+<h1>Exercise 3 - Data Types, Comparison Operators and Functions<a class="headerlink" href="#exercise-3-data-types-comparison-operators-and-functions" title="Link to this heading">#</a></h1>
+<p>If you need help, click here to open the <em><a class="reference internal" href="#pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html"><span class="xref myst">textbook page</span></a></em> for this exercise.</p>
 <section id="instructions">
 <h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
 <p><strong>THIS SUPER IMPORTANT</strong>: If you see a comment which says <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">DO</span> <span class="pre">NOT</span> <span class="pre">CHANGE</span> <span class="pre">THIS</span> <span class="pre">CODE</span></code> then <strong>DO NOT CHANGE THAT CODE</strong>. You will probably break the exercise if you do…</p>
@@ -420,8 +420,8 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_2</span>
-<span class="n">answer_1</span><span class="p">,</span> <span class="n">answer_2</span><span class="p">,</span> <span class="n">answer_3</span><span class="p">,</span> <span class="n">answer_4</span><span class="p">,</span> <span class="n">answer_5</span><span class="p">,</span> <span class="o">=</span> <span class="n">mark_exercise_2</span><span class="o">.</span><span class="n">pre_define_blanks</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_3</span>
+<span class="n">pop_thailand</span><span class="p">,</span> <span class="n">answer_2</span><span class="p">,</span> <span class="n">answer_3</span><span class="p">,</span> <span class="n">answer_4</span><span class="p">,</span> <span class="n">answer_5</span><span class="p">,</span> <span class="o">=</span> <span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">pre_define_blanks</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -438,30 +438,23 @@ document.write(`
 </section>
 <section id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h2>
-<p>You work in a Physics lab, and your co-worker has made lots of mistakes in some code.</p>
-<p>In the cell below, there is an assignment statement: <code class="docutils literal notranslate"><span class="pre">answer_1</span> <span class="pre">=</span> <span class="pre">100</span> <span class="pre">*</span> <span class="pre">2</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">answer_1</span></code> returns the value <code class="docutils literal notranslate"><span class="pre">200</span></code>.</p>
-<p>Your boss tells you that <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> should equal <code class="docutils literal notranslate"><span class="pre">10000</span></code>, not <code class="docutils literal notranslate"><span class="pre">200</span></code>! They ask you to fix you co-worker’s mistake.</p>
-<p>Change the expression <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">2</span></code> so that <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">10000</span></code>.</p>
-<p>Rules:</p>
-<ul class="simple">
-<li><p>You can only add, remove, or change operator  (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>).</p></li>
-<li><p>You <em>cannot</em>  change the numbers 100 or 2.</p></li>
-<li><p>The final value of <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> must be <code class="docutils literal notranslate"><span class="pre">10000</span></code>.</p></li>
-</ul>
-<p><strong>DO NOT USE <code class="docutils literal notranslate"><span class="pre">answer_1</span> <span class="pre">=</span> <span class="pre">10000</span></code>. This is called hard-coding an answer…it is not allowed in any exercise or assessment.</strong></p>
-<div class="cell docutils container">
+<p>Imagine you are working on a project about the population of Thailand.</p>
+<p>A Google search says that the <a class="reference external" href="https://www.worldometers.info/world-population/thailand-population/">population of Thailand</a> is about 71.6 million people.</p>
+<p>The cell below trys to assign a variable called <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code>, which has this number in.</p>
+<p>However, the code is broken. See if you can fix it.</p>
+<p>**NOTE: your answer MUST be a variable called <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code>, or the marking will not work.</p>
+<div class="cell tag_raise-exception docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
-<span class="n">answer_1</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">2</span>
-
-<span class="c1"># Show the value of `answer_1`. </span>
-<span class="n">answer_1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Population of Thailand.</span>
+<span class="mi">71600000</span> <span class="o">=</span> <span class="n">pop_thailand</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">    </span><span class="mi">71600000</span> <span class="o">=</span> <span class="n">pop_thailand</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: cannot assign to literal here. Maybe you meant &#39;==&#39; instead of &#39;=&#39;?
 </pre></div>
 </div>
 </div>
@@ -472,42 +465,35 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_2</span><span class="o">.</span><span class="n">check_answer_1</span><span class="p">(</span><span class="n">answer_1</span><span class="p">)</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_1</span><span class="p">(</span><span class="n">pop_thailand</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<p><em>Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
 </section>
 <section id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h2>
-<p>You co-worker has made ANOTHER mistake!</p>
-<p>In the code cell below, there is an assignment statement:</p>
-<p><code class="docutils literal notranslate"><span class="pre">answer_2</span> <span class="pre">=</span> <span class="pre">8</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">/</span> <span class="pre">2</span></code></p>
-<p>The value of <code class="docutils literal notranslate"><span class="pre">answer_2</span></code>, at the moment, is <code class="docutils literal notranslate"><span class="pre">10</span></code>, but it should be <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p>
-<p>Change the expression <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">/</span> <span class="pre">2</span></code> so that <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p>
-<p>Rules:</p>
-<ul class="simple">
-<li><p>You can only add, remove, or change operator  (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>).</p></li>
-<li><p>You <em>cannot</em>  change any numbers.</p></li>
-<li><p>The final value of <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> must be <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p></li>
-</ul>
-<p><strong>DO NOT USE <code class="docutils literal notranslate"><span class="pre">answer_2</span> <span class="pre">=</span> <span class="pre">16</span></code>. This is called hard-coding an answer…it is not allowed in any exercise or assessment.</strong></p>
+<p>Your friend is also working on the project. They say that you should write 71.6 million in a different way, to make it easier for a human to read.</p>
+<p>They say you can put an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) in the number. They make a variable called <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> in the cell below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
-<span class="n">answer_2</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span>
-
-<span class="c1"># Show the value of `answer_2`. </span>
-<span class="n">answer_2</span>
+<span class="n">better_pop_thailand</span> <span class="o">=</span> <span class="mi">71_600_000</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.0
+</div>
+<p>Do <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code> and <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> equal the same number?</p>
+<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">are_they_the_same</span></code> which is the result of an expression which asks the question:</p>
+<ul class="simple">
+<li><p>*Do the variables <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code> and <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> have the same value?</p></li>
+</ul>
+<p><strong>Note: you must use an operator to ask this question…</strong>. See the <em><a class="reference internal" href="#pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html"><span class="xref myst">textbook page</span></a></em> if you need to.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer here.</span>
+<span class="n">are_they_the_same</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -518,42 +504,20 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_2</span><span class="o">.</span><span class="n">check_answer_2</span><span class="p">(</span><span class="n">answer_2</span><span class="p">)</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_2</span><span class="p">(</span><span class="n">answer_2</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<p><em>Question 2 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
 </section>
 <section id="question-3">
 <h2>Question 3<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h2>
-<p>Your co-worker has been fired. But you still need to fix more of their mistakes!!!</p>
-<p>In the cell below there is a variable called <code class="docutils literal notranslate"><span class="pre">answer_3</span></code>.</p>
-<p>On the right of the assignment operator (<code class="docutils literal notranslate"><span class="pre">=</span></code>) is the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">6</span></code>.</p>
-<p>At the moment, the variable <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> has the value <code class="docutils literal notranslate"><span class="pre">22</span></code>, but it should evaluate to <code class="docutils literal notranslate"><span class="pre">40</span></code>.</p>
-<p>Change the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">6</span></code> so that <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">40</span></code>.</p>
-<p>Rules:</p>
-<ul class="simple">
-<li><p>You can only add, remove, or change operator  (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>).</p></li>
-<li><p>You <em>cannot</em>  change any numbers.</p></li>
-<li><p>The final value of <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> must be <code class="docutils literal notranslate"><span class="pre">40</span></code>.</p></li>
-</ul>
-<p><strong>DO NOT USE <code class="docutils literal notranslate"><span class="pre">answer_3</span> <span class="pre">=</span> <span class="pre">40</span></code>. This is called hard-coding an answer…it is not allowed in any exercise or assessment.</strong></p>
+<p>…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
-<span class="n">answer_3</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">6</span>
-
-<span class="c1"># Show the value of `answer_3`. </span>
-<span class="n">answer_3</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
+<span class="n">answer_3</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -564,35 +528,20 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_2</span><span class="o">.</span><span class="n">check_answer_3</span><span class="p">(</span><span class="n">answer_3</span><span class="p">)</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_3</span><span class="p">(</span><span class="n">answer_3</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<p><em>Question 3 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
 </section>
 <section id="question-4">
 <h2>Question 4<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">answer_4</span></code> is a variable which has the result of <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">-</span> <span class="pre">6</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">24</span></code>.</p>
-<p>At the moment the expression evaluates to <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p>
-<p>It should give the value <code class="docutils literal notranslate"><span class="pre">28</span></code>.</p>
-<p>Add/change operators (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) and/or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>) in the expression, to make it equal <code class="docutils literal notranslate"><span class="pre">28</span></code>.</p>
-<p><strong>DO NOT USE <code class="docutils literal notranslate"><span class="pre">answer_4</span> <span class="pre">=</span> <span class="pre">28</span></code>. This is called hard-coding an answer…it is not allowed in any exercise or assessment.</strong></p>
+<p>…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
-<span class="n">answer_4</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">-</span> <span class="mi">6</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">24</span>
-
-<span class="c1"># Show the value of `answer_4`</span>
-<span class="n">answer_4</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here.</span>
+<span class="n">answer_4</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -603,32 +552,20 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_2</span><span class="o">.</span><span class="n">check_answer_4</span><span class="p">(</span><span class="n">answer_4</span><span class="p">)</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_4</span><span class="p">(</span><span class="n">answer_4</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<p><em>Question 4 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_4</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
 </section>
 <section id="question-5">
 <h2>Question 5<a class="headerlink" href="#question-5" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">answer_5</span> <span class="pre">=</span> <span class="pre">9</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">8</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">-</span> <span class="pre">3</span></code> returns the value <code class="docutils literal notranslate"><span class="pre">37</span></code>.</p>
-<p>Change the operators or brackets so that it has the value <code class="docutils literal notranslate"><span class="pre">28</span></code>.</p>
+<p>…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
-<span class="n">answer_5</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span>
-
-<span class="c1"># Show the value of `answer_5`.</span>
-<span class="n">answer_5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>37.0
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here.</span>
+<span class="n">answer_5</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -639,12 +576,9 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_2</span><span class="o">.</span><span class="n">check_answer_5</span><span class="p">(</span><span class="n">answer_5</span><span class="p">)</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_5</span><span class="p">(</span><span class="n">answer_5</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<p><em>Question 5 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
@@ -656,7 +590,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CELL. </span>
 <span class="c1"># Run this cell to mark all of your answers.</span>
-<span class="n">mark_exercise_2</span><span class="o">.</span><span class="n">mark_all</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">mark_all</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span>
                          <span class="n">answer_2</span><span class="p">,</span>
                          <span class="n">answer_3</span><span class="p">,</span>
                          <span class="n">answer_4</span><span class="p">,</span>
@@ -664,18 +598,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<p><em>Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> is the wrong number!</em></p>
-<p><em>Question 2 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> is the wrong number!</em></p>
-<p><em>Question 3 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> is the wrong number!</em></p>
-<p><em>Question 4 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_4</span></code> is the wrong number!</em></p>
-<p><em>Question 5 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> is the wrong number!</em></p>
-<h1 class="rubric" id="you-got-0-5-marks">You got 0/5 marks.</h1>
-</div>
 </div>
 <section id="go-back-to-the-textbook">
 <h2>Go back to the textbook:<a class="headerlink" href="#go-back-to-the-textbook" title="Link to this heading">#</a></h2>
-<p>Click <em><a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_06_Expressions.html">here</a></em> to go back to the course textbook.</p>
+<p>Click <em><a class="reference internal" href="#pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html"><span class="xref myst">here</span></a></em> to go back to the course textbook.</p>
 </section>
 </section>
 
@@ -725,7 +651,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 2 - Expressions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 3 - Data Types, Comparison Operators and Functions</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-next-cell-to-mark-your-answer">Run the next cell to mark your answer.</a></li>

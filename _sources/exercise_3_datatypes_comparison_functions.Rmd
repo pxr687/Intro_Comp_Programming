@@ -12,9 +12,9 @@ jupyter:
     name: python3
 ---
 
-# Exercise 1 - Introduction to Python and Jupyter
+# Exercise 3 - Data Types, Comparison Operators and Functions
 
-If you need help, you can open the _[textbook page](https://pxr687.github.io/Intro_Comp_Programming/1_03_Introduction_to_Python_and_Jupyter.html)_ for this exercise.
+If you need help, click here to open the _[textbook page](pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html)_ for this exercise.
 
 ## Instructions
 
@@ -25,8 +25,8 @@ If you need help, you can open the _[textbook page](https://pxr687.github.io/Int
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_1
-answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_1.pre_define_blanks(5)
+import mark_exercise_3
+pop_thailand, answer_2, answer_3, answer_4, answer_5, = mark_exercise_3.pre_define_blanks(5)
 ```
 
 **THIS ALSO SUPER IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 
@@ -38,8 +38,6 @@ If the question says "make a variable called `answer_2`" you **MUST** call you v
 ...
 
 If the question says "make a variable called `answer_50`" you **MUST** call you variable `answer_50` or you will **NOT** get a mark.
-
-If the question says "make a variable called `me_and_my_cat`" you **MUST** call you variable `me_and_my_cat` or you will **NOT** get a mark.
 
 
 If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file.
@@ -53,20 +51,19 @@ Later in the course we will install Python on your own laptop 🙂.
 
 ## Question 1
 
-Charlotte sells 100 tickets for a concert. Each ticket costs $22. 
+Imagine you are working on a project about the population of Thailand.
 
-Charlotte wants to know the total money that she has made.
+A Google search says that the [population of Thailand](https://www.worldometers.info/world-population/thailand-population/) is about 71.6 million people.
 
-Make a variable called `answer_1` which contains the total money from the ticket sales.
+The cell below trys to assign a variable called `pop_thailand`, which has this number in.
 
-```{python}
-# Type your answer below.
-answer_1 = ...
-```
+However, the code is broken. See if you can fix it.
 
-```{python}
-# Show the value of `answer_1`.
-answer_1
+**NOTE: your answer MUST be a variable called `pop_thailand`, or the marking will not work. 
+
+```{python tags=c("raise-exception")}
+# Population of Thailand.
+71600000 = pop_thailand 
 ```
 
 ### Run the next cell to mark your answer.
@@ -74,18 +71,31 @@ answer_1
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_1(answer_1)
+mark_exercise_3.check_answer_1(pop_thailand)
 ```
 
 ## Question 2
 
-Thai immigration are asking you for your location!
+Your friend is also working on the project. They say that you should write 71.6 million in a different way, to make it easier for a human to read.
 
-Make a variable called `answer_2` which contains the text `SIAM UNIVERSITY`, to tell Thai immigration where you are.
+They say you can put an underscore (`_`) in the number. They make a variable called `better_pop_thailand` in the cell below.
 
 ```{python}
 # Type your answer below.
-answer_2 = ...
+better_pop_thailand = 71_600_000
+```
+
+Do `pop_thailand` and `better_pop_thailand` equal the same number?
+
+Make a variable called `are_they_the_same` which is the result of an expression which asks the question:
+
+- *Do the variables `pop_thailand` and `better_pop_thailand` have the same value?
+
+**Note: you must use an operator to ask this question...**. See the _[textbook page](pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html)_ if you need to.
+
+```{python}
+# Type your answer here.
+are_they_the_same = ...
 ```
 
 ### Run the next cell to mark your answer.
@@ -93,20 +103,12 @@ answer_2 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_2(answer_2)
+mark_exercise_3.check_answer_2(answer_2)
 ```
 
 ## Question 3
 
-Chris is a student at Global Academy.
-
-He has 1000 Thai Baht left to spend on snacks this month.
-
-There are 27 days left in the month.
-
-How many Thai Baht can he spend on snacks each day?
-
-Put your answer in a variable called `answer_3`:
+...
 
 ```{python}
 # Type your answer below.
@@ -118,16 +120,16 @@ answer_3 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_3(answer_3)
+mark_exercise_3.check_answer_3(answer_3)
 ```
 
 ## Question 4
 
-The variable `answer_4` should equal `This is a fine answer`. Change it so that it is correct.
+...
 
 ```{python}
 # Your answer here.
-answer_4 = "Th1s !s is @ f!ner answ3r"
+answer_4 = ...
 ```
 
 ### Run the next cell to mark your answer.
@@ -135,16 +137,12 @@ answer_4 = "Th1s !s is @ f!ner answ3r"
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_4(answer_4)
+mark_exercise_3.check_answer_4(answer_4)
 ```
 
 ## Question 5
 
-A company has 100 staff, working for 100 days. Each staff member needs 2 meals per day.
-
-How many meals does the company need to buy?
-
-Make variable `answer_5` which has the answer.
+...
 
 ```{python}
 # Your answer here.
@@ -156,7 +154,7 @@ answer_5 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_5(answer_5)
+mark_exercise_3.check_answer_5(answer_5)
 ```
 
 # Mark all your answers
@@ -164,7 +162,7 @@ mark_exercise_1.check_answer_5(answer_5)
 ```{python}
 # DO NOT CHANGE THIS CELL. 
 # Run this cell to mark all of your answers.
-mark_exercise_1.mark_all(answer_1,
+mark_exercise_3.mark_all(answer_1,
                          answer_2,
                          answer_3,
                          answer_4,
@@ -173,4 +171,4 @@ mark_exercise_1.mark_all(answer_1,
 
 ## Go back to the textbook:
 
-Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_03_Introduction_to_Python_and_Jupyter.html)_ to go back to the course textbook.
+Click _[here](pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html)_ to go back to the course textbook.

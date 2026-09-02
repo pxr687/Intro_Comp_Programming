@@ -212,4 +212,4 @@ Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?
 
 ----------------------------------------------------------
 
-[🏡](https://pxr687.github.io/Intro_Comp_Programming/intro.html).
+[🏡](intro.md).

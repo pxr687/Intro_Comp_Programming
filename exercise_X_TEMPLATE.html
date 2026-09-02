@@ -424,6 +424,26 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_X</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">answer_1</span><span class="p">,</span> <span class="n">answer_2</span><span class="p">,</span> <span class="n">answer_3</span><span class="p">,</span> <span class="n">answer_4</span><span class="p">,</span> <span class="n">answer_5</span><span class="p">,</span> <span class="o">=</span> <span class="n">mark_exercise_X</span><span class="o">.</span><span class="n">pre_define_blanks</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">Intro_Comp_Programming</span>\<span class="n">mark_exercise_X</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">jupyprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">jupyprint</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">marking_sub_functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">soft_assert</span><span class="p">,</span> <span class="n">sub_check</span><span class="p">,</span> <span class="n">award_marks</span><span class="p">,</span> <span class="n">pre_define_blanks_ans</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">mark_exercise_var</span><span class="w"> </span><span class="kn">import</span> <span class="n">mk_var</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># SET TOTAL MARKS FOR EXERCISE</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;mark_exercise_var&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>THIS ALSO SUPER IMPORTANT</strong>: in <strong>ALL</strong> exercises, and <strong>ALL</strong> assignments/tests/exams. You <strong>MUST</strong> use the right variable names in your answers.</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_1</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> or you will <strong>NOT</strong> get a mark.</p>
@@ -453,18 +473,6 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
 <span class="n">mark_exercise_X</span><span class="o">.</span><span class="n">check_answer_1</span><span class="p">(</span><span class="n">answer_1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">mark_exercise_X</span><span class="o">.</span><span class="n">check_answer_1</span><span class="p">(</span><span class="n">answer_1</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: module &#39;mark_exercise_X&#39; has no attribute &#39;check_answer_1&#39;
 </pre></div>
 </div>
 </div>

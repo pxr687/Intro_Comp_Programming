@@ -36,27 +36,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# RUN THIS CELL - DO NOT CHANGE THE CODE.
-import numpy as np
-import mark_exercise_X
-answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_X.pre_define_blanks(5)
+# Population of Thailand.
+71600000 = pop_thailand 
 ------------------
 
 
-[31m---------------------------------------------------------------------------[39m
-[31mModuleNotFoundError[39m                       Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 3[39m
-[32m      1[39m [38;5;66;03m# RUN THIS CELL - DO NOT CHANGE THE CODE.[39;00m
-[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
-[32m----> [39m[32m3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmark_exercise_X[39;00m
-[32m      4[39m answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_X.pre_define_blanks([32m5[39m)
+  [36mCell[39m[36m [39m[32mIn[2][39m[32m, line 2[39m
+[31m    [39m[31m71600000 = pop_thailand[39m
+    ^
+[31mSyntaxError[39m[31m:[39m cannot assign to literal here. Maybe you meant '==' instead of '='?
 
-[36mFile [39m[32m~\Intro_Comp_Programming\mark_exercise_X.py:3[39m
-[32m      1[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mjupyprint[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m jupyprint
-[32m      2[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mmarking_sub_functions[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m soft_assert, sub_check, award_marks, pre_define_blanks_ans
-[32m----> [39m[32m3[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mmark_exercise_var[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m mk_var
-[32m      4[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
-[32m      6[39m [38;5;66;03m# SET TOTAL MARKS FOR EXERCISE[39;00m
-
-[31mModuleNotFoundError[39m: No module named 'mark_exercise_var'
 

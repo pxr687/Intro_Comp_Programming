@@ -14,6 +14,8 @@ jupyter:
 
 # Exercise 2 - Expressions
 
+If you need help, open the _[textbook page](https://pxr687.github.io/Intro_Comp_Programming/1_06_Expressions.html)_ for this exercise.
+
 ## Instructions
 
 **THIS SUPER IMPORTANT**: If you see a comment which says `# DO NOT CHANGE THIS CODE` then **DO NOT CHANGE THAT CODE**. You will probably break the exercise if you do...
@@ -219,4 +221,4 @@ mark_exercise_2.mark_all(answer_1,
 
 ## Go back to the textbook:
 
-Click [here](https://pxr687.github.io/Intro_Comp_Programming/intro.html) to go back to the course textbook.
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_06_Expressions.html)_ to go back to the course textbook.
