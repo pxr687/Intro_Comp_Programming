@@ -1,6 +1,3 @@
 __pycache__/
 .ipynb_checkpoints/
 .ok_storage
-
-# .Rmd just for author, for local use.
-*.Rmd 

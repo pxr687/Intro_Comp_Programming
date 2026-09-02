@@ -3,7 +3,7 @@ root: intro
 parts:
   - caption: Weeks 1 + 2
     chapters:
-      - file: 1_00_Class_Rules.ipynb
+      - file: 1_01_Class_Rules.ipynb
       - file: 1_02_Class_Grades_Assignments_Exams.ipynb
       - file: 1_03_Introduction_to_Python_and_Jupyter.ipynb
       - file: 1_04_More_Jupyter_Notebooks.ipynb

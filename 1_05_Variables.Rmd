@@ -1,0 +1,288 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.17.3
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+<!-- #region -->
+# Variables - thinking like a computer (scientist)
+
+```{note}
+This page is inspired by and partly adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/variables_intro.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
+
+Imagine a person called Aaron. Aaron is studying in the United Kingdom. He wants to make a budget, so that he does not spend too much money each month.
+
+His income every month is £1,100. He wants to know how much money he has left after he pays:
+
+- His rent, which costs £575 every month.
+
+- His bills, which cost £150 every month.
+
+This is easy to calculate in Python:
+<!-- #endregion -->
+
+```{python}
+1100 - 575 - 150
+```
+
+So he has £375 left after he pays his rent and bills.
+
+We can also type each number in a separate code cell, with a comment explaining what it is.
+
+```{python}
+# Income.
+1100
+```
+
+```{python}
+# Rent.
+575
+```
+
+```{python}
+# Bills.
+150
+```
+
+A single number in Python code (like `1100`) is called a *literal*.
+
+What if Aaron's landlord puts up his rent to £600 each month?
+
+He could type all of the code again, using literals:
+
+```{python}
+1100 - 600 - 150
+```
+
+But, this is not convenient. If we have more than three numbers, it will also get confusing.
+
+Aaron needs *variables*.
+
+
+## Assigning variables
+
+Look at this code:
+
+```{python}
+income = 1100
+
+rent = 575
+
+bills = 150
+
+income - rent - bills
+```
+
+The first three lines...
+
+```
+income = 1100
+
+rent = 575
+
+bills = 150
+
+```
+
+...are called *variable assignment statements*. When we use an assignment statement, we make a new *variable*.
+
+Look at the first line:
+
+```
+income = 1100
+```
+
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/variable_assignment_first.png)
+
+This *variable assignment statement* has two *sides*:
+
+- The *left* of the `=`
+
+- The *right* of the `=`
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/variable_assignment_left_right.png)
+
+In this line of code, on the left of the `=` it says `income`. This is the *name* of the variable.
+
+On the right of the `=` it says `1100`. This is the *value* of the variable.
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/variable_assignment_name_val.png)
+
+Creating a variable means our computer stores the *value* in memory. We can use the *name* to get the value:
+
+```{python}
+# Show the value of the `income` variable.
+income
+```
+
+We can do this for all of the variables we created:
+
+```{python}
+# Show the value of the `rent` variable.
+rent
+```
+
+```{python}
+# Show the value of the `bills` variable.
+bills
+```
+
+We use the *name* of each variable to get the *value* from the computer's memory.
+
+Now it is much easier to do the whole calculation, using the names of the variables. 
+
+```{python}
+income - rent - bills
+```
+
+Remember Aaron's mean landlord, who wants to increase the rent to £600? 
+
+Now we can easily *re-assign* the variable `rent`. This means that we give it a new value:
+
+```{python}
+# Give `rent` a new value.
+rent = 600
+```
+
+Now we can tell the computer to show us the value of the `rent` variable, and we will see the new value:
+
+```{python}
+rent
+```
+
+This variable has a new value inside the computer's memory (`600`) - this has changed the old value (`575`).
+
+This means we can do the calculation, with the higher rent, just by using the variable names:
+
+```{python}
+# Calculate again, with the new, bigger `rent` value.
+income - rent - bills
+```
+
+This is more convenient, and it is harder to make mistakes! If we do not use variables, we have to type the same numbers lots of times. The more we do this, the more errors we will make. For example, maybe we will type 1200 for income, instead of 1100. If we make a `income` variable, we make sure we get the right value from the computer's memory:
+
+```{python}
+# Get the value of `income`, again.
+income
+```
+
+Importantly, in assignment statements, the `=` is called the *assignment operator*:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/variable_assignment_all.png)
+
+
+Variables are very, very, very important in coding. They make our code easy to understand, and they avoid mistakes and errors.
+
+
+## More on numbers and variables in Python
+
+We have seen how to add and subtract numbers in Python (e.g. using `+` and `-`).
+
+Before we do the exercise, you should know that you:
+
+- use `*` to multiply numbers in Python
+
+- use `/` to divide numbers in Python
+
+```{python}
+# Multiplication.
+10 * 10
+```
+
+```{python}
+# Division.
+100/10
+```
+
+Remember that `=` is the *variable assignment operator*, it makes a new variable. It does **NOT** mean the same thing as in Python as in mathematics. If we try to use it that way, we will get an error message.
+
+Do not worry about understanding these error messages for now:
+
+```{python tags=c("raises-exception")}
+# Oops...does not work!
+10 + 10 = 20
+```
+
+What about if we try to use `=` to make a variable with the name `20`?
+
+```{python tags=c("raise-exception")}
+# Ouch...also does not work!
+20 = 10 + 10
+```
+
+We get these errors because we are breaking some Python rules about variable names!
+
+## Rules about variable names
+
+> - Variable names must start with a letter, but they can have both letters and
+> numbers.
+> 
+> - Variable names cannot start with numbers.
+> 
+> - The variable name must be on the right of the `=`.
+> 
+> - Variable names cannot have a spaces; instead, use an
+> underscore character `_` to replace each space. 
+>
+> - Variable names cannot contain `!`,`#`,`.` or `,`.
+>
+> [Brett et al (2023)](https://odsti.github.io/cfd-textbook/Names.html)
+
+```{python tags=c("raise-exception")}
+# Variable names cannot start with numbers!
+20 = 10 + 10
+```
+
+```{python}
+# But they can have numbers and letters.
+gr3at_va7 = 10 + 10
+
+# Show the value of `gr3at_va7`.
+gr3at_va7 
+```
+
+```{python tags=c("raise-exception")}
+# The variable names cannot be on the right of the `=`.
+10 + 10 = ten_plus_ten
+```
+
+```{python tags=c("raise-exception")}
+# The variable names must be on the left of the `=`.
+ten_plus_ten = 10 + 10
+
+# Show the value of `ten_plus_ten`.
+ten_plus_ten
+```
+
+```{python tags=c("raise-exception")}
+# The variable names cannot have spaces.
+ten plus ten = 10 + 10
+```
+
+```{python tags=c("raises-exception")}
+# Cannot contain characters like `!`
+var!
+```
+
+## Exercise 1 - Python, Jupyter and Variables
+
+We will now do our first Python exercise!
+
+*Note*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_1_python_jupyter_intro.ipynb) to launch the exercise.
+
+
+----------------------------------------------------------
+
+[🏡](intro.md).
