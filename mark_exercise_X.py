@@ -15,9 +15,10 @@ def pre_define_blanks(n_ans):
 # def check_answer_X(answer_X, 
 #                    return_mark=False):
 #     question_name = "Question X"
+#     answer_name = "anser_X"
 #     marks_available = 1
 #     QX_conditions = np.array([soft_assert(<condition>,
-#                               f"{question_name} is not correct!",
+#                               f"{question_name} is not correct! `{answer_name}` is the wrong value!",
 #                                 return_mark=return_mark)])
 #     mark = sub_check(question_name, 
 #                      QX_conditions,
@@ -41,11 +42,11 @@ def mark_all(answer_1,
         if usr_k == mk_var():
             # Utility answers for testing within exercise notebook
             jupyprint(np.array([    
-                    answer_1 := <ans>,
-                    answer_2 := <ans>,
-                    answer_3 := <ans>,
-                    answer_4 := <ans>,
-                    answer_5 := <ans>]))
+                    answer_1 := -999,
+                    answer_2 := -999,
+                    answer_3 := -999,
+                    answer_4 := -999,
+                    answer_5 := -999]))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),
