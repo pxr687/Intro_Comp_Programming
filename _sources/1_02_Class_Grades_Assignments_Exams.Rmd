@@ -47,4 +47,4 @@ Downey, A. (2015). *Think python.*  O'Reilly Media, Inc.: https://allendowney.gi
 
 ----------------------------------------------------------
 
-[🏡](https://pxr687.github.io/Intro_Comp_Programming/intro.html).
+[🏡](intro.md).

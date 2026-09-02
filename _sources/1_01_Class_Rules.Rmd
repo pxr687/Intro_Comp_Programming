@@ -41,4 +41,4 @@ What is **not OK**:
 
 ----------------------------------------------------------
 
-[🏡](https://pxr687.github.io/Intro_Comp_Programming/intro.html).
+[🏡](intro.md).
