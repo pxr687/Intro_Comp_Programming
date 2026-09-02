@@ -1,0 +1,210 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.17.3
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+<!-- #region -->
+# Expressions
+
+```{note}
+This page is adapted from by [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/Expressions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
+
+Programming languages are simpler than human languages like English, Chinese, Burmese etc. However,
+there are rules of grammar in any language, including programming languages.
+
+Learning the rules of Python grammar rules is very important. Without proper grammar, you will get error messages and your code will not run.
+
+*Expressions* are an important part of Python grammar. An expression is like a *recipe that returns a value*.  For
+example, this is an expression:
+<!-- #endregion -->
+
+```{python}
+3 * 4
+```
+
+Notice that the Notebook displays the value (`12`), but not the *input* (`3 * 4`).  This the *value* that the
+expression returns.
+
+
+An expression can describe to the computer how to put pieces of data together. 
+
+In our example, we have a multiplication expression that is a `*` symbol
+between two numbers. Expressions, such as `3 * 4`, are
+*evaluated* by the computer. The value (the result of *evaluation*) of the
+last expression in each cell, `12` in this case, is displayed below the cell.
+
+
+The grammar rules of a programming language cannot be broken. 
+
+In Python, the `*` symbol cannot appear twice in a row. The computer will not try to interpret an
+expression that differs from its prescribed expression structures. 
+
+Instead, it will show a `SyntaxError` error. The *Syntax* of a language is its
+grammar rules, and a `SyntaxError` means that an expression 
+breaks the rules of the language.
+
+For example, look at this code, and the resulting error:
+
+```{python tags=c("raises-exception")}
+3 * * 4
+```
+
+Small changes to an expression can change its meaning. 
+
+Below, we
+removed the space between the `*`'s. Because `**` appears between two
+numbers, the expression is a correct *exponentiation*
+expression (the first number raised to the power of the second : $2^{2}$).
+
+The symbols `*` and `**` are called *operators*, and the
+values they put together are called *operands*.
+
+```{python}
+2 ** 2
+```
+
+
+## Walking in Python's shoes
+
+
+To think about expressions, we often need to remind ourselves what Python does when it sees the code for an expression.
+
+We look again at:
+
+```{python}
+3 * 4
+```
+
+It is an expression because it is a recipe that returns a value.  We see the
+notebook display the value.
+
+Now consider this expression:
+
+```{python}
+3
+```
+
+It's an expression because it returns a value.  We see the notebook display the value.
+
+More specifically, when Python sees the code `3`, it generates a computer representation of the number 3.
+
+We will use *CR* as a shorthand for *computer representation*.  To repeat then,
+the expression `3` causes Python to make and return a CR of the number 3.
+
+The Notebook then displays the computer representation, in a way that a human can read.
+
+We will uses *HR* to mean *human readable*.
+
+In this case the HR `3` is the same as the code we typed, but this isn't always
+so.  Consider the expression we saw above:
+
+```{python}
+3 * 4
+```
+
+Python does the following:
+
+* makes a CR of the number 3;
+* makes a CR of the number 4;
+* multiplies the CR of 3 and the CR of 4 to get a CR of 12.
+
+The CR of 12 is the value returned from the expression.  The notebook turns
+that into something that humans can read easily - the HR of 12 - which is
+`12`.
+
+
+## Common Operators
+
+
+In Python, the following operators are
+very important (we have seen some of them before).
+
+| Expression Type | Operator | Example    | Value     |
+|-----------------|----------|------------|-----------|
+| Addition        | `+`      | `2 + 3`    | `5`       |
+| Subtraction     | `-`      | `2 - 3`    | `-1`      |
+| Multiplication  | `*`      | `2 * 3`    | `6`       |
+| Division        | `/`      | `7 / 3`    | `2.66667` |
+| Remainder       | `%`      | `7 % 3`    | `1`       |
+| Exponentiation  | `**`     | `2 ** 0.5` | `1.41421` |
+
+
+## What order do operators use
+
+
+Python expressions obey the same rules of
+[precedence](https://en.wikipedia.org/wiki/Order_of_operations) as in algebra:
+multiplication and division occur before addition and subtraction. Parentheses
+can be used to group together smaller expressions in a larger expression.
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/bodmas.jpg)
+(Image from [here](https://centrepointschools.com/blogs/how-to-simplify-complex-equations-using-the-bodmas-rule/)).
+
+Multiplication has precedence (we do `2 * 3` before adding to 1).
+
+```{python}
+1 + 2 * 3
+```
+
+This is the same as:
+
+```{python}
+1 + (2 * 3)
+```
+
+We can also use bracks `()` to make `1 + 2` happen *before* the multiplication by 3.
+
+```{python}
+(1 + 2) * 3
+```
+
+In the expression above, the `1 + 2` is a *sub-expression* within the whole
+expression `(1 + 2) * 3`.  When Python sees this line, it finds the expression
+`(1 + 2)` and evaluates that to get `3`.  Then it evaluates `3 * 3` to get `9`.
+
+As you learn to program, you will learn to think about what Python is doing,
+and the steps it follows.  Over time, you will find it easier to
+predict what it will do, and understand why. *This will also help you to
+understand error messages that you get*.
+
+## Understanding errors
+
+Let's look at one of the errors we saw on the last page, to see how understanding Python grammar helps us to understand error messages.
+
+```{python tags=c("raises-exception")}
+# Oops...does not work!
+10 + 10 = my_variable
+```
+
+We now know that `10 + 10` is an expression - a recipe that returns a value.
+
+We also know that `=` is called the *assignment operator*. 
+
+So, our `SyntaxError` here means that we have tried to use the assignment operator with an expression (`10 + 10`) on the left of the `=`. This breaks the rules of Python grammar, so we get an error.
+
+We have to put the name of our variable on the left of the `=`, and the expression (`10 + 10`) on the right:
+
+```{python}
+my_variable = 10 + 10
+
+# Show the value of `my_variable`.
+my_variable
+```
+
+## Exercise 2 - Expressions
+
+We will now do our second Python exercise!
+
+*Remember*: your [assignments, tests and exams](1_2_Class_Grades_Assignments_Exams) will also be a bit like this.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2_expressions.ipynb) to launch the exercise.

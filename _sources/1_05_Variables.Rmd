@@ -12,9 +12,12 @@ jupyter:
     name: python3
 ---
 
+<!-- #region -->
 # Variables - thinking like a computer (scientist)
 
-*Note*: this page is inspired by and partly adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/variables_intro.html).
+```{note}
+This page is inspired by and partly adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/variables_intro.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
 
 Imagine a person called Aaron. Aaron is studying in the United Kingdom. He wants to make a budget, so that he does not spend too much money each month.
 
@@ -25,6 +28,7 @@ His income every month is £1,100. He wants to know how much money he has left a
 - His bills, which cost £150 every month.
 
 This is easy to calculate in Python:
+<!-- #endregion -->
 
 ```{python}
 1100 - 575 - 150
@@ -32,9 +36,28 @@ This is easy to calculate in Python:
 
 So he has £375 left after he pays his rent and bills.
 
-But what if his landlord puts up his rent to £600 each month?
+We can also type each number in a separate code cell, with a comment explaining what it is.
 
-He could type all of the code again:
+```{python}
+# Income.
+1100
+```
+
+```{python}
+# Rent.
+575
+```
+
+```{python}
+# Bills.
+150
+```
+
+A single number in Python code (like `1100`) is called a *literal*.
+
+What if Aaron's landlord puts up his rent to £600 each month?
+
+He could type all of the code again, using literals:
 
 ```{python}
 1100 - 600 - 150
@@ -160,6 +183,96 @@ Importantly, in assignment statements, the `=` is called the *assignment operato
 
 Variables are very, very, very important in coding. They make our code easy to understand, and they avoid mistakes and errors.
 
+
+## More on numbers and variables in Python
+
+We have seen how to add and subtract numbers in Python (e.g. using `+` and `-`).
+
+Before we do the exercise, you should know that you:
+
+- use `*` to multiply numbers in Python
+
+- use `/` to divide numbers in Python
+
+```{python}
+# Multiplication.
+10 * 10
+```
+
+```{python}
+# Division.
+100/10
+```
+
+Remember that `=` is the *variable assignment operator*, it makes a new variable. It does **NOT** mean the same thing as in Python as in mathematics. If we try to use it that way, we will get an error message.
+
+Do not worry about understanding these error messages for now:
+
+```{python tags=c("raises-exception")}
+# Oops...does not work!
+10 + 10 = 20
+```
+
+What about if we try to use `=` to make a variable with the name `20`?
+
+```{python tags=c("raise-exception")}
+# Ouch...also does not work!
+20 = 10 + 10
+```
+
+We get these errors because we are breaking some Python rules about variable names!
+
+## Rules about variable names
+
+> - Variable names must start with a letter, but they can have both letters and
+> numbers.
+> 
+> - Variable names cannot start with numbers.
+> 
+> - The variable name must be on the right of the `=`.
+> 
+> - Variable names cannot have a spaces; instead, use an
+> underscore character `_` to replace each space. 
+>
+> - Variable names cannot contain `!`,`#`,`.` or `,`.
+>
+> [Brett et al (2023)](https://odsti.github.io/cfd-textbook/Names.html)
+
+```{python tags=c("raise-exception")}
+# Variable names cannot start with numbers!
+20 = 10 + 10
+```
+
+```{python}
+# But they can have numbers and letters.
+gr3at_va7 = 10 + 10
+
+# Show the value of `gr3at_va7`.
+gr3at_va7 
+```
+
+```{python tags=c("raise-exception")}
+# The variable names cannot be on the right of the `=`.
+10 + 10 = ten_plus_ten
+```
+
+```{python tags=c("raise-exception")}
+# The variable names must be on the left of the `=`.
+ten_plus_ten = 10 + 10
+
+# Show the value of `ten_plus_ten`.
+ten_plus_ten
+```
+
+```{python tags=c("raise-exception")}
+# The variable names cannot have spaces.
+ten plus ten = 10 + 10
+```
+
+```{python tags=c("raises-exception")}
+# Cannot contain characters like `!`
+var!
+```
 
 ## Exercise 1 - Python, Jupyter and Variables
 

@@ -12,9 +12,12 @@ jupyter:
     name: python3
 ---
 
+<!-- #region -->
 # More on Jupyter Notebooks
 
-*Note*: this page is adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/more_on_jupyter.html).
+```{note}
+This page is adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/more_on_jupyter.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
 
 How does Jupyter Notebook work? It has two parts:
 
@@ -23,6 +26,7 @@ How does Jupyter Notebook work? It has two parts:
 * The kernel (this runs the Python code, and makes the results).
 
 Look at this code below:
+<!-- #endregion -->
 
 ```{python}
 # Print some text.

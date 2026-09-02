@@ -51,11 +51,20 @@ Later in the course we will install Python on your own laptop 🙂.
 
 ## Question 1
 
-Make a variable called `answer_1` which contains the result of `100 * 22`
+Charlotte sells 100 tickets for a concert. Each ticket costs $22. 
+
+Charlotte wants to know the total money that she has made.
+
+Make a variable called `answer_1` which contains the total money from the ticket sales.
 
 ```{python}
 # Type your answer below.
 answer_1 = ...
+```
+
+```{python}
+# Show the value of `answer_1`.
+answer_1
 ```
 
 ### Run the next cell to mark your answer.
@@ -68,7 +77,9 @@ mark_exercise_1.check_answer_1(answer_1)
 
 ## Question 2
 
-Make a variable called `answer_2` which contains the text `SIAM UNIVERSITY`:
+Thai immigration are asking you for your location!
+
+Make a variable called `answer_2` which contains the text `SIAM UNIVERSITY`, to tell Thai immigration where you are.
 
 ```{python}
 # Type your answer below.
@@ -85,7 +96,15 @@ mark_exercise_1.check_answer_2(answer_2)
 
 ## Question 3
 
-Divide 1000 by 27, put your answer in a variable called `answer_3`:
+Chris is a student at Global Academy.
+
+He has 1000 Thai Baht left to spend on snacks this month.
+
+There are 27 days left in the month.
+
+How many Thai Baht can he spend on snacks each day?
+
+Put your answer in a variable called `answer_3`:
 
 ```{python}
 # Type your answer below.
@@ -119,7 +138,11 @@ mark_exercise_1.check_answer_4(answer_4)
 
 ## Question 5
 
-Make variable `answer_5` equal one hundred multiplied by one hundred multiplied by two.
+A company has 100 staff, working for 100 days. Each staff member needs 2 meals per day.
+
+How many meals does the company need to buy?
+
+Make variable `answer_5` which has the answer.
 
 ```{python}
 # Your answer here.

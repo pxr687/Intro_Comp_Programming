@@ -19,4 +19,4 @@ You can also download any page, to use on your own computer, by clicking this ic
 
 ## Note on the inspiration for this textbook
 
-This textbook is inspired by and sometimes adapts content from the excellent [*Coding for Data*](https://odsti.github.io/cfd-textbook) by Matthew Brett, Peter Rush, Ani Adhikari, John Denero, and David Wagner (2023). I encourage you to also check out that textbook. Where content is adapted, this is noted clearly at the beginning of the page. Please see [here](https://github.com/odsti/cfd-textbook/blob/main/license.md) for more information.
+This textbook is inspired by and sometimes adapts content from the excellent [*Coding for Data*](https://odsti.github.io/cfd-textbook) by Matthew Brett, Peter Rush, Ani Adhikari, John Denero, and David Wagner (2023). I encourage you to also check out that textbook. Where content is adapted, this is noted clearly at the beginning of the page. Please see [here](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) and [here](https://github.com/odsti/cfd-textbook/blob/main/license.md) for more information.

@@ -36,18 +36,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_1(answer_1)
+# Ouch...also does not work!
+20 = 10 + 10
 ------------------
 
 
-[31m---------------------------------------------------------------------------[39m
-[31mAttributeError[39m                            Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 3[39m
-[32m      1[39m [38;5;66;03m# DO NOT CHANGE THIS CODE.[39;00m
-[32m      2[39m [38;5;66;03m# RUN THIS CELL TO MARK YOUR ANSWER.[39;00m
-[32m----> [39m[32m3[39m [43mmark_exercise_X[49m[43m.[49m[43mcheck_answer_1[49m(answer_1)
+  [36mCell[39m[36m [39m[32mIn[18][39m[32m, line 2[39m
+[31m    [39m[31m20 = 10 + 10[39m
+    ^
+[31mSyntaxError[39m[31m:[39m cannot assign to literal here. Maybe you meant '==' instead of '='?
 
-[31mAttributeError[39m: module 'mark_exercise_X' has no attribute 'check_answer_1'
 
