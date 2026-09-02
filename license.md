@@ -6,12 +6,10 @@ available at <https://creativecommons.org/licenses/by/4.0>.
 ## Coding for Data and Berkeley Foundations of Data Science license
 
 This textbook is partly adapted from the [Coding for Data](https://odsti.github.io/cfd-textbook/intro.html) textbook,
-by Matthew Brett, Peter Rush, Ani Adhikari, John Denero and David Wagner (2023).
-
-Please see the Coding for Data [License](https://github.com/odsti/cfd-textbook/blob/main/license.md), a 
+by Matthew Brett, Peter Rush, Ani Adhikari, John Denero and David Wagner (2023).Please see the Coding for Data [license](https://github.com/odsti/cfd-textbook/blob/main/license.md), a 
 quote from which is below:
 
->Various elements of this course are derived from the [excellent
+>Various elements of [Coding for Data] are derived from the [excellent
 >textbook](https://www.inferentialthinking.com) for UC Berkeley's
 >course [Foundations of Data Science](http://data8.org).
 
