@@ -4,6 +4,7 @@ Textbook for the September 2026 Introduction to Computer Programming course at G
 
 ### To re-build Github Pages
 
+Too add new page(s), uncommnet in TOC, then:
 
 ```
 rm -r _build/

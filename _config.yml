@@ -27,10 +27,10 @@ exclude_patterns:
 
 html:
   favicon: images/logo.ico
-  home_page_in_navbar: false
-  use_edit_page_button: true
-  use_repository_button: true
-  use_issues_button: true
+  home_page_in_navbar: true
+  use_edit_page_button: false
+  use_repository_button: false
+  use_issues_button: false
   baseurl: https://github.com/pxr687/Intro_Comp_Programming
 
 repository:

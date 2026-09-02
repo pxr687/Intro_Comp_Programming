@@ -174,15 +174,22 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to Computer Programming
+                </a>
+            </li>
+        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weeks 1 + 2</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_0_Class_Rules.html">Class Rules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_2_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_3_Introduction_to_Python_and_Jupyter.html">Introduction to Python and Jupyter Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_4_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_5_Variables.html">Variables - thinking like a computer (scientist)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_6_Expressions.html">Expressions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_7_Datatypes_Comparison_Operators_Functions.html">Data Types, Comparison Operators and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_00_Class_Rules.html">Class Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_03_Introduction_to_Python_and_Jupyter.html">Introduction to Python and Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_04_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
 </ul>
 
     </div>
@@ -249,70 +256,6 @@
     <img alt="Binder logo" src="_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/pxr687/Intro_Comp_Programming" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/pxr687/Intro_Comp_Programming/edit/main/exercise_2_expressions.Rmd" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/pxr687/Intro_Comp_Programming/issues/new?title=Issue%20on%20page%20%2Fexercise_2_expressions.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
 </a>
 </li>
       
@@ -494,10 +437,17 @@ document.write(`
 </section>
 <section id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h2>
+<p>You work in a Physics lab, and your co-worker has made lots of mistakes in some code.</p>
 <p>In the cell below, there is an assignment statement: <code class="docutils literal notranslate"><span class="pre">answer_1</span> <span class="pre">=</span> <span class="pre">100</span> <span class="pre">*</span> <span class="pre">2</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">answer_1</span></code> returns the value <code class="docutils literal notranslate"><span class="pre">200</span></code>.</p>
-<p>Only add/change operators (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) and/or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>) in the expression (<code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">2</span></code>), to make <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> equal <code class="docutils literal notranslate"><span class="pre">10000</span></code>.</p>
-<p><strong>DO NOT CHANGE ANY NUMBERS OR ADD ANY NEW NUMBERS TO THE EXPRESSION.</strong></p>
+<p>Your boss tells you that <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> should equal <code class="docutils literal notranslate"><span class="pre">10000</span></code>, not <code class="docutils literal notranslate"><span class="pre">200</span></code>! They ask you to fix you co-worker’s mistake.</p>
+<p>Change the expression <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">2</span></code> so that <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">10000</span></code>.</p>
+<p>Rules:</p>
+<ul class="simple">
+<li><p>You can only add, remove, or change operator  (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>).</p></li>
+<li><p>You <em>cannot</em>  change the numbers 100 or 2.</p></li>
+<li><p>The final value of <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> must be <code class="docutils literal notranslate"><span class="pre">10000</span></code>.</p></li>
+</ul>
 <p><strong>DO NOT USE <code class="docutils literal notranslate"><span class="pre">answer_1</span> <span class="pre">=</span> <span class="pre">10000</span></code>. This is called hard-coding an answer…it is not allowed in any exercise or assessment.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -533,11 +483,17 @@ document.write(`
 </section>
 <section id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h2>
+<p>You co-worker has made ANOTHER mistake!</p>
 <p>In the code cell below, there is an assignment statement:</p>
 <p><code class="docutils literal notranslate"><span class="pre">answer_2</span> <span class="pre">=</span> <span class="pre">8</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">/</span> <span class="pre">2</span></code></p>
-<p>The value of <code class="docutils literal notranslate"><span class="pre">answer_2</span></code>, at the moment, is <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
-<p>Only add/change operators (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) and/or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>) in the expression (<code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">/</span> <span class="pre">2</span></code>), to make <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> equal <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p>
-<p><strong>DO NOT CHANGE ANY NUMBERS OR ADD ANY NEW NUMBERS TO THE EXPRESSION.</strong></p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">answer_2</span></code>, at the moment, is <code class="docutils literal notranslate"><span class="pre">10</span></code>, but it should be <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p>
+<p>Change the expression <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">/</span> <span class="pre">2</span></code> so that <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p>
+<p>Rules:</p>
+<ul class="simple">
+<li><p>You can only add, remove, or change operator  (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>).</p></li>
+<li><p>You <em>cannot</em>  change any numbers.</p></li>
+<li><p>The final value of <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> must be <code class="docutils literal notranslate"><span class="pre">16</span></code>.</p></li>
+</ul>
 <p><strong>DO NOT USE <code class="docutils literal notranslate"><span class="pre">answer_2</span> <span class="pre">=</span> <span class="pre">16</span></code>. This is called hard-coding an answer…it is not allowed in any exercise or assessment.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -573,11 +529,17 @@ document.write(`
 </section>
 <section id="question-3">
 <h2>Question 3<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h2>
+<p>Your co-worker has been fired. But you still need to fix more of their mistakes!!!</p>
 <p>In the cell below there is a variable called <code class="docutils literal notranslate"><span class="pre">answer_3</span></code>.</p>
 <p>On the right of the assignment operator (<code class="docutils literal notranslate"><span class="pre">=</span></code>) is the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">6</span></code>.</p>
-<p>At the moment, the variable <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> has the value <code class="docutils literal notranslate"><span class="pre">22</span></code>.</p>
-<p>Only add/change operators (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) and/or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>) in the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">6</span></code> so that it has the value <code class="docutils literal notranslate"><span class="pre">40</span></code>**</p>
-<p><strong>DO NOT CHANGE ANY NUMBERS OR ADD ANY NEW NUMBERS TO THE EXPRESSION.</strong></p>
+<p>At the moment, the variable <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> has the value <code class="docutils literal notranslate"><span class="pre">22</span></code>, but it should evaluate to <code class="docutils literal notranslate"><span class="pre">40</span></code>.</p>
+<p>Change the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">6</span></code> so that <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">40</span></code>.</p>
+<p>Rules:</p>
+<ul class="simple">
+<li><p>You can only add, remove, or change operator  (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code>) or brackets (<code class="docutils literal notranslate"><span class="pre">()</span></code>).</p></li>
+<li><p>You <em>cannot</em>  change any numbers.</p></li>
+<li><p>The final value of <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> must be <code class="docutils literal notranslate"><span class="pre">40</span></code>.</p></li>
+</ul>
 <p><strong>DO NOT USE <code class="docutils literal notranslate"><span class="pre">answer_3</span> <span class="pre">=</span> <span class="pre">40</span></code>. This is called hard-coding an answer…it is not allowed in any exercise or assessment.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

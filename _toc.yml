@@ -3,10 +3,16 @@ root: intro
 parts:
   - caption: Weeks 1 + 2
     chapters:
-      - file: 1_0_Class_Rules
-      - file: 1_2_Class_Grades_Assignments_Exams
-      - file: 1_3_Introduction_to_Python_and_Jupyter
-      - file: 1_4_More_Jupyter_Notebooks
-      - file: 1_5_Variables
-      - file: 1_6_Expressions
-      - file: 1_7_Datatypes_Comparison_Operators_Functions
+      - file: 1_00_Class_Rules.ipynb
+      - file: 1_02_Class_Grades_Assignments_Exams.ipynb
+      - file: 1_03_Introduction_to_Python_and_Jupyter.ipynb
+      - file: 1_04_More_Jupyter_Notebooks.ipynb
+      - file: 1_05_Variables.ipynb
+      - file: 1_06_Expressions.ipynb
+      # - file: 1_07_Data_Types_Comparison_Operators_Functions.ipynb
+      # - file: 1_08_More_Data_Types_Collections.ipynb
+      # # - file: 1_09_Statements.ipynb
+      # - file: 1_10_More_Functions_Methods.ipynb
+      # - file: 1_11_More_Keywords.ipynb
+      # - file: 1_12_Writing_Your_Own_Functions.ipynb
+      # - file: 1_13_More_Data_Types.ipynb
