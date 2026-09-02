@@ -46,7 +46,7 @@ print_my_name("Pete")
 
 ## Exercise 6 - Writing Functions
 
-*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
 Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_6_writing_functions.ipynb) to launch the exercise.
 

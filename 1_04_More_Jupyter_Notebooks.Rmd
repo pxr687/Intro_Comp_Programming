@@ -135,7 +135,7 @@ You can also also use the `help()` function, to say to Python "help explain this
 help(print)
 ```
 
-**Important**: when we do the [tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Grades_Assignments_Exams.html) for this course, you will **NOT** be able to use the internet. However, you **will be able to** use Python `help()` and `?` (documentation).
+**Important**: when we do the [tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) for this course, you will **NOT** be able to use the internet. However, you **will be able to** use Python `help()` and `?` (documentation).
 
 
 ## References

@@ -154,7 +154,7 @@ dir(my_name)
 
 ## Exercise 5 - Functions and Methods
 
-*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
 Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4_statements.ipynb) to launch the exercise.
 
