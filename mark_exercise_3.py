@@ -18,7 +18,7 @@ def pre_define_blanks(n_ans):
 #     answer_name = "answer_X"
 #     marks_available = 1
 #     conditions = np.array([soft_assert(<condition>,
-#                               f" Your answer to {question_name} is not correct! `{answer_name}` is the wrong value!",
+#                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong value!",
 #                                 return_mark=return_mark)])
 #     mark = sub_check(question_name, 
 #                      conditions,
@@ -31,7 +31,7 @@ def check_answer_1(pop_thailand,
     answer_name = "pop_thailand"
     marks_available = 1
     conditions = np.array([soft_assert(np.isclose(pop_thailand, 71_600_000),
-                              f" Your answer to {question_name} is not correct! `{answer_name}` should equal 71,600,000!",
+                              f"Your answer to {question_name} is not correct! `{answer_name}` should equal 71,600,000!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,
@@ -44,10 +44,10 @@ def check_answer_2(are_they_the_same,
     answer_name = "are_they_the_same"
     marks_available = 1
     conditions = np.array([soft_assert(type(are_they_the_same) == bool,
-                           f" Your answer to {question_name} is not correct! `{answer_name}` should be a `bool`! Right now it is `{type(are_they_the_same)}`.",
+                           f"Your answer to {question_name} is not correct! `{answer_name}` should be a `bool`! Right now it is `{type(are_they_the_same)}`.",
                                                                        return_mark=return_mark),
                             soft_assert(are_they_the_same == (71600000 == 71_600_000),
-                            f" Your answer to {question_name} is not correct! `{answer_name}` is the wrong value!",
+                            f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,
@@ -60,7 +60,7 @@ def check_answer_3(answer_3,
     answer_name = "answer_3"
     marks_available = 1
     conditions = np.array([soft_assert(answer_3 == int,
-                              f" Your answer to {question_name} is not correct! `{answer_name}` should tell us the `type` of  the variable`forty_two`!",
+                              f"Your answer to {question_name} is not correct! `{answer_name}` should tell us the `type` of  the variable`forty_two`!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,
@@ -73,10 +73,10 @@ def check_answer_4(forty_two_as_float,
     answer_name = "forty_two_as_float"
     marks_available = 1
     conditions = np.array([soft_assert(type(forty_two_as_float) == float,
-                              f" Your answer to {question_name} is not correct! `{answer_name}` should be a float! Right now it is `{type(forty_two_as_float)}`.",
+                              f"Your answer to {question_name} is not correct! `{answer_name}` should be a float! Right now it is `{type(forty_two_as_float)}`.",
                                 return_mark=return_mark),
                                soft_assert(np.isclose(forty_two_as_float, 42.0),
-                            f" Your answer to {question_name} is not correct! `{answer_name}` is the wrong value!",
+                            f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong value!",
                              return_mark=return_mark)])
 
     mark = sub_check(question_name, 
@@ -90,7 +90,7 @@ def check_answer_5(thailand_and_myanmar_pop,
     answer_name = "thailand_and_myanmar_pop"
     marks_available = 1
     conditions = np.array([soft_assert(np.isclose(thailand_and_myanmar_pop, 126900000),
-                              f" Your answer to {question_name} is not correct! `{answer_name}` is the wrong value!",
+                              f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,

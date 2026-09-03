@@ -17,7 +17,7 @@ def pre_define_blanks(n_ans):
 #     question_name = "Question X"
 #     marks_available = 1
 #     QX_conditions = np.array([soft_assert(<condition>,
-#                               f"{question_name} is not correct!",
+#                               f"Your answer to {question_name} is not correct!",
 #                                 return_mark=return_mark)])
 #     mark = sub_check(question_name, 
 #                      QX_conditions,
@@ -30,7 +30,7 @@ def check_answer_1(answer_1,
     answer_name = "answer_1"
     marks_available = 1
     conditions = np.array([soft_assert(np.isclose(answer_1,100 * 22),
-                              f"{question_name} is not correct!, `{answer_name}` is the wrong number!",
+                              f"Your answer to {question_name} is not correct!, `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,
@@ -43,7 +43,7 @@ def check_answer_2(answer_2,
     answer_name = "answer_2"
     marks_available = 1
     conditions = np.array([soft_assert(answer_2 == "SIAM UNIVERSITY",
-                                        f"{question_name} is not correct! `{answer_name}` does not equal 'SIAM UNIVERSITY'!",
+                                        f"Your answer to {question_name} is not correct! `{answer_name}` does not equal 'SIAM UNIVERSITY'!",
                                           return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,
@@ -56,7 +56,7 @@ def check_answer_3(answer_3,
     answer_name = "answer_3"
     marks_available = 1
     conditions = np.array([soft_assert(np.isclose(answer_3, 1000/27),
-                              f"{question_name} is not correct! `{answer_name}` is the wrong number!",
+                              f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,
@@ -69,7 +69,7 @@ def check_answer_4(answer_4,
     answer_name = "answer_4"
     marks_available = 1
     conditions = np.array([soft_assert(answer_4 == "This is a fine answer",
-                              f"{question_name} is not correct! `{answer_name}` does not say 'This is a fine answer'!",
+                              f"Your answer to {question_name} is not correct! `{answer_name}` does not say 'This is a fine answer'!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,
@@ -82,7 +82,7 @@ def check_answer_5(answer_5,
     answer_name = "answer_5"
     marks_available = 1
     conditions = np.array([soft_assert(np.isclose(answer_5, 100*100*2),
-                              f"{question_name} is not correct! `{answer_name}` is the wrong number!",
+                              f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,

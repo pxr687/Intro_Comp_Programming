@@ -8,7 +8,7 @@ def pre_define_blanks_ans(n_ans):
 def soft_assert(condition, warning_text, return_mark=False):
     if (condition == False):
         jupyprint("*"+warning_text+"*")
-    return condition
+    return condition # Bool as indicator of mark obtained.
 
 def sub_check(question_number, conditions_array, return_mark):
     all_conditions_true = (conditions_array.sum() == len(conditions_array))
