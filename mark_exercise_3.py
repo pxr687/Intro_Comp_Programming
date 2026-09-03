@@ -38,6 +38,64 @@ def check_answer_1(pop_thailand,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
 
+def check_answer_2(are_they_the_same, 
+                   return_mark=False):
+    question_name = "Question 2"
+    answer_name = "are_they_the_same"
+    marks_available = 1
+    conditions = np.array([soft_assert(type(are_they_the_same) == bool,
+                           f"{question_name} is not correct! `{answer_name}` should be a `bool`!",
+                                                                       return_mark=return_mark),
+                            soft_assert(are_they_the_same == (71600000 == 71_600_000),
+                            f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
+def check_answer_3(answer_3, 
+                   return_mark=False):
+    question_name = "Question 3"
+    answer_name = "answer_3"
+    marks_available = 1
+    conditions = np.array([soft_assert(answer_3 == int,
+                              f"{question_name} is not correct! `{answer_name}` should tell us the `type` of  the variable`forty_two`!",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
+def check_answer_4(forty_two_as_float,
+                   return_mark=False):
+    question_name = "Question 4"
+    answer_name = "forty_two_as_float"
+    marks_available = 1
+    conditions = np.array([soft_assert(type(forty_two_as_float) == float,
+                              f"{question_name} is not correct! `{answer_name}` should be a float!",
+                                return_mark=return_mark),
+                               soft_assert(np.isclose(forty_two_as_float, 42.0),
+                            f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                             return_mark=return_mark)])
+
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
+def check_answer_5(thailand_and_myanmar_pop, 
+                   return_mark=False):
+    question_name = "Question 5"
+    answer_name = "thailand_and_myanmar_pop"
+    marks_available = 1
+    conditions = np.array([soft_assert(np.isclose(thailand_and_myanmar_pop, 126900000),
+                              f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
 
 ###############################################################################
 
@@ -55,11 +113,11 @@ def mark_all(answer_1,
         if usr_k == mk_var():
             # Utility answers for testing within exercise notebook
             jupyprint(np.array([    
-                    answer_1 := -71600000,
-                    answer_2 := -999,
-                    answer_3 := -999,
-                    answer_4 := -999,
-                    answer_5 := -999]))
+                    answer_1 := 71600000,
+                    answer_2 := (71600000 == 71_600_000),
+                    answer_3 := int,
+                    answer_4 := 42.0,
+                    answer_5 := 126900000]))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),
