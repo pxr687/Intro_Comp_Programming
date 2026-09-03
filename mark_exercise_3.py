@@ -60,7 +60,7 @@ def check_answer_3(answer_3,
     answer_name = "answer_3"
     marks_available = 1
     conditions = np.array([soft_assert(answer_3 == int,
-                              f"Your answer to {question_name} is not correct! `{answer_name}` should tell us the `type` of  the variable`forty_two`!",
+                              f"Your answer to {question_name} is not correct! `{answer_name}` should tell us the `type` of  the variable `forty_two`! Right now {answer_name} = {answer_3}.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
                      conditions,

@@ -76,7 +76,7 @@ mark_exercise_3.check_answer_1(pop_thailand)
 
 ## Question 2
 
-Your friend is also working on the project. They say that you should write 71.6 million in a different way, to make it easier for a human to read.
+Your friend is also working on the project about Thai population. They say that you should write 71.6 million in a different way, to make it easier for a human to read.
 
 They say you can put an underscore (`_`) in the number. Your friend makes a variable called `better_pop_thailand` in the cell below.
 
