@@ -103,10 +103,10 @@ the expression `3` causes Python to make and return a CR of the number 3.
 
 The Notebook then displays the computer representation, in a way that a human can read.
 
-We will uses *HR* to mean *human readable*.
+We will use *HR* to mean *human readable*.
 
 In this case the HR `3` is the same as the code we typed, but this isn't always
-so.  Consider the expression we saw above:
+so. Look at the expression we saw above:
 
 ```{python}
 3 * 4
@@ -134,9 +134,9 @@ very important (we have seen some of them before).
 | Addition        | `+`      | `2 + 3`    | `5`       |
 | Subtraction     | `-`      | `2 - 3`    | `-1`      |
 | Multiplication  | `*`      | `2 * 3`    | `6`       |
-| Division        | `/`      | `7 / 3`    | `2.66667` |
-| Remainder       | `%`      | `7 % 3`    | `1`       |
-| Exponentiation  | `**`     | `2 ** 0.5` | `1.41421` |
+| Division        | `/`      | `100 / 10` | `10`      |
+| Remainder       | `%`      | `101 % 10` | `1`       |
+| Exponentiation  | `**`     | `10 ** 2`  | `100`     |
 
 
 ## What order do operators use
