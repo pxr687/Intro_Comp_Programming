@@ -40,7 +40,7 @@ If the question says "make a variable called `answer_2`" you **MUST** call you v
 If the question says "make a variable called `answer_50`" you **MUST** call you variable `answer_50` or you will **NOT** get a mark.
 
 
-If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file.
+*Binder will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file.
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
 
@@ -85,7 +85,7 @@ They say you can put an underscore (`_`) in the number. Your friend makes a vari
 better_pop_thailand = 71_600_000
 ```
 
-Do `pop_thailand` and `better_pop_thailand` equal the same number? Is your friend right that you can put `_` in Python numbers?
+Do `pop_thailand` and `better_pop_thailand` equal the same number? Is your friend right that you can put `_` in Python numbers? Or does how they have written the number change the meaning?
 
 Make a variable called `are_they_the_same` which is the result of an expression which asks the question:
 
@@ -160,8 +160,6 @@ mark_exercise_3.check_answer_4(forty_two_as_float)
 ```
 
 ## Question 5
-
-A common error in data is that something that should be a number has become text. 
 
 The [population of Myanmar](https://www.worldometers.info/world-population/myanmar-population/) is around 55.3 million.
 
