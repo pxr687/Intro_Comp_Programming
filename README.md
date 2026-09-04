@@ -44,7 +44,7 @@ If editing an existing exercise, it can be easier to:
 
 - opening the `.Rmd` in Jupyter to test and save to re-create the `ipynb`.
 
-### A note of checking spelling
+### A note on checking spelling
 
 The book is built from `.ipynb` files, but `.Rmd` files are synced because they are
 easier for spellchecking. Run this from the command line to spellcheck all notebooks:
