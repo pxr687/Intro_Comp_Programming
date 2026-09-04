@@ -65,11 +65,13 @@ What type of Python element is it?:
 
 `b` - a literal
 
-Set the variable `answer_1` to equal `a` or `b` to choose your answer.
+`c` - a function
+
+Set the variable `answer_1` to equal `a`, `b` or `c` to choose your answer.
 
 ```{python}
 # Type your answer below.
-answer_1 = ""
+answer_1 = ...
 ```
 
 ### Run the next cell to mark your answer.
@@ -78,6 +80,138 @@ answer_1 = ""
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 mark_exercise_2a.check_answer_1(answer_1)
+```
+
+## Question 2
+
+I type this into a code cell:
+
+```
+"Siam is the old name of Thailand."
+```
+
+What type of Python element is it?:
+
+`a` - a variable
+
+`b` - a function
+
+`c` - a literal
+
+Set the variable `answer_2` to equal `a`, `b` or `c` to choose your answer.
+
+```{python}
+# Type your answer below.
+answer_2 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_2a.check_answer_2(answer_2 := "c")
+```
+
+## Question 3
+
+I type this into a code cell:
+
+```
+my_variable = 1066
+```
+
+What type of Python element is it?:
+
+`a` - a variable assignment statement.
+
+`b` - a variable
+
+`c` - a function
+
+`d` - an expression made of literals
+
+Set the variable `answer_3` to equal `a`, `b`, `c` or `d` to choose your answer.
+
+```{python}
+# Type your answer below.
+answer_3 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_2a.check_answer_3(answer_3)
+```
+
+## Question 4
+
+I type this into a code cell:
+
+```
+my_other_variable = 10 * 10 * 20
+```
+
+What type of Python element is it?:
+
+`a` - a variable assignment statement, it stores the value of a literal in the computer's memory
+
+`b` - a variable assignment statement, it stores the value of a function in the computer's memory
+
+`c` - a variable assignment statement, it stores the value of an expression in the computer's memory
+
+`d` - an expression made of variables
+
+Set the variable `answer_4` to equal `a`, `b`, `c` or `d` to choose your answer.
+
+```{python}
+# Type your answer below.
+answer_4 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_2a.check_answer_4(answer_4)
+```
+
+## Question 5
+
+I type this into a code cell:
+
+```
+my_road = "soi_sukhumvit_50"
+
+"My road is " + my_road
+```
+
+Which one of these is correct?:
+
+`a` - Line 1 is a variable, it stores a text literal in the computer's memory. Line 2 is an expression made from two variables.
+
+`b` - Line 1 is a function, it stores the value of a text literal in the computer's memory. Line 2 is an expression made from a two text literals.
+
+`c` - Both lines are a variable assignment statement, which stores the value of a function in the computer's memory. 
+
+`d` - Line 1 is a variable assignment statement, it stores the value of a text literal in the computer's memory. Line 2 is an expression made from a text literal and the `my_road` variable.
+
+Set the variable `answer_4` to equal `a`, `b`, `c` or `d` to choose your answer.
+
+```{python}
+# Type your answer below.
+answer_5 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_2a.check_answer_5(answer_5)
 ```
 
 # Mark all your answers

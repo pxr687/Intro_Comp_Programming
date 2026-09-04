@@ -30,10 +30,75 @@ def check_answer_1(answer_1,
     question_name = "Question 1"
     answer_name = "answer_1"
     marks_available = 1
-    conditions = np.array([soft_assert(answer_1 in ["a", "b"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'` or `'b'`. Make sure you did not forger to use quotation marks! `'`",
+    conditions = np.array([soft_assert(answer_1 in ["a", "b", "c"],
+                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`or `'c'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_1 == "b",
+                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
+def check_answer_2(answer_2, 
+                   return_mark=False):
+    question_name = "Question 2"
+    answer_name = "answer_2"
+    marks_available = 1
+    conditions = np.array([soft_assert(answer_2 in ["a", "b", "c"],
+                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`or `'c'`. Make sure you did not forget to use quotation marks! `'`",
+                                return_mark=return_mark),
+                            soft_assert(answer_2 == "c",
+                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
+def check_answer_3(answer_3, 
+                   return_mark=False):
+    question_name = "Question 3"
+    answer_name = "answer_3"
+    marks_available = 1
+    conditions = np.array([soft_assert(answer_3 in ["a", "b", "c", "d"],
+                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                                return_mark=return_mark),
+                            soft_assert(answer_3 == "a",
+                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
+def check_answer_4(answer_4, 
+                   return_mark=False):
+    question_name = "Question 4"
+    answer_name = "answer_4"
+    marks_available = 1
+    conditions = np.array([soft_assert(answer_4 in ["a", "b", "c", "d"],
+                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                                return_mark=return_mark),
+                            soft_assert(answer_4 == "c",
+                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
+
+def check_answer_5(answer_5, 
+                   return_mark=False):
+    question_name = "Question 5"
+    answer_name = "answer_5"
+    marks_available = 1
+    conditions = np.array([soft_assert(answer_5 in ["a", "b", "c", "d"],
+                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                                return_mark=return_mark),
+                            soft_assert(answer_5 == "d",
                               f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, 
@@ -58,10 +123,10 @@ def mark_all(answer_1,
             # Utility answers for testing within exercise notebook
             jupyprint(np.array([    
                     answer_1 := "b",
-                    answer_2 := -999,
-                    answer_3 := -999,
-                    answer_4 := -999,
-                    answer_5 := -999]))
+                    answer_2 := "c",
+                    answer_3 := "a",
+                    answer_4 := "c",
+                    answer_5 := "d"]))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),

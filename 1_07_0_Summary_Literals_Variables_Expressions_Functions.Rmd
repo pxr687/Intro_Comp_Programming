@@ -36,7 +36,7 @@ We type in the literal, and Python shows us the *value*. The value is the comput
 
 ### Variables
 
-We can store values as *variables*. This means we give the value a name. We can use that name to get the value out of our computers' memory:
+We can store values as *variables*. This means we give the value a name. We can use that name to get the value out of our computer's memory:
 
 ```{python}
 # This is a variable assignment statement. 
@@ -253,7 +253,9 @@ print("The capital of Thailand is Bangkok." + " London is the capital of England
 
 ## Exercise 2a - Literals, Variables, Expressions and Functions
 
-We will now do our third Python exercise!
+We will now do our third Python exercise! 
+
+> **We are going to do this exercise as two teams. I will show you the questions on the big screen. Each team will write their answers on the whiteboards. When each team has all the answers written on the whiteboard, we will mark the answers together, looking at the correct answers on the big screen.**
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
