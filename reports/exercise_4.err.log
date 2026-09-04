@@ -36,14 +36,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Ouch...also does not work!
-20 = 10 + 10
+# RUN THIS CELL - DO NOT CHANGE THE CODE.
+import numpy as np
+import mark_exercise_4
+# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8 = mark_exercise_4.pre_define_blanks(8)
 ------------------
 
 
-  [36mCell[39m[36m [39m[32mIn[20][39m[32m, line 2[39m
-[31m    [39m[31m20 = 10 + 10[39m
-    ^
-[31mSyntaxError[39m[31m:[39m cannot assign to literal here. Maybe you meant '==' instead of '='?
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 3[39m
+[32m      1[39m [38;5;66;03m# RUN THIS CELL - DO NOT CHANGE THE CODE.[39;00m
+[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m----> [39m[32m3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmark_exercise_4[39;00m
+[32m      4[39m [38;5;66;03m# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8 = mark_exercise_4.pre_define_blanks(8)[39;00m
 
+[31mModuleNotFoundError[39m: No module named 'mark_exercise_4'
 

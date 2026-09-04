@@ -189,6 +189,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_04_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07_0_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
 </ul>
 
     </div>
@@ -427,7 +428,33 @@ document.write(`
 <p>This page is partly adapted from by <a class="reference external" href="https://odsti.github.io/cfd-textbook/intro_to_functions.html">Brett and co-authors (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
 <p>Let’s quickly summarise what we have learned so far.</p>
-<p>We have looked at variables, where we store named data in our computer’s memory:</p>
+<p>A raw number or piece of text typed in Python code is called a <em>literal</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;text&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;text&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We type in the literal, and Python shows us the <em>value</em>. The value is the computer representation of the literal.</p>
+<p>We can store values as <em>variables</em>. This means we give the value a name. We can use that name to get the value out of our computers’ memory:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a variable assignment statement. </span>
@@ -450,7 +477,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>We also looked at literals, which are values in Python code which are NOT stored as variables:</p>
+<p>You can think of literals as values in Python code which are NOT stored as variables:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a literal.</span>
@@ -460,6 +487,14 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1999
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Store `1999` as a variable.</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="mi">1999</span>
 </pre></div>
 </div>
 </div>
@@ -571,7 +606,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">type</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: type() takes 1 or 3 arguments
@@ -723,7 +758,7 @@ class type(object)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">help</span><span class="p">(</span><span class="nb">type</span><span class="p">())</span>
 
 <span class="ne">TypeError</span>: type() takes 1 or 3 arguments
@@ -822,7 +857,7 @@ class type(object)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="s2">&quot;10&quot;</span> <span class="o">*</span> <span class="s2">&quot;10&quot;</span>
 
 <span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;str&#39;
@@ -1216,168 +1251,20 @@ class type(object)
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
  &#39;Out&#39;,
  &#39;_&#39;,
- &#39;_10&#39;,
+ &#39;_1&#39;,
  &#39;_12&#39;,
  &#39;_13&#39;,
- &#39;_17&#39;,
- &#39;_18&#39;,
+ &#39;_15&#39;,
+ &#39;_16&#39;,
  &#39;_2&#39;,
  &#39;_20&#39;,
  &#39;_21&#39;,
- &#39;_22&#39;,
+ &#39;_23&#39;,
  &#39;_24&#39;,
  &#39;_25&#39;,
- &#39;_26&#39;,
  &#39;_27&#39;,
  &#39;_28&#39;,
  &#39;_29&#39;,
- &#39;_3&#39;,
- &#39;_30&#39;,
- &#39;_31&#39;,
- &#39;_32&#39;,
- &#39;_33&#39;,
- &#39;_34&#39;,
- &#39;_35&#39;,
- &#39;_36&#39;,
- &#39;_37&#39;,
- &#39;_38&#39;,
- &#39;_39&#39;,
- &#39;_4&#39;,
- &#39;_40&#39;,
- &#39;_41&#39;,
- &#39;_42&#39;,
- &#39;_43&#39;,
- &#39;_44&#39;,
- &#39;_45&#39;,
- &#39;_46&#39;,
- &#39;_47&#39;,
- &#39;_48&#39;,
- &#39;_49&#39;,
- &#39;_5&#39;,
- &#39;_50&#39;,
- &#39;_51&#39;,
- &#39;_52&#39;,
- &#39;_6&#39;,
- &#39;_9&#39;,
- &#39;__&#39;,
- &#39;___&#39;,
- &#39;__builtin__&#39;,
- &#39;__builtins__&#39;,
- &#39;__doc__&#39;,
- &#39;__loader__&#39;,
- &#39;__name__&#39;,
- &#39;__package__&#39;,
- &#39;__spec__&#39;,
- &#39;_dh&#39;,
- &#39;_i&#39;,
- &#39;_i1&#39;,
- &#39;_i10&#39;,
- &#39;_i11&#39;,
- &#39;_i12&#39;,
- &#39;_i13&#39;,
- &#39;_i14&#39;,
- &#39;_i15&#39;,
- &#39;_i16&#39;,
- &#39;_i17&#39;,
- &#39;_i18&#39;,
- &#39;_i19&#39;,
- &#39;_i2&#39;,
- &#39;_i20&#39;,
- &#39;_i21&#39;,
- &#39;_i22&#39;,
- &#39;_i23&#39;,
- &#39;_i24&#39;,
- &#39;_i25&#39;,
- &#39;_i26&#39;,
- &#39;_i27&#39;,
- &#39;_i28&#39;,
- &#39;_i29&#39;,
- &#39;_i3&#39;,
- &#39;_i30&#39;,
- &#39;_i31&#39;,
- &#39;_i32&#39;,
- &#39;_i33&#39;,
- &#39;_i34&#39;,
- &#39;_i35&#39;,
- &#39;_i36&#39;,
- &#39;_i37&#39;,
- &#39;_i38&#39;,
- &#39;_i39&#39;,
- &#39;_i4&#39;,
- &#39;_i40&#39;,
- &#39;_i41&#39;,
- &#39;_i42&#39;,
- &#39;_i43&#39;,
- &#39;_i44&#39;,
- &#39;_i45&#39;,
- &#39;_i46&#39;,
- &#39;_i47&#39;,
- &#39;_i48&#39;,
- &#39;_i49&#39;,
- &#39;_i5&#39;,
- &#39;_i50&#39;,
- &#39;_i51&#39;,
- &#39;_i52&#39;,
- &#39;_i53&#39;,
- &#39;_i6&#39;,
- &#39;_i7&#39;,
- &#39;_i8&#39;,
- &#39;_i9&#39;,
- &#39;_ih&#39;,
- &#39;_ii&#39;,
- &#39;_iii&#39;,
- &#39;_oh&#39;,
- &#39;exit&#39;,
- &#39;get_ipython&#39;,
- &#39;is_false&#39;,
- &#39;is_true&#39;,
- &#39;my_extra_number&#39;,
- &#39;my_float&#39;,
- &#39;my_int&#39;,
- &#39;my_number&#39;,
- &#39;my_other_number&#39;,
- &#39;my_string&#39;,
- &#39;number_3&#39;,
- &#39;open&#39;,
- &#39;quit&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LOOK_AT_ME_I_AM_A_NEW_VARIABLE</span> <span class="o">=</span> <span class="mi">99999</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
- &#39;LOOK_AT_ME_I_AM_A_NEW_VARIABLE&#39;,
- &#39;Out&#39;,
- &#39;_&#39;,
- &#39;_10&#39;,
- &#39;_12&#39;,
- &#39;_13&#39;,
- &#39;_17&#39;,
- &#39;_18&#39;,
- &#39;_2&#39;,
- &#39;_20&#39;,
- &#39;_21&#39;,
- &#39;_22&#39;,
- &#39;_24&#39;,
- &#39;_25&#39;,
- &#39;_26&#39;,
- &#39;_27&#39;,
- &#39;_28&#39;,
- &#39;_29&#39;,
- &#39;_3&#39;,
  &#39;_30&#39;,
  &#39;_31&#39;,
  &#39;_32&#39;,
@@ -1404,7 +1291,10 @@ class type(object)
  &#39;_51&#39;,
  &#39;_52&#39;,
  &#39;_53&#39;,
- &#39;_6&#39;,
+ &#39;_54&#39;,
+ &#39;_55&#39;,
+ &#39;_7&#39;,
+ &#39;_8&#39;,
  &#39;_9&#39;,
  &#39;__&#39;,
  &#39;___&#39;,
@@ -1468,6 +1358,7 @@ class type(object)
  &#39;_i53&#39;,
  &#39;_i54&#39;,
  &#39;_i55&#39;,
+ &#39;_i56&#39;,
  &#39;_i6&#39;,
  &#39;_i7&#39;,
  &#39;_i8&#39;,
@@ -1486,6 +1377,162 @@ class type(object)
  &#39;my_number&#39;,
  &#39;my_other_number&#39;,
  &#39;my_string&#39;,
+ &#39;new_variable&#39;,
+ &#39;number_3&#39;,
+ &#39;open&#39;,
+ &#39;quit&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LOOK_AT_ME_I_AM_A_NEW_VARIABLE</span> <span class="o">=</span> <span class="mi">99999</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
+ &#39;LOOK_AT_ME_I_AM_A_NEW_VARIABLE&#39;,
+ &#39;Out&#39;,
+ &#39;_&#39;,
+ &#39;_1&#39;,
+ &#39;_12&#39;,
+ &#39;_13&#39;,
+ &#39;_15&#39;,
+ &#39;_16&#39;,
+ &#39;_2&#39;,
+ &#39;_20&#39;,
+ &#39;_21&#39;,
+ &#39;_23&#39;,
+ &#39;_24&#39;,
+ &#39;_25&#39;,
+ &#39;_27&#39;,
+ &#39;_28&#39;,
+ &#39;_29&#39;,
+ &#39;_30&#39;,
+ &#39;_31&#39;,
+ &#39;_32&#39;,
+ &#39;_33&#39;,
+ &#39;_34&#39;,
+ &#39;_35&#39;,
+ &#39;_36&#39;,
+ &#39;_37&#39;,
+ &#39;_38&#39;,
+ &#39;_39&#39;,
+ &#39;_4&#39;,
+ &#39;_40&#39;,
+ &#39;_41&#39;,
+ &#39;_42&#39;,
+ &#39;_43&#39;,
+ &#39;_44&#39;,
+ &#39;_45&#39;,
+ &#39;_46&#39;,
+ &#39;_47&#39;,
+ &#39;_48&#39;,
+ &#39;_49&#39;,
+ &#39;_5&#39;,
+ &#39;_50&#39;,
+ &#39;_51&#39;,
+ &#39;_52&#39;,
+ &#39;_53&#39;,
+ &#39;_54&#39;,
+ &#39;_55&#39;,
+ &#39;_56&#39;,
+ &#39;_7&#39;,
+ &#39;_8&#39;,
+ &#39;_9&#39;,
+ &#39;__&#39;,
+ &#39;___&#39;,
+ &#39;__builtin__&#39;,
+ &#39;__builtins__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;_dh&#39;,
+ &#39;_i&#39;,
+ &#39;_i1&#39;,
+ &#39;_i10&#39;,
+ &#39;_i11&#39;,
+ &#39;_i12&#39;,
+ &#39;_i13&#39;,
+ &#39;_i14&#39;,
+ &#39;_i15&#39;,
+ &#39;_i16&#39;,
+ &#39;_i17&#39;,
+ &#39;_i18&#39;,
+ &#39;_i19&#39;,
+ &#39;_i2&#39;,
+ &#39;_i20&#39;,
+ &#39;_i21&#39;,
+ &#39;_i22&#39;,
+ &#39;_i23&#39;,
+ &#39;_i24&#39;,
+ &#39;_i25&#39;,
+ &#39;_i26&#39;,
+ &#39;_i27&#39;,
+ &#39;_i28&#39;,
+ &#39;_i29&#39;,
+ &#39;_i3&#39;,
+ &#39;_i30&#39;,
+ &#39;_i31&#39;,
+ &#39;_i32&#39;,
+ &#39;_i33&#39;,
+ &#39;_i34&#39;,
+ &#39;_i35&#39;,
+ &#39;_i36&#39;,
+ &#39;_i37&#39;,
+ &#39;_i38&#39;,
+ &#39;_i39&#39;,
+ &#39;_i4&#39;,
+ &#39;_i40&#39;,
+ &#39;_i41&#39;,
+ &#39;_i42&#39;,
+ &#39;_i43&#39;,
+ &#39;_i44&#39;,
+ &#39;_i45&#39;,
+ &#39;_i46&#39;,
+ &#39;_i47&#39;,
+ &#39;_i48&#39;,
+ &#39;_i49&#39;,
+ &#39;_i5&#39;,
+ &#39;_i50&#39;,
+ &#39;_i51&#39;,
+ &#39;_i52&#39;,
+ &#39;_i53&#39;,
+ &#39;_i54&#39;,
+ &#39;_i55&#39;,
+ &#39;_i56&#39;,
+ &#39;_i57&#39;,
+ &#39;_i58&#39;,
+ &#39;_i6&#39;,
+ &#39;_i7&#39;,
+ &#39;_i8&#39;,
+ &#39;_i9&#39;,
+ &#39;_ih&#39;,
+ &#39;_ii&#39;,
+ &#39;_iii&#39;,
+ &#39;_oh&#39;,
+ &#39;exit&#39;,
+ &#39;get_ipython&#39;,
+ &#39;is_false&#39;,
+ &#39;is_true&#39;,
+ &#39;my_extra_number&#39;,
+ &#39;my_float&#39;,
+ &#39;my_int&#39;,
+ &#39;my_number&#39;,
+ &#39;my_other_number&#39;,
+ &#39;my_string&#39;,
+ &#39;new_variable&#39;,
  &#39;number_3&#39;,
  &#39;open&#39;,
  &#39;quit&#39;]
