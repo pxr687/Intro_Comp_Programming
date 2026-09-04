@@ -263,6 +263,15 @@ Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?
 
 Or click [here 🚀](https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/exercise_2a_Literals_Variables_Expressions_Functions.ipynb) to launch the exercise on Google Colab.
 
+**NOTE**: if you use Google Colab, you will have to make a new cell at the start of the notebook, and run this code:
+
+```
+!wget -q https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/main/mark_exercise_2a.py
+!wget -q https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/main/marking_sub_functions.py
+!wget -q https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/main/mk_var.py
+!pip install jupyprint
+```
+
 
 ----------------------------------------------------------
 
