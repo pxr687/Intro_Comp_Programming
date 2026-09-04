@@ -21,3 +21,12 @@ ghp-import -n -p -f _build/html
 `mark_exercise_X.py` is a marking template.
 
 Use `mk_launch_links.py` to make Markdown text containing the links.
+
+### Checking spelling
+
+The book is built from `.ipynb` files, but `.Rmd` files are synced because they are
+easier for spellchecking. Run this from the command line to spellcheck all notebooks:
+
+```
+codespell *.Rmd
+```

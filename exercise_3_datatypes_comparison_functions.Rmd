@@ -44,7 +44,7 @@ If the question says "make a variable called `me_and_my_cat`" you **MUST** call 
 
 ### Downloading your work
 
-*Binder and Google Colab will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file.
+*Binder and Google Colab will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file, by clicking the button shown below:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
 
@@ -63,7 +63,7 @@ Imagine you are working on a project about the population of Thailand.
 
 A Google search says that the [population of Thailand](https://www.worldometers.info/world-population/thailand-population/) is about 71.6 million people.
 
-The cell below trys to assign a variable called `pop_thailand`, which has this number in.
+The cell below tries to assign a variable called `pop_thailand`, which has this number in.
 
 However, the code is broken. See if you can fix it.
 

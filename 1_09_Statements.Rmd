@@ -14,7 +14,7 @@ jupyter:
 
 # (Import) Statements and Python packages
 
-Page mostly covers import statments and Python packages.
+Page mostly covers import statements and Python packages.
 
 [Have seen assignment statements]
 

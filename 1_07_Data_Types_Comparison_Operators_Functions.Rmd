@@ -21,8 +21,20 @@ This page is partly adapted from by [Brett and co-authors (2023)](https://odsti.
 
 Let's quickly summarise what we have learned so far.
 
-We have looked at variables, where we store named data in our computer's memory:
+A raw number or piece of text typed in Python code is called a *literal*:
 <!-- #endregion -->
+
+```{python}
+100
+```
+
+```{python}
+"text"
+```
+
+We type in the literal, and Python shows us the *value*. The value is the computer representation of the literal.
+
+We can store values as *variables*. This means we give the value a name. We can use that name to get the value out of our computers' memory:
 
 ```{python}
 # This is a variable assignment statement. 
@@ -35,11 +47,16 @@ number_3 = 3
 number_3
 ```
 
-We also looked at literals, which are values in Python code which are NOT stored as variables:
+You can think of literals as values in Python code which are NOT stored as variables:
 
 ```{python}
 # This is a literal.
 1999
+```
+
+```{python}
+# Store `1999` as a variable.
+new_variable = 1999
 ```
 
 We have also talked about expressions - any piece of Python code that returns a value:

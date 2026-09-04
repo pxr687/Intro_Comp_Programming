@@ -9,6 +9,7 @@ parts:
       - file: 1_04_More_Jupyter_Notebooks
       - file: 1_05_Variables
       - file: 1_06_Expressions
+      - file: 1_07_0_Summary_Literals_Variables_Expressions_Functions
       # - file: 1_07_Data_Types_Comparison_Operators_Functions
       # - file: 1_08_More_Data_Types_Collections
       # - file: 1_09_Statements

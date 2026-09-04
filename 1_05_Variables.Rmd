@@ -53,7 +53,7 @@ We can also type each number in a separate code cell, with a comment explaining 
 150
 ```
 
-A single number in Python code (like `1100`) is called a *literal*.
+A single value in Python code (like `1100`) is called a *literal*.
 
 What if Aaron's landlord puts up his rent to £600 each month?
 
@@ -169,7 +169,9 @@ This means we can do the calculation, with the higher rent, just by using the va
 income - rent - bills
 ```
 
-This is more convenient, and it is harder to make mistakes! If we do not use variables, we have to type the same numbers lots of times. The more we do this, the more errors we will make. For example, maybe we will type 1200 for income, instead of 1100. If we make a `income` variable, we make sure we get the right value from the computer's memory:
+This is more convenient, and it is harder to make mistakes! If we do not use variables - e.g. we do everything with literals - we have to type the same numbers lots of times. The more we do this, the more errors we will make. 
+
+For example, maybe the second time we type we will put `1200` for income, instead of `1100`. If we make a `income` variable, we make sure we get the right value from the computer's memory:
 
 ```{python}
 # Get the value of `income`, again.
@@ -183,6 +185,24 @@ Importantly, in assignment statements, the `=` is called the *assignment operato
 
 Variables are very, very, very important in coding. They make our code easy to understand, and they avoid mistakes and errors.
 
+
+## "Making a variable" vs "Showing a variable"
+
+Maybe you noticed that a single line of code which makes a variable does *NOT* show the value of the variable:
+
+```{python}
+# There is not output from this cell!
+new_variable = 2026
+```
+
+This is normal. The variable assignment statement `new_variable = 2026` says to Python: "make me a variable called `new_variable` and give it the value `2026`". This instruction does not tell Python to show us the value.
+
+After our variable is made, we just use its name to see its value:
+
+```{python}
+# This is like saying to Python: "Show me what value is in `new_variable`..."
+new_variable
+```
 
 ## More on numbers and variables in Python
 

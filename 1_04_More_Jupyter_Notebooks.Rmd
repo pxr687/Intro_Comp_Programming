@@ -54,7 +54,7 @@ Notice the `In [ ] :` on the left of this code cell. This is called a *prompt*. 
 
 When you run the cell, the prompt changes to something like `In [1]:`. Here, `[1]` means this is the first code that the kernel ran.
 
-If there is any output afer you run the cell, you will see it under the cell next to something like `Out [1]:`. Here, 1 is the same number as the number for the input cell.  This is output from the first piece of code that the kernel ran.
+If there is any output after you run the cell, you will see it under the cell next to something like `Out [1]:`. Here, 1 is the same number as the number for the input cell.  This is output from the first piece of code that the kernel ran.
 
 ## Interrupting, restarting
 

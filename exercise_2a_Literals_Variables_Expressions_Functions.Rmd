@@ -12,7 +12,9 @@ jupyter:
     name: python3
 ---
 
-# Exercise X
+# Exercise 2a - Literals, Variables, Expressions and Functions
+
+If you need help, open the _[textbook page](https://pxr687.github.io/Intro_Comp_Programming/1_07_0_Summary_Literals_Variables_Expressions_Functions.html)_ for this exercise.
 
 ## Instructions
 
@@ -23,19 +25,13 @@ jupyter:
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_X
-answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_X.pre_define_blanks(5)
+import mark_exercise_2a
+# answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_2a.pre_define_blanks(5)
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 
 
 If the question says "make a variable called `answer_1`" you **MUST** call you variable `answer_1` or you will **NOT** get a mark.
-
-If the question says "make a variable called `answer_2`" you **MUST** call you variable `answer_2` or you will **NOT** get a mark.
-
-...
-
-If the question says "make a variable called `answer_50`" you **MUST** call you variable `answer_50` or you will **NOT** get a mark.
 
 If the question says "make a variable called `me_and_my_cat`" you **MUST** call you variable `me_and_my_cat` or you will **NOT** get a mark.
 
@@ -57,11 +53,23 @@ Later in the course we will install Python on your own laptop 🙂.
 
 ## Question 1
 
-...
+I type this into a code cell:
+
+```
+10
+```
+
+What type of Python element is it?:
+
+`a` - a variable
+
+`b` - a literal
+
+Set the variable `answer_1` to equal `a` or `b` to choose your answer.
 
 ```{python}
 # Type your answer below.
-answer_1 = ...
+answer_1 = ""
 ```
 
 ### Run the next cell to mark your answer.
@@ -69,75 +77,7 @@ answer_1 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_1(answer_1)
-```
-
-## Question 2
-
-...
-
-```{python}
-# Type your answer below.
-answer_2 = ...
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_2(answer_2)
-```
-
-## Question 3
-
-...
-
-```{python}
-# Type your answer below.
-answer_3 = ...
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_3(answer_3)
-```
-
-## Question 4
-
-...
-
-```{python}
-# Your answer here.
-answer_4 = ...
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_4(answer_4)
-```
-
-## Question 5
-
-...
-
-```{python}
-# Your answer here.
-answer_5 = ...
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_5(answer_5)
+mark_exercise_2a.check_answer_1(answer_1)
 ```
 
 # Mark all your answers
@@ -145,7 +85,7 @@ mark_exercise_X.check_answer_5(answer_5)
 ```{python}
 # DO NOT CHANGE THIS CELL. 
 # Run this cell to mark all of your answers.
-mark_exercise_X.mark_all(answer_1,
+mark_exercise_2a.mark_all(answer_1,
                          answer_2,
                          answer_3,
                          answer_4,
@@ -154,4 +94,4 @@ mark_exercise_X.mark_all(answer_1,
 
 ## Go back to the textbook:
 
-Click [here](https://pxr687.github.io/Intro_Comp_Programming/intro.html) to go back to the course textbook.
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_07_0_Summary_Literals_Variables_Expressions_Functions.html)_ to go back to the course textbook.

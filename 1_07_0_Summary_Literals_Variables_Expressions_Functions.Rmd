@@ -1,0 +1,267 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.17.3
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Summary: Literals, Variables, Expressions and Functions
+
+Let's quickly summarise what we have learned so far. We have learned about some of the basic *elements* (e.g. small pieces) of Python code. 
+
+These elements can be put together to let us write complex Python programs. Python is a very powerful and useful language; so Python programs can be used for data analysis, machine learning, making apps, talking to servers... Almost anything you can think of that a computer can do can be done with Python, by putting together these elements...
+
+...but before we do any of that fun stuff, let's make sure we understand the basic Python elements that we saw on earlier pages.
+
+### Literals
+
+A raw number or piece of text typed in Python code is called a *literal*:
+
+```{python}
+100
+```
+
+```{python}
+"text"
+```
+
+We type in the literal, and Python shows us the *value*. The value is the computer representation of the literal.
+
+### Variables
+
+We can store values as *variables*. This means we give the value a name. We can use that name to get the value out of our computers' memory:
+
+```{python}
+# This is a variable assignment statement. 
+#`number_3` is the name of the variable, `3` is its value.
+number_3 = 3
+```
+
+```{python}
+# The cell above this one created this variable `number_3`. This cell shows the value of the variable.
+number_3
+```
+
+You can think of literals as values in Python code which are NOT stored as variables:
+
+```{python}
+# This is a literal.
+1999
+```
+
+```{python}
+# Store `1999` as a variable.
+new_variable = 1999
+```
+
+We have also talked about expressions. 
+
+### Expressions
+
+Expressions are any piece of Python code that returns a value:
+
+```{python}
+# This is an expression (this expression is made from two literals)
+2 + 2
+```
+
+We say that the expression *evaluates* to a value. So in the cell above, the expression `2 + 2` *evaluates* to `4`. This is the same as saying the expression `2 + 2` returns the value `4`.
+
+Literals and variables are also expressions (the simplest kinds of expressions!), because they return a value:
+
+```{python}
+# This literal is also an expression, because it returns a value.
+1990
+```
+
+```{python}
+# This text literal is also an expression, because it returns a value.
+"text"
+```
+
+```{python}
+# This variable is also an expression, because it returns a value. (We made this variable earlier).
+number_3
+```
+
+We can put literals and/or variables together to make expressions:
+
+```{python}
+# This is an expression (this expression is made from two variables we made earlier).
+number_3 + new_variable
+```
+
+```{python}
+# This is an expression made from a variable and a literal.
+number_3 + 4000
+```
+
+We can store expressions as variables also (well, we store the *value* of the expression as a variable):
+
+```{python}
+# Store the expression `1000/3` as a variable named `one_thousand_divided_by_3`.
+one_thousand_divided_by_3 = 1000/3
+```
+
+```{python}
+# Show the value of the variable one_thousand_divided_by_3.
+one_thousand_divided_by_3
+```
+
+We can also make expressions from text, e.g. by putting two text literals together with an operator like `+`:
+
+```{python}
+# An expression made from text.
+"This is some text." + " And so is this!"
+```
+
+### Functions
+
+On earlier pages, we also used *functions*, like `print()`:
+
+```{python}
+# The `print()` function.
+print('This is the print function!')
+```
+
+Functions are pieces of code that are written to do a specific thing. That code can then be used many many times without us needing to write it again.
+
+You can think of a function like a [*recipe*](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables). We give it some ingredients, and it returns a "meal".
+
+For the `print()` function, we give it some input and it displays the input. We have used it with text, but we can also use it with numbers:
+
+```{python}
+# The `print()` function (again).
+print(10)
+```
+
+There are many, many other functions we can use in Python.
+
+Another example is the `abs()` function. This will remove a minus sign (`-`) from a negative number:
+
+```{python}
+# Make a negative number, store it in a variable called `my_negative_number`.
+my_negative_number = -1
+
+# Show the value of `my_negative_number`
+my_negative_number
+```
+
+We can "give" `my_negative_number` to the `abs()` function. We do this by putting it inside the `()` brackets after the function name. For the `abs()` function, this will get rid of the minus sign (`-`) from `my_negative_number`:
+
+```{python}
+abs(my_negative_number)
+```
+
+We can also give `abs()` a literal (instead of a variable):
+
+```{python}
+abs(-9999)
+```
+
+We can also give it an expression made from literals:
+
+```{python}
+abs(-100 - 10)
+```
+
+And we can give it an expression made from variables:
+
+```{python}
+# An expression made from variables.
+-number_3 - new_variable
+```
+
+```{python}
+# Giving the same expression to the `abs()` function.
+abs(-number_3 - new_variable)
+```
+
+We can also mix variables and literals together in an expression, and give that expression to `abs()`:
+
+```{python}
+# An expression made from a variable and a literal.
+-number_3 - 1000
+```
+
+```{python}
+# Giving `abs()` an expression made from a variable and a literal.
+abs(-number_3 - 1000)
+```
+
+When we give literals, variables or expressions to a function we call them *arguments*.
+
+We say that we "give an argument to a function" or we "pass an argument to a function".
+
+So the cell below "passes the number literal `8888` to the `print()` function:
+
+```{python}
+print(8888)
+```
+
+The cell below passes the literal `"this is some text!"` to the `print()` function:
+
+```{python}
+print("this is some text!")
+```
+
+The cell below passes the expression `-10_000 - 800` to the `abs()` function:
+
+```{python}
+abs(-10_000 - 800)
+```
+
+The table below is a summary of this information:
+
+| Python Element | What it is                                                       | Example 1 (Numbers) | Example 2 (Text) |
+| -------------- | ---------------------------------------------------------------- | ------------------- | ---------------- |
+| **Literal**    | A value written directly in Python code                          | `42`                | `"hello"`        |
+| **Variable**   | A name that stores or refers to a value in our computer's memory | `age = 42`          | `name = "Sam"`   |
+| **Expression** | Code that Python evaluates to produce a value                    | `1 + 1`             | `name + "!"`     |
+| **Function**   | Reusable code that performs a task, usually using inputs         | `print(10)`         | `print("Hello")` |
+
+Expressions can be made from literals and/or variables ... and other expressions!
+
+Functions can take literals, variables and expressions as inputs:
+
+```{python}
+# Print a literal with the `print()` function.
+print("The capital of Thailand is Bangkok.")
+```
+
+```{python}
+# Print a variable with the `print()` function.
+print(one_thousand_divided_by_3)
+```
+
+```{python}
+# Print an expression with the `print()` function.
+print(100**2 + 777)
+```
+
+```{python}
+# Print a literal with the `print()` function. This is two text literals put together into an expression.
+print("The capital of Thailand is Bangkok." + " London is the capital of England.")
+```
+
+## Exercise 2a - Literals, Variables, Expressions and Functions
+
+We will now do our third Python exercise!
+
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2a_Literals_Variables_Expressions_Functions.ipynb) to launch the exercise on Binder.
+
+Or click [here 🚀](https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/exercise_2a_Literals_Variables_Expressions_Functions.ipynb) to launch the exercise on Google Colab.
+
+
+----------------------------------------------------------
+
+[🏡](intro.md).
