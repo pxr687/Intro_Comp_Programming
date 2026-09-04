@@ -34,7 +34,6 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -311,7 +310,7 @@
       
       
       
-      <li><a href="_sources/exercise_2_expressions.Rmd" target="_blank"
+      <li><a href="_sources/exercise_2_expressions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -321,7 +320,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.Rmd</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -406,7 +405,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 2 - Expressions</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-your-work">Downloading your work</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-next-cell-to-mark-your-answer">Run the next cell to mark your answer.</a></li>
 </ul>
@@ -450,7 +452,7 @@ document.write(`
 <p>If you need help, open the <em><a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_06_Expressions.html">textbook page</a></em> for this exercise.</p>
 <section id="instructions">
 <h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
-<p><strong>THIS SUPER IMPORTANT</strong>: If you see a comment which says <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">DO</span> <span class="pre">NOT</span> <span class="pre">CHANGE</span> <span class="pre">THIS</span> <span class="pre">CODE</span></code> then <strong>DO NOT CHANGE THAT CODE</strong>. You will probably break the exercise if you do…</p>
+<p><strong>IMPORTANT</strong>: If you see a comment which says <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">DO</span> <span class="pre">NOT</span> <span class="pre">CHANGE</span> <span class="pre">THIS</span> <span class="pre">CODE</span></code> then <strong>DO NOT CHANGE THAT CODE</strong>. You will probably break the exercise if you do…</p>
 <p><strong>First, run the code cell below</strong>. Click on the cell, then press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -462,15 +464,21 @@ document.write(`
 </div>
 </div>
 </div>
-<p><strong>THIS ALSO SUPER IMPORTANT</strong>: in <strong>ALL</strong> exercises, and <strong>ALL</strong> assignments/tests/exams. You <strong>MUST</strong> use the right variable names in your answers.</p>
+<p><strong>ALSO IMPORTANT</strong>: in <strong>ALL</strong> exercises, and <strong>ALL</strong> assignments/tests/exams. You <strong>MUST</strong> use the right variable names in your answers.</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_1</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> or you will <strong>NOT</strong> get a mark.</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_2</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> or you will <strong>NOT</strong> get a mark.</p>
 <p>…</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_50</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_50</span></code> or you will <strong>NOT</strong> get a mark.</p>
-<p><em>Binder will NOT save your work</em>. If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
+<p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">me_and_my_cat</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">me_and_my_cat</span></code> or you will <strong>NOT</strong> get a mark.</p>
+<section id="downloading-your-work">
+<h3>Downloading your work<a class="headerlink" href="#downloading-your-work" title="Link to this heading">#</a></h3>
+<p><em>Binder and Google Colab will NOT save your work</em>. If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png" /></p>
-<p>Your can view you work by uploading the file here: <a class="reference external" href="https://code-format.com/ipynb-viewer">https://code-format.com/ipynb-viewer</a></p>
+<p>You can also do this if you are working on Google Colab:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work_colab.png" /></p>
+<p>When you download your work, you can view it by uploading the file here: <a class="reference external" href="https://code-format.com/ipynb-viewer">https://code-format.com/ipynb-viewer</a></p>
 <p>Later in the course we will install Python on your own laptop 🙂.</p>
+</section>
 </section>
 <section id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h2>
@@ -762,7 +770,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 2 - Expressions</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-your-work">Downloading your work</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-next-cell-to-mark-your-answer">Run the next cell to mark your answer.</a></li>
 </ul>
