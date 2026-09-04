@@ -89,7 +89,6 @@ def check_answer_4(answer_4,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
 
-
 def check_answer_5(answer_5, 
                    return_mark=False):
     question_name = "Question 5"
@@ -106,6 +105,22 @@ def check_answer_5(answer_5,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
 
+def check_answer_6(answer_6, 
+                   return_mark=False):
+    question_name = "Question 6"
+    answer_name = "answer_6"
+    marks_available = 1
+    conditions = np.array([soft_assert(answer_6 in ["a", "b", "c", "d"],
+                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                                return_mark=return_mark),
+                            soft_assert(answer_6 == "d",
+                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+
 ###############################################################################
 
 ### MARKING
@@ -114,6 +129,7 @@ def mark_all(answer_1,
              answer_3,
              answer_4,
              answer_5,
+             answer_6,
              return_mark=True,
              test_all=False):
     
@@ -126,7 +142,8 @@ def mark_all(answer_1,
                     answer_2 := "c",
                     answer_3 := "a",
                     answer_4 := "c",
-                    answer_5 := "d"]))
+                    answer_5 := "d",
+                    answer_6 := "d"]))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),

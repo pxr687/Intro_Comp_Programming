@@ -12,7 +12,7 @@ jupyter:
     name: python3
 ---
 
-# Exercise X
+# Exercise 4
 
 If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/index.html)_ for this exercise.
 
@@ -25,8 +25,8 @@ If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_X
-# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = mark_exercise_X.pre_define_blanks(10)
+import mark_exercise_4
+# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8 = mark_exercise_4.pre_define_blanks(8)
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers.
@@ -62,12 +62,10 @@ answer_1 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_1(answer_1)
+mark_exercise_4.check_answer_1(answer_1)
 ```
 
-
 ## Question 2
-
 
 ```{python}
 # Type your answer below.
@@ -79,12 +77,10 @@ answer_2 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_2(answer_2)
+mark_exercise_4.check_answer_2(answer_2)
 ```
 
-
 ## Question 3
-
 
 ```{python}
 # Type your answer below.
@@ -96,12 +92,10 @@ answer_3 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_3(answer_3)
+mark_exercise_4.check_answer_3(answer_3)
 ```
 
-
 ## Question 4
-
 
 ```{python}
 # Type your answer below.
@@ -113,12 +107,10 @@ answer_4 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_4(answer_4)
+mark_exercise_4.check_answer_4(answer_4)
 ```
 
-
 ## Question 5
-
 
 ```{python}
 # Type your answer below.
@@ -130,12 +122,10 @@ answer_5 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_5(answer_5)
+mark_exercise_4.check_answer_5(answer_5)
 ```
 
-
 ## Question 6
-
 
 ```{python}
 # Type your answer below.
@@ -147,12 +137,10 @@ answer_6 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_6(answer_6)
+mark_exercise_4.check_answer_6(answer_6)
 ```
 
-
 ## Question 7
-
 
 ```{python}
 # Type your answer below.
@@ -164,12 +152,10 @@ answer_7 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_7(answer_7)
+mark_exercise_4.check_answer_7(answer_7)
 ```
 
-
 ## Question 8
-
 
 ```{python}
 # Type your answer below.
@@ -181,51 +167,15 @@ answer_8 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_8(answer_8)
+mark_exercise_4.check_answer_8(answer_8)
 ```
-
-
-## Question 9
-
-
-```{python}
-# Type your answer below.
-answer_9 = ...
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_9(answer_9)
-```
-
-
-## Question 10
-
-
-```{python}
-# Type your answer below.
-answer_10 = ...
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_10(answer_10)
-```
-
-
 
 # Mark all your answers
 
 ```{python}
 # DO NOT CHANGE THIS CELL.
 # Run this cell to mark all of your answers.
-mark_exercise_X.mark_all(answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10)
+mark_exercise_4.mark_all(answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8)
 ```
 
 ## Go back to the textbook:
