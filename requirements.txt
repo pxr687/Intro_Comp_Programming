@@ -5,6 +5,3 @@ scipy
 jupytext
 statsmodels
 jupyprint
-seaborn
-okpy
-ipywidgets

@@ -19,3 +19,5 @@ ghp-import -n -p -f _build/html
 `exercise_X_TEMPLATE.ipynb` is a template for the exercise notebook. 
 
 `mark_exercise_X.py` is a marking template.
+
+## Extra exercise links
