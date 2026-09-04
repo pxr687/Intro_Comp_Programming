@@ -1,7 +1,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Weeks 1 + 2
+  - caption: Weeks 1 + 2 - Basic Python Grammar
     chapters:
       - file: 1_01_Class_Rules
       - file: 1_02_Class_Grades_Assignments_Exams
