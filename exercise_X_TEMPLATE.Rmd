@@ -12,9 +12,7 @@ jupyter:
     name: python3
 ---
 
-# Exercise 1 - Introduction to Python and Jupyter
-
-If you need help, you can open the _[textbook page](https://pxr687.github.io/Intro_Comp_Programming/1_03_Introduction_to_Python_and_Jupyter.html)_ for this exercise.
+# Exercise X
 
 ## Instructions
 
@@ -25,8 +23,8 @@ If you need help, you can open the _[textbook page](https://pxr687.github.io/Int
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_1
-# answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_1.pre_define_blanks(5)
+import mark_exercise_X
+answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_X.pre_define_blanks(5)
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 
@@ -59,20 +57,11 @@ Later in the course we will install Python on your own laptop 🙂.
 
 ## Question 1
 
-Charlotte sells 100 tickets for a concert. Each ticket costs $22. 
-
-Charlotte wants to know the total money that she has made.
-
-Make a variable called `answer_1` which contains the total money from the ticket sales.
+...
 
 ```{python}
 # Type your answer below.
 answer_1 = ...
-```
-
-```{python}
-# Show the value of `answer_1`.
-answer_1
 ```
 
 ### Run the next cell to mark your answer.
@@ -80,14 +69,12 @@ answer_1
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_1(answer_1)
+mark_exercise_X.check_answer_1(answer_1)
 ```
 
 ## Question 2
 
-Thai immigration are asking you for your location!
-
-Make a variable called `answer_2` which contains the text `SIAM UNIVERSITY`, to tell Thai immigration where you are.
+...
 
 ```{python}
 # Type your answer below.
@@ -99,20 +86,12 @@ answer_2 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_2(answer_2)
+mark_exercise_X.check_answer_2(answer_2)
 ```
 
 ## Question 3
 
-Chris is a student at Global Academy.
-
-He has 1000 Thai Baht left to spend on snacks this month.
-
-There are 27 days left in the month.
-
-How many Thai Baht can he spend on snacks each day?
-
-Put your answer in a variable called `answer_3`:
+...
 
 ```{python}
 # Type your answer below.
@@ -124,16 +103,16 @@ answer_3 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_3(answer_3)
+mark_exercise_X.check_answer_3(answer_3)
 ```
 
 ## Question 4
 
-The variable `answer_4` should equal `This is a fine answer`. Change it so that it is correct.
+...
 
 ```{python}
 # Your answer here.
-answer_4 = "Th1s !s is @ f!ner answ3r"
+answer_4 = ...
 ```
 
 ### Run the next cell to mark your answer.
@@ -141,16 +120,12 @@ answer_4 = "Th1s !s is @ f!ner answ3r"
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_4(answer_4)
+mark_exercise_X.check_answer_4(answer_4)
 ```
 
 ## Question 5
 
-A company has 100 staff, working for 100 days. Each staff member needs 2 meals per day.
-
-How many meals does the company need to buy?
-
-Make variable `answer_5` which has the answer.
+...
 
 ```{python}
 # Your answer here.
@@ -162,7 +137,7 @@ answer_5 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_5(answer_5)
+mark_exercise_X.check_answer_5(answer_5)
 ```
 
 # Mark all your answers
@@ -170,7 +145,7 @@ mark_exercise_1.check_answer_5(answer_5)
 ```{python}
 # DO NOT CHANGE THIS CELL. 
 # Run this cell to mark all of your answers.
-mark_exercise_1.mark_all(answer_1,
+mark_exercise_X.mark_all(answer_1,
                          answer_2,
                          answer_3,
                          answer_4,
@@ -179,4 +154,4 @@ mark_exercise_1.mark_all(answer_1,
 
 ## Go back to the textbook:
 
-Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_03_Introduction_to_Python_and_Jupyter.html)_ to go back to the course textbook.
+Click [here](https://pxr687.github.io/Intro_Comp_Programming/intro.html) to go back to the course textbook.
