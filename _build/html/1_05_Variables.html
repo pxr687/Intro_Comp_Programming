@@ -189,6 +189,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_04_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Variables - thinking like a computer (scientist)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07_0_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
 </ul>
 
     </div>
@@ -405,6 +406,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-variables">Assigning variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-variable-vs-showing-a-variable">“Making a variable” vs “Showing a variable”</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-numbers-and-variables-in-python">More on numbers and variables in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-about-variable-names">Rules about variable names</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-python-jupyter-and-variables">Exercise 1 - Python, Jupyter and Variables</a></li>
@@ -485,7 +487,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>A single number in Python code (like <code class="docutils literal notranslate"><span class="pre">1100</span></code>) is called a <em>literal</em>.</p>
+<p>A single value in Python code (like <code class="docutils literal notranslate"><span class="pre">1100</span></code>) is called a <em>literal</em>.</p>
 <p>What if Aaron’s landlord puts up his rent to £600 each month?</p>
 <p>He could type all of the code again, using literals:</p>
 <div class="cell docutils container">
@@ -640,7 +642,8 @@ document.write(`
 </div>
 </div>
 </div>
-<p>This is more convenient, and it is harder to make mistakes! If we do not use variables, we have to type the same numbers lots of times. The more we do this, the more errors we will make. For example, maybe we will type 1200 for income, instead of 1100. If we make a <code class="docutils literal notranslate"><span class="pre">income</span></code> variable, we make sure we get the right value from the computer’s memory:</p>
+<p>This is more convenient, and it is harder to make mistakes! If we do not use variables - e.g. we do everything with literals - we have to type the same numbers lots of times. The more we do this, the more errors we will make.</p>
+<p>For example, maybe the second time we type we will put <code class="docutils literal notranslate"><span class="pre">1200</span></code> for income, instead of <code class="docutils literal notranslate"><span class="pre">1100</span></code>. If we make a <code class="docutils literal notranslate"><span class="pre">income</span></code> variable, we make sure we get the right value from the computer’s memory:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the value of `income`, again.</span>
@@ -657,6 +660,33 @@ document.write(`
 <p>Importantly, in assignment statements, the <code class="docutils literal notranslate"><span class="pre">=</span></code> is called the <em>assignment operator</em>:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/variable_assignment_all.png" /></p>
 <p>Variables are very, very, very important in coding. They make our code easy to understand, and they avoid mistakes and errors.</p>
+</section>
+<section id="making-a-variable-vs-showing-a-variable">
+<h2>“Making a variable” vs “Showing a variable”<a class="headerlink" href="#making-a-variable-vs-showing-a-variable" title="Link to this heading">#</a></h2>
+<p>Maybe you noticed that a single line of code which makes a variable does <em>NOT</em> show the value of the variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># There is not output from this cell!</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="mi">2026</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is normal. The variable assignment statement <code class="docutils literal notranslate"><span class="pre">new_variable</span> <span class="pre">=</span> <span class="pre">2026</span></code> says to Python: “make me a variable called <code class="docutils literal notranslate"><span class="pre">new_variable</span></code> and give it the value <code class="docutils literal notranslate"><span class="pre">2026</span></code>”. This instruction does not tell Python to show us the value.</p>
+<p>After our variable is made, we just use its name to see its value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is like saying to Python: &quot;Show me what value is in `new_variable`...&quot;</span>
+<span class="n">new_variable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2026
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="more-on-numbers-and-variables-in-python">
 <h2>More on numbers and variables in Python<a class="headerlink" href="#more-on-numbers-and-variables-in-python" title="Link to this heading">#</a></h2>
@@ -702,7 +732,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">    </span><span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">=</span> <span class="mi">20</span>
     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: cannot assign to expression here. Maybe you meant &#39;==&#39; instead of &#39;=&#39;?
@@ -719,7 +749,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">    </span><span class="mi">20</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span>
     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: cannot assign to literal here. Maybe you meant &#39;==&#39; instead of &#39;=&#39;?
@@ -911,6 +941,7 @@ underscore character <code class="docutils literal notranslate"><span class="pre
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-variables">Assigning variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-variable-vs-showing-a-variable">“Making a variable” vs “Showing a variable”</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-numbers-and-variables-in-python">More on numbers and variables in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-about-variable-names">Rules about variable names</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-python-jupyter-and-variables">Exercise 1 - Python, Jupyter and Variables</a></li>

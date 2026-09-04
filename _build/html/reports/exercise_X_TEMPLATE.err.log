@@ -39,7 +39,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
 import mark_exercise_X
-answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_X.pre_define_blanks(5)
+# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = mark_exercise_X.pre_define_blanks(10)
 ------------------
 
 
@@ -49,7 +49,7 @@ answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_X.pre_define_b
 [32m      1[39m [38;5;66;03m# RUN THIS CELL - DO NOT CHANGE THE CODE.[39;00m
 [32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
 [32m----> [39m[32m3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmark_exercise_X[39;00m
-[32m      4[39m answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_X.pre_define_blanks([32m5[39m)
+[32m      4[39m [38;5;66;03m# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = mark_exercise_X.pre_define_blanks(10)[39;00m
 
 [36mFile [39m[32m~\Intro_Comp_Programming\mark_exercise_X.py:3[39m
 [32m      1[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mjupyprint[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m jupyprint

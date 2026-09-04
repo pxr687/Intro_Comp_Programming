@@ -72,7 +72,7 @@ number_3
 ```
 
 ```{python}
-# This literal is also an expression, beause it returns a value.
+# This literal is also an expression, because it returns a value.
 1990
 ```
 
@@ -80,7 +80,7 @@ We have also use *functions*, like `print()`:
 
 ```{python}
 # The `print()` function.
-print('This is the print functon!')
+print('This is the print function!')
 ```
 
 You can think of a function like a [*recipe*](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables). We give it some ingredients, and it returns a "meal".

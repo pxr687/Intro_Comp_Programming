@@ -41,7 +41,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 ------------------
 
 
-  [36mCell[39m[36m [39m[32mIn[18][39m[32m, line 2[39m
+  [36mCell[39m[36m [39m[32mIn[20][39m[32m, line 2[39m
 [31m    [39m[31m20 = 10 + 10[39m
     ^
 [31mSyntaxError[39m[31m:[39m cannot assign to literal here. Maybe you meant '==' instead of '='?
