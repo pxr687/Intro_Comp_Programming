@@ -260,6 +260,42 @@
 </a>
 </li>
       
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/1_06_Expressions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
   </ul>
 </div>
 
@@ -493,9 +529,9 @@ notebook display the value.</p>
 <p>We will use <em>CR</em> as a shorthand for <em>computer representation</em>.  To repeat then,
 the expression <code class="docutils literal notranslate"><span class="pre">3</span></code> causes Python to make and return a CR of the number 3.</p>
 <p>The Notebook then displays the computer representation, in a way that a human can read.</p>
-<p>We will uses <em>HR</em> to mean <em>human readable</em>.</p>
+<p>We will use <em>HR</em> to mean <em>human readable</em>.</p>
 <p>In this case the HR <code class="docutils literal notranslate"><span class="pre">3</span></code> is the same as the code we typed, but this isn’t always
-so.  Consider the expression we saw above:</p>
+so. Look at the expression we saw above:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
@@ -548,18 +584,18 @@ very important (we have seen some of them before).</p>
 </tr>
 <tr class="row-odd"><td><p>Division</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">/</span> <span class="pre">3</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">2.66667</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">/</span> <span class="pre">10</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>Remainder</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">%</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">7</span> <span class="pre">%</span> <span class="pre">3</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">101</span> <span class="pre">%</span> <span class="pre">10</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p>Exponentiation</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">**</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">0.5</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">1.41421</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">**</span> <span class="pre">2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">100</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -673,8 +709,8 @@ understand error messages that you get</em>.</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "pxr687/Intro_Comp_Programming",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

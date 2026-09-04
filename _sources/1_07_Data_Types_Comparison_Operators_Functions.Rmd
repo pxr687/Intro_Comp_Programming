@@ -12,15 +12,90 @@ jupyter:
     name: python3
 ---
 
-# Data Types and Comparison Operators
+<!-- #region -->
+# Data Types, Comparison Operators and Functions
 
-[Assign some variables, use `type()].
+```{note}
+This page is partly adapted from by [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/intro_to_functions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
+
+Let's quickly summarise what we have learned so far.
+
+We have looked at variables, where we store named data in our computer's memory:
+<!-- #endregion -->
+
+```{python}
+# This is a variable assignment statement. 
+#`number_3` is the name of the variable, `3` is its value.
+number_3 = 3
+```
+
+```{python}
+# The cell above this one created this variable `number_3`. This cell shows the value of the variable.
+number_3
+```
+
+We also looked at literals, which are values in Python code which are NOT stored as variables:
+
+```{python}
+# This is a literal.
+1999
+```
+
+We have also talked about expressions - any piece of Python code that returns a value:
+
+```{python}
+# This is an expression.
+2 + 2
+```
+
+```{python}
+# This is also an expression, because it returns a value (it is the variable we made earlier)
+number_3
+```
+
+```{python}
+# This literal is also an expression, beause it returns a value.
+1990
+```
+
+We have also use *functions*, like `print()`:
+
+```{python}
+# The `print()` function.
+print('This is the print functon!')
+```
+
+You can think of a function like a [*recipe*](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables). We give it some ingredients, and it returns a "meal".
+
+For the `print()` function, we give it some input and it displays the input. We used it for text, but we can also use it for numbers:
+
+```{python}
+# The `print()` function (again).
+print(10)
+```
+
+[Importance of type]
+
+```{python}
+# A number, multiplied by 10.
+10 * 10
+```
+
+```{python}
+# Text, multiplied by 10.
+"This is text!" * 10
+```
+
+[TYPE IS VERY IMPORTANT, LOSING TRACK OF IT WILL CAUSE ERRORS!]
+
+`type()` function can tell us...
 
 ```{python tags=c("raises-exception")}
 type()
 ```
 
-[Explain arguments]
+[Explain arguments, using `print()` again as example]
 
 ```{python}
 type(1)
@@ -70,7 +145,23 @@ type(my_other_number)
 [List of basic datatypes]
 
 
+## Why is Data Type important?
+
+...because the wrong data type will break your code!
+
+```{python}
+10 * 10
+```
+
+```{python tags=c("raises-exception")}
+"10" * "10"
+```
+
 ## Comparison operators and Booleans
+
+- Explain link to literals, variables, expressions and datatypes.
+
+- Explain importance with concrete example.
 
 ```{python}
 10 == 10

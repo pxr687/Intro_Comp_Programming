@@ -259,6 +259,42 @@
 </a>
 </li>
       
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/exercise_1_python_jupyter_intro.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
   </ul>
 </div>
 
@@ -275,7 +311,7 @@
       
       
       
-      <li><a href="_sources/exercise_1_python_jupyter_intro.ipynb" target="_blank"
+      <li><a href="_sources/exercise_1_python_jupyter_intro.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +321,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.Rmd</span>
 </a>
 </li>
       
@@ -421,7 +457,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_1</span>
-<span class="n">answer_1</span><span class="p">,</span> <span class="n">answer_2</span><span class="p">,</span> <span class="n">answer_3</span><span class="p">,</span> <span class="n">answer_4</span><span class="p">,</span> <span class="n">answer_5</span><span class="p">,</span> <span class="o">=</span> <span class="n">mark_exercise_1</span><span class="o">.</span><span class="n">pre_define_blanks</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1"># answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_1.pre_define_blanks(5)</span>
 </pre></div>
 </div>
 </div>
@@ -432,7 +468,7 @@ document.write(`
 <p>…</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_50</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_50</span></code> or you will <strong>NOT</strong> get a mark.</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">me_and_my_cat</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">me_and_my_cat</span></code> or you will <strong>NOT</strong> get a mark.</p>
-<p>If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
+<p><em>Binder will NOT save your work</em>. If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png" /></p>
 <p>Your can view you work by uploading the file here: <a class="reference external" href="https://code-format.com/ipynb-viewer">https://code-format.com/ipynb-viewer</a></p>
 <p>Later in the course we will install Python on your own laptop 🙂.</p>
@@ -485,7 +521,7 @@ document.write(`
 <span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">answer_name</span> <span class="o">=</span> <span class="s2">&quot;answer_1&quot;</span>
 <span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">marks_available</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="ne">---&gt; </span><span class="mi">32</span> <span class="n">conditions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">soft_assert</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span><span class="mi">100</span> <span class="o">*</span> <span class="mi">22</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span>                           <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">question_name</span><span class="si">}</span><span class="s2"> is not correct!, `</span><span class="si">{</span><span class="n">answer_name</span><span class="si">}</span><span class="s2">` is the wrong number!&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span>                           <span class="sa">f</span><span class="s2">&quot;Your answer to </span><span class="si">{</span><span class="n">question_name</span><span class="si">}</span><span class="s2"> is not correct!, `</span><span class="si">{</span><span class="n">answer_name</span><span class="si">}</span><span class="s2">` is the wrong number!&quot;</span><span class="p">,</span>
 <span class="g g-Whitespace">     </span><span class="mi">34</span>                             <span class="n">return_mark</span><span class="o">=</span><span class="n">return_mark</span><span class="p">)])</span>
 <span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="n">mark</span> <span class="o">=</span> <span class="n">sub_check</span><span class="p">(</span><span class="n">question_name</span><span class="p">,</span> 
 <span class="g g-Whitespace">     </span><span class="mi">36</span>                  <span class="n">conditions</span><span class="p">,</span>
@@ -637,8 +673,8 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "pxr687/Intro_Comp_Programming",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

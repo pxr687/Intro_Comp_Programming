@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>More on Jupyter Notebooks &#8212; Introduction to Computer Programming</title>
+    <title>More Data Types &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -58,13 +58,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1_04_More_Jupyter_Notebooks';</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_04_More_Jupyter_Notebooks.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_14_More_Data_Types';</script>
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_14_More_Data_Types.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Variables - thinking like a computer (scientist)" href="1_05_Variables.html" />
-    <link rel="prev" title="Introduction to Python and Jupyter Notebook" href="1_03_Introduction_to_Python_and_Jupyter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -127,6 +125,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -183,11 +183,11 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weeks 1 + 2</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_01_Class_Rules.html">Class Rules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_03_Introduction_to_Python_and_Jupyter.html">Introduction to Python and Jupyter Notebook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">More on Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_04_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
 </ul>
@@ -244,7 +244,7 @@
       
       
       
-      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_04_More_Jupyter_Notebooks.ipynb" target="_blank"
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_14_More_Data_Types.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -262,7 +262,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/1_04_More_Jupyter_Notebooks.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/1_14_More_Data_Types.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,7 +311,7 @@
       
       
       
-      <li><a href="_sources/1_04_More_Jupyter_Notebooks.Rmd" target="_blank"
+      <li><a href="_sources/1_14_More_Data_Types.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -395,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>More on Jupyter Notebooks</h1>
+    <h1>More Data Types</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -405,11 +405,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-prompts">The prompts</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interrupting-restarting">Interrupting, restarting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-messages">Error messages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help-in-python">Getting help in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-writing-functions">Exercise 7 - Writing Functions</a></li>
 </ul>
             </nav>
         </div>
@@ -421,162 +417,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="more-on-jupyter-notebooks">
-<h1>More on Jupyter Notebooks<a class="headerlink" href="#more-on-jupyter-notebooks" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/more_on_jupyter.html">Brett and co-authors (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
-</div>
-<p>How does Jupyter Notebook work? It has two parts:</p>
-<ul class="simple">
-<li><p>The web client (you are looking at this now, if you are running this
-notebook in Jupyter);</p></li>
-<li><p>The kernel (this runs the Python code, and makes the results).</p></li>
-</ul>
-<p>Look at this code below:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print some text.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world!
-</pre></div>
-</div>
-</div>
-</div>
-<p>I type the code into the web client. I press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code>, or click the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button and this sends a <em>message</em> to the <em>kernel</em>.</p>
-<p>The message says something like:</p>
-<blockquote>
-<div><p>Here is some Python code.  Run this code, and show me the results.</p>
-</div></blockquote>
-<p>The kernel runs the code in Python, and then sends back the results, in this case, as text <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">world!</span></code>. The web client shows the results.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/how_notebook_works.png" />
-(Image from <a class="reference external" href="https://medium.com/&#64;stellasunday095/journey-into-ai-2-understanding-jupyter-notebook-efbed98946e5">here</a>).</p>
-<section id="the-prompts">
-<h2>The prompts<a class="headerlink" href="#the-prompts" title="Link to this heading">#</a></h2>
-<p>Notice the <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[</span> <span class="pre">]</span> <span class="pre">:</span></code> on the left of this code cell. This is called a <em>prompt</em>.  <code class="docutils literal notranslate"><span class="pre">In</span></code> means “Input”, which means this is a cell where you type in (e.g. “input”) your code.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
-</pre></div>
-</div>
-</div>
-</div>
-<p>When you run the cell, the prompt changes to something like <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[1]:</span></code>. Here, <code class="docutils literal notranslate"><span class="pre">[1]</span></code> means this is the first code that the kernel ran.</p>
-<p>If there is any output afer you run the cell, you will see it under the cell next to something like <code class="docutils literal notranslate"><span class="pre">Out</span> <span class="pre">[1]:</span></code>. Here, 1 is the same number as the number for the input cell.  This is output from the first piece of code that the kernel ran.</p>
-</section>
-<section id="interrupting-restarting">
-<h2>Interrupting, restarting<a class="headerlink" href="#interrupting-restarting" title="Link to this heading">#</a></h2>
-<p>Sometimes your kernel <em>stops working</em> - it will break and will not run the code you want it to.</p>
-<p>If this happens you should restart your kernel:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/restart_kernel.png" /></p>
-<p><strong>When you restart the kernel, you will need to run all of the cells above the cell you are using.</strong></p>
-</section>
-<section id="error-messages">
-<h2>Error messages<a class="headerlink" href="#error-messages" title="Link to this heading">#</a></h2>
-<p>Look at the code in the cell below:</p>
-<ul class="simple">
-<li><p>it has a comment (the line which starts with <code class="docutils literal notranslate"><span class="pre">#</span></code>). This is not run as code by the kernel.</p></li>
-<li><p>it has some Python code (the line with <code class="docutils literal notranslate"><span class="pre">print()</span></code>). This is run by the kernel.</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment, it is not code.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is code, it is not a comment!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is code, it is not a comment!
-</pre></div>
-</div>
-</div>
-</div>
-<p>The reason that we see this output is because the Python code is correct.</p>
-<p>This is the same idea as with a language like English.</p>
-<p>You know what the sentence <em>“we are in a classroom”</em> means, because it is in correct English.</p>
-<p>What about the senetence <em>“yably har classroom in”</em>. You do not know what this means, because it has some words that are not English, and also the grammar is not correct.</p>
-<p>If you write Python code which has the wrong grammar (e.g. parts of the code are in the wrong order), or you use words Python doees not understand, then you will get an error message:</p>
-<div class="cell tag_raises-exception docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This causes an error!</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">This</span> <span class="ow">is</span> <span class="n">code</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">comment</span><span class="o">!)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">This</span> <span class="ow">is</span> <span class="n">code</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">comment</span><span class="o">!)</span>
-                        <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax. Perhaps you forgot a comma?
-</pre></div>
-</div>
-</div>
-</div>
-<p>Error messages can be confusing! Actually they can be really, really, really, really annoying. BUT they are your friend.</p>
-<p>Remember this for the whole course: <strong>you get better at programming by fixing errors. Every error makes you a better programmer.</strong></p>
-<p>When you fix an error, try to understand WHY the error happened.</p>
-<p>For now, you can think that the error in the last cell happened because I broke this rule:</p>
-<blockquote>
-<div><p>One Python rule is that you have to put text in quotes, <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'</span></code>. You will get an error message if you do not.</p>
-</div></blockquote>
-<p>We will look more at this error later on.</p>
-</section>
-<section id="getting-help-in-python">
-<h2>Getting help in Python<a class="headerlink" href="#getting-help-in-python" title="Link to this heading">#</a></h2>
-<p>Sometimes, when you write Python code, you will feel like this:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/help_me.png" /></p>
-<p>However, Python has great built-in ways to get help.</p>
-<p>One way is to use the <code class="docutils literal notranslate"><span class="pre">?</span></code> symbol.</p>
-<p>This will show you information about something in the code. We have use <code class="docutils literal notranslate"><span class="pre">print()</span></code> a few times now.</p>
-<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> is a Python <em>function</em>. A function is Python code that is already written, and it does something useful. In this case, it shows us text.</p>
-<p>If we run <code class="docutils literal notranslate"><span class="pre">?print</span></code> we can view the <em>documentation</em> for the print function. This tells us what the function does, and how to use it.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the documentation for the `print()` function.</span>
-<span class="o">?</span>print
-</pre></div>
-</div>
-</div>
-</div>
-<p>You can also also use the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function, to say to Python “help explain this thing to me!”.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function print in module builtins:
-
-print(*args, sep=&#39; &#39;, end=&#39;\n&#39;, file=None, flush=False)
-    Prints the values to a stream, or to sys.stdout by default.
-
-    sep
-      string inserted between values, default a space.
-    end
-      string appended after the last value, default a newline.
-    file
-      a file-like object (stream); defaults to the current sys.stdout.
-    flush
-      whether to forcibly flush the stream.
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Important</strong>: when we do the <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">tests and exams</a> for this course, you will <strong>NOT</strong> be able to use the internet. However, you <strong>will be able to</strong> use Python <code class="docutils literal notranslate"><span class="pre">help()</span></code> and <code class="docutils literal notranslate"><span class="pre">?</span></code> (documentation).</p>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<p>Brett, M., Rush, P., Adhikari, A., Denero, J., &amp; Wagner, D. (2023). <em>Using Jupyter</em>. In <em>Coding for Data</em>. <a class="reference external" href="https://odsti.github.io/cfd-textbook/using_jupyter.html">https://odsti.github.io/cfd-textbook/using_jupyter.html</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="more-data-types">
+<h1>More Data Types<a class="headerlink" href="#more-data-types" title="Link to this heading">#</a></h1>
+<p>Cover all data types in: <a class="reference external" href="https://www.w3schools.com/python/python_datatypes.asp">https://www.w3schools.com/python/python_datatypes.asp</a></p>
+<p>Do this in the context of writing functions.</p>
+<section id="exercise-7-writing-functions">
+<h2>Exercise 7 - Writing Functions<a class="headerlink" href="#exercise-7-writing-functions" title="Link to this heading">#</a></h2>
+<p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
+<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_7_more_data_types.ipynb">here 🚀</a> to launch the exercise.</p>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
 </section>
@@ -612,24 +460,6 @@ print(*args, sep=&#39; &#39;, end=&#39;\n&#39;, file=None, flush=False)
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="1_03_Introduction_to_Python_and_Jupyter.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to Python and Jupyter Notebook</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="1_05_Variables.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Variables - thinking like a computer (scientist)</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -646,11 +476,7 @@ print(*args, sep=&#39; &#39;, end=&#39;\n&#39;, file=None, flush=False)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-prompts">The prompts</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interrupting-restarting">Interrupting, restarting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-messages">Error messages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help-in-python">Getting help in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-writing-functions">Exercise 7 - Writing Functions</a></li>
 </ul>
   </nav></div>
 
