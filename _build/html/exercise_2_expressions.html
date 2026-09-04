@@ -259,6 +259,42 @@
 </a>
 </li>
       
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/exercise_2_expressions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
   </ul>
 </div>
 
@@ -275,7 +311,7 @@
       
       
       
-      <li><a href="_sources/exercise_2_expressions.ipynb" target="_blank"
+      <li><a href="_sources/exercise_2_expressions.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +321,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.Rmd</span>
 </a>
 </li>
       
@@ -421,7 +457,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_2</span>
-<span class="n">answer_1</span><span class="p">,</span> <span class="n">answer_2</span><span class="p">,</span> <span class="n">answer_3</span><span class="p">,</span> <span class="n">answer_4</span><span class="p">,</span> <span class="n">answer_5</span><span class="p">,</span> <span class="o">=</span> <span class="n">mark_exercise_2</span><span class="o">.</span><span class="n">pre_define_blanks</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1"># answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_2.pre_define_blanks(5)</span>
 </pre></div>
 </div>
 </div>
@@ -431,7 +467,7 @@ document.write(`
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_2</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> or you will <strong>NOT</strong> get a mark.</p>
 <p>…</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_50</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_50</span></code> or you will <strong>NOT</strong> get a mark.</p>
-<p>If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
+<p><em>Binder will NOT save your work</em>. If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png" /></p>
 <p>Your can view you work by uploading the file here: <a class="reference external" href="https://code-format.com/ipynb-viewer">https://code-format.com/ipynb-viewer</a></p>
 <p>Later in the course we will install Python on your own laptop 🙂.</p>
@@ -477,7 +513,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<p><em>Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
@@ -523,7 +559,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<p><em>Question 2 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 2 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
@@ -569,7 +605,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<p><em>Question 3 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 3 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
@@ -608,7 +644,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<p><em>Question 4 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_4</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 4 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_4</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
@@ -644,7 +680,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<p><em>Question 5 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 5 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> is the wrong number!</em></p>
 </div>
 </div>
 </section>
@@ -665,11 +701,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<p><em>Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> is the wrong number!</em></p>
-<p><em>Question 2 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> is the wrong number!</em></p>
-<p><em>Question 3 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> is the wrong number!</em></p>
-<p><em>Question 4 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_4</span></code> is the wrong number!</em></p>
-<p><em>Question 5 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 2 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 3 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 4 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_4</span></code> is the wrong number!</em></p>
+<p><em>Your answer to Question 5 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> is the wrong number!</em></p>
 <h1 class="rubric" id="you-got-0-5-marks">You got 0/5 marks.</h1>
 </div>
 </div>
@@ -683,8 +719,8 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "pxr687/Intro_Comp_Programming",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

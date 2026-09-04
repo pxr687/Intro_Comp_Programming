@@ -1,7 +1,7 @@
 # Requirements for notebooks / Binderhub
-matplotlib
+matplotlib == 3.11.0
 pandas >= 1.5
-scipy
-jupytext
-statsmodels
+scipy == 1.18.1
+jupytext == 1.19.5
+statsmodels == 0.15.0
 jupyprint

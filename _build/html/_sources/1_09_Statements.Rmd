@@ -49,15 +49,6 @@ https://realpython.com/ref/glossary/statement/
 y = 2 * 2
 ```
 
-- A **literal** is...
-
-- An **expression** is...
-
-- A **variable** is...
-
-- A **statement** is...
-
-
 ## Import statements
 
 [Already seen some built-in Python functions:

@@ -1,0 +1,176 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.17.3
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Exercise 1 - Introduction to Python and Jupyter
+
+If you need help, you can open the _[textbook page](https://pxr687.github.io/Intro_Comp_Programming/1_03_Introduction_to_Python_and_Jupyter.html)_ for this exercise.
+
+## Instructions
+
+**THIS SUPER IMPORTANT**: If you see a comment which says `# DO NOT CHANGE THIS CODE` then **DO NOT CHANGE THAT CODE**. You will probably break the exercise if you do...
+
+**First, run the code cell below**. Click on the cell, then press `Shift + Enter`:
+
+```{python}
+# RUN THIS CELL - DO NOT CHANGE THE CODE.
+import numpy as np
+import mark_exercise_1
+# answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_1.pre_define_blanks(5)
+```
+
+**THIS ALSO SUPER IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 
+
+If the question says "make a variable called `answer_1`" you **MUST** call you variable `answer_1` or you will **NOT** get a mark.
+
+If the question says "make a variable called `answer_2`" you **MUST** call you variable `answer_2` or you will **NOT** get a mark.
+
+...
+
+If the question says "make a variable called `answer_50`" you **MUST** call you variable `answer_50` or you will **NOT** get a mark.
+
+If the question says "make a variable called `me_and_my_cat`" you **MUST** call you variable `me_and_my_cat` or you will **NOT** get a mark.
+
+
+*Binder will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file.
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
+
+Your can view you work by uploading the file here: https://code-format.com/ipynb-viewer 
+
+Later in the course we will install Python on your own laptop 🙂.
+
+
+## Question 1
+
+Charlotte sells 100 tickets for a concert. Each ticket costs $22. 
+
+Charlotte wants to know the total money that she has made.
+
+Make a variable called `answer_1` which contains the total money from the ticket sales.
+
+```{python}
+# Type your answer below.
+answer_1 = ...
+```
+
+```{python}
+# Show the value of `answer_1`.
+answer_1
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_1.check_answer_1(answer_1)
+```
+
+## Question 2
+
+Thai immigration are asking you for your location!
+
+Make a variable called `answer_2` which contains the text `SIAM UNIVERSITY`, to tell Thai immigration where you are.
+
+```{python}
+# Type your answer below.
+answer_2 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_1.check_answer_2(answer_2)
+```
+
+## Question 3
+
+Chris is a student at Global Academy.
+
+He has 1000 Thai Baht left to spend on snacks this month.
+
+There are 27 days left in the month.
+
+How many Thai Baht can he spend on snacks each day?
+
+Put your answer in a variable called `answer_3`:
+
+```{python}
+# Type your answer below.
+answer_3 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_1.check_answer_3(answer_3)
+```
+
+## Question 4
+
+The variable `answer_4` should equal `This is a fine answer`. Change it so that it is correct.
+
+```{python}
+# Your answer here.
+answer_4 = "Th1s !s is @ f!ner answ3r"
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_1.check_answer_4(answer_4)
+```
+
+## Question 5
+
+A company has 100 staff, working for 100 days. Each staff member needs 2 meals per day.
+
+How many meals does the company need to buy?
+
+Make variable `answer_5` which has the answer.
+
+```{python}
+# Your answer here.
+answer_5 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+mark_exercise_1.check_answer_5(answer_5)
+```
+
+# Mark all your answers
+
+```{python}
+# DO NOT CHANGE THIS CELL. 
+# Run this cell to mark all of your answers.
+mark_exercise_1.mark_all(answer_1,
+                         answer_2,
+                         answer_3,
+                         answer_4,
+                         answer_5)
+```
+
+## Go back to the textbook:
+
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_03_Introduction_to_Python_and_Jupyter.html)_ to go back to the course textbook.

@@ -259,6 +259,42 @@
 </a>
 </li>
       
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/exercise_3_datatypes_comparison_functions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
   </ul>
 </div>
 
@@ -275,7 +311,7 @@
       
       
       
-      <li><a href="_sources/exercise_3_datatypes_comparison_functions.ipynb" target="_blank"
+      <li><a href="_sources/exercise_3_datatypes_comparison_functions.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +321,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.Rmd</span>
 </a>
 </li>
       
@@ -421,7 +457,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_3</span>
-<span class="n">pop_thailand</span><span class="p">,</span> <span class="n">answer_2</span><span class="p">,</span> <span class="n">answer_3</span><span class="p">,</span> <span class="n">answer_4</span><span class="p">,</span> <span class="n">answer_5</span><span class="p">,</span> <span class="o">=</span> <span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">pre_define_blanks</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1"># pop_thailand, are_they_the_same, answer_3, forty_two_as_float, thailand_and_myanmar_pop = mark_exercise_3.pre_define_blanks(5)</span>
 </pre></div>
 </div>
 </div>
@@ -431,7 +467,7 @@ document.write(`
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_2</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> or you will <strong>NOT</strong> get a mark.</p>
 <p>…</p>
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">answer_50</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">answer_50</span></code> or you will <strong>NOT</strong> get a mark.</p>
-<p>If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
+<p><em>Binder will NOT save your work</em>. If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png" /></p>
 <p>Your can view you work by uploading the file here: <a class="reference external" href="https://code-format.com/ipynb-viewer">https://code-format.com/ipynb-viewer</a></p>
 <p>Later in the course we will install Python on your own laptop 🙂.</p>
@@ -442,7 +478,7 @@ document.write(`
 <p>A Google search says that the <a class="reference external" href="https://www.worldometers.info/world-population/thailand-population/">population of Thailand</a> is about 71.6 million people.</p>
 <p>The cell below trys to assign a variable called <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code>, which has this number in.</p>
 <p>However, the code is broken. See if you can fix it.</p>
-<p>**NOTE: your answer MUST be a variable called <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code>, or the marking will not work.</p>
+<p><strong>NOTE: your answer MUST be a variable called <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code>, or the marking will not work.</strong></p>
 <div class="cell tag_raise-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Population of Thailand.</span>
@@ -469,30 +505,32 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<p><em>Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code> should equal 71,600,000!</em></p>
-</div>
 </div>
 </section>
 </section>
 <section id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h2>
-<p>Your friend is also working on the project. They say that you should write 71.6 million in a different way, to make it easier for a human to read.</p>
-<p>They say you can put an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) in the number. They make a variable called <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> in the cell below.</p>
+<p>Your friend is also working on the project about Thai population. They say that you should write 71.6 million in a different way, to make it easier for a human to read.</p>
+<p>They say you can put an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) in the number. Your friend makes a variable called <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> in the cell below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your friend&#39;s number.</span>
 <span class="n">better_pop_thailand</span> <span class="o">=</span> <span class="mi">71_600_000</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Do <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code> and <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> equal the same number?</p>
+<p>Do <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code> and <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> equal the same number? Is your friend right that you can put <code class="docutils literal notranslate"><span class="pre">_</span></code> in Python numbers? Or does how they have written the number change the meaning?</p>
 <p>Make a variable called <code class="docutils literal notranslate"><span class="pre">are_they_the_same</span></code> which is the result of an expression which asks the question:</p>
 <ul class="simple">
-<li><p>*Do the variables <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code> and <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> have the same value?</p></li>
+<li><p><em>Do the variables <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code> and <code class="docutils literal notranslate"><span class="pre">better_pop_thailand</span></code> have the same value?</em></p></li>
 </ul>
-<p><strong>Note: you must use an operator to ask this question…</strong>. See the <em><a class="reference internal" href="#pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html"><span class="xref myst">textbook page</span></a></em> if you need to.</p>
+<p><strong>Rules:</strong></p>
+<ul class="simple">
+<li><p>you must use an operator to make your answer.</p></li>
+<li><p>your answer must be a Boolean…BUT you must not hard-code it e.g. you cannot use <code class="docutils literal notranslate"><span class="pre">are_they_the_same</span> <span class="pre">=</span> <span class="pre">False</span></code>.</p></li>
+</ul>
+<p>See the <em><a class="reference internal" href="#pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html"><span class="xref myst">textbook page</span></a></em> if you need to.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer here.</span>
@@ -507,7 +545,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_2</span><span class="p">(</span><span class="n">answer_2</span><span class="p">)</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_2</span><span class="p">(</span><span class="n">are_they_the_same</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -516,7 +554,21 @@ document.write(`
 </section>
 <section id="question-3">
 <h2>Question 3<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h2>
-<p>…</p>
+<p>There is an idea that <a class="reference external" href="https://www.independent.co.uk/life-style/history/42-the-answer-to-life-the-universe-and-everything-2205734.html">meaning of life is 42</a>.</p>
+<p>The cell below assigns a variable called <code class="docutils literal notranslate"><span class="pre">forty_two</span></code> which has the value <code class="docutils literal notranslate"><span class="pre">42</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The meaning of life!</span>
+<span class="n">forty_two</span> <span class="o">=</span> <span class="mi">42</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> that has the <code class="docutils literal notranslate"><span class="pre">type</span></code> of <code class="docutils literal notranslate"><span class="pre">forty_two</span></code>.</p>
+<p><strong>Rules</strong>:</p>
+<ul class="simple">
+<li><p>you must use a function to do this, do not hard-code your answer!</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
@@ -540,11 +592,11 @@ document.write(`
 </section>
 <section id="question-4">
 <h2>Question 4<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h2>
-<p>…</p>
+<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">forty_two_as_float</span></code> which changes the data type of <code class="docutils literal notranslate"><span class="pre">forty_two</span></code> to <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here.</span>
-<span class="n">answer_4</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">forty_two_as_float</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -555,7 +607,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_4</span><span class="p">(</span><span class="n">answer_4</span><span class="p">)</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_4</span><span class="p">(</span><span class="n">forty_two_as_float</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -564,11 +616,27 @@ document.write(`
 </section>
 <section id="question-5">
 <h2>Question 5<a class="headerlink" href="#question-5" title="Link to this heading">#</a></h2>
-<p>…</p>
+<p>The <a class="reference external" href="https://www.worldometers.info/world-population/myanmar-population/">population of Myanmar</a> is around 55.3 million.</p>
+<p>The cell below stores this information in a variable called <code class="docutils literal notranslate"><span class="pre">pop_myanmar</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The population of Myanmar.</span>
+<span class="n">pop_myanmar</span> <span class="o">=</span> <span class="s1">&#39;55_300_000&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We want to know: how many people are there in Thailand and Myanmar <em>together</em>?</p>
+<p>Create a variable called <code class="docutils literal notranslate"><span class="pre">thailand_and_myanmar_pop</span></code> which contains the value of <code class="docutils literal notranslate"><span class="pre">pop_thailand</span> <span class="pre">+</span> <span class="pre">pop_myanmar</span></code>.</p>
+<p><strong>Rules</strong>:</p>
+<ul class="simple">
+<li><p>you must add the variables <code class="docutils literal notranslate"><span class="pre">pop_thailand</span></code> and <code class="docutils literal notranslate"><span class="pre">pop_myanmar</span></code> … DO NOT just look at the numbers and add those. So, DO NOT use
+the numbers 71.6 million + 55.3 million.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here.</span>
-<span class="n">answer_5</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">thailand_and_myanmar_pop</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -579,7 +647,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_5</span><span class="p">(</span><span class="n">answer_5</span><span class="p">)</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">check_answer_5</span><span class="p">(</span><span class="n">thailand_and_myanmar_pop</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -593,11 +661,11 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CELL. </span>
 <span class="c1"># Run this cell to mark all of your answers.</span>
-<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">mark_all</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span>
-                         <span class="n">answer_2</span><span class="p">,</span>
+<span class="n">mark_exercise_3</span><span class="o">.</span><span class="n">mark_all</span><span class="p">(</span><span class="n">pop_thailand</span><span class="p">,</span>
+                         <span class="n">are_they_the_same</span><span class="p">,</span>
                          <span class="n">answer_3</span><span class="p">,</span>
-                         <span class="n">answer_4</span><span class="p">,</span>
-                         <span class="n">answer_5</span><span class="p">)</span>
+                         <span class="n">forty_two_as_float</span><span class="p">,</span>
+                         <span class="n">thailand_and_myanmar_pop</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -612,8 +680,8 @@ document.write(`
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "pxr687/Intro_Comp_Programming",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

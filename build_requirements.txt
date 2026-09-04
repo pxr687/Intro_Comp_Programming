@@ -7,6 +7,5 @@
 sphinx-book-theme@git+https://github.com/executablebooks/sphinx-book-theme@56874cb
 sphinx_exercise
 jupyter-book<2
-jljb
 # To allow static build / upload
 ghp-import

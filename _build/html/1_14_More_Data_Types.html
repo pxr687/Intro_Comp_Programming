@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>(Import) Statements and Python packages &#8212; Introduction to Computer Programming</title>
+    <title>More Data Types &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -58,8 +58,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1_09_Statements';</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_09_Statements.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_14_More_Data_Types';</script>
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_14_More_Data_Types.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -244,7 +244,7 @@
       
       
       
-      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_09_Statements.ipynb" target="_blank"
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_14_More_Data_Types.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -262,7 +262,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/1_09_Statements.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/1_14_More_Data_Types.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,7 +311,7 @@
       
       
       
-      <li><a href="_sources/1_09_Statements.Rmd" target="_blank"
+      <li><a href="_sources/1_14_More_Data_Types.Rmd" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -395,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>(Import) Statements and Python packages</h1>
+    <h1>More Data Types</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -405,8 +405,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-statements">Exercise 4 - Statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-writing-functions">Exercise 7 - Writing Functions</a></li>
 </ul>
             </nav>
         </div>
@@ -418,135 +417,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="import-statements-and-python-packages">
-<h1>(Import) Statements and Python packages<a class="headerlink" href="#import-statements-and-python-packages" title="Link to this heading">#</a></h1>
-<p>Page mostly covers import statments and Python packages.</p>
-<p>[Have seen assignment statements]</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># No output. This is a statement, it does not return a value.</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">x</span></code> is the variable name, <code class="docutils literal notranslate"><span class="pre">10</span></code> is the value <em>of the variable <code class="docutils literal notranslate"><span class="pre">x</span></code></em>.</p>
-<p>But the statement <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span></code> does not return a value.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the value of `x`.</span>
-<span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<p><a class="reference external" href="https://realpython.com/ref/glossary/statement/">https://realpython.com/ref/glossary/statement/</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Expression (if expression is one number like this, it is also called a &quot;literal&quot;).</span>
-<span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Expression.</span>
-<span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Statement (no value returned).</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="import-statements">
-<h2>Import statements<a class="headerlink" href="#import-statements" title="Link to this heading">#</a></h2>
-<p>[Already seen some built-in Python functions:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">help()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code></p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>[Notice colours, this is a <em>keyword</em>]</p>
-<p>[CANNOT USE KEYWORDS IN VARIABLE NAMES]</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="kn">import</span><span class="w"> </span><span class="o">=</span> <span class="mi">10</span>
-           <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>[Refer to collections page - introduce numpy arrays as the smarter, more attractive brother of lists]</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">dir()</span></code> and <code class="docutils literal notranslate"><span class="pre">dir(np)</span></code>(too messy to show on the page!).</p>
-</section>
-<section id="exercise-4-statements">
-<h2>Exercise 4 - Statements<a class="headerlink" href="#exercise-4-statements" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="more-data-types">
+<h1>More Data Types<a class="headerlink" href="#more-data-types" title="Link to this heading">#</a></h1>
+<p>Cover all data types in: <a class="reference external" href="https://www.w3schools.com/python/python_datatypes.asp">https://www.w3schools.com/python/python_datatypes.asp</a></p>
+<p>Do this in the context of writing functions.</p>
+<section id="exercise-7-writing-functions">
+<h2>Exercise 7 - Writing Functions<a class="headerlink" href="#exercise-7-writing-functions" title="Link to this heading">#</a></h2>
 <p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
-<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4_statements.ipynb">here 🚀</a> to launch the exercise.</p>
+<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_7_more_data_types.ipynb">here 🚀</a> to launch the exercise.</p>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
 </section>
@@ -598,8 +476,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-statements">Exercise 4 - Statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-writing-functions">Exercise 7 - Writing Functions</a></li>
 </ul>
   </nav></div>
 

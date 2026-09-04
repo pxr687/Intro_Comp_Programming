@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Data Types and Comparison Operators &#8212; Introduction to Computer Programming</title>
+    <title>Data Types, Comparison Operators and Functions &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -259,6 +259,42 @@
 </a>
 </li>
       
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/1_07_Data_Types_Comparison_Operators_Functions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
   </ul>
 </div>
 
@@ -359,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Types and Comparison Operators</h1>
+    <h1>Data Types, Comparison Operators and Functions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -369,6 +405,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-data-type-important">Why is Data Type important?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators-and-booleans">Comparison operators and Booleans</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-data-types">Changing Data Types</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dir-function">The <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function</a></li>
@@ -384,9 +421,148 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-types-and-comparison-operators">
-<h1>Data Types and Comparison Operators<a class="headerlink" href="#data-types-and-comparison-operators" title="Link to this heading">#</a></h1>
-<p>[Assign some variables, use `type()].</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-types-comparison-operators-and-functions">
+<h1>Data Types, Comparison Operators and Functions<a class="headerlink" href="#data-types-comparison-operators-and-functions" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page is partly adapted from by <a class="reference external" href="https://odsti.github.io/cfd-textbook/intro_to_functions.html">Brett and co-authors (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
+</div>
+<p>Let’s quickly summarise what we have learned so far.</p>
+<p>We have looked at variables, where we store named data in our computer’s memory:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a variable assignment statement. </span>
+<span class="c1">#`number_3` is the name of the variable, `3` is its value.</span>
+<span class="n">number_3</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The cell above this one created this variable `number_3`. This cell shows the value of the variable.</span>
+<span class="n">number_3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also looked at literals, which are values in Python code which are NOT stored as variables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a literal.</span>
+<span class="mi">1999</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1999
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have also talked about expressions - any piece of Python code that returns a value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is an expression.</span>
+<span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is also an expression, because it returns a value (it is the variable we made earlier)</span>
+<span class="n">number_3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This literal is also an expression, beause it returns a value.</span>
+<span class="mi">1990</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1990
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have also use <em>functions</em>, like <code class="docutils literal notranslate"><span class="pre">print()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `print()` function.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is the print functon!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the print functon!
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can think of a function like a <a class="reference external" href="https://www.inferentialthinking.com/chapters/08/Functions_and_Tables"><em>recipe</em></a>. We give it some ingredients, and it returns a “meal”.</p>
+<p>For the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, we give it some input and it displays the input. We used it for text, but we can also use it for numbers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `print()` function (again).</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p>[Importance of type]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A number, multiplied by 10.</span>
+<span class="mi">10</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Text, multiplied by 10.</span>
+<span class="s2">&quot;This is text!&quot;</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is text!This is text!This is text!This is text!This is text!This is text!This is text!This is text!This is text!This is text!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>[TYPE IS VERY IMPORTANT, LOSING TRACK OF IT WILL CAUSE ERRORS!]</p>
+<p><code class="docutils literal notranslate"><span class="pre">type()</span></code> function can tell us…</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">()</span>
@@ -396,7 +572,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">type</span><span class="p">()</span>
 
 <span class="ne">TypeError</span>: type() takes 1 or 3 arguments
@@ -404,7 +580,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>[Explain arguments]</p>
+<p>[Explain arguments, using <code class="docutils literal notranslate"><span class="pre">print()</span></code> again as example]</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -548,7 +724,7 @@ class type(object)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">help</span><span class="p">(</span><span class="nb">type</span><span class="p">())</span>
 
 <span class="ne">TypeError</span>: type() takes 1 or 3 arguments
@@ -623,8 +799,45 @@ class type(object)
 </div>
 </div>
 <p>[List of basic datatypes]</p>
+<section id="why-is-data-type-important">
+<h2>Why is Data Type important?<a class="headerlink" href="#why-is-data-type-important" title="Link to this heading">#</a></h2>
+<p>…because the wrong data type will break your code!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;10&quot;</span> <span class="o">*</span> <span class="s2">&quot;10&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="s2">&quot;10&quot;</span> <span class="o">*</span> <span class="s2">&quot;10&quot;</span>
+
+<span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="comparison-operators-and-booleans">
 <h2>Comparison operators and Booleans<a class="headerlink" href="#comparison-operators-and-booleans" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Explain link to literals, variables, expressions and datatypes.</p></li>
+<li><p>Explain importance with concrete example.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">==</span> <span class="mi">10</span>
@@ -1005,20 +1218,14 @@ class type(object)
  &#39;Out&#39;,
  &#39;_&#39;,
  &#39;_10&#39;,
- &#39;_11&#39;,
  &#39;_12&#39;,
  &#39;_13&#39;,
- &#39;_14&#39;,
- &#39;_15&#39;,
- &#39;_16&#39;,
  &#39;_17&#39;,
  &#39;_18&#39;,
- &#39;_19&#39;,
  &#39;_2&#39;,
  &#39;_20&#39;,
  &#39;_21&#39;,
  &#39;_22&#39;,
- &#39;_23&#39;,
  &#39;_24&#39;,
  &#39;_25&#39;,
  &#39;_26&#39;,
@@ -1036,135 +1243,23 @@ class type(object)
  &#39;_37&#39;,
  &#39;_38&#39;,
  &#39;_39&#39;,
- &#39;_40&#39;,
- &#39;_7&#39;,
- &#39;_8&#39;,
- &#39;__&#39;,
- &#39;___&#39;,
- &#39;__builtin__&#39;,
- &#39;__builtins__&#39;,
- &#39;__doc__&#39;,
- &#39;__loader__&#39;,
- &#39;__name__&#39;,
- &#39;__package__&#39;,
- &#39;__spec__&#39;,
- &#39;_dh&#39;,
- &#39;_i&#39;,
- &#39;_i1&#39;,
- &#39;_i10&#39;,
- &#39;_i11&#39;,
- &#39;_i12&#39;,
- &#39;_i13&#39;,
- &#39;_i14&#39;,
- &#39;_i15&#39;,
- &#39;_i16&#39;,
- &#39;_i17&#39;,
- &#39;_i18&#39;,
- &#39;_i19&#39;,
- &#39;_i2&#39;,
- &#39;_i20&#39;,
- &#39;_i21&#39;,
- &#39;_i22&#39;,
- &#39;_i23&#39;,
- &#39;_i24&#39;,
- &#39;_i25&#39;,
- &#39;_i26&#39;,
- &#39;_i27&#39;,
- &#39;_i28&#39;,
- &#39;_i29&#39;,
- &#39;_i3&#39;,
- &#39;_i30&#39;,
- &#39;_i31&#39;,
- &#39;_i32&#39;,
- &#39;_i33&#39;,
- &#39;_i34&#39;,
- &#39;_i35&#39;,
- &#39;_i36&#39;,
- &#39;_i37&#39;,
- &#39;_i38&#39;,
- &#39;_i39&#39;,
- &#39;_i4&#39;,
- &#39;_i40&#39;,
- &#39;_i41&#39;,
- &#39;_i5&#39;,
- &#39;_i6&#39;,
- &#39;_i7&#39;,
- &#39;_i8&#39;,
- &#39;_i9&#39;,
- &#39;_ih&#39;,
- &#39;_ii&#39;,
- &#39;_iii&#39;,
- &#39;_oh&#39;,
- &#39;exit&#39;,
- &#39;get_ipython&#39;,
- &#39;is_false&#39;,
- &#39;is_true&#39;,
- &#39;my_extra_number&#39;,
- &#39;my_float&#39;,
- &#39;my_int&#39;,
- &#39;my_number&#39;,
- &#39;my_other_number&#39;,
- &#39;my_string&#39;,
- &#39;open&#39;,
- &#39;quit&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LOOK_AT_ME_I_AM_A_NEW_VARIABLE</span> <span class="o">=</span> <span class="mi">99999</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
- &#39;LOOK_AT_ME_I_AM_A_NEW_VARIABLE&#39;,
- &#39;Out&#39;,
- &#39;_&#39;,
- &#39;_10&#39;,
- &#39;_11&#39;,
- &#39;_12&#39;,
- &#39;_13&#39;,
- &#39;_14&#39;,
- &#39;_15&#39;,
- &#39;_16&#39;,
- &#39;_17&#39;,
- &#39;_18&#39;,
- &#39;_19&#39;,
- &#39;_2&#39;,
- &#39;_20&#39;,
- &#39;_21&#39;,
- &#39;_22&#39;,
- &#39;_23&#39;,
- &#39;_24&#39;,
- &#39;_25&#39;,
- &#39;_26&#39;,
- &#39;_27&#39;,
- &#39;_28&#39;,
- &#39;_29&#39;,
- &#39;_3&#39;,
- &#39;_30&#39;,
- &#39;_31&#39;,
- &#39;_32&#39;,
- &#39;_33&#39;,
- &#39;_34&#39;,
- &#39;_35&#39;,
- &#39;_36&#39;,
- &#39;_37&#39;,
- &#39;_38&#39;,
- &#39;_39&#39;,
+ &#39;_4&#39;,
  &#39;_40&#39;,
  &#39;_41&#39;,
- &#39;_7&#39;,
- &#39;_8&#39;,
+ &#39;_42&#39;,
+ &#39;_43&#39;,
+ &#39;_44&#39;,
+ &#39;_45&#39;,
+ &#39;_46&#39;,
+ &#39;_47&#39;,
+ &#39;_48&#39;,
+ &#39;_49&#39;,
+ &#39;_5&#39;,
+ &#39;_50&#39;,
+ &#39;_51&#39;,
+ &#39;_52&#39;,
+ &#39;_6&#39;,
+ &#39;_9&#39;,
  &#39;__&#39;,
  &#39;___&#39;,
  &#39;__builtin__&#39;,
@@ -1214,7 +1309,17 @@ class type(object)
  &#39;_i41&#39;,
  &#39;_i42&#39;,
  &#39;_i43&#39;,
+ &#39;_i44&#39;,
+ &#39;_i45&#39;,
+ &#39;_i46&#39;,
+ &#39;_i47&#39;,
+ &#39;_i48&#39;,
+ &#39;_i49&#39;,
  &#39;_i5&#39;,
+ &#39;_i50&#39;,
+ &#39;_i51&#39;,
+ &#39;_i52&#39;,
+ &#39;_i53&#39;,
  &#39;_i6&#39;,
  &#39;_i7&#39;,
  &#39;_i8&#39;,
@@ -1233,6 +1338,156 @@ class type(object)
  &#39;my_number&#39;,
  &#39;my_other_number&#39;,
  &#39;my_string&#39;,
+ &#39;number_3&#39;,
+ &#39;open&#39;,
+ &#39;quit&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">LOOK_AT_ME_I_AM_A_NEW_VARIABLE</span> <span class="o">=</span> <span class="mi">99999</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
+ &#39;LOOK_AT_ME_I_AM_A_NEW_VARIABLE&#39;,
+ &#39;Out&#39;,
+ &#39;_&#39;,
+ &#39;_10&#39;,
+ &#39;_12&#39;,
+ &#39;_13&#39;,
+ &#39;_17&#39;,
+ &#39;_18&#39;,
+ &#39;_2&#39;,
+ &#39;_20&#39;,
+ &#39;_21&#39;,
+ &#39;_22&#39;,
+ &#39;_24&#39;,
+ &#39;_25&#39;,
+ &#39;_26&#39;,
+ &#39;_27&#39;,
+ &#39;_28&#39;,
+ &#39;_29&#39;,
+ &#39;_3&#39;,
+ &#39;_30&#39;,
+ &#39;_31&#39;,
+ &#39;_32&#39;,
+ &#39;_33&#39;,
+ &#39;_34&#39;,
+ &#39;_35&#39;,
+ &#39;_36&#39;,
+ &#39;_37&#39;,
+ &#39;_38&#39;,
+ &#39;_39&#39;,
+ &#39;_4&#39;,
+ &#39;_40&#39;,
+ &#39;_41&#39;,
+ &#39;_42&#39;,
+ &#39;_43&#39;,
+ &#39;_44&#39;,
+ &#39;_45&#39;,
+ &#39;_46&#39;,
+ &#39;_47&#39;,
+ &#39;_48&#39;,
+ &#39;_49&#39;,
+ &#39;_5&#39;,
+ &#39;_50&#39;,
+ &#39;_51&#39;,
+ &#39;_52&#39;,
+ &#39;_53&#39;,
+ &#39;_6&#39;,
+ &#39;_9&#39;,
+ &#39;__&#39;,
+ &#39;___&#39;,
+ &#39;__builtin__&#39;,
+ &#39;__builtins__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;_dh&#39;,
+ &#39;_i&#39;,
+ &#39;_i1&#39;,
+ &#39;_i10&#39;,
+ &#39;_i11&#39;,
+ &#39;_i12&#39;,
+ &#39;_i13&#39;,
+ &#39;_i14&#39;,
+ &#39;_i15&#39;,
+ &#39;_i16&#39;,
+ &#39;_i17&#39;,
+ &#39;_i18&#39;,
+ &#39;_i19&#39;,
+ &#39;_i2&#39;,
+ &#39;_i20&#39;,
+ &#39;_i21&#39;,
+ &#39;_i22&#39;,
+ &#39;_i23&#39;,
+ &#39;_i24&#39;,
+ &#39;_i25&#39;,
+ &#39;_i26&#39;,
+ &#39;_i27&#39;,
+ &#39;_i28&#39;,
+ &#39;_i29&#39;,
+ &#39;_i3&#39;,
+ &#39;_i30&#39;,
+ &#39;_i31&#39;,
+ &#39;_i32&#39;,
+ &#39;_i33&#39;,
+ &#39;_i34&#39;,
+ &#39;_i35&#39;,
+ &#39;_i36&#39;,
+ &#39;_i37&#39;,
+ &#39;_i38&#39;,
+ &#39;_i39&#39;,
+ &#39;_i4&#39;,
+ &#39;_i40&#39;,
+ &#39;_i41&#39;,
+ &#39;_i42&#39;,
+ &#39;_i43&#39;,
+ &#39;_i44&#39;,
+ &#39;_i45&#39;,
+ &#39;_i46&#39;,
+ &#39;_i47&#39;,
+ &#39;_i48&#39;,
+ &#39;_i49&#39;,
+ &#39;_i5&#39;,
+ &#39;_i50&#39;,
+ &#39;_i51&#39;,
+ &#39;_i52&#39;,
+ &#39;_i53&#39;,
+ &#39;_i54&#39;,
+ &#39;_i55&#39;,
+ &#39;_i6&#39;,
+ &#39;_i7&#39;,
+ &#39;_i8&#39;,
+ &#39;_i9&#39;,
+ &#39;_ih&#39;,
+ &#39;_ii&#39;,
+ &#39;_iii&#39;,
+ &#39;_oh&#39;,
+ &#39;exit&#39;,
+ &#39;get_ipython&#39;,
+ &#39;is_false&#39;,
+ &#39;is_true&#39;,
+ &#39;my_extra_number&#39;,
+ &#39;my_float&#39;,
+ &#39;my_int&#39;,
+ &#39;my_number&#39;,
+ &#39;my_other_number&#39;,
+ &#39;my_string&#39;,
+ &#39;number_3&#39;,
  &#39;open&#39;,
  &#39;quit&#39;]
 </pre></div>
@@ -1254,8 +1509,8 @@ class type(object)
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "pxr687/Intro_Comp_Programming",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1296,6 +1551,7 @@ class type(object)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-data-type-important">Why is Data Type important?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators-and-booleans">Comparison operators and Booleans</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-data-types">Changing Data Types</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dir-function">The <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function</a></li>
