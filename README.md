@@ -20,4 +20,4 @@ ghp-import -n -p -f _build/html
 
 `mark_exercise_X.py` is a marking template.
 
-## Extra exercise links
+Use `mk_launch_links.py` to make Markdown text containing the links.
