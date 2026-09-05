@@ -14,14 +14,7 @@ jupyter-book build .
 ghp-import -n -p -f _build/html
 ```
 
-### For each new Exercise
-
-`exercise_X_TEMPLATE.ipynb` is a template for the exercise notebook. 
-
-`mark_exercise_X.py` is a marking template.
-
-Use `mk_launch_links.py` to make Markdown text containing the exercise links to
-put in a textbook page.
+### To make a new Exercise Notebook (e.g. not a textbook page)
 
 Each `ipynb` file is linked by `jupytext` with an `Rmd` file. To make a new 
 exercise, run this from terminal:
@@ -44,7 +37,15 @@ If editing an existing exercise, it can be easier to:
 
 - opening the `.Rmd` in Jupyter to test and save to re-create the `ipynb`.
 
-Markdown links to an exercise can be made via `mk_launch_links.py`.
+Use `mk_launch_links.py` to make Markdown text containing the exercise links to
+put in a textbook page.
+
+Exercises are marked by `mark_exercise_*.py` files. These import a function from
+`marking_sub_functions.py` called `mk_new_q_marking()` which generates blank
+marking code.
+
+As a (very) lo-fi way to make an exercise, `exercise_X_TEMPLATE.ipynb` is a template
+for the exercise notebook. `mark_exercise_X.py` is a marking template.
 
 ### A note on checking spelling
 
