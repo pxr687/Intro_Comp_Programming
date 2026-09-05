@@ -13,7 +13,7 @@ def soft_assert(condition, warning_text, return_mark=False):
 def sub_check(question_number, answer_var, conditions_array, return_mark):
     all_conditions_true = (conditions_array.sum() == len(conditions_array))
     if all_conditions_true:
-        jupyprint(f"*Your answer to {question_number} is correct! {answer_var} is the right answer!*")
+        jupyprint(f"*Your answer to {question_number} is correct! `{answer_var}` is the right answer!*")
     if return_mark & all_conditions_true:
         return "got_mark"
     if return_mark & (all_conditions_true == False):
