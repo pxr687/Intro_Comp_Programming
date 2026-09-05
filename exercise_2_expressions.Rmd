@@ -171,6 +171,8 @@ It should give the value `28`.
 
 Add/change operators (`+`, `-`, `/`, `*`, `**`) and/or brackets (`()`) in the expression, to make it equal `28`.
 
+**Do not change any numbers in the assignment statement.**
+
 **DO NOT USE `answer_4 = 28`. This is called hard-coding an answer...it is not allowed in any exercise or assessment.**
 
 ```{python}
@@ -193,7 +195,7 @@ mark_exercise_2.check_answer_4(answer_4)
 
 `answer_5 = 9 * 4 + 8 / 2 - 3` returns the value `37`. 
 
-Change the operators or brackets so that it has the value `28`.
+Change **only** the operators or brackets so that it has the value `28`. Do not change any numbers in the assignment statement.
 
 ```{python}
 # Type your answer below.
