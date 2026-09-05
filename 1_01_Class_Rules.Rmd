@@ -20,7 +20,13 @@ When you do the exercises in this textbook you **should NOT** use AI.
 
 Every line of code should be written by you, from your brain ✅🧠🙂 **NOT** from a robot brain ❌🤖.
 
-If you use AI while you are learning to code for the first time, you will not learn how to code. You will not be able to debug and fix code when it goes wrong.
+If you use AI while you are learning to code for the first time, you will not learn how to code. You will not be able to debug and fix code when it goes wrong. 
+
+Have a look at this [article](https://pxr687.github.io/doc_viewer/AI_assistance.pdf) which explains some of the bad effects of using AI when you are learning new coding skills. It says that:
+
+- using AI when you learn to code will make you faster to finish tasks...
+
+- ...BUT you will not understand the code you write. You will be slower to learn new coding skills.
 
 ## Working together in class
 
