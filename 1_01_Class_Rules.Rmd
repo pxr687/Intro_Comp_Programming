@@ -30,7 +30,7 @@ Have a look at this [article](https://pxr687.github.io/doc_viewer/AI_assistance.
 
 Letting AI think for you, instead of thinking yourself, is called *cognitive offloading*:
 
-![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/cog_offloading.png)
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/offloading.png)
 
 AI can be useful, for example, I used it to make this image. BUT it is bad for you if you use it while you are learning to code...
 
