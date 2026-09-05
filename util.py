@@ -23,5 +23,7 @@ def mk_t_2a():
     return obs_1, obs_2, obs_3, obs_4
 
 def mk_t_3():
-
+    text = "This is one is probably not needed!"
+    text_2 = "Because of the nature of the expected input."
+    text_3 = "See the associated script/notebook."
     return
