@@ -47,17 +47,17 @@ Have a look at [this page](https://docs.python.org/3/faq/general.html) for some 
 
 ## Jupyter Notebooks
 
-This textbook is written using Jupyter Notebooks. Inside a Jupyter Notebook (an `.ipynb` file) we can write and run Python code. We will use Jupyter Notebooks for the start of this course. Later, we will install Python on your personal laptop.
+This textbook is written using Jupyter Notebooks. Inside a Jupyter Notebook (an `.ipynb` file) we can write and run Python code. We will use online Jupyter Notebooks for the start of this course. Later, we will install Python on your personal laptop.
 
 When using this textbook you should run the code yourself - do not just read the text. 
 
-Click this button at the top of the page to launch this page using Binder, Google Colab or Live Code. This means you can run/write Python code on the page as well as read the text:
+Click one of these buttons at the top of the page to launch this page using Binder or Live Code. When you do this, it means you can run and edit the Python code on this page, as well as read the text. You can also write your own, new Python code:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
 
 Or click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_03_Introduction_to_Python_and_Jupyter.ipynb) to launch the page on Binder. 
 
-**Note:** it can take a few minutes to launch the notebook online. Binder makes a [virtual machine](https://cloud.google.com/learn/what-is-a-virtual-machine) on a Cloud service which lets you write, edit and run Python code. In contrast, Live Code will run the code in your browser.
+**Note:** it can take a few minutes to launch the notebook online. Binder makes a [virtual machine](https://cloud.google.com/learn/what-is-a-virtual-machine) on a Cloud service, which lets you run code. In contrast, Live Code will run the code in your browser window (without a virtual machine).
 
 
 ## Markdown cells
