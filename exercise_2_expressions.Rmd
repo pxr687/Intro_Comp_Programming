@@ -55,7 +55,7 @@ Later in the course we will install Python on your own laptop 🙂.
 
 ## Question 1
 
-You work in a Physics lab, and your co-worker has made lots of mistakes in some code.
+Imagine that you work in a Physics lab. Your co-worker has made lots of mistakes in some code they wrote to do some calculations.
 
 In the cell below, there is an assignment statement: `answer_1 = 100 * 2`.
 
