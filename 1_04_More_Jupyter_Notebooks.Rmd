@@ -95,7 +95,7 @@ If you write Python code which has the wrong grammar (e.g. parts of the code are
 print(This is code, it is not a comment!)
 ```
 
-Error messages can be confusing! Actually they can be really, really, really, really annoying. BUT they are your friend.
+Error messages can be confusing. Actually they can be really, really, really, really annoying. But they are your friend.
 
 Remember this for the whole course: **you get better at programming by fixing errors. Every error makes you a better programmer.**
 
