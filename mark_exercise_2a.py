@@ -5,7 +5,7 @@ from mk_var import mk_var
 import numpy as np
 
 # SET TOTAL MARKS FOR EXERCISE
-total_marks = 5
+total_marks = 9
 
 def pre_define_blanks(n_ans):
     return  pre_define_blanks_ans(n_ans)

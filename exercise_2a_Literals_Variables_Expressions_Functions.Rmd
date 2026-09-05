@@ -212,7 +212,7 @@ mark_exercise_2a.check_answer_5(answer_5)
 
 ## Question 6
 
-Look at the code from the last question:
+Look again at the code from the last question:
 
 ```
 my_road = "soi_sukhumvit_50"
@@ -331,16 +331,15 @@ my_variable
 
 If this is the first code we write and run in a notebook, what will happen?:
 
-`a` - Python will show us the value of `my_variable`, which is `30000`.
+`a` - Python will show us the value of `my_variable`, which is `30000` (e.g. the result of `100 * 300`).
 
-`b` - Python will show us the text literal `"my_variablee"`.
+`b` - Python will show us the text literal `"my_variable"`.
 
 `c` - We will get an error message.
 
 `d` - Python will show us the value of the expression `my_variable`.
 
 Set the variable `answer_7` to equal `a`, `b`, `c` or `d` to choose your answer.
-
 
 ```{python}
 # Type your answer below.
