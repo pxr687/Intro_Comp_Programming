@@ -1,5 +1,5 @@
 from jupyprint import jupyprint
-from marking_sub_functions import soft_assert, sub_check, award_marks, pre_define_blanks_ans, mk_new_q_marking
+from marking_sub_functions import *
 from util import *
 from mk_var import mk_var
 import numpy as np

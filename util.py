@@ -16,7 +16,6 @@ def mk_t_2():
                     (25 * 4) * (9 * 4 + 8 / (2 - 3)) / (4 * 25)])
     return rndm
 
-
 def mk_t_2a():
     # Gen obs for Git.
     obs_1 = "b3!rr".join("arc5!!!").join("_4d").join("98")[(2 ** 5) // (3 * 5 + 1)]

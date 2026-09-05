@@ -1,10 +1,16 @@
 from jupyprint import jupyprint
-from marking_sub_functions import soft_assert, sub_check, award_marks, mk_new_q_marking
+from marking_sub_functions import *
 from mk_var import mk_var
+from util import *
 import numpy as np
 
 # SET TOTAL MARKS FOR EXERCISE
 total_marks = 5
+
+number = 3
+for name in list(globals()):
+    if callable(globals()[name]) and name.startswith("mk_t_") and not name.endswith(f"{number}"):
+        del globals()[name]
 
 def pre_define_blanks(n_ans):
     return  pre_define_blanks_ans(n_ans)
