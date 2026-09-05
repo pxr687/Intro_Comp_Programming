@@ -262,24 +262,6 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/exercise_2a_Literals_Variables_Expressions_Functions.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch on Colab"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img alt="Colab logo" src="_static/images/logo_colab.png">
-  </span>
-<span class="btn__text-container">Colab</span>
-</a>
-</li>
-      
-      
-      
-      
       <li>
 <button onclick="initThebeSBT()"
   class="btn btn-sm btn-launch-thebe dropdown-item"
@@ -446,10 +428,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Run the next cell to mark your answer.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10">Question 10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Run the next cell to mark your answer.</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mark-all-your-answers">Mark all your answers</a><ul class="visible nav section-nav flex-column">
@@ -480,7 +458,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">mark_exercise_2a</span>
-<span class="c1"># answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = mark_exercise_2a.pre_define_blanks(5)</span>
+<span class="c1"># answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9 = mark_exercise_2a.pre_define_blanks(5)</span>
 </pre></div>
 </div>
 </div>
@@ -490,10 +468,8 @@ document.write(`
 <p>If the question says “make a variable called <code class="docutils literal notranslate"><span class="pre">me_and_my_cat</span></code>” you <strong>MUST</strong> call you variable <code class="docutils literal notranslate"><span class="pre">me_and_my_cat</span></code> or you will <strong>NOT</strong> get a mark.</p>
 <section id="downloading-your-work">
 <h3>Downloading your work<a class="headerlink" href="#downloading-your-work" title="Link to this heading">#</a></h3>
-<p><em>Binder and Google Colab will NOT save your work</em>. If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file, by clicking the button shown below:</p>
+<p><em>Binder will NOT save your work</em>. If you are working on Binder, when you finish all of the questions, you can download your work as an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file, by clicking the button shown below:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png" /></p>
-<p>You can also do this if you are working on Google Colab:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work_colab.png" /></p>
 <p>When you download your work, you can view it by uploading the file here: <a class="reference external" href="https://code-format.com/ipynb-viewer">https://code-format.com/ipynb-viewer</a></p>
 <p>Later in the course we will install Python on your own laptop 🙂.</p>
 </section>
@@ -685,7 +661,7 @@ document.write(`
 </section>
 <section id="question-6">
 <h2>Question 6<a class="headerlink" href="#question-6" title="Link to this heading">#</a></h2>
-<p>Look at the code from the last question:</p>
+<p>Look again at the code from the last question:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_road</span> <span class="o">=</span> <span class="s2">&quot;soi_sukhumvit_50&quot;</span>
 
 <span class="s2">&quot;My road is &quot;</span> <span class="o">+</span> <span class="n">my_road</span>
@@ -725,14 +701,15 @@ document.write(`
 <section id="question-7">
 <h2>Question 7<a class="headerlink" href="#question-7" title="Link to this heading">#</a></h2>
 <p>Look at the code below:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello class.&quot;</span> <span class="o">+</span> <span class="s2">&quot; Here are two bits of text&quot;</span><span class="p">)</span>
+
 </pre></div>
 </div>
 <p>Which one of these is correct?:</p>
-<p><code class="docutils literal notranslate"><span class="pre">a</span></code> -</p>
-<p><code class="docutils literal notranslate"><span class="pre">b</span></code> -</p>
-<p><code class="docutils literal notranslate"><span class="pre">c</span></code> -</p>
-<p><code class="docutils literal notranslate"><span class="pre">d</span></code> -</p>
+<p><code class="docutils literal notranslate"><span class="pre">a</span></code> - This is an expression.</p>
+<p><code class="docutils literal notranslate"><span class="pre">b</span></code> - It is a function which takes two variables as arguments.</p>
+<p><code class="docutils literal notranslate"><span class="pre">c</span></code> - It is a function which takes an expression as its argument.</p>
+<p><code class="docutils literal notranslate"><span class="pre">d</span></code> - It is an expression which takes a variable as its argument.</p>
 <p>Set the variable <code class="docutils literal notranslate"><span class="pre">answer_7</span></code> to equal <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> or <code class="docutils literal notranslate"><span class="pre">d</span></code> to choose your answer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -753,22 +730,29 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">mark_exercise_2a</span><span class="o">.</span><span class="n">check_answer_7</span><span class="p">(</span><span class="n">answer_7</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: module &#39;mark_exercise_2a&#39; has no attribute &#39;check_answer_7&#39;
-</pre></div>
-</div>
+<p><em>Question 7 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_7</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 7 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_7</span></code> is the wrong answer.</em></p>
 </div>
 </div>
 </section>
 </section>
 <section id="question-8">
 <h2>Question 8<a class="headerlink" href="#question-8" title="Link to this heading">#</a></h2>
+<p>Look at the code below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello class.&quot;</span>
+
+<span class="n">two_text</span> <span class="o">=</span> <span class="s2">&quot; Here are two bits of text.&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">greeting</span> <span class="o">+</span> <span class="n">two_text</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Which one of these is correct <em>for the last line of the code</em>?:</p>
+<p><code class="docutils literal notranslate"><span class="pre">a</span></code> - It is a function which takes an expression as its argument - the expression is made from two literals.</p>
+<p><code class="docutils literal notranslate"><span class="pre">b</span></code> - It is a function which takes an expression as its argument - the expression is made from two variables.</p>
+<p><code class="docutils literal notranslate"><span class="pre">c</span></code> - It is a function which takes an expression as its argument - the expression is made from other functions.</p>
+<p><code class="docutils literal notranslate"><span class="pre">d</span></code> - It is a function which takes two variables as arguments.</p>
+<p>Set the variable <code class="docutils literal notranslate"><span class="pre">answer_7</span></code> to equal <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> or <code class="docutils literal notranslate"><span class="pre">d</span></code> to choose your answer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
@@ -787,11 +771,28 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<p><em>Question 8 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_8</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 8 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_8</span></code> is the wrong answer.</em></p>
+</div>
 </div>
 </section>
 </section>
 <section id="question-9">
 <h2>Question 9<a class="headerlink" href="#question-9" title="Link to this heading">#</a></h2>
+<p>Look at the code below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># my_variable = 100 * 300</span>
+
+<span class="n">my_variable</span>
+
+</pre></div>
+</div>
+<p>If this is the first code we write and run in a notebook, what will happen?:</p>
+<p><code class="docutils literal notranslate"><span class="pre">a</span></code> - Python will show us the value of <code class="docutils literal notranslate"><span class="pre">my_variable</span></code>, which is <code class="docutils literal notranslate"><span class="pre">30000</span></code> (e.g. the result of <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">*</span> <span class="pre">300</span></code>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">b</span></code> - Python will show us the text literal <code class="docutils literal notranslate"><span class="pre">&quot;my_variable&quot;</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">c</span></code> - We will get an error message.</p>
+<p><code class="docutils literal notranslate"><span class="pre">d</span></code> - Python will show us the value of the expression <code class="docutils literal notranslate"><span class="pre">my_variable</span></code>.</p>
+<p>Set the variable <code class="docutils literal notranslate"><span class="pre">answer_7</span></code> to equal <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> or <code class="docutils literal notranslate"><span class="pre">d</span></code> to choose your answer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
@@ -810,28 +811,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</div>
-</section>
-</section>
-<section id="question-10">
-<h2>Question 10<a class="headerlink" href="#question-10" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Type your answer below.</span>
-<span class="n">answer_10</span> <span class="o">=</span> <span class="o">...</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="id9">
-<h3>Run the next cell to mark your answer.<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
-<span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">mark_exercise_2a</span><span class="o">.</span><span class="n">check_answer_10</span><span class="p">(</span><span class="n">answer_10</span><span class="p">)</span>
-</pre></div>
-</div>
+<div class="cell_output docutils container">
+<p><em>Question 9 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_9</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 9 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_9</span></code> is the wrong answer.</em></p>
 </div>
 </div>
 </section>
@@ -843,14 +825,38 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CELL. </span>
 <span class="c1"># Run this cell to mark all of your answers.</span>
-<span class="n">mark_exercise_2a</span><span class="o">.</span><span class="n">mark_all</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span>
-                         <span class="n">answer_2</span><span class="p">,</span>
+<span class="n">mark_exercise_2a</span><span class="o">.</span><span class="n">mark_all</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span> 
+                         <span class="n">answer_2</span><span class="p">,</span> 
                          <span class="n">answer_3</span><span class="p">,</span>
                          <span class="n">answer_4</span><span class="p">,</span>
                          <span class="n">answer_5</span><span class="p">,</span>
-                         <span class="n">answer_6</span><span class="p">)</span>
+                         <span class="n">answer_6</span><span class="p">,</span>
+                         <span class="n">answer_7</span><span class="p">,</span>
+                         <span class="n">answer_8</span><span class="p">,</span>
+                         <span class="n">answer_9</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<p><em>Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_1</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>or <code class="docutils literal notranslate"><span class="pre">'c'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 1 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_1</span></code> is the wrong answer.</em></p>
+<p><em>Question 2 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_2</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>or <code class="docutils literal notranslate"><span class="pre">'c'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 2 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_2</span></code> is the wrong answer.</em></p>
+<p><em>Question 3 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_3</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 3 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_3</span></code> is the wrong answer.</em></p>
+<p><em>Question 4 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_4</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 4 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_4</span></code> is the wrong answer.</em></p>
+<p><em>Question 5 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_5</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 5 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_5</span></code> is the wrong answer.</em></p>
+<p><em>Question 6 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_6</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 6 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_6</span></code> is the wrong answer.</em></p>
+<p><em>Question 7 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_7</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 7 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_7</span></code> is the wrong answer.</em></p>
+<p><em>Question 8 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_8</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 8 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_8</span></code> is the wrong answer.</em></p>
+<p><em>Question 9 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_9</span></code>  should be <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'b'</span></code>, <code class="docutils literal notranslate"><span class="pre">'c'</span></code> or <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. Make sure you did not forget to use quotation marks! <code class="docutils literal notranslate"><span class="pre">'</span></code></em></p>
+<p><em>Question 9 is not correct! <code class="docutils literal notranslate"><span class="pre">answer_9</span></code> is the wrong answer.</em></p>
+<h1 class="rubric" id="you-got-0-9-marks">You got 0/9 marks.</h1>
 </div>
 </div>
 <section id="go-back-to-the-textbook">
@@ -944,10 +950,6 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Run the next cell to mark your answer.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10">Question 10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Run the next cell to mark your answer.</a></li>
 </ul>
 </li>
 </ul>
