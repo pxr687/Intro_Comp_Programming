@@ -36,27 +36,25 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# RUN THIS CELL - DO NOT CHANGE THE CODE.
-import numpy as np
-import mark_exercise_X
-# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = mark_exercise_X.pre_define_blanks(10)
+rndm = np.array([(2**10) + (100 ** 2) - (2**10),
+                    (1245 * 2) + (8 * 4 / 2) - (1245 * 2),
+                    (9 * 34) + (2 ** 2 * (4 + 6)) - (9 * 34),
+                    (8 * 9 * 10) + ((8 - 6) * 2 + 24) - (8 * 9 * 10),
+                    (25 * 4) * (9 * 4 + 8 / (2 - 3)) / (4 * 25)])
+
+rndm
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 3[39m
-[32m      1[39m [38;5;66;03m# RUN THIS CELL - DO NOT CHANGE THE CODE.[39;00m
-[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
-[32m----> [39m[32m3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmark_exercise_X[39;00m
-[32m      4[39m [38;5;66;03m# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = mark_exercise_X.pre_define_blanks(10)[39;00m
+[36mCell[39m[36m [39m[32mIn[65][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m rndm = [43mnp[49m.array([([32m2[39m**[32m10[39m) + ([32m100[39m ** [32m2[39m) - ([32m2[39m**[32m10[39m),
+[32m      2[39m                     ([32m1245[39m * [32m2[39m) + ([32m8[39m * [32m4[39m / [32m2[39m) - ([32m1245[39m * [32m2[39m),
+[32m      3[39m                     ([32m9[39m * [32m34[39m) + ([32m2[39m ** [32m2[39m * ([32m4[39m + [32m6[39m)) - ([32m9[39m * [32m34[39m),
+[32m      4[39m                     ([32m8[39m * [32m9[39m * [32m10[39m) + (([32m8[39m - [32m6[39m) * [32m2[39m + [32m24[39m) - ([32m8[39m * [32m9[39m * [32m10[39m),
+[32m      5[39m                     ([32m25[39m * [32m4[39m) * ([32m9[39m * [32m4[39m + [32m8[39m / ([32m2[39m - [32m3[39m)) / ([32m4[39m * [32m25[39m)])
+[32m      7[39m rndm
 
-[36mFile [39m[32m~\Intro_Comp_Programming\mark_exercise_X.py:10[39m
-[32m      7[39m [38;5;66;03m# SET TOTAL MARKS FOR EXERCISE[39;00m
-[32m      8[39m total_marks = [32m5[39m
-[32m---> [39m[32m10[39m number = [43mX[49m
-[32m     11[39m [38;5;28;01mfor[39;00m name [38;5;129;01min[39;00m [38;5;28mlist[39m([38;5;28mglobals[39m()):
-[32m     12[39m     [38;5;28;01mif[39;00m [38;5;28mcallable[39m([38;5;28mglobals[39m()[name]) [38;5;129;01mand[39;00m name.startswith([33m"[39m[33mmk_t_[39m[33m"[39m) [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m name.endswith([33mf[39m[33m"[39m[38;5;132;01m{[39;00mnumber[38;5;132;01m}[39;00m[33m"[39m):
-
-[31mNameError[39m: name 'X' is not defined
+[31mNameError[39m: name 'np' is not defined
 

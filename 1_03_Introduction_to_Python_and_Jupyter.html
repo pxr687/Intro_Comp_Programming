@@ -390,7 +390,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">Jupyter Notebooks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">Markdown cells</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Code cells</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Code cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commenting-out-code">Commenting out code</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
 </li>
@@ -526,6 +527,41 @@ writing code that is clear and simple.</p></li>
 </div>
 </div>
 </div>
+<p>You should always write good comments with your code. If you do not, when you come back to your code after a week, a month, a year, you will have no idea what it does. (Trust me, you will have this experience)!</p>
+<p>If you work with someone else on your code, comments help both of you to understand what the other person was thinking when they wrote the code. It is much easier to understand code written by someone else if they write good comments.</p>
+</section>
+<section id="commenting-out-code">
+<h2>Commenting out code<a class="headerlink" href="#commenting-out-code" title="Link to this heading">#</a></h2>
+<p>Comments are also useful for testing and debugging code. You can put a <code class="docutils literal notranslate"><span class="pre">#</span></code> at the start of a line of code to turn it into a comment. Now the Python compiler will ignore it. This will let you find the line of code which is causing the error.</p>
+<p>In the code cell below, one line is causing an error. Find the line which is causing the error, by “commenting out” different lines, and re-running the cell:</p>
+<p><em>Hint:</em> you can comment out multiple lines at once by highlighting them, and pressing <code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">+</span> <span class="pre">/</span></code>.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &quot;Comment out&quot; different lines.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Text!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Even more text!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text, more text, more text&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text, more text, more text&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text, more text, more text&#39;</span><span class="o">.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text, more text, more text&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Text!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Even more text!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text, more text, more text&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text, more text, more text&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;More text, more text, more text&#39;</span><span class="o">.</span><span class="p">)</span>
+                                            <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
 <section id="references">
 <h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
 <p>Brett, M., Rush, P., Adhikari, A., Denero, J., &amp; Wagner, D. (2023). <em>Our tools.</em> In <em>Coding for data.</em> <a class="reference external" href="https://odsti.github.io/cfd-textbook/the_software.html">https://odsti.github.io/cfd-textbook/the_software.html</a></p>
@@ -602,7 +638,8 @@ writing code that is clear and simple.</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebooks">Jupyter Notebooks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">Markdown cells</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Code cells</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">Code cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commenting-out-code">Commenting out code</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
 </li>
