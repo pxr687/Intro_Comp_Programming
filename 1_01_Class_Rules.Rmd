@@ -24,9 +24,15 @@ If you use AI while you are learning to code for the first time, you will not le
 
 Have a look at this [article](https://pxr687.github.io/doc_viewer/AI_assistance.pdf) which explains some of the bad effects of using AI when you are learning new coding skills. It says that:
 
-- using AI when you learn to code will make you faster to finish tasks...
+- using AI when you learn will make you faster to finish coding tasks...
 
-- ...*BUT* you will not understand the code you write. And you will be slower to learn new coding skills than if you do not use AI.
+- ...*BUT* you will not understand the code you write, and you will be slower to learn the new skills.
+
+Letting AI think for you, instead of thinking yourself, is called *cognitive offloading*:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/cognitive_offloading.png)
+
+AI can be useful, for example, I used it to make this image. BUT it is bad for you if you use it while you are learning to code...
 
 ## Working together in class
 
