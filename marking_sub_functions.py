@@ -10,10 +10,10 @@ def soft_assert(condition, warning_text, return_mark=False):
         jupyprint("*"+warning_text+"*")
     return condition # Bool as indicator of mark obtained.
 
-def sub_check(question_number, conditions_array, return_mark):
+def sub_check(question_number, answer_var, conditions_array, return_mark):
     all_conditions_true = (conditions_array.sum() == len(conditions_array))
     if all_conditions_true:
-        jupyprint(f"*Your answer to {question_number} is correct!*")
+        jupyprint(f"*Your answer to {question_number} is correct! {answer_var} is the right answer!*")
     if return_mark & all_conditions_true:
         return "got_mark"
     if return_mark & (all_conditions_true == False):
@@ -45,7 +45,7 @@ def check_answer_{qnum[i]}(answer_{qnum[i]},
     conditions = np.array([soft_assert(<condition>,
                               f"{question_name} is not correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
-    mark = sub_check(question_name, 
+    mark = sub_check(question_name, answer_{qnum[i]}, 
                      conditions,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)

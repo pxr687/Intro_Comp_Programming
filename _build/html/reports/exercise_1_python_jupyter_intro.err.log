@@ -55,7 +55,7 @@ mark_exercise_1.check_answer_1(answer_1)
 [32m---> [39m[32m32[39m conditions = np.array([soft_assert([43mnp[49m[43m.[49m[43misclose[49m[43m([49m[43manswer_1[49m[43m,[49m[32;43m100[39;49m[43m [49m[43m*[49m[43m [49m[32;43m22[39;49m[43m)[49m,
 [32m     33[39m                           [33mf[39m[33m"[39m[33mYour answer to [39m[38;5;132;01m{[39;00mquestion_name[38;5;132;01m}[39;00m[33m is not correct!, `[39m[38;5;132;01m{[39;00manswer_name[38;5;132;01m}[39;00m[33m` is the wrong number![39m[33m"[39m,
 [32m     34[39m                             return_mark=return_mark)])
-[32m     35[39m mark = sub_check(question_name, 
+[32m     35[39m mark = sub_check(question_name, answer_X,, 
 [32m     36[39m                  conditions,
 [32m     37[39m                  return_mark=return_mark)
 [32m     38[39m [38;5;28;01mreturn[39;00m award_marks(mark, marks_available=marks_available)

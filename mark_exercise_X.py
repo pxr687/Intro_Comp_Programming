@@ -10,6 +10,7 @@ def pre_define_blanks(n_ans):
     return  pre_define_blanks_ans(n_ans)
 
 ### FUNCTIONS TO MARK EACH QUESTION
+# Use `mk_new_q_marking()` in IPython to generate marking function template.
 
 # TEMPLATE:
 # def check_answer_X(answer_X, 
@@ -20,7 +21,7 @@ def pre_define_blanks(n_ans):
 #     conditions = np.array([soft_assert(<condition>,
 #                               f"{question_name} is not correct! `{answer_name}` is the wrong value!",
 #                                 return_mark=return_mark)])
-#     mark = sub_check(question_name, 
+#     mark = sub_check(question_name, answer_X,, 
 #                      conditions,
 #                      return_mark=return_mark)
 #     return award_marks(mark, marks_available=marks_available)

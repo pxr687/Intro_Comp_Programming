@@ -10,20 +10,7 @@ def pre_define_blanks(n_ans):
     return  pre_define_blanks_ans(n_ans)
 
 ### FUNCTIONS TO MARK EACH QUESTION
-
-# TEMPLATE:
-# def check_answer_X(answer_X, 
-#                    return_mark=False):
-#     question_name = "Question X"
-#     answer_name = "answer_X"
-#     marks_available = 1
-#     conditions = np.array([soft_assert(<condition>,
-#                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
-#                                 return_mark=return_mark)])
-#     mark = sub_check(question_name, 
-#                      conditions,
-#                      return_mark=return_mark)
-#     return award_marks(mark, marks_available=marks_available)
+# Use `mk_new_q_marking()` in IPython to generate marking function template.
 
 def check_answer_1(answer_1, 
                    return_mark=False):
@@ -33,7 +20,7 @@ def check_answer_1(answer_1,
     conditions = np.array([soft_assert(np.isclose(answer_1, 100 ** 2),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
-    mark = sub_check(question_name, 
+    mark = sub_check(question_name, answer_1,
                      conditions,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
@@ -46,7 +33,7 @@ def check_answer_2(answer_2,
     conditions = np.array([soft_assert(np.isclose(answer_2, 8 * 4 / 2),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
-    mark = sub_check(question_name, 
+    mark = sub_check(question_name, answer_2, 
                      conditions,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
@@ -59,7 +46,7 @@ def check_answer_3(answer_3,
     conditions = np.array([soft_assert(np.isclose(answer_3, 2 ** 2 * (4 + 6)),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
-    mark = sub_check(question_name, 
+    mark = sub_check(question_name, answer_3, 
                      conditions,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
@@ -72,7 +59,7 @@ def check_answer_4(answer_4,
     conditions = np.array([soft_assert(np.isclose(answer_4, (8 - 6) * 2 + 24),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
-    mark = sub_check(question_name, 
+    mark = sub_check(question_name, answer_4, 
                      conditions,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
@@ -85,7 +72,7 @@ def check_answer_5(answer_5,
     conditions = np.array([soft_assert(np.isclose(answer_5, 9 * 4 + 8 / (2 - 3)),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
-    mark = sub_check(question_name, 
+    mark = sub_check(question_name, answer_5, 
                      conditions,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
