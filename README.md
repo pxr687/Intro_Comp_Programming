@@ -16,6 +16,8 @@ ghp-import -n -p -f _build/html
 
 ### To make a new Exercise Notebook (e.g. not a textbook page)
 
+For marking script explanation go to the README at: https://github.com/pxr687/Intro_Comp_Programming_DEV
+
 Each `ipynb` file is linked by `jupytext` with an `Rmd` file. To make a new 
 exercise, run this from terminal:
 

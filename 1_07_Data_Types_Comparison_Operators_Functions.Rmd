@@ -19,100 +19,103 @@ jupyter:
 This page is partly adapted from by [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/intro_to_functions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
-Let's quickly summarise what we have learned so far.
-
-A raw number or piece of text typed in Python code is called a *literal*:
+So far we have used numbers and text in our Python code:
 <!-- #endregion -->
 
 ```{python}
-100
+# A number.
+42
 ```
 
 ```{python}
-"text"
+# Some text.
+"Asok is a BTS Station."
 ```
 
-We type in the literal, and Python shows us the *value*. The value is the computer representation of the literal.
-
-We can store values as *variables*. This means we give the value a name. We can use that name to get the value out of our computers' memory:
-
-```{python}
-# This is a variable assignment statement. 
-#`number_3` is the name of the variable, `3` is its value.
-number_3 = 3
-```
-
-```{python}
-# The cell above this one created this variable `number_3`. This cell shows the value of the variable.
-number_3
-```
-
-You can think of literals as values in Python code which are NOT stored as variables:
-
-```{python}
-# This is a literal.
-1999
-```
-
-```{python}
-# Store `1999` as a variable.
-new_variable = 1999
-```
-
-We have also talked about expressions - any piece of Python code that returns a value:
-
-```{python}
-# This is an expression.
-2 + 2
-```
-
-```{python}
-# This is also an expression, because it returns a value (it is the variable we made earlier)
-number_3
-```
-
-```{python}
-# This literal is also an expression, because it returns a value.
-1990
-```
-
-We have also use *functions*, like `print()`:
+We have also use *functions*, like `print()` with numbers *and* text:
 
 ```{python}
 # The `print()` function.
 print('This is the print function!')
 ```
 
-You can think of a function like a [*recipe*](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables). We give it some ingredients, and it returns a "meal".
+```{python}
+# The `print()` function with a number.
+print(100)
+```
 
-For the `print()` function, we give it some input and it displays the input. We used it for text, but we can also use it for numbers:
+We know that you can think of a function like a [*recipe*](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables). We give it some ingredients, and it returns a "meal".
+
+For the `print()` function, we give it some input and it displays the input.
 
 ```{python}
 # The `print()` function (again).
-print(10)
+print("This is a very long input, which as some text and the number", 100)
 ```
 
-[Importance of type]
+Text and numbers are differ *Data Types* in Python.
+
+It is very important to know what type of data you are using.
+
+If you accidentally change a data type, it can lead to errors.
+
+This is because operators (like `*`) do different things to different types of data.
+
+For example, if we use `*` with numbers...
 
 ```{python}
 # A number, multiplied by 10.
 10 * 10
 ```
 
+...then it multiplies them together.
+
+What about if we use it with text?
+
 ```{python}
 # Text, multiplied by 10.
 "This is text!" * 10
 ```
 
-[TYPE IS VERY IMPORTANT, LOSING TRACK OF IT WILL CAUSE ERRORS!]
+The `round()` function will round a number with a decimal place.
 
-`type()` function can tell us...
+So if we pass `4.2` as an argument to `round()`, it will return the value `4`. It removes the decimal place, and "rounds the number down" to `4`:
 
-```{python tags=c("raises-exception")}
-type()
+```{python}
+# Use `round()` to remove a decimal place.
+round(4.2)
 ```
 
-[Explain arguments, using `print()` again as example]
+If we give it a number where the decimal is above 0.5, it will "round up" to the nearest whole number:
+
+```{python}
+# `round()` again
+round(10.9)
+```
+
+Remember I said that you should always know what *data type* you are using in Python? E.g. you should always know if you are using text or numbers?
+
+This is because lots of Python functions are made to work with one data type, and not others. You will get errors if you use the wrong data type.
+
+For example, look what happens if we try to `round()` some text:
+
+```{python tags=c("raises-exception")}
+# Use `round()` with some text.
+round("This is some text.")
+```
+
+You see that we get an error. Look at what the error says - it is a `TypeError`. This means we gave the `round()` function the wrong type of data.
+
+We can use the `type()` function with any literal, variable or expression, and it will tell us what type of data it evaluates to. When we use `type()` it is like asking Python "what type of data is this?":
+
+```{python tags=c("raises-exception")}
+# Use `type()` with some text.
+type("This is some text.")
+```
+
+I have been using the word "text" for text data. The proper Python name for text is *string data*. This is what `str` means, in the output of the cell about.
+
+What `type` is the number `1`?
 
 ```{python}
 type(1)
