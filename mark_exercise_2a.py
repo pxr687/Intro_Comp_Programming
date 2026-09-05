@@ -1,14 +1,22 @@
 from jupyprint import jupyprint
-from marking_sub_functions import soft_assert, sub_check, award_marks, pre_define_blanks_ans, mk_new_q_marking, gen_obs
-obs_1, obs_2, obs_3, obs_4 = gen_obs()
+from marking_sub_functions import soft_assert, sub_check, award_marks, pre_define_blanks_ans, mk_new_q_marking
+from util import *
 from mk_var import mk_var
 import numpy as np
+
+number = "r2ta"[1::2]
+for name in list(globals()):
+    if name.startswith("mk_t_"):
+        continue
+    if callable(globals()[name]) and not name.endswith(f"{number}"):
+        del globals()[name]
 
 # SET TOTAL MARKS FOR EXERCISE
 total_marks = 9
 
 def pre_define_blanks(n_ans):
     return  pre_define_blanks_ans(n_ans)
+obs_1, obs_2, obs_3, obs_4 = mk_t_2a()
 
 ### FUNCTIONS TO MARK EACH QUESTION
 # Use `mk_new_q_marking()` in IPython to generate marking function template.
