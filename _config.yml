@@ -41,7 +41,8 @@ launch_buttons:
   # The interface interactive links will activate ["classic", "jupyterlab"]
   notebook_interface: "classic"
   binderhub_url: "https:///mybinder.org"  # The URL for your BinderHub (e.g., https:///mybinder.org)
-  colab_url: "https://colab.research.google.com"
+  # Turning off Colab because of AI assistance.
+  # colab_url: "https://colab.research.google.com"
   thebe: true
   
 # Uncomment this to build from .Rmd rather than .ipynb

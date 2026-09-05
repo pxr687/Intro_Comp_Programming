@@ -209,17 +209,6 @@ We will now do our second Python exercise!
 
 Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2_expressions.ipynb) to launch the exercise on Binder.
 
-Or click [here 🚀](https://colab.research.google.com/github/pxr687/Intro_Comp_Programming/blob/main/exercise_2_expressions.ipynb) to launch the exercise on Google Colab.
-
-**NOTE**: if you use Google Colab, you will have to make a new cell at the start of the notebook, and run this code:
-
-```
-!wget -q https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/main/mark_exercise_2.py
-!wget -q https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/main/marking_sub_functions.py
-!wget -q https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/main/mk_var.py
-!pip install jupyprint
-```
-
 
 ----------------------------------------------------------
 

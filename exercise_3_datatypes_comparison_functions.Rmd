@@ -48,10 +48,6 @@ If the question says "make a variable called `me_and_my_cat`" you **MUST** call 
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
 
-You can also do this if you are working on Google Colab:
-
-![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work_colab.png)
-
 When you download your work, you can view it by uploading the file here: https://code-format.com/ipynb-viewer 
 
 Later in the course we will install Python on your own laptop 🙂.
