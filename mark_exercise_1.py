@@ -4,15 +4,13 @@ from mk_var import mk_var
 from util import *
 import numpy as np
 
-number = 1
-for name in list(globals()):
-    if name.startswith("mk_t_"):
-        continue
-    if callable(globals()[name]) and not name.endswith(f"{number}"):
-        del globals()[name]
-
 # SET TOTAL MARKS FOR EXERCISE
 total_marks = 5
+
+number = 1
+for name in list(globals()):
+    if callable(globals()[name]) and name.startswith("mk_t_") and not name.endswith(f"{number}"):
+        del globals()[name]
 
 def pre_define_blanks(n_ans):
     return  pre_define_blanks_ans(n_ans)
@@ -25,7 +23,7 @@ def check_answer_1(answer_1,
     question_name = "Question 1"
     answer_name = "answer_1"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_1, mk_t_1()[0]),
+    conditions = np.array([soft_assert(np.isclose(answer_1, mk_t_1()[0].astype(float)),
                               f"Your answer to {question_name} is not correct!, `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_1, 
@@ -51,7 +49,7 @@ def check_answer_3(answer_3,
     question_name = "Question 3"
     answer_name = "answer_3"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_3, mk_t_1()[2]),
+    conditions = np.array([soft_assert(np.isclose(answer_3, mk_t_1()[2].astype(float)),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_3, 
@@ -77,7 +75,7 @@ def check_answer_5(answer_5,
     question_name = "Question 5"
     answer_name = "answer_5"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_5, mk_t_1()[4]),
+    conditions = np.array([soft_assert(np.isclose(answer_5, mk_t_1()[4].astype(float)),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_5, 
@@ -99,11 +97,11 @@ def mark_all(answer_1,
         if usr_k == mk_var():
             # Utility answers for testing within exercise notebook
             jupyprint(np.array([    
-                    answer_1 := mk_t_1()[0],
+                    answer_1 := mk_t_1()[0].astype(float),
                     answer_2 := mk_t_1()[1],
-                    answer_3 := mk_t_1()[2],
+                    answer_3 := mk_t_1()[2].astype(float),
                     answer_4 := mk_t_1()[3],
-                    answer_5 := mk_t_1()[4]]))
+                    answer_5 := mk_t_1()[4].astype(float)]))
 
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),

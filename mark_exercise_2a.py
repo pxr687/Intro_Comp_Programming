@@ -6,9 +6,7 @@ import numpy as np
 
 number = "r2ta"[1::2]
 for name in list(globals()):
-    if name.startswith("mk_t_"):
-        continue
-    if callable(globals()[name]) and not name.endswith(f"{number}"):
+    if callable(globals()[name]) and name.startswith("mk_t_") and not name.endswith(f"{number}"):
         del globals()[name]
 
 # SET TOTAL MARKS FOR EXERCISE

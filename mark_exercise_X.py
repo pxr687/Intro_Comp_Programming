@@ -1,30 +1,22 @@
 from jupyprint import jupyprint
 from marking_sub_functions import soft_assert, sub_check, award_marks, pre_define_blanks_ans
-from mark_exercise_var import mk_var
+from util import * 
+from mk_var import mk_var
 import numpy as np
 
 # SET TOTAL MARKS FOR EXERCISE
 total_marks = 5
+
+number = X
+for name in list(globals()):
+    if callable(globals()[name]) and name.startswith("mk_t_") and not name.endswith(f"{number}"):
+        del globals()[name]
 
 def pre_define_blanks(n_ans):
     return  pre_define_blanks_ans(n_ans)
 
 ### FUNCTIONS TO MARK EACH QUESTION
 # Use `mk_new_q_marking()` in IPython to generate marking function template.
-
-# TEMPLATE:
-# def check_answer_X(answer_X, 
-#                    return_mark=False):
-#     question_name = "Question X"
-#     answer_name = "answer_X"
-#     marks_available = 1
-#     conditions = np.array([soft_assert(<condition>,
-#                               f"{question_name} is not correct! `{answer_name}` is the wrong value!",
-#                                 return_mark=return_mark)])
-#     mark = sub_check(question_name, answer_X,, 
-#                      conditions,
-#                      return_mark=return_mark)
-#     return award_marks(mark, marks_available=marks_available)
 
 ###############################################################################
 

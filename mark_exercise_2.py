@@ -1,7 +1,13 @@
 from jupyprint import jupyprint
 from marking_sub_functions import soft_assert, sub_check, award_marks, pre_define_blanks_ans, mk_new_q_marking
 from mk_var import mk_var
+from util import *
 import numpy as np
+
+number = 2
+for name in list(globals()):
+    if callable(globals()[name]) and name.startswith("mk_t_") and not name.endswith(f"{number}"):
+        del globals()[name]
 
 # SET TOTAL MARKS FOR EXERCISE
 total_marks = 5
@@ -17,7 +23,7 @@ def check_answer_1(answer_1,
     question_name = "Question 1"
     answer_name = "answer_1"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_1, 100 ** 2),
+    conditions = np.array([soft_assert(np.isclose(answer_1, mk_t_2()[0]),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_1,
@@ -30,7 +36,7 @@ def check_answer_2(answer_2,
     question_name = "Question 2"
     answer_name = "answer_2"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_2, 8 * 4 / 2),
+    conditions = np.array([soft_assert(np.isclose(answer_2, mk_t_2()[1]),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_2, 
@@ -43,7 +49,7 @@ def check_answer_3(answer_3,
     question_name = "Question 3"
     answer_name = "answer_3"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_3, 2 ** 2 * (4 + 6)),
+    conditions = np.array([soft_assert(np.isclose(answer_3, mk_t_2()[2]),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_3, 
@@ -56,7 +62,7 @@ def check_answer_4(answer_4,
     question_name = "Question 4"
     answer_name = "answer_4"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_4, (8 - 6) * 2 + 24),
+    conditions = np.array([soft_assert(np.isclose(answer_4, mk_t_2()[3]),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_4, 
@@ -69,7 +75,7 @@ def check_answer_5(answer_5,
     question_name = "Question 5"
     answer_name = "answer_5"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_5, 9 * 4 + 8 / (2 - 3)),
+    conditions = np.array([soft_assert(np.isclose(answer_5, mk_t_2()[4]),
                               f"Your answer to {question_name} is not correct! `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_5, 
@@ -94,11 +100,11 @@ def mark_all(answer_1,
         if usr_k == mk_var():
             # Utility answers for testing within exercise notebook
             jupyprint(np.array([    
-                    answer_1 :=  100 ** 2,
-                    answer_2 :=  8 * 4 / 2,
-                    answer_3 := 2 ** 2 * (4 + 6),
-                    answer_4 := (8 - 6) * 2 + 24,
-                    answer_5 := 9 * 4 + 8 / (2 - 3)]))
+                    answer_1 :=  mk_t_2()[0],
+                    answer_2 :=  mk_t_2()[1],
+                    answer_3 :=  mk_t_2()[2],
+                    answer_4 :=  mk_t_2()[3],
+                    answer_5 :=  mk_t_2()[4]]))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),
