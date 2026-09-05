@@ -24,3 +24,39 @@ def award_marks(mark, marks_available):
         return marks_available
     if mark == "did_not_get_mark":
         return 0
+
+################################################################################
+# Generate a new marking function. Best used from IPython then output pasted into
+# script.
+
+# Example use:
+# mk_new_q_marking([1, 2, 3, 4])
+
+def mk_new_q_marking(qnum, question_name ="{question_name}", answer_name="{answer_name}"):
+
+    for i in np.arange(len(qnum)):
+
+        text = f"""
+def check_answer_{qnum[i]}(answer_{qnum[i]}, 
+                   return_mark=False):
+    question_name = "Question {qnum[i]}"
+    answer_name = "answer_{qnum[i]}"
+    marks_available = 1
+    conditions = np.array([soft_assert(<condition>,
+                              f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                                return_mark=return_mark)])
+    mark = sub_check(question_name, 
+                     conditions,
+                     return_mark=return_mark)
+    return award_marks(mark, marks_available=marks_available)
+"""
+        print(text)
+
+# Gen obs for MC
+def gen_obs():
+    # Gen obs for Git.
+    obs_1 = "b3!rr".join("arc5!!!").join("_4d").join("98")[(2 ** 5) // (3 * 5 + 1)]
+    obs_2 = "43!rr".join("bra_890").join("_c").join("97")[(2 ** 5) // (3 * 5 + 1)]
+    obs_3 = "93!rr".join("crd3!___").join("_b").join("9f")[(2 ** 5) // (3 * 5 + 1)]
+    obs_4 = "43!rr".join("dra3nnn").join("_kc").join("97")[(2 ** 5) // (3 * 5 + 1)]
+    return obs_1, obs_2, obs_3, obs_4

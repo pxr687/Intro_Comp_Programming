@@ -26,7 +26,7 @@ If you need help, open the _[textbook page](https://pxr687.github.io/Intro_Comp_
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
 import mark_exercise_2a
-# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = mark_exercise_2a.pre_define_blanks(5)
+# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9 = mark_exercise_2a.pre_define_blanks(5)
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 
@@ -38,7 +38,7 @@ If the question says "make a variable called `me_and_my_cat`" you **MUST** call 
 
 ### Downloading your work
 
-*Binder and Google Colab will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file, by clicking the button shown below:
+*Binder will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file, by clicking the button shown below:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
 
@@ -250,18 +250,19 @@ mark_exercise_2a.check_answer_6(answer_6)
 Look at the code below:
 
 ```
+print("Hello class." + " Here are two bits of text")
 
 ```
 
 Which one of these is correct?:
 
-`a` - 
+`a` - This is an expression.
 
-`b` - 
+`b` - It is a function which takes two variables as arguments.
 
-`c` -
+`c` - It is a function which takes an expression as its argument.
 
-`d` - 
+`d` - It is an expression which takes a variable as its argument.
 
 Set the variable `answer_7` to equal `a`, `b`, `c` or `d` to choose your answer.
 
@@ -280,6 +281,28 @@ mark_exercise_2a.check_answer_7(answer_7)
 
 ## Question 8
 
+Look at the code below:
+
+```
+greeting = "Hello class."
+
+two_text = " Here are two bits of text."
+
+print(greeting + two_text)
+
+```
+
+Which one of these is correct *for the last line of the code*?:
+
+`a` - It is a function which takes an expression as its argument - the expression is made from two literals.
+
+`b` - It is a function which takes an expression as its argument - the expression is made from two variables.
+
+`c` - It is a function which takes an expression as its argument - the expression is made from other functions.
+
+`d` - It is a function which takes two variables as arguments.
+
+Set the variable `answer_7` to equal `a`, `b`, `c` or `d` to choose your answer.
 
 ```{python}
 # Type your answer below.
@@ -297,6 +320,27 @@ mark_exercise_2a.check_answer_8(answer_8)
 
 ## Question 9
 
+Look at the code below:
+
+```
+# my_variable = 100 * 300
+
+my_variable
+
+```
+
+If this is the first code we write and run in a notebook, what will happen?:
+
+`a` - Python will show us the value of `my_variable`, which is `30000`.
+
+`b` - Python will show us the text literal `"my_variablee"`.
+
+`c` - We will get an error message.
+
+`d` - Python will show us the value of the expression `my_variable`.
+
+Set the variable `answer_7` to equal `a`, `b`, `c` or `d` to choose your answer.
+
 
 ```{python}
 # Type your answer below.
@@ -312,33 +356,20 @@ mark_exercise_2a.check_answer_9(answer_9)
 ```
 
 
-## Question 10
-
-
-```{python}
-# Type your answer below.
-answer_10 = ...
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_2a.check_answer_10(answer_10)
-```
-
 # Mark all your answers
 
 ```{python}
 # DO NOT CHANGE THIS CELL. 
 # Run this cell to mark all of your answers.
-mark_exercise_2a.mark_all(answer_1,
-                         answer_2,
+mark_exercise_2a.mark_all(answer_1, 
+                         answer_2, 
                          answer_3,
                          answer_4,
                          answer_5,
-                         answer_6)
+                         answer_6,
+                         answer_7,
+                         answer_8,
+                         answer_9)
 ```
 
 ## Go back to the textbook:

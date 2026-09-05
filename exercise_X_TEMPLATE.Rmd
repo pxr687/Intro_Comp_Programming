@@ -37,7 +37,7 @@ If the question says "make a variable called `me_and_my_cat`" you **MUST** call 
 
 ### Downloading your work
 
-*Binder and Google Colab will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file, by clicking the button shown below:
+*Binder will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file, by clicking the button shown below:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
 
