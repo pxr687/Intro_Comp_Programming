@@ -26,7 +26,7 @@ Have a look at this [article](https://pxr687.github.io/doc_viewer/AI_assistance.
 
 - using AI when you learn to code will make you faster to finish tasks...
 
-- ...BUT you will not understand the code you write. You will be slower to learn new coding skills.
+- ...*BUT* you will not understand the code you write. And you will be slower to learn new coding skills than if you do not use AI.
 
 ## Working together in class
 
