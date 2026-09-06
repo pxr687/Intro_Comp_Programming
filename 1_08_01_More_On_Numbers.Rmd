@@ -179,7 +179,7 @@ Moving the exponent "up" by 1, makes our number go the other way:
 We have used the number 1 to "move around" to show you scientific notation, but it works for any number.
 Change the value of `try_it_with` in the cell below, to use any number you want. This will help you to get a feel of the meaning of scientific notation: 
 
-**NOTE**: this will only work if you are running the notebook on Binder or Live code. It looks ugly on the online textbook! But if you run the page in Binder it will look nice, I promise :)
+**NOTE**: this will only work if you are running the notebook on Binder or Live code. It looks ugly on the online textbook! But if you run the page on Binder or Live Code it will look nice, I promise :)
 
 ```{python}
 # Change this number yourself. 
@@ -211,7 +211,7 @@ This is exactly the same value as:
 0.0000001
 ```
 
-## The limits of float Values
+## The limits of float values
 
 Float values are very flexible, but they do have limits.
 
