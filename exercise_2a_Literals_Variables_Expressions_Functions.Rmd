@@ -14,7 +14,7 @@ jupyter:
 
 # Exercise 2a - Literals, Variables, Expressions and Functions
 
-If you need help, open the _[textbook page](https://pxr687.github.io/Intro_Comp_Programming/1_07_0_Summary_Literals_Variables_Expressions_Functions.html)_ for this exercise.
+If you need help, open the _[textbook page](https://pxr687.github.io/Intro_Comp_Programming/1_07_Summary_Literals_Variables_Expressions_Functions.html)_ for this exercise.
 
 ## Instructions
 
@@ -373,4 +373,4 @@ mark_exercise_2a.mark_all(answer_1,
 
 ## Go back to the textbook:
 
-Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_07_0_Summary_Literals_Variables_Expressions_Functions.html)_ to go back to the course textbook.
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_07_Summary_Literals_Variables_Expressions_Functions.html)_ to go back to the course textbook.
