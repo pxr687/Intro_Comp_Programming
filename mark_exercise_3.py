@@ -24,10 +24,10 @@ def check_answer_1(total,
     answer_name = "total"
     marks_available = 1
     conditions = np.array([soft_assert(type(total) != str,
-                              f"{question_name} is not correct! `{answer_name}` should be either `int` or `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` should be either `int` or `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
                                 return_mark=return_mark) ,
                             soft_assert(np.isclose(total, mk_t_3()[0].astype(float)),
-                              f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, total, 
                      conditions,
@@ -41,10 +41,10 @@ def check_answer_2(number_of_students,
     answer_name = "number_of_students"
     marks_available = 1
     conditions = np.array([soft_assert(type(number_of_students) != str,
-                              f"{question_name} is not correct! `{answer_name}` should be either `int` or `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` should be either `int` or `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
                                 return_mark=return_mark),
                             soft_assert(np.isclose(number_of_students, mk_t_3()[1].astype(float)),
-                              f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, number_of_students, 
                      conditions,
@@ -59,10 +59,10 @@ def check_answer_3(test_score,
     answer_name = "test_score"
     marks_available = 1
     conditions = np.array([soft_assert(type(test_score) != str,
-                              f"{question_name} is not correct! `{answer_name}` should be the `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` should be the `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
                                 return_mark=return_mark),
                             soft_assert(np.isclose(test_score, mk_t_3()[2].astype(float)),
-                              f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, test_score, 
                      conditions,
@@ -76,7 +76,7 @@ def check_answer_4(welcome_20,
     answer_name = "welcome_20"
     marks_available = 1
     conditions = np.array([soft_assert(welcome_20 == mk_t_3()[3].astype(str),
-                              f"{question_name} is not correct! `{answer_name}` is the wrong value! It should be the string: `{mk_t_3()[3]}`",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong value! It should be the string: `{mk_t_3()[3]}`",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, welcome_20, 
                      conditions,
@@ -90,10 +90,10 @@ def check_answer_5(n_forms,
     answer_name = "n_forms"
     marks_available = 1
     conditions = np.array([soft_assert(type(n_forms) != str,
-                              f"{question_name} is not correct! `{answer_name}` should be `float` or `int` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` should be `float` or `int` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
                                 return_mark=return_mark),
                             soft_assert(np.isclose(n_forms,mk_t_3()[4].astype(float)),
-                              f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, n_forms, 
                      conditions,
@@ -107,10 +107,10 @@ def check_answer_6(savings_after_six_months,
     answer_name = "savings_after_six_months"
     marks_available = 1
     conditions = np.array([soft_assert(type(savings_after_six_months) == float,
-                              f"{question_name} is not correct! `{answer_name}` should be a `float`",
+                              f"{question_name} is **NOT** correct! `{answer_name}` should be a `float`",
                                 return_mark=return_mark),
                             soft_assert(np.isclose(savings_after_six_months, mk_t_3()[5].astype(float)),
-                              f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, savings_after_six_months, 
                      conditions,

@@ -25,10 +25,10 @@ def check_answer_1(answer_1,
     answer_name = "answer_1"
     marks_available = 1
     conditions = np.array([soft_assert(answer_1 in ["a", "b", "c"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`or `'c'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`or `'c'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_1 == obs_2,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_1, 
                      conditions,
@@ -41,10 +41,10 @@ def check_answer_2(answer_2,
     answer_name = "answer_2"
     marks_available = 1
     conditions = np.array([soft_assert(answer_2 in ["a", "b", "c"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`or `'c'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`or `'c'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_2 == obs_3,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_2, 
                      conditions,
@@ -57,10 +57,10 @@ def check_answer_3(answer_3,
     answer_name = "answer_3"
     marks_available = 1
     conditions = np.array([soft_assert(answer_3 in ["a", "b", "c", "d"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_3 == obs_1,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_3, 
                      conditions,
@@ -73,10 +73,10 @@ def check_answer_4(answer_4,
     answer_name = "answer_4"
     marks_available = 1
     conditions = np.array([soft_assert(answer_4 in ["a", "b", "c", "d"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_4 == obs_3,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_4, 
                      conditions,
@@ -89,10 +89,10 @@ def check_answer_5(answer_5,
     answer_name = "answer_5"
     marks_available = 1
     conditions = np.array([soft_assert(answer_5 in ["a", "b", "c", "d"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_5 == obs_4,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_5, 
                      conditions,
@@ -105,10 +105,10 @@ def check_answer_6(answer_6,
     answer_name = "answer_6"
     marks_available = 1
     conditions = np.array([soft_assert(answer_6 in ["a", "b", "c", "d"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_6 == obs_4,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_6, 
                      conditions,
@@ -121,10 +121,10 @@ def check_answer_7(answer_7,
     answer_name = "answer_7"
     marks_available = 1
     conditions = np.array([soft_assert(answer_7 in ["a", "b", "c", "d"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_7 == obs_3,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_7, 
                      conditions,
@@ -137,10 +137,10 @@ def check_answer_8(answer_8,
     answer_name = "answer_8"
     marks_available = 1
     conditions = np.array([soft_assert(answer_8 in ["a", "b", "c", "d"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_8 == obs_2,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_8, 
                      conditions,
@@ -153,10 +153,10 @@ def check_answer_9(answer_9,
     answer_name = "answer_9"
     marks_available = 1
     conditions = np.array([soft_assert(answer_9 in ["a", "b", "c", "d"],
-                              f"{question_name} is not correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
+                              f"{question_name} is **NOT** correct! `{answer_name}`  should be `'a'`, `'b'`, `'c'` or `'d'`. Make sure you did not forget to use quotation marks! `'`",
                                 return_mark=return_mark),
                             soft_assert(answer_9 == obs_3,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong answer.",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong answer.",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_9, 
                      conditions,

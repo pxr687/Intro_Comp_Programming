@@ -43,7 +43,7 @@ def check_answer_{qnum[i]}(answer_{qnum[i]},
     answer_name = "answer_{qnum[i]}"
     marks_available = 1
     conditions = np.array([soft_assert(<condition>,
-                              f"{question_name} is not correct! `{answer_name}` is the wrong value!",
+                              f"{question_name} is **NOT** correct! `{answer_name}` is the wrong value!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_{qnum[i]}, 
                      conditions,
