@@ -99,12 +99,13 @@ def mark_all(answer_1,
         usr_k = input()
         if usr_k == mk_var():
             # Utility answers for testing within exercise notebook
-            jupyprint(np.array([    
+            answers_list=[    
                     answer_1 :=  mk_t_2()[0],
                     answer_2 :=  mk_t_2()[1],
                     answer_3 :=  mk_t_2()[2],
                     answer_4 :=  mk_t_2()[3],
-                    answer_5 :=  mk_t_2()[4]]))
+                    answer_5 :=  mk_t_2()[4]]
+            jupyprint(np.array(answers_list))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),

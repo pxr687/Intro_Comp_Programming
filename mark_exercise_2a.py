@@ -182,7 +182,7 @@ def mark_all(answer_1,
         usr_k = input()
         if usr_k == mk_var():
             # Utility answers for testing within exercise notebook
-            jupyprint(np.array([    
+            answers_list = [    
                     answer_1 := obs_2,
                     answer_2 := obs_3,
                     answer_3 := obs_1,
@@ -191,7 +191,8 @@ def mark_all(answer_1,
                     answer_6 := obs_4,
                     answer_7 := obs_3,
                     answer_8 := obs_2,
-                    answer_9 := obs_3]))
+                    answer_9 := obs_3]
+            jupyprint(np.array(answers_list))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),

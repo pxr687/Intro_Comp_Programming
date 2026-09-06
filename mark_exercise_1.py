@@ -95,13 +95,17 @@ def mark_all(answer_1,
     if test_all==True:
         usr_k = input()
         if usr_k == mk_var():
+
             # Utility answers for testing within exercise notebook
-            jupyprint(np.array([    
-                    answer_1 := mk_t_1()[0].astype(float),
-                    answer_2 := mk_t_1()[1],
-                    answer_3 := mk_t_1()[2].astype(float),
-                    answer_4 := mk_t_1()[3],
-                    answer_5 := mk_t_1()[4].astype(float)]))
+            answers_list = [
+            answer_1 := mk_t_1()[0].astype(float),
+            answer_2 := mk_t_1()[1],
+            answer_3 := mk_t_1()[2].astype(float),
+            answer_4 := mk_t_1()[3],
+            answer_5 := mk_t_1()[4].astype(float)
+            ]
+
+            jupyprint(np.array(answers_list))
 
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),
