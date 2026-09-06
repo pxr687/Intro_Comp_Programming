@@ -79,7 +79,7 @@ operator, then the result is always a `float` value:
 70 * 102.3
 ```
 
-In most cases, two integers put toghether will make another integer, but any number (`int` or `float`)
+In most cases, two integers put together will make another integer, but any number (`int` or `float`)
 divided by another will be a `float` value: 
 
 ```{python}
@@ -223,7 +223,7 @@ Float values are very flexible, but they do have limits.
    incorrect. Small rounding errors are often confusing when first
    encountered.
 
-The first limit can be seen in two ways. If the result of a calcualation is
+The first limit can be seen in two ways. If the result of a calculation is
 a very large number, then it is represented as infinite. If the result is a
 very small number, then it is represented as zero.
 

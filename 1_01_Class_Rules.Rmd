@@ -36,6 +36,14 @@ Because thinking is hard, it feels good to let an AI think for you. Letting AI t
 
 Cognitive offloading with an AI *feels* good, but it stops you learning. AI can be useful, for example, I used it to make this image. BUT it is bad for you if you use it while you are learning to code...
 
+So, for this course:
+
+- 🧠✅
+
+- ❌🤖
+
+Do **NOT** use AI in the class (me and the TA will be watching). In the exams and tests you will not have access to an AI. So, if you do use AI in the class, you will do badly in the exams and tests. 
+
 ## Working together in class
 
 When we are in class, you can talk to each other as your code. But you should write every line of code yourself (do not copy from others).
