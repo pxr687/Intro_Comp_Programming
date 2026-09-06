@@ -38,7 +38,8 @@ In our model, the chance of a child being a boy or a girl is 50% (which we can a
 To do our simulation, we need something random, like a [coin flip](https://en.wikipedia.org/wiki/Coin_flipping) to decide if the next child is a boy or a girl.
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/coin.jpg)
-(Image from [here](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/coin_toss.jpg)).
+
+>(Image from [here](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/coin_toss.jpg)).
 
 Flipping a coin is a takes a long timer.Your computer can solve this task in a more efficient way. 
 

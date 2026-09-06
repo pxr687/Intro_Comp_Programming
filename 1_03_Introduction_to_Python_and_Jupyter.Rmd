@@ -39,8 +39,8 @@ The advantages of Python are:
 > *Brett et al, 2023* 
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/python_growth.JPG)
-(Image from [here](https://stackoverflow.blog/2017/09/06/incredible-growth-python))
 
+> (Image from [here](https://stackoverflow.blog/2017/09/06/incredible-growth-python))
 
 Have a look at [this page](https://docs.python.org/3/faq/general.html) for some extra information about Python - including why it is called "Python"!
 <!-- #endregion -->
