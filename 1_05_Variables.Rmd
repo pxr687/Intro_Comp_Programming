@@ -290,8 +290,9 @@ ten plus ten = 10 + 10
 ```
 
 ```{python tags=c("raises-exception")}
-# Cannot contain characters like `!`
-var!
+# Variable names cannot contain characters like `!`
+# Uncomment the line below to see the error message.
+# var! = 10
 ```
 
 ## Our simple probability problem

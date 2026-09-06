@@ -20,7 +20,7 @@ These elements can be put together to let us write complex Python programs. Pyth
 
 ...but before we do any of that fun stuff, let's make sure we understand the basic Python elements that we saw on earlier pages.
 
-### Literals
+## Literals
 
 A raw number or piece of text typed in Python code is called a *literal*:
 
@@ -34,7 +34,7 @@ A raw number or piece of text typed in Python code is called a *literal*:
 
 We type in the literal, and Python shows us the *value*. The value is the computer representation of the literal.
 
-### Variables
+## Variables
 
 We can store values as *variables*. This means we give the value a name. We can use that name to get the value out of our computer's memory:
 
@@ -63,7 +63,7 @@ new_variable = 1999
 
 We have also talked about expressions. 
 
-### Expressions
+## Expressions
 
 Expressions are any piece of Python code that returns a value:
 
@@ -122,7 +122,7 @@ We can also make expressions from text, e.g. by putting two text literals togeth
 "This is some text." + " And so is this!"
 ```
 
-### Functions
+## Functions
 
 On earlier pages, we also used *functions*, like `print()`:
 
