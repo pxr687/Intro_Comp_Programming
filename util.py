@@ -23,6 +23,15 @@ def mk_t_2a():
     return obs_1, obs_2, obs_3, obs_4
 
 def mk_t_3():
+    rndm = np.array([(9 * 40) + (378 * 3) - (40 * 9),
+                     (666) * (65000/5) / (666),
+                     (10) + (88 * 10**-2) - (10),
+                     "361cpm6! ".replace('1', 'l').replace("3","W").replace("6", "e").replace("p","o") * 20,
+                     (-10 + 10) + (587 * 3) + (-900 + 900),
+                     (2 * 100 ) + (30000 * 1 + 0) - (2 * 100)])
+    return rndm
+
+def mk_t_5():
     text = "This is one is probably not needed!"
     text_2 = "Because of the nature of the expected input."
     text_3 = "See the associated script/notebook."

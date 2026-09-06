@@ -1,7 +1,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Weeks 1 + 2 - Basic Python Grammar
+  - caption: Basic Python Elements and Grammar
     chapters:
       - file: 1_01_Class_Rules
       - file: 1_02_Class_Grades_Assignments_Exams
@@ -11,8 +11,19 @@ parts:
       - file: 1_05_Variables
       - file: 1_06_Expressions
       - file: 1_07_Summary_Literals_Variables_Expressions_Functions
-      - file: 1_08_0_Data_Types
-      # - file: 1_08_More_Data_Types_Collections
+
+  # - caption: Data Types
+  #   chapters:
+  #     - file: 1_08_00_Data_Types
+  #     - file: 1_08_01_More_On_Numbers
+  #     - file: 1_08_02_More_On_Strings
+  #     - file: 1_08_03_Strings_and_Variables 
+  #     - file: 1_08_04_String_Methods
+  #     - file: 1_08_05_Comparison_Operators
+  #     - file: 1_08_06_Lists
+
+  # - caption: More Python Elements and Grammar
+  #   chapters:
       # - file: 1_09_Statements
       # - file: 1_11_More_Functions_Methods
       # - file: 1_12_Writing_Your_Own_Functions

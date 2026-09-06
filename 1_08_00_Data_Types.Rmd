@@ -199,71 +199,136 @@ Three of the basic data types in Python are:
 
 ## Changing Data Types
 
-[Can be done with built-in functions]
+If you see that your data is the wrong type - and you want to change it to the right type - there a many Python functions to do this. For example, we can use `float()` to change an `int` to a `float`:
 
 ```{python}
+# Create a variable containing an `int`.
 my_int = 10
 
+# Show the value of `my_int`
 my_int
 ```
 
 ```{python}
+# Show the `type()` of `my_int`.
+type(my_int)
+```
+
+To change `my_int` to the `float` data type, we just give it as an argument to the `float()` function:
+
+```{python}
+# Change `my_int` to a `float`.
+float(my_int)
+```
+
+You can see in the output of the cell above that the number now has a decimal place. 
+
+As always, we can store our `float` in a variable:
+
+```{python}
+# Store our `float` in a variable.
 my_float = float(my_int)
 
+# Show the value of `my_float`.
 my_float
 ```
 
 ```{python}
-type(my_int)
-```
-
-```{python}
+# Show the `type()` of `my_float`.
 type(my_float)
 ```
 
+We can change our data back to the `int` type using the `int()` function:
+
 ```{python}
+int(my_float)
+```
+
+Now the decimal place has disappeared...
+
+If we want to change a number (`float` or `int`) to text (`str`), we can do this with the `str()` function:
+
+```{python}
+# Change `my_float` to `str`.
 my_string = str(my_float)
 
+# Show the value of `my_string`.
 my_string
 ```
 
+Look closely at th output of the cell above. Notice the quotation marks (`''`) around `'10.0'`. These tell us it is a string, not a number. We can check this with the `type()` function:
+
 ```{python}
+# Show the `type()` of `my_string`.
 type(my_string)
 ```
 
+Importantly, `str()` (with brackets at the end) is a function to change something into a string. However, `str` (with no brackets at the end) is a Python data type (string/text data). 
+
+Remember earlier I said that a common error is that a number gets changed *by accident* to text?:
+
 ```{python}
+# Should be a number, but it is text.
 salary = "1,235"
 ```
 
+This causes strange results when we try to do maths with the variable:
+
 ```{python}
+# Ouch!
 salary * 10
 ```
 
+It will also cause errors when we use the variable with functions that want numbers as their arguments:
+
 ```{python tags=c("raises-exception")}
+# Ouch! (again).
 int(salary)
 ```
 
+We will talk more about string data on another page. But we can fix this error by doing using *string methods* to remove the `,` from the `salary` variable:
+
 ```{python}
+# Remove the `,` from `salary`.
 salary.replace(',', '')
 ```
+
+...this means that `salary` is still a string...
 
 ```{python}
 type(salary.replace(',', ''))
 ```
 
+...but it does not have the `,` any more, so we can use the `int()` function to change it to the `int` data type:
+
 ```{python}
+# Get rid of the `,`.
 salary = int(salary.replace(',', ''))
 
 salary
 ```
 
+Phew! Now it is a number again:
+
 ```{python}
 type(salary)
 ```
 
+... and we can do maths with it, without errors!:
+
 ```{python}
+# Calculate the salary over 10 months.
 salary * 10
 ```
+
+## Exercise 3 - Fix my Data
+
+Before we talk more about data types, we will do another exercise.
+
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_3_fix_my_data.ipynb) to launch the exercise on Binder.
+
 
 ----------------------------------------------------------
 
