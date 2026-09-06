@@ -2,6 +2,10 @@
 
 Textbook for the September 2026 Introduction to Computer Programming course at Global Academy, Siam University.
 
+### Backup Exercise services if Binder fails
+
+See `mk_launch_links.py` to generate Markdown links to other services.
+
 ### To re-build Github Pages
 
 Too add new page(s), uncommnet in TOC, then:
