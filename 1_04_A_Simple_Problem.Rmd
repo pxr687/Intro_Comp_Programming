@@ -41,7 +41,7 @@ To do our simulation, we need something random, like a [coin flip](https://en.wi
 
 >(Image from [here](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/coin_toss.jpg)).
 
-Flipping a coin is a takes a long timer.Your computer can solve this task in a more efficient way. 
+Flipping a coin is a takes a long time. Your computer can do this in a more efficient way. 
 
 To make random numbers, and do other random things, we need the Numpy *Random
 Library*. 
