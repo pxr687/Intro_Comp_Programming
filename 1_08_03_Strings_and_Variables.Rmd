@@ -16,7 +16,7 @@ jupyter:
 # Strings, variables and expressions
 
 ```{note}
-This page is adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/strings_and_variables.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/strings_and_variables.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
 You remember that the following line of code is an *expression* - a recipe that returns a value:

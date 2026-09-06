@@ -16,7 +16,7 @@ jupyter:
 # Introduction to Python and Jupyter Notebook 
 
 ```{note}
-This pages draws inspiration from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/the_software.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+This pages draws inspiration from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/the_software.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
 ## Python

@@ -16,7 +16,7 @@ jupyter:
 # Variables - thinking like a computer (scientist)
 
 ```{note}
-This page is inspired by and partly adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/variables_intro.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+This page is inspired by and partly adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/variables_intro.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
 Imagine a person called Aaron. Aaron is studying in the United Kingdom. He wants to make a budget, so that he does not spend too much money each month.
