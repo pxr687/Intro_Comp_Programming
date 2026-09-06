@@ -1,0 +1,99 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.17.3
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+<!-- #region -->
+# A simple probability problem
+
+```{note}
+This page is adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/three_girls.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
+
+On this page we will think about a problem. On the pages after this, we will learn the Python tools that we need to write a program to solve this problem. 
+
+Imagine a family with four children. What is the probability that the family will have three girls?
+
+There are different ways to answer this question. One way, is to use
+[*simulation*](https://dictionary.cambridge.org/dictionary/english/simulate).
+
+Simulation makes a *model* of the problem.  We use the model to generate
+*simulated* data.  If the model is good, the simulated data should look
+like the real data.
+
+First we need to simulate a family of four children. Then we need to count the number of girls.
+We do this many many times, and see how often we get 3 girls in one family.
+
+In our model, the chance of a child being a boy or a girl is 50% (which we can also write as 0.5 or $\frac{50}{100}$).  
+
+To do our simulation, we need something random, like a [coin flip](https://en.wikipedia.org/wiki/Coin_flipping) to decide if the next child is a boy or a girl.
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/coin.jpg)
+(Image from [here](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/coin_toss.jpg)).
+
+Flipping a coin is a takes a long timer.Your computer can solve this task in a more efficient way. 
+
+To make random numbers, and do other random things, we need the Numpy *Random
+Library*. 
+
+A [Python library](https://www.geeksforgeeks.org/python/libraries-in-python/) is code that is written to do a specific thing. We can re-use the code lots of times without needing to write new code to do that thing.
+
+Here is how we get the [Numpy library](https://numpy.org). ("Numpy" means "Numerical Python"):
+<!-- #endregion -->
+
+```{python}
+# Get the Numpy library
+import numpy as np
+```
+
+The line of code in the cell above gets the Numpy code for use to use.
+
+Here is how I can simulate one child being born:
+
+*Note*: I also use the `print()` function here to make the output look nicer.
+
+```{python}
+# Simulate one child being born.
+print(np.random.choice(['GIRL', 'BOY']))
+```
+
+Run the cell above a few times by clicking inside the cell, and pressing
+`Shift+Enter` a few times. You should get a boy around 50% of the time, and a girl
+around 50% of the time.
+
+If we run this four times, then we have one
+simulated family.  We can count how many girls we got in the four runs,
+and that is the simulated number of girls, for this family.
+
+```{python}
+# Run this cell four times, and write down how many boys and girls you get.
+print(np.random.choice(['GIRL', 'BOY']))
+```
+
+`np.random.choice()` is a *function*, like the `print()` function we saw on the last page.
+
+`np.random.choice(['GIRL', 'BOY'])` *calls* the function, and returns a random `"BOY"` or `"GIRL"`.
+
+
+It's not convenient to run this cell many times.   We really need some
+Python tools to make the computer do that for us.  We need *variables*,
+*functions*, *comparisons* and *arrays*.  We will look at those next.
+
+
+## References
+
+Brett, M., Rush, P., Adhikari, A., Denero, J., & Wagner, D. (2023). *A simpler problem*. In *Coding for Data*. https://odsti.github.io/cfd-textbook/three_girls.html#a-simpler-problem
+
+
+----------------------------------------------------------
+
+[🏡](intro.md).

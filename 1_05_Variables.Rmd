@@ -294,6 +294,70 @@ ten plus ten = 10 + 10
 var!
 ```
 
+## Our simple probability problem
+
+Remember our [simple probability problem](1_04_A_Simple_Problem)?
+
+We want to know what is the probability of a family with 4 children having 3 girls.
+
+Remember that we can simulate one child being born like this:
+
+```{python}
+# Get the Numpy library
+import numpy as np
+
+# Simulate one child being born.
+print(np.random.choice(['GIRL', 'BOY']))
+```
+
+We can now store the result in a variable:
+
+```{python}
+# Save the result in a variable called `first_child`.
+first_child = np.random.choice(['GIRL', 'BOY'])
+
+# Show the value of the `first_child` variable.
+print(first_child)
+```
+
+We can do this more than once to create four children:
+
+```{python}
+# Save the result in a variable called `second_child`.
+second_child = np.random.choice(['GIRL', 'BOY'])
+
+# Show the value of the `second_child` variable.
+print(second_child)
+```
+
+```{python}
+# Save the result in a variable called `third_child`.
+third_child = np.random.choice(['GIRL', 'BOY'])
+
+# Show the value of the `third_child` variable.
+print(third_child)
+```
+
+```{python}
+# Save the result in a variable called `fourth_child`.
+fourth_child = np.random.choice(['GIRL', 'BOY'])
+
+# Show the value of the `fourth_child` variable.
+print(fourth_child)
+```
+
+Later, we will do this many, many, many more times. This will make lots of families, and we can find out the probability of having three female children.
+
+For now, let's look at the one family we just made:
+
+```{python}
+# Show all of the children in the family we just made.
+print(first_child)
+print(second_child)
+print(third_child)
+print(fourth_child)
+```
+
 ## Exercise 1 - Python, Jupyter and Variables
 
 We will now do our first Python exercise!

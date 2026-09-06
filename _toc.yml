@@ -6,11 +6,12 @@ parts:
       - file: 1_01_Class_Rules
       - file: 1_02_Class_Grades_Assignments_Exams
       - file: 1_03_Introduction_to_Python_and_Jupyter
-      - file: 1_04_More_Jupyter_Notebooks
+      - file: 1_04_0_More_Jupyter_Notebooks
+      - file: 1_04_A_Simple_Problem
       - file: 1_05_Variables
       - file: 1_06_Expressions
       - file: 1_07_0_Summary_Literals_Variables_Expressions_Functions
-      # - file: 1_07_Data_Types_Comparison_Operators_Functions
+      - file: 1_07_Data_Types
       # - file: 1_08_More_Data_Types_Collections
       # - file: 1_09_Statements
       # - file: 1_11_More_Functions_Methods
