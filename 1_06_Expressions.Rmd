@@ -148,7 +148,8 @@ multiplication and division occur before addition and subtraction. Parentheses
 can be used to group together smaller expressions in a larger expression.
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/bodmas.jpg)
-(Image from [here](https://centrepointschools.com/blogs/how-to-simplify-complex-equations-using-the-bodmas-rule/)).
+
+> (Image from [here](https://centrepointschools.com/blogs/how-to-simplify-complex-equations-using-the-bodmas-rule/)).
 
 Multiplication has precedence (we do `2 * 3` before adding to 1).
 
