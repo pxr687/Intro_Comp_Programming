@@ -409,7 +409,7 @@ document.write(`
 <h1>Variables - thinking like a computer (scientist)<a class="headerlink" href="#variables-thinking-like-a-computer-scientist" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This page is inspired by and partly adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/variables_intro.html">Brett and co-authors (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
+<p>This page is inspired by and partly adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/variables_intro.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
 <p>Imagine a person called Aaron. Aaron is studying in the United Kingdom. He wants to make a budget, so that he does not spend too much money each month.</p>
 <p>His income every month is £1,100. He wants to know how much money he has left after he pays:</p>
@@ -764,6 +764,14 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">    </span><span class="mi">20</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: cannot assign to literal here. Maybe you meant &#39;==&#39; instead of &#39;=&#39;?
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -775,11 +783,24 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell tag_raise-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The variable names cannot be on the right of the `=`.</span>
 <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">=</span> <span class="n">ten_plus_ten</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">    </span><span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">=</span> <span class="n">ten_plus_ten</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: cannot assign to expression here. Maybe you meant &#39;==&#39; instead of &#39;=&#39;?
 </pre></div>
 </div>
 </div>
@@ -794,6 +815,11 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell tag_raise-exception docutils container">
 <div class="cell_input docutils container">
@@ -802,11 +828,20 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="n">ten</span> <span class="n">plus</span> <span class="n">ten</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span>
+        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cannot contain characters like `!`</span>
-<span class="n">var</span><span class="err">!</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable names cannot contain characters like `!`</span>
+<span class="c1"># Uncomment the line below to see the error message.</span>
+<span class="c1"># var! = 10</span>
 </pre></div>
 </div>
 </div>
@@ -862,7 +897,7 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BOY
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GIRL
 </pre></div>
 </div>
 </div>
@@ -878,7 +913,7 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BOY
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GIRL
 </pre></div>
 </div>
 </div>
@@ -912,10 +947,10 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BOY
-BOY
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GIRL
 GIRL
-BOY
+GIRL
+GIRL
 </pre></div>
 </div>
 </div>
