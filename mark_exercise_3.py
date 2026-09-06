@@ -105,8 +105,8 @@ def check_answer_6(savings_after_six_months,
                    return_mark=False):
     question_name = "Question 6"
     answer_name = "savings_after_six_months"
-    marks_available = 1
-    conditions = np.array([soft_assert(type(savings_after_six_months) == float,
+    marks_available = 1                                                    # Catch other types of float.
+    conditions = np.array([soft_assert(isinstance(savings_after_six_months, (float, np.floating)),
                               f"Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` should be a `float`",
                                 return_mark=return_mark),
                             soft_assert(np.isclose(savings_after_six_months, mk_t_3()[5].astype(float)),
@@ -142,6 +142,8 @@ def mark_all(answer_1,
                     answer_6 :=  mk_t_3()[5].astype(float),
                     ]
             jupyprint(np.array(answers_list))
+
+            print(type(answer_6))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),
