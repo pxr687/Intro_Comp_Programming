@@ -24,7 +24,7 @@ def check_answer_1(total,
     answer_name = "total"
     marks_available = 1
     conditions = np.array([soft_assert(type(total) != str,
-                              f"{question_name} is not correct! `{answer_name}` should be either `int` or `float` data type! You will see a NASTY error below this message, because of this!",
+                              f"{question_name} is not correct! `{answer_name}` should be either `int` or `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
                                 return_mark=return_mark) ,
                             soft_assert(np.isclose(total, mk_t_3()[0].astype(float)),
                               f"{question_name} is not correct! `{answer_name}` is the wrong value!",
@@ -41,7 +41,7 @@ def check_answer_2(number_of_students,
     answer_name = "number_of_students"
     marks_available = 1
     conditions = np.array([soft_assert(type(number_of_students) != str,
-                              f"{question_name} is not correct! `{answer_name}` should be either `int` or `float` data type! You will see a NASTY error below this message, because of this!",
+                              f"{question_name} is not correct! `{answer_name}` should be either `int` or `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
                                 return_mark=return_mark),
                             soft_assert(np.isclose(number_of_students, mk_t_3()[1].astype(float)),
                               f"{question_name} is not correct! `{answer_name}` is the wrong value!",
@@ -59,7 +59,7 @@ def check_answer_3(test_score,
     answer_name = "test_score"
     marks_available = 1
     conditions = np.array([soft_assert(type(test_score) != str,
-                              f"{question_name} is not correct! `{answer_name}` should be the `float` data type! You will see a NASTY error below this message, because of this!",
+                              f"{question_name} is not correct! `{answer_name}` should be the `float` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
                                 return_mark=return_mark),
                             soft_assert(np.isclose(test_score, mk_t_3()[2].astype(float)),
                               f"{question_name} is not correct! `{answer_name}` is the wrong value!",
@@ -90,7 +90,7 @@ def check_answer_5(n_forms,
     answer_name = "n_forms"
     marks_available = 1
     conditions = np.array([soft_assert(type(n_forms) != str,
-                              f"{question_name} is not correct! `{answer_name}` should be `float` or `int` data type! You will see a NASTY error below this message, because of this!",
+                              f"{question_name} is not correct! `{answer_name}` should be `float` or `int` data type! `{answer_name}` is the `str` datatype at the moment. You will see a NASTY error below this message, because of this!",
                                 return_mark=return_mark),
                             soft_assert(np.isclose(n_forms,mk_t_3()[4].astype(float)),
                               f"{question_name} is not correct! `{answer_name}` is the wrong value!",
