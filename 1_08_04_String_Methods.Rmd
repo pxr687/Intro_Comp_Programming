@@ -16,7 +16,7 @@ jupyter:
 # String methods
 
 ```{note}
-This page is adapted from by [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/String_Methods.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+This page is adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/String_Methods.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
 From an existing string, related strings can be constructed using string methods, which are functions that operate on strings. These methods are called by placing a dot after the string, then calling the function.

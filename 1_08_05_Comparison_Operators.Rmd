@@ -16,7 +16,7 @@ jupyter:
 # Comparisons
 
 ```{note}
-This page is adapted from by [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/Comparison.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+This page is adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/Comparison.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
 A *Boolean* value is a value that can only be True or False.  It is called

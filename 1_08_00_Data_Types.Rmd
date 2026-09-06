@@ -16,7 +16,7 @@ jupyter:
 # Data Types
 
 ```{note}
-This page is partly adapted from by [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/intro_to_functions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+This page is partly adapted from [Brett and co-authors (2023)](https://odsti.github.io/cfd-textbook/intro_to_functions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
 So far we have used numbers and text in our Python code:
