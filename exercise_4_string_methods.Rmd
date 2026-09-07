@@ -93,7 +93,7 @@ answer_1
 
 ```{python}
 # DO NOT CHANGE THIS CODE!
-from mark_exercise_4_string_methods import check_answer, homer
+from mark_exercise_4 import check_answer, homer
 check_answer(answer_1, "Introduction to Computer Programming",
              question_name="Question 1",
              answer_name="answer_1")
@@ -124,7 +124,7 @@ check_answer(pres_title, "Presentation on Climate Change",
 
 ### Question 3
 
- Mark is messaging his friend. His friend has done something funny, and Mark what to reply with this:
+ Mark is messaging his friend. His friend has done something funny, and Mark wants to reply with this:
 
 ```{python}
 text_reply  = "OMG I CANNOT BELIEVE YOU DID THAT!!!!!!"
