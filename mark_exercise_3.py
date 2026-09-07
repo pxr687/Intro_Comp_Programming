@@ -142,8 +142,6 @@ def mark_all(answer_1,
                     answer_6 :=  mk_t_3()[5].astype(float),
                     ]
             jupyprint(np.array(answers_list))
-
-            print(type(answer_6))
             
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -191,6 +191,10 @@
 <li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
 </ul>
 
     </div>
@@ -592,7 +596,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">mark_exercise_4_string_methods</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_answer</span><span class="p">,</span> <span class="n">homer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mark_exercise_4</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_answer</span><span class="p">,</span> <span class="n">homer</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span> <span class="s2">&quot;Introduction to Computer Programming&quot;</span><span class="p">,</span>
              <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 1&quot;</span><span class="p">,</span>
              <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;answer_1&quot;</span><span class="p">)</span>
@@ -643,7 +647,7 @@ document.write(`
 </section>
 <section id="question-3">
 <h3>Question 3<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h3>
-<p>Mark is messaging his friend. His friend has done something funny, and Mark what to reply with this:</p>
+<p>Mark is messaging his friend. His friend has done something funny, and Mark wants to reply with this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text_reply</span>  <span class="o">=</span> <span class="s2">&quot;OMG I CANNOT BELIEVE YOU DID THAT!!!!!!&quot;</span>
@@ -681,12 +685,12 @@ document.write(`
 <section id="question-4">
 <h3>Question 4<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h3>
 <p>Chan is writing an essay for a History class. The essay title should be “Essay on the Roman Republic”.</p>
-<p>However, Chan was working late, and fell asleep on her keyboard. She saved the essay title in the variable <code class="docutils literal notranslate"><span class="pre">essay_title</span></code>, but because her head was resting on the keyboard, she has lots loads of spaces by accident.</p>
+<p>However, Chan was working late, and fell asleep on her keyboard. She saved the essay title in the variable <code class="docutils literal notranslate"><span class="pre">essay_title</span></code>. But because her head was resting on the keyboard, she has added lots of spaces by accident.</p>
 <p>Her string at the moment is</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;                                                           Essay on the Roman Republic&quot;</span>
 </pre></div>
 </div>
-<p>Use string methods to fix her title, so that it does not have the extra spaces</p>
+<p>Use string methods to fix her title, so that it does not have the extra spaces. When you fix the string, it should look like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Essay on the Roman Republic&quot;</span>
 </pre></div>
 </div>
@@ -928,11 +932,11 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 </section>
 <section id="question-9">
 <h3>Question 9<a class="headerlink" href="#question-9" title="Link to this heading">#</a></h3>
-<p>Here is some text from a <a class="reference internal" href="#"><span class="xref myst">Wikipedia</span></a> page:</p>
+<p>Here is some text from a <a class="reference external" href="https://en.wikipedia.org/wiki/The_British_Are_Coming_(disambiguation)">Wikipedia</a> page:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;**The British are coming** is a phrase misattributed to [Paul Revere&#39;s Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span>
 </pre></div>
 </div>
-<p>It is <em>Markdown text</em>, it is written so that it looks nice in a Markdown cell (it has some <strong>bold</strong> text and a hyperlink):</p>
+<p>It is <em>Markdown text</em>, it is written so that it looks nice in a Markdown cell (it has some <strong>bold</strong> text and a hyperlink. Here is how it looks in Markdown:</p>
 <blockquote>
 <div><p>“<strong>The British are coming</strong> is a phrase misattributed to <a class="reference external" href="https://en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride" title="Paul Revere's Midnight Ride">Paul Revere’s Midnight Ride</a>.”</p>
 </div></blockquote>
@@ -941,7 +945,7 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;##The British are coming## is a phrase misattributed to &lt;Paul Revere&#39;s Midnight Ride&gt;(http//en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span>
 </pre></div>
 </div>
-<p>Fix it so that it is:</p>
+<p>Fix it using string methods, so that it is the string below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;**The British are coming** is a phrase misattributed to [Paul Revere&#39;s Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span>
 </pre></div>
 </div>
