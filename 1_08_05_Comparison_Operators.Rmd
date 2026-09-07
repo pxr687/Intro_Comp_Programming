@@ -137,7 +137,7 @@ We will get `True` if the value are the same:
 "Cat" == "Cat"
 ```
 
-`<` and `>` ask which string comes first in *alphabetical order* (you can think of `"a"` as being like 0, so `b` is larger than `a` and so on..)
+`<` and `>` ask which string comes first in *alphabetical order*. You can think of `"a"` as being like 0, so `b` is larger than `a` and `c` is larger than `b`, because they come later in the alphabet.
 
 ```{python}
 "a" < "b"
