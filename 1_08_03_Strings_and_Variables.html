@@ -192,6 +192,10 @@
 <li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -365,7 +369,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -381,6 +387,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise">Mini-exercise</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -411,8 +425,8 @@ document.write(`
 </div>
 <p>We can see that this is an expression, because Jupyter displayed a text
 representation of the value that results: <code class="docutils literal notranslate"><span class="pre">10.5</span></code>.</p>
-<p>In fact the expression <code class="docutils literal notranslate"><span class="pre">10.50</span></code> is called a <em>float literal</em>.</p>
-<p>Now consider this expression:</p>
+<p>We know that <code class="docutils literal notranslate"><span class="pre">10.50</span></code> is called a <em>float literal</em>.</p>
+<p>Now think about this expression:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Magneto&quot;</span>
@@ -426,15 +440,16 @@ representation of the value that results: <code class="docutils literal notransl
 </div>
 </div>
 <p>It is a recipe that returns a value.  In this case the value is Python’s
-internal representation of the fragment of text “Magneto”.</p>
-<p>We can store the result of the expression in a variable, using an <em>assignment
+internal representation of the text “Magneto”.</p>
+<p>As we know, we can store the result of the expression in a variable, using an <em>assignment
 statement</em>.</p>
-<p>An assignment statement has a <em>variable name</em> on the left hand side, then an equals sign
+<p>We know that the assignment statement has a <em>variable name</em> on the left hand side, then an equals sign
 <code class="docutils literal notranslate"><span class="pre">=</span></code>, followed by an expression on the right hand side.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">villain</span> <span class="o">=</span> <span class="s2">&quot;Magneto&quot;</span>
-<span class="c1"># Show the value</span>
+
+<span class="c1"># Show the value.</span>
 <span class="n">villain</span>
 </pre></div>
 </div>
@@ -445,10 +460,14 @@ statement</em>.</p>
 </div>
 </div>
 </div>
-<p>Notice the distinction between a <em>variable name</em> (no quotes) and the <em>string
+<p>Notice the difference between a <em>variable name</em> (no quotes) and the <em>string
 literal</em> (surrounded by quotes).   A variable name is a name that refers to a
-value.  It has to follow the rules of variable names.  A string literal is an
+value.  It has to follow the <a class="reference internal" href="#1_05_Variables.html#rules-about-variable-names"><span class="xref myst">rules of variable names</span></a>.  A string literal is an
 expression, that evaluates to Python’s representation of text.</p>
+<section id="mini-exercise">
+<h2>Mini-exercise<a class="headerlink" href="#mini-exercise" title="Link to this heading">#</a></h2>
+<p>If you are not already using this page with Binder or Live Code, launch it now:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG" /></p>
 <p>Recall that an assignment is a name on the left hand side, an <code class="docutils literal notranslate"><span class="pre">=</span></code>, and an
 expression on the right hand side.  So, what is wrong with this assignment
 statement (in fact, there are two things wrong)?  Think how you would explain
@@ -461,6 +480,7 @@ code into the cell, and see what Python says.  Is that what you expected?</p>
 fragment “Professor X”.</p>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -499,6 +519,21 @@ fragment “Professor X”.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise">Mini-exercise</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
