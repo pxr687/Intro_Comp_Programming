@@ -1,6 +1,14 @@
 from jupyprint import jupyprint
 import numpy as np
 
+# SIMPLE WORKFLOW FOR SIMPLE MARKING:
+# Soft assert to use in-line in notebooks.
+def inline_soft_assert(condition, warning_text):
+    if (condition == False):
+        jupyprint("*"+warning_text+"*")
+    else:
+        jupyprint("*That is **CORRECT**, well done!*")
+
 # FUNCTIONS TO USE WITHIN QUESTION SPECIFIC FUNCTIONS
 def pre_define_blanks_ans(n_ans):
     return np.repeat(-99999999999, n_ans)

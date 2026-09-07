@@ -26,6 +26,8 @@ If you need help, you can open the _[textbook page](https://pxr687.github.io/Int
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
 import mark_exercise_1
+from mark_exercise_1_pt_2 import *
+from marking_sub_functions import inline_soft_assert
 # answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_1.pre_define_blanks(5)
 ```
 
@@ -52,6 +54,8 @@ When you download your work, you can view it by uploading the file here: https:/
 
 Later in the course we will install Python on your own laptop 🙂.
 
+
+# Part 1
 
 ## Question 1
 
@@ -161,7 +165,7 @@ answer_5 = ...
 mark_exercise_1.check_answer_5(answer_5)
 ```
 
-# Mark all your answers
+# Mark all your answers for Part 1
 
 ```{python}
 # DO NOT CHANGE THIS CELL. 
@@ -171,6 +175,78 @@ mark_exercise_1.mark_all(answer_1,
                          answer_3,
                          answer_4,
                          answer_5)
+```
+
+# Part 2
+
+## Question 1
+
+Laura is making a budget with Python. She has a part-time job which she works 10 days per month; she makes £100 on each of those days.
+
+She wants to make a variable store this information. Her variable `income_part_time` should have the result of multiplying 10 by 100. But she is getting an error message.
+
+Can you fix it?
+
+```{python}
+# Fix Laura's variable.
+income_part_time = 10 x 100
+
+# Show the value of `income_part_time`.
+income_part_time
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+inline_soft_assert(np.isclose(income_part_time, check_1()[0]),
+                       check_1()[1])
+```
+
+## Question 2
+
+Laura wants to add some more variables to her budget. Her `phone_bill` is £25 each month. But she is getting another error message, can you fix it?
+
+```{python}
+# Fix Laura's variable.
+phone bill = 25
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+inline_soft_assert(np.isclose(phone_bill, check_2()[0]),
+                       check_2()[1])
+```
+
+# Part 2
+
+## Question 1
+
+Laura is making a budget with Python. She has a part-time job which she works 10 days per month; she makes £100 on each of those days.
+
+She wants to make a variable store this information. Her variable `income_part_time` should have the result of multiplying 10 by 100. But she is getting an error message.
+
+Can you fix it?
+
+```{python}
+# Fix Laura's variable.
+income_part_time = 10 x 100
+
+# Show the value of `income_part_time`.
+income_part_time
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+inline_soft_assert(np.isclose(income_part_time, check_1()[0]),
+                       check_1()[1])
 ```
 
 ## Go back to the textbook:
