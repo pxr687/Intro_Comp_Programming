@@ -29,33 +29,40 @@ You remember that the following line of code is an *expression* - a recipe that 
 We can see that this is an expression, because Jupyter displayed a text
 representation of the value that results: `10.5`.
 
-In fact the expression `10.50` is called a *float literal*.
+We know that `10.50` is called a *float literal*.
 
-Now consider this expression:
+Now think about this expression:
 
 ```{python}
 "Magneto"
 ```
 
 It is a recipe that returns a value.  In this case the value is Python's
-internal representation of the fragment of text "Magneto".
+internal representation of the text "Magneto".
 
-We can store the result of the expression in a variable, using an *assignment
+As we know, we can store the result of the expression in a variable, using an *assignment
 statement*.
 
-An assignment statement has a *variable name* on the left hand side, then an equals sign
+We know that the assignment statement has a *variable name* on the left hand side, then an equals sign
 `=`, followed by an expression on the right hand side.
 
 ```{python}
 villain = "Magneto"
-# Show the value
+
+# Show the value.
 villain
 ```
 
-Notice the distinction between a *variable name* (no quotes) and the *string
+Notice the difference between a *variable name* (no quotes) and the *string
 literal* (surrounded by quotes).   A variable name is a name that refers to a
-value.  It has to follow the rules of variable names.  A string literal is an
+value.  It has to follow the [rules of variable names](1_05_Variables.html#rules-about-variable-names).  A string literal is an
 expression, that evaluates to Python's representation of text.
+
+## Mini-exercise
+
+If you are not already using this page with Binder or Live Code, launch it now:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
 
 Recall that an assignment is a name on the left hand side, an `=`, and an
 expression on the right hand side.  So, what is wrong with this assignment

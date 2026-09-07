@@ -24,7 +24,7 @@ def check_answer_1(answer_1,
     answer_name = "answer_1"
     marks_available = 1
     conditions = np.array([soft_assert(np.isclose(answer_1, mk_t_1()[0].astype(float)),
-                              f"Your answer to Your answer to {question_name} is **NOT CORRECT!**, `{answer_name}` is the wrong number!",
+                              f"Your answer to Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_1, 
                      conditions,

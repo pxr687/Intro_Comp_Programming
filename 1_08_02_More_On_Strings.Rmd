@@ -19,10 +19,13 @@ jupyter:
 This page is adpted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/Strings.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
+We have used text/string data on earlier pages. On this page, we will go into  a little more 
+depth about how to deal with string data in your programs.
+
 Much of the world's data is text. As we know a piece of text represented in a
 computer is called a *string*. A string can represent a word, a sentence, or
 even the contents of every book in a library. Since text can include numbers
-(like this: 5) or truth values (True), a string can also describe those
+(like this: `5`) or truth values (`True`), a string can also describe those
 things.
 
 The meaning of an expression depends both upon its structure and the types of
@@ -32,36 +35,87 @@ it is combining a different type of value.
 <!-- #endregion -->
 
 ```{python}
-"data" + "science"
+"computer" + "programming"
 ```
 
-Addition is completely literal; it combines these two strings together without
-regard for their contents. It doesn't add a space because these are different
-words; that's up to the programmer (you) to specify.
+Addition combines these two strings together without
+thinking about their contents. It doesn't add a space because these are different
+words; that's up to the programmer (you).
+
+We can add a space like this:
 
 ```{python}
-"data" + " " + "science"
+"computer" + " " + "programming"
 ```
 
 Single and double quotes can both be used to create strings: `'hi'` and `"hi"`
-are identical expressions. Double quotes are often preferred because they
-allow you to include apostrophes inside of strings.
+are identical expressions. Double quotes are often better because they
+let you include apostrophes inside of strings.
+
+```{python tags=c("raises-exception")}
+# Ouch! Error!
+'This won't work with a single-quoted string!''
+```
 
 ```{python}
+# Double quotes will work!
 "This won't work with a single-quoted string!"
 ```
 
 Why not? Try it out.
 
 
-The `str` function returns a string representation of any value. Using this
-function, strings can be constructed that have embedded values.
+Like the `int()` and `float()` function will change data to `int` or `float`, the `str()` function will change data into the `str` data type. Using this function, strings can be constructed that have embedded values.
 
 ```{python}
+# Combining different data types into a string.
 "That's " + str(1 + 1) + ' ' + str(True)
 ```
 
-{ucb-page}`Strings`
+```{python}
+# Using the `str()` function again to turn numbers into strings.
+"There are " + str(50) + " districts in Bangkok."
+```
+
+This can be very useful when you are debugging code, because you can `print()` out that value of a variables from different parts of the code, which can let you find where errors are happening.
+
+We can also put numeric variables into the string, using the `str()` function:
+
+```{python}
+number_of_students = 22
+```
+
+```{python}
+"There are " + str(number_of_students) + " students in the class."
+```
+
+## F-strings
+
+The last code cell puts numbers and text together using lots of `+` symbols and the `str` function.
+
+A smoother way to do this is to use *f-strings*. These take some time to get used to, but you will find them very helpful for showing results and debugging your code.
+
+To use a f-string, just put at "f" at the start of your string!:
+
+```{python}
+f"This is an f-string!"
+```
+
+Now, inside our f-string, if we put variables, literals or expressions inside curly brackets `{}`, they will become part of the string:
+
+```{python}
+f"This is an f-string! It can show the value of my `number_of_students` variable like this: {number_of_students}."
+```
+
+```{python}
+f"We can also put literals/expressions inside our string, like this: {8 * 100}" 
+```
+
+Note that using "f" before the string is allowed in Python, because the Python compiler knows it means "this is an f-string! Let me put variables in it!". However, we will get errors if we use other letters, as they do not mean anything to the Python compiler:
+
+```{python tags=c("raises-exception")}
+e"This is not allowed!"
+```
 
 ----------------------------------------------------------
 

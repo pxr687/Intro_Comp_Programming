@@ -365,7 +365,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -381,6 +383,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -396,10 +406,12 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>This page is adpted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/Strings.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
+<p>We have used text/string data on earlier pages. On this page, we will go into  a little more
+depth about how to deal with string data in your programs.</p>
 <p>Much of the world’s data is text. As we know a piece of text represented in a
 computer is called a <em>string</em>. A string can represent a word, a sentence, or
 even the contents of every book in a library. Since text can include numbers
-(like this: 5) or truth values (True), a string can also describe those
+(like this: <code class="docutils literal notranslate"><span class="pre">5</span></code>) or truth values (<code class="docutils literal notranslate"><span class="pre">True</span></code>), a string can also describe those
 things.</p>
 <p>The meaning of an expression depends both upon its structure and the types of
 values that are being combined. So, for instance, adding two strings together
@@ -407,37 +419,55 @@ produces another string. This expression is still an addition expression, but
 it is combining a different type of value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;data&quot;</span> <span class="o">+</span> <span class="s2">&quot;science&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;computer&quot;</span> <span class="o">+</span> <span class="s2">&quot;programming&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;datascience&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;computerprogramming&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>Addition is completely literal; it combines these two strings together without
-regard for their contents. It doesn’t add a space because these are different
-words; that’s up to the programmer (you) to specify.</p>
+<p>Addition combines these two strings together without
+thinking about their contents. It doesn’t add a space because these are different
+words; that’s up to the programmer (you).</p>
+<p>We can add a space like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;data&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="s2">&quot;science&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;computer&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="s2">&quot;programming&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data science&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;computer programming&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <p>Single and double quotes can both be used to create strings: <code class="docutils literal notranslate"><span class="pre">'hi'</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;hi&quot;</span></code>
-are identical expressions. Double quotes are often preferred because they
-allow you to include apostrophes inside of strings.</p>
+are identical expressions. Double quotes are often better because they
+let you include apostrophes inside of strings.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ouch! Error!</span>
+<span class="s1">&#39;This won&#39;</span><span class="n">t</span> <span class="n">work</span> <span class="k">with</span> <span class="n">a</span> <span class="n">single</span><span class="o">-</span><span class="n">quoted</span> <span class="n">string</span><span class="o">!</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="s1">&#39;This won&#39;</span><span class="n">t</span> <span class="n">work</span> <span class="k">with</span> <span class="n">a</span> <span class="n">single</span><span class="o">-</span><span class="n">quoted</span> <span class="n">string</span><span class="o">!</span><span class="s1">&#39;&#39;</span>
+              <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This won&#39;t work with a single-quoted string!&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Double quotes will work!</span>
+<span class="s2">&quot;This won&#39;t work with a single-quoted string!&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -448,11 +478,11 @@ allow you to include apostrophes inside of strings.</p>
 </div>
 </div>
 <p>Why not? Try it out.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">str</span></code> function returns a string representation of any value. Using this
-function, strings can be constructed that have embedded values.</p>
+<p>Like the <code class="docutils literal notranslate"><span class="pre">int()</span></code> and <code class="docutils literal notranslate"><span class="pre">float()</span></code> function will change data to <code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>, the <code class="docutils literal notranslate"><span class="pre">str()</span></code> function will change data into the <code class="docutils literal notranslate"><span class="pre">str</span></code> data type. Using this function, strings can be constructed that have embedded values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;That&#39;s &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Combining different data types into a string.</span>
+<span class="s2">&quot;That&#39;s &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -462,9 +492,101 @@ function, strings can be constructed that have embedded values.</p>
 </div>
 </div>
 </div>
-<p></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the `str()` function again to turn numbers into strings.</span>
+<span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; districts in Bangkok.&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;There are 50 districts in Bangkok.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can be very useful when you are debugging code, because you can <code class="docutils literal notranslate"><span class="pre">print()</span></code> out that value of a variables from different parts of the code, which can let you find where errors are happening.</p>
+<p>We can also put numeric variables into the string, using the <code class="docutils literal notranslate"><span class="pre">str()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_students</span> <span class="o">=</span> <span class="mi">22</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_of_students</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; students in the class.&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;There are 22 students in the class.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="f-strings">
+<h2>F-strings<a class="headerlink" href="#f-strings" title="Link to this heading">#</a></h2>
+<p>The last code cell puts numbers and text together using lots of <code class="docutils literal notranslate"><span class="pre">+</span></code> symbols and the <code class="docutils literal notranslate"><span class="pre">str</span></code> function.</p>
+<p>A smoother way to do this is to use <em>f-strings</em>. These take some time to get used to, but you will find them very helpful for showing results and debugging your code.</p>
+<p>To use a f-string, just put at “f” at the start of your string!:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;This is an f-string!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is an f-string!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, inside our f-string, if we put variables, literals or expressions inside curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code>, they will become part of the string:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;This is an f-string! It can show the value of my `number_of_students` variable like this: </span><span class="si">{</span><span class="n">number_of_students</span><span class="si">}</span><span class="s2">.&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is an f-string! It can show the value of my `number_of_students` variable like this: 22.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;We can also put literals/expressions inside our string, like this: </span><span class="si">{</span><span class="mi">8</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">}</span><span class="s2">&quot;</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;We can also put literals/expressions inside our string, like this: 800&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that using “f” before the string is allowed in Python, because the Python compiler knows it means “this is an f-string! Let me put variables in it!”. However, we will get errors if we use other letters, as they do not mean anything to the Python compiler:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="s2">&quot;This is not allowed!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">e</span><span class="s2">&quot;This is not allowed!&quot;</span>
+     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -503,6 +625,21 @@ function, strings can be constructed that have embedded values.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
