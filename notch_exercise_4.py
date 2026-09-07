@@ -1,6 +1,6 @@
 # Abridged version of script for in-page marks.
 
-from marking_sub_functions import *
+from notching_sub_functions import *
 import numpy as np
 
 def check_answer(student_answer,

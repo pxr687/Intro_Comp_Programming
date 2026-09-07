@@ -1,16 +1,16 @@
 from jupyprint import jupyprint
-from marking_sub_functions import *
+from notching_sub_functions import *
 from mk_var import mk_var
 from util import *
 import numpy as np
 
-# SET TOTAL MARKS FOR EXERCISE
-total_marks = 5
-
-number = 1
+number = 2
 for name in list(globals()):
     if callable(globals()[name]) and name.startswith("mk_t_") and not name.endswith(f"{number}"):
         del globals()[name]
+
+# SET TOTAL MARKS FOR EXERCISE
+total_marks = 5
 
 def pre_define_blanks(n_ans):
     return  pre_define_blanks_ans(n_ans)
@@ -23,22 +23,22 @@ def check_answer_1(answer_1,
     question_name = "Question 1"
     answer_name = "answer_1"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_1, mk_t_1()[0].astype(float)),
+    conditions = np.array([soft_assert(np.isclose(answer_1, mk_t_2()[0]),
                               f"Your answer to Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
-    mark = sub_check(question_name, answer_1, 
+    mark = sub_check(question_name, answer_1,
                      conditions,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
 
-def check_answer_2(answer_2,                    
+def check_answer_2(answer_2, 
                    return_mark=False):
     question_name = "Question 2"
     answer_name = "answer_2"
     marks_available = 1
-    conditions = np.array([soft_assert(answer_2 == mk_t_1()[1],
-                                        f"Your answer to Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` does not equal 'SIAM UNIVERSITY'!",
-                                          return_mark=return_mark)])
+    conditions = np.array([soft_assert(np.isclose(answer_2, mk_t_2()[1]),
+                              f"Your answer to Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` is the wrong number!",
+                                return_mark=return_mark)])
     mark = sub_check(question_name, answer_2, 
                      conditions,
                      return_mark=return_mark)
@@ -49,7 +49,7 @@ def check_answer_3(answer_3,
     question_name = "Question 3"
     answer_name = "answer_3"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_3, mk_t_1()[2].astype(float)),
+    conditions = np.array([soft_assert(np.isclose(answer_3, mk_t_2()[2]),
                               f"Your answer to Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_3, 
@@ -62,8 +62,8 @@ def check_answer_4(answer_4,
     question_name = "Question 4"
     answer_name = "answer_4"
     marks_available = 1
-    conditions = np.array([soft_assert(answer_4 == mk_t_1()[3],
-                              f"Your answer to Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` does not say 'This is a fine answer'!",
+    conditions = np.array([soft_assert(np.isclose(answer_4, mk_t_2()[3]),
+                              f"Your answer to Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_4, 
                      conditions,
@@ -75,7 +75,7 @@ def check_answer_5(answer_5,
     question_name = "Question 5"
     answer_name = "answer_5"
     marks_available = 1
-    conditions = np.array([soft_assert(np.isclose(answer_5, mk_t_1()[4].astype(float)),
+    conditions = np.array([soft_assert(np.isclose(answer_5, mk_t_2()[4]),
                               f"Your answer to Your answer to {question_name} is **NOT CORRECT!** `{answer_name}` is the wrong number!",
                                 return_mark=return_mark)])
     mark = sub_check(question_name, answer_5, 
@@ -83,30 +83,30 @@ def check_answer_5(answer_5,
                      return_mark=return_mark)
     return award_marks(mark, marks_available=marks_available)
 
+
+###############################################################################
+
 ### MARKING
 def mark_all(answer_1, 
              answer_2, 
              answer_3,
              answer_4,
              answer_5,
-             return_mark = True,
+             return_mark=True,
              test_all=False):
     
     if test_all==True:
         usr_k = input()
         if usr_k == mk_var():
-
             # Utility answers for testing within exercise notebook
-            answers_list = [
-            answer_1 := mk_t_1()[0].astype(float),
-            answer_2 := mk_t_1()[1],
-            answer_3 := mk_t_1()[2].astype(float),
-            answer_4 := mk_t_1()[3],
-            answer_5 := mk_t_1()[4].astype(float)
-            ]
-
+            answers_list=[    
+                    answer_1 :=  mk_t_2()[0],
+                    answer_2 :=  mk_t_2()[1],
+                    answer_3 :=  mk_t_2()[2],
+                    answer_4 :=  mk_t_2()[3],
+                    answer_5 :=  mk_t_2()[4]]
             jupyprint(np.array(answers_list))
-
+            
     marks= np.sum([check_answer_1(answer_1, return_mark=return_mark),
                   check_answer_2(answer_2, return_mark=return_mark),
                   check_answer_3(answer_3, return_mark=return_mark),

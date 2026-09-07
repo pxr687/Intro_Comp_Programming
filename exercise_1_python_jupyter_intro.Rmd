@@ -25,10 +25,10 @@ If you need help, you can open the _[textbook page](https://pxr687.github.io/Int
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_1
-from mark_exercise_1_pt_2 import *
-from marking_sub_functions import inline_soft_assert
-# answer_1, answer_2, answer_3, answer_4, answer_5, = mark_exercise_1.pre_define_blanks(5)
+import notch_exercise_1
+from notch_exercise_1_pt_2 import *
+from notching_sub_functions import inline_soft_assert
+# answer_1, answer_2, answer_3, answer_4, answer_5, = notch_exercise_1.pre_define_blanks(5)
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 
@@ -80,7 +80,7 @@ answer_1
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_1(answer_1)
+notch_exercise_1.check_answer_1(answer_1)
 ```
 
 ## Question 2
@@ -99,7 +99,7 @@ answer_2 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_2(answer_2)
+notch_exercise_1.check_answer_2(answer_2)
 ```
 
 ## Question 3
@@ -124,7 +124,7 @@ answer_3 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_3(answer_3)
+notch_exercise_1.check_answer_3(answer_3)
 ```
 
 ## Question 4
@@ -141,7 +141,7 @@ answer_4 = "Th1s !s is @ f!ner answ3r"
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_4(answer_4)
+notch_exercise_1.check_answer_4(answer_4)
 ```
 
 ## Question 5
@@ -162,7 +162,7 @@ answer_5 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_1.check_answer_5(answer_5)
+notch_exercise_1.check_answer_5(answer_5)
 ```
 
 # Mark all your answers for Part 1
@@ -170,7 +170,7 @@ mark_exercise_1.check_answer_5(answer_5)
 ```{python}
 # DO NOT CHANGE THIS CELL. 
 # Run this cell to mark all of your answers.
-mark_exercise_1.mark_all(answer_1,
+notch_exercise_1.mark_all(answer_1,
                          answer_2,
                          answer_3,
                          answer_4,

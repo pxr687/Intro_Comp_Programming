@@ -1,5 +1,5 @@
 from jupyprint import jupyprint
-from marking_sub_functions import *
+from notching_sub_functions import *
 from mk_var import mk_var
 from util import *
 import numpy as np

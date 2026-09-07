@@ -25,8 +25,8 @@ If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_X
-# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = mark_exercise_X.pre_define_blanks(10)
+import notch_exercise_X
+# answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10 = notch_exercise_X.pre_define_blanks(10)
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers.
@@ -58,7 +58,7 @@ answer_1 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_1(answer_1)
+notch_exercise_X.check_answer_1(answer_1)
 ```
 
 
@@ -75,7 +75,7 @@ answer_2 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_2(answer_2)
+notch_exercise_X.check_answer_2(answer_2)
 ```
 
 
@@ -92,7 +92,7 @@ answer_3 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_3(answer_3)
+notch_exercise_X.check_answer_3(answer_3)
 ```
 
 
@@ -109,7 +109,7 @@ answer_4 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_4(answer_4)
+notch_exercise_X.check_answer_4(answer_4)
 ```
 
 
@@ -126,7 +126,7 @@ answer_5 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_5(answer_5)
+notch_exercise_X.check_answer_5(answer_5)
 ```
 
 
@@ -143,7 +143,7 @@ answer_6 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_6(answer_6)
+notch_exercise_X.check_answer_6(answer_6)
 ```
 
 
@@ -160,7 +160,7 @@ answer_7 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_7(answer_7)
+notch_exercise_X.check_answer_7(answer_7)
 ```
 
 
@@ -177,7 +177,7 @@ answer_8 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_8(answer_8)
+notch_exercise_X.check_answer_8(answer_8)
 ```
 
 
@@ -194,7 +194,7 @@ answer_9 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_9(answer_9)
+notch_exercise_X.check_answer_9(answer_9)
 ```
 
 
@@ -211,7 +211,7 @@ answer_10 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_X.check_answer_10(answer_10)
+notch_exercise_X.check_answer_10(answer_10)
 ```
 
 
@@ -221,7 +221,7 @@ mark_exercise_X.check_answer_10(answer_10)
 ```{python}
 # DO NOT CHANGE THIS CELL.
 # Run this cell to mark all of your answers.
-mark_exercise_X.mark_all(answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10)
+notch_exercise_X.mark_all(answer_1, answer_2, answer_3, answer_4, answer_5, answer_6, answer_7, answer_8, answer_9, answer_10)
 ```
 
 ## Go back to the textbook:

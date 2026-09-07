@@ -1,4 +1,4 @@
-# Checks and warnings to pass to `soft_assert()` from `marking_sub_functions.py`
+# Checks and warnings to pass to `soft_assert()` from `notching_sub_functions.py`
 def check_1():
     check = (1e3-1e3)**0*1e3 + 1e3-1e3+1e3 - (1e3-1e3)**0*1e3
     warn = f"Hmmm, that is **NOT CORRECT**. `income_part_time` should be the result of multiplying 10 by 100..."

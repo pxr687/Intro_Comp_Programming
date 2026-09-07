@@ -93,7 +93,7 @@ answer_1
 
 ```{python}
 # DO NOT CHANGE THIS CODE!
-from mark_exercise_4 import check_answer, homer
+from notch_exercise_4 import check_answer, homer
 check_answer(answer_1, "Introduction to Computer Programming",
              question_name="Question 1",
              answer_name="answer_1")

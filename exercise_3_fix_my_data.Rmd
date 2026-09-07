@@ -25,8 +25,8 @@ If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_3
-# total, number_of_students, test_score, welcome_20, n_forms, savings_after_six_months = mark_exercise_3.pre_define_blanks(6)
+import notch_exercise_3
+# total, number_of_students, test_score, welcome_20, n_forms, savings_after_six_months = notch_exercise_3.pre_define_blanks(6)
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers.
@@ -71,7 +71,7 @@ That doesn't look right - can you fix her code?
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_1(total)
+notch_exercise_3.check_answer_1(total)
 ```
 
 
@@ -98,7 +98,7 @@ Can you fix Somchai's code? His `number_of_students` variable should have the nu
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_2(number_of_students)
+notch_exercise_3.check_answer_2(number_of_students)
 ```
 
 
@@ -121,7 +121,7 @@ Fix her code so there is a variable `test_score` which contains her test score, 
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_3(test_score)
+notch_exercise_3.check_answer_3(test_score)
 ```
 
 
@@ -150,7 +150,7 @@ Can you fix Katherine's code? Your variable must be called `welcome_20` for the 
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_4(welcome_20)
+notch_exercise_3.check_answer_4(welcome_20)
 ```
 
 
@@ -181,7 +181,7 @@ The total number of students should be multiplied by `3`, because he needs to gi
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_5(n_forms)
+notch_exercise_3.check_answer_5(n_forms)
 ```
 
 
@@ -218,7 +218,7 @@ Fix her code and store your answer in the variable `savings_after_six_months` - 
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_6(savings_after_six_months)
+notch_exercise_3.check_answer_6(savings_after_six_months)
 ```
 
 
@@ -227,7 +227,7 @@ mark_exercise_3.check_answer_6(savings_after_six_months)
 ```{python}
 # DO NOT CHANGE THIS CELL.
 # Run this cell to mark all of your answers.
-mark_exercise_3.mark_all(total,
+notch_exercise_3.mark_all(total,
                          number_of_students,
                          test_score, 
                          welcome_20, 

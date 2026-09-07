@@ -5,7 +5,7 @@ import numpy as np
 # Use from terminal:
 # `python -m mk_rmd_questions 1 3 index.html``
 # This will generate three blank questions for exercise 1 (exercise 1 denotes the
-# relevant `mark_exercise_X.py` file)
+# relevant `notch_exercise_X.py` file)
 
 def make_questions(exnum, n_qs, textbook_page_name, python="{python}"):
 
@@ -39,8 +39,8 @@ If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_{exnum}
-# {answer_vars} = mark_exercise_{exnum}.pre_define_blanks({n_qs})
+import notch_exercise_{exnum}
+# {answer_vars} = notch_exercise_{exnum}.pre_define_blanks({n_qs})
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 
@@ -77,7 +77,7 @@ answer_{i+1} = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_{exnum}.check_answer_{i+1}(answer_{i+1})
+notch_exercise_{exnum}.check_answer_{i+1}(answer_{i+1})
 ```
     """
 
@@ -89,7 +89,7 @@ mark_exercise_{exnum}.check_answer_{i+1}(answer_{i+1})
 ```{python}
 # DO NOT CHANGE THIS CELL. 
 # Run this cell to mark all of your answers.
-mark_exercise_{exnum}.mark_all({answer_vars})
+notch_exercise_{exnum}.mark_all({answer_vars})
 ```
 
 ## Go back to the textbook:

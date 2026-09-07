@@ -38,7 +38,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 ------------------
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_1(total)
+notch_exercise_3.check_answer_1(total)
 ------------------
 
 
@@ -47,9 +47,9 @@ mark_exercise_3.check_answer_1(total)
 [36mCell[39m[36m [39m[32mIn[3][39m[32m, line 3[39m
 [32m      1[39m [38;5;66;03m# DO NOT CHANGE THIS CODE.[39;00m
 [32m      2[39m [38;5;66;03m# RUN THIS CELL TO MARK YOUR ANSWER.[39;00m
-[32m----> [39m[32m3[39m [43mmark_exercise_3[49m[43m.[49m[43mcheck_answer_1[49m[43m([49m[43mtotal[49m[43m)[49m
+[32m----> [39m[32m3[39m [43mnotch_exercise_3[49m[43m.[49m[43mcheck_answer_1[49m[43m([49m[43mtotal[49m[43m)[49m
 
-[36mFile [39m[32m~\Intro_Comp_Programming\mark_exercise_3.py:29[39m, in [36mcheck_answer_1[39m[34m(total, return_mark)[39m
+[36mFile [39m[32m~\Intro_Comp_Programming\notch_exercise_3.py:29[39m, in [36mcheck_answer_1[39m[34m(total, return_mark)[39m
 [32m     24[39m answer_name = [33m"[39m[33mtotal[39m[33m"[39m
 [32m     25[39m marks_available = [32m1[39m
 [32m     26[39m conditions = np.array([soft_assert([38;5;28mtype[39m(total) != [38;5;28mstr[39m,

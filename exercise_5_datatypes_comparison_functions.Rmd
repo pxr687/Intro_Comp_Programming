@@ -25,8 +25,8 @@ If you need help, click here to open the _[textbook page](pxr687.github.io/Intro
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import mark_exercise_3
-# pop_thailand, are_they_the_same, answer_3, forty_two_as_float, thailand_and_myanmar_pop = mark_exercise_3.pre_define_blanks(5)
+import notch_exercise_3
+# pop_thailand, are_they_the_same, answer_3, forty_two_as_float, thailand_and_myanmar_pop = notch_exercise_3.pre_define_blanks(5)
 ```
 
 **ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers. 
@@ -75,7 +75,7 @@ However, the code is broken. See if you can fix it.
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_1(pop_thailand)
+notch_exercise_3.check_answer_1(pop_thailand)
 ```
 
 ## Question 2
@@ -113,7 +113,7 @@ are_they_the_same = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_2(are_they_the_same)
+notch_exercise_3.check_answer_2(are_they_the_same)
 ```
 
 ## Question 3
@@ -143,7 +143,7 @@ answer_3 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_3(answer_3)
+notch_exercise_3.check_answer_3(answer_3)
 ```
 
 ## Question 4
@@ -160,7 +160,7 @@ forty_two_as_float = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_4(forty_two_as_float)
+notch_exercise_3.check_answer_4(forty_two_as_float)
 ```
 
 ## Question 5
@@ -193,7 +193,7 @@ thailand_and_myanmar_pop = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-mark_exercise_3.check_answer_5(thailand_and_myanmar_pop)
+notch_exercise_3.check_answer_5(thailand_and_myanmar_pop)
 ```
 
 # Mark all your answers
@@ -201,7 +201,7 @@ mark_exercise_3.check_answer_5(thailand_and_myanmar_pop)
 ```{python}
 # DO NOT CHANGE THIS CELL. 
 # Run this cell to mark all of your answers.
-mark_exercise_3.mark_all(pop_thailand,
+notch_exercise_3.mark_all(pop_thailand,
                          are_they_the_same,
                          answer_3,
                          forty_two_as_float,
