@@ -20,11 +20,10 @@ This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](http
 ```
 
 A *Boolean* value is a value that can only be True or False.  It is called
-"Boolean" after the mathematician and logician [George
+"Boolean" after the English mathematician and logician [George
 Boole](https://en.wikipedia.org/wiki/George_Boole)
 
-Boolean values most often arise from comparison operators. Python includes a
-variety of operators that compare values. For example, `3` is larger than `1`:
+Boolean values most often happen as a result of comparison operators. Python includes lots of operators that compare values. For example, we can ask Python the question: "is this thing *larger than* this other thing?". The cell below asks Python "is `3` larger than `1`?":
 <!-- #endregion -->
 
 ```{python}
@@ -33,19 +32,22 @@ variety of operators that compare values. For example, `3` is larger than `1`:
 
 `>` is the *greater than* comparison operator.  It takes the value to the left and asks if it is greater than the value to right.   The answer can only be `True` or `False`.
 
-The value `True` indicates that the comparison is valid; Python has confirmed
-this simple fact about the relationship between `3` and `1`.
+The value `True` indicates that the comparison is correct; Python has answered "yes, 3 is bigger than 1".
 
-Python uses the special `bool` type for values that can only be `True` or `False`.
+Python uses the special `bool` data type for values that can only be `True` or `False`.
 
 ```{python}
 type(3 > 1)
 ```
 
+```{python}
+type(True)
+```
+
 Here we confirm to ourselves that `3` is greater than the result of the expression `1 + 1`:
 
 ```{python}
-3 > 1 + 1
+3 > (1 + 1)
 ```
 
 The value `True` indicates that the comparison is valid; Python has confirmed
@@ -78,36 +80,76 @@ Here are some more examples:
 Notice the `==` in the table above.
 
 The double equals ``==`` is different from the single `=` that we saw before
-in assignment.   Here is assignment.
+in assignment statemtns. Here is an assignment statement.
 
 ```{python}
 a = 4
 ```
 
-Notice it does not display a value, because it is an assignment, and not an expression.
+Notice it does not display a value, because it is an assignment, and not an expression. (You probably already noticed this, on earlier textbook pages)!
 
 ``==`` is different - it's a comparison operator like `<` or `>`.  It checks
-whether two values are equal, and returns True or False:
+whether two values are equal, and returns True or False. Using `==` is like asking Python "is this thing *the same value* as this other thing?".
+
+For example, the cell below askes Python "is the variable `a` the same value as the literal `4`?":
 
 ```{python}
 a == 4
 ```
 
-This is an expression, because `==` is an operator, to say how values should
+```{python}
+# Show the value of `a`, just to check.
+a
+```
+
+`a == 4` is an expression, because `==` is an operator, to say how values should
 be combined, like `+` or `*`.
 
-Strings can also be compared, and their order is alphabetical. A shorter
-string is less than a longer string that begins with the shorter string.
+Let's think about uses for `==` (there are lots)!. Imagine the text in the cell below is a password stored on a company's computer system:
 
 ```{python}
-"Dog" > "Catastrophe"
+correct_password = "PA55W0Rd"
+```
+
+Imagine that the cell below is the input from a staff member's keyboard, as they try to login to the company system. Let's imagine the staff member is called Dave:
+
+```{python}
+daves_input = "PA55W0Rd"
+```
+
+We can see the text, so we know the passwords are the same. But what if we want Python to check? We can use the `==` operator!:
+
+```{python}
+daves_input == correct_password
+```
+
+From this we can check that Dave has used the right password.
+
+Strings can also be compared. The cell below asks "is the string `"Cat"` the same value as the string `"Dog"`?
+
+```{python}
+"Cat" == "Dog"
+```
+
+We will get `True` if the value are the same:
+
+```{python}
+"Cat" == "Cat"
+```
+
+`<` and `>` ask which string comes first in *alphabetical order* (you can think of `"a"` as being like 0, so `b` is larger than `a` and so on..)
+
+```{python}
+"a" < "b"
 ```
 
 ```{python}
-"Catastrophe" > "Cat"
+"b" < "c"
 ```
 
-{ucb-page}`Comparison`
+```{python}
+"c" < "d"
+```
 
 ----------------------------------------------------------
 

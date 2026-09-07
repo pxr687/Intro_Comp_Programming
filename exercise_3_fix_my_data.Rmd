@@ -228,11 +228,11 @@ check_answer_6(savings_after_six_months)
 # DO NOT CHANGE THIS CELL.
 # Run this cell to mark all of your answers.
 mark_all(total,
-                         number_of_students,
-                         test_score, 
-                         welcome_20, 
-                         n_forms, 
-                         savings_after_six_months)
+         number_of_students,
+         test_score, 
+         welcome_20, 
+         n_forms, 
+         savings_after_six_months)
 ```
 
 ## Go back to the textbook:
