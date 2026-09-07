@@ -31,7 +31,7 @@ So for example:
 `python -m mk_rmd_questions 9 3 index.html`
 
 ...will print 3 blank questions for exercise 9 (exercise 9 denotes the
-relevant `notch_exercise_X.py` file that will be used to mark the questions).
+relevant `notch_x.py` file that will be used to mark the questions).
 `index.html` puts links in the exercise to the online book, change it to a 
 specific page (ideally one which helps with the exercise).
 
@@ -46,12 +46,12 @@ If editing an existing exercise, it can be easier to:
 Use `mk_launch_links.py` to make Markdown text containing the exercise links to
 put in a textbook page.
 
-Exercises are marked by `notch_exercise_*.py` files. These import a function from
+Exercises are marked by `notch_*.py` files. These import a function from
 `notching_sub_functions.py` called `mk_new_q_marking()` which generates blank
 marking code.
 
 As a (very) lo-fi way to make an exercise, `exercise_X_TEMPLATE.ipynb` is a template
-for the exercise notebook. `notch_exercise_X.py` is a marking template.
+for the exercise notebook. `py` is a marking template.
 
 ### A note on checking spelling
 

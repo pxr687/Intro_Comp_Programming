@@ -6,7 +6,7 @@
 # Example usage:
 
 # from mk_launch_links import make_launch_links
-# make_launch_links(2, "Expressions", "exercise_2_expressions.ipynb", "notch_exercise_2.py")
+# make_launch_links(2, "Expressions", "exercise_2_expressions.ipynb", "notch_2.py")
 
 def mk_binder_links(ex_num, ex_name, notebook_link, name_of_exercise_marking_file):
     text =  f"""
@@ -28,7 +28,7 @@ Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?
 
 # Example usage:
 # from mk_launch_links import make_colab_links
-# make_colab_links(2, "Expressions", "exercise_2_expressions.ipynb", "notch_exercise_2.py")
+# make_colab_links(2, "Expressions", "exercise_2_expressions.ipynb", "notch_2.py")
 
 def mk_colab_links(ex_num, ex_name, notebook_link, name_of_exercise_marking_file):
     text =  f"""
@@ -68,7 +68,7 @@ When you finish your answer, you can download your work:
 # off AI. Use as a last resort.
 
 # from mk_launch_links import make_deepnote_links
-# make_deepnote_links(2, "Expressions", "exercise_2_expressions.ipynb", "notch_exercise_2.py")
+# make_deepnote_links(2, "Expressions", "exercise_2_expressions.ipynb", "notch_2.py")
 
 def mk_deepnote_links(ex_num, ex_name, notebook_link, name_of_exercise_marking_file):
     text =  f"""

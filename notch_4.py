@@ -1,5 +1,4 @@
-# Abridged version of script for in-page marks.
-
+# Abridged version of script for specific exercise.
 from notching_sub_functions import *
 import numpy as np
 

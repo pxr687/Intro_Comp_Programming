@@ -78,6 +78,15 @@ Below are some questions which you should answer by using string methods. All of
 
 Fixing strings "manually" (e.g. by changing the string with your keyboard) works when we have one string...but in large datasets you could have 1000s or 1_000_000s of strings, then you will *have* to use string methods to edit them. So we will practice using string methods now, instead of directly editing the strings :)
 
+Run the cell below first, then start the questions.
+
+```{python}
+# RUN THIS CELL BUT DO NOT CHANGE THIS CODE!
+import numpy as np
+import pandas as pd
+from notch_4 import *
+```
+
 ### Question 1
 
 Oops someone has made a spelling mistake with the name of this course. Fix this string using methods from the table above. When you fix the string, it should say "Introduction to Computer Programming". Store your corrected string in a variable called `answer_1`:
@@ -93,7 +102,6 @@ answer_1
 
 ```{python}
 # DO NOT CHANGE THIS CODE!
-from notch_exercise_4 import check_answer, homer
 check_answer(answer_1, "Introduction to Computer Programming",
              question_name="Question 1",
              answer_name="answer_1")
