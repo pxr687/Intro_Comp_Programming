@@ -200,8 +200,7 @@ income_part_time
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-inline_soft_assert(np.isclose(income_part_time, quick_check_1()[0]),
-                       quick_check_1()[1])
+inline_soft_assert(np.isclose(income_part_time, quick_check_1()[0]), quick_check_1()[1])
 ```
 
 ## Question 2
@@ -218,8 +217,7 @@ phone bill = twenty five
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-inline_soft_assert(np.isclose(phone_bill, quick_check_2()[0]),
-                       quick_check_2()[1])
+inline_soft_assert(np.isclose(phone_bill, quick_check_2()[0]), quick_check_2()[1])
 ```
 
 ## Question 3
@@ -243,8 +241,7 @@ entertainment
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-inline_soft_assert(np.isclose(entertainment, quick_check_3()[0]),
-                       quick_check_3()[1])
+inline_soft_assert(np.isclose(entertainment, quick_check_3()[0]), quick_check_3()[1])
 ```
 
 # Part 3 - Fix these Variables
