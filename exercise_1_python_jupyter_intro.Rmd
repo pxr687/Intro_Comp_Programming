@@ -25,7 +25,7 @@ If you need help, you can open the _[textbook page](https://pxr687.github.io/Int
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
-import notch_exercise_1
+from notch_exercise_1 import *
 from notch_exercise_1_pt_2 import *
 from notching_sub_functions import inline_soft_assert
 # answer_1, answer_2, answer_3, answer_4, answer_5, = notch_exercise_1.pre_define_blanks(5)
@@ -80,7 +80,7 @@ answer_1
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-notch_exercise_1.check_answer_1(answer_1)
+check_answer_1(answer_1)
 ```
 
 ## Question 2
@@ -99,7 +99,7 @@ answer_2 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-notch_exercise_1.check_answer_2(answer_2)
+check_answer_2(answer_2)
 ```
 
 ## Question 3
@@ -124,7 +124,7 @@ answer_3 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-notch_exercise_1.check_answer_3(answer_3)
+check_answer_3(answer_3)
 ```
 
 ## Question 4
@@ -141,7 +141,7 @@ answer_4 = "Th1s !s is @ f!ner answ3r"
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-notch_exercise_1.check_answer_4(answer_4)
+check_answer_4(answer_4)
 ```
 
 ## Question 5
@@ -162,7 +162,7 @@ answer_5 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-notch_exercise_1.check_answer_5(answer_5)
+check_answer_5(answer_5)
 ```
 
 # Mark all your answers for Part 1
@@ -170,11 +170,11 @@ notch_exercise_1.check_answer_5(answer_5)
 ```{python}
 # DO NOT CHANGE THIS CELL. 
 # Run this cell to mark all of your answers.
-notch_exercise_1.mark_all(answer_1,
-                         answer_2,
-                         answer_3,
-                         answer_4,
-                         answer_5)
+mark_all(answer_1,
+         answer_2,
+         answer_3,
+         answer_4,
+         answer_5)
 ```
 
 # Part 2
@@ -200,8 +200,8 @@ income_part_time
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-inline_soft_assert(np.isclose(income_part_time, check_1()[0]),
-                       check_1()[1])
+inline_soft_assert(np.isclose(income_part_time, quick_check_1()[0]),
+                       quick_check_1()[1])
 ```
 
 ## Question 2
@@ -210,7 +210,7 @@ Laura wants to add some more variables to her budget. Her `phone_bill` is £25 e
 
 ```{python}
 # Fix Laura's variable.
-phone bill = 25
+phone bill = twenty five
 ```
 
 ### Run the next cell to mark your answer.
@@ -218,26 +218,22 @@ phone bill = 25
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-inline_soft_assert(np.isclose(phone_bill, check_2()[0]),
-                       check_2()[1])
+inline_soft_assert(np.isclose(phone_bill, quick_check_2()[0]),
+                       quick_check_2()[1])
 ```
 
-# Part 2
+## Question 3
 
-## Question 1
+Laura spends about £30 per week on entertainment. There are about 4.345 weeks in the average month.
 
-Laura is making a budget with Python. She has a part-time job which she works 10 days per month; she makes £100 on each of those days.
-
-She wants to make a variable store this information. Her variable `income_part_time` should have the result of multiplying 10 by 100. But she is getting an error message.
-
-Can you fix it?
+She wants to calculate how much she spends on entertainment each month. She tries to store this in a variable called `entertainment`, but she gets *another* error:
 
 ```{python}
 # Fix Laura's variable.
-income_part_time = 10 x 100
+4.345 * 30 = entertainment 
 
 # Show the value of `income_part_time`.
-income_part_time
+entertainment
 ```
 
 ### Run the next cell to mark your answer.
@@ -245,8 +241,64 @@ income_part_time
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-inline_soft_assert(np.isclose(income_part_time, check_1()[0]),
-                       check_1()[1])
+inline_soft_assert(np.isclose(entertainment, quick_check_3()[0]),
+                       quick_check_3()[1])
+```
+
+# Part 3 - Fix these Variables
+
+In the cells below, all of the *numbers and calculations* are correct. You do not need to change those. However, each cell makes an error message.
+
+Fix the code so that the cell runs without an error. You will know you have done it right when there is no error message, and you get a new message saying `"You have fixed the error! Well done! :-)"`
+
+*Note:* in each cell there is a comment saying `# DO NOT CHANGE THE CODE BELOW THIS.` Do **NOT** change that code, it makes the message for when you fix the code.
+
+```{python}
+# Fix this code.
+1st_group = (275 * 4) + (125 * 3) - 90
+
+# DO NOT CHANGE THE CODE BELOW THIS.
+affirmation()
+```
+
+```{python}
+# Fix this code.
+total-expenses = ((850 / 5) * 7) + 135
+
+# DO NOT CHANGE THE CODE BELOW THIS.
+affirmation()
+```
+
+```{python}
+# Fix this code.
+student fees = (87 + 92 + 76 + 84) / 4
+
+# DO NOT CHANGE THE CODE BELOW THIS.
+affirmation()
+```
+
+```{python}
+# Fix this code.
+invoice.september = (1250 * 3) - (175 * 2) + 80
+
+# DO NOT CHANGE THE CODE BELOW THIS.
+affirmation()
+```
+
+```{python}
+# Fix this code.
+price@end of month = 2400 - ((2400 * 15) / 100)
+
+# DO NOT CHANGE THE CODE BELOW THIS.
+affirmation()
+```
+
+```{python}
+# Fix this code.
+total+tax = (175 * 6) + ((175 * 6) * 0.07)
+
+# DO NOT CHANGE THE CODE BELOW THIS.
+affirmation()
 ```
 
 ## Go back to the textbook:

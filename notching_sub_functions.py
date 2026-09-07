@@ -9,6 +9,10 @@ def inline_soft_assert(condition, warning_text):
     else:
         jupyprint("*That is **CORRECT**, well done!*")
 
+# Put at end of erroring cells, when fixed, affirmation appeats!
+def affirmation():
+     jupyprint("*You have fixed the error! Well done! :-)*")
+
 # FUNCTIONS TO USE WITHIN QUESTION SPECIFIC FUNCTIONS
 def pre_define_blanks_ans(n_ans):
     return np.repeat(-99999999999, n_ans)
