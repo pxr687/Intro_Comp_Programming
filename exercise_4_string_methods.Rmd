@@ -152,7 +152,7 @@ check_answer(text_reply, "omg i cannot believe you did that!!!!!!",
 
 Chan is writing an essay for a History class. The essay title should be "Essay on the Roman Republic".
 
-However, Chan was working late, and fell asleep on her keyboard. She saved the essay title in the variable `essay_title`, but because her head was resting on the keyboard, she has lots loads of spaces by accident.
+However, Chan was working late, and fell asleep on her keyboard. She saved the essay title in the variable `essay_title`. But because her head was resting on the keyboard, she has added lots of spaces by accident.
 
 Her string at the moment is 
 
@@ -160,7 +160,7 @@ Her string at the moment is
 "                                                           Essay on the Roman Republic"
 ```
 
-Use string methods to fix her title, so that it does not have the extra spaces
+Use string methods to fix her title, so that it does not have the extra spaces. When you fix the string, it should look like this:
 
 ```
 "Essay on the Roman Republic"
@@ -325,13 +325,13 @@ check_answer(project_name, "The Business Case For A.I.",
 
 ### Question 9
 
-Here is some text from a [Wikipedia]() page:
+Here is some text from a [Wikipedia](https://en.wikipedia.org/wiki/The_British_Are_Coming_(disambiguation)) page:
 
 ```
 "**The British are coming** is a phrase misattributed to [Paul Revere's Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."
 ```
 
-It is *Markdown text*, it is written so that it looks nice in a Markdown cell (it has some **bold** text and a hyperlink):
+It is *Markdown text*, it is written so that it looks nice in a Markdown cell (it has some **bold** text and a hyperlink. Here is how it looks in Markdown:
 
 >"**The British are coming** is a phrase misattributed to [Paul Revere's Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride "Paul Revere's Midnight Ride")."
 
@@ -343,7 +343,7 @@ The cell below contains that broken string, in a variable called `wiki_text`. Th
 "##The British are coming## is a phrase misattributed to <Paul Revere's Midnight Ride>(http//en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."
 ```
 
-Fix it so that it is:
+Fix it using string methods, so that it is the string below:
 ```
 "**The British are coming** is a phrase misattributed to [Paul Revere's Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."
 ```
