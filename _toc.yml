@@ -13,15 +13,16 @@ parts:
       - file: 1_04_0_More_Jupyter_Notebooks
       - file: 1_04_A_Simple_Problem
       - file: 1_05_Variables
+      - file: 1_05b_Extra_Variables_Task
       - file: 1_06_Expressions
       - file: 1_07_Summary_Literals_Variables_Expressions_Functions
 
-# UNCOMMENT FIRST SET OF COMMENTED OUT PAGES IF EXTRA CONTENT NEEDED IN FIRST SESSION.
-  - caption: Data Types
-    chapters:
-       - file: 1_08_00_Data_Types
-       - file: 1_08_01_More_On_Numbers
-       - file: 1_08_02_More_On_Strings
+# #UNCOMMENT FIRST SET OF COMMENTED OUT PAGES IF EXTRA CONTENT NEEDED IN FIRST SESSION.
+#   - caption: Data Types
+#     chapters:
+#        - file: 1_08_00_Data_Types
+#        - file: 1_08_01_More_On_Numbers
+#        - file: 1_08_02_More_On_Strings
   #     - file: 1_08_03_Strings_and_Variables 
   #     - file: 1_08_04_String_Methods
   # 

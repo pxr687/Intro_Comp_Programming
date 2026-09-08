@@ -139,7 +139,7 @@ name
 
 ## Task 2
 
-Change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this using the `+` operator and new strings.**. Do not just type the right string and re-assign the variable.
+Change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this using the `+` operator and new strings.**. Do NOT just type the right string and re-assign the variable.
 
 ```{python}
 # Your code here
