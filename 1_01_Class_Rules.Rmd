@@ -12,6 +12,7 @@ jupyter:
     name: python3
 ---
 
+<!-- #region -->
 # Class Rules
 
 ## AI
@@ -40,7 +41,7 @@ See the image below for a summary:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/offloading.png)
 
-Cognitive offloading with an AI *feels* good, but it stops you learning. AI can be useful, for example, I used it to make this image. BUT it is bad for you if you use it while you are learning to code...
+So, cognitive offloading with an AI *feels* good, but it stops you learning. AI can be useful, for example, I used it to make the image above. BUT using Ai will stop you from learning to code, and it will make it harder for you to understand and debug code (either written by you, someone else, or an AI...).
 
 So, for this course:
 
@@ -48,23 +49,93 @@ So, for this course:
 
 - 🤖❌
 
-Do **NOT** try to secretly use AI in the class (me and the TA will be watching). In the exams and tests you will not have access to an AI. So, if you do use AI in the class, you will do badly in the exams and tests, as well as break the class rules.
+Do **NOT** try to secretly use AI in the class (me and the TA will be watching). In the exams and tests you will not have access to an AI. So, if you do use AI in the class you will break the class rules, and you will do badly in the exams and tests.
+
+## Computers can make us stupid (even without AI)
+
+```{note}
+This section is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/surviving_computers.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
+
+Computers let us do lots of things we could not do without them. But they can also distract us
+and make us dumb.
+
+The computer has lots of nice colours, we can have 100s of browser tabs open,
+we can have Youtube playing as we write code and video call our friends. You get the idea.
+
+Our computer can take up enough mental energy that we stop thinking carefully about the task
+we are doing. This is particularly dangerous when programming, because programming
+needs careful logical thought.
+
+For example, Muller et al (2014) found that when students listened to a lecture, those who took notes on paper
+remembered more than those who took notes on a laptop.
+
+As programmers, the students with the laptops are *us*. We have to be careful about the dumbing effect that using the computer can have, on our ability to think straight.
+
+Experienced programmers know this problem, and they use tricks to deal with them.
+
+Among these tricks, are the following.
+
+## Have a piece of paper and a pen next to you
+
+When _working_ on the computer, have a piece of paper and a pen next to you on your desk. 
+
+When you notice that you don't fully understand an error or a task on the computer, stop, move the laptop out of the way, and write down your problem on a piece of paper. 
+
+Give yourself some time to think about what the problem is, and how to solve it. 
+
+Only then, you can return to the computer and try your solutions, or do more research. You will find that disengaging from the computer is a) difficult and b) very productive in releasing you from the various mental traps that it is easy to fall into when you get stuck on the computer.
+
+Be like this guy, do not use AI, DO use a pen and paper:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/be_like_him.png)
 
 ## Working together in class
 
 When we are in class, you can talk to each other as your code. But you should write every line of code yourself (do not copy from others).
 
-Again, you must use must your own brain, not your friend's brain. As long as you do **NOT** copy any code, you can help each and support each other if you get stuck. 
+Again, you must use must your own brain, not your friend's brain, to write your code. As long as you do **NOT** copy any code, you can help each and support each other if you get stuck (there is a tip for how to do this in the next section). 
 
 What is OK:
 
 - Asking a friend for advice on how to fix a bug
+
+- Pair programming (see the next section)
 
 What is **not OK**:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/copying.JPG)
 
 > (Image made [here](https://imageresizer.com/meme-generator/edit/Mr-bean-copying)).
+
+### Pair programming
+
+One way of working together that you can use when completing the exercises in this textbook is *pair programming*. *Note*: this is *working together* where you are both thinking about and writing code as a team, it is not one person copying someone else's code, which is not allowed.
+
+[Pair programming](https://en.wikipedia.org/wiki/Pair_programming) is
+a technique that programmers use to improve the quality of their work
+and accelerate learning. It is particularly useful early in learning, and with new tasks(Lui & Chan, 2006).
+
+Pair programming has a standard form.
+
+One member of the team is the _driver_. They sit in front of the keyboard and
+type.
+
+The other member of the team is the _navigator_. They do not use their own laptop, but watching the driver as they work, offering advice, and talking about ideas with the driver.
+
+The pair should switch roles, for example, changing places for each exercise.
+
+You will likely find that, when you are the driver, you think a lot slower
+than the navigator, because you are thinking about two things, the task, and
+interacting with the computer. When you switch to being the navigator, you
+will find that you can think more quickly and carefully.
+<!-- #endregion -->
+
+## References
+
+Kim Man Lui and Keith CC Chan. Pair programming productivity: novice–novice vs. expert–expert. International Journal of Human-computer studies, 64(9):915–925, 2006. URL: http://www.cs.utexas.edu/users/mckinley/305j/pair-hcs-2006.pdf.
+
+Pam A Mueller and Daniel M Oppenheimer. The pen is mightier than the keyboard: advantages of longhand over laptop note taking. Psychological science, 25(6):1159–1168, 2014.
 
 
 ----------------------------------------------------------
