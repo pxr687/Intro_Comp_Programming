@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Exercise 3 - Data Types, Comparison Operators and Functions &#8212; Introduction to Computer Programming</title>
+    <title>Exercise 5 - Data Types, Comparison Operators and Functions &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -382,7 +382,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercise 3 - Data Types, Comparison Operators and Functions</h1>
+    <h1>Exercise 5 - Data Types, Comparison Operators and Functions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -392,7 +392,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 3 - Data Types, Comparison Operators and Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 5 - Data Types, Comparison Operators and Functions</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-your-work">Downloading your work</a></li>
 </ul>
@@ -435,8 +435,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="exercise-3-data-types-comparison-operators-and-functions">
-<h1>Exercise 3 - Data Types, Comparison Operators and Functions<a class="headerlink" href="#exercise-3-data-types-comparison-operators-and-functions" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-5-data-types-comparison-operators-and-functions">
+<h1>Exercise 5 - Data Types, Comparison Operators and Functions<a class="headerlink" href="#exercise-5-data-types-comparison-operators-and-functions" title="Link to this heading">#</a></h1>
 <p>If you need help, click here to open the <em><a class="reference internal" href="#pxr687.github.io/Intro_Comp_Programming/1_07_Data_Types_Comparison_Operators_Functions.html"><span class="xref myst">textbook page</span></a></em> for this exercise.</p>
 <section id="instructions">
 <h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
@@ -446,7 +446,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">notch_3</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">notch_5</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="c1"># pop_thailand, are_they_the_same, answer_3, forty_two_as_float, thailand_and_myanmar_pop = pre_define_blanks(5)</span>
 </pre></div>
 </div>
@@ -495,7 +495,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_3</span><span class="o">.</span><span class="n">check_answer_1</span><span class="p">(</span><span class="n">pop_thailand</span><span class="p">)</span>
+<span class="n">check_answer_1</span><span class="p">(</span><span class="n">pop_thailand</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -539,7 +539,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_3</span><span class="o">.</span><span class="n">check_answer_2</span><span class="p">(</span><span class="n">are_they_the_same</span><span class="p">)</span>
+<span class="n">check_answer_2</span><span class="p">(</span><span class="n">are_they_the_same</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -577,7 +577,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_3</span><span class="o">.</span><span class="n">check_answer_3</span><span class="p">(</span><span class="n">answer_3</span><span class="p">)</span>
+<span class="n">check_answer_3</span><span class="p">(</span><span class="n">answer_3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -601,7 +601,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_3</span><span class="o">.</span><span class="n">check_answer_4</span><span class="p">(</span><span class="n">forty_two_as_float</span><span class="p">)</span>
+<span class="n">check_answer_4</span><span class="p">(</span><span class="n">forty_two_as_float</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -641,7 +641,7 @@ the numbers 71.6 million + 55.3 million.</p></li>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_3</span><span class="o">.</span><span class="n">check_answer_5</span><span class="p">(</span><span class="n">thailand_and_myanmar_pop</span><span class="p">)</span>
+<span class="n">check_answer_5</span><span class="p">(</span><span class="n">thailand_and_myanmar_pop</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -655,11 +655,11 @@ the numbers 71.6 million + 55.3 million.</p></li>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CELL. </span>
 <span class="c1"># Run this cell to mark all of your answers.</span>
-<span class="n">notch_3</span><span class="o">.</span><span class="n">mark_all</span><span class="p">(</span><span class="n">pop_thailand</span><span class="p">,</span>
-                         <span class="n">are_they_the_same</span><span class="p">,</span>
-                         <span class="n">answer_3</span><span class="p">,</span>
-                         <span class="n">forty_two_as_float</span><span class="p">,</span>
-                         <span class="n">thailand_and_myanmar_pop</span><span class="p">)</span>
+<span class="n">mark_all</span><span class="p">(</span><span class="n">pop_thailand</span><span class="p">,</span>
+         <span class="n">are_they_the_same</span><span class="p">,</span>
+         <span class="n">answer_3</span><span class="p">,</span>
+         <span class="n">forty_two_as_float</span><span class="p">,</span>
+         <span class="n">thailand_and_myanmar_pop</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -716,7 +716,7 @@ the numbers 71.6 million + 55.3 million.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 3 - Data Types, Comparison Operators and Functions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercise 5 - Data Types, Comparison Operators and Functions</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-your-work">Downloading your work</a></li>
 </ul>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -419,65 +419,90 @@ document.write(`
 <li><p>string (text) - <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p></li>
 <li><p>boolean (True or False value) - <code class="docutils literal notranslate"><span class="pre">bool</span></code>.</p></li>
 </ul>
-<p>In data analysis, we often want to collect together several numbers, or
-strings, into a <em>sequence</em>.  This allows us to collect values together into one
+<p>In data analysis, we often want to put together several numbers, or
+strings, into a <em>group</em>.  This allows us to collect values together into one
 place, and refer to all the values with a single name.  Now that we can refer
 to all the values with a single name, we can write code that works on the whole
-sequence at once.</p>
-<p>For example, remember our problem of the three girls in a family of four.</p>
-<p>You have seen that we can make four random values, that can be 0 or 1, like this:</p>
+group at once.</p>
+<p>For example, remember our <a class="reference internal" href="#1_04_A_Simple_Problem."><span class="xref myst">problem of the three girls in a family of four</span></a>?</p>
+<p>You have seen that we can make four random values, that can be <code class="docutils literal notranslate"><span class="pre">&quot;BOY&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;GIRL&quot;</span></code>, like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the Numpy package, and rename to &quot;np&quot;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="c1"># Make random number generator.</span>
-<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+
+<span class="c1"># Get four simulated children (50% chance of &quot;BOY&quot;, 50% chance of &quot;GIRL&quot;)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">])</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">])</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Here, each child number gets their own variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get four random numbers between 0 and 1.</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Here, each random number gets its own variable.   Then we added the numbers
-like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">d</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_(&#39;BOY&#39;)
 </pre></div>
 </div>
 </div>
 </div>
-<p>This gave us the number of girls for one simulated family.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_(&#39;GIRL&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_(&#39;BOY&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_(&#39;GIRL&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>This gave us one simulated family.</p>
 <p>Now imagine that we were trying to simulate a family of 12 children.  We would
 have to give each child their own variable <code class="docutils literal notranslate"><span class="pre">a</span></code> through <code class="docutils literal notranslate"><span class="pre">l</span></code> (small L), and then
-have a long line like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">d</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="n">f</span> <span class="o">+</span> <span class="n">g</span> <span class="o">+</span> <span class="n">h</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">+</span> <span class="n">k</span> <span class="o">+</span> <span class="n">l</span>
-</pre></div>
-</div>
-<p>That would be annoying in this case, and impractical when we have to simulate
-larger units, such as the 100 members of Robert Swain’s jury panel.</p>
-<p>Sequences are part of the solution to this problem.  Sequences are values that
-contain zero or more other values.  There are various types of sequences, but
-the two we will use the most are:</p>
+type 12 lines of code to see the value of the variables.</p>
+<p>That would be annoying, and impractical when we have to simulate
+larger numbers, such as the 100 families.</p>
+<p>Groups are part of the solution to this problem. Groups (also called
+<em>sequences</em> or <em>collections</em> can store lots of other values/variables.
+There are two main types of collection, in Python:</p>
 <ul class="simple">
 <li><p>Lists - <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
 <li><p>Arrays - <code class="docutils literal notranslate"><span class="pre">np.array</span></code></p></li>
 </ul>
-<p>We will see arrays soon.   This page is about <em>lists</em>.</p>
+<p>We will see arrays soon. This page is about <em>lists</em>.</p>
 <section id="making-a-list">
 <h2>Making a list<a class="headerlink" href="#making-a-list" title="Link to this heading">#</a></h2>
 <p>You make a list using <em>square brackets</em> - <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code>.</p>
@@ -515,7 +540,7 @@ a value that is a list).  We confirm it is an expression by showing that the not
 </div>
 </div>
 </div>
-<p>What kind of value is it?</p>
+<p>What <code class="docutils literal notranslate"><span class="pre">type</span></code> of value is it?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">my_numbers</span><span class="p">)</span>
@@ -559,13 +584,13 @@ a value that is a list).  We confirm it is an expression by showing that the not
 <p>A list can have any kind of value as its elements.  For example, here is a list of strings:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_strings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Captain&quot;</span><span class="p">,</span> <span class="s2">&quot;Agent&quot;</span><span class="p">,</span> <span class="s2">&quot;Jessica&quot;</span><span class="p">,</span> <span class="s2">&quot;Luke&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_strings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Chris&quot;</span><span class="p">,</span> <span class="s2">&quot;Andre&quot;</span><span class="p">,</span> <span class="s2">&quot;Jessica&quot;</span><span class="p">,</span> <span class="s2">&quot;Luke&quot;</span><span class="p">]</span>
 <span class="n">some_strings</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Captain&#39;, &#39;Agent&#39;, &#39;Jessica&#39;, &#39;Luke&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Chris&#39;, &#39;Andre&#39;, &#39;Jessica&#39;, &#39;Luke&#39;]
 </pre></div>
 </div>
 </div>
@@ -608,29 +633,70 @@ the function <code class="docutils literal notranslate"><span class="pre">len</s
 <section id="a-half-solution-for-three-girls">
 <h2>A half-solution for three girls<a class="headerlink" href="#a-half-solution-for-three-girls" title="Link to this heading">#</a></h2>
 <p>Now we have another way of solving the problem of making the family of four
-children above.  Use Control-Enter a few times on the cell below to convince
-yourself it returns numbers between 0 and 4 - simulated numbers of girls in
-a family of four children.</p>
+children above.  Use Control-Enter a few times on the cell below to see a new
+family simulated every time:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get four random numbers between 0 and 1, put them in a list.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get four simulated children and put them in a list.</span>
 <span class="c1"># The opening square brackets tell Python the statement is not finished</span>
 <span class="c1"># when it reaches the end of the first line.</span>
-<span class="n">family</span> <span class="o">=</span> <span class="p">[</span><span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-          <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-          <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-          <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
-<span class="c1"># Add all the values in the list</span>
-<span class="nb">sum</span><span class="p">(</span><span class="n">family</span><span class="p">)</span>
+<span class="n">family</span> <span class="o">=</span>  <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">]),</span>
+           <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">]),</span>
+           <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">]),</span>
+           <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">])]</span>
+<span class="c1"># Show the family.</span>
+<span class="n">family</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(1)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_(&#39;GIRL&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;GIRL&#39;)]
 </pre></div>
 </div>
 </div>
 </div>
+<p><em>Note:</em> <code class="docutils literal notranslate"><span class="pre">np.str_</span></code> just tells us these are Numpy’s version of <code class="docutils literal notranslate"><span class="pre">str</span></code> data…</p>
+<p>We can use the <em>list method</em> <code class="docutils literal notranslate"><span class="pre">.count()</span></code> to count the number of girls in this family. Remember a method is a function attached to an object, like a list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count the number of girls.</span>
+<span class="n">family</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;GIRL&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>The cell below simulates a new family, and the last line counts the number of girls in this family:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get four simulated children and put them in a list.</span>
+<span class="c1"># The opening square brackets tell Python the statement is not finished</span>
+<span class="c1"># when it reaches the end of the first line.</span>
+<span class="n">family</span> <span class="o">=</span>  <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">]),</span>
+           <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">]),</span>
+           <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">]),</span>
+           <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;GIRL&#39;</span><span class="p">,</span> <span class="s1">&#39;BOY&#39;</span><span class="p">])]</span>
+<span class="c1"># Show the family.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">family</span><span class="p">)</span>
+<span class="n">family</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;GIRL&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_(&#39;BOY&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;BOY&#39;), np.str_(&#39;BOY&#39;)]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>We <em>could</em> run this code lots of times and write down the number of girls in each family. That would answer our question “what is the probability of a family of 4 having 3 girls?”.</p>
+<p>That would take a long time. On the next textbook pages, we will learn some more Python tools to make this process faster and more efficient…</p>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
 </section>

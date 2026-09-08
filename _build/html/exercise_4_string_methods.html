@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -573,6 +573,17 @@ document.write(`
 <p>(Table adapted from <a class="reference external" href="https://www.w3schools.com/python/python_ref_string.asp">W3Schools — Python String Methods</a>)</p>
 <p><strong>Important: for every question in this exercise, DO NOT edit the string. E.g. do not change the letters in the string by typing new ones. Use string methods from the table above to edit each string, to get the correct answer.</strong></p>
 <p>Fixing strings “manually” (e.g. by changing the string with your keyboard) works when we have one string…but in large datasets you could have 1000s or 1_000_000s of strings, then you will <em>have</em> to use string methods to edit them. So we will practice using string methods now, instead of directly editing the strings :)</p>
+<p>Run the cell below first, then start the questions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL BUT DO NOT CHANGE THIS CODE!</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">notch_4</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
 <section id="question-1">
 <h3>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h3>
 <p>Oops someone has made a spelling mistake with the name of this course. Fix this string using methods from the table above. When you fix the string, it should say “Introduction to Computer Programming”. Store your corrected string in a variable called <code class="docutils literal notranslate"><span class="pre">answer_1</span></code>:</p>
@@ -596,7 +607,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">notch_4</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_answer</span><span class="p">,</span> <span class="n">homer</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span> <span class="s2">&quot;Introduction to Computer Programming&quot;</span><span class="p">,</span>
              <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 1&quot;</span><span class="p">,</span>
              <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;answer_1&quot;</span><span class="p">)</span>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -397,6 +397,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-your-work">Downloading your work</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-next-cell-to-mark-your-answer">Run the next cell to mark your answer.</a></li>
 </ul>
@@ -419,7 +422,23 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mark-all-your-answers">Mark all your answers</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mark-all-your-answers-for-part-1">Mark all your answers for Part 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Run the next cell to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Question 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Run the next cell to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Question 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Run the next cell to mark your answer.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-fix-these-variables">Part 3 - Fix these Variables</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#go-back-to-the-textbook">Go back to the textbook:</a></li>
 </ul>
 </li>
@@ -446,8 +465,10 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">notch_1</span>
-<span class="c1"># answer_1, answer_2, answer_3, answer_4, answer_5, = notch_1.pre_define_blanks(5)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">notch_1</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">notch_1_pt_2</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">notching_sub_functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">inline_soft_assert</span>
+<span class="c1"># answer_1, answer_2, answer_3, answer_4, answer_5, = pre_define_blanks(5)</span>
 </pre></div>
 </div>
 </div>
@@ -466,6 +487,9 @@ document.write(`
 <p>Later in the course we will install Python on your own laptop 🙂.</p>
 </section>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="part-1">
+<h1>Part 1<a class="headerlink" href="#part-1" title="Link to this heading">#</a></h1>
 <section id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h2>
 <p>Charlotte sells 100 tickets for a concert. Each ticket costs $22.</p>
@@ -498,7 +522,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_1</span><span class="o">.</span><span class="n">check_answer_1</span><span class="p">(</span><span class="n">answer_1</span><span class="p">)</span>
+<span class="n">check_answer_1</span><span class="p">(</span><span class="n">answer_1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -508,7 +532,7 @@ document.write(`
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">notch_1</span><span class="o">.</span><span class="n">check_answer_1</span><span class="p">(</span><span class="n">answer_1</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">check_answer_1</span><span class="p">(</span><span class="n">answer_1</span><span class="p">)</span>
 
 <span class="nn">File ~\Intro_Comp_Programming\notch_1.py:26,</span> in <span class="ni">check_answer_1</span><span class="nt">(answer_1, return_mark)</span>
 <span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">answer_name</span> <span class="o">=</span> <span class="s2">&quot;answer_1&quot;</span>
@@ -555,7 +579,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_1</span><span class="o">.</span><span class="n">check_answer_2</span><span class="p">(</span><span class="n">answer_2</span><span class="p">)</span>
+<span class="n">check_answer_2</span><span class="p">(</span><span class="n">answer_2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -583,7 +607,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_1</span><span class="o">.</span><span class="n">check_answer_3</span><span class="p">(</span><span class="n">answer_3</span><span class="p">)</span>
+<span class="n">check_answer_3</span><span class="p">(</span><span class="n">answer_3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -607,7 +631,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_1</span><span class="o">.</span><span class="n">check_answer_4</span><span class="p">(</span><span class="n">answer_4</span><span class="p">)</span>
+<span class="n">check_answer_4</span><span class="p">(</span><span class="n">answer_4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -633,7 +657,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="n">notch_1</span><span class="o">.</span><span class="n">check_answer_5</span><span class="p">(</span><span class="n">answer_5</span><span class="p">)</span>
+<span class="n">check_answer_5</span><span class="p">(</span><span class="n">answer_5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -641,17 +665,174 @@ document.write(`
 </section>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="mark-all-your-answers">
-<h1>Mark all your answers<a class="headerlink" href="#mark-all-your-answers" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="mark-all-your-answers-for-part-1">
+<h1>Mark all your answers for Part 1<a class="headerlink" href="#mark-all-your-answers-for-part-1" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CELL. </span>
 <span class="c1"># Run this cell to mark all of your answers.</span>
-<span class="n">notch_1</span><span class="o">.</span><span class="n">mark_all</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span>
-                         <span class="n">answer_2</span><span class="p">,</span>
-                         <span class="n">answer_3</span><span class="p">,</span>
-                         <span class="n">answer_4</span><span class="p">,</span>
-                         <span class="n">answer_5</span><span class="p">)</span>
+<span class="n">mark_all</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span>
+         <span class="n">answer_2</span><span class="p">,</span>
+         <span class="n">answer_3</span><span class="p">,</span>
+         <span class="n">answer_4</span><span class="p">,</span>
+         <span class="n">answer_5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="part-2">
+<h1>Part 2<a class="headerlink" href="#part-2" title="Link to this heading">#</a></h1>
+<section id="id5">
+<h2>Question 1<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Laura is making a budget with Python. She has a part-time job which she works 10 days per month; she makes £100 on each of those days.</p>
+<p>She wants to make a variable store this information. Her variable <code class="docutils literal notranslate"><span class="pre">income_part_time</span></code> should have the result of multiplying 10 by 100. But she is getting an error message.</p>
+<p>Can you fix it?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix Laura&#39;s variable.</span>
+<span class="n">income_part_time</span> <span class="o">=</span> <span class="mi">10</span> <span class="n">x</span> <span class="mi">100</span>
+
+<span class="c1"># Show the value of `income_part_time`.</span>
+<span class="n">income_part_time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id6">
+<h3>Run the next cell to mark your answer.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
+<span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
+<span class="n">inline_soft_assert</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">income_part_time</span><span class="p">,</span> <span class="n">quick_check_1</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">quick_check_1</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id7">
+<h2>Question 2<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Laura wants to add some more variables to her budget. Her <code class="docutils literal notranslate"><span class="pre">phone_bill</span></code> is £25 each month. But she is getting another error message, can you fix it?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix Laura&#39;s variable.</span>
+<span class="n">phone</span> <span class="n">bill</span> <span class="o">=</span> <span class="n">twenty</span> <span class="n">five</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id8">
+<h3>Run the next cell to mark your answer.<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
+<span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
+<span class="n">inline_soft_assert</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">phone_bill</span><span class="p">,</span> <span class="n">quick_check_2</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">quick_check_2</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id9">
+<h2>Question 3<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Laura spends about £30 per week on entertainment. There are about 4.345 weeks in the average month.</p>
+<p>She wants to calculate how much she spends on entertainment each month. She tries to store this in a variable called <code class="docutils literal notranslate"><span class="pre">entertainment</span></code>, but she gets <em>another</em> error:</p>
+<p><em>Hint</em>: you <code class="docutils literal notranslate"><span class="pre">entertainment</span></code> variable should have a value around <code class="docutils literal notranslate"><span class="pre">130.35</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix Laura&#39;s variable.</span>
+<span class="mf">4.345</span> <span class="o">*</span> <span class="mi">30</span> <span class="o">=</span> <span class="n">entertainment</span> 
+
+<span class="c1"># Show the value of `income_part_time`.</span>
+<span class="n">entertainment</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id10">
+<h3>Run the next cell to mark your answer.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
+<span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
+<span class="n">inline_soft_assert</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">entertainment</span><span class="p">,</span> <span class="n">quick_check_3</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">quick_check_3</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="part-3-fix-these-variables">
+<h1>Part 3 - Fix these Variables<a class="headerlink" href="#part-3-fix-these-variables" title="Link to this heading">#</a></h1>
+<p>In the cells below, all of the <em>numbers and calculations</em> are correct. You do not need to change those. However, each cell makes an error message.</p>
+<p>Fix the code so that the cell runs without an error. You will know you have done it right when there is no error message, and you get a new message saying <code class="docutils literal notranslate"><span class="pre">&quot;You</span> <span class="pre">have</span> <span class="pre">fixed</span> <span class="pre">the</span> <span class="pre">error!</span> <span class="pre">Well</span> <span class="pre">done!</span> <span class="pre">:-)&quot;</span></code></p>
+<p><em>Note:</em> in each cell there is a comment saying <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">DO</span> <span class="pre">NOT</span> <span class="pre">CHANGE</span> <span class="pre">THE</span> <span class="pre">CODE</span> <span class="pre">BELOW</span> <span class="pre">THIS.</span></code> Do <strong>NOT</strong> change that code, it makes the message for when you fix the code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix this code.</span>
+<span class="mi">1</span><span class="n">st_group</span> <span class="o">=</span> <span class="p">(</span><span class="mi">275</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">125</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="mi">90</span>
+
+<span class="c1"># DO NOT CHANGE THE CODE BELOW THIS.</span>
+<span class="n">affirmation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix this code.</span>
+<span class="n">total</span><span class="o">-</span><span class="n">expenses</span> <span class="o">=</span> <span class="p">((</span><span class="mi">850</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="mi">7</span><span class="p">)</span> <span class="o">+</span> <span class="mi">135</span>
+
+<span class="c1"># DO NOT CHANGE THE CODE BELOW THIS.</span>
+<span class="n">affirmation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix this code.</span>
+<span class="n">student</span> <span class="n">fees</span> <span class="o">=</span> <span class="p">(</span><span class="mi">87</span> <span class="o">+</span> <span class="mi">92</span> <span class="o">+</span> <span class="mi">76</span> <span class="o">+</span> <span class="mi">84</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
+
+<span class="c1"># DO NOT CHANGE THE CODE BELOW THIS.</span>
+<span class="n">affirmation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix this code.</span>
+<span class="n">invoice</span><span class="o">.</span><span class="n">september</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1250</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">175</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">80</span>
+
+<span class="c1"># DO NOT CHANGE THE CODE BELOW THIS.</span>
+<span class="n">affirmation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix this code.</span>
+<span class="n">price</span><span class="nd">@end</span> <span class="n">of</span> <span class="n">month</span> <span class="o">=</span> <span class="mi">2400</span> <span class="o">-</span> <span class="p">((</span><span class="mi">2400</span> <span class="o">*</span> <span class="mi">15</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># DO NOT CHANGE THE CODE BELOW THIS.</span>
+<span class="n">affirmation</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fix this code.</span>
+<span class="n">total</span><span class="o">+</span><span class="n">tax</span> <span class="o">=</span> <span class="p">(</span><span class="mi">175</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="mi">175</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.07</span><span class="p">)</span>
+
+<span class="c1"># DO NOT CHANGE THE CODE BELOW THIS.</span>
+<span class="n">affirmation</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -713,6 +894,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-your-work">Downloading your work</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1">Part 1</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-next-cell-to-mark-your-answer">Run the next cell to mark your answer.</a></li>
 </ul>
@@ -735,7 +919,23 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mark-all-your-answers">Mark all your answers</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mark-all-your-answers-for-part-1">Mark all your answers for Part 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2">Part 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Question 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Run the next cell to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Question 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Run the next cell to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Question 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Run the next cell to mark your answer.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-3-fix-these-variables">Part 3 - Fix these Variables</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#go-back-to-the-textbook">Go back to the textbook:</a></li>
 </ul>
 </li>

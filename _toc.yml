@@ -1,10 +1,14 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Basic Python Elements and Grammar
+
+  - caption: Class Rules and Assessments
     chapters:
       - file: 1_01_Class_Rules
       - file: 1_02_Class_Grades_Assignments_Exams
+      
+  - caption: Basic Python Elements and Grammar
+    chapters:
       - file: 1_03_Introduction_to_Python_and_Jupyter
       - file: 1_04_0_More_Jupyter_Notebooks
       - file: 1_04_A_Simple_Problem

@@ -41,7 +41,7 @@ See the image below for a summary:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/offloading.png)
 
-So, cognitive offloading with an AI *feels* good, but it stops you learning. AI can be useful, for example, I used it to make the image above. BUT using Ai will stop you from learning to code, and it will make it harder for you to understand and debug code (either written by you, someone else, or an AI...).
+So, cognitive offloading with an AI *feels* good, but it stops you learning. AI can be useful, for example, I used it to make the image above. BUT relying on AI when you learn to program will make it harder for you to understand and debug code (either written by you, someone else, or an AI...).
 
 So, for this course:
 
@@ -49,7 +49,9 @@ So, for this course:
 
 - 🤖❌
 
-Do **NOT** try to secretly use AI in the class (me and the TA will be watching). In the exams and tests you will not have access to an AI. So, if you do use AI in the class you will break the class rules, and you will do badly in the exams and tests.
+
+**IMPORTANT NOTE ON EXAMS:*
+Do **NOT** try to secretly use AI in the class (me and the TA will be watching). In the exams and tests you will not have access to an AI. So, if you use AI in the class you will break the class rules AND you will do badly in the exams and tests.
 
 ## Computers can make us stupid (even without AI)
 
@@ -86,7 +88,7 @@ Give yourself some time to think about what the problem is, and how to solve it.
 
 Only then, you can return to the computer and try your solutions, or do more research. You will find that disengaging from the computer is a) difficult and b) very productive in releasing you from the various mental traps that it is easy to fall into when you get stuck on the computer.
 
-Be like this guy, do not use AI, DO use a pen and paper:
+Be like this guy, do NOT use AI, but DO use a pen, paper and your brain:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/be_like_him.png)
 
@@ -110,7 +112,7 @@ What is **not OK**:
 
 ### Pair programming
 
-One way of working together that you can use when completing the exercises in this textbook is *pair programming*. *Note*: this is *working together* where you are both thinking about and writing code as a team, it is not one person copying someone else's code, which is not allowed.
+One way of working together that you can use when completing the exercises in this textbook is *pair programming*. *Note*: this is *working together* where you are both thinking about and writing code as a team, it is not one person copying someone else's code, that is not allowed.
 
 [Pair programming](https://en.wikipedia.org/wiki/Pair_programming) is
 a technique that programmers use to improve the quality of their work
