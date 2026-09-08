@@ -21,12 +21,16 @@ parts:
   #     - file: 1_08_03_Strings_and_Variables 
   #     - file: 1_08_04_String_Methods
   # 
-  #     - file: 1_08_05_Comparison_Operators
-  #     - file: 1_08_06_Lists
+  #     - file: 1_08_05_Comparison_Operators   ### ADD IN EXCERCISE
+  #     - file: 1_08_06_Lists                  ### ADD IN EXCERCISE
+  #     - file: 1_09_Statements
+  #     - file: 1_10_Summary_Variables_Literals_Expressions_Statements_Functions  ### ADD IN QUIZ, ALREADY HAS EXERCISE
+
+  # AT THIS POINT: getting input from keyboard, use comparisons etc to check input.
+  # MAKE A BUDGETING TOOL: input variables with keyboard, print budget.
 
   # - caption: More Python Elements and Grammar
   #   chapters:
-      # - file: 1_09_Statements
       # - file: 1_11_More_Functions_Methods
       # - file: 1_12_Writing_Your_Own_Functions
       # - file: 1_13_More_Data_Types
