@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -401,13 +401,26 @@ document.write(`
 <p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/Comparison.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
 <p>A <em>Boolean</em> value is a value that can only be True or False.  It is called
-“Boolean” after the mathematician and logician <a class="reference external" href="https://en.wikipedia.org/wiki/George_Boole">George
+“Boolean” after the English mathematician and logician <a class="reference external" href="https://en.wikipedia.org/wiki/George_Boole">George
 Boole</a></p>
-<p>Boolean values most often arise from comparison operators. Python includes a
-variety of operators that compare values. For example, <code class="docutils literal notranslate"><span class="pre">3</span></code> is larger than <code class="docutils literal notranslate"><span class="pre">1</span></code>:</p>
+<p>Boolean values most often happen as a result of comparison operators. Python includes lots of operators that compare values. For example, we can ask Python the question: “is this thing <em>larger than</em> this other thing?”.</p>
+<p>The cells below make some variables, which represent the ages of some students.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Making some variables for the age (in years) of two students.</span>
+<span class="n">michael_age</span> <span class="o">=</span> <span class="mi">21</span>
+
+<span class="n">tom_age</span> <span class="o">=</span> <span class="mi">25</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see that Tom is older than Michael. But this is a very simple, very small dataset. When we work with larger datasets, it is much more convenient to check this sort of thing using code (imagine you have to check 1000s of ages…).</p>
+<p>The cell below asks Python “is <code class="docutils literal notranslate"><span class="pre">tom_age</span></code> larger than <code class="docutils literal notranslate"><span class="pre">michael_age</span></code>?”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Is `tom_age` bigger than `michael_age`?</span>
+<span class="n">tom_age</span> <span class="o">&gt;</span> <span class="n">michael_age</span>
 </pre></div>
 </div>
 </div>
@@ -418,12 +431,11 @@ variety of operators that compare values. For example, <code class="docutils lit
 </div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> is the <em>greater than</em> comparison operator.  It takes the value to the left and asks if it is greater than the value to right.   The answer can only be <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>The value <code class="docutils literal notranslate"><span class="pre">True</span></code> indicates that the comparison is valid; Python has confirmed
-this simple fact about the relationship between <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
-<p>Python uses the special <code class="docutils literal notranslate"><span class="pre">bool</span></code> type for values that can only be <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>The value <code class="docutils literal notranslate"><span class="pre">True</span></code> indicates that the comparison is correct; Python has answered “yes, <code class="docutils literal notranslate"><span class="pre">tom_age</span></code> is bigger than <code class="docutils literal notranslate"><span class="pre">michael_age</span></code>”.</p>
+<p>Python uses the special <code class="docutils literal notranslate"><span class="pre">bool</span></code> data type for values that can only be <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">tom_age</span> <span class="o">&gt;</span> <span class="n">michael_age</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -433,10 +445,22 @@ this simple fact about the relationship between <code class="docutils literal no
 </div>
 </div>
 </div>
-<p>Here we confirm to ourselves that <code class="docutils literal notranslate"><span class="pre">3</span></code> is greater than the result of the expression <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also ask these questions about expressions made from more than one element. Here we ask Python “is <code class="docutils literal notranslate"><span class="pre">3</span></code> greater than the result of the expression <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code>”?:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -446,8 +470,8 @@ this simple fact about the relationship between <code class="docutils literal no
 </div>
 </div>
 </div>
-<p>The value <code class="docutils literal notranslate"><span class="pre">True</span></code> indicates that the comparison is valid; Python has confirmed
-this simple fact about the relationship between <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">1+1</span></code>. The full set of
+<p>The Boolean value <code class="docutils literal notranslate"><span class="pre">True</span></code> indicates that the answer to our question is “yes”. Python has confirmed
+this simple fact that <code class="docutils literal notranslate"><span class="pre">3</span></code> is bigger than <code class="docutils literal notranslate"><span class="pre">1+1</span></code>. The full group of
 common comparison operators are listed below.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -494,7 +518,8 @@ common comparison operators are listed below.</p>
 <p>Here are some more examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Is `michael_age` smaller than `tom_age`?</span>
+<span class="n">michael_age</span> <span class="o">&lt;</span> <span class="n">tom_age</span>
 </pre></div>
 </div>
 </div>
@@ -506,7 +531,21 @@ common comparison operators are listed below.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Is 4 smaller than 5?</span>
+<span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Is 4 smaller than 3?</span>
+<span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </div>
@@ -518,7 +557,8 @@ common comparison operators are listed below.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">&lt;=</span> <span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Is 4 smaller than or equal to?</span>
+<span class="mi">4</span> <span class="o">&lt;=</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
@@ -530,20 +570,22 @@ common comparison operators are listed below.</p>
 </div>
 <p>Notice the <code class="docutils literal notranslate"><span class="pre">==</span></code> in the table above.</p>
 <p>The double equals <code class="docutils literal notranslate"><span class="pre">==</span></code> is different from the single <code class="docutils literal notranslate"><span class="pre">=</span></code> that we saw before
-in assignment.   Here is assignment.</p>
+in assignment statemtns. Here is an assignment statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a variable using an assignment statement.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Notice it does not display a value, because it is an assignment, and not an expression.</p>
+<p>Notice it does not display a value, because it is an assignment, and not an expression. (You probably already noticed this, on earlier textbook pages)!</p>
 <p><code class="docutils literal notranslate"><span class="pre">==</span></code> is different - it’s a comparison operator like <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.  It checks
-whether two values are equal, and returns True or False:</p>
+whether two values are equal, and returns <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. Using <code class="docutils literal notranslate"><span class="pre">==</span></code> is like asking Python “is this thing <em>the same value</em> as this other thing?”.</p>
+<p>For example, the cell below askes Python “is the variable <code class="docutils literal notranslate"><span class="pre">michael_age</span></code> the same value as the literal <code class="docutils literal notranslate"><span class="pre">21</span></code>?”:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">michael_age</span> <span class="o">==</span> <span class="mi">21</span>
 </pre></div>
 </div>
 </div>
@@ -553,13 +595,83 @@ whether two values are equal, and returns True or False:</p>
 </div>
 </div>
 </div>
-<p>This is an expression, because <code class="docutils literal notranslate"><span class="pre">==</span></code> is an operator, to say how values should
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the value of `michael_age`, just to check.</span>
+<span class="n">michael_age</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">4</span></code> is an expression, because <code class="docutils literal notranslate"><span class="pre">==</span></code> is an operator, to say how values should
 be combined, like <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
-<p>Strings can also be compared, and their order is alphabetical. A shorter
-string is less than a longer string that begins with the shorter string.</p>
+<p>Let’s think about uses for <code class="docutils literal notranslate"><span class="pre">==</span></code> (there are lots)!. Imagine the text in the cell below is a password stored on a company’s computer system:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Dog&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;Catastrophe&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A variable containing a password string.</span>
+<span class="n">correct_password</span> <span class="o">=</span> <span class="s2">&quot;PA55W0Rd&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Imagine that the cell below is the input from a staff member’s keyboard, as they try to login to the company system. Let’s imagine the staff member is called Dave:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dave types his password.</span>
+<span class="n">daves_input</span> <span class="o">=</span> <span class="s2">&quot;PA55W0Rd&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see the text, so we know the passwords are the same. But what if we want Python to check? We can use the <code class="docutils literal notranslate"><span class="pre">==</span></code> operator!:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">daves_input</span> <span class="o">==</span> <span class="n">correct_password</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>From this we can check that Dave has used the right password.</p>
+<p>Strings can also be compared. The cell below asks “is the string <code class="docutils literal notranslate"><span class="pre">&quot;Cat&quot;</span></code> the same value as the string <code class="docutils literal notranslate"><span class="pre">&quot;Dog&quot;</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Cat&quot;</span> <span class="o">==</span> <span class="s2">&quot;Dog&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will get <code class="docutils literal notranslate"><span class="pre">True</span></code> if the value are the same:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Cat&quot;</span> <span class="o">==</span> <span class="s2">&quot;Cat&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> ask which string comes first in <em>alphabetical order</em>. You can think of <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> as being like 0, so <code class="docutils literal notranslate"><span class="pre">b</span></code> is larger than <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> is larger than <code class="docutils literal notranslate"><span class="pre">b</span></code>, because they come later in the alphabet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;a&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;b&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -571,7 +683,7 @@ string is less than a longer string that begins with the shorter string.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Catastrophe&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;Cat&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;b&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;c&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -581,7 +693,18 @@ string is less than a longer string that begins with the shorter string.</p>
 </div>
 </div>
 </div>
-<p></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;c&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;d&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
 </section>
