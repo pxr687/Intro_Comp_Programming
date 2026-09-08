@@ -27,60 +27,63 @@ Thus far we have seen the following data types:
 * string (text) - `str`.
 * boolean (True or False value) - `bool`.
 
-In data analysis, we often want to collect together several numbers, or
-strings, into a *sequence*.  This allows us to collect values together into one
+In data analysis, we often want to put together several numbers, or
+strings, into a *group*.  This allows us to collect values together into one
 place, and refer to all the values with a single name.  Now that we can refer
 to all the values with a single name, we can write code that works on the whole
-sequence at once.
+group at once.
 
-For example, remember our problem of the three girls in a family of four.
+For example, remember our [problem of the three girls in a family of four](1_04_A_Simple_Problem.)?
 
-You have seen that we can make four random values, that can be 0 or 1, like this:
+You have seen that we can make four random values, that can be `"BOY"` or `"GIRL"`, like this:
 <!-- #endregion -->
 
 ```{python}
 # Load the Numpy package, and rename to "np"
 import numpy as np
-# Make random number generator.
-rng = np.random.default_rng()
+
+# Get four simulated children (50% chance of "BOY", 50% chance of "GIRL")
+a = np.random.choice(['GIRL', 'BOY'])
+b = np.random.choice(['GIRL', 'BOY'])
+c = np.random.choice(['GIRL', 'BOY'])
+d = np.random.choice(['GIRL', 'BOY'])
+```
+
+Here, each child number gets their own variable.
+
+```{python}
+a
 ```
 
 ```{python}
-# Get four random numbers between 0 and 1.
-a = rng.integers(0, 2)
-b = rng.integers(0, 2)
-c = rng.integers(0, 2)
-d = rng.integers(0, 2)
+b
 ```
-
-Here, each random number gets its own variable.   Then we added the numbers
-like this:
 
 ```{python}
-a + b + c + d
+c
 ```
 
-This gave us the number of girls for one simulated family.
+```{python}
+d
+```
+
+This gave us one simulated family.
 
 Now imagine that we were trying to simulate a family of 12 children.  We would
 have to give each child their own variable `a` through `l` (small L), and then
-have a long line like this:
+type 12 lines of code to see the value of the variables.
 
-```
-a + b + c + d + e + f + g + h + i + j + k + l
-```
+That would be annoying, and impractical when we have to simulate
+larger numbers, such as the 100 families.
 
-That would be annoying in this case, and impractical when we have to simulate
-larger units, such as the 100 members of Robert Swain's jury panel.
-
-Sequences are part of the solution to this problem.  Sequences are values that
-contain zero or more other values.  There are various types of sequences, but
-the two we will use the most are:
+Groups are part of the solution to this problem. Groups (also called
+*sequences* or *collections* can store lots of other values/variables. 
+There are two main types of collection, in Python:
 
 * Lists - `list`
 * Arrays - `np.array`
 
-We will see arrays soon.   This page is about *lists*.
+We will see arrays soon. This page is about *lists*.
 
 
 ## Making a list
@@ -107,7 +110,7 @@ a value that is a list).  We confirm it is an expression by showing that the not
 [1, 2, 3]
 ```
 
-What kind of value is it?
+What `type` of value is it?
 
 ```{python}
 type(my_numbers)
@@ -130,7 +133,7 @@ my_empty_list
 A list can have any kind of value as its elements.  For example, here is a list of strings:
 
 ```{python}
-some_strings = ["Captain", "Agent", "Jessica", "Luke"]
+some_strings = ["Chris", "Andre", "Jessica", "Luke"]
 some_strings
 ```
 
@@ -159,21 +162,49 @@ sum(my_numbers)
 ## A half-solution for three girls
 
 Now we have another way of solving the problem of making the family of four
-children above.  Use Control-Enter a few times on the cell below to convince
-yourself it returns numbers between 0 and 4 - simulated numbers of girls in
-a family of four children.
+children above.  Use Control-Enter a few times on the cell below to see a new
+family simulated every time:
 
 ```{python}
-# Get four random numbers between 0 and 1, put them in a list.
+# Get four simulated children and put them in a list.
 # The opening square brackets tell Python the statement is not finished
 # when it reaches the end of the first line.
-family = [rng.integers(0, 2),
-          rng.integers(0, 2),
-          rng.integers(0, 2),
-          rng.integers(0, 2)]
-# Add all the values in the list
-sum(family)
+family =  [np.random.choice(['GIRL', 'BOY']),
+           np.random.choice(['GIRL', 'BOY']),
+           np.random.choice(['GIRL', 'BOY']),
+           np.random.choice(['GIRL', 'BOY'])]
+# Show the family.
+family
 ```
+
+*Note:* `np.str_` just tells us these are Numpy's version of `str` data...
+
+We can use the *list method* `.count()` to count the number of girls in this family. Remember a method is a function attached to an object, like a list:
+
+```{python}
+# Count the number of girls.
+family.count("GIRL")
+```
+
+The cell below simulates a new family, and the last line counts the number of girls in this family:
+
+```{python}
+# Get four simulated children and put them in a list.
+# The opening square brackets tell Python the statement is not finished
+# when it reaches the end of the first line.
+family =  [np.random.choice(['GIRL', 'BOY']),
+           np.random.choice(['GIRL', 'BOY']),
+           np.random.choice(['GIRL', 'BOY']),
+           np.random.choice(['GIRL', 'BOY'])]
+# Show the family.
+print(family)
+family.count('GIRL')
+```
+
+We *could* run this code lots of times and write down the number of girls in each family. That would answer our question "what is the probability of a family of 4 having 3 girls?".
+
+That would take a long time. On the next textbook pages, we will learn some more Python tools to make this process faster and more efficient...
+
 
 ----------------------------------------------------------
 

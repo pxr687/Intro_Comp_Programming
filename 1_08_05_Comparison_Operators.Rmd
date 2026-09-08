@@ -23,35 +23,49 @@ A *Boolean* value is a value that can only be True or False.  It is called
 "Boolean" after the English mathematician and logician [George
 Boole](https://en.wikipedia.org/wiki/George_Boole)
 
-Boolean values most often happen as a result of comparison operators. Python includes lots of operators that compare values. For example, we can ask Python the question: "is this thing *larger than* this other thing?". The cell below asks Python "is `3` larger than `1`?":
+Boolean values most often happen as a result of comparison operators. Python includes lots of operators that compare values. For example, we can ask Python the question: "is this thing *larger than* this other thing?". 
+
+The cells below make some variables, which represent the ages of some students. 
 <!-- #endregion -->
 
 ```{python}
-3 > 1
+# Making some variables for the age (in years) of two students.
+michael_age = 21
+
+tom_age = 25
+```
+
+We can see that Tom is older than Michael. But this is a very simple, very small dataset. When we work with larger datasets, it is much more convenient to check this sort of thing using code (imagine you have to check 1000s of ages...).
+
+The cell below asks Python "is `tom_age` larger than `michael_age`?":
+
+```{python}
+# Is `tom_age` bigger than `michael_age`?
+tom_age > michael_age
 ```
 
 `>` is the *greater than* comparison operator.  It takes the value to the left and asks if it is greater than the value to right.   The answer can only be `True` or `False`.
 
-The value `True` indicates that the comparison is correct; Python has answered "yes, 3 is bigger than 1".
+The value `True` indicates that the comparison is correct; Python has answered "yes, `tom_age` is bigger than `michael_age`".
 
 Python uses the special `bool` data type for values that can only be `True` or `False`.
 
 ```{python}
-type(3 > 1)
+type(tom_age > michael_age)
 ```
 
 ```{python}
 type(True)
 ```
 
-Here we confirm to ourselves that `3` is greater than the result of the expression `1 + 1`:
+We can also ask these questions about expressions made from more than one element. Here we ask Python "is `3` greater than the result of the expression `1 + 1`"?:
 
 ```{python}
 3 > (1 + 1)
 ```
 
-The value `True` indicates that the comparison is valid; Python has confirmed
-this simple fact about the relationship between `3` and `1+1`. The full set of
+The Boolean value `True` indicates that the answer to our question is "yes". Python has confirmed
+this simple fact that `3` is bigger than `1+1`. The full group of
 common comparison operators are listed below.
 
 | Comparison         | Operator | True example | False Example |
@@ -66,14 +80,22 @@ common comparison operators are listed below.
 Here are some more examples:
 
 ```{python}
+# Is `michael_age` smaller than `tom_age`?
+michael_age < tom_age
+```
+
+```{python}
+# Is 4 smaller than 5?
 4 < 5
 ```
 
 ```{python}
+# Is 4 smaller than 3?
 4 < 3
 ```
 
 ```{python}
+# Is 4 smaller than or equal to?
 4 <= 4
 ```
 
@@ -83,23 +105,24 @@ The double equals ``==`` is different from the single `=` that we saw before
 in assignment statemtns. Here is an assignment statement.
 
 ```{python}
+# Make a variable using an assignment statement.
 a = 4
 ```
 
 Notice it does not display a value, because it is an assignment, and not an expression. (You probably already noticed this, on earlier textbook pages)!
 
 ``==`` is different - it's a comparison operator like `<` or `>`.  It checks
-whether two values are equal, and returns True or False. Using `==` is like asking Python "is this thing *the same value* as this other thing?".
+whether two values are equal, and returns `True` or `False`. Using `==` is like asking Python "is this thing *the same value* as this other thing?".
 
-For example, the cell below askes Python "is the variable `a` the same value as the literal `4`?":
+For example, the cell below askes Python "is the variable `michael_age` the same value as the literal `21`?":
 
 ```{python}
-a == 4
+michael_age == 21
 ```
 
 ```{python}
-# Show the value of `a`, just to check.
-a
+# Show the value of `michael_age`, just to check.
+michael_age
 ```
 
 `a == 4` is an expression, because `==` is an operator, to say how values should
@@ -108,12 +131,14 @@ be combined, like `+` or `*`.
 Let's think about uses for `==` (there are lots)!. Imagine the text in the cell below is a password stored on a company's computer system:
 
 ```{python}
+# A variable containing a password string.
 correct_password = "PA55W0Rd"
 ```
 
 Imagine that the cell below is the input from a staff member's keyboard, as they try to login to the company system. Let's imagine the staff member is called Dave:
 
 ```{python}
+# Dave types his password.
 daves_input = "PA55W0Rd"
 ```
 
