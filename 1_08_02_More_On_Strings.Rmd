@@ -117,6 +117,84 @@ Note that using "f" before the string is allowed in Python, because the Python c
 e"This is not allowed!"
 ```
 
+## Mini-exercise: Strings
+
+Launch this page on Binder or Live code:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
+
+Now complete the following exercises.
+
+## Task 1
+
+Make a variable called `name` which returns your name. So for me, it should return the string `"Pete"`.
+
+```{python}
+# Your code here
+name = ...
+
+# Show the value of `name`.
+name
+```
+
+## Task 2
+
+Change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this using the `+` operator and new strings.**. Do not just type the right string and re-assign the variable.
+
+```{python}
+# Your code here
+name = ...
+
+# Show the value of `name`.
+name
+```
+
+## Task 3
+
+The cell below makes lots of strings, and stores them in variables:
+
+```{python}
+compared = " may be compared at any moment with the objects and purposes of all political institutions",
+
+respected = "and may thus be more respected, and, lastly, in order that the grievances of the citizens,",
+
+corruption = "and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration,",
+
+social = "being constantly before all the members of the Social body, shall remind them continually of their rights and duties;",
+
+legislative = "in order that the acts of the legislative power, as well as those of the executive power,"
+
+believing = "believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities" ,
+
+representatives = "The representatives of the French people, organized as a National Assembly," 
+
+based = "based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution",
+
+happiness = "and redound to the happiness of all."
+```
+
+These strings can all be put together into one long sentence, which is still grammatically correct. Here is the sentence:
+
+> "The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all."
+
+In the cell below create a variable called `too_long` which contains the whole sentence.
+
+**Only use the `+` operator to do this, do NOT just copy and paste the full string.**
+
+*Hint*: you may also need to add some space...
+
+```{python}
+too_long == ...
+```
+
+**Run the cell below to mark your answer:**
+
+```{python}
+# DO NOT CHANGE THIS CODE
+assert too_long == "The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all.", f"That is not correct! Your string does not match!"
+jupyprint('Great work! That is correct.')
+```
+
 ----------------------------------------------------------
 
 [🏡](intro.md).

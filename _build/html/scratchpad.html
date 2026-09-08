@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction to Computer Programming &#8212; Introduction to Computer Programming</title>
+    <title>Scratchpad &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -57,14 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/intro.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'scratchpad';</script>
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/scratchpad.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Class Rules" href="1_01_Class_Rules.html" />
+    <link rel="prev" title="Strings" href="1_08_02_More_On_Strings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -127,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -147,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -178,8 +174,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Introduction to Computer Programming
                 </a>
             </li>
@@ -205,8 +201,8 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">Strings</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="scratchpad.html">Scratchpad</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Scratchpad</a></li>
 </ul>
 
     </div>
@@ -253,6 +249,55 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/scratchpad.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -261,7 +306,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/scratchpad.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -271,7 +316,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -332,9 +377,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -345,20 +388,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction to Computer Programming</h1>
+    <h1>Scratchpad</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-and-running-code-yourself-using-this-textbook">Writing and running code yourself, using this textbook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-on-the-inspiration-for-this-textbook">Note on the inspiration for this textbook</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -368,30 +402,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-computer-programming">
-<h1>Introduction to Computer Programming<a class="headerlink" href="#introduction-to-computer-programming" title="Link to this heading">#</a></h1>
-<p>Welcome to the textbook for the September 2026 Introduction to Computer Programming course
-at Global Academy, Siam University.</p>
-<p>We will use this textbook for every class. It has what you need to learn, and exercises for you to practice.</p>
-<p><strong>IMPORTANT:</strong> You must be connected to the internet for this textbook to work properly. Images and data are downloaded from online.</p>
-<section id="writing-and-running-code-yourself-using-this-textbook">
-<h2>Writing and running code yourself, using this textbook<a class="headerlink" href="#writing-and-running-code-yourself-using-this-textbook" title="Link to this heading">#</a></h2>
-<p>You can run or edit the code in this textbook, and also write your own code, by clicking this icon at the top of any page:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="scratchpad">
+<h1>Scratchpad<a class="headerlink" href="#scratchpad" title="Link to this heading">#</a></h1>
+<p>This page is for you to launch on Binder or Live code, so that you can play with Python code whenever you want, in your web browser.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG" /></p>
-<p>You can also download any page, to use on your own computer, by clicking this icon at the top of the page:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download.JPG" /></p>
-</section>
-<section id="note-on-the-inspiration-for-this-textbook">
-<h2>Note on the inspiration for this textbook<a class="headerlink" href="#note-on-the-inspiration-for-this-textbook" title="Link to this heading">#</a></h2>
-<p>This textbook is inspired by and sometimes adapts content from the excellent <a class="reference external" href="https://odsti.github.io/cfd-textbook"><em>Coding for Data</em></a> by Matthew Brett, Peter Rush, Ani Adhikari, John Denero, and David Wagner (2023). I encourage you to also check out that textbook. Where content is adapted, this is noted clearly at the beginning of the page. Please see <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">here</a> and <a class="reference external" href="https://github.com/odsti/cfd-textbook/blob/main/license.md">here</a> for more information on licensing.</p>
-</section>
-<div class="toctree-wrapper compound">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here.</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
 </div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -425,14 +445,14 @@ at Global Academy, Siam University.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="1_01_Class_Rules.html"
-       title="next page">
+    <a class="left-prev"
+       href="1_08_02_More_On_Strings.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Class Rules</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Strings</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -440,22 +460,6 @@ at Global Academy, Siam University.</p>
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-and-running-code-yourself-using-this-textbook">Writing and running code yourself, using this textbook</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-on-the-inspiration-for-this-textbook">Note on the inspiration for this textbook</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

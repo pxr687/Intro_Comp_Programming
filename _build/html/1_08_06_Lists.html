@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -181,10 +181,13 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Python Elements and Grammar</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Class Rules and Assessments</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_01_Class_Rules.html">Class Rules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Python Elements and Grammar</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_03_Introduction_to_Python_and_Jupyter.html">Introduction to Python and Jupyter Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_04_0_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_04_A_Simple_Problem.html">A simple probability problem</a></li>
@@ -195,6 +198,12 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">Strings</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="scratchpad.html">Scratchpad</a></li>
 </ul>
 
     </div>
@@ -460,7 +469,7 @@ group at once.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_(&#39;GIRL&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_(&#39;BOY&#39;)
 </pre></div>
 </div>
 </div>
@@ -472,7 +481,7 @@ group at once.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_(&#39;BOY&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_(&#39;GIRL&#39;)
 </pre></div>
 </div>
 </div>
@@ -650,7 +659,7 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_(&#39;GIRL&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;GIRL&#39;)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_(&#39;BOY&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;BOY&#39;)]
 </pre></div>
 </div>
 </div>
@@ -665,7 +674,7 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
@@ -687,10 +696,10 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_(&#39;BOY&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;BOY&#39;), np.str_(&#39;BOY&#39;)]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_(&#39;BOY&#39;), np.str_(&#39;GIRL&#39;), np.str_(&#39;BOY&#39;), np.str_(&#39;GIRL&#39;)]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>

@@ -87,7 +87,7 @@ This is the same idea as with a language like English.
 
 You know what the sentence *"we are in a classroom"* means, because it is in correct English.
 
-What about the senetence *"yably har classroom in"*. You do not know what this means, because it has some words that are not English, and also the grammar is not correct.
+What about the sentence *"yably har classroom in"*? You do not know what this means, because it has some words that are not English, and also the grammar is not correct.
 
 If you write Python code which has the wrong grammar (e.g. parts of the code are in the wrong order), or you use words Python doees not understand, then you will get an error message:
 
