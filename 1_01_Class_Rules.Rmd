@@ -50,8 +50,9 @@ So, for this course:
 - 🤖❌
 
 
-**IMPORTANT NOTE ON EXAMS:*
-Do **NOT** try to secretly use AI in the class (me and the TA will be watching). In the exams and tests you will not have access to an AI. So, if you use AI in the class you will break the class rules AND you will do badly in the exams and tests.
+**IMPORTANT NOTE ON EXAMS:**
+
+Do **NOT** try to secretly use AI in the class (me and the TA will be watching). In the exams and tests you will not have access to an AI. So, if you use AI in the class you will break the class rules AND you will do badly in the exams and tests, because you will not be used to coding without it.
 
 ## Computers can make us stupid (even without AI)
 

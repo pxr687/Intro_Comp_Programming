@@ -111,6 +111,8 @@ We will talk more lateer about text and numbers in Python, for now, try changing
 
 *Note*: one Python rule is that you have to put text in quotes, `"` or `'`. You will get an error message if you do not.
 
+*Note 2*: Please tell myself or the TA if you get an error message, and we will explain why it has happened :)
+
 ```{python}
 print("Change this text!")
 ```
@@ -160,6 +162,18 @@ print('Even more text!')
 print('More text, more text, more text')
 print('More text, more text, more text')
 ```
+
+## Extra task 1
+ 
+Add a *new code cell* below this Markdown cell you are reading from. Then run this code inside the new code cell `print('Well done for adding a new code cell!')`
+
+
+## Extra task 2
+
+Some of the questions in the exercises/exams might ask you to write your answer in English in a Markdown cell. Double click this Markdown cell and write your name below. Show me or the TA when you have done this :)
+
+Write your name here -----:
+
 
 ### References
 

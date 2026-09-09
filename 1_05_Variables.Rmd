@@ -290,9 +290,15 @@ ten plus ten = 10 + 10
 ```
 
 ```{python tags=c("raises-exception")}
-# Variable names cannot contain characters like `!`
+# Variable names cannot contain characters like `?`
 # Uncomment the line below to see the error message.
-# var! = 10
+# var? = 10
+```
+
+These special characters have a special meaning in Python. This is why we cannot use them in variable names. As we saw earlier, the `?` character shows us documentation:
+
+```{python}
+# ?print
 ```
 
 ## Our simple probability problem
