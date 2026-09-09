@@ -163,7 +163,7 @@ This is the same as:
 1 + (2 * 3)
 ```
 
-We can also use bracks `()` to make `1 + 2` happen *before* the multiplication by 3.
+We can also use brackets `()` to make `1 + 2` happen *before* the multiplication by 3.
 
 ```{python}
 (1 + 2) * 3

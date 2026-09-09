@@ -89,13 +89,19 @@ Give yourself some time to think about what the problem is, and how to solve it.
 
 Only then, you can return to the computer and try your solutions, or do more research. You will find that disengaging from the computer is a) difficult and b) very productive in releasing you from the various mental traps that it is easy to fall into when you get stuck on the computer.
 
-Be like this guy, do NOT use AI, but DO use a pen, paper and your brain:
+So, you should be like this guy in the image below:
+
+- do **NOT** use AI
+
+- **DO** use a pen, paper and your brain
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/be_like_him.png)
 
+**Note**: the AI that generated this image actually made a mistake...can you find it?
+
 ## Working together in class
 
-When we are in class, you can talk to each other as your code. But you should write every line of code yourself (do not copy from others).
+When we are in class, you can talk to each other as you code. But you should write every line of code yourself (do not copy from others).
 
 Again, you must use must your own brain, not your friend's brain, to write your code. As long as you do **NOT** copy any code, you can help each and support each other if you get stuck (there is a tip for how to do this in the next section). 
 

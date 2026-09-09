@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -847,9 +847,17 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </div>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable names cannot contain characters like `!`</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable names cannot contain characters like `?`</span>
 <span class="c1"># Uncomment the line below to see the error message.</span>
-<span class="c1"># var! = 10</span>
+<span class="c1"># var? = 10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>These special characters have a special meaning in Python. This is why we cannot use them in variable names. As we saw earlier, the <code class="docutils literal notranslate"><span class="pre">?</span></code> character shows us documentation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>print
 </pre></div>
 </div>
 </div>
@@ -871,7 +879,7 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GIRL
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BOY
 </pre></div>
 </div>
 </div>
@@ -937,7 +945,7 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GIRL
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BOY
 </pre></div>
 </div>
 </div>
@@ -958,7 +966,7 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GIRL
 GIRL
 GIRL
-GIRL
+BOY
 </pre></div>
 </div>
 </div>
