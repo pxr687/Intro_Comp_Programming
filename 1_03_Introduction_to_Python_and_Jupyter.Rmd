@@ -145,7 +145,7 @@ Comments are also useful for testing and debugging code. You can put a `#` at th
 
 In the code cell below, one line is causing an error. Find the line which is causing the error, by "commenting out" different lines, and re-running the cell:
 
-*Hint:* you can comment out multiple lines at once by highlighting them, and pressing `Control + /` (or `Command ⌘ + /` on a Mac computer).
+*Hint:* you can comment out multiple lines at once by highlighting them, and pressing `Control + /` (or `Command ⌘ + /` on a Mac computer):
 
 ```{python tags=c("raises-exception")}
 # "Comment out" different lines.
@@ -162,6 +162,11 @@ print('Even more text!')
 print('More text, more text, more text')
 print('More text, more text, more text')
 ```
+
+Here is a GIF of what "commenting out" code looks like:
+
+![]()
+
 
 ## Extra task 1
  
