@@ -86,7 +86,7 @@ Can you fix Somchai's code? His `number_of_students` variable should have the nu
 **Store your answer in a variable called `number_of_students` or the marking will not work...**...
 
 ```{python}
-"number_of_students "=" "13,000
+"number_of students "=" "13,000
 
 # Show the value of `number_of_students`.
 number_of_students
@@ -242,6 +242,8 @@ When you have fixed the code you will see a message saying:
 
 *"Great work, you fixed those errors!"*
 
+*Note*: at the end of each person's code, there is a `print()` command which will show the value of one of the variables.
+
 ## Question 1
 
 Christine's manager asked her to buy some products. The `price` of each product should be nineteen ninety nine (it should be `float` data). They `quantity` that she needs to buy should be three - (this should be `int` data).
@@ -254,7 +256,7 @@ But her cat broke the code, fix her code.
 price = "1.9.99"*9
 quantity = three
 total = price * quantity
-print(total)
+print("Total = ", total)
 
 # DO NOT CHANGE THE CODE BELOW HERE.
 assert type(price) == float, "`price` is the wrong data type!!!"
@@ -302,7 +304,7 @@ Unfortunately, some punctuation and data types have crept into the code and brok
 birth_year = "1998,"
 current_year = 20.26,
 age = current_year + str(birth_year)_
-print(age)
+print("Priya's age = ", age)
 
 # DO NOT CHANGE THE CODE BELOW HERE.
 assert type(birth_year) == int, "`birth_year` is the wrong data type!!!"
@@ -330,6 +332,7 @@ To pass the marking, the variables should have these data types:
 hours = "7" * 5
 hourly_rate = 15.0
 pay = hours * hourly_rate()
+print('Pay =', pay)
 
 # DO NOT CHANGE THE CODE BELOW HERE.
 assert type(hours) == float, "`hours` is the wrong data type!!!"
@@ -343,7 +346,7 @@ jupyprint("*Great work, you fixed those errors!*")
 
 Alex is checking his account to see how many times he has logged in.
 
-His `username` should be "alex", and his login_count should be 1. He wants to add one to his login count and store the result in `new_count`.
+His `username` should be "alex", and his login_count should be 12. He wants to add one to his login count and store the result in `new_count`.
 
 Unfortunately, his code has been broken in a few different ways (by his cat!). Use `type()` to investigate the variables and fix the code so that his login count is calculated correctly.
 
@@ -357,6 +360,7 @@ To pass the marking, the variables should have these data types:
 username = alex
 login_count = "12"
 new_count = login_count + .1
+print("New count = ", new_count)
 
 # DO NOT CHANGE THE CODE BELOW HERE.
 assert type(username) == str, "`username` is the wrong data type!!!"
@@ -384,13 +388,13 @@ To pass the tests, the variables should have these data types:
 first_name =  "Sarah",;
 age = [, 42]
 full_name_and_age = first_name + " " + "age"
-print(full_name_and_age)
+print("Full name and age = ", full_name_and_age)
 
 # DO NOT CHANGE THE CODE BELOW HERE.
 assert type(first_name) == str, "`first_name` is the wrong data type!!!"
 assert type(age) == str, "`age` is the wrong data type!!!"
 assert type(full_name_and_age) == str, "`full_name_and_age` is the wrong data type!!!"
-assert full_name_and_age == "Sarah, 42", "`full_name` is the wrong value!"
+assert full_name_and_age == "Sarah, 42", "`full_name_and_age` is the wrong value!"
 jupyprint("*Great work, you fixed those errors!*")
 ```
 
@@ -414,7 +418,7 @@ score_1 = 7#2
 score_2 = ...+'84'
 score_3 = .90
 average = (score_1 / score_2 ** score_3) / .3
-print(average)
+print("Average = ", average)
 
 # DO NOT CHANGE THE CODE BELOW HERE.
 assert type(score_1) == int, "`score_1` is the wrong data type!!!"
@@ -445,7 +449,7 @@ units = 25**0
 price_per_unit = print(0.18)
 standing_charge = int("125o")
 bill = units * price_per_unit + standing_#charge
-print[bill]
+print["Bill =", bill]
 
 # DO NOT CHANGE THE CODE BELOW HERE.
 assert type(units) == int, "`units` is the wrong data type!!!"
