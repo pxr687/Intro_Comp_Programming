@@ -14,8 +14,8 @@ parts:
       - file: 1_04_A_Simple_Problem
       - file: 1_05_Variables
       - file: 1_05b_Extra_Variables_Task
-      - file: 1_06_Expressions
-      - file: 1_07_Summary_Literals_Variables_Expressions_Functions
+      # - file: 1_06_Expressions
+      # - file: 1_07_Summary_Literals_Variables_Expressions_Functions
 
 # #UNCOMMENT FIRST SET OF COMMENTED OUT PAGES IF EXTRA CONTENT NEEDED IN FIRST SESSION.
 #   - caption: Data Types
