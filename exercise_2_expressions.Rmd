@@ -26,6 +26,8 @@ If you need help, open the _[textbook page](https://pxr687.github.io/Intro_Comp_
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
 from notch_2 import *
+from notch_2_pt_2 import *
+from notching_sub_functions import inline_soft_assert
 # answer_1, answer_2, answer_3, answer_4, answer_5, = pre_define_blanks(5)
 ```
 
@@ -52,6 +54,8 @@ When you download your work, you can view it by uploading the file here: https:/
 
 Later in the course we will install Python on your own laptop 🙂.
 
+
+# Part 1
 
 ## Question 1
 
@@ -213,7 +217,7 @@ answer_5
 check_answer_5(answer_5)
 ```
 
-# Mark all your answers
+# Mark all your answers to Part 1
 
 ```{python}
 # DO NOT CHANGE THIS CELL. 
@@ -223,6 +227,126 @@ mark_all(answer_1,
          answer_3,
          answer_4,
          answer_5)
+```
+
+# Part 2
+
+In this part you can change numbers AND operators (`+`, `-`, `/`, `*`, `**`) and/or brackets (`()`). **BUT** you must get your answer using a Python expression. Do **NOT** work out the answer in your head and just type one number.
+
+## Question 1
+
+Dave is making a budget. He spends about £4 per day on food, and £2 on drinks. He wants to know how much he spends in 3 years, on food and drink. He tries to store this value in a variable called `food_drink_4_years`.
+
+But he's entered the wrong expression, can you fix it?
+
+*Note:* you can use 365 days per year for your calculation.
+
+```{python}
+food_drink_4_years = 4 + 2 * 365 + 4
+
+# Show the value of `food_drink_4_years`
+food_drink_4_years
+```
+
+## Run the cell below to check your answer
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+inline_soft_assert(np.isclose(food_drink_4_years, quick_check_1()[0]), quick_check_1()[1])
+```
+
+## Question 2
+
+Tom pays £25 per month for his phone and spends another £10 per month on mobile data. He wants to know how much he will spend over 23 months.
+
+He tries to store this value in a variable called `phone_cost_23_months`.
+
+But he's entered the wrong expression, can you fix it?
+
+```{python}
+phone_cost_23_months = 23 * 25 + 10
+
+# Show the value of `phone_cost_23_months`
+phone_cost_23_months
+```
+
+## Run the cell below to check your answer
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+inline_soft_assert(np.isclose(phone_cost_23_months, quick_check_2()[0]), quick_check_2()[1])
+```
+
+## Question 3
+
+A café sells about £250 worth of food per day and £150 worth of drinks per day. The owner wants to know how much revenue the café makes in 30 days.
+
+He tries to store this value in a variable called `monthly_revenue`.
+
+But the café owner entered the wrong expression, can you fix it? (They **really** got this one wrong!).
+
+```{python}
+monthly_revenue = (250**15) * 10 / 30
+
+# Show the value of `monthly_revenue`
+monthly_revenue
+```
+
+## Run the cell below to check your answer
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+inline_soft_assert(np.isclose(monthly_revenue, quick_check_3()[0]), quick_check_3()[1])
+```
+
+## Question 4
+
+A shop makes £5,000 in sales each month. The shop's monthly costs are £2,000 for stock and £1,200 for staff. The owner wants to know the *weekly* profit, if there are 30 days in one month.
+
+The shop owner tries to store this value in a variable called `weekly_profit`.
+
+But, the shop owner likes to drink too much beer (it's Friday!) and they have entered the wrong expression and is getting an error, can you fix it?
+
+```{python tags=c("raises-exception")}
+# Myyyyyyy wweekkely profit (ignoring beee3r)
+weekly.profit = 5,000 - (2,000 - 1,200)/7
+
+# Show my MONNNNNEY
+weekly.profit
+```
+
+## Run the cell below to check your answer
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+inline_soft_assert(np.isclose(weekly_profit, quick_check_4()[0]), quick_check_4()[1])
+```
+
+## Question 5
+
+The same shop from the last question sells a product for £80. It is offering customers a 25% discount and wants to calculate the final selling price.
+
+The manager tries to store this value in a variable called `final_selling_price`.
+
+But he's drunk AGAIN - (at this point, he has no idea what he is doing!) - and he has entered the wrong expression. He is getting another error message - can you fix this mess for him?
+
+```{python tags=c("raises-exception")}
+# Pr0fit for MORE drinkk1s!!!1
+final_selling price = (80 *** 25)"/0.100"
+
+final_selling price 
+```
+
+## Run the cell below to check your answer
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+inline_soft_assert(np.isclose(final_selling_price, quick_check_5()[0]), quick_check_5()[1])
 ```
 
 ## Go back to the textbook:

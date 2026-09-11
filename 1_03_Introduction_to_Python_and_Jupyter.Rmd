@@ -165,7 +165,7 @@ print('More text, more text, more text')
 
 Here is a GIF of what "commenting out" code looks like:
 
-![]()
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/comment%20_out.gif)
 
 
 ## Extra task 1
