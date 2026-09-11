@@ -312,6 +312,18 @@ In summary:
 
 - doing calculations with very big or very small numbers can lead to floating point errors.
 
+## Mini-exercise:  Numbers
+
+Launch this page on Binder or Live code:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
+
+Now complete the following exercises.
+
+```{python}
+print('These are marked by outcome!')
+```
+
 ----------------------------------------------------------
 
 [🏡](intro.md).

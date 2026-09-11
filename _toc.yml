@@ -25,7 +25,7 @@ parts:
       #  - file: 1_08_03_Strings_and_Variables 
       #  - file: 1_08_03b_Extra_Data_Types_Task
 
-# WEEK 3
+# WEEK 3 ---- ADD IN BASIC CHAT BOT AFTER YOU SHOW INPUT()
   #     - file: 1_08_04_String_Methods
   #     - file: 1_08_05_Comparison_Operators   ### ADD IN EXCERCISE
   #     - file: 1_08_06_Lists                  ### ADD IN EXCERCISE
