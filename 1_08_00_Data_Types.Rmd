@@ -29,14 +29,14 @@ So far we have used numbers and text in our Python code:
 
 ```{python}
 # Some text.
-"Asok is a BTS Station."
+"Bang Wa has a BTS and MRT station."
 ```
 
 We have also use *functions*, like `print()` with numbers *and* text:
 
 ```{python}
 # The `print()` function.
-print('This is the print function!')
+print('This is the print function, it is printing some text!')
 ```
 
 ```{python}
@@ -79,7 +79,9 @@ What about if we use it with text?
 
 We can see that when we use `*` with text, it does something different. It *repeats* the text many times.
 
-We need to know what type of data we are using, so that we know what our function will do. Using the function or operation with the wrong data type will break your code! 
+We need to know what type of data we are using, so that we know what our function will do. 
+
+**Using the function or operation with the wrong data type will break your code!**
 
 A very common problem in data analysis is that data that should be *numbers* gets changed to *text* by accident.
 

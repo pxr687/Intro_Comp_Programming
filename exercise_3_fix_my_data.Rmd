@@ -25,6 +25,7 @@ If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp
 ```{python}
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
+from jupyprint import jupyprint
 from notch_3 import *
 # total, number_of_students, test_score, welcome_20, n_forms, savings_after_six_months = pre_define_blanks(6)
 ```
@@ -46,6 +47,8 @@ When you download your work, you can view it by uploading the file here: https:/
 Later in the course we will install Python on your own laptop...
 
 
+
+# Part 1
 
 ## Question 1
 
@@ -222,7 +225,7 @@ check_answer_6(savings_after_six_months)
 ```
 
 
-# Mark all your answers
+# Mark all your answers for Part 1
 
 ```{python}
 # DO NOT CHANGE THIS CELL.
@@ -233,6 +236,236 @@ mark_all(total,
          welcome_20, 
          n_forms, 
          savings_after_six_months)
+```
+
+# Part 2 - Cat on the keyboard
+
+The next part of this exercise has different peoples' broken code...
+
+...all these people were working hard, but then this happened:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/cat_crisis.gif)
+
+You need to fix the code.
+
+Each cell has a comment saying `# DO NOT CHANGE THE CODE BELOW HERE.`. Do not change this code or the marking will not work!
+
+When you have fixed the code you will see a message saying:
+
+*"Great work, you fixed those errors!"*
+
+## Question 1
+
+Christine's manager asked her to buy some products. The `price` of each product should be nineteen ninety nine (it should be `float` data). They `quantity` that she needs to buy should be three - (this should be `int` data).
+
+The `total` should be the total cost, (this should be `float` data).
+
+But her cat broke the code, fix her code.
+
+```{python}
+price = "1.9.99"*9
+quantity = three
+total = price * quantity
+print(total)
+
+# DO NOT CHANGE THE CODE BELOW HERE.
+assert type(price) == float, "`price` is the wrong data type!!!"
+assert type(quantity) == int , "`quantity` is the wrong data type!!!"
+assert type(total) == float, "`total` is the wrong data type!!!"
+assert total == 59.97, "`total` is the wrong value!"
+jupyprint("*Great work, you fixed those errors!*")
+```
+
+## Question 2
+
+James is testing some code for an app which makes users a new gym membership. 
+
+His `name` is James and his `age` is 27 - the `age` variable should be `int` data type.
+
+He wants to create a `message` that says his name and age, so that it can be displayed on the screen. This should be `str` data type.
+
+But again, his cat walked on his keyboard. **Use `type()` to investigate the variables and fix the code so that the message is created correctly.**
+
+**DO NOT** hard-code the message, e.g. don't use `message = "James is 27 years old"`. Hard-coding is not allowed for any answer in the your exercises or assessments.
+
+```{python}
+name = "James"
+age = 27
+message = name + " is " + age + " years old"
+print(message)
+
+# DO NOT CHANGE THE CODE BELOW HERE.
+assert type(name) == str, "`name` is the wrong data type!!!"
+assert type(age) == int, "`age` is the wrong data type!!!"
+assert type(message) == str, "`message` is the wrong data type!!!"
+assert message == "James is 27 years old", "`message` is the wrong value!"
+jupyprint("*Great work, you fixed those errors!*")
+```
+
+## Question 3
+
+Priya is trying to work out her age for a birthday invitation. She was born in 1998 (her `birth_year`), and the `current_year` is 2026.
+
+Her `age` should be calculated by subtracting her `birth_year` from the `current_year`.
+
+Unfortunately, some punctuation and data types have crept into the code and broken it. Use type() to investigate the variables and fix the code so that Priya's age is calculated correctly.
+
+```{python}
+birth_year = "1998,"
+current_year = 20.26,
+age = current_year + str(birth_year)_
+print(age)
+
+# DO NOT CHANGE THE CODE BELOW HERE.
+assert type(birth_year) == int, "`birth_year` is the wrong data type!!!"
+assert type(current_year) == int, "`current_year` is the wrong data type!!!"
+assert type(age) == int, "`age` is the wrong data type!!!"
+assert age == 28, "`age` is the wrong value!"
+jupyprint("*Great work, you fixed those errors!*")
+```
+
+## Question 4
+
+Jaypreet has started a new job and wants to calculate how much she will earn after working `7.5` hours at `£15.00` per hour.
+
+The `hours` variable should be the number of hours she works, `hourly_rate` should be her pay per hour, and `pay` should be her total earnings.
+
+Unfortunately, Jaypreet's cat has been playing with her keyboard and has broken the code. **Use `type()` to investigate the variables and fix the code.**
+
+To pass the marking, the variables should have these data types:
+
+* `hours` → **float**
+* `hourly_rate` → **float**
+* `pay` → **float**
+
+```{python}
+hours = "7" * 5
+hourly_rate = 15.0
+pay = hours * hourly_rate()
+
+# DO NOT CHANGE THE CODE BELOW HERE.
+assert type(hours) == float, "`hours` is the wrong data type!!!"
+assert type(hourly_rate) == float, "`hourly_rate` is the wrong data type!!!"
+assert type(pay) == float, "`pay` is the wrong data type!!!"
+assert pay == 112.5, "`pay` is the wrong value!"
+jupyprint("*Great work, you fixed those errors!*")
+```
+
+## Question 5
+
+Alex is checking his account to see how many times he has logged in.
+
+His `username` should be "alex", and his login_count should be 1. He wants to add one to his login count and store the result in `new_count`.
+
+Unfortunately, his code has been broken in a few different ways (by his cat!). Use `type()` to investigate the variables and fix the code so that his login count is calculated correctly.
+
+To pass the marking, the variables should have these data types:
+
+- `username` → **str**
+- `login_count` → **int**
+- `new_count` → **int**
+
+```{python}
+username = alex
+login_count = "12"
+new_count = login_count + .1
+
+# DO NOT CHANGE THE CODE BELOW HERE.
+assert type(username) == str, "`username` is the wrong data type!!!"
+assert type(login_count) == int, "`login_count` is the wrong data type!!!"
+assert type(new_count) == int, "`new_count` is the wrong data type!!!"
+assert new_count == 13, "`new_count` is the wrong value!"
+jupyprint("*Great work, you fixed those errors!*")
+```
+
+## Question 6
+
+Sarah wants to show her name and age on an app she has developed.
+
+Her `first_name` is `"Sarah"` and her `age` is `42`. She wants to combine them into `full_name_and_age`, which should contain the text `"Sarah, 42"`.
+
+Unfortunately, once again there has been a cat-related disaster! Fix her code in the cell below.
+
+To pass the tests, the variables should have these data types:
+
+* `first_name` → **str**
+* `age` → **str**
+* `full_name_and_age` → **str**
+
+```{python}
+first_name =  "Sarah",;
+age = [, 42]
+full_name_and_age = first_name + " " + "age"
+print(full_name_and_age)
+
+# DO NOT CHANGE THE CODE BELOW HERE.
+assert type(first_name) == str, "`first_name` is the wrong data type!!!"
+assert type(age) == str, "`age` is the wrong data type!!!"
+assert type(full_name_and_age) == str, "`full_name_and_age` is the wrong data type!!!"
+assert full_name_and_age == "Sarah, 42", "`full_name` is the wrong value!"
+jupyprint("*Great work, you fixed those errors!*")
+```
+
+## Question 7
+
+Supachai is checking his results after taking three tests.
+
+His three scores should be `72`, `84`, and `90`. He wants to calculate the `average` of the three scores.
+
+Fix his code below. You can look [here](https://mathema.me/en/blog/how-to-find-the-average/) if you need a reminder about how to calculate an average :)
+
+To pass the tests, the variables should have these data types:
+
+* `score_1` → **int**
+* `score_2` → **int**
+* `score_3` → **int**
+* `average` → **float**
+
+```{python}
+score_1 = 7#2
+score_2 = ...+'84'
+score_3 = .90
+average = (score_1 / score_2 ** score_3) / .3
+print(average)
+
+# DO NOT CHANGE THE CODE BELOW HERE.
+assert type(score_1) == int, "`score_1` is the wrong data type!!!"
+assert type(score_2) == int, "`score_2` is the wrong data type!!!"
+assert type(score_3) == int, "`score_3` is the wrong data type!!!"
+assert type(average) == float, "`average` is the wrong data type!!!"
+assert average == 82.0, "`average` is the wrong value!"
+jupyprint("*Great work, you fixed those errors!*")
+```
+
+## Question 8
+
+Ploy is checking her electricity bill for the month.
+
+She used `25` units of electricity. Each unit costs `£0.18`, and there is also a `£12.50` standing charge. She wants to calculate the total `bill`.
+
+You probably guessed: her cat broke her code!
+
+To pass the tests, the variables should have these data types:
+
+* `units` → **int**
+* `price_per_unit` → **float**
+* `standing_charge` → **float**
+* `bill` → **float**
+
+```{python}
+units = 25**0
+price_per_unit = print(0.18)
+standing_charge = int("125o")
+bill = units * price_per_unit + standing_#charge
+print[bill]
+
+# DO NOT CHANGE THE CODE BELOW HERE.
+assert type(units) == int, "`units` is the wrong data type!!!"
+assert type(price_per_unit) == float, "`price_per_unit` is the wrong data type!!!"
+assert type(standing_charge) == float, "`standing_charge` is the wrong data type!!!"
+assert type(bill) == float, "`bill` is the wrong data type!!!"
+assert bill == 17.0, "`bill` is the wrong value!"
+jupyprint("*Great work, you fixed those errors!*")
 ```
 
 ## Go back to the textbook:
