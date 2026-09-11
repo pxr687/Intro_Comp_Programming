@@ -308,7 +308,7 @@ A shop makes £5,000 in sales each month. The shop's monthly costs are £2,000 f
 
 The shop owner tries to store this value in a variable called `weekly_profit`.
 
-But, the shop owner likes to drink too much beer (it's Friday!) and they have entered the wrong expression and is getting an error, can you fix it?
+But, the shop owner likes to drink too much beer (it's Friday!) and he has entered the wrong expression and is getting an error, can you fix it?
 
 ```{python tags=c("raises-exception")}
 # Myyyyyyy wweekkely profit (ignoring beee3r)

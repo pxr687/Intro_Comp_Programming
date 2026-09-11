@@ -255,7 +255,7 @@ print("The capital of Thailand is Bangkok." + " London is the capital of England
 
 We will now do our third Python exercise.
 
-> **We are going to do this exercise as two teams. I will show you the questions on the big screen. Each team will write their answers on the whiteboards. When each team has all the answers written on the whiteboard, we will mark the answers together, looking at the correct answers on the big screen.**
+> **We are going to do this exercise in teams. I will show you the questions on the big screen. Each team will write their answers on paper or on the whiteboard. When each team has all the answers written, we will mark the answers together, looking at the correct answers on the big screen.**
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
