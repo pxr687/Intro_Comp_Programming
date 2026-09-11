@@ -54,7 +54,9 @@ Later in the course we will install Python on your own laptop...
 
 Charlotte needs to pay 378 baht to three different people. She wants to work out how much she needs to pay in total.
 
-She tries the following code:
+She tries the code in the cell below. But her answer doesn't look right - can you fix her code?
+
+**Store your answer in a variable called `total` or the marking will not work...**.
 
 ```{python}
 # Charlotte's code.
@@ -63,11 +65,6 @@ total = "378" * 3
 # Show the value of total.
 total
 ```
-
-That doesn't look right - can you fix her code?
-
-**Store your answer in a variable called `total` or the marking will not work...**.
-
 
 ### Run the next cell to mark your answer.
 
@@ -82,7 +79,11 @@ check_answer_1(total)
 
 A town in Thailand has 13_000 students. Somchai wants to do some calculations using this number.
 
-He tries to store the number in a variable called `number_of_students`, but he gets an error:
+He tries to store the number in a variable called `number_of_students`, but he gets an error.
+
+Can you fix Somchai's code? His `number_of_students` variable should have the number of students (13_000), as an `int` or `float`.
+
+**Store your answer in a variable called `number_of_students` or the marking will not work...**...
 
 ```{python}
 "number_of_students "=" "13,000
@@ -90,11 +91,6 @@ He tries to store the number in a variable called `number_of_students`, but he g
 # Show the value of `number_of_students`.
 number_of_students
 ```
-
-Can you fix Somchai's code? His `number_of_students` variable should have the number of students (13_000), as an `int` or `float`.
-
-**Store your answer in a variable called `number_of_students` or the marking will not work...**...
-
 
 ### Run the next cell to mark your answer.
 
@@ -109,15 +105,14 @@ check_answer_2(number_of_students)
 
 Lucy scores $\frac{88}{100}$ on her Business exam. Well done Lucy!
 
-She wants to store her result as a Python variable called `test_score`. She tries this:
+She wants to store her result as a Python variable called `test_score`. She tries the code in the cell below.
+
+Fix her code so there is a variable `test_score` which contains her test score, as a `float`.
 
 ```{python}
 # Type your answer below.
 "test_score" " = 88/100"
 ```
-
-Fix her code so there is a variable `test_score` which contains her test score, as a `float`.
-
 
 ### Run the next cell to mark your answer.
 
@@ -134,7 +129,9 @@ Katherine has to print some stickers for a student orientation. There are 20 new
 
 She makes a variable called `welcome_20`. She wants this to contain 20 repeats of the string `Welcome! `. She will then send this text to a machine which prints stickers.
 
-However, her code is broken:
+However, her code is broken. Can you fix Katherine's code? Your variable must be called `welcome_20` for the marking to work.
+
+*Note*: be careful with spaces in your strings...
 
 ```{python}
 welcome_20 = "Welcome! "**"20"
@@ -142,11 +139,6 @@ welcome_20 = "Welcome! "**"20"
 # Show the value of `welcome_20`
 welcome_20
 ```
-
-Can you fix Katherine's code? Your variable must be called `welcome_20` for the marking to work.
-
-*Note*: be careful with spaces in your strings...
-
 
 ### Run the next cell to mark your answer.
 
@@ -161,7 +153,15 @@ check_answer_4(welcome_20)
 
 Barry works at a University. 20 new students have just arrived. There are 567 students already.
 
-He needs to give 3 forms to each student. He tries to calculate how many forms he needs, in total:
+He needs to give 3 forms to each student. He tries to calculate how many forms he needs, in total, and store the result in a variable called `n_forms`.
+
+But ouch!  His result is wrong. Can you fix his code? 
+
+`n_forms` should have the *total* number of students. There are `20` new students and `567` older students. 
+
+The total number of students should be multiplied by `3`, because he needs to give three forms to each student.
+
+**NOTE: do NOT hard-code your answer. E.g. do not work out the correct number in your head and type that. Instead, calculate the correct answer with Python operations.**
 
 ```{python}
 # Type your answer below.
@@ -169,15 +169,6 @@ n_forms = "20" + "3" * 567
 
 n_forms
 ```
-
-Ouch! That is wrong. Can you fix his code? 
-
-Your answer should be a variable `n_forms`. `n_forms` should have the *total* number of students. There are `20` new students and `567` older students. 
-
-The total number of students should be multiplied by `3`, because he needs to give three forms to each student.
-
-**NOTE: do NOT hard-code your answer. E.g. do not work out the correct number in your head and type that. Instead, calculate the correct answer with Python operations.**
-
 
 ### Run the next cell to mark your answer.
 
@@ -202,7 +193,9 @@ She wants to know how much she will have saved after 6 months.
 
 She wants her answer to be in the `float` data type.
 
-She tries to calculate her savings after 6 months, using the following code:
+She tries to calculate her savings after 6 months, using the code in the cell below. But it is very broken. She wants her answer to be a `float` which contains her savings after 6 months, if she saves 5,000 baht per month.
+
+Fix her code and store your answer in the variable `savings_after_six_months` - remember, it must be a `float`.
 
 ```{python}
 # Type your answer below.
@@ -210,11 +203,6 @@ savings_after_six_months = "float"*(savings_each_month)*6
 
 savings_after_six_months
 ```
-
-Hmmm....that is very broken. She wants her answer to be a `float` which contains her savings after 6 months, if she saves 5,000 baht per month.
-
-Fix her code and store your answer in the variable `savings_after_six_months` - remember, it must be a `float`.
-
 
 ### Run the next cell to mark your answer.
 
@@ -246,7 +234,7 @@ The next part of this exercise has different peoples' broken code...
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/cat_crisis.gif)
 
-You need to fix the code.
+You need to fix their code.
 
 Each cell has a comment saying `# DO NOT CHANGE THE CODE BELOW HERE.`. Do not change this code or the marking will not work!
 
