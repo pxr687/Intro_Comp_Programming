@@ -323,6 +323,34 @@ type(salary)
 salary * 10
 ```
 
+## Mini-exercise: Data Types
+
+Launch this page on Binder or Live code:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
+
+Then complete these tasks:
+
+```{python}
+print("Mark these by showing what code should look like!")
+```
+
+```{python}
+
+```
+
+```{python}
+
+```
+
+```{python}
+
+```
+
+```{python}
+
+```
+
 ----------------------------------------------------------
 
 [🏡](intro.md).
