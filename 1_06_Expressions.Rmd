@@ -24,8 +24,9 @@ there are rules of grammar in any language, including programming languages.
 
 Learning the rules of Python grammar rules is very important. Without proper grammar, you will get error messages and your code will not run.
 
-*Expressions* are an important part of Python grammar. An expression is like a *recipe that returns a value*.  For
-example, this is an expression:
+*Expressions* are an important part of Python grammar. 
+
+An expression is like a *recipe that returns a value*.  For example, this is an expression:
 <!-- #endregion -->
 
 ```{python}

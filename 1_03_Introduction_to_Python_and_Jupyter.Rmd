@@ -83,7 +83,7 @@ The cell below is a code cell.
 
 As you would expect, this cell runs code. We will now see our first bit of Python code!
 
-*Note*: you can press `Shift + Enter` on your keyboard to run a code cell:
+*Note*: you can press `Shift + Enter` (or `Command ⌘ + Enter` on a Mac) on your keyboard to run a code cell:
 
 ```{python}
 2 + 2
@@ -145,7 +145,7 @@ Comments are also useful for testing and debugging code. You can put a `#` at th
 
 In the code cell below, one line is causing an error. Find the line which is causing the error, by "commenting out" different lines, and re-running the cell:
 
-*Hint:* you can comment out multiple lines at once by highlighting them, and pressing `Control + /`.
+*Hint:* you can comment out multiple lines at once by highlighting them, and pressing `Control + /` (or `Command ⌘ + /` on a Mac computer).
 
 ```{python tags=c("raises-exception")}
 # "Comment out" different lines.
