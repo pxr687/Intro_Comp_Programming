@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Strings &#8212; Introduction to Computer Programming</title>
+    <title>More on Strings &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Scratchpad" href="scratchpad.html" />
-    <link rel="prev" title="Numbers" href="1_08_01_More_On_Numbers.html" />
+    <link rel="prev" title="More on Numbers" href="1_08_01_More_On_Numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,8 +199,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">Numbers</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">More on Strings</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -392,7 +392,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Strings</h1>
+    <h1>More on Strings</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -402,6 +402,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-strings">Multi-line strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
@@ -418,8 +419,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="strings">
-<h1>Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="more-on-strings">
+<h1>More on Strings<a class="headerlink" href="#more-on-strings" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This page is adpted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/Strings.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
@@ -551,9 +552,56 @@ let you include apostrophes inside of strings.</p>
 </div>
 </div>
 </div>
+<section id="multi-line-strings">
+<h2>Multi-line strings<a class="headerlink" href="#multi-line-strings" title="Link to this heading">#</a></h2>
+<p>We can use 3 quotation marks (<code class="docutils literal notranslate"><span class="pre">'</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>) instead of one, so that we can make long strings, without needing loads of <code class="docutils literal notranslate"><span class="pre">print()</span></code> functions!:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span><span class="s2">&quot;This is a string on one line.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">()</span><span class="s2">&quot;This is a string on one line.&quot;</span><span class="p">)</span>
+                                          <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unmatched &#39;)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look at the three quotation marks (&quot;&quot;&quot;) at the start and end of the string.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;       </span>
+<span class="s2">This string...</span>
+
+<span class="s2">...can go over...</span>
+
+<span class="s2">...as many lines...</span>
+
+<span class="s2">...as I want...</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This string...
+
+...can go over...
+
+...as many lines...
+
+...as I want...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="f-strings">
 <h2>F-strings<a class="headerlink" href="#f-strings" title="Link to this heading">#</a></h2>
-<p>The last code cell puts numbers and text together using lots of <code class="docutils literal notranslate"><span class="pre">+</span></code> symbols and the <code class="docutils literal notranslate"><span class="pre">str</span></code> function.</p>
+<p>Do not worry about learning how to use f-strings right now (unless you want to). This section is just to tell you about them, so you recognise them in code. They are <em>very</em> useful, so if you do have some time, play around with them.</p>
+<p>We have seen how to put numbers and text together using lots of <code class="docutils literal notranslate"><span class="pre">+</span></code> symbols and the <code class="docutils literal notranslate"><span class="pre">str</span></code> function.</p>
 <p>A better way to do this is to use <em>f-strings</em>. These take some time to get used to, but you will find them very helpful for showing results and debugging your code.</p>
 <p>To use a f-string, just put at “f” at the start of your string!:</p>
 <div class="cell docutils container">
@@ -601,7 +649,7 @@ let you include apostrophes inside of strings.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="n">e</span><span class="s2">&quot;This is not allowed!&quot;</span>
      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -664,11 +712,6 @@ let you include apostrophes inside of strings.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="task-3">
@@ -707,16 +750,6 @@ let you include apostrophes inside of strings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">too_long</span> <span class="o">==</span> <span class="o">...</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">too_long</span> <span class="o">==</span> <span class="o">...</span>
-
-<span class="ne">NameError</span>: name &#39;too_long&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -772,7 +805,7 @@ let you include apostrophes inside of strings.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Numbers</p>
+        <p class="prev-next-title">More on Numbers</p>
       </div>
     </a>
     <a class="right-next"
@@ -800,6 +833,7 @@ let you include apostrophes inside of strings.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-strings">Multi-line strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>

@@ -13,7 +13,7 @@ jupyter:
 ---
 
 <!-- #region -->
-# Strings
+# More on Strings
 
 ```{note}
 This page is adpted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/Strings.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
@@ -92,9 +92,32 @@ number_of_students = 22
 "There are " + str(number_of_students) + " students in the class."
 ```
 
+## Multi-line strings
+
+We can use 3 quotation marks (`'` or `"`) instead of one, so that we can make long strings, without needing loads of `print()` functions!:
+
+```{python}
+print()"This is a string on one line.")
+```
+
+```{python}
+# Look at the three quotation marks (""") at the start and end of the string.
+print("""       
+This string...
+
+...can go over...
+
+...as many lines...
+
+...as I want...
+""")
+```
+
 ## F-strings
 
-The last code cell puts numbers and text together using lots of `+` symbols and the `str` function.
+Do not worry about learning how to use f-strings right now (unless you want to). This section is just to tell you about them, so you recognise them in code. They are *very* useful, so if you do have some time, play around with them.
+
+We have seen how to put numbers and text together using lots of `+` symbols and the `str` function.
 
 A better way to do this is to use *f-strings*. These take some time to get used to, but you will find them very helpful for showing results and debugging your code.
 
@@ -107,6 +130,7 @@ f"This is an f-string!"
 Now, inside our f-string, if we put variables, literals or expressions inside curly brackets `{}`, they will become part of the string:
 
 ```{python}
+# Look -------------------------------------------------------------------------------------> HERE!
 f"This is an f-string! It can show the value of my `number_of_students` variable like this: {number_of_students}."
 ```
 
