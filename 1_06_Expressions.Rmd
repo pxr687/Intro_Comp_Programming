@@ -124,7 +124,7 @@ that into something that humans can read easily - the HR of 12 - which is
 `12`.
 
 
-## Common Operators
+## Important Operators
 
 
 In Python, the following operators are
@@ -137,7 +137,7 @@ very important (we have seen some of them before).
 | Multiplication  | `*`      | `2 * 3`    | `6`       |
 | Division        | `/`      | `100 / 10` | `10`      |
 | Remainder       | `%`      | `101 % 10` | `1`       |
-| Exponentiation  | `**`     | `10 ** 2`  | `100`     |
+| Exponentiation (Power)  | `**`     | `10 ** 2`  | `100`     |
 
 
 ## What order do operators use
