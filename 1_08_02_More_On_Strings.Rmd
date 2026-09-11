@@ -38,9 +38,9 @@ it is combining a different type of value.
 "computer" + "programming"
 ```
 
-Addition combines these two strings together without
-thinking about their contents. It doesn't add a space because these are different
-words; that's up to the programmer (you).
+When you use `+` with two strings, then Python adds the two strings together without
+thinking about what the text says. It doesn't add a space because these are different
+words; adding space and making sure the text is nice to read is up to the programmer (you).
 
 We can add a space like this:
 
@@ -64,12 +64,15 @@ let you include apostrophes inside of strings.
 
 Why not? Try it out.
 
+```{python}
+# Try out some strings in this cell.
+```
 
-Like the `int()` and `float()` function will change data to `int` or `float`, the `str()` function will change data into the `str` data type. Using this function, strings can be constructed that have embedded values.
+Like the `int()` and `float()` function will change data to `int` or `float`, we know that the `str()` function will change data into the `str` data type. Using this function, strings can be put together from more than one value.
 
 ```{python}
 # Combining different data types into a string.
-"That's " + str(1 + 1) + ' ' + str(True)
+"That's " + str(1 + 1) + ' ' + str(True) + " pal!"
 ```
 
 ```{python}
@@ -77,9 +80,9 @@ Like the `int()` and `float()` function will change data to `int` or `float`, th
 "There are " + str(50) + " districts in Bangkok."
 ```
 
-This can be very useful when you are debugging code, because you can `print()` out that value of a variables from different parts of the code, which can let you find where errors are happening.
+This can be very useful when you are debugging/fixing code, because you can `print()` out that value of a variables from different parts of the code, which can let you find where errors are happening.
 
-We can also put numeric variables into the string, using the `str()` function:
+We can also put number variables into the string, using the `str()` function:
 
 ```{python}
 number_of_students = 22
@@ -93,7 +96,7 @@ number_of_students = 22
 
 The last code cell puts numbers and text together using lots of `+` symbols and the `str` function.
 
-A smoother way to do this is to use *f-strings*. These take some time to get used to, but you will find them very helpful for showing results and debugging your code.
+A better way to do this is to use *f-strings*. These take some time to get used to, but you will find them very helpful for showing results and debugging your code.
 
 To use a f-string, just put at "f" at the start of your string!:
 
@@ -115,6 +118,13 @@ Note that using "f" before the string is allowed in Python, because the Python c
 
 ```{python tags=c("raises-exception")}
 e"This is not allowed!"
+```
+
+```{python}
+# You can use this cell to play with f-strings.
+my_variable = 10
+
+print(f"Here is an example f-string. I can use square brackets to show a variable, like this variable: {my_variable}")
 ```
 
 ## Mini-exercise: Strings

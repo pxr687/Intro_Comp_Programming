@@ -14,7 +14,7 @@ jupyter:
 
 # Exercise 3 - Fix My Data
 
-If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_08_00_Data_Types.html)_ for this exercise.
+If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_08_03_Strings_and_Variables.html)_ for this exercise.
 
 ## Instructions
 
@@ -462,4 +462,4 @@ jupyprint("*Great work, you fixed those errors!*")
 
 ## Go back to the textbook:
 
-Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_08_00_Data_Types.html)_ to go back to the course textbook.
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_08_03_Strings_and_Variables.html)_ to go back to the course textbook.

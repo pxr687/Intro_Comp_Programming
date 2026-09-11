@@ -3,7 +3,7 @@ import sys
 import numpy as np
 
 # Use from terminal:
-# `python -m mk_rmd_questions 1 3 index.html``
+# `python -m mk_rmd_questions 1 3 index.html`
 # This will generate three blank questions for exercise 1 (exercise 1 denotes the
 # relevant `py` file)
 

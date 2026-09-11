@@ -46,7 +46,7 @@ print(100)
 
 We know that you can think of a function like a [*recipe*](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables). We give it some ingredients, and it returns a "meal".
 
-For the `print()` function, we give it some input and it displays the input.
+For the `print()` function, we give it some input and it displays the input. Here we use `print()` with some text AND and number:
 
 ```{python}
 # The `print()` function (again).
@@ -322,15 +322,6 @@ type(salary)
 # Calculate the salary over 10 months.
 salary * 10
 ```
-
-## Exercise 3 - Fix my Data
-
-Before we talk more about data types, we will do another exercise.
-
-*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
-
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_3_fix_my_data.ipynb) to launch the exercise on Binder.
-
 
 ----------------------------------------------------------
 

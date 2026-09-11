@@ -1,0 +1,110 @@
+# Exercise 4a
+
+If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_08_05_Comparison_Operators.html)_ for this exercise.
+
+## Instructions
+
+**IMPORTANT**: If you see a comment which says `# DO NOT CHANGE THIS CODE` then **DO NOT CHANGE THAT CODE**. You will probably break the exercise if you do...
+
+**First, run the code cell below**. Click on the cell, then press `Shift + Enter`:
+
+```{python}
+# RUN THIS CELL - DO NOT CHANGE THE CODE.
+import numpy as np
+from notch_4a import *
+# answer_1, answer_2, answer_3, answer_4 = pre_define_blanks(4)
+```
+
+**ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers.
+
+If the question says "make a variable called `answer_1`" you **MUST** call you variable `answer_1` or you will **NOT** get a mark.
+
+If the question says "make a variable called `me_and_my_cat`" you **MUST** call you variable `me_and_my_cat` or you will **NOT** get a mark.
+
+### Downloading your work
+
+*Binder will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file, by clicking the button shown below:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
+
+When you download your work, you can view it by uploading the file here: https://code-format.com/ipynb-viewer
+
+Later in the course we will install Python on your own laptop...
+
+
+
+## Question 1
+
+```{python}
+# Type your answer below.
+answer_1 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+check_answer_1(answer_1)
+```
+
+
+## Question 2
+
+```{python}
+# Type your answer below.
+answer_2 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+check_answer_2(answer_2)
+```
+
+
+## Question 3
+
+```{python}
+# Type your answer below.
+answer_3 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+check_answer_3(answer_3)
+```
+
+
+## Question 4
+
+```{python}
+# Type your answer below.
+answer_4 = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+check_answer_4(answer_4)
+```
+
+
+# Mark all your answers
+
+```{python}
+# DO NOT CHANGE THIS CELL.
+# Run this cell to mark all of your answers.
+mark_all(answer_1, answer_2, answer_3, answer_4)
+```
+
+## Go back to the textbook:
+
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_08_05_Comparison_Operators.html)_ to go back to the course textbook.
