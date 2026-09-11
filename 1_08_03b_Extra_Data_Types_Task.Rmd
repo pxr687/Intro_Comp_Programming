@@ -1,0 +1,75 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.17.3
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Extra Data Types (and Variables) Task - Printing a Receipt 
+
+In this task, you will a program to print a paper receipt for the cashier at a small shop.
+
+![](https://thumbs.dreamstime.com/b/people-shop-small-grocery-store-bangkok-thailand-december-people-shop-small-stand-alone-grocery-store-lumpini-park-134483398.jpg?w=500)
+
+For this task you should work together in pairs - you should use [pair programming](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#pair-programming).
+
+Again, [**DO NOT USE AI TO DO THIS TASK**](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#ai). If you are new to programming, this task will be quite hard. So, please also ask myself and your TA for help. You will learn a lot more if you do this yourself, with no AI :)
+
+## Instructions
+
+A customer buys six products, and your program should calculate the final bill.
+
+Create variables for:
+
+Product 1 name and price
+Product 2 name and price
+Product 3 name and price
+Product 4 name and price
+Product 5 name and price
+Product 6 name and price
+Quantity of each product
+Discount percentage (you do not have to do this one, but you can if you want a challenge :) )
+Amount of money the customer pays
+
+Your program should calculate:
+
+The cost of each product
+The subtotal
+The discount amount (but only if you want to include this)
+The final bill
+The change to give the customer
+
+Finally, `print()` a receipt like this:
+
+```
+====== RECEIPT ======
+
+Coffee       2 x ฿40
+Sandwich     1 x ฿35
+Lemon Cake   2 x ฿47
+Chang        2 x ฿15
+Pockey       1 x ฿40
+Peanuts      2 x ฿40
+
+Subtotal:        ฿359
+Discount:        ฿20
+Total:           ฿339
+Cash:            ฿400
+Change:          ฿61
+
+====================
+Thank you!
+```
+
+**NOTE**: you should not hard-code your receipt. You should use variables, and `print()` the value of those, together with your text.
+
+```{python}
+# Write your program here.
+```

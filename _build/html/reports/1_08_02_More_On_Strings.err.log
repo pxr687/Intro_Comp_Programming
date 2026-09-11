@@ -42,7 +42,7 @@ too_long == ...
 
 [31m---------------------------------------------------------------------------[39m
 [31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[16][39m[32m, line 1[39m
+[36mCell[39m[36m [39m[32mIn[18][39m[32m, line 1[39m
 [32m----> [39m[32m1[39m [43mtoo_long[49m == ...
 
 [31mNameError[39m: name 'too_long' is not defined
