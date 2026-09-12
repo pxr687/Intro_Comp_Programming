@@ -20,7 +20,7 @@ ghp-import -n -p -f _build/html
 
 ### To make a new Exercise Notebook (e.g. not a textbook page)
 
-For marking script explanation go to the README at: https://github.com/pxr687/Intro_Comp_Programming_DEV
+For Exercise/marking explanation go to the README at: https://github.com/pxr687/Intro_Comp_Programming_DEV
 
 ### A note on checking spelling
 
