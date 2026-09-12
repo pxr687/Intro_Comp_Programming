@@ -53,6 +53,12 @@ For the `print()` function, we give it some input and it displays the input. Her
 print("This is a very long input, which as some text and the number", 100)
 ```
 
+```{python}
+# The `print()` function (again, this time with a variable).
+number_variable = 3765
+print("This is a very long input, which as some text and another number, which is", number_variable)
+```
+
 Text and numbers are different *Data Types* in Python.
 
 It is very important to know what type of data you are using.
@@ -372,7 +378,7 @@ name
 Change the variable `eight_seven_nine` to the `int` data type.
 
 ```{python}
-eight_seven_nine= "879"
+eight_seven_nine = "879"
 
 # Show the value of `eight_seven_nine`.
 eight_seven_nine
