@@ -22,6 +22,7 @@ parts:
        - file: 1_08_00_Data_Types  # CHECKED, EXERCISE CHECKED
        - file: 1_08_01_More_On_Numbers
        - file: 1_08_02_More_On_Strings
+       ## EXTRA TASK HERE WITH ASCII ART
       #  - file: 1_08_03_Strings_and_Variables 
       #  - file: 1_08_03b_Extra_Data_Types_Task
 

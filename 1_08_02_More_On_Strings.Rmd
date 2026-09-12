@@ -98,7 +98,7 @@ number_of_students = 22
 We can use 3 quotation marks (`'` or `"`) instead of one, so that we can make long strings, without needing loads of `print()` functions!:
 
 ```{python}
-print()"This is a string on one line.")
+print("This is a string on one line.")
 ```
 
 ```{python}
