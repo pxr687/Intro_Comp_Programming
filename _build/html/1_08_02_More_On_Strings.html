@@ -404,10 +404,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-strings">Multi-line strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -600,7 +600,7 @@ let you include apostrophes inside of strings.</p>
 </section>
 <section id="f-strings">
 <h2>F-strings<a class="headerlink" href="#f-strings" title="Link to this heading">#</a></h2>
-<p>Do not worry about learning how to use f-strings right now (unless you want to). This section is just to tell you about them, so you recognise them in code. They are <em>very</em> useful, so if you do have some time, play around with them.</p>
+<p>Do not worry about learning how to use f-strings right now (unless you want to). This section is just to tell you about them, so you recognise them in other people’s code. They are <em>very</em> useful, so if you do have some time, I encourage you to play around with them.</p>
 <p>We have seen how to put numbers and text together using lots of <code class="docutils literal notranslate"><span class="pre">+</span></code> symbols and the <code class="docutils literal notranslate"><span class="pre">str</span></code> function.</p>
 <p>A better way to do this is to use <em>f-strings</em>. These take some time to get used to, but you will find them very helpful for showing results and debugging your code.</p>
 <p>To use a f-string, just put at “f” at the start of your string!:</p>
@@ -642,7 +642,7 @@ let you include apostrophes inside of strings.</p>
 </div>
 </div>
 </div>
-<p>Note that using “f” before the string is allowed in Python, because the Python compiler knows it means “this is an f-string! Let me put variables in it!”. However, we will get errors if we use other letters, as they do not mean anything to the Python compiler:</p>
+<p>Note that using “f” before the string is allowed in Python, because the Python compiler knows it means “this is an f-string! Let me put variables in it!”. However, we will get errors if we use other letters, as the Python compiler does not know what these mean:</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="s2">&quot;This is not allowed!&quot;</span>
@@ -658,6 +658,7 @@ let you include apostrophes inside of strings.</p>
 </div>
 </div>
 </div>
+<p>If you want to, you can launch this page on Binder or Live code, and use the cell below to play around with f-strings:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can use this cell to play with f-strings.</span>
@@ -679,45 +680,10 @@ let you include apostrophes inside of strings.</p>
 <p>Launch this page on Binder or Live code:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG" /></p>
 <p>Now complete the following exercises.</p>
-</section>
 <section id="task-1">
-<h2>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h2>
-<p>Make a variable called <code class="docutils literal notranslate"><span class="pre">name</span></code> which returns your name. So for me, it should return the string <code class="docutils literal notranslate"><span class="pre">&quot;Pete&quot;</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">name</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="c1"># Show the value of `name`.</span>
-<span class="n">name</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="task-2">
-<h2>Task 2<a class="headerlink" href="#task-2" title="Link to this heading">#</a></h2>
-<p>Change your <code class="docutils literal notranslate"><span class="pre">name</span></code> variable so that it returns the string <code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">Pete!&quot;</span></code>. <strong>Do this using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator and new strings.</strong>. Do NOT just type the right string and re-assign the variable.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="n">name</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="c1"># Show the value of `name`.</span>
-<span class="n">name</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="task-3">
-<h2>Task 3<a class="headerlink" href="#task-3" title="Link to this heading">#</a></h2>
-<p>The cell below makes lots of strings, and stores them in variables:</p>
+<h3>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h3>
+<p>The cell below makes lots of strings, and stores them in variables.</p>
+<p><em>Note:</em> you may find something strange when you try to combine these strings…can you see what it is? Can you fix it? Try using the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to work out what is happening. Ask myself or your TA Santi if you get stuck.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compared</span> <span class="o">=</span> <span class="s2">&quot; may be compared at any moment with the objects and purposes of all political institutions&quot;</span><span class="p">,</span>
@@ -750,7 +716,15 @@ let you include apostrophes inside of strings.</p>
 <p><em>Hint</em>: you may also need to add some space…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">too_long</span> <span class="o">==</span> <span class="o">...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">too_long</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="c1"># Show the value of the `too_long` string.</span>
+<span class="n">too_long</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
 </pre></div>
 </div>
 </div>
@@ -767,6 +741,7 @@ let you include apostrophes inside of strings.</p>
 </div>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
+</section>
 </section>
 </section>
 
@@ -836,10 +811,10 @@ let you include apostrophes inside of strings.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-strings">Multi-line strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
