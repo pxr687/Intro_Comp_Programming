@@ -245,8 +245,7 @@ The table below is a summary of this information:
 | Python Element | What it is                                                       | Example 1 (Numbers) | Example 2 (Text) |
 | -------------- | ---------------------------------------------------------------- | ------------------- | ---------------- |
 | **Literal**    | A value written directly in Python code                          | `42`                | `"hello"`        |
-| **Variable**   | A name that stores or refers to a value in our computer's memory | To make: `age = 42` | `name = "Sam"`   |
-|                |                                                                  | To show value: `age`| `name`           |
+| **Variable**   | A name that stores or refers to a value in our computer's memory | `age = 42`          | `name = "Sam"`   |
 | **Expression** | Code that Python evaluates to produce a value                    | `1 + 1`             | `name + "!"`     |
 | **Function**   | Reusable code that performs a task, usually using inputs         | `print(10)`         | `print("Hello")` |
 
