@@ -37,7 +37,7 @@ Run the cell below to get started...
 *Note*: you can do the exercise again by stopping/interrupting/restarting your kernel, and re-running the cell.
 
 ```{python}
-# RUN THIS CELL - DO NOT CHANGE THE CODE.
+##### RUN THIS CELL - DO NOT CHANGE THE CODE.
 from mk_sci_note_tester import test_me        
 test_me()
 ```
