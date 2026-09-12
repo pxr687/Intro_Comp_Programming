@@ -13,7 +13,7 @@ jupyter:
 ---
 
 <!-- #region -->
-# Extra Data Types (and Variables) Task - Printing a Receipt 
+# Extra Data Types Task - Printing a Receipt 
 
 In this task, you will a program to print a paper receipt for the cashier at a small shop.
 

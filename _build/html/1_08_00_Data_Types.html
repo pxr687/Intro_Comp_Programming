@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -201,6 +201,8 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types (and Variables) Task - Printing a Receipt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02c_Extra_Data_Types_Task.html">Extra Data Types (and Variables) Task - ASCII Art</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -498,6 +500,20 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `print()` function (again, this time with a variable).</span>
+<span class="n">number_variable</span> <span class="o">=</span> <span class="mi">3765</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is a very long input, which as some text and another number, which is&quot;</span><span class="p">,</span> <span class="n">number_variable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is a very long input, which as some text and another number, which is 3765
+</pre></div>
+</div>
+</div>
+</div>
 <p>Text and numbers are different <em>Data Types</em> in Python.</p>
 <p>It is very important to know what type of data you are using.</p>
 <p>If you accidentally change a data type, it can lead to errors.</p>
@@ -604,7 +620,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Use `round()` with some text.</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">round</span><span class="p">(</span><span class="s2">&quot;This is some text.&quot;</span><span class="p">)</span>
 
@@ -921,7 +937,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Ouch! (again).</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">int</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
 
@@ -1049,7 +1065,7 @@ document.write(`
 <p>Change the variable <code class="docutils literal notranslate"><span class="pre">eight_seven_nine</span></code> to the <code class="docutils literal notranslate"><span class="pre">int</span></code> data type.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eight_seven_nine</span><span class="o">=</span> <span class="s2">&quot;879&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eight_seven_nine</span> <span class="o">=</span> <span class="s2">&quot;879&quot;</span>
 
 <span class="c1"># Show the value of `eight_seven_nine`.</span>
 <span class="n">eight_seven_nine</span>
@@ -1075,7 +1091,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">43</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">44</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">jupyprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">jupyprint</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">eight_seven_nine</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `eight_seven_nine` should be the `int` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">eight_seven_nine</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
@@ -1126,7 +1142,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">total_ticket_revenue</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span> <span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `total_ticket_revenue` should be the `float` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">total_ticket_revenue</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">total_ticket_revenue</span> <span class="o">==</span> <span class="mf">29500.0</span><span class="p">,</span>  <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `total_ticket_revenue` is the wrong value, it should be 29500.0, but right now it is `</span><span class="si">{</span><span class="n">total_ticket_revenue</span><span class="si">}</span><span class="s2">`.&quot;</span>
@@ -1181,7 +1197,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">how_many_cats_monitors_message</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `how_many_cats_monitors_message` should be the `str` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">how_many_cats_monitors_message</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">how_many_cats_monitors_message</span> <span class="o">==</span> <span class="s2">&quot;There are 556 cats and monitor lizards in Lumpini park.&quot;</span><span class="p">,</span>  <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `how_many_cats_monitors_message` is the wrong value, it should be:</span><span class="se">\n</span><span class="s2"> `&#39;There are 556 cats and monitor lizards in Lumpini park.&#39;`</span><span class="se">\n</span><span class="s2"> ...but right now it is:</span><span class="se">\n</span><span class="s2"> `&#39;</span><span class="si">{</span><span class="n">how_many_cats_monitors_message</span><span class="si">}</span><span class="s2">&#39;`.&quot;</span>
@@ -1218,7 +1234,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">48</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">49</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">nine_nine_nine_as_words</span> <span class="o">=</span> <span class="s2">&quot;nine_nine_nine&quot;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># DO NOT CHANGE THE LINE OF CODE BELOW THIS.</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">nine_nine_nine_as_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">nine_nine_nine_as_words</span><span class="p">)</span>
@@ -1242,7 +1258,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">49</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">nine_nine_nine_as_number</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `nine_nine_nine_as_number` should be the `float` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">nine_nine_nine_as_number</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">nine_nine_nine_as_number</span> <span class="o">==</span> <span class="mf">999.0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `nine_nine_nine_as_number` is the wrong value, it should be 999.0, but right now it is `</span><span class="si">{</span><span class="n">nine_nine_nine_as_number</span><span class="si">}</span><span class="s2">`.&quot;</span>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -201,6 +201,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types (and Variables) Task - Printing a Receipt</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -433,7 +434,7 @@ document.write(`
 <p><em>Note</em>: you can do the exercise again by stopping/interrupting/restarting your kernel, and re-running the cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">mk_sci_note_tester</span><span class="w"> </span><span class="kn">import</span> <span class="n">test_me</span>        
 <span class="n">test_me</span><span class="p">()</span>
 </pre></div>
@@ -441,28 +442,22 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <h2 class="rubric" id="question-1">Question 1</h2>
-<p>Here is a number in scientific notation: 3.265150e+02</p>
+<p>Here is a number in scientific notation: -7.169863e+04</p>
 <p>Type this number WITHOUT scientific notation.</p>
 <p><em>Note</em>: you must type a number, not text, or you will get an error.</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">##### RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">mk_sci_note_tester</span><span class="w"> </span><span class="kn">import</span> <span class="n">test_me</span>        
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">test_me</span><span class="p">()</span>
 
-<span class="nn">File ~\Intro_Comp_Programming\mk_sci_note_tester.py:9,</span> in <span class="ni">test_me</span><span class="nt">(n_iter)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">for</span> <span class="n">rep</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_iter</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">jupyprint</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;## Question </span><span class="si">{</span><span class="n">rep</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">9</span>     <span class="n">score_arr</span> <span class="o">=</span> <span class="n">mk_sci_note_tester</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">jupyprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;## You got </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">score_arr</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="si">}</span><span class="s2"> out of </span><span class="si">{</span><span class="n">n_iter</span><span class="si">}</span><span class="s2"> marks!&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~\Intro_Comp_Programming\mk_sci_note_tester.py:20,</span> in <span class="ni">mk_sci_note_tester</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*Note*: you must type a number, not text, or you will get an error.&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="n">usr_input</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">usr_input</span><span class="p">,</span> <span class="n">random_big_or_small</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="n">score_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score_arr</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nn">File ~\Intro_Comp_Programming\mk_sci_note_tester.py:15,</span> in <span class="ni">test_me</span><span class="nt">(n_iter)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*Note*: you must type a number, not text, or you will get an error.&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">15</span> <span class="n">usr_input</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">usr_input</span><span class="p">,</span> <span class="n">random_big_or_small</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">score_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score_arr</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\ipykernel\kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>

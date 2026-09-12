@@ -62,7 +62,7 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Scratchpad" href="scratchpad.html" />
+    <link rel="next" title="Extra Data Types (and Variables) Task - Printing a Receipt" href="1_08_02b_Extra_Data_Types_Task.html" />
     <link rel="prev" title="More on Numbers" href="1_08_01_More_On_Numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -201,6 +201,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types (and Variables) Task - Printing a Receipt</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -558,15 +559,12 @@ let you include apostrophes inside of strings.</p>
 <p>We can use 3 quotation marks (<code class="docutils literal notranslate"><span class="pre">'</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>) instead of one, so that we can make long strings, without needing loads of <code class="docutils literal notranslate"><span class="pre">print()</span></code> functions!:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span><span class="s2">&quot;This is a string on one line.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is a string on one line.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">()</span><span class="s2">&quot;This is a string on one line.&quot;</span><span class="p">)</span>
-                                          <span class="o">^</span>
-<span class="ne">SyntaxError</span>: unmatched &#39;)&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is a string on one line.
 </pre></div>
 </div>
 </div>
@@ -587,7 +585,8 @@ let you include apostrophes inside of strings.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This string...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       
+This string...
 
 ...can go over...
 
@@ -651,7 +650,7 @@ let you include apostrophes inside of strings.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="n">e</span><span class="s2">&quot;This is not allowed!&quot;</span>
      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -739,6 +738,18 @@ let you include apostrophes inside of strings.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="n">too_long</span> <span class="o">==</span> <span class="s2">&quot;The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all.&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;That is not correct! Your string does not match!&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s1">&#39;*Great work! That is correct.*&#39;</span><span class="p">)</span>
+
+<span class="ne">AssertionError</span>: That is not correct! Your string does not match!
+</pre></div>
+</div>
+</div>
 </div>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
@@ -786,11 +797,11 @@ let you include apostrophes inside of strings.</p>
       </div>
     </a>
     <a class="right-next"
-       href="scratchpad.html"
+       href="1_08_02b_Extra_Data_Types_Task.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Scratchpad</p>
+        <p class="prev-next-title">Extra Data Types (and Variables) Task - Printing a Receipt</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

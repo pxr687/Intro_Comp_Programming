@@ -12,13 +12,13 @@ jupyter:
     name: python3
 ---
 
-# Extra Data Types (and Variables) Task - ASCII Art
+# Extra Strings Task - ASCII Art
 
 On this page we are going to write Python programs which make [ASCII Art](https://www.asciiart.eu). This is digital art, made with text characters.
 
 [Explanation in context of real work]
 
-[Benefits of task - think precisely about alignment etc]
+[Benefits of task - think precisely about alignment etc, practice multi line strings]
 
 DOES NOT HAVE TO BE EXACTLY SAME.
 
@@ -30,6 +30,8 @@ Use your knowledge of strings to make `print()` show this output:
 
 [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders)
 
+*Tip*: many ways to do this. Using variables and combining them with operators is better than making the whole output.
+
 ```{python}
 # Write your program here.
 ```
@@ -39,6 +41,8 @@ Use your knowledge of strings to make `print()` show this output:
 Use your knowledge of strings to make `print()` show this output:
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/big_hello.JPG)
+
+*Tip*: many ways to do this. You do NOT have to make the whole output, you can use your knowledge of operators () and strings to do this in a better way.
 
 ```{python}
 # Write your program here.
