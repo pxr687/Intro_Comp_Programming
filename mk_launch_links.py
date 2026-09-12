@@ -5,10 +5,10 @@
 
 # Example usage:
 
-# from mk_launch_links import make_launch_links
-# make_launch_links(2, "Expressions", "exercise_2_expressions.ipynb", "notch_2.py")
+# from mk_launch_links import make_binder_links
+# make_binder_links(2, "Expressions", "exercise_2_expressions.ipynb")
 
-def mk_binder_links(ex_num, ex_name, notebook_link, name_of_exercise_marking_file):
+def mk_binder_links(ex_num, ex_name, notebook_link):
     text =  f"""
 ## Exercise {ex_num} - {ex_name}
 

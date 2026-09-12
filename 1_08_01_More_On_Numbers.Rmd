@@ -312,17 +312,15 @@ In summary:
 
 - doing calculations with very big or very small numbers can lead to floating point errors.
 
-## Mini-exercise:  Numbers
 
-Launch this page on Binder or Live code:
+## Exercise 2b - Scientific Notation
 
-![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
+We will now do another exercise!
 
-Now complete the following exercises.
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
-```{python}
-print('These are marked by outcome!')
-```
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2b_scientific_notation.ipynb) to launch the exercise on Binder.
+
 
 ----------------------------------------------------------
 
