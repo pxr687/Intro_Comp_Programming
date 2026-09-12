@@ -343,9 +343,31 @@ Launch this page on Binder or Live code:
 
 Then complete the tasks below. 
 
-At the moment, you will some error messages. When you pass each task you will see a message saying "That is **correct**! Well done!". If you see an `AssertionError` message, it means you still have the wrong answer. 
+At the moment, you will some error messages. When you pass each task after task 1 you will see a message saying "That is **correct**! Well done!". If you see an `AssertionError` message, it means you still have the wrong answer. 
 
 ### Task 1
+
+Make a variable called `name` which returns your name. So for me, it should return the string `"Pete"`.
+
+```{python}
+# Your code here
+name = ...
+
+# Show the value of `name`.
+name
+```
+
+Now, change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this using the `+` operator and making new strings.**. Do NOT just type the right string and re-assign the variable e.g. do not use `name = Hello Pete!`.
+
+```{python}
+# Your code here
+name = ...
+
+# Show the value of `name`.
+name
+```
+
+### Task 2
 
 Change the variable `eight_seven_nine` to the `int` data type.
 
@@ -365,7 +387,7 @@ assert type(eight_seven_nine) == int, f"Ouch, that's not right, `eight_seven_nin
 jupyprint("*That is **correct**! Well done!*")
 ```
 
-### Task 2
+### Task 3
 
 The manager of a theme park is calculating their `total_ticket_revenue`. 
 
@@ -397,7 +419,7 @@ assert total_ticket_revenue == 29500.0,  f"Ouch, that's not right, `total_ticket
 jupyprint("*That is **correct**! Well done!*")
 ```
 
-### Task 3
+### Task 4
 
 A biologist is counting the number of cats and lizards that live in Lumpini park in Bangkok.
 
@@ -412,6 +434,8 @@ They want to use `print()` to show this message:
 They want to use Python to calculate the number (556) in the message, using the  `number_of_monitor_lizards` and `number_of_cats` variables (e.g. they do NOT want to hard-code the number in the message text).
 
 At the moment they are not getting the result they want...can you fix their code?
+
+*Note*: to solve this exercise, you may want to look at this [Stack Overflow answer](https://stackoverflow.com/questions/12018992/print-combining-strings-and-numbers). There is more than one way you can solve this!
 
 ```{python}
 number_of_monitor_lizards = 435
@@ -432,7 +456,7 @@ assert how_many_cats_monitors_message == "There are 556 cats and monitor lizards
 jupyprint("*That is **correct**! Well done!*")
 ```
 
-### Task 4
+### Task 5
 
 Michael is writing some code. He needs a variable with the value 999.0 - he needs it to be in the `float` data type.
 
@@ -442,7 +466,7 @@ He tries the code below, but he is getting an error message.
 
 *Then*, fix his code. Store your answer in a variable called `nine_nine_nine_as_number` which should have the value 999.0.
 
-**Do not hard-code `nine_nine_nine_as_number = 999.0`. Change the string `nine_nine_nine` instead, so that the next line of code works without an error. E.g. do NOT change the line `nine_nine_nine_as_number = float(nine_nine_nine_as_words)`**.
+**Do not hard-code `nine_nine_nine_as_number = 999.0`.** Change the string `nine_nine_nine` instead, so that the next line of code works without an error. E.g. do NOT change the line `nine_nine_nine_as_number = float(nine_nine_nine_as_words)`.
 
 ```{python tags=c("raises-exception")}
 nine_nine_nine_as_words = "nine_nine_nine"

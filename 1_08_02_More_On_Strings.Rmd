@@ -115,7 +115,7 @@ This string...
 
 ## F-strings
 
-Do not worry about learning how to use f-strings right now (unless you want to). This section is just to tell you about them, so you recognise them in code. They are *very* useful, so if you do have some time, play around with them.
+Do not worry about learning how to use f-strings right now (unless you want to). This section is just to tell you about them, so you recognise them in other people's code. They are *very* useful, so if you do have some time, I encourage you to play around with them.
 
 We have seen how to put numbers and text together using lots of `+` symbols and the `str` function.
 
@@ -138,11 +138,13 @@ f"This is an f-string! It can show the value of my `number_of_students` variable
 f"We can also put literals/expressions inside our string, like this: {8 * 100}" 
 ```
 
-Note that using "f" before the string is allowed in Python, because the Python compiler knows it means "this is an f-string! Let me put variables in it!". However, we will get errors if we use other letters, as they do not mean anything to the Python compiler:
+Note that using "f" before the string is allowed in Python, because the Python compiler knows it means "this is an f-string! Let me put variables in it!". However, we will get errors if we use other letters, as the Python compiler does not know what these mean:
 
 ```{python tags=c("raises-exception")}
 e"This is not allowed!"
 ```
+
+If you want to, you can launch this page on Binder or Live code, and use the cell below to play around with f-strings:
 
 ```{python}
 # You can use this cell to play with f-strings.
@@ -159,33 +161,12 @@ Launch this page on Binder or Live code:
 
 Now complete the following exercises.
 
-## Task 1
 
-Make a variable called `name` which returns your name. So for me, it should return the string `"Pete"`.
+### Task 1
 
-```{python}
-# Your code here
-name = ...
+The cell below makes lots of strings, and stores them in variables.
 
-# Show the value of `name`.
-name
-```
-
-## Task 2
-
-Change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this using the `+` operator and new strings.**. Do NOT just type the right string and re-assign the variable.
-
-```{python}
-# Your code here
-name = ...
-
-# Show the value of `name`.
-name
-```
-
-## Task 3
-
-The cell below makes lots of strings, and stores them in variables:
+*Note:* you may find something strange when you try to combine these strings...can you see what it is? Can you fix it? Try using the `type()` function to work out what is happening. Ask myself or your TA Santi if you get stuck.
 
 ```{python}
 compared = " may be compared at any moment with the objects and purposes of all political institutions",
@@ -218,7 +199,10 @@ In the cell below create a variable called `too_long` which contains the whole s
 *Hint*: you may also need to add some space...
 
 ```{python}
-too_long == ...
+too_long = ...
+
+# Show the value of the `too_long` string.
+too_long
 ```
 
 **Run the cell below to mark your answer:**

@@ -28,6 +28,12 @@ Almost anything you can think of that a computer can do can be done with Python,
 
 ...but before we do any of that fun stuff, let's make sure we understand the basic Python elements that we saw on earlier pages.
 
+It is important for you to know these Python elemtns for two reasons:
+
+1. For your [exams, tests and assignments](1_02_Class_Grades_Assignments_Exams).
+
+2. It helps you understand, debug and fix *errors in your code*. Error messages often talk about literals, strings, expressions etc. You will often know *why* an error happened if you understand the ideas on this page.
+
 ## Literals
 
 A raw number or piece of text typed in Python code is called a *literal*:
