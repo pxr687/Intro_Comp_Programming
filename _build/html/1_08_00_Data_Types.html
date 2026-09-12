@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,7 +62,7 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Numbers" href="1_08_01_More_On_Numbers.html" />
+    <link rel="next" title="More on Numbers" href="1_08_01_More_On_Numbers.html" />
     <link rel="prev" title="Summary: Literals, Variables, Expressions and Functions" href="1_07_Summary_Literals_Variables_Expressions_Functions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -199,8 +199,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -404,6 +404,13 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-avoid-errors-use-type">How to avoid errors: use <code class="docutils literal notranslate"><span class="pre">type()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-data-types">Changing Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-data-types">Mini-exercise: Data Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4">Task 4</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -821,6 +828,32 @@ document.write(`
 </div>
 </div>
 <p>Now the decimal place has disappeared…</p>
+<p>One important thing to know is that dividing two <code class="docutils literal notranslate"><span class="pre">int</span></code>s will always return a float:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can see the output of <code class="docutils literal notranslate"><span class="pre">2/2</span></code> is <code class="docutils literal notranslate"><span class="pre">1.0</span></code>. The decimal place tells us this is the <code class="docutils literal notranslate"><span class="pre">float</span></code> data type, but we can also check this with the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
 <p>If we want to change a number (<code class="docutils literal notranslate"><span class="pre">float</span></code> or <code class="docutils literal notranslate"><span class="pre">int</span></code>) to text (<code class="docutils literal notranslate"><span class="pre">str</span></code>), we can do this with the <code class="docutils literal notranslate"><span class="pre">str()</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -887,7 +920,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Ouch! (again).</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">int</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
 
@@ -966,8 +999,222 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="mini-exercise-data-types">
+<h2>Mini-exercise: Data Types<a class="headerlink" href="#mini-exercise-data-types" title="Link to this heading">#</a></h2>
+<p>Launch this page on Binder or Live code:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG" /></p>
+<p>Then complete the tasks below.</p>
+<p>At the moment, you will some error messages. When you pass each task you will see a message saying “That is <strong>correct</strong>! Well done!”. If you see an <code class="docutils literal notranslate"><span class="pre">AssertionError</span></code> message, it means you still have the wrong answer.</p>
+<section id="task-1">
+<h3>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h3>
+<p>Change the variable <code class="docutils literal notranslate"><span class="pre">eight_seven_nine</span></code> to the <code class="docutils literal notranslate"><span class="pre">int</span></code> data type.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eight_seven_nine</span><span class="o">=</span> <span class="s2">&quot;879&quot;</span>
+
+<span class="c1"># Show the value of `eight_seven_nine`.</span>
+<span class="n">eight_seven_nine</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;879&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Run the cell below to mark your answer</strong>:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">jupyprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">jupyprint</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">eight_seven_nine</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `eight_seven_nine` should be the `int` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">eight_seven_nine</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*That is **correct**! Well done!*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">jupyprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">jupyprint</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">eight_seven_nine</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `eight_seven_nine` should be the `int` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">eight_seven_nine</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*That is **correct**! Well done!*&quot;</span><span class="p">)</span>
+
+<span class="ne">AssertionError</span>: Ouch, that&#39;s not right, `eight_seven_nine` should be the `int` data type. Right now it is `&lt;class &#39;str&#39;&gt;`.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-2">
+<h3>Task 2<a class="headerlink" href="#task-2" title="Link to this heading">#</a></h3>
+<p>The manager of a theme park is calculating the <code class="docutils literal notranslate"><span class="pre">total_ticket_revenue</span></code>. First, they make a <code class="docutils literal notranslate"><span class="pre">number_of_visitors</span></code> variable which should have the value one hundred and eighteen. The price of each ticket is ฿250, this should be in the <code class="docutils literal notranslate"><span class="pre">ticket_price</span></code> variable.</p>
+<p>The manager wants the <code class="docutils literal notranslate"><span class="pre">total_ticket_revenue</span></code> to be in the <code class="docutils literal notranslate"><span class="pre">float</span></code> data type.</p>
+<p>However, the manager is getting a strange result. Can you fix it?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_visitors</span> <span class="o">=</span> <span class="mi">118</span>
+
+<span class="n">ticket_price</span> <span class="o">=</span> <span class="s2">&quot;250&quot;</span>
+
+<span class="n">total_ticket_revenue</span> <span class="o">=</span> <span class="n">number_of_visitors</span> <span class="o">*</span> <span class="n">ticket_price</span>
+
+<span class="c1"># Show the value of `total_ticket_revenue`.</span>
+<span class="n">total_ticket_revenue</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250250&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Run the cell below to mark your answer</strong>:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">total_ticket_revenue</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span> <span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `total_ticket_revenue` should be the `float` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">total_ticket_revenue</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="k">assert</span> <span class="n">total_ticket_revenue</span> <span class="o">==</span> <span class="mf">29500.0</span><span class="p">,</span>  <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `total_ticket_revenue` is the wrong value, it should be 29500.0, but right now it is `</span><span class="si">{</span><span class="n">total_ticket_revenue</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*That is **correct**! Well done!*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">43</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">total_ticket_revenue</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span> <span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `total_ticket_revenue` should be the `float` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">total_ticket_revenue</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">total_ticket_revenue</span> <span class="o">==</span> <span class="mf">29500.0</span><span class="p">,</span>  <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `total_ticket_revenue` is the wrong value, it should be 29500.0, but right now it is `</span><span class="si">{</span><span class="n">total_ticket_revenue</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*That is **correct**! Well done!*&quot;</span><span class="p">)</span>
+
+<span class="ne">AssertionError</span>: Ouch, that&#39;s not right, `total_ticket_revenue` should be the `float` data type. Right now it is `&lt;class &#39;str&#39;&gt;`.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-3">
+<h3>Task 3<a class="headerlink" href="#task-3" title="Link to this heading">#</a></h3>
+<p>A biologist is counting the number of cats and lizards that live in Lumpini park in Bangkok.</p>
+<p>There are 435 monitor lizards and 121 cats. The biologist puts these values in variables called <code class="docutils literal notranslate"><span class="pre">number_of_monitor_lizards</span></code> and <code class="docutils literal notranslate"><span class="pre">number_of_cats</span></code>.</p>
+<p>They want to use <code class="docutils literal notranslate"><span class="pre">print()</span></code> to show this message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">There</span> <span class="n">are</span> <span class="mi">556</span> <span class="n">cats</span> <span class="ow">and</span> <span class="n">monitor</span> <span class="n">lizards</span> <span class="ow">in</span> <span class="n">Lumpini</span> <span class="n">park</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>They want to use Python to calculate the number (556) in the message, using the  <code class="docutils literal notranslate"><span class="pre">number_of_monitor_lizards</span></code> and <code class="docutils literal notranslate"><span class="pre">number_of_cats</span></code> variables (e.g. they do NOT want to hard-code the number in the message text).</p>
+<p>At the moment they are not getting the result they want…can you fix their code?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_monitor_lizards</span> <span class="o">=</span> <span class="mi">435</span>
+
+<span class="n">number_of_cats</span> <span class="o">=</span> <span class="mi">121</span>
+
+<span class="c1"># Add the variables together in the messagee.</span>
+<span class="n">how_many_cats_monitors_message</span> <span class="o">=</span> <span class="s2">&quot;There are number_of_cats+number_of_monitor_lizards cats and monitor lizards in Lumpini park.&quot;</span>
+
+<span class="c1"># Show the message.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">how_many_cats_monitors_message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are number_of_cats+number_of_monitor_lizards cats and monitor lizards in Lumpini park.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">how_many_cats_monitors_message</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `how_many_cats_monitors_message` should be the `str` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">how_many_cats_monitors_message</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="k">assert</span> <span class="n">how_many_cats_monitors_message</span> <span class="o">==</span> <span class="s2">&quot;There are 556 cats and monitor lizards in Lumpini park.&quot;</span><span class="p">,</span>  <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `how_many_cats_monitors_message` is the wrong value, it should be:</span><span class="se">\n</span><span class="s2"> `&#39;There are 556 cats and monitor lizards in Lumpini park.&#39;`</span><span class="se">\n</span><span class="s2"> ...but right now it is:</span><span class="se">\n</span><span class="s2"> `&#39;</span><span class="si">{</span><span class="n">how_many_cats_monitors_message</span><span class="si">}</span><span class="s2">&#39;`.&quot;</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*That is **correct**! Well done!*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">45</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">how_many_cats_monitors_message</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span> <span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `how_many_cats_monitors_message` should be the `str` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">how_many_cats_monitors_message</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">how_many_cats_monitors_message</span> <span class="o">==</span> <span class="s2">&quot;There are 556 cats and monitor lizards in Lumpini park.&quot;</span><span class="p">,</span>  <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `how_many_cats_monitors_message` is the wrong value, it should be:</span><span class="se">\n</span><span class="s2"> `&#39;There are 556 cats and monitor lizards in Lumpini park.&#39;`</span><span class="se">\n</span><span class="s2"> ...but right now it is:</span><span class="se">\n</span><span class="s2"> `&#39;</span><span class="si">{</span><span class="n">how_many_cats_monitors_message</span><span class="si">}</span><span class="s2">&#39;`.&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*That is **correct**! Well done!*&quot;</span><span class="p">)</span>
+
+<span class="ne">AssertionError</span>: Ouch, that&#39;s not right, `how_many_cats_monitors_message` is the wrong value, it should be:
+ <span class="err">`</span><span class="s1">&#39;There are 556 cats and monitor lizards in Lumpini park.&#39;</span><span class="err">`</span>
+ <span class="o">...</span><span class="n">but</span> <span class="n">right</span> <span class="n">now</span> <span class="n">it</span> <span class="ow">is</span><span class="p">:</span>
+ <span class="err">`</span><span class="s1">&#39;There are number_of_cats+number_of_monitor_lizards cats and monitor lizards in Lumpini park.&#39;</span><span class="err">`</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-4">
+<h3>Task 4<a class="headerlink" href="#task-4" title="Link to this heading">#</a></h3>
+<p>Michael is writing some code. He needs a variable with the value 999.0 - he needs it to be in the <code class="docutils literal notranslate"><span class="pre">float</span></code> data type.</p>
+<p>He tries the code below, but he is getting an error message.</p>
+<p><em>First</em>, think about <em>why</em> he gets the error. His string <code class="docutils literal notranslate"><span class="pre">&quot;nine_nine_nine&quot;</span></code> has three <code class="docutils literal notranslate"><span class="pre">nine</span></code>’s - why can Python not change this to number 999.0?</p>
+<p><em>Then</em> fix his code. Store your answer in a variable called <code class="docutils literal notranslate"><span class="pre">nine_nine_nine_as_number</span></code> which should have the value 999.0.</p>
+<p><strong>Do not hard-code <code class="docutils literal notranslate"><span class="pre">nine_nine_nine_as_number</span> <span class="pre">=</span> <span class="pre">999.0</span></code>. Change the string <code class="docutils literal notranslate"><span class="pre">nine_nine_nine</span></code> instead, so that the next line of code works without an error. E.g. do NOT change the line <code class="docutils literal notranslate"><span class="pre">nine_nine_nine_as_number</span> <span class="pre">=</span> <span class="pre">float(nine_nine_nine_as_words)</span></code></strong>.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nine_nine_nine_as_words</span> <span class="o">=</span> <span class="s2">&quot;nine_nine_nine&quot;</span>
+
+<span class="c1"># DO NOT CHANGE THE LINE OF CODE BELOW THIS.</span>
+<span class="n">nine_nine_nine_as_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">nine_nine_nine_as_words</span><span class="p">)</span>
+
+<span class="c1"># Show the value of `nine_nine_nine_as_number`.</span>
+<span class="n">nine_nine_nine_as_number</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">46</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">nine_nine_nine_as_words</span> <span class="o">=</span> <span class="s2">&quot;nine_nine_nine&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># DO NOT CHANGE THE LINE OF CODE BELOW THIS.</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">nine_nine_nine_as_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">nine_nine_nine_as_words</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Show the value of `nine_nine_nine_as_number`.</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">nine_nine_nine_as_number</span>
+
+<span class="ne">ValueError</span>: could not convert string to float: &#39;nine_nine_nine&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">nine_nine_nine_as_number</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `nine_nine_nine_as_number` should be the `float` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">nine_nine_nine_as_number</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="k">assert</span> <span class="n">nine_nine_nine_as_number</span> <span class="o">==</span> <span class="mf">999.0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `nine_nine_nine_as_number` is the wrong value, it should be 999.0, but right now it is `</span><span class="si">{</span><span class="n">nine_nine_nine_as_number</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*That is **correct**! Well done!*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">47</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN THE CELL.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">nine_nine_nine_as_number</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `nine_nine_nine_as_number` should be the `float` data type. Right now it is `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">nine_nine_nine_as_number</span><span class="p">)</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">assert</span> <span class="n">nine_nine_nine_as_number</span> <span class="o">==</span> <span class="mf">999.0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Ouch, that&#39;s not right, `nine_nine_nine_as_number` is the wrong value, it should be 999.0, but right now it is `</span><span class="si">{</span><span class="n">nine_nine_nine_as_number</span><span class="si">}</span><span class="s2">`.&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;*That is **correct**! Well done!*&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;nine_nine_nine_as_number&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
+</section>
 </section>
 </section>
 
@@ -1015,7 +1262,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Numbers</p>
+        <p class="prev-next-title">More on Numbers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1037,6 +1284,13 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-avoid-errors-use-type">How to avoid errors: use <code class="docutils literal notranslate"><span class="pre">type()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-data-types">Changing Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-data-types">Mini-exercise: Data Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4">Task 4</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
