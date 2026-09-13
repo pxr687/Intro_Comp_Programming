@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -462,7 +462,53 @@ representation of the value that results: <code class="docutils literal notransl
 </div>
 <p>It is a recipe that returns a value.  In this case the value is Python’s
 internal representation of the text “Magneto”. We know that this is called a <em>text literal</em>, or <em>string literal</em>.</p>
-<p>As we also know, we can store the result of the expression in a variable, using an <em>assignment
+<p>If you tried out that final exercise on the <a class="reference internal" href="1_08_02_More_On_Strings.html"><span class="doc std std-doc">last page</span></a>, you found that only the <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> operators work with string literals. All the other arithmetic operators (<code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code>) will cause an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This works.</span>
+<span class="s2">&quot;It is just one string&quot;</span> <span class="o">+</span> <span class="s2">&quot; after another.&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;It is just one string after another.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This also works. Note: this only works if the second literal is a number, not another string.</span>
+<span class="s2">&quot;It is one string after another! &quot;</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;It is one string after another! It is one string after another! It is one string after another! It is one string after another! It is one string after another! It is one string after another! It is one string after another! It is one string after another! It is one string after another! It is one string after another! &#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This does NOT work.</span>
+<span class="s2">&quot;It is just one string&quot;</span> <span class="o">/</span> <span class="s2">&quot; after another.&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This does NOT work.</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="s2">&quot;It is just one string&quot;</span> <span class="o">/</span> <span class="s2">&quot; after another.&quot;</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for /: &#39;str&#39; and &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we also know, we can store the result of the expression in a variable, using an <code class="docutils literal notranslate"><span class="pre">=</span></code> operator in an <em>assignment
 statement</em>.</p>
 <p>We know that the assignment statement has a <em>variable name</em> on the left hand side, then an equals sign
 <code class="docutils literal notranslate"><span class="pre">=</span></code>, followed by an expression on the right hand side.</p>
@@ -530,7 +576,7 @@ code into the cell, and see what Python says.  Is that what you expected?</p>
 <span class="n">book_url</span> <span class="o">=</span> <span class="s1">&#39;http://www.gutenberg.org/ebooks/42671.txt.utf-8&#39;</span>
 
 <span class="c1"># Get the book from the website.</span>
-<span class="n">book_text</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">book_url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+<span class="n">book_text</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">book_url</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
 
 <span class="c1"># Show the first 5000 lines (do not worry about understanding this code for now).</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">book_text</span><span class="p">[:</span><span class="mi">5000</span><span class="p">])</span>
