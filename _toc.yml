@@ -30,9 +30,10 @@ parts:
   #     - file: 1_08_03_Strings_and_Variables 
   #     - file: 1_08_04_String_Methods
   #     - file: 1_08_05_Comparison_Operators   ### ADD IN EXCERCISE
+  #     - file: 1_08_05b_Getting_Keyboard_Input ### ADD IN EXERCISE
   #     - file: 1_08_06_Lists                  ### ADD IN EXCERCISE
   #     - file: 1_09_Statements
-  #     - file: 1_10_Summary_Variables_Literals_Expressions_Statements_Functions  ### ADD IN QUIZ, ALREADY HAS AN EXERCISE
+  #     - file: 1_10_Summary_Variables_Literals_Expressions_Statements_Functions  ### ADD IN QUIZ, ALREADY HAS AN EXERCISE, ADD MORE Qs
 
 # WEEK 4
 # Test on first three weeks.

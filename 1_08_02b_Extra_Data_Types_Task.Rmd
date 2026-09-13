@@ -82,7 +82,7 @@ Change:          ฿61
 Thank you!
 ```
 
-**Note**: you should not hard-code your receipt. You should use variables, and `print()` the value of those, together with your text.
+**Note**: you should not hard-code your receipt. You should use variables, and `print()` the value of those variables, together with other text like `"Thank you!"`.
 
 **Also note:** there is more than one correct way to do this task...
 <!-- #endregion -->

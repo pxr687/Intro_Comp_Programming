@@ -31,7 +31,7 @@ jgs  /  ``'._-''-_.'``  \
 
 This task is *fun but hard*. You will have to think about how to do it first. Remember that moving away from the computer and using a [pen and paper](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#have-a-piece-of-paper-and-a-pen-next-to-you) can help you if you get stuck. You can also work with a partner and try to solve the task with [pair programming](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#pair-programming).
 
-Again, [**DO NOT USE AI TO DO THIS TASK**](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#ai). Please also ask myself or your TA for help. You will learn a lot more if you do this yourself, with no AI :)
+Again, [**DO NOT USE AI TO DO THIS TASK**](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#ai). An AI will solve this task in a minute or two, and you will not learn anything. Please ask myself or your TA for help if you need it. You will learn a lot more if you do this yourself, with no AI :)
 
 This task will help you think about *visual alignment*, a very important concept in programming:
 
