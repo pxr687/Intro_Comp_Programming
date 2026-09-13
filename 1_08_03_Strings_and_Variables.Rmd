@@ -16,7 +16,7 @@ jupyter:
 # Strings, variables and expressions
 
 ```{note}
-This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/strings_and_variables.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/strings_and_variables.html) and [Brett, Adhikari, Denero and Wagner (2021)](https://matthew-brett.github.io/cfd2020/intro/Plotting_the_Classics.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
 You remember that the following line of code is an *expression* - a recipe that returns a value:
@@ -26,7 +26,7 @@ You remember that the following line of code is an *expression* - a recipe that 
 10.50
 ```
 
-We can see that this is an expression, because Jupyter displayed a text
+We can see that this is an expression, because Jupyter showed us a text
 representation of the value that results: `10.5`.
 
 We know that `10.50` is called a *float literal*.
@@ -38,9 +38,9 @@ Now think about this expression:
 ```
 
 It is a recipe that returns a value.  In this case the value is Python's
-internal representation of the text "Magneto".
+internal representation of the text "Magneto". We know that this is called a *text literal*, or *string literal*.
 
-As we know, we can store the result of the expression in a variable, using an *assignment
+As we also know, we can store the result of the expression in a variable, using an *assignment
 statement*.
 
 We know that the assignment statement has a *variable name* on the left hand side, then an equals sign
@@ -53,10 +53,11 @@ villain = "Magneto"
 villain
 ```
 
-Notice the difference between a *variable name* (no quotes) and the *string
+Look at the difference between a *variable name* (no quotes) and the *string
 literal* (surrounded by quotes).   A variable name is a name that refers to a
 value.  It has to follow the [rules of variable names](1_05_Variables.html#rules-about-variable-names).  A string literal is an
 expression, that evaluates to Python's representation of text.
+
 
 ## Mini-exercise
 
@@ -74,18 +75,64 @@ code into the cell, and see what Python says.  Is that what you expected?
 "goodie" = Professor X
 ```
 
-Now fix the cell above so the variable `goodie` gets the value of the text
-fragment "Professor X".
+Now fix the cell above so the variable `goodie` gets the value of the text "Professor X".
 
 ```{python}
 # Your answer here.
 ```
 
-## Exercise 3 - Fix my Data
+# A whole book as a variable
 
-Before we talk more about data types, we will do another exercise.
+The strings that we store in variables do not have to be simple, short strings.
 
-*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+To show you the power of string variables, I will now show you now how to get *a whole book* from the internet and store it as a Python variable.
+
+For now, do not worry too much about the code to do this, I will explain what it does:
+
+- first it `import`s a Python library which lets us get data from the internet (from a website address)
+
+- next it makes a variable which has a string of a website address (this variable is called `book_url`
+
+- then it gets a book from that web address, and stores it in a Python variable called `book_text`.
+
+- finally, it prints out the first 5000 lines of the book
+
+The book that we will store as a string variable is [Pride and Prejudice, by Jane Austen](https://en.wikipedia.org/wiki/Pride_and_Prejudice)
+
+```{python}
+# Get the text for Pride and Prejudice.
+
+# Import a library to get data from the internet.
+import urllib.request
+
+# Make a string variable which is a website address.
+book_url = 'http://www.gutenberg.org/ebooks/42671.txt.utf-8'
+
+# Get the book from the website.
+book_text = urllib.request.urlopen(book_url).read().decode()
+
+# Show the first 5000 lines (do not worry about understanding this code for now).
+print(book_text[:5000])
+```
+
+You can check this is the same as the text you see by opening the URL in your browser: http://www.gutenberg.org/ebooks/42671.txt.utf-8
+
+String data stored in variables like this can be used for lots of different things, including:
+
+- training AI large language models like ChatGPT
+
+- [sentiment analysis](https://www.youtube.com/watch?v=5HQCNAsSO-s), which uses machine learning to learn about the emotions in text. E.g. we could do sentiment analysis with social media posts about a company or product to see if people like or dislike it
+
+- academic research like [Computational Theology](https://www.semanticscholar.org/topic/Computational-theology/3454560) which uses computer science techniques to study religious books
+
+
+## Exercise - Fix my Data
+
+Before we talk more about data types, we will do another exercise. This exercise will test your knowledge of different data types: `int`s, `float`s and `str`s. You will fix lots of broken code.
+
+*Remember*: try to understand every error message, instead of fixing it without thinking about *why* the error happened...
+
+*Remember also*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
 Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_3_fix_my_data.ipynb) to launch the exercise on Binder.
 

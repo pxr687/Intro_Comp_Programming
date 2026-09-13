@@ -1,0 +1,63 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.17.3
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Helping each other learn, and asking for help
+
+Programming is hard. For some of you, this is your first time programming, so this is the hardest programming will ever be.
+
+I do **NOT** want any student in this class to feel left behind, like in the image below:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/left_behind.JPG)
+
+If you feel like:
+
+- you do not understand something in this class (or last class, or any class)
+
+- you want something explained again
+
+- you want extra help with something
+
+...then please ask myself or our TA Santi for help - we are happy to help you, it is our job! 🙂
+
+If you *have* programmed before, then:
+
+- please do **NOT** do exercises before I ask the whole class to do them. We should all work on the same exercises at the same time. This way you can help each other to learn. If some people move ahead with the exercises, then we are not working and learning together as a class...
+
+- if you finish an exercise early, then practice writing Python programs on the [Scratchpad](https://pxr687.github.io/Intro_Comp_Programming/scratchpad.html) textbook page.
+
+
+## Making mistakes - mistakes are *good* they help us to learn!
+
+Here is a graph which demonstrates how machine learning models AND our own brains, learn things:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/learning_churchland.JPG)
+(Image from [here](https://plato.stanford.edu/entries/neuroscience/figure2.html)).
+
+On this graph, the *lower* the green line is, the better a machine learning model (or our brain) can do a task.
+
+So, the closer the green line is to the "floor" of the graph, the better our model (or us) can do a task.
+
+How does the green line get lower? - It does this through *making mistakes and learning from them*.
+
+As part of the class I will sometimes ask students to come and write code on my laptop, on the big screen.
+
+I would like everyone to feel relaxed and comfortable as they do this, even if they make mistakes as they code. Please do not worry if you make mistakes. As a class, we will all help you to fix them. 
+
+**This is important**:
+
+- be kind and respectful to your classmates if they make a mistake. Making mistakes is the only way anybody learns to code. This is the same when you learn a programming language as when you learn a language like English.
+
+- we can all learn from mistakes together.
+
+Remember: try to understand every error message you get, it will make you a better programmer!

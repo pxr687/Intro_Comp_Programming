@@ -206,6 +206,15 @@ We *could* run this code lots of times and write down the number of girls in eac
 That would take a long time. On the next textbook pages, we will learn some more Python tools to make this process faster and more efficient...
 
 
+## Exercise - Lists
+
+We will now do another exercise!
+
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4c_lists.ipynb) to launch the exercise on Binder.
+
+
 ----------------------------------------------------------
 
 [🏡](intro.md).

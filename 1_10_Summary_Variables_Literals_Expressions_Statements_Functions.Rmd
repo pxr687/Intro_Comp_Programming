@@ -36,7 +36,7 @@ A *statement* - like a variable assignment statement - is [asking Python to *do*
 An *expression* is asking Python to *show us something* (e.g. "what is the value of `100 * 2`?", or "what is the value of the variable `number_3`?"
 
 
-## Exercise 5 - Functions and Methods
+## Exercise - Data Types, Comparison Operators, Functions and Methods
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 

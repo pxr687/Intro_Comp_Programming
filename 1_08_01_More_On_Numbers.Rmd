@@ -313,7 +313,7 @@ In summary:
 - doing calculations with very big or very small numbers can lead to floating point errors.
 
 
-## Exercise 2b - Scientific Notation
+## Exercise - Scientific Notation
 
 We will now do another exercise!
 
