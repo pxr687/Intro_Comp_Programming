@@ -6,6 +6,7 @@ parts:
     chapters:
       - file: 1_01_Class_Rules
       - file: 1_02_Class_Grades_Assignments_Exams
+      - file: 1_02b_Asking_For_Help
 
   - caption: Basic Python Elements and Grammar
     chapters:
@@ -23,20 +24,18 @@ parts:
        - file: 1_08_01_More_On_Numbers
        - file: 1_08_02_More_On_Strings
        - file: 1_08_02b_Extra_Data_Types_Task
-       - file: 1_08_02c_Extra_Data_Types_Task
-       ## EXTRA TASK HERE WITH ASCII ART
-      #  - file: 1_08_03_Strings_and_Variables 
-      #  - 
+       - file: 1_08_02c_Extra_Data_Types_Task_Two
 
 # WEEK 3 ---- ADD IN BASIC CHAT BOT AFTER YOU SHOW INPUT()
+  #     - file: 1_08_03_Strings_and_Variables 
   #     - file: 1_08_04_String_Methods
   #     - file: 1_08_05_Comparison_Operators   ### ADD IN EXCERCISE
   #     - file: 1_08_06_Lists                  ### ADD IN EXCERCISE
   #     - file: 1_09_Statements
   #     - file: 1_10_Summary_Variables_Literals_Expressions_Statements_Functions  ### ADD IN QUIZ, ALREADY HAS AN EXERCISE
 
-  # AT THIS POINT: getting input from keyboard, use comparisons etc to check input.
-  # MAKE A BUDGETING TOOL: input variables with keyboard, print budget.
+# WEEK 4
+# Test on first three weeks.
 
 # WEEK 5
   # - caption: More Python Elements and Grammar
@@ -45,6 +44,7 @@ parts:
       # - file: 1_12_Writing_Your_Own_Functions
       # - file: 1_13_More_Data_Types
       # - file: 1_14_More_Keywords
+      # - file: 1_15_Numpy_Arrays
 
   - caption: Scratchpad
     chapters:
