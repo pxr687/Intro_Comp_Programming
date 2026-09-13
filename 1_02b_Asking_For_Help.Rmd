@@ -56,8 +56,8 @@ I would like everyone to feel relaxed and comfortable as they do this, even if t
 
 **This is important**:
 
-- be kind and respectful to your classmates if they make a mistake. Making mistakes is the only way anybody learns to code. This is the same when you learn a programming language as when you learn a language like English.
+- be kind and respectful to your classmates if they make a mistake. Making mistakes is the only way anybody learns to code. This is the same when you learn a programming language as when you learn a language like English
 
-- we can all learn from mistakes together.
+- we can all learn from mistakes together
 
 Remember: try to understand every error message you get, it will make you a better programmer!
