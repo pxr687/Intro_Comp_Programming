@@ -214,6 +214,26 @@ assert too_long == "The representatives of the French people, organized as a Nat
 jupyprint('*Great work! That is correct.*')
 ```
 
+## Arithmetic operators and strings
+
+Here are the most important operators that we looked at on the [Expressions](1_06_Expressions) page.
+
+| Expression Type | Operator | Example    | Value     |
+|-----------------|----------|------------|-----------|
+| Addition        | `+`      | `2 + 3`    | `5`       |
+| Subtraction     | `-`      | `2 - 3`    | `-1`      |
+| Multiplication  | `*`      | `2 * 3`    | `6`       |
+| Division        | `/`      | `100 / 10` | `10`      |
+| Remainder       | `%`      | `101 % 10` | `1`       |
+| Exponentiation (Power)  | `**`     | `10 ** 2`  | `100`  
+
+In the cellow, try these out with different strings. See what happens, see which ones you can use with string and which ones you cannot. There is an example in the cell already.
+
+```{python}
+# Your code here
+"We already know that we can" + " add strings together!"
+```
+
 ----------------------------------------------------------
 
 [🏡](intro.md).

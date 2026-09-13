@@ -139,6 +139,8 @@ very important (we have seen some of them before).
 | Remainder       | `%`      | `101 % 10` | `1`       |
 | Exponentiation (Power)  | `**`     | `10 ** 2`  | `100`     |
 
+*Note*: these are call the *arithmetic operators*, because we use them to do [arithmetic](https://en.wikipedia.org/wiki/Arithmetic).
+
 
 ## What order do operators use
 

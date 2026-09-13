@@ -18,9 +18,9 @@ jupyter:
 ```{note}
 This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/strings_and_variables.html) and [Brett, Adhikari, Denero and Wagner (2021)](https://matthew-brett.github.io/cfd2020/intro/Plotting_the_Classics.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
+<!-- #endregion -->
 
 You remember that the following line of code is an *expression* - a recipe that returns a value:
-<!-- #endregion -->
 
 ```{python}
 10.50
@@ -40,7 +40,24 @@ Now think about this expression:
 It is a recipe that returns a value.  In this case the value is Python's
 internal representation of the text "Magneto". We know that this is called a *text literal*, or *string literal*.
 
-As we also know, we can store the result of the expression in a variable, using an *assignment
+If you tried out that final exercise on the [last page](1_08_02_More_On_Strings), you found that only the `+` and `*` operators work with string literals. All the other arithmetic operators (`*`, `/`, `%`) will cause an error.
+
+```{python}
+# This works.
+"It is just one string" + " after another."
+```
+
+```{python}
+# This also works. Note: this only works if the second literal is a number, not another string.
+"It is one string after another! " * 10
+```
+
+```{python tags=c("raises-exception")}
+# This does NOT work.
+"It is just one string" / " after another."
+```
+
+As we also know, we can store the result of the expression in a variable, using an `=` operator in an *assignment
 statement*.
 
 We know that the assignment statement has a *variable name* on the left hand side, then an equals sign
@@ -109,7 +126,7 @@ import urllib.request
 book_url = 'http://www.gutenberg.org/ebooks/42671.txt.utf-8'
 
 # Get the book from the website.
-book_text = urllib.request.urlopen(book_url).read().decode()
+book_text = urllib.request.urlopen(book_url).read().decode("utf-8")
 
 # Show the first 5000 lines (do not worry about understanding this code for now).
 print(book_text[:5000])
