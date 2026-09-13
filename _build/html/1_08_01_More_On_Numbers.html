@@ -1,0 +1,1173 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>More on Numbers &#8212; Introduction to Computer Programming</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_08_01_More_On_Numbers';</script>
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_08_01_More_On_Numbers.html" />
+    <link rel="icon" href="_static/logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More on Strings" href="1_08_02_More_On_Strings.html" />
+    <link rel="prev" title="Data Types" href="1_08_00_Data_Types.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Introduction to Computer Programming - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Introduction to Computer Programming - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to Computer Programming
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Class Rules and Assessments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_01_Class_Rules.html">Class Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02b_Asking_For_Help.html">Helping each other learn, and asking for help</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Python Elements and Grammar</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_03_Introduction_to_Python_and_Jupyter.html">Introduction to Python and Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_04_0_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_04_A_Simple_Problem.html">A simple probability problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_05b_Extra_Variables_Task.html">Extra Variables Task - Python Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">More on Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02c_Extra_Data_Types_Task_Two.html">Extra Strings Task - ASCII Art</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="scratchpad.html">Scratchpad</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_08_01_More_On_Numbers.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/1_08_01_More_On_Numbers.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>More on Numbers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-notation-another-way-of-writing-float-values">Scientific notation - another way of writing float values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limits-of-float-values">The limits of float values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-scientific-notation">Exercise - Scientific Notation</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="more-on-numbers">
+<h1>More on Numbers<a class="headerlink" href="#more-on-numbers" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page is adpted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/Numbers.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
+</div>
+<p>Computers are very good calculators. However, there are important details  that every programmer working with numbers needs to know. Python (and most other programming languages) uses two <em>different types of numbers</em>. We have seen both of them on the <a class="reference internal" href="1_08_00_Data_Types.html"><span class="doc std std-doc">Data Types</span></a> page:</p>
+<ul class="simple">
+<li><p>Integers are called <code class="docutils literal notranslate"><span class="pre">int</span></code> values in the Python language. They can only
+represent whole numbers (negative, zero, or positive) that do not have a decimal place. E.g. <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">100</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">-1</span></code> are all integers.</p></li>
+<li><p>Numbers with decimal places are called <code class="docutils literal notranslate"><span class="pre">float</span></code> values (or <em>floating point values</em>) in the
+Python language. They can represent whole numbers or numbers with decimal placees. E.g. <code class="docutils literal notranslate"><span class="pre">10.6</span></code>, <code class="docutils literal notranslate"><span class="pre">1000.0292</span></code>, <code class="docutils literal notranslate"><span class="pre">-17.5</span></code> and <span class="math notranslate nohighlight">\(\frac{90}{100}\)</span> would all be <code class="docutils literal notranslate"><span class="pre">float</span></code> values in Python, because they all have decimal places. <em>Note</em>: decimal places are also called a <em>fractional component</em>.</p></li>
+</ul>
+<p>The type of a number can be seen from the way it is displayed: <code class="docutils literal notranslate"><span class="pre">int</span></code> values
+have no decimal point and <code class="docutils literal notranslate"><span class="pre">float</span></code> values always have a decimal point.</p>
+<p>Here are some <code class="docutils literal notranslate"><span class="pre">int</span></code> values:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">1234567890000000000</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1234567890000000000
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are some float values:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">1.2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">1.5</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">/</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mf">12345678900000000000.0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.23456789e+19
+</pre></div>
+</div>
+</div>
+</div>
+<p>When a <code class="docutils literal notranslate"><span class="pre">float</span></code> value is combined with an <code class="docutils literal notranslate"><span class="pre">int</span></code> value using some mathematical
+operator, then the result is always a <code class="docutils literal notranslate"><span class="pre">float</span></code> value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">7.5</span> <span class="o">+</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A number with a decimal of 0 is still a `float`!</span>
+<span class="mf">8.0</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">70</span> <span class="o">*</span> <span class="mf">102.3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7161.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>In most cases, two integers put together will make another integer, but any number (<code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>)
+divided by another will be a <code class="docutils literal notranslate"><span class="pre">float</span></code> value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add two integers.</span>
+<span class="mi">6</span> <span class="o">+</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Divide two integers (this returns a `float`).</span>
+<span class="mi">100</span><span class="o">/</span><span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Very large or very small <code class="docutils literal notranslate"><span class="pre">float</span></code> values can be displayed using scientific notation.</p>
+<section id="scientific-notation-another-way-of-writing-float-values">
+<h2>Scientific notation - another way of writing float values<a class="headerlink" href="#scientific-notation-another-way-of-writing-float-values" title="Link to this heading">#</a></h2>
+<p>You can also write float values in <em>exponential</em> format, like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Two thousand one hundred.</span>
+<span class="mf">2.1e3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2100.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is the same value as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">2100.0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2100.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Read <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as <span class="math notranslate nohighlight">\(2.1 x 10^3\)</span>.  The <code class="docutils literal notranslate"><span class="pre">e3</span></code> means “times 10 to the power of 3”.</p>
+<p>We can also use negative powers to represent small numbers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">1e-3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.001
+</pre></div>
+</div>
+</div>
+</div>
+<p>Read <code class="docutils literal notranslate"><span class="pre">1e-3</span></code> as <span class="math notranslate nohighlight">\(1 x 10^-3\)</span>, or “1 then moving the decimal point 3 spaces to the
+left”, or:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.001
+</pre></div>
+</div>
+</div>
+</div>
+<p>How this works is easiest to see as a pattern. Each cell below will show <span class="math notranslate nohighlight">\(1 x 10^x\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> changes by 1:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 multiplied by 10 to the power of 1.</span>
+<span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 multiplied by 10 to the power of 0.</span>
+<span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 multiplied by 10 to the power of -1.</span>
+<span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 multiplied by 10 to the power of -2.</span>
+<span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.01
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 multiplied by 10 to the power of -3.</span>
+<span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1 multiplied by 10 to the power of -4.</span>
+<span class="mi">1</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="o">-</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0001
+</pre></div>
+</div>
+</div>
+</div>
+<p>Look at the output from these cells and make sure you can see the pattern. As we change the exponent (the <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(1 x 10^x\)</span>) by -1, our first number “moves” one decimal place to the right.</p>
+<p>Moving the exponent “up” by 1, makes our number go the other way:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p><span class="math notranslate nohighlight">\(x\)</span></p></th>
+<th class="head text-right"><p><span class="math notranslate nohighlight">\(1 * 10^{x}\)</span></p></th>
+<th class="head text-right"><p>Python Scientific Notation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>6</p></td>
+<td class="text-right"><p>1000000</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e06</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>100000</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e05</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>10000</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e04</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>1000</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e03</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>100</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e02</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>10</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e01</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e00</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>-1</p></td>
+<td class="text-right"><p>0.1</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e-01</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>-2</p></td>
+<td class="text-right"><p>0.01</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e-02</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>-3</p></td>
+<td class="text-right"><p>0.001</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e-03</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>-4</p></td>
+<td class="text-right"><p>0.0001</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e-04</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>-5</p></td>
+<td class="text-right"><p>0.00001</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e-05</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>-6</p></td>
+<td class="text-right"><p>0.000001</p></td>
+<td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">1e-06</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We have used the number 1 to “move around” to show you scientific notation, but it works for any number.
+Change the value of <code class="docutils literal notranslate"><span class="pre">try_it_with</span></code> in the cell below, to use any number you want. This will help you to get a feel of the meaning of scientific notation:</p>
+<p><strong>NOTE</strong>: this will only work if you are running the notebook on Binder or Live code. It looks ugly on the online textbook! But if you run the page on Binder or Live Code it will look nice, I promise :)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change this number yourself. </span>
+<span class="n">try_it_with</span> <span class="o">=</span> <span class="mf">4.2</span>
+
+<span class="c1"># DO NOT CHANGE THE CODE BELOW THIS POINT.</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mk_scientific_notation_table</span><span class="w"> </span><span class="kn">import</span> <span class="n">scientific_notation_table</span>
+<span class="n">scientific_notation_table</span><span class="p">(</span><span class="n">try_it_with</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<h3 class="rubric" id="text-value-4-2-10-x">$\text{Value} = 4.2 * 10^{x}$</h3>
+<p>| $x$ | Value                  | Python Scientific Notation |
+| —: | ——————–: | ————————-: |
+|    6 |       4200000 | <code class="docutils literal notranslate"><span class="pre">4.2e06</span></code> |
+|    5 |       420000 | <code class="docutils literal notranslate"><span class="pre">4.2e05</span></code> |
+|    4 |       42000 | <code class="docutils literal notranslate"><span class="pre">4.2e04</span></code> |
+|    3 |       4200 | <code class="docutils literal notranslate"><span class="pre">4.2e03</span></code> |
+|    2 |       420 | <code class="docutils literal notranslate"><span class="pre">4.2e02</span></code> |
+|    1 |       42 | <code class="docutils literal notranslate"><span class="pre">4.2e01</span></code> |
+|    0 |       4.2 | <code class="docutils literal notranslate"><span class="pre">4.2e00</span></code> |
+|   -1 | 0.42 | <code class="docutils literal notranslate"><span class="pre">4.2e-01</span></code> |
+|   -2 | 0.042 | <code class="docutils literal notranslate"><span class="pre">4.2e-02</span></code> |
+|   -3 | 0.0042 | <code class="docutils literal notranslate"><span class="pre">4.2e-03</span></code> |
+|   -4 | 0.00042 | <code class="docutils literal notranslate"><span class="pre">4.2e-04</span></code> |
+|   -5 | 0.000042 | <code class="docutils literal notranslate"><span class="pre">4.2e-05</span></code> |
+|   -6 | 0.000004 | <code class="docutils literal notranslate"><span class="pre">4.2e-06</span></code> |</p>
+</div>
+</div>
+<p>Scientific notation makes it easier write and display very large and very small
+numbers. For example, we can write 10 million million as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10 million million</span>
+<span class="mf">1e7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000000.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or 0.0000001 as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 0.0000001</span>
+<span class="mf">1e-7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1e-07
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is exactly the same value as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">0.0000001</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1e-07
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-limits-of-float-values">
+<h2>The limits of float values<a class="headerlink" href="#the-limits-of-float-values" title="Link to this heading">#</a></h2>
+<p>Float values are very flexible, but they do have limits.</p>
+<ol class="arabic simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">float</span></code> can represent very large and very small numbers. There
+are limits, but you will rarely encounter them.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">float</span></code> only represents 15 or 16 significant digits for any number; the
+remaining digits are lost. This limited precision is enough for most uses.</p></li>
+<li><p>After putting together <code class="docutils literal notranslate"><span class="pre">float</span></code> values with mathematical operators, the last few digits may be
+incorrect. Small rounding errors are often confusing when first
+encountered.</p></li>
+</ol>
+<p>The first limit can be seen in two ways. If the result of a calculation is
+a very large number, then it is represented as infinite. If the result is a
+very small number, then it is represented as zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Very big, but can still be represented by the computer.</span>
+<span class="mf">2e306</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2e+307
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Too big! Comes back as `inf` for &quot;infinite&quot;</span>
+<span class="mf">2e306</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>inf
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Very small, but can still be represented by the computer.</span>
+<span class="mf">2e-322</span> <span class="o">/</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2e-323
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Too small! Comes back as 0.</span>
+<span class="mf">2e-322</span> <span class="o">/</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>The second limit can be observed by an expression that involves numbers with
+more than 15 significant digits. These extra digits are discarded before any
+arithmetic is carried out.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our very small digits are NOT lost.</span>
+<span class="mf">0.666666</span> <span class="o">-</span> <span class="mf">0.666666123456789</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.2345678901404256e-07
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our very small digits ARE lost :(</span>
+<span class="mf">0.6666666666666666</span> <span class="o">-</span> <span class="mf">0.6666666666666666123456789</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>The third limit can be observed when taking the difference between two
+expressions that should be equivalent. For example, the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">0.5</span></code>
+computes the square root of 2, but squaring this value does not exactly
+recover 2.</p>
+<p>Here we <code class="docutils literal notranslate"><span class="pre">import</span></code> the function <code class="docutils literal notranslate"><span class="pre">math.sqrt()</span></code>, which returns the square root of numbers it is given as arguments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.4142135623730951
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember that the square root of 2 is the number that we can multiply by itself to get 2 e.g.</p>
+<p><span class="math notranslate nohighlight">\(\text{square root of 2} * \text{square root of 2} = 2\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2∗square root of 2</span>
+<span class="mf">1.4142135623730951</span> <span class="o">*</span> <span class="mf">1.4142135623730951</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0000000000000004
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2∗square root of 2</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0000000000000004
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s subtract <code class="docutils literal notranslate"><span class="pre">2</span></code> to get that tiny fractional component by itself:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The the tiny number by itself.</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.440892098500626e-16
+</pre></div>
+</div>
+</div>
+</div>
+<p>The final result above is <code class="docutils literal notranslate"><span class="pre">0.0000000000000004440892098500626</span></code>, a number that
+is very close to zero. The correct answer to this arithmetic expression is 0,
+but a small error in the final significant digit appears very different in
+scientific notation.</p>
+<p>This behavior appears in almost all programming languages
+because it is the result of the standard way that arithmetic is done by
+computers. This is called <strong>floating point error</strong> e.g. very small errors which
+happen because of floating point numbers.</p>
+<p>Although <code class="docutils literal notranslate"><span class="pre">float</span></code> values are not always exact, they are predictable and work
+in the same way across all different kinds of computers and programming
+languages.</p>
+<p>In summary:</p>
+<ul class="simple">
+<li><p>doing calculations with very big or very small numbers can lead to floating point errors.</p></li>
+</ul>
+</section>
+<section id="exercise-scientific-notation">
+<h2>Exercise - Scientific Notation<a class="headerlink" href="#exercise-scientific-notation" title="Link to this heading">#</a></h2>
+<p>We will now do another exercise!</p>
+<p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
+<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2b_scientific_notation.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
+<hr class="docutils" />
+<p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "pxr687/Intro_Comp_Programming",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_08_00_Data_Types.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Types</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_08_02_More_On_Strings.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">More on Strings</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-notation-another-way-of-writing-float-values">Scientific notation - another way of writing float values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limits-of-float-values">The limits of float values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-scientific-notation">Exercise - Scientific Notation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Rush (partly adapted from material by Matthew Brett, Peter Rush, Ani Adhikari, John Denero and David Wagner)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
