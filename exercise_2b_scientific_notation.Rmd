@@ -12,7 +12,7 @@ jupyter:
     name: python3
 ---
 
-# Exercise 2b
+# Exercise - Scientific Notation Practice
 
 If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_08_01_More_On_Numbers.html)_ for this exercise.
 

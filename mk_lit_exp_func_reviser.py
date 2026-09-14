@@ -6,19 +6,25 @@ import string
 
 # Interactice revision of literals, expressions, functions.
 def lit_exp_or_func():
+    # Start-up message, and definte legal user answers.
     jupyprint(f"*Making questions...*")
     legal_answers = ["number literal", "text literal", "expression made from two literals", "function"]
+    # Loop of 10 questions. Each question a four way coin flip is done, this
+    # selects the Python elemen the user will be asked about.
     for i in np.arange(10):
         four_flip = np.random.choice([1, 2, 3, 4])
         correct = legal_answers[four_flip-1]
+        # Number literal is the shown expression.
         if four_flip == 1:
             number_literal = int(np.random.normal(10, 3))
             output = number_literal
             article = "a"
+        # Text literal is the shown expression.
         elif four_flip == 2:
             text_literal =  "".join(random.choices(string.ascii_letters + string.digits, k=int(np.random.uniform(1, 10))))
             output = f"'{text_literal}'"
             article = "a"
+        # Expressions of two literals.
         elif four_flip == 3:
             two_flip = np.random.choice([1, 2])
             if two_flip == 1:
@@ -35,10 +41,12 @@ def lit_exp_or_func():
                 random_exp = f"'{text_literal_1}' {op} '{text_literal_2}'"
                 output = random_exp
                 article = "an"
+        # Functions.
         else:
             func = np.random.choice(["`print()`", "`help()`" , "`abs()`", "`round()`"])
             output = func
             article = "a"
+        # Question and data validation.
         sleep(2.5)
         jupyprint(f"## Question {i + 1}")
         jupyprint(f"What Python element is this?: `{output}`")

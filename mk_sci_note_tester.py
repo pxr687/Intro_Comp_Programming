@@ -3,9 +3,12 @@ from jupyprint import jupyprint
 import numpy as np
 from time import sleep
 
+# Interactive task to practice reading scientific notation.
 def test_me(n_iter=10):
+    jupyprint(f"*Making questions...*")
     score_arr = np.array([]).astype('float')
     for rep in np.arange(n_iter):
+        sleep(2)
         jupyprint(f'## Question {rep+1}')
         random_big_or_small = np.random.normal(0, 60000)
         jupyprint(f"Here is a number in scientific notation: {random_big_or_small:e}")
