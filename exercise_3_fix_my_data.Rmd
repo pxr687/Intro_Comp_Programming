@@ -404,7 +404,7 @@ Supachai is checking his results after taking three tests.
 
 His three scores should be `72`, `84`, and `90`. He wants to calculate the `average` of the three scores.
 
-Fix his code below. You can look [here](https://mathema.me/en/blog/how-to-find-the-average/) if you need a reminder about how to calculate an average :)
+Fix his code below. You can look [here](https://mathema.me/en/blog/how-to-find-the-average/) if you need a reminder about how to calculate an average 🙂
 
 To pass the tests, the variables should have these data types:
 

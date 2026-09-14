@@ -76,7 +76,7 @@ Below are some questions which you should answer by using string methods. All of
 
 **Important: for every question in this exercise, DO NOT edit the string. E.g. do not change the letters in the string by typing new ones. Use string methods from the table above to edit each string, to get the correct answer.**
 
-Fixing strings "manually" (e.g. by changing the string with your keyboard) works when we have one string...but in large datasets you could have 1000s or 1_000_000s of strings, then you will *have* to use string methods to edit them. So we will practice using string methods now, instead of directly editing the strings :)
+Fixing strings "manually" (e.g. by changing the string with your keyboard) works when we have one string...but in large datasets you could have 1000s or 1_000_000s of strings, then you will *have* to use string methods to edit them. So we will practice using string methods now, instead of directly editing the strings 🙂
 
 Run the cell below first, then start the questions.
 

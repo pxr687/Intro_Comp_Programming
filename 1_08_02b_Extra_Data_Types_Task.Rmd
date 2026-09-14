@@ -21,7 +21,7 @@ In this task, you will a program to print a paper receipt for the cashier at a s
 
 For this task you should work together in pairs - you should use [pair programming](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#pair-programming).
 
-Again, [**DO NOT USE AI TO DO THIS TASK**](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#ai). If you are new to programming, this task will be quite hard. So, please also ask myself and your TA for help. You will learn a lot more if you do this yourself, with no AI :)
+Again, [**DO NOT USE AI TO DO THIS TASK**](https://pxr687.github.io/Intro_Comp_Programming/1_01_Class_Rules.html#ai). If you are new to programming, this task will be quite hard. So, please also ask myself and your TA for help. You will learn a lot more if you do this yourself, with no AI 🙂
 
 ## Instructions
 
@@ -43,7 +43,7 @@ Create variables for:
 
 - Quantity of each product
 
-- Discount percentage (you do not have to do this one, but you can if you want a challenge :) )
+- Discount percentage (you do not have to do this one, but you can if you want a challenge 🙂 )
 
 - Amount of money the customer pays
 
