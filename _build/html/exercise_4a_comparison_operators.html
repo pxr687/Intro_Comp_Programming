@@ -196,6 +196,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_05b_Extra_Variables_Task.html">Extra Variables Task - Python Budget</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07b_Class_Quiz_Literals_Variables_Expressions_Functions.html">Class Quiz: Literals, Variables, Expressions and Functions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
 <ul class="nav bd-sidenav">
@@ -507,10 +508,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
+<p><em>Making questions…</em></p>
 <h2 class="rubric" id="question-1">Question 1</h2>
-<p>A number has been selected between 0 and 9. This number is stored in a variable called <code class="docutils literal notranslate"><span class="pre">variable_1</span></code>.</p>
+<p>A number has been selected between 0 and 10. This number is stored in a variable called <code class="docutils literal notranslate"><span class="pre">variable_1</span></code>.</p>
 <p>Type Python code in the box below. Use comparison operators to work out what number <code class="docutils literal notranslate"><span class="pre">variable_1</span></code> is.</p>
-<p>For example you can type <code class="docutils literal notranslate"><span class="pre">variable_1</span> <span class="pre">&lt;=</span> <span class="pre">8</span></code> and Python will tell you if this is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>For example you can type <code class="docutils literal notranslate"><span class="pre">variable_1</span> <span class="pre">&lt;=</span> <span class="pre">9</span></code> and Python will tell you if this is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
@@ -518,12 +520,12 @@ document.write(`
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">mk_comparisons_guesser</span><span class="w"> </span><span class="kn">import</span> <span class="n">comparison_guesser</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">comparison_guesser</span><span class="p">()</span>
 
-<span class="nn">File ~\Intro_Comp_Programming\mk_comparisons_guesser.py:23,</span> in <span class="ni">comparison_guesser</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="n">jupyprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;For example you can type `variable_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> &lt;= </span><span class="si">{</span><span class="n">variables</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">` and Python will tell you if this is `True` or `False`.&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">23</span> <span class="n">usr_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">if</span> <span class="p">(</span><span class="n">usr_input</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">in</span> <span class="n">illegal_moves_array</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="s2">&quot;print&quot;</span> <span class="ow">in</span> <span class="n">usr_input</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">jupyprint</span><span class="p">(</span><span class="s2">&quot;#### CHECKING THE VALUE OF ANY VARIABLE IS **NOT** ALLOWED!&quot;</span><span class="p">)</span>
+<span class="nn">File ~\Intro_Comp_Programming\mk_comparisons_guesser.py:31,</span> in <span class="ni">comparison_guesser</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="n">jupyprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;For example you can type `variable_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> &lt;= </span><span class="si">{</span><span class="n">variables</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">` and Python will tell you if this is `True` or `False`.&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">31</span> <span class="n">usr_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="c1"># Stop user directly accessing variable values, or printing them.</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="k">if</span> <span class="p">(</span><span class="n">usr_input</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">in</span> <span class="n">illegal_moves_array</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="s2">&quot;print&quot;</span> <span class="ow">in</span> <span class="n">usr_input</span><span class="p">):</span>
 
 <span class="nn">File ~\AppData\Local\Programs\Python\Python313\Lib\site-packages\ipykernel\kernelbase.py:1259,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1257</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
