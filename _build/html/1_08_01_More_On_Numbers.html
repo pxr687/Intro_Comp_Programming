@@ -634,7 +634,7 @@ divided by another will be a <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">&quot;f&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function tells it that we want <a class="reference external" href="https://docs.python.org/3/library/string.html"><em>fixed-point notation</em></a>. You can think of this as just meaning “NOT scientific notation”!</p>
-<p>Ok, back to scientific notation. You can read <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as <span class="math notranslate nohighlight">\(2.1 x 10^3\)</span>.  The <code class="docutils literal notranslate"><span class="pre">e3</span></code> means “times 10 to the power of 3”.</p>
+<p>Ok, back to scientific notation. You can read <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as <span class="math notranslate nohighlight">\(2.1 * 10^3\)</span>.  The <code class="docutils literal notranslate"><span class="pre">e3</span></code> means “times 10 to the power of 3”.</p>
 <p>So we say <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as “2.1 times 10 to the power of 3”.</p>
 <p>We can also use negative powers to represent small numbers:</p>
 <div class="cell docutils container">
@@ -807,9 +807,19 @@ left”, or:</p>
 </tbody>
 </table>
 </div>
-<p>We have used the number 1 to “move around” to show you scientific notation, but it works for any number.
-Change the value of <code class="docutils literal notranslate"><span class="pre">try_it_with</span></code> in the cell below, to use any number you want. This will help you to get a feel of the meaning of scientific notation:</p>
-<p><strong>NOTE</strong>: this will only work if you are running the notebook on Binder or Live code. It looks ugly on the online textbook! But if you run the page on Binder or Live Code it will look nice, I promise 🙂</p>
+<p>We have used the number 1 to “move around” to show you scientific notation, but it works for any number. So the table above shows:</p>
+<ul class="simple">
+<li><p>1 times 10 to the power of 6</p></li>
+<li><p>1 times 10 to the power of 5</p></li>
+</ul>
+<p>….</p>
+<ul class="simple">
+<li><p>1 times 10 to the power of minus 5</p></li>
+<li><p>1 times 10 to the power of minus 6</p></li>
+</ul>
+<p>…but we can change the “1” to any number we want (e.g. “6.23 times ten to the power of 3” etc.).</p>
+<p>Change the value of the variable <code class="docutils literal notranslate"><span class="pre">try_it_with</span></code> in the cell below, to use any number you want. This will help you to get a feel of the meaning of scientific notation:</p>
+<p><strong>NOTE</strong>: this will only work if you are running the notebook on Binder or Live code. It looks <em>ugly</em> on the online textbook! But if you run the page on Binder or Live Code it will look nice, I promise 🙂</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change this number yourself. </span>
