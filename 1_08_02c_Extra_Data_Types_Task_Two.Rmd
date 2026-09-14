@@ -147,25 +147,7 @@ my_fixed_string
 **Before** you start writing code, think about how you can solve the task using *the smallest number of lines of code*.
 
 
-## Task  1 - Old Video Game
-
-Write a program to make `print()` show this output:
-
-![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/ASCII_old_game.JPG)
-
-This ASCII image is inspired by the very old video game [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders).
-
-Remember these tips:
-
-- You do not have to make the whole image in one string. You can make variables and put them together using operators (`+`, `*`).
-
-- You do not have to use it, but the [`.replace()` string method](file:///C:/Users/rushpz/Intro_Comp_Programming/_build/html/1_08_00_Data_Types.html#how-to-avoid-errors-use-type) can help you to solve this task using less lines of code...
-
-```{python}
-# Write your program here.
-```
-
-## Task  2 - Big Hello
+## Task  1 - Big Hello
 
 Use your knowledge of strings and variables to make `print()` show this output:
 
@@ -173,8 +155,31 @@ Use your knowledge of strings and variables to make `print()` show this output:
 
 *Reminder*: there are many ways to do this task. You do *NOT* have to make the whole image in one string. You can use what you know about operators (`+`, `*`), variables and strings to put different strings together to complete the task with less lines of code...The `.replace()` method can help you again here, if you want to use it.
 
+*Hint*: it will help you here to *think like Python*. Python code is run line-by-line. If you "read" each line one after the other, it will be easier to see what you need to do to make the string.
+
 Look carefully at the small letters or numbers each big letter is made from, to solve the task in the right way.
 
 ```{python}
 # Write your program here.
+```
+
+## Task  2 - Old Video Game
+
+Write a program to make `print()` show this output - it is some ASCII art of space ships:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/ASCII_old_game_round.JPG)
+
+This ASCII image is inspired by the very old video game [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders):
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/space_invaders.JPG)
+(Image from [here](https://www.arcadearchives.com/en/title/aca-392/)).
+
+Remember these tips:
+
+- You do not have to make the whole image in one string. You can make variables and put them together using operators (`+`, `*`).
+
+- Your solution does not have to be exactly the same as the image...it just needs to look *similar*, and use the right letters and symbols.
+
+```{python}
+# Write your program here..
 ```
