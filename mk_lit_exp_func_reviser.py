@@ -6,9 +6,8 @@ import string
 
 # Interactice revision of literals, expressions, functions.
 def lit_exp_or_func():
-
+    jupyprint(f"*Making questions...*")
     legal_answers = ["number literal", "text literal", "expression made from two literals", "function"]
-
     for i in np.arange(10):
         four_flip = np.random.choice([1, 2, 3, 4])
         correct = legal_answers[four_flip-1]
@@ -40,7 +39,7 @@ def lit_exp_or_func():
             func = np.random.choice(["`print()`", "`help()`" , "`abs()`", "`round()`"])
             output = func
             article = "a"
-
+        sleep(2.5)
         jupyprint(f"## Question {i + 1}")
         jupyprint(f"What Python element is this?: `{output}`")
         passed = False
