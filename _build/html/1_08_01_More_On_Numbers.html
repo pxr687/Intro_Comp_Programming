@@ -619,7 +619,23 @@ divided by another will be a <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 </div>
-<p>Read <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as <span class="math notranslate nohighlight">\(2.1 x 10^3\)</span>.  The <code class="docutils literal notranslate"><span class="pre">e3</span></code> means “times 10 to the power of 3”.</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function to make Python show you the number NOT in scientific notation. This is shown in the cell below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Take a number in scientific notation, and show it NOT in scientific notation.</span>
+<span class="nb">format</span><span class="p">(</span><span class="mf">2.1e3</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2100.000000&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">&quot;f&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function tells it that we want <a class="reference external" href="https://docs.python.org/3/library/string.html"><em>fixed-point notation</em></a>. You can think of this as just meaning “NOT scientific notation”!</p>
+<p>Ok, back to scientific notation. You can read <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as <span class="math notranslate nohighlight">\(2.1 x 10^3\)</span>.  The <code class="docutils literal notranslate"><span class="pre">e3</span></code> means “times 10 to the power of 3”.</p>
+<p>So we say <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as “2.1 times 10 to the power of 3”.</p>
 <p>We can also use negative powers to represent small numbers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

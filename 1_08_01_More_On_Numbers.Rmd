@@ -109,7 +109,18 @@ This is the same value as:
 2100.0
 ```
 
-Read `2.1e3` as $2.1 x 10^3$.  The `e3` means "times 10 to the power of 3".
+You can use the `format()` function to make Python show you the number NOT in scientific notation. This is shown in the cell below:
+
+```{python}
+# Take a number in scientific notation, and show it NOT in scientific notation.
+format(2.1e3, "f")
+```
+
+The `"f"` in the `format()` function tells it that we want [*fixed-point notation*](https://docs.python.org/3/library/string.html). You can think of this as just meaning "NOT scientific notation"!
+
+Ok, back to scientific notation. You can read `2.1e3` as $2.1 x 10^3$.  The `e3` means "times 10 to the power of 3".
+
+So we say `2.1e3` as "2.1 times 10 to the power of 3".
 
 We can also use negative powers to represent small numbers:
 
