@@ -16,7 +16,8 @@ parts:
       - file: 1_05_Variables
       - file: 1_05b_Extra_Variables_Task
       - file: 1_06_Expressions # CHECKED, EXERCISE CHECKED
-      - file: 1_07_Summary_Literals_Variables_Expressions_Functions # CHECKED, EXERCISE CHECKED, USE AS IN CLASS ASSIGNMENT
+      - file: 1_07_Summary_Literals_Variables_Expressions_Functions # ADD SELF EXERCISE
+      - file: 1_07b_Class_Quiz_Literals_Variables_Expressions_Functions # CHECKED, EXERCISE CHECKED, USE AS IN CLASS ASSIGNMENT
 
   - caption: Data Types
     chapters:

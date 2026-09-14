@@ -265,6 +265,15 @@ and the steps it follows.  Over time, you will find it easier to
 predict what it will do, and understand why. *This will also help you to
 understand error messages that you get*.
 
+
+## Operators with text data
+
+We will look at this more on a later page. But for now, just know that we can also use (some) operators with text data, to make expressions. For example, the code cell below uses `+` to add two string literals together into a larger expression:
+
+```{python}
+"This is one string... " + "added to another."
+```
+
 ## Understanding errors
 
 Let's look at one of the errors we saw on the last page, to see how understanding Python grammar helps us to understand error messages.

@@ -325,15 +325,13 @@ print("Hello!")
 print("Class!")
 ```
 
-## Exercise 2a - Literals, Variables, Expressions and Functions
+## Exercise - Literals, Expressions and Functions
 
 We will now do our next Python exercise.
 
-> **We are going to do this exercise in teams. I will show you the questions on the big screen. Each team will write their answers on paper or on the whiteboard. When each team has all the answers written, we will mark the answers together, looking at the correct answers on the big screen.**
-
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2a_literals_variables_expressions_functions.ipynb) to launch the exercise on Binder.
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2_literals_expressions_functions.ipynb) to launch the exercise on Binder.
 
 
 ----------------------------------------------------------
