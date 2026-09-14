@@ -19,7 +19,7 @@ jupyter:
 This page is partly adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/intro_to_functions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
-> Some advice before you read this page: read *slowly* and make sure you fully understand each idea before you move on. Launch the page on Live Code and Binder and play around with each cell. Do this even if the idea seems easy. The more you understand these ideas, the easier it will be for you to fix errors in your code.  *The best way to understand these ideas is to play with the code yourself.
+> Some advice before you read this page: same as for the last two pages, read *slowly* and make sure you fully understand each idea before you move on. Launch the page on Live Code and Binder and play around with each cell. Do this even if the idea seems easy. The more you understand these ideas, the easier it will be for you to fix errors in your code.  *The best way to understand these ideas is to play with the code yourself.
 
 So far we have used numbers and text in our Python code:
 <!-- #endregion -->
@@ -278,7 +278,7 @@ my_string = str(my_float)
 my_string
 ```
 
-Look closely at th output of the cell above. Notice the quotation marks (`''`) around `'10.0'`. These tell us it is a string, not a number. We can check this with the `type()` function:
+Look closely at the output of the cell above. Notice the quotation marks (`''`) around `'10.0'`. These tell us it is a string, not a number. We can check this with the `type()` function:
 
 ```{python}
 # Show the `type()` of `my_string`.
