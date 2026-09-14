@@ -19,6 +19,8 @@ jupyter:
 This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/Expressions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
+> Some advice before you read this page: read *slowly* and make sure you full understand each idea before you move on. Launch the page on Live Code and Binder and play around with each cell. Do this even if the idea seems easy. The more you understand these ideas, the easier it will be for you to fix errors in your code.  *The best way to fully understand these ideas is to play with the code yourself.*
+
 Programming languages are simpler than human languages like English, Chinese, Burmese etc. However,
 there are rules of grammar in any language, including programming languages.
 
