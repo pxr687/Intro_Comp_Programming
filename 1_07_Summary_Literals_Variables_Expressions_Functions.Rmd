@@ -48,6 +48,8 @@ A raw number or piece of text typed in Python code is called a *literal*:
 
 We type in the literal, and Python shows us the *value*. The value is the computer representation of the literal.
 
+Literals are a type of *expression*, because Python shows us a value when we run a line of code which has only a literal.
+
 ## Variables
 
 We can store values as *variables*. This means we give the value a name. We can use that name to get the value out of our computer's memory:
@@ -75,7 +77,7 @@ You can think of literals as values in Python code which are NOT stored as varia
 new_variable = 1999
 ```
 
-We have also talked about expressions. 
+Literals and variables are both types of *expression*. 
 
 ## Expressions
 
@@ -144,7 +146,7 @@ We can also make expressions from text, e.g. by putting two text literals togeth
 "This is some text." + " And so is this!"
 ```
 
-## Functions
+## Functions - the `print()` function
 
 On earlier pages, we also used *functions*, like `print()`:
 
@@ -157,12 +159,25 @@ Functions are pieces of code that are written to do a specific thing. That code 
 
 You can think of a function like a [*recipe*](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables). We give it some ingredients, and it returns a "meal".
 
-For the `print()` function, we give it some input and it displays the input. We have used it with text, but we can also use it with numbers:
+**In Python, when you see a word like `print` next to *round brackets* `()` you are looking at a function e.g. `print()`**.
+
+For the `print()` function, we give it some input and it displays the input. 
+
+We can use the `print()` function to show us the value of any expression.
+
+We have used `print()` with text, but we can also use it with numbers:
 
 ```{python}
-# The `print()` function (again).
+# The `print()` function with a number.
 print(10)
 ```
+
+```{python}
+# The `print()` function with text.
+print("Hello class!")
+```
+
+### Other Python functions
 
 There are many, many other functions we can use in Python.
 
@@ -244,16 +259,16 @@ The table below is a summary of this information:
 
 | Python Element | What it is                                                       | Example 1 (Numbers) | Example 2 (Text) |
 | -------------- | ---------------------------------------------------------------- | ------------------- | ---------------- |
-| **Literal**    | A value written directly in Python code                          | `42`                | `"hello"`        |
+| **Literal**    | A value written "raw" in Python code                             | `42`                | `"hello"`        |
 | **Variable**   | A name that stores or refers to a value in our computer's memory | `age = 42`          | `name = "Sam"`   |
-| **Expression** | Code that Python evaluates to produce a value                    | `1 + 1`             | `name + "!"`     |
-| **Function**   | Reusable code that performs a task, usually using inputs         | `print(10)`         | `print("Hello")` |
+| **Expression** | Code that Python evaluates to produce a value                    | `1 + 1` ; `age + 1` | `name + "!"`     |
+| **Function**   | Reusable code that does a task, usually using inputs/arguments   | `print(10)`         | `print("Hello")` |
 
 Expressions can be made from literals and/or variables ... and other expressions!
 
 **Note**: any definitions which are in the textbook may be asked about in your exams and assessments.
 
-Functions can use literals, variables and expressions as inputs:
+Functions can use literals, variables and expressions as inputs. This is shown in the cells below with the `print()` function:
 
 ```{python}
 # Print a literal with the `print()` function. 
@@ -274,6 +289,40 @@ print(100**2 + 777)
 ```{python}
 # Print a literal with the `print()` function. This is two text literals put together into an expression.
 print("The capital of Thailand is Bangkok." + " London is the capital of England.")
+```
+
+## Python will only show you the value from the last line of code
+
+When you run a code cell with an expression in it, Python will show you the value that the expression evaluates to:
+
+```{python}
+3 * 4
+```
+
+If the code cell has expressions on more than one line *Python will only show you the value of the last line*:
+
+```{python}
+3 * 4
+10 + 10
+```
+
+You can use the `print()` function to make Python show you the value of all the expressions in the cell:
+
+```{python}
+print(3 * 4)
+print(10 + 10)
+```
+
+This is the same way with numbers and with text data:
+
+```{python}
+"Hello!"
+"Class!"
+```
+
+```{python}
+print("Hello!")
+print("Class!")
 ```
 
 ## Exercise 2a - Literals, Variables, Expressions and Functions

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -408,7 +408,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literals">Literals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">Expressions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-the-print-function">Functions - the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-python-functions">Other Python functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-will-only-show-you-the-value-from-the-last-line-of-code">Python will only show you the value from the last line of code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2a-literals-variables-expressions-and-functions">Exercise 2a - Literals, Variables, Expressions and Functions</a></li>
 </ul>
             </nav>
@@ -465,6 +469,7 @@ document.write(`
 </div>
 </div>
 <p>We type in the literal, and Python shows us the <em>value</em>. The value is the computer representation of the literal.</p>
+<p>Literals are a type of <em>expression</em>, because Python shows us a value when we run a line of code which has only a literal.</p>
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
@@ -513,7 +518,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>We have also talked about expressions.</p>
+<p>Literals and variables are both types of <em>expression</em>.</p>
 </section>
 <section id="expressions">
 <h2>Expressions<a class="headerlink" href="#expressions" title="Link to this heading">#</a></h2>
@@ -646,8 +651,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<section id="functions-the-print-function">
+<h2>Functions - the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function<a class="headerlink" href="#functions-the-print-function" title="Link to this heading">#</a></h2>
 <p>On earlier pages, we also used <em>functions</em>, like <code class="docutils literal notranslate"><span class="pre">print()</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -664,10 +669,13 @@ document.write(`
 </div>
 <p>Functions are pieces of code that are written to do a specific thing. That code can then be used many many times without us needing to write it again.</p>
 <p>You can think of a function like a <a class="reference external" href="https://www.inferentialthinking.com/chapters/08/Functions_and_Tables"><em>recipe</em></a>. We give it some ingredients, and it returns a “meal”.</p>
-<p>For the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, we give it some input and it displays the input. We have used it with text, but we can also use it with numbers:</p>
+<p><strong>In Python, when you see a word like <code class="docutils literal notranslate"><span class="pre">print</span></code> next to <em>round brackets</em> <code class="docutils literal notranslate"><span class="pre">()</span></code> you are looking at a function e.g. <code class="docutils literal notranslate"><span class="pre">print()</span></code></strong>.</p>
+<p>For the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, we give it some input and it displays the input.</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to show us the value of any expression.</p>
+<p>We have used <code class="docutils literal notranslate"><span class="pre">print()</span></code> with text, but we can also use it with numbers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `print()` function (again).</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `print()` function with a number.</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -678,6 +686,21 @@ document.write(`
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `print()` function with text.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello class!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello class!
+</pre></div>
+</div>
+</div>
+</div>
+<section id="other-python-functions">
+<h3>Other Python functions<a class="headerlink" href="#other-python-functions" title="Link to this heading">#</a></h3>
 <p>There are many, many other functions we can use in Python.</p>
 <p>Another example is the <code class="docutils literal notranslate"><span class="pre">abs()</span></code> function. This will remove a minus sign (<code class="docutils literal notranslate"><span class="pre">-</span></code>) from a negative number:</p>
 <div class="cell docutils container">
@@ -841,7 +864,7 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Literal</strong></p></td>
-<td><p>A value written directly in Python code</p></td>
+<td><p>A value written “raw” in Python code</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">42</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code></p></td>
 </tr>
@@ -852,11 +875,11 @@ document.write(`
 </tr>
 <tr class="row-even"><td><p><strong>Expression</strong></p></td>
 <td><p>Code that Python evaluates to produce a value</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code> ; <code class="docutils literal notranslate"><span class="pre">age</span> <span class="pre">+</span> <span class="pre">1</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">+</span> <span class="pre">&quot;!&quot;</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Function</strong></p></td>
-<td><p>Reusable code that performs a task, usually using inputs</p></td>
+<td><p>Reusable code that does a task, usually using inputs/arguments</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">print(10)</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">print(&quot;Hello&quot;)</span></code></p></td>
 </tr>
@@ -865,7 +888,7 @@ document.write(`
 </div>
 <p>Expressions can be made from literals and/or variables … and other expressions!</p>
 <p><strong>Note</strong>: any definitions which are in the textbook may be asked about in your exams and assessments.</p>
-<p>Functions can use literals, variables and expressions as inputs:</p>
+<p>Functions can use literals, variables and expressions as inputs. This is shown in the cells below with the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print a literal with the `print()` function. </span>
@@ -915,6 +938,80 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The capital of Thailand is Bangkok. London is the capital of England.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="python-will-only-show-you-the-value-from-the-last-line-of-code">
+<h2>Python will only show you the value from the last line of code<a class="headerlink" href="#python-will-only-show-you-the-value-from-the-last-line-of-code" title="Link to this heading">#</a></h2>
+<p>When you run a code cell with an expression in it, Python will show you the value that the expression evaluates to:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the code cell has expressions on more than one line <em>Python will only show you the value of the last line</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to make Python show you the value of all the expressions in the cell:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+20
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is the same way with numbers and with text data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello!&quot;</span>
+<span class="s2">&quot;Class!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Class!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Class!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello!
+Class!
 </pre></div>
 </div>
 </div>
@@ -1000,7 +1097,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literals">Literals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">Expressions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-the-print-function">Functions - the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-python-functions">Other Python functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-will-only-show-you-the-value-from-the-last-line-of-code">Python will only show you the value from the last line of code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2a-literals-variables-expressions-and-functions">Exercise 2a - Literals, Variables, Expressions and Functions</a></li>
 </ul>
   </nav></div>

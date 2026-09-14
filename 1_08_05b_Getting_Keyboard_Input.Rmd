@@ -14,7 +14,7 @@ jupyter:
 
 # Getting `input()` from a user
 
-
+In lots of programs you write, you will want to get a user to give data to your program.
 
 
 ## Exercise - Getting User `input()`
@@ -23,7 +23,7 @@ We will now do another exercise!
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4a_comparison_operators.ipynb) to launch the exercise on Binder.
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4b_input.ipynb) to launch the exercise on Binder.
 
 
 ----------------------------------------------------------

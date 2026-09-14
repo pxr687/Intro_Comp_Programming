@@ -26,29 +26,102 @@ Learning the rules of Python grammar rules is very important. Without proper gra
 
 *Expressions* are an important part of Python grammar. 
 
-An expression is like a *recipe that returns a value*.  For example, this is an expression:
+An expression is like a *recipe that returns a value*.  For example, this is an expression.
+
+In Jupyter Notebooks, when we type an expression into a code cell, Python will show use the *value* of the expression:
 <!-- #endregion -->
 
 ```{python}
 3 * 4
 ```
 
-Notice that the Notebook displays the value (`12`), but not the *input* (`3 * 4`).  This the *value* that the
+Notice that the Notebook shows the value (`12`), but not the *input* (`3 * 4`).  `12` is the *value* that the
 expression returns.
 
+The text data in the code cell below is also an expression. We know it is an expression, because when we run the code cell, Python shows us the value of the expression:
+
+```{python}
+"Siam University"
+```
+
+Now, look at these variable assignment statements:
+
+```{python}
+# Store the value of the expression `3 * 4` in a variable called `months_in_year`.
+months_in_year = 3 * 4
+```
+
+```{python}
+# Store the value of the expression `"Siam University"` in a variable called `our_university.
+our_university = "Siam University"
+```
+
+When we run these code cells we do *not* see any output below the cell. This is because these are variable assignment *statements*. In Python, *statements* tell the computer to *do* something (like make a variable), but they do not *show us a value*. When we run a code cell that only has a statement in it, we do *not* see any output.
+
+The rule is: 
+
+> If you run a line of code and Jupyter automatically shows you a value, the line is an *expression*.
+> If you run a line of code and Jupyter doesn't automatically show a value, the line is a *statement*.
+
+Expressions can be made of different *ingredients*. All of these code cells below have expressions in them:
+
+```{python}
+# This is an expression - this is a *number literal*.
+3
+```
+
+```{python}
+# This is also an expression. This is a *number expression made from two literals*.
+3 * 4
+```
+
+```{python}
+# This is also an expression. This is a *number variable*.
+months_in_year
+```
+
+```{python}
+# This is also an expression. This is a *text literal*.
+"Siam University"
+```
+
+```{python}
+# This is also an expression. This is a *text variable*.
+our_university
+```
 
 An expression can describe to the computer how to put pieces of data together. 
 
-In our example, we have a multiplication expression that is a `*` symbol
-between two numbers. Expressions, such as `3 * 4`, are
-*evaluated* by the computer. The value (the result of *evaluation*) of the
+In our `3 * 4` example, we have a multiplication expression that is a `*` symbol
+between two number literals. 
+
+Expressions, such as `3 * 4`, are *evaluated* by the computer. The value (the result of *evaluation*) of the
 last expression in each cell, `12` in this case, is displayed below the cell.
 
+For the code cell below we can say:
+
+> "The expression `3 * 4` *evaluates* to `12`."
+
+```{python}
+3 * 4
+```
+
+This is the same for text data; for the next code cell we can say:
+
+> "The variable `our_university` *evaluates* to `Siam University`.
+
+(A variable is a type of expression, because it shows us a value).
+
+```{python}
+our_university
+```
+
+## Expressions and Python grammar
 
 The grammar rules of a programming language cannot be broken. 
 
-In Python, the `*` symbol cannot appear twice in a row. The computer will not try to interpret an
-expression that differs from its prescribed expression structures. 
+In Python, you cannot use the `*` symbol twice in a row. The computer will not try to interpret an
+expression that  breaks the grammar rules of Python. 
 
 Instead, it will show a `SyntaxError` error. The *Syntax* of a language is its
 grammar rules, and a `SyntaxError` means that an expression 
@@ -68,7 +141,7 @@ numbers, the expression is a correct *exponentiation*
 expression (the first number raised to the power of the second : $2^{2}$).
 
 The symbols `*` and `**` are called *operators*, and the
-values they put together are called *operands*.
+values they put together are called *operands*. **You will see these names in error messages, so it is important to know what they mean so that you can fix errors**.
 
 ```{python}
 2 ** 2
@@ -178,7 +251,6 @@ expression `(1 + 2) * 3`.  When Python sees this line, it finds the expression
 
 ```{python}
 # Another example. Changing the brackets changes the calculation...
-
 100 + 10/10
 ```
 

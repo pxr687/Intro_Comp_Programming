@@ -301,6 +301,35 @@ These special characters have a special meaning in Python. This is why we cannot
 # ?print
 ```
 
+## Text and variables in Python
+
+On this page so far we have used numbers to store in our variables. However, lots of data in the world is text and so Python also lets us store text in our variables.
+
+Remember, text data in Python must start and end with quotation marks (`"` or `'`). The code cell below has some text data:
+
+```{python}
+"siam"
+```
+
+Like with numbers, a single value typed in Python code is called a *literal*. This is a single piece of text, so it is called a *text literal*. We can store it in a variable, just like we can with numbers:
+
+```{python}
+# Make a variable called `university` which has the value `"siam"`.
+university = "siam"
+```
+
+Because the line of code in the cell above *makes* a variable, it does not *show* us the value of the variable. But we can use the variable's name to see what value it has:
+
+```{python}
+# Show the value.
+university
+```
+
+With text data, the code we use to make variables (e.g. the *variable assignment statement*) works in the same way as it does with number data:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/string_variable_assignment_all.png)
+
+
 ## Our simple probability problem
 
 Remember our [simple probability problem](1_04_A_Simple_Problem)?
