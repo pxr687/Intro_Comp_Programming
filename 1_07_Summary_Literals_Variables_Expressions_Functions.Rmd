@@ -52,22 +52,30 @@ We type in the literal, and Python shows us the *value*. The value is the comput
 
 Literals are a type of *expression*, because Python shows us a value when we run a line of code which has only a literal.
 
+Remember that an expression is *anything which returns a value*.
+
 ## Variables
 
 We can store values as *variables*. This means we give the value a name. We can use that name to get the value out of our computer's memory:
 
 ```{python}
 # This is a variable assignment statement. 
-#`number_3` is the name of the variable, `3` is its value.
+#`number_3` is the name of the variable, `3` is it's value.
 number_3 = 3
 ```
+
+The variable assignment statement in the cell above is *not* an expression. It does not show us a value when we run the line of code with the variable assignment statement.
+
+The variable assignment statement *makes* a new variable (`number_3`).
+
+After the variable is made, it is an expression, because it has a value:
 
 ```{python}
 # The cell above this one created this variable `number_3`. This cell shows the value of the variable.
 number_3
 ```
 
-You can think of literals as values in Python code which are NOT stored as variables:
+You can think of *literals* as values in Python code which are NOT stored as variables:
 
 ```{python}
 # This is a literal.
@@ -75,8 +83,13 @@ You can think of literals as values in Python code which are NOT stored as varia
 ```
 
 ```{python}
-# Store `1999` as a variable.
+# Store `1999` as a variable - this is a variable assignment statement.
 new_variable = 1999
+```
+
+```{python}
+# See what the value of `new_variable` is.
+new_variable
 ```
 
 Literals and variables are both types of *expression*. 
@@ -98,9 +111,20 @@ So, in Jupyter, if you run a cell and you see an output, then the cell has an ex
 four_as_variable = 2 + 2
 ```
 
+The rule is: 
+
+> If you run a line of code and Jupyter automatically shows you a value, the line is an *expression*.
+> If you run a line of code and Jupyter does **NOT** automatically show a value, the line is a *statement*.
+
+Let's look at this expression again:
+
+```{python}
+2 + 2
+```
+
 We say that an expression *evaluates* to a value. So in the cell above, the expression `2 + 2` *evaluates* to `4`. This is the same as saying the expression `2 + 2` returns the value `4`.
 
-Literals and variables are also expressions (the simplest kinds of expressions!), because they return a value:
+As said earlier, literals and variables are also expressions (the simplest kinds of expressions!), because they return a value:
 
 ```{python}
 # This literal is also an expression, because it returns a value.
@@ -329,7 +353,7 @@ print("Class!")
 
 ## Exercise - Literals, Expressions and Functions
 
-We will now do our next Python exercise.
+We will now do our next Python exercise. This will check that you understand the concepts from this page.
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
