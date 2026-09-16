@@ -64,6 +64,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Summary: Literals, Variables, Expressions and Functions" href="1_07_Summary_Literals_Variables_Expressions_Functions.html" />
+    <link rel="prev" title="Extra Variables Task - Python Budget" href="1_05b_Extra_Variables_Task.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -126,8 +128,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -187,14 +187,25 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_01_Class_Rules.html">Class Rules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02b_Asking_For_Help.html">Helping each other learn, and asking for help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Python Elements and Grammar</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_03_Introduction_to_Python_and_Jupyter.html">Introduction to Python and Jupyter Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_04_0_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_04_A_Simple_Problem.html">A simple probability problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05b_Extra_Variables_Task.html">Extra Variables Task - Python Budget</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07b_Class_Quiz_Literals_Variables_Expressions_Functions.html">Class Quiz: Literals, Variables, Expressions and Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -396,9 +407,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#walking-in-python-s-shoes">Walking in Python’s shoes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-operators">Common Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions-and-python-grammar">Expressions and Python grammar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions-and-sub-expressions">Expressions and Sub-expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-operators">Important Operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-order-do-operators-use">What order do operators use</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operators-with-text-data">Operators with text data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-errors">Understanding errors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-expressions">Exercise 2 - Expressions</a></li>
 </ul>
@@ -418,11 +431,24 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/Expressions.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
+<blockquote>
+<div><p>Some advice before you read this page:</p>
+<ul class="simple">
+<li><p>Read <em>slowly</em> and make sure you fully understand each idea before you move on.</p></li>
+<li><p>Launch the page on Live Code and Binder and play around with the code in each cell. Do this even if the idea seems easy.  You might think you understand, but you can still learn something by trying out something new with the idea.</p></li>
+<li><p>Try to break the code, try to fix it.</p></li>
+<li><p>Try something where you are not sure what will happen.</p></li>
+<li><p>Then try to understand <em>why</em> something happens.</p></li>
+</ul>
+<p><em>The best way to understand these ideas is to play with the code yourself</em>.</p>
+<p>The more you understand these ideas, the <strong>easier</strong> it will be for you to <strong>fix errors</strong> in your code.</p>
+</div></blockquote>
 <p>Programming languages are simpler than human languages like English, Chinese, Burmese etc. However,
 there are rules of grammar in any language, including programming languages.</p>
 <p>Learning the rules of Python grammar rules is very important. Without proper grammar, you will get error messages and your code will not run.</p>
-<p><em>Expressions</em> are an important part of Python grammar. An expression is like a <em>recipe that returns a value</em>.  For
-example, this is an expression:</p>
+<p><em>Expressions</em> are an important part of Python grammar.</p>
+<p>An expression is like a <em>recipe that returns a value</em>.  For example, this is an expression.</p>
+<p>In Jupyter Notebooks, when we type an expression into a code cell, Python will show use the <em>value</em> of the expression:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
@@ -435,16 +461,153 @@ example, this is an expression:</p>
 </div>
 </div>
 </div>
-<p>Notice that the Notebook displays the value (<code class="docutils literal notranslate"><span class="pre">12</span></code>), but not the <em>input</em> (<code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code>).  This the <em>value</em> that the
+<p>Notice that the Notebook shows the value (<code class="docutils literal notranslate"><span class="pre">12</span></code>), but not the <em>input</em> (<code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code>).  <code class="docutils literal notranslate"><span class="pre">12</span></code> is the <em>value</em> that the
 expression returns.</p>
+<p>The text data in the code cell below is also an expression. We know it is an expression, because when we run the code cell, Python shows us the value of the expression:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Siam University&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Siam University&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, look at these variable assignment statements:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Store the value of the expression `3 * 4` in a variable called `months_in_year`.</span>
+<span class="n">months_in_year</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Store the value of the expression `&quot;Siam University&quot;` in a variable called `our_university.</span>
+<span class="n">our_university</span> <span class="o">=</span> <span class="s2">&quot;Siam University&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we run these code cells we do <strong>not</strong> see any output below the cell. This is because these are variable assignment <em>statements</em>. In Python, <em>statements</em> tell the computer to <em>do</em> something (like make a variable), but they do not <em>show us a value</em>. When we run a code cell that only has a statement in it, we do <em>not</em> see any output.</p>
+<p>The rule is:</p>
+<blockquote>
+<div><p>If you run a line of code and Jupyter automatically shows you a value, the line is an <em>expression</em>.
+If you run a line of code and Jupyter does <strong>NOT</strong> automatically show a value, the line is a <em>statement</em>.</p>
+</div></blockquote>
+<p>Expressions can be made of different <em>ingredients</em>. All of these code cells below have expressions in them:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is an expression - this is a *number literal*.</span>
+<span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is also an expression. This is a *number expression made from two literals*.</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is also an expression. This is a *number variable*.</span>
+<span class="n">months_in_year</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is also an expression. This is a *text literal*.</span>
+<span class="s2">&quot;Siam University&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Siam University&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is also an expression. This is a *text variable*.</span>
+<span class="n">our_university</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Siam University&#39;
+</pre></div>
+</div>
+</div>
+</div>
 <p>An expression can describe to the computer how to put pieces of data together.</p>
-<p>In our example, we have a multiplication expression that is a <code class="docutils literal notranslate"><span class="pre">*</span></code> symbol
-between two numbers. Expressions, such as <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code>, are
-<em>evaluated</em> by the computer. The value (the result of <em>evaluation</em>) of the
+<p>In our <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code> example, we have a multiplication expression that is a <code class="docutils literal notranslate"><span class="pre">*</span></code> symbol
+between two number literals.</p>
+<p>Expressions, such as <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code>, are <em>evaluated</em> by the computer. The value (the result of <em>evaluation</em>) of the
 last expression in each cell, <code class="docutils literal notranslate"><span class="pre">12</span></code> in this case, is displayed below the cell.</p>
-<p>The grammar rules of a programming language cannot be broken.</p>
-<p>In Python, the <code class="docutils literal notranslate"><span class="pre">*</span></code> symbol cannot appear twice in a row. The computer will not try to interpret an
-expression that differs from its prescribed expression structures.</p>
+<p>For the code cell below we can say:</p>
+<blockquote>
+<div><p>“The expression <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code> <em>evaluates</em> to <code class="docutils literal notranslate"><span class="pre">12</span></code>.”</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is the same for text data; for the next code cell we can say:</p>
+<blockquote>
+<div><p>“The variable <code class="docutils literal notranslate"><span class="pre">our_university</span></code> <em>evaluates</em> to <code class="docutils literal notranslate"><span class="pre">Siam</span> <span class="pre">University</span></code>.”</p>
+</div></blockquote>
+<p>(A variable is a type of expression, because it shows us a value).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">our_university</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Siam University&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="expressions-and-python-grammar">
+<h2>Expressions and Python grammar<a class="headerlink" href="#expressions-and-python-grammar" title="Link to this heading">#</a></h2>
+<p>The grammar rules of a programming language cannot be broken…well, the <em>can</em> be broken, but your code won’t run!</p>
+<p>In Python, you cannot use the <code class="docutils literal notranslate"><span class="pre">*</span></code> symbol twice in a row. The computer will not try to interpret an
+expression that  breaks the grammar rules of Python.</p>
 <p>Instead, it will show a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> error. The <em>Syntax</em> of a language is its
 grammar rules, and a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> means that an expression
 breaks the rules of the language.</p>
@@ -456,7 +619,7 @@ breaks the rules of the language.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="g g-Whitespace">    </span><span class="mi">3</span> <span class="o">*</span> <span class="o">*</span> <span class="mi">4</span>
         <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -470,7 +633,7 @@ removed the space between the <code class="docutils literal notranslate"><span c
 numbers, the expression is a correct <em>exponentiation</em>
 expression (the first number raised to the power of the second : <span class="math notranslate nohighlight">\(2^{2}\)</span>).</p>
 <p>The symbols <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> are called <em>operators</em>, and the
-values they put together are called <em>operands</em>.</p>
+values they put together are called <em>operands</em>. <strong>You will see these names in error messages, so it is important to know what they mean so that you can fix errors</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">2</span>
@@ -483,8 +646,9 @@ values they put together are called <em>operands</em>.</p>
 </div>
 </div>
 </div>
-<section id="walking-in-python-s-shoes">
-<h2>Walking in Python’s shoes<a class="headerlink" href="#walking-in-python-s-shoes" title="Link to this heading">#</a></h2>
+</section>
+<section id="expressions-and-sub-expressions">
+<h2>Expressions and Sub-expressions<a class="headerlink" href="#expressions-and-sub-expressions" title="Link to this heading">#</a></h2>
 <p>To think about expressions, we often need to remind ourselves what Python does when it sees the code for an expression.</p>
 <p>We look again at:</p>
 <div class="cell docutils container">
@@ -501,7 +665,7 @@ values they put together are called <em>operands</em>.</p>
 </div>
 <p>It is an expression because it is a recipe that returns a value.  We see the
 notebook display the value.</p>
-<p>Now consider this expression:</p>
+<p>Now think about this expression:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
@@ -514,10 +678,9 @@ notebook display the value.</p>
 </div>
 </div>
 </div>
-<p>It’s an expression because it returns a value.  We see the notebook display the value.</p>
+<p>As said above, it is an expression because it returns a value e.g. when we run the cell, Jupyter shows us an output.  We see the notebook display the value.</p>
 <p>More specifically, when Python sees the code <code class="docutils literal notranslate"><span class="pre">3</span></code>, it generates a computer representation of the number 3.</p>
-<p>We will use <em>CR</em> as a shorthand for <em>computer representation</em>.  To repeat then,
-the expression <code class="docutils literal notranslate"><span class="pre">3</span></code> causes Python to make and return a CR of the number 3.</p>
+<p>We will use <em>CR</em> to mean<em>computer representation</em>. The expression <code class="docutils literal notranslate"><span class="pre">3</span></code> causes Python to make and return a CR of the number 3.</p>
 <p>The Notebook then displays the computer representation, in a way that a human can read.</p>
 <p>We will use <em>HR</em> to mean <em>human readable</em>.</p>
 <p>In this case the HR <code class="docutils literal notranslate"><span class="pre">3</span></code> is the same as the code we typed, but this isn’t always
@@ -543,9 +706,52 @@ so. Look at the expression we saw above:</p>
 <p>The CR of 12 is the value returned from the expression.  The notebook turns
 that into something that humans can read easily - the HR of 12 - which is
 <code class="docutils literal notranslate"><span class="pre">12</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code> is an expression. Rememember that <code class="docutils literal notranslate"><span class="pre">3</span></code> by itself is also an expression, because it returns a value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">4</span></code> is also an expression, because it also returns a value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets call <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">4</span></code> the <em>big</em> expression. Inside that big expression, <code class="docutils literal notranslate"><span class="pre">3</span></code> and <code class="docutils literal notranslate"><span class="pre">4</span></code> also have values. They are called <em>sub-expressions</em>. This just means they are smaller expressions inside a bigger expression.</p>
+<p>The value that Jupyter shows us is the value of the big expression:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>…and inside that big expression are two sub-expressions:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/sub_express.png" /></p>
 </section>
-<section id="common-operators">
-<h2>Common Operators<a class="headerlink" href="#common-operators" title="Link to this heading">#</a></h2>
+<section id="important-operators">
+<h2>Important Operators<a class="headerlink" href="#important-operators" title="Link to this heading">#</a></h2>
+<p>To do calculations with our Python expressions, we will need <em>operators</em>.</p>
 <p>In Python, the following operators are
 very important (we have seen some of them before).</p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -582,7 +788,7 @@ very important (we have seen some of them before).</p>
 <td><p><code class="docutils literal notranslate"><span class="pre">101</span> <span class="pre">%</span> <span class="pre">10</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Exponentiation</p></td>
+<tr class="row-odd"><td><p>Exponentiation (Power)</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">**</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">**</span> <span class="pre">2</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">100</span></code></p></td>
@@ -590,10 +796,11 @@ very important (we have seen some of them before).</p>
 </tbody>
 </table>
 </div>
+<p><em>Note</em>: these are call the <em>arithmetic operators</em>, because we use them to do <a class="reference external" href="https://en.wikipedia.org/wiki/Arithmetic">arithmetic</a>.</p>
 </section>
 <section id="what-order-do-operators-use">
 <h2>What order do operators use<a class="headerlink" href="#what-order-do-operators-use" title="Link to this heading">#</a></h2>
-<p>Python expressions obey the same rules of
+<p>Python expressions follow the same rules of
 <a class="reference external" href="https://en.wikipedia.org/wiki/Order_of_operations">precedence</a> as in algebra:
 multiplication and division occur before addition and subtraction. Parentheses
 can be used to group together smaller expressions in a larger expression.</p>
@@ -601,7 +808,7 @@ can be used to group together smaller expressions in a larger expression.</p>
 <blockquote>
 <div><p>(Image from <a class="reference external" href="https://centrepointschools.com/blogs/how-to-simplify-complex-equations-using-the-bodmas-rule/">here</a>).</p>
 </div></blockquote>
-<p>Multiplication has precedence (we do <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3</span></code> before adding to 1).</p>
+<p>Multiplication happens before addition (we do <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3</span></code> before adding to 1).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
@@ -627,7 +834,7 @@ can be used to group together smaller expressions in a larger expression.</p>
 </div>
 </div>
 </div>
-<p>We can also use brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> to make <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code> happen <em>before</em> the multiplication by 3.</p>
+<p>We can also use brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> to make <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code> happen <em>before</em> the multiplication by 3 - this changes the sub-expressions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
@@ -640,13 +847,59 @@ can be used to group together smaller expressions in a larger expression.</p>
 </div>
 </div>
 </div>
-<p>In the expression above, the <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code> is a <em>sub-expression</em> within the whole
-expression <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">+</span> <span class="pre">2)</span> <span class="pre">*</span> <span class="pre">3</span></code>.  When Python sees this line, it finds the expression
+<p>In the expression above, the <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code> is a <em>sub-expression</em> within the bigger
+expression <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">+</span> <span class="pre">2)</span> <span class="pre">*</span> <span class="pre">3</span></code>.</p>
+<p>When Python sees this line of code, it finds the expression
 <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">+</span> <span class="pre">2)</span></code> and evaluates that to get <code class="docutils literal notranslate"><span class="pre">3</span></code>.  Then it evaluates <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">3</span></code> to get <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
+<p>Let’s compare the expression <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">(2</span> <span class="pre">*</span> <span class="pre">3)</span></code> to the expression <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">+</span> <span class="pre">2)</span> <span class="pre">*</span> <span class="pre">3</span></code> and think about what Python is doing when it runs each line of code:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/sub_express_AB.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Another example. Changing the brackets changes the calculation by changing the sub-expressions...</span>
+<span class="mi">100</span> <span class="o">+</span> <span class="mi">10</span><span class="o">/</span><span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Another example. Changing the brackets changes the calculation by changing the sub-expressions...</span>
+
+<span class="p">(</span><span class="mi">100</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.0
+</pre></div>
+</div>
+</div>
+</div>
 <p>As you learn to program, you will learn to think about what Python is doing,
 and the steps it follows.  Over time, you will find it easier to
 predict what it will do, and understand why. <em>This will also help you to
 understand error messages that you get</em>.</p>
+</section>
+<section id="operators-with-text-data">
+<h2>Operators with text data<a class="headerlink" href="#operators-with-text-data" title="Link to this heading">#</a></h2>
+<p>We will look at this more on a later page. But for now, just know that we can also use (some) operators with text data, to make expressions. For example, the code cell below uses <code class="docutils literal notranslate"><span class="pre">+</span></code> to add two text literal sub-expressions together into a larger expression:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;This is one string... &quot;</span> <span class="o">+</span> <span class="s2">&quot;added to another.&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is one string... added to another.&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="understanding-errors">
 <h2>Understanding errors<a class="headerlink" href="#understanding-errors" title="Link to this heading">#</a></h2>
@@ -659,7 +912,7 @@ understand error messages that you get</em>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">    </span><span class="mi">10</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">=</span> <span class="n">my_variable</span>
     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: cannot assign to expression here. Maybe you meant &#39;==&#39; instead of &#39;=&#39;?
@@ -690,6 +943,7 @@ understand error messages that you get</em>.</p>
 <section id="exercise-2-expressions">
 <h2>Exercise 2 - Expressions<a class="headerlink" href="#exercise-2-expressions" title="Link to this heading">#</a></h2>
 <p>We will now do our second Python exercise.</p>
+<p>As you do this exercise, think about how you are changing <em>sub-expressions</em> to change the value of a <em>bigger expression</em>.</p>
 <p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
 <p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2_expressions.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
 <hr class="docutils" />
@@ -727,6 +981,24 @@ understand error messages that you get</em>.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_05b_Extra_Variables_Task.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Extra Variables Task - Python Budget</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_07_Summary_Literals_Variables_Expressions_Functions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Summary: Literals, Variables, Expressions and Functions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -743,9 +1015,11 @@ understand error messages that you get</em>.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#walking-in-python-s-shoes">Walking in Python’s shoes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-operators">Common Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions-and-python-grammar">Expressions and Python grammar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions-and-sub-expressions">Expressions and Sub-expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-operators">Important Operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-order-do-operators-use">What order do operators use</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operators-with-text-data">Operators with text data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-errors">Understanding errors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-expressions">Exercise 2 - Expressions</a></li>
 </ul>

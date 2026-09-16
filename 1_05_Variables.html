@@ -185,6 +185,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_01_Class_Rules.html">Class Rules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02b_Asking_For_Help.html">Helping each other learn, and asking for help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Python Elements and Grammar</span></p>
 <ul class="current nav bd-sidenav">
@@ -193,6 +194,16 @@
 <li class="toctree-l1"><a class="reference internal" href="1_04_A_Simple_Problem.html">A simple probability problem</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Variables - thinking like a computer (scientist)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05b_Extra_Variables_Task.html">Extra Variables Task - Python Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07b_Class_Quiz_Literals_Variables_Expressions_Functions.html">Class Quiz: Literals, Variables, Expressions and Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -398,6 +409,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-variable-vs-showing-a-variable">“Making a variable” vs “Showing a variable”</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-numbers-and-variables-in-python">More on numbers and variables in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-about-variable-names">Rules about variable names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-and-variables-in-python">Text and variables in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-simple-probability-problem">Our simple probability problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-python-jupyter-and-variables">Exercise 1 - Python, Jupyter and Variables</a></li>
 </ul>
@@ -861,6 +873,48 @@ underscore character <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 </section>
+<section id="text-and-variables-in-python">
+<h2>Text and variables in Python<a class="headerlink" href="#text-and-variables-in-python" title="Link to this heading">#</a></h2>
+<p>On this page so far we have used numbers to store in our variables. However, lots of data in the world is text and so Python also lets us store text in our variables.</p>
+<p>Remember, text data in Python must start and end with quotation marks (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'</span></code>). The code cell below has some text data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;siam&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;siam&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Like with numbers, a single value typed in Python code is called a <em>literal</em>. This is a single piece of text, so it is called a <em>text literal</em>. We can store it in a variable, just like we can with numbers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a variable called `university` which has the value `&quot;siam&quot;`.</span>
+<span class="n">university</span> <span class="o">=</span> <span class="s2">&quot;siam&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Because the line of code in the cell above <em>makes</em> a variable, it does not <em>show</em> us the value of the variable. But we can use the variable’s name to see what value it has:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the value.</span>
+<span class="n">university</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;siam&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>With text data, the code we use to make variables (e.g. the <em>variable assignment statement</em>) works in the same way as it does with number data:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/string_variable_assignment_all.png" /></p>
+</section>
 <section id="our-simple-probability-problem">
 <h2>Our simple probability problem<a class="headerlink" href="#our-simple-probability-problem" title="Link to this heading">#</a></h2>
 <p>Remember our <a class="reference internal" href="1_04_A_Simple_Problem.html"><span class="doc std std-doc">simple probability problem</span></a>?</p>
@@ -1048,6 +1102,7 @@ BOY
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-variable-vs-showing-a-variable">“Making a variable” vs “Showing a variable”</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-numbers-and-variables-in-python">More on numbers and variables in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-about-variable-names">Rules about variable names</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-and-variables-in-python">Text and variables in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-simple-probability-problem">Our simple probability problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-python-jupyter-and-variables">Exercise 1 - Python, Jupyter and Variables</a></li>
 </ul>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Comparisons &#8212; Introduction to Computer Programming</title>
+    <title>Comparison Operators and Boolean data &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -185,6 +185,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_01_Class_Rules.html">Class Rules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02b_Asking_For_Help.html">Helping each other learn, and asking for help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Python Elements and Grammar</span></p>
 <ul class="nav bd-sidenav">
@@ -193,6 +194,16 @@
 <li class="toctree-l1"><a class="reference internal" href="1_04_A_Simple_Problem.html">A simple probability problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05b_Extra_Variables_Task.html">Extra Variables Task - Python Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07b_Class_Quiz_Literals_Variables_Expressions_Functions.html">Class Quiz: Literals, Variables, Expressions and Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -371,7 +382,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -382,11 +395,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Comparisons</h1>
+    <h1>Comparison Operators and Boolean data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-comparison-operators">Exercise - Comparison Operators</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -396,8 +417,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="comparisons">
-<h1>Comparisons<a class="headerlink" href="#comparisons" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="comparison-operators-and-boolean-data">
+<h1>Comparison Operators and Boolean data<a class="headerlink" href="#comparison-operators-and-boolean-data" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/Comparison.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
@@ -405,7 +426,7 @@ document.write(`
 <p>A <em>Boolean</em> value is a value that can only be True or False.  It is called
 “Boolean” after the English mathematician and logician <a class="reference external" href="https://en.wikipedia.org/wiki/George_Boole">George
 Boole</a></p>
-<p>Boolean values most often happen as a result of comparison operators. Python includes lots of operators that compare values. For example, we can ask Python the question: “is this thing <em>larger than</em> this other thing?”.</p>
+<p>Boolean values most often happen because of comparison operators. Python includes lots of operators that compare values. For example, we can ask Python the question: “is this thing <em>larger than</em> this other thing?”.</p>
 <p>The cells below make some variables, which represent the ages of some students.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -707,8 +728,14 @@ be combined, like <code class="docutils literal notranslate"><span class="pre">+
 </div>
 </div>
 </div>
+<section id="exercise-comparison-operators">
+<h2>Exercise - Comparison Operators<a class="headerlink" href="#exercise-comparison-operators" title="Link to this heading">#</a></h2>
+<p>We will now do another exercise!</p>
+<p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
+<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4a_comparison_operators.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -747,6 +774,21 @@ be combined, like <code class="docutils literal notranslate"><span class="pre">+
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-comparison-operators">Exercise - Comparison Operators</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

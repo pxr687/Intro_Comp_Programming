@@ -185,6 +185,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_01_Class_Rules.html">Class Rules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02b_Asking_For_Help.html">Helping each other learn, and asking for help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Python Elements and Grammar</span></p>
 <ul class="nav bd-sidenav">
@@ -193,6 +194,16 @@
 <li class="toctree-l1"><a class="reference internal" href="1_04_A_Simple_Problem.html">A simple probability problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_05b_Extra_Variables_Task.html">Extra Variables Task - Python Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07b_Class_Quiz_Literals_Variables_Expressions_Functions.html">Class Quiz: Literals, Variables, Expressions and Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -412,11 +423,12 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/String_Methods.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
-<p>From a string, related strings can be made using string methods. String methods are functions that operate on strings. These methods are called by placing a dot after the string, then calling the function.</p>
-<p>For example, the following method generates an uppercased (all capitals) version of a string.</p>
+<p>When you have a string, you can make new strings from it using string methods. String methods are <em>functions</em> that <em>work on strings</em>. These methods are used by putting a dot after the string, then calling the function.</p>
+<p>For example, the following method generates an uppercase (all capitals) version of a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;loud&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the `.upper()` string method with the string `loud`.</span>
+<span class="s2">&quot;loud&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -426,32 +438,64 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Perhaps the most important method is <code class="docutils literal notranslate"><span class="pre">replace</span></code>, which replaces all instances of a substring within the string. The <code class="docutils literal notranslate"><span class="pre">replace</span></code> method takes two arguments, the text to be replaced and its replacement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hitchhiker&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="s1">&#39;ma&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the `.upper()` string method with the string `shouting`.</span>
+<span class="s2">&quot;shouting&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;matchmaker&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;SHOUTING&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>String methods can also be used with variable names, as long as the variable is a string. So, for instance, the following two-step process makes the word “degrade” starting from “train” by first creating “ingrain”
-and then applying a second replacement.</p>
+<p>We already saw the next string method on an earlier page. It is probably the most important string method - it is called <code class="docutils literal notranslate"><span class="pre">.replace()</span></code>. What it does is <em>replace</em> a substring within the string. The <code class="docutils literal notranslate"><span class="pre">.replace()</span></code> method takes two arguments, the text to replace and the text to replace it with.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;train&quot;</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;ing&#39;</span><span class="p">)</span>
-<span class="n">u</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="s1">&#39;de&#39;</span><span class="p">)</span>
-<span class="n">u</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the `.replace()` string method with the string `&quot;sunny&quot;`.</span>
+<span class="s1">&#39;sunny&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;degrade&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;funny&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the `.replace()` string method with the string `&quot;drink&quot;`.</span>
+<span class="s1">&#39;drink&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;dr&#39;</span><span class="p">,</span> <span class="s1">&#39;th&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;think&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>String methods can also be used with variables, if the variable is a string.</p>
+<p>So, for instance, the following code cell makes the word “money” starting from “many” by first making “my”, and then doing another replacement after that.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our first word, &quot;many&quot;.</span>
+<span class="n">first_word</span> <span class="o">=</span> <span class="s2">&quot;many&quot;</span>
+
+<span class="c1"># Use `.replace()` to make our second word (&quot;my&quot;).</span>
+<span class="n">second_word</span> <span class="o">=</span> <span class="n">first_word</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;an&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Use `.replace()` to make our third word (&quot;money&quot;)</span>
+<span class="n">third_word</span>  <span class="o">=</span> <span class="n">second_word</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;oney&#39;</span><span class="p">)</span>
+<span class="n">third_word</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;money&#39;
 </pre></div>
 </div>
 </div>
@@ -460,26 +504,26 @@ and then applying a second replacement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The string we start with.</span>
-<span class="n">s</span>
+<span class="n">first_word</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;train&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;many&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace &quot;t&quot; with &quot;ing&quot;.</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;ing&#39;</span><span class="p">)</span>
-<span class="n">t</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use `.replace()` to make our second word (&quot;my&quot;).</span>
+<span class="n">second_word</span> <span class="o">=</span> <span class="n">first_word</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;an&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">second_word</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ingrain&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;my&#39;
 </pre></div>
 </div>
 </div>
@@ -487,33 +531,32 @@ and then applying a second replacement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace &quot;in&quot; with &quot;de&quot;</span>
-<span class="n">u</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="s1">&#39;de&#39;</span><span class="p">)</span>
-<span class="n">u</span>
+<span class="n">third_word</span>  <span class="o">=</span> <span class="n">second_word</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;oney&#39;</span><span class="p">)</span>
+<span class="n">third_word</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;degrade&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;money&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>Note that the line <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">s.replace('t',</span> <span class="pre">'ing')</span></code> doesn’t change the string <code class="docutils literal notranslate"><span class="pre">s</span></code>,
-which is still “train”.  The method call <code class="docutils literal notranslate"><span class="pre">s.replace('t',</span> <span class="pre">'ing')</span></code> just has
-a value, which is the string “ingrain”.</p>
+<p>Notice that the line <code class="docutils literal notranslate"><span class="pre">second_word</span> <span class="pre">=</span> <span class="pre">first_word.replace('an',</span> <span class="pre">'')</span></code> does <strong>NOT</strong> change the string <code class="docutils literal notranslate"><span class="pre">first_word</span></code>,
+which is still “many”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_word</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;train&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;many&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<p>This is the first time we’ve seen methods, but methods are not unique to strings.  As we will see shortly, other types of objects can have them.</p>
+<p>Methods are not only used with strings.  As we will see on other pages, other types of objects can have them.</p>
 <section id="exercise-4-string-methods">
 <h2>Exercise 4 - String Methods<a class="headerlink" href="#exercise-4-string-methods" title="Link to this heading">#</a></h2>
 <p>We will now do another exercise!</p>
