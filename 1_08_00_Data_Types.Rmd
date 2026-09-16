@@ -19,7 +19,16 @@ jupyter:
 This page is partly adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/intro_to_functions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
-> Some advice before you read this page: same as for the last two pages, read *slowly* and make sure you fully understand each idea before you move on. Launch the page on Live Code and Binder and play around with each cell. Do this even if the idea seems easy. The more you understand these ideas, the easier it will be for you to fix errors in your code.  *The best way to understand these ideas is to play with the code yourself.
+> Some advice before you read this page: 
+> - Read *slowly* and make sure you fully understand each idea before you move on.
+> - Launch the page on Live Code and Binder and play around with the code in each cell. Do this even if the idea seems easy.  You might think you understand, but you can still learn something by trying out something new with the idea.
+> - Try to break the code, try to fix it.
+> - Try something where you are not sure what will happen.
+> - Then try to understand *why* something happens.
+>
+> *The best way to understand these ideas is to play with the code yourself*.
+>
+> The more you understand these ideas, the **easier** it will be for you to **fix errors** in your code.  
 
 So far we have used numbers and text in our Python code:
 <!-- #endregion -->
@@ -48,12 +57,14 @@ print(100)
 
 We know that you can think of a function like a [*recipe*](https://www.inferentialthinking.com/chapters/08/Functions_and_Tables). We give it some ingredients, and it returns a "meal".
 
-For the `print()` function, we give it some input and it displays the input. Here we use `print()` with some text AND and number:
+For the `print()` function, we give it some input and it displays the input. Here we use `print()` with some text AND and number. We do this by putting a `,` in between the text and the number:
 
 ```{python}
 # The `print()` function (again).
 print("This is a very long input, which as some text and the number", 100)
 ```
+
+We can also use variables, within `print()`, also by using a `,`:
 
 ```{python}
 # The `print()` function (again, this time with a variable).
@@ -63,7 +74,7 @@ print("This is a very long input, which as some text and another number, which i
 
 Text and numbers are different *Data Types* in Python.
 
-It is very important to know what type of data you are using.
+**It is very important to know what type of data you are using.**
 
 If you accidentally change a data type, it can lead to errors.
 
@@ -365,7 +376,7 @@ name = ...
 name
 ```
 
-Now, change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this using the `+` operator and making new strings.**. Do NOT just type the right string and re-assign the variable e.g. do not use `name = Hello Pete!`.
+Now, change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this with the `+` operator and by making new strings.**. Do *NOT* just type the right string and re-assign the variable e.g. do **NOT** use `name = Hello Pete!`.
 
 ```{python}
 # Your code here
@@ -439,7 +450,7 @@ They want to use `print()` to show this message:
 "There are 556 cats and monitor lizards in Lumpini park."
 ```
 
-They want to use Python to calculate the number (556) in the message, using the  `number_of_monitor_lizards` and `number_of_cats` variables (e.g. they do NOT want to hard-code the number in the message text).
+They want to use Python to calculate the number (556) in the message, using the  `number_of_monitor_lizards` and `number_of_cats` variables (e.g. they do **NOT** want to hard-code the number in the message text).
 
 At the moment they are not getting the result they want...can you fix their code?
 

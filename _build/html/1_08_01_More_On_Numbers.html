@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -409,6 +409,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-notation-another-way-of-writing-float-values">Scientific notation - another way of writing float values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limits-of-float-values">The limits of float values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-do-the-exercise">Before you do the exercise</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-scientific-notation">Exercise - Scientific Notation</a></li>
 </ul>
             </nav>
@@ -427,7 +428,7 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>This page is adpted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/Numbers.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
-<p>Computers are very good calculators. However, there are important details  that every programmer working with numbers needs to know. Python (and most other programming languages) uses two <em>different types of numbers</em>. We have seen both of them on the <a class="reference internal" href="1_08_00_Data_Types.html"><span class="doc std std-doc">Data Types</span></a> page:</p>
+<p>Computers are very good calculators. However, there are important things that every programmer working with numbers needs to know. Python (and most other programming languages) uses two <em>different types of numbers</em>. We have seen both of them on the <a class="reference internal" href="1_08_00_Data_Types.html"><span class="doc std std-doc">Data Types</span></a> page:</p>
 <ul class="simple">
 <li><p>Integers are called <code class="docutils literal notranslate"><span class="pre">int</span></code> values in the Python language. They can only
 represent whole numbers (negative, zero, or positive) that do not have a decimal place. E.g. <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">100</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">-1</span></code> are all integers.</p></li>
@@ -457,6 +458,30 @@ have no decimal point and <code class="docutils literal notranslate"><span class
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-10
 </pre></div>
 </div>
 </div>
@@ -512,7 +537,8 @@ have no decimal point and <code class="docutils literal notranslate"><span class
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mf">12345678900000000000.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We will talk more about the output of this cell further down the page!</span>
+<span class="o">-</span><span class="mf">12345678900000000000.0</span>
 </pre></div>
 </div>
 </div>
@@ -522,11 +548,12 @@ have no decimal point and <code class="docutils literal notranslate"><span class
 </div>
 </div>
 </div>
-<p>When a <code class="docutils literal notranslate"><span class="pre">float</span></code> value is combined with an <code class="docutils literal notranslate"><span class="pre">int</span></code> value using some mathematical
+<p>When a <code class="docutils literal notranslate"><span class="pre">float</span></code> value is combined with an <code class="docutils literal notranslate"><span class="pre">int</span></code> value using a mathematical
 operator, then the result is always a <code class="docutils literal notranslate"><span class="pre">float</span></code> value:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">7.5</span> <span class="o">+</span> <span class="mi">4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># float * int</span>
+<span class="mf">7.5</span> <span class="o">+</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
@@ -539,6 +566,7 @@ operator, then the result is always a <code class="docutils literal notranslate"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A number with a decimal of 0 is still a `float`!</span>
+<span class="c1"># float * int</span>
 <span class="mf">8.0</span> <span class="o">+</span> <span class="mi">2</span>
 </pre></div>
 </div>
@@ -551,7 +579,8 @@ operator, then the result is always a <code class="docutils literal notranslate"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">70</span> <span class="o">*</span> <span class="mf">102.3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># int * float</span>
+<span class="mi">70</span> <span class="o">*</span> <span class="mf">102.3</span>
 </pre></div>
 </div>
 </div>
@@ -606,7 +635,8 @@ divided by another will be a <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 </div>
-<p>This is the same value as:</p>
+<p>This format is called <em>scientific notation</em>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> is writteen in scientific notation, and it is the same value as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">2100.0</span>
@@ -633,8 +663,23 @@ divided by another will be a <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">&quot;f&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function tells it that we want <a class="reference external" href="https://docs.python.org/3/library/string.html"><em>fixed-point notation</em></a>. You can think of this as just meaning “NOT scientific notation”!</p>
-<p>Ok, back to scientific notation. You can read <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as <span class="math notranslate nohighlight">\(2.1 * 10^3\)</span>.  The <code class="docutils literal notranslate"><span class="pre">e3</span></code> means “times 10 to the power of 3”.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">&quot;f&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function tells it that we want <a class="reference external" href="https://docs.python.org/3/library/string.html"><em>fixed-point notation</em></a>. You can think of this as just meaning “NOT scientific notation”! <strong>Note</strong>: this will only show you 6 decimal places, unless you change other settings…(e.g. you can change <code class="docutils literal notranslate"><span class="pre">&quot;f&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;.24f&quot;</span></code> to show 24 decimal places…).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make Python show us 24 decimal places.</span>
+<span class="nb">format</span><span class="p">(</span><span class="mf">2.1e3</span><span class="p">,</span> <span class="s2">&quot;.24f&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2100.000000000000000000000000&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also note that <code class="docutils literal notranslate"><span class="pre">format()</span></code> returns your number as text/string data, not as <code class="docutils literal notranslate"><span class="pre">float</span></code> data.</p>
+<p>Ok, back to scientific notation.</p>
+<p>You can read <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as <span class="math notranslate nohighlight">\(2.1 * 10^3\)</span>.  The <code class="docutils literal notranslate"><span class="pre">e3</span></code> means “times 10 to the power of 3”.</p>
 <p>So we say <code class="docutils literal notranslate"><span class="pre">2.1e3</span></code> as “2.1 times 10 to the power of 3”.</p>
 <p>We can also use negative powers to represent small numbers:</p>
 <div class="cell docutils container">
@@ -649,7 +694,7 @@ divided by another will be a <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 </div>
-<p>Read <code class="docutils literal notranslate"><span class="pre">1e-3</span></code> as <span class="math notranslate nohighlight">\(1 x 10^-3\)</span>, or “1 then moving the decimal point 3 spaces to the
+<p>Read <code class="docutils literal notranslate"><span class="pre">1e-3</span></code> as <span class="math notranslate nohighlight">\(1 x 10^-3\)</span>, or “1, but move the decimal point 3 spaces to the
 left”, or:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -817,7 +862,7 @@ left”, or:</p>
 <li><p>1 times 10 to the power of minus 5</p></li>
 <li><p>1 times 10 to the power of minus 6</p></li>
 </ul>
-<p>…but we can change the “1” to any number we want (e.g. “6.23 times ten to the power of 3” etc.).</p>
+<p>…but we can change the “1” to any number we want (e.g. “6.23 times 10 to the power of 3” etc.).</p>
 <p>Change the value of the variable <code class="docutils literal notranslate"><span class="pre">try_it_with</span></code> in the cell below, to use any number you want. This will help you to get a feel of the meaning of scientific notation:</p>
 <p><strong>NOTE</strong>: this will only work if you are running the notebook on Binder or Live code. It looks <em>ugly</em> on the online textbook! But if you run the page on Binder or Live Code it will look nice, I promise 🙂</p>
 <div class="cell docutils container">
@@ -851,10 +896,10 @@ left”, or:</p>
 </div>
 </div>
 <p>Scientific notation makes it easier write and display very large and very small
-numbers. For example, we can write 10 million million as:</p>
+numbers. For example, we can write 10 million as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10 million million</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10 million</span>
 <span class="mf">1e7</span>
 </pre></div>
 </div>
@@ -895,6 +940,9 @@ numbers. For example, we can write 10 million million as:</p>
 </section>
 <section id="the-limits-of-float-values">
 <h2>The limits of float values<a class="headerlink" href="#the-limits-of-float-values" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Limit, <em>noun</em>, <a class="reference external" href="https://www.oxfordlearnersdictionaries.com/definition/english/limit_1">“the greatest or smallest amount of something that is allowed.”</a></p>
+</div></blockquote>
 <p>Float values are very flexible, but they do have limits.</p>
 <ol class="arabic simple">
 <li><p>A <code class="docutils literal notranslate"><span class="pre">float</span></code> can represent very large and very small numbers. There
@@ -960,8 +1008,8 @@ very small number, then it is represented as zero.</p>
 </div>
 </div>
 </div>
-<p>The second limit can be observed by an expression that involves numbers with
-more than 15 significant digits. These extra digits are discarded before any
+<p>The second limit can be seen by an expression that involves numbers with
+more than 15 significant digits. These extra digits are thrown away before any
 arithmetic is carried out.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -979,7 +1027,7 @@ arithmetic is carried out.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our very small digits ARE lost :(</span>
-<span class="mf">0.6666666666666666</span> <span class="o">-</span> <span class="mf">0.6666666666666666123456789</span>
+<span class="mf">0.6666666666666666</span> <span class="o">-</span> <span class="mf">0.6666666666666666123456789</span> <span class="c1"># The digits on the end of the second number are thrown away.</span>
 </pre></div>
 </div>
 </div>
@@ -989,10 +1037,10 @@ arithmetic is carried out.</p>
 </div>
 </div>
 </div>
-<p>The third limit can be observed when taking the difference between two
+<p>The third limit can be seen when calculating the difference between two
 expressions that should be equivalent. For example, the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">0.5</span></code>
 computes the square root of 2, but squaring this value does not exactly
-recover 2.</p>
+make 2.</p>
 <p>Here we <code class="docutils literal notranslate"><span class="pre">import</span></code> the function <code class="docutils literal notranslate"><span class="pre">math.sqrt()</span></code>, which returns the square root of numbers it is given as arguments.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1064,6 +1112,70 @@ languages.</p>
 <ul class="simple">
 <li><p>doing calculations with very big or very small numbers can lead to floating point errors.</p></li>
 </ul>
+</section>
+<section id="before-you-do-the-exercise">
+<h2>Before you do the exercise<a class="headerlink" href="#before-you-do-the-exercise" title="Link to this heading">#</a></h2>
+<p>Make sure you understand this (it can be confusing, so read it carefully):</p>
+<p>Think about <code class="docutils literal notranslate"><span class="pre">4.2e+05</span></code>. This number is positive, and it has a plus sign <code class="docutils literal notranslate"><span class="pre">+</span></code> in it’s scientific notation (e.g. <code class="docutils literal notranslate"><span class="pre">e+05</span></code>). This is a <em>large positive number</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">4.2e+05</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>420000.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, the number <code class="docutils literal notranslate"><span class="pre">-4.2e+05</span></code> number is <em>negative</em>, it has a minus sign <code class="docutils literal notranslate"><span class="pre">-</span></code> at it’s start. But it has a plus sign <code class="docutils literal notranslate"><span class="pre">+</span></code> in it’s scientific notation (e.g. <code class="docutils literal notranslate"><span class="pre">e+05</span></code>). This is a <em>large negative number</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">(</span><span class="o">-</span><span class="mf">4.2e+05</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;-420000.000000&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number <code class="docutils literal notranslate"><span class="pre">4.2e-05</span></code> is positive, it does NOT have a minus sign at it’s start. BUT it does have a minus sign in its scientific notation (e.g. <code class="docutils literal notranslate"><span class="pre">e-05</span></code>). This is a <em>small positive number</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">(</span><span class="mf">4.2e-05</span><span class="p">,</span> <span class="s2">&quot;.24f&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0.000041999999999999997676&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>In contrast, the number <code class="docutils literal notranslate"><span class="pre">-4.2e-05</span></code> has a minus sign <code class="docutils literal notranslate"><span class="pre">-</span></code> at it’s start, AND in it’s scientific notation (e.g. <code class="docutils literal notranslate"><span class="pre">e-05</span></code>). This is a <em>small negative number</em>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">(</span><span class="o">-</span><span class="mf">4.2e-05</span><span class="p">,</span> <span class="s2">&quot;.24f&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;-0.000041999999999999997676&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>So:</p>
+<ul class="simple">
+<li><p>positive number, <code class="docutils literal notranslate"><span class="pre">+</span></code> in scientific notation: LARGE POSITIVE NUMBER e.g. <code class="docutils literal notranslate"><span class="pre">4.2e+05</span></code> equals <code class="docutils literal notranslate"><span class="pre">420000</span></code></p></li>
+<li><p>negative number, <code class="docutils literal notranslate"><span class="pre">+</span></code> in scientific notation: LARGE NEGATIVE NUMBER e.g. <code class="docutils literal notranslate"><span class="pre">-4.2e+05</span></code> equals <code class="docutils literal notranslate"><span class="pre">-420000</span></code></p></li>
+<li><p>positive number, <code class="docutils literal notranslate"><span class="pre">-</span></code> in scientific notation: SMALL POSITIVE NUMBER e.g. <code class="docutils literal notranslate"><span class="pre">4.2e-05</span></code> equals <code class="docutils literal notranslate"><span class="pre">0.000041999999999999997676</span></code></p></li>
+<li><p>negatvie number, <code class="docutils literal notranslate"><span class="pre">-</span></code> in scientific notation: SMALL NEGATIVE NUMBER e.g. <code class="docutils literal notranslate"><span class="pre">-4.2e-05</span></code> equals <code class="docutils literal notranslate"><span class="pre">-0.000041999999999999997676</span></code></p></li>
+</ul>
+<p>You will need to understand this to do the exercise.</p>
 </section>
 <section id="exercise-scientific-notation">
 <h2>Exercise - Scientific Notation<a class="headerlink" href="#exercise-scientific-notation" title="Link to this heading">#</a></h2>
@@ -1141,6 +1253,7 @@ languages.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scientific-notation-another-way-of-writing-float-values">Scientific notation - another way of writing float values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limits-of-float-values">The limits of float values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#before-you-do-the-exercise">Before you do the exercise</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-scientific-notation">Exercise - Scientific Notation</a></li>
 </ul>
   </nav></div>

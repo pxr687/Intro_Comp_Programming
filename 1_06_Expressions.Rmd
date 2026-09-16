@@ -19,7 +19,16 @@ jupyter:
 This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/Expressions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
-> Some advice before you read this page: read *slowly* and make sure you fully understand each idea before you move on. Launch the page on Live Code and Binder and play around with each cell. Do this even if the idea seems easy. The more you understand these ideas, the easier it will be for you to fix errors in your code.  *The best way to understand these ideas is to play with the code yourself.*
+> Some advice before you read this page: 
+> - Read *slowly* and make sure you fully understand each idea before you move on.
+> - Launch the page on Live Code and Binder and play around with the code in each cell. Do this even if the idea seems easy.  You might think you understand, but you can still learn something by trying out something new with the idea.
+> - Try to break the code, try to fix it.
+> - Try something where you are not sure what will happen.
+> - Then try to understand *why* something happens.
+>
+> *The best way to understand these ideas is to play with the code yourself*.
+>
+> The more you understand these ideas, the **easier** it will be for you to **fix errors** in your code.
 
 Programming languages are simpler than human languages like English, Chinese, Burmese etc. However,
 there are rules of grammar in any language, including programming languages.

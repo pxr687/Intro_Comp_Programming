@@ -10,7 +10,9 @@ def test_me(n_iter=10):
     for rep in np.arange(n_iter):
         sleep(2)
         jupyprint(f'## Question {rep+1}')
-        random_big_or_small = np.random.normal(0, 60000)
+        prob_biggish = np.random.normal(0, 60000)
+        prob_small = np.random.uniform(-1, 1)
+        random_big_or_small = np.random.choice([prob_biggish, prob_small], p = [0.75, 0.25])
         jupyprint(f"Here is a number in scientific notation: {random_big_or_small:e}")
         jupyprint(f"Type this number WITHOUT scientific notation.")
         jupyprint("*Note*: you must type a number, not text, or you will get an error.")

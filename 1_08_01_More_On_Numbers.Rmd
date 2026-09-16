@@ -19,7 +19,7 @@ jupyter:
 This page is adpted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/Numbers.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
-Computers are very good calculators. However, there are important details  that every programmer working with numbers needs to know. Python (and most other programming languages) uses two *different types of numbers*. We have seen both of them on the [Data Types](1_08_00_Data_Types) page:
+Computers are very good calculators. However, there are important things that every programmer working with numbers needs to know. Python (and most other programming languages) uses two *different types of numbers*. We have seen both of them on the [Data Types](1_08_00_Data_Types) page:
 
 * Integers are called `int` values in the Python language. They can only
   represent whole numbers (negative, zero, or positive) that do not have a decimal place. E.g. `1`, `100`, `0` and `-1` are all integers.
@@ -42,6 +42,14 @@ Here are some `int` values:
 ```
 
 ```{python}
+-1
+```
+
+```{python}
+-10
+```
+
+```{python}
 -1234567890000000000
 ```
 
@@ -60,22 +68,26 @@ Here are some float values:
 ```
 
 ```{python}
+# We will talk more about the output of this cell further down the page!
 -12345678900000000000.0
 ```
 
-When a `float` value is combined with an `int` value using some mathematical
+When a `float` value is combined with an `int` value using a mathematical
 operator, then the result is always a `float` value:
 
 ```{python}
+# float * int
 7.5 + 4
 ```
 
 ```{python}
 # A number with a decimal of 0 is still a `float`!
+# float * int
 8.0 + 2
 ```
 
 ```{python}
+# int * float
 70 * 102.3
 ```
 
@@ -103,7 +115,9 @@ You can also write float values in *exponential* format, like this:
 2.1e3
 ```
 
-This is the same value as:
+This format is called *scientific notation*.
+
+`2.1e3` is writteen in scientific notation, and it is the same value as:
 
 ```{python}
 2100.0
@@ -116,9 +130,18 @@ You can use the `format()` function to make Python show you the number NOT in sc
 format(2.1e3, "f")
 ```
 
-The `"f"` in the `format()` function tells it that we want [*fixed-point notation*](https://docs.python.org/3/library/string.html). You can think of this as just meaning "NOT scientific notation"!
+The `"f"` in the `format()` function tells it that we want [*fixed-point notation*](https://docs.python.org/3/library/string.html). You can think of this as just meaning "NOT scientific notation"! **Note**: this will only show you 6 decimal places, unless you change other settings...(e.g. you can change `"f"` to `".24f"` to show 24 decimal places...).
 
-Ok, back to scientific notation. You can read `2.1e3` as $2.1 * 10^3$.  The `e3` means "times 10 to the power of 3".
+```{python}
+# Make Python show us 24 decimal places.
+format(2.1e3, ".24f")
+```
+
+Also note that `format()` returns your number as text/string data, not as `float` data.
+
+Ok, back to scientific notation. 
+
+You can read `2.1e3` as $2.1 * 10^3$.  The `e3` means "times 10 to the power of 3".
 
 So we say `2.1e3` as "2.1 times 10 to the power of 3".
 
@@ -128,7 +151,7 @@ We can also use negative powers to represent small numbers:
 1e-3
 ```
 
-Read `1e-3` as $1 x 10^-3$, or "1 then moving the decimal point 3 spaces to the
+Read `1e-3` as $1 x 10^-3$, or "1, but move the decimal point 3 spaces to the
 left", or:
 
 ```{python}
@@ -199,7 +222,7 @@ We have used the number 1 to "move around" to show you scientific notation, but 
 
 - 1 times 10 to the power of minus 6
 
-...but we can change the "1" to any number we want (e.g. "6.23 times ten to the power of 3" etc.).
+...but we can change the "1" to any number we want (e.g. "6.23 times 10 to the power of 3" etc.).
 
 Change the value of the variable `try_it_with` in the cell below, to use any number you want. This will help you to get a feel of the meaning of scientific notation: 
 
@@ -215,10 +238,10 @@ scientific_notation_table(try_it_with)
 ```
 
 Scientific notation makes it easier write and display very large and very small
-numbers. For example, we can write 10 million million as:
+numbers. For example, we can write 10 million as:
 
 ```{python}
-# 10 million million
+# 10 million
 1e7
 ```
 
@@ -236,6 +259,8 @@ This is exactly the same value as:
 ```
 
 ## The limits of float values
+
+> Limit, *noun*, ["the greatest or smallest amount of something that is allowed."](https://www.oxfordlearnersdictionaries.com/definition/english/limit_1)
 
 Float values are very flexible, but they do have limits.
 
@@ -271,8 +296,8 @@ very small number, then it is represented as zero.
 2e-322 / 100
 ```
 
-The second limit can be observed by an expression that involves numbers with
-more than 15 significant digits. These extra digits are discarded before any
+The second limit can be seen by an expression that involves numbers with
+more than 15 significant digits. These extra digits are thrown away before any
 arithmetic is carried out.
 
 ```{python}
@@ -282,13 +307,13 @@ arithmetic is carried out.
 
 ```{python}
 # Our very small digits ARE lost :(
-0.6666666666666666 - 0.6666666666666666123456789
+0.6666666666666666 - 0.6666666666666666123456789 # The digits on the end of the second number are thrown away.
 ```
 
-The third limit can be observed when taking the difference between two
+The third limit can be seen when calculating the difference between two
 expressions that should be equivalent. For example, the expression `2 ** 0.5`
 computes the square root of 2, but squaring this value does not exactly
-recover 2. 
+make 2. 
 
 Here we `import` the function `math.sqrt()`, which returns the square root of numbers it is given as arguments.
 
@@ -335,6 +360,47 @@ languages.
 In summary: 
 
 - doing calculations with very big or very small numbers can lead to floating point errors.
+
+
+## Before you do the exercise
+
+Make sure you understand this (it can be confusing, so read it carefully):
+
+Think about `4.2e+05`. This number is positive, and it has a plus sign `+` in it's scientific notation (e.g. `e+05`). This is a *large positive number*:
+
+```{python}
+4.2e+05
+```
+
+However, the number `-4.2e+05` number is *negative*, it has a minus sign `-` at it's start. But it has a plus sign `+` in it's scientific notation (e.g. `e+05`). This is a *large negative number*:
+
+```{python}
+format(-4.2e+05, "f")
+```
+
+The number `4.2e-05` is positive, it does NOT have a minus sign at it's start. BUT it does have a minus sign in its scientific notation (e.g. `e-05`). This is a *small positive number*:
+
+```{python}
+format(4.2e-05, ".24f")
+```
+
+In contrast, the number `-4.2e-05` has a minus sign `-` at it's start, AND in it's scientific notation (e.g. `e-05`). This is a *small negative number*:
+
+```{python}
+format(-4.2e-05, ".24f")
+```
+
+So:
+
+- positive number, `+` in scientific notation: LARGE POSITIVE NUMBER e.g. `4.2e+05` equals `420000`
+
+- negative number, `+` in scientific notation: LARGE NEGATIVE NUMBER e.g. `-4.2e+05` equals `-420000`
+
+- positive number, `-` in scientific notation: SMALL POSITIVE NUMBER e.g. `4.2e-05` equals `0.000041999999999999997676`
+
+- negatvie number, `-` in scientific notation: SMALL NEGATIVE NUMBER e.g. `-4.2e-05` equals `-0.000041999999999999997676`
+
+You will need to understand this to do the exercise.
 
 
 ## Exercise - Scientific Notation

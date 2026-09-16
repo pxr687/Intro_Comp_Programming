@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -428,7 +428,16 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="summary-literals-variables-expressions-and-functions">
 <h1>Summary: Literals, Variables, Expressions and Functions<a class="headerlink" href="#summary-literals-variables-expressions-and-functions" title="Link to this heading">#</a></h1>
 <blockquote>
-<div><p>Some advice before you read this page: same as for the last page, read <em>slowly</em> and make sure you fully understand each idea before you move on. Launch the page on Live Code and Binder and play around with each cell. Do this even if the idea seems easy - you may think you understand, but you can still learn something by trying out something new with the idea. Try to break the code, try to fix it. Try something where you are not sure what will happen. They try to understand <em>why</em> something happens. <em>The best way to understand these ideas is to play with the code yourself</em>.</p>
+<div><p>Some advice before you read this page:</p>
+<ul class="simple">
+<li><p>Read <em>slowly</em> and make sure you fully understand each idea before you move on.</p></li>
+<li><p>Launch the page on Live Code and Binder and play around with the code in each cell. Do this even if the idea seems easy.  You might think you understand, but you can still learn something by trying out something new with the idea.</p></li>
+<li><p>Try to break the code, try to fix it.</p></li>
+<li><p>Try something where you are not sure what will happen.</p></li>
+<li><p>Then try to understand <em>why</em> something happens.</p></li>
+</ul>
+<p><em>The best way to understand these ideas is to play with the code yourself</em>.</p>
+<p>The more you understand these ideas, the <strong>easier</strong> it will be for you to <strong>fix errors</strong> in your code.</p>
 </div></blockquote>
 <p>Let’s summarise what we have learned so far. We have learned about some of the basic <em>elements</em> (e.g. small pieces) of Python code.</p>
 <p>These elements can be put together to let us write complex Python programs. Python is a very powerful and useful language; so Python programs can be used for:</p>
@@ -473,6 +482,7 @@ document.write(`
 </div>
 <p>We type in the literal, and Python shows us the <em>value</em>. The value is the computer representation of the literal.</p>
 <p>Literals are a type of <em>expression</em>, because Python shows us a value when we run a line of code which has only a literal.</p>
+<p>Remember that an expression is <em>anything which returns a value</em>.</p>
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h2>
@@ -480,12 +490,15 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a variable assignment statement. </span>
-<span class="c1">#`number_3` is the name of the variable, `3` is its value.</span>
+<span class="c1">#`number_3` is the name of the variable, `3` is it&#39;s value.</span>
 <span class="n">number_3</span> <span class="o">=</span> <span class="mi">3</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>The variable assignment statement in the cell above is <em>not</em> an expression. It does not show us a value when we run the line of code with the variable assignment statement.</p>
+<p>The variable assignment statement <em>makes</em> a new variable (<code class="docutils literal notranslate"><span class="pre">number_3</span></code>).</p>
+<p>After the variable is made, it is an expression, because it has a value:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The cell above this one created this variable `number_3`. This cell shows the value of the variable.</span>
@@ -499,7 +512,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>You can think of literals as values in Python code which are NOT stored as variables:</p>
+<p>You can think of <em>literals</em> as values in Python code which are NOT stored as variables:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a literal.</span>
@@ -515,8 +528,21 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Store `1999` as a variable.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Store `1999` as a variable - this is a variable assignment statement.</span>
 <span class="n">new_variable</span> <span class="o">=</span> <span class="mi">1999</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># See what the value of `new_variable` is.</span>
+<span class="n">new_variable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1999
 </pre></div>
 </div>
 </div>
@@ -549,8 +575,26 @@ document.write(`
 </div>
 </div>
 </div>
+<p>The rule is:</p>
+<blockquote>
+<div><p>If you run a line of code and Jupyter automatically shows you a value, the line is an <em>expression</em>.
+If you run a line of code and Jupyter does <strong>NOT</strong> automatically show a value, the line is a <em>statement</em>.</p>
+</div></blockquote>
+<p>Let’s look at this expression again:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
 <p>We say that an expression <em>evaluates</em> to a value. So in the cell above, the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span></code> <em>evaluates</em> to <code class="docutils literal notranslate"><span class="pre">4</span></code>. This is the same as saying the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">2</span></code> returns the value <code class="docutils literal notranslate"><span class="pre">4</span></code>.</p>
-<p>Literals and variables are also expressions (the simplest kinds of expressions!), because they return a value:</p>
+<p>As said earlier, literals and variables are also expressions (the simplest kinds of expressions!), because they return a value:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This literal is also an expression, because it returns a value.</span>
@@ -1022,7 +1066,7 @@ Class!
 </section>
 <section id="exercise-literals-expressions-and-functions">
 <h2>Exercise - Literals, Expressions and Functions<a class="headerlink" href="#exercise-literals-expressions-and-functions" title="Link to this heading">#</a></h2>
-<p>We will now do our next Python exercise.</p>
+<p>We will now do our next Python exercise. This will check that you understand the concepts from this page.</p>
 <p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
 <p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2_literals_expressions_functions.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
 <hr class="docutils" />
