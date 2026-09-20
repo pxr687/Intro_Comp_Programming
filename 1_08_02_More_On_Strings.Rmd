@@ -167,7 +167,7 @@ Now complete the following exercises.
 
 The cell below makes lots of strings, and stores them in variables.
 
-*Note:* you may find something strange when you try to combine these strings...can you see what it is? Can you fix it? Try using the `type()` function to work out what is happening. Ask myself or your TA Santi if you get stuck.
+*Note:* you may find something strange when you try to combine these strings...can you see what it is? Can you fix it? Try using the `type()` function to work out what is happening. Ask myself or your TA Santy if you get stuck.
 
 ```{python}
 compared = " may be compared at any moment with the objects and purposes of all political institutions",

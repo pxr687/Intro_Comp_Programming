@@ -295,7 +295,8 @@ The table below is a summary of this information:
 | Python Element | What it is                                                       | Example 1 (Numbers) | Example 2 (Text) |
 | -------------- | ---------------------------------------------------------------- | ------------------- | ---------------- |
 | **Literal**    | A value written "raw" in Python code                             | `42`                | `"hello"`        |
-| **Variable**   | A name that stores or refers to a value in our computer's memory | `age = 42`          | `name = "Sam"`   |
+| **Variable Assignment Statement**   | We use this to store a value in our computer's memory | `age = 42`| `name = "Sam"`   |
+| **Variable**   | A name/value pair stored in our computer's memory                | `age`               | `name`           |
 | **Expression** | Code that Python evaluates to produce a value                    | `1 + 1` ; `age + 1` | `name + "!"`     |
 | **Function**   | Reusable code that does a task, usually using inputs/arguments   | `print(10)`         | `print("Hello")` |
 

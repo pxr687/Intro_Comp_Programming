@@ -319,39 +319,34 @@ It will also cause errors when we use the variable with functions that want numb
 int(salary)
 ```
 
-We will talk more about string data on another page. But we can fix this error by doing using *string methods* to remove the `,` from the `salary` variable:
+We will talk more about string data on another page. But we can fix this error by doing using *string methods* by removing the `,` from the `salary` variable:
 
 ```{python}
-# Remove the `,` from `salary`.
-salary.replace(',', '')
-```
+# Re-assign the variable, with no ",".
+salary = "1235"
 
-...this means that `salary` is still a string...
-
-```{python}
-type(salary.replace(',', ''))
-```
-
-...but it does not have the `,` any more, so we can use the `int()` function to change it to the `int` data type:
-
-```{python}
-# Get rid of the `,`.
-salary = int(salary.replace(',', ''))
-
+# Show the value of `salary`.
 salary
+```
+
+`1235` is a string that the `int` function can work with!:
+
+```{python}
+int(salary)
 ```
 
 Phew! Now it is a number again:
 
 ```{python}
-type(salary)
+salary_as_int = int(salary)
+type(salary_as_int)
 ```
 
 ... and we can do maths with it, without errors!:
 
 ```{python}
 # Calculate the salary over 10 months.
-salary * 10
+salary_as_int * 10
 ```
 
 ## Mini-exercise: Data Types
