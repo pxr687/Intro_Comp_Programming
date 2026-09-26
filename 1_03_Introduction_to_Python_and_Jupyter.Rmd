@@ -5,14 +5,13 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.17.3
+      jupytext_version: 1.19.5
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
 
-<!-- #region -->
 # Introduction to Python and Jupyter Notebook 
 
 ```{note}
@@ -47,7 +46,7 @@ See also this [article](https://www.google.com/search?client=opera&q=jack+of+all
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/python_is_king.JPG)
 
 Have a look at [this page](https://docs.python.org/3/faq/general.html) for some extra information about Python - including why it is called "Python"!
-<!-- #endregion -->
+
 
 ## Jupyter Notebooks
 

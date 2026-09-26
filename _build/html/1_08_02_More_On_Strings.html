@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -58,6 +61,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1_08_02_More_On_Strings';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_08_02_More_On_Strings.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -66,34 +70,30 @@
     <link rel="prev" title="More on Numbers" href="1_08_01_More_On_Numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -101,7 +101,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -109,15 +108,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -126,7 +169,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +200,17 @@
     
     
     <img src="_static/logo.jpg" class="logo__image only-light" alt="Introduction to Computer Programming - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Introduction to Computer Programming - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Introduction to Computer Programming - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -216,9 +256,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -350,7 +395,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -364,25 +409,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -404,7 +441,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-strings">Multi-line strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a><ul class="nav section-nav flex-column">
@@ -443,12 +480,12 @@ produces another string. This expression is still an addition expression, but
 it is combining a different type of value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;computer&quot;</span> <span class="o">+</span> <span class="s2">&quot;programming&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">"computer"</span> <span class="o">+</span> <span class="s2">"programming"</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;computerprogramming&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'computerprogramming'
 </pre></div>
 </div>
 </div>
@@ -459,12 +496,12 @@ words; adding space and making sure the text is nice to read is up to the progra
 <p>We can add a space like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;computer&quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="s2">&quot;programming&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">"computer"</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> <span class="s2">"programming"</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;computer programming&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'computer programming'
 </pre></div>
 </div>
 </div>
@@ -475,13 +512,13 @@ let you include apostrophes inside of strings.</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ouch! Error!</span>
-<span class="s1">&#39;This won&#39;</span><span class="n">t</span> <span class="n">work</span> <span class="k">with</span> <span class="n">a</span> <span class="n">single</span><span class="o">-</span><span class="n">quoted</span> <span class="n">string</span><span class="o">!</span><span class="s1">&#39;&#39;</span>
+<span class="s1">'This won'</span><span class="n">t</span> <span class="n">work</span> <span class="k">with</span> <span class="n">a</span> <span class="n">single</span><span class="o">-</span><span class="n">quoted</span> <span class="n">string</span><span class="o">!</span><span class="s1">''</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-    <span class="s1">&#39;This won&#39;</span><span class="n">t</span> <span class="n">work</span> <span class="k">with</span> <span class="n">a</span> <span class="n">single</span><span class="o">-</span><span class="n">quoted</span> <span class="n">string</span><span class="o">!</span><span class="s1">&#39;&#39;</span>
+    <span class="s1">'This won'</span><span class="n">t</span> <span class="n">work</span> <span class="k">with</span> <span class="n">a</span> <span class="n">single</span><span class="o">-</span><span class="n">quoted</span> <span class="n">string</span><span class="o">!</span><span class="s1">''</span>
               <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
@@ -491,12 +528,12 @@ let you include apostrophes inside of strings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Double quotes will work!</span>
-<span class="s2">&quot;This won&#39;t work with a single-quoted string!&quot;</span>
+<span class="s2">"This won't work with a single-quoted string!"</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;This won&#39;t work with a single-quoted string!&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>"This won't work with a single-quoted string!"
 </pre></div>
 </div>
 </div>
@@ -513,12 +550,12 @@ let you include apostrophes inside of strings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Combining different data types into a string.</span>
-<span class="s2">&quot;That&#39;s &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; pal!&quot;</span>
+<span class="s2">"That's "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" pal!"</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;That&#39;s 2 True pal!&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>"That's 2 True pal!"
 </pre></div>
 </div>
 </div>
@@ -526,12 +563,12 @@ let you include apostrophes inside of strings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the `str()` function again to turn numbers into strings.</span>
-<span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; districts in Bangkok.&quot;</span>
+<span class="s2">"There are "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" districts in Bangkok."</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;There are 50 districts in Bangkok.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'There are 50 districts in Bangkok.'
 </pre></div>
 </div>
 </div>
@@ -547,12 +584,12 @@ let you include apostrophes inside of strings.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_of_students</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; students in the class.&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">"There are "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">number_of_students</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" students in the class."</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;There are 22 students in the class.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'There are 22 students in the class.'
 </pre></div>
 </div>
 </div>
@@ -562,7 +599,7 @@ let you include apostrophes inside of strings.</p>
 <p>We can use 3 quotation marks (<code class="docutils literal notranslate"><span class="pre">'</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>) instead of one, so that we can make long strings, without needing loads of <code class="docutils literal notranslate"><span class="pre">print()</span></code> functions!:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is a string on one line.&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"This is a string on one line."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -574,8 +611,8 @@ let you include apostrophes inside of strings.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look at the three quotation marks (&quot;&quot;&quot;) at the start and end of the string.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;       </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look at the three quotation marks (""") at the start and end of the string.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"""       </span>
 <span class="s2">This string...</span>
 
 <span class="s2">...can go over...</span>
@@ -583,7 +620,7 @@ let you include apostrophes inside of strings.</p>
 <span class="s2">...as many lines...</span>
 
 <span class="s2">...as I want...</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="s2">"""</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -609,12 +646,12 @@ This string...
 <p>To use a f-string, just put at “f” at the start of your string!:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;This is an f-string!&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">"This is an f-string!"</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is an f-string!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'This is an f-string!'
 </pre></div>
 </div>
 </div>
@@ -623,24 +660,24 @@ This string...
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Look -------------------------------------------------------------------------------------&gt; HERE!</span>
-<span class="sa">f</span><span class="s2">&quot;This is an f-string! It can show the value of my `number_of_students` variable like this: </span><span class="si">{</span><span class="n">number_of_students</span><span class="si">}</span><span class="s2">.&quot;</span>
+<span class="sa">f</span><span class="s2">"This is an f-string! It can show the value of my `number_of_students` variable like this: </span><span class="si">{</span><span class="n">number_of_students</span><span class="si">}</span><span class="s2">."</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;This is an f-string! It can show the value of my `number_of_students` variable like this: 22.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'This is an f-string! It can show the value of my `number_of_students` variable like this: 22.'
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;We can also put literals/expressions inside our string, like this: </span><span class="si">{</span><span class="mi">8</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">}</span><span class="s2">&quot;</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">"We can also put literals/expressions inside our string, like this: </span><span class="si">{</span><span class="mi">8</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">}</span><span class="s2">"</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;We can also put literals/expressions inside our string, like this: 800&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'We can also put literals/expressions inside our string, like this: 800'
 </pre></div>
 </div>
 </div>
@@ -648,13 +685,13 @@ This string...
 <p>Note that using “f” before the string is allowed in Python, because the Python compiler knows it means “this is an f-string! Let me put variables in it!”. However, we will get errors if we use other letters, as the Python compiler does not know what these mean:</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="s2">&quot;This is not allowed!&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="s2">"This is not allowed!"</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="n">e</span><span class="s2">&quot;This is not allowed!&quot;</span>
+    <span class="n">e</span><span class="s2">"This is not allowed!"</span>
      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
@@ -667,7 +704,7 @@ This string...
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can use this cell to play with f-strings.</span>
 <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Here is an example f-string. I can use square brackets to show a variable, like this variable: </span><span class="si">{</span><span class="n">my_variable</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Here is an example f-string. I can use square brackets to show a variable, like this variable: </span><span class="si">{</span><span class="n">my_variable</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -689,23 +726,23 @@ This string...
 <p><em>Note:</em> you may find something strange when you try to combine these strings…can you see what it is? Can you fix it? Try using the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to work out what is happening. Ask myself or your TA Santi if you get stuck.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compared</span> <span class="o">=</span> <span class="s2">&quot; may be compared at any moment with the objects and purposes of all political institutions&quot;</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compared</span> <span class="o">=</span> <span class="s2">" may be compared at any moment with the objects and purposes of all political institutions"</span><span class="p">,</span>
 
-<span class="n">respected</span> <span class="o">=</span> <span class="s2">&quot;and may thus be more respected, and, lastly, in order that the grievances of the citizens,&quot;</span><span class="p">,</span>
+<span class="n">respected</span> <span class="o">=</span> <span class="s2">"and may thus be more respected, and, lastly, in order that the grievances of the citizens,"</span><span class="p">,</span>
 
-<span class="n">corruption</span> <span class="o">=</span> <span class="s2">&quot;and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration,&quot;</span><span class="p">,</span>
+<span class="n">corruption</span> <span class="o">=</span> <span class="s2">"and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration,"</span><span class="p">,</span>
 
-<span class="n">social</span> <span class="o">=</span> <span class="s2">&quot;being constantly before all the members of the Social body, shall remind them continually of their rights and duties;&quot;</span><span class="p">,</span>
+<span class="n">social</span> <span class="o">=</span> <span class="s2">"being constantly before all the members of the Social body, shall remind them continually of their rights and duties;"</span><span class="p">,</span>
 
-<span class="n">legislative</span> <span class="o">=</span> <span class="s2">&quot;in order that the acts of the legislative power, as well as those of the executive power,&quot;</span>
+<span class="n">legislative</span> <span class="o">=</span> <span class="s2">"in order that the acts of the legislative power, as well as those of the executive power,"</span>
 
-<span class="n">believing</span> <span class="o">=</span> <span class="s2">&quot;believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities&quot;</span> <span class="p">,</span>
+<span class="n">believing</span> <span class="o">=</span> <span class="s2">"believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities"</span> <span class="p">,</span>
 
-<span class="n">representatives</span> <span class="o">=</span> <span class="s2">&quot;The representatives of the French people, organized as a National Assembly,&quot;</span> 
+<span class="n">representatives</span> <span class="o">=</span> <span class="s2">"The representatives of the French people, organized as a National Assembly,"</span> 
 
-<span class="n">based</span> <span class="o">=</span> <span class="s2">&quot;based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution&quot;</span><span class="p">,</span>
+<span class="n">based</span> <span class="o">=</span> <span class="s2">"based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution"</span><span class="p">,</span>
 
-<span class="n">happiness</span> <span class="o">=</span> <span class="s2">&quot;and redound to the happiness of all.&quot;</span>
+<span class="n">happiness</span> <span class="o">=</span> <span class="s2">"and redound to the happiness of all."</span>
 </pre></div>
 </div>
 </div>
@@ -736,8 +773,8 @@ This string...
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE</span>
-<span class="k">assert</span> <span class="n">too_long</span> <span class="o">==</span> <span class="s2">&quot;The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all.&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;That is not correct! Your string does not match!&quot;</span>
-<span class="n">jupyprint</span><span class="p">(</span><span class="s1">&#39;*Great work! That is correct.*&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">too_long</span> <span class="o">==</span> <span class="s2">"The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all."</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"That is not correct! Your string does not match!"</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s1">'*Great work! That is correct.*'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -746,8 +783,8 @@ This string...
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="n">too_long</span> <span class="o">==</span> <span class="s2">&quot;The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all.&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;That is not correct! Your string does not match!&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s1">&#39;*Great work! That is correct.*&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="n">too_long</span> <span class="o">==</span> <span class="s2">"The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all."</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"That is not correct! Your string does not match!"</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s1">'*Great work! That is correct.*'</span><span class="p">)</span>
 
 <span class="ne">AssertionError</span>: That is not correct! Your string does not match!
 </pre></div>
@@ -805,12 +842,12 @@ This string...
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here</span>
-<span class="s2">&quot;We already know that we can&quot;</span> <span class="o">+</span> <span class="s2">&quot; add strings together!&quot;</span>
+<span class="s2">"We already know that we can"</span> <span class="o">+</span> <span class="s2">" add strings together!"</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;We already know that we can add strings together!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'We already know that we can add strings together!'
 </pre></div>
 </div>
 </div>
@@ -875,15 +912,17 @@ This string...
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-strings">Multi-line strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a><ul class="nav section-nav flex-column">
@@ -939,8 +978,8 @@ By Peter Rush (partly adapted from material by Matthew Brett, Peter Rush, Ani Ad
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>

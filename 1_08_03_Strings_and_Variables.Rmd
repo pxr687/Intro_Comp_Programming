@@ -5,20 +5,19 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.17.3
+      jupytext_version: 1.19.5
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
 
-<!-- #region -->
 # Strings, variables and expressions
 
 ```{note}
 This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/strings_and_variables.html) and [Brett, Adhikari, Denero and Wagner (2021)](https://matthew-brett.github.io/cfd2020/intro/Plotting_the_Classics.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
-<!-- #endregion -->
+
 
 You remember that the following line of code is an *expression* - a recipe that returns a value:
 
