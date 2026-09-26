@@ -16,41 +16,44 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -58,40 +61,37 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercise_4_string_methods';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/exercise_4_string_methods.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -99,7 +99,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -107,15 +106,59 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -126,7 +169,8 @@
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -156,21 +200,17 @@
     
     
     <img src="_static/logo.jpg" class="logo__image only-light" alt="Introduction to Computer Programming - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Introduction to Computer Programming - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Introduction to Computer Programming - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -198,6 +238,16 @@
 <li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_07b_Class_Quiz_Literals_Variables_Expressions_Functions.html">Class Quiz: Literals, Variables, Expressions and Functions</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_More_On_Numbers.html">More on Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_03_Strings_and_Variables.html">Strings, variables and expressions</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="1_08_04_String_Methods.html">String methods</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="scratchpad.html">Scratchpad</a></li>
@@ -209,9 +259,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -343,7 +398,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -357,25 +412,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -397,7 +444,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-instructions">General Instructions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-your-work">Downloading your work</a></li>
 </ul>
@@ -595,7 +642,7 @@ document.write(`
 <p>Oops someone has made a spelling mistake with the name of this course. Fix this string using methods from the table above. When you fix the string, it should say “Introduction to Computer Programming”. Store your corrected string in a variable called <code class="docutils literal notranslate"><span class="pre">answer_1</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">answer_1</span> <span class="o">=</span> <span class="s2">&quot;Intr0duction to Camapar Programming&quot;</span> <span class="c1"># Use your string methods here!</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">answer_1</span> <span class="o">=</span> <span class="s2">"Intr0duction to Camapar Programming"</span> <span class="c1"># Use your string methods here!</span>
 
 <span class="c1"># Show the value of `answer_1`.</span>
 <span class="n">answer_1</span>
@@ -603,7 +650,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Intr0duction to Camapar Programming&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Intr0duction to Camapar Programming'
 </pre></div>
 </div>
 </div>
@@ -613,9 +660,9 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span> <span class="s2">&quot;Introduction to Computer Programming&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 1&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;answer_1&quot;</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span> <span class="s2">"Introduction to Computer Programming"</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 1"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"answer_1"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -630,7 +677,7 @@ document.write(`
 <p>Miranda is doing a presentation. The title of her presentation should be “Presentation on Climate Change”. She stores this title as text in the variable <code class="docutils literal notranslate"><span class="pre">pres_title</span></code>. However, she has made some errors.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pres_title</span> <span class="o">=</span> <span class="s2">&quot;presentotion of climate change&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pres_title</span> <span class="o">=</span> <span class="s2">"presentotion of climate change"</span>
 
 <span class="c1"># Show the value.</span>
 <span class="n">pres_title</span>
@@ -638,7 +685,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;presentotion of climate change&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'presentotion of climate change'
 </pre></div>
 </div>
 </div>
@@ -649,9 +696,9 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">pres_title</span><span class="p">,</span> <span class="s2">&quot;Presentation on Climate Change&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 2&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;pres_title&quot;</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">pres_title</span><span class="p">,</span> <span class="s2">"Presentation on Climate Change"</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 2"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"pres_title"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -666,7 +713,7 @@ document.write(`
 <p>Mark is messaging his friend. His friend has done something funny, and Mark wants to reply with this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text_reply</span>  <span class="o">=</span> <span class="s2">&quot;OMG I CANNOT BELIEVE YOU DID THAT!!!!!!&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text_reply</span>  <span class="o">=</span> <span class="s2">"OMG I CANNOT BELIEVE YOU DID THAT!!!!!!"</span>
 
 <span class="c1"># Show the value.</span>
 <span class="n">text_reply</span> 
@@ -674,7 +721,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;OMG I CANNOT BELIEVE YOU DID THAT!!!!!!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'OMG I CANNOT BELIEVE YOU DID THAT!!!!!!'
 </pre></div>
 </div>
 </div>
@@ -686,9 +733,9 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">text_reply</span><span class="p">,</span> <span class="s2">&quot;omg i cannot believe you did that!!!!!!&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 3&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;text_reply&quot;</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">text_reply</span><span class="p">,</span> <span class="s2">"omg i cannot believe you did that!!!!!!"</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 3"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"text_reply"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -703,17 +750,17 @@ document.write(`
 <p>Chan is writing an essay for a History class. The essay title should be “Essay on the Roman Republic”.</p>
 <p>However, Chan was working late, and fell asleep on her keyboard. She saved the essay title in the variable <code class="docutils literal notranslate"><span class="pre">essay_title</span></code>. But because her head was resting on the keyboard, she has added lots of spaces by accident.</p>
 <p>Her string at the moment is</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;                                                           Essay on the Roman Republic&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"                                                           Essay on the Roman Republic"</span>
 </pre></div>
 </div>
 <p>Use string methods to fix her title, so that it does not have the extra spaces. When you fix the string, it should look like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Essay on the Roman Republic&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"Essay on the Roman Republic"</span>
 </pre></div>
 </div>
 <p>Save your answer in the <code class="docutils literal notranslate"><span class="pre">essay_title</span></code> variable. Remember <strong>DO NOT</strong> edit her string by deleting the space with your keyboard. You <strong>must</strong> use a string method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">essay_title</span>  <span class="o">=</span> <span class="s2">&quot;                                                                     Essay on the Roman Republic&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">essay_title</span>  <span class="o">=</span> <span class="s2">"                                                                     Essay on the Roman Republic"</span>
 
 <span class="c1"># Show the value.</span>
 <span class="n">essay_title</span>
@@ -721,7 +768,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;                                                                     Essay on the Roman Republic&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'                                                                     Essay on the Roman Republic'
 </pre></div>
 </div>
 </div>
@@ -731,9 +778,9 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">essay_title</span><span class="p">,</span> <span class="s2">&quot;Essay on the Roman Republic&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 4&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;essay_title&quot;</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">essay_title</span><span class="p">,</span> <span class="s2">"Essay on the Roman Republic"</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 4"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"essay_title"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -749,7 +796,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
-<span class="n">book_summary</span> <span class="o">=</span> <span class="s1">&#39;&quot;Missing Link&quot; by Frank Herbert is a science fiction short story originally published in the February 1959 issue of &quot;Astounding Science Fiction&quot;. Set in a fictional universe where interstellar exploration and alien encounters are common, the narrative explores the complexities of first contact with an alien civilization that possesses advanced technology derived from a lost human ship. The story delves into themes of communication, cultural exchange, and the unforeseen consequences of human actions in unfamiliar territories. The plot centers on Lewis Orne, a junior field agent tasked with establishing contact with the inhabitants of Gienah III after the disappearance of the ship &quot;Delphinus Rediscovery&quot;. As Orne navigates the jungle-laden planet, he encounters Tanub, a Gienahn who holds an advanced alien rifle, suggesting that they have recovered the wreckage of &quot;Delphinus&quot;. As tension rises, Orne must negotiate with Tanub and his people to prevent an inevitable extermination by their Terran overlords. The story develops through a series of discussions exploring the nature of power, technology, and the potential for coexistence between different cultures, ultimately leading to a precarious diplomatic resolution.&#39;</span>
+<span class="n">book_summary</span> <span class="o">=</span> <span class="s1">'"Missing Link" by Frank Herbert is a science fiction short story originally published in the February 1959 issue of "Astounding Science Fiction". Set in a fictional universe where interstellar exploration and alien encounters are common, the narrative explores the complexities of first contact with an alien civilization that possesses advanced technology derived from a lost human ship. The story delves into themes of communication, cultural exchange, and the unforeseen consequences of human actions in unfamiliar territories. The plot centers on Lewis Orne, a junior field agent tasked with establishing contact with the inhabitants of Gienah III after the disappearance of the ship "Delphinus Rediscovery". As Orne navigates the jungle-laden planet, he encounters Tanub, a Gienahn who holds an advanced alien rifle, suggesting that they have recovered the wreckage of "Delphinus". As tension rises, Orne must negotiate with Tanub and his people to prevent an inevitable extermination by their Terran overlords. The story develops through a series of discussions exploring the nature of power, technology, and the potential for coexistence between different cultures, ultimately leading to a precarious diplomatic resolution.'</span>
 
 <span class="c1"># Show the value.</span>
 <span class="n">book_summary</span>
@@ -757,7 +804,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&quot;Missing Link&quot; by Frank Herbert is a science fiction short story originally published in the February 1959 issue of &quot;Astounding Science Fiction&quot;. Set in a fictional universe where interstellar exploration and alien encounters are common, the narrative explores the complexities of first contact with an alien civilization that possesses advanced technology derived from a lost human ship. The story delves into themes of communication, cultural exchange, and the unforeseen consequences of human actions in unfamiliar territories. The plot centers on Lewis Orne, a junior field agent tasked with establishing contact with the inhabitants of Gienah III after the disappearance of the ship &quot;Delphinus Rediscovery&quot;. As Orne navigates the jungle-laden planet, he encounters Tanub, a Gienahn who holds an advanced alien rifle, suggesting that they have recovered the wreckage of &quot;Delphinus&quot;. As tension rises, Orne must negotiate with Tanub and his people to prevent an inevitable extermination by their Terran overlords. The story develops through a series of discussions exploring the nature of power, technology, and the potential for coexistence between different cultures, ultimately leading to a precarious diplomatic resolution.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'"Missing Link" by Frank Herbert is a science fiction short story originally published in the February 1959 issue of "Astounding Science Fiction". Set in a fictional universe where interstellar exploration and alien encounters are common, the narrative explores the complexities of first contact with an alien civilization that possesses advanced technology derived from a lost human ship. The story delves into themes of communication, cultural exchange, and the unforeseen consequences of human actions in unfamiliar territories. The plot centers on Lewis Orne, a junior field agent tasked with establishing contact with the inhabitants of Gienah III after the disappearance of the ship "Delphinus Rediscovery". As Orne navigates the jungle-laden planet, he encounters Tanub, a Gienahn who holds an advanced alien rifle, suggesting that they have recovered the wreckage of "Delphinus". As tension rises, Orne must negotiate with Tanub and his people to prevent an inevitable extermination by their Terran overlords. The story develops through a series of discussions exploring the nature of power, technology, and the potential for coexistence between different cultures, ultimately leading to a precarious diplomatic resolution.'
 </pre></div>
 </div>
 </div>
@@ -787,8 +834,8 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">count_alien</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> 
              <span class="n">correct_is_string</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 5&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;count_alien&quot;</span><span class="p">)</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 5"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"count_alien"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -808,7 +855,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&quot;Missing Link&quot; by Frank Herbert is a science fiction short story originally published in the February 1959 issue of &quot;Astounding Science Fiction&quot;. Set in a fictional universe where interstellar exploration and alien encounters are common, the narrative explores the complexities of first contact with an alien civilization that possesses advanced technology derived from a lost human ship. The story delves into themes of communication, cultural exchange, and the unforeseen consequences of human actions in unfamiliar territories. The plot centers on Lewis Orne, a junior field agent tasked with establishing contact with the inhabitants of Gienah III after the disappearance of the ship &quot;Delphinus Rediscovery&quot;. As Orne navigates the jungle-laden planet, he encounters Tanub, a Gienahn who holds an advanced alien rifle, suggesting that they have recovered the wreckage of &quot;Delphinus&quot;. As tension rises, Orne must negotiate with Tanub and his people to prevent an inevitable extermination by their Terran overlords. The story develops through a series of discussions exploring the nature of power, technology, and the potential for coexistence between different cultures, ultimately leading to a precarious diplomatic resolution.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'"Missing Link" by Frank Herbert is a science fiction short story originally published in the February 1959 issue of "Astounding Science Fiction". Set in a fictional universe where interstellar exploration and alien encounters are common, the narrative explores the complexities of first contact with an alien civilization that possesses advanced technology derived from a lost human ship. The story delves into themes of communication, cultural exchange, and the unforeseen consequences of human actions in unfamiliar territories. The plot centers on Lewis Orne, a junior field agent tasked with establishing contact with the inhabitants of Gienah III after the disappearance of the ship "Delphinus Rediscovery". As Orne navigates the jungle-laden planet, he encounters Tanub, a Gienahn who holds an advanced alien rifle, suggesting that they have recovered the wreckage of "Delphinus". As tension rises, Orne must negotiate with Tanub and his people to prevent an inevitable extermination by their Terran overlords. The story develops through a series of discussions exploring the nature of power, technology, and the potential for coexistence between different cultures, ultimately leading to a precarious diplomatic resolution.'
 </pre></div>
 </div>
 </div>
@@ -839,8 +886,8 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">count_alien_and_technology</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span>
             <span class="n">correct_is_string</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 6&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;count_alien_and_technology&quot;</span><span class="p">)</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 6"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"count_alien_and_technology"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -855,20 +902,20 @@ document.write(`
 <p>Here is another <a class="reference external" href="https://www.gutenberg.org/ebooks/6130">book summary</a>, stored in a variable called <code class="docutils literal notranslate"><span class="pre">another_book_summary</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">another_book_summary</span> <span class="o">=</span> <span class="s2">&quot;&#39;tHE iLIAD&#39; BY hOMER IS AN ANCIENT gREEK EPIC POEM COMPOSED AROUND THE LATE 8TH OR EARLY 7TH CENTURY bc. sET DURING THE FINAL WEEKS OF THE TEN-YEAR tROJAN wAR, IT FOLLOWS THE DEVASTATING ANGER OF aCHILLES, THE GREATEST gREEK WARRIOR, SPARKED BY A BITTER QUARREL WITH kING aGAMEMNON. aS PRIDE AND WRATH COLLIDE, THE CONFLICT ESCALATES FROM PERSONAL DISPUTE TO BATTLEFIELD TRAGEDY, CULMINATING IN THE DEATH OF tROY&#39;S CHAMPION, hECTOR. gODS INTERVENE, HEROES CLASH, AND THE FATE OF NATIONS HANGS IN THE BALANCE.&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">another_book_summary</span> <span class="o">=</span> <span class="s2">"'tHE iLIAD' BY hOMER IS AN ANCIENT gREEK EPIC POEM COMPOSED AROUND THE LATE 8TH OR EARLY 7TH CENTURY bc. sET DURING THE FINAL WEEKS OF THE TEN-YEAR tROJAN wAR, IT FOLLOWS THE DEVASTATING ANGER OF aCHILLES, THE GREATEST gREEK WARRIOR, SPARKED BY A BITTER QUARREL WITH kING aGAMEMNON. aS PRIDE AND WRATH COLLIDE, THE CONFLICT ESCALATES FROM PERSONAL DISPUTE TO BATTLEFIELD TRAGEDY, CULMINATING IN THE DEATH OF tROY'S CHAMPION, hECTOR. gODS INTERVENE, HEROES CLASH, AND THE FATE OF NATIONS HANGS IN THE BALANCE."</span>
 <span class="n">another_book_summary</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;&#39;tHE iLIAD&#39; BY hOMER IS AN ANCIENT gREEK EPIC POEM COMPOSED AROUND THE LATE 8TH OR EARLY 7TH CENTURY bc. sET DURING THE FINAL WEEKS OF THE TEN-YEAR tROJAN wAR, IT FOLLOWS THE DEVASTATING ANGER OF aCHILLES, THE GREATEST gREEK WARRIOR, SPARKED BY A BITTER QUARREL WITH kING aGAMEMNON. aS PRIDE AND WRATH COLLIDE, THE CONFLICT ESCALATES FROM PERSONAL DISPUTE TO BATTLEFIELD TRAGEDY, CULMINATING IN THE DEATH OF tROY&#39;S CHAMPION, hECTOR. gODS INTERVENE, HEROES CLASH, AND THE FATE OF NATIONS HANGS IN THE BALANCE.&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>"'tHE iLIAD' BY hOMER IS AN ANCIENT gREEK EPIC POEM COMPOSED AROUND THE LATE 8TH OR EARLY 7TH CENTURY bc. sET DURING THE FINAL WEEKS OF THE TEN-YEAR tROJAN wAR, IT FOLLOWS THE DEVASTATING ANGER OF aCHILLES, THE GREATEST gREEK WARRIOR, SPARKED BY A BITTER QUARREL WITH kING aGAMEMNON. aS PRIDE AND WRATH COLLIDE, THE CONFLICT ESCALATES FROM PERSONAL DISPUTE TO BATTLEFIELD TRAGEDY, CULMINATING IN THE DEATH OF tROY'S CHAMPION, hECTOR. gODS INTERVENE, HEROES CLASH, AND THE FATE OF NATIONS HANGS IN THE BALANCE."
 </pre></div>
 </div>
 </div>
 </div>
 <p>Ooh, something has gone wrong with that. Can you work out how to fix it with a string method?</p>
 <p>Here is how <code class="docutils literal notranslate"><span class="pre">another_book_summary</span></code> should look, when it is correct:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;&#39;The Iliad&#39; by Homer is an ancient Greek epic poem composed around the late 8th or early 7th century BC. Set during the final weeks of the ten-year Trojan War, it follows the devastating anger of Achilles, the greatest Greek warrior, sparked by a bitter quarrel with King Agamemnon. As pride and wrath collide, the conflict escalates from personal dispute to battlefield tragedy, culminating in the death of Troy&#39;s champion, Hector. Gods intervene, heroes clash, and the fate of nations hangs in the balance.&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"'The Iliad' by Homer is an ancient Greek epic poem composed around the late 8th or early 7th century BC. Set during the final weeks of the ten-year Trojan War, it follows the devastating anger of Achilles, the greatest Greek warrior, sparked by a bitter quarrel with King Agamemnon. As pride and wrath collide, the conflict escalates from personal dispute to battlefield tragedy, culminating in the death of Troy's champion, Hector. Gods intervene, heroes clash, and the fate of nations hangs in the balance."</span>
 </pre></div>
 </div>
 <p>Save your answer in a variable called <code class="docutils literal notranslate"><span class="pre">correct_summary</span></code>:</p>
@@ -882,7 +929,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;&#39;tHE iLIAD&#39; BY hOMER IS AN ANCIENT gREEK EPIC POEM COMPOSED AROUND THE LATE 8TH OR EARLY 7TH CENTURY bc. sET DURING THE FINAL WEEKS OF THE TEN-YEAR tROJAN wAR, IT FOLLOWS THE DEVASTATING ANGER OF aCHILLES, THE GREATEST gREEK WARRIOR, SPARKED BY A BITTER QUARREL WITH kING aGAMEMNON. aS PRIDE AND WRATH COLLIDE, THE CONFLICT ESCALATES FROM PERSONAL DISPUTE TO BATTLEFIELD TRAGEDY, CULMINATING IN THE DEATH OF tROY&#39;S CHAMPION, hECTOR. gODS INTERVENE, HEROES CLASH, AND THE FATE OF NATIONS HANGS IN THE BALANCE.&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>"'tHE iLIAD' BY hOMER IS AN ANCIENT gREEK EPIC POEM COMPOSED AROUND THE LATE 8TH OR EARLY 7TH CENTURY bc. sET DURING THE FINAL WEEKS OF THE TEN-YEAR tROJAN wAR, IT FOLLOWS THE DEVASTATING ANGER OF aCHILLES, THE GREATEST gREEK WARRIOR, SPARKED BY A BITTER QUARREL WITH kING aGAMEMNON. aS PRIDE AND WRATH COLLIDE, THE CONFLICT ESCALATES FROM PERSONAL DISPUTE TO BATTLEFIELD TRAGEDY, CULMINATING IN THE DEATH OF tROY'S CHAMPION, hECTOR. gODS INTERVENE, HEROES CLASH, AND THE FATE OF NATIONS HANGS IN THE BALANCE."
 </pre></div>
 </div>
 </div>
@@ -893,8 +940,8 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">correct_summary</span><span class="p">,</span> <span class="n">homer</span><span class="p">(),</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 7&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;correct_summary&quot;</span><span class="p">)</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 7"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"correct_summary"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -910,13 +957,13 @@ document.write(`
 <p>He saved his work in a Word document. But he has been downloading lots of movies from pirate websites.
 As a result, his computer got a virus, and his filename has been corrupted!</p>
 <p>His variable <code class="docutils literal notranslate"><span class="pre">project_name</span></code> should be this string <code class="docutils literal notranslate"><span class="pre">&quot;The</span> <span class="pre">Business</span> <span class="pre">Case</span> <span class="pre">For</span> <span class="pre">A.I.&quot;</span></code>. However, at the moment it is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;                       the bosiness cese for A.I.                                               &quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"                       the bosiness cese for A.I.                                               "</span>
 </pre></div>
 </div>
 <p>Fix it using string methods and store your answer in the variable <code class="docutils literal notranslate"><span class="pre">project_name</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">project_name</span>  <span class="o">=</span> <span class="s2">&quot;                       the bosiness cese for A.I.                                               &quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">project_name</span>  <span class="o">=</span> <span class="s2">"                       the bosiness cese for A.I.                                               "</span>
 
 <span class="c1"># Show the value.</span>
 <span class="n">project_name</span>
@@ -924,7 +971,7 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;                       the bosiness cese for A.I.                                               &#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'                       the bosiness cese for A.I.                                               '
 </pre></div>
 </div>
 </div>
@@ -934,9 +981,9 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;The Business Case For A.I.&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 8&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;project_name&quot;</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">"The Business Case For A.I."</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 8"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"project_name"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -949,7 +996,7 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 <section id="question-9">
 <h3>Question 9<a class="headerlink" href="#question-9" title="Link to this heading">#</a></h3>
 <p>Here is some text from a <a class="reference external" href="https://en.wikipedia.org/wiki/The_British_Are_Coming_(disambiguation)">Wikipedia</a> page:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;**The British are coming** is a phrase misattributed to [Paul Revere&#39;s Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"**The British are coming** is a phrase misattributed to [Paul Revere's Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."</span>
 </pre></div>
 </div>
 <p>It is <em>Markdown text</em>, it is written so that it looks nice in a Markdown cell (it has some <strong>bold</strong> text and a hyperlink. Here is how it looks in Markdown:</p>
@@ -958,17 +1005,17 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 </div></blockquote>
 <p>However, the string has been saved in a file which is the wrong format, and some of the text has changed.</p>
 <p>The cell below contains that broken string, in a variable called <code class="docutils literal notranslate"><span class="pre">wiki_text</span></code>. The broken text is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;##The British are coming## is a phrase misattributed to &lt;Paul Revere&#39;s Midnight Ride&gt;(http//en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"##The British are coming## is a phrase misattributed to &lt;Paul Revere's Midnight Ride&gt;(http//en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."</span>
 </pre></div>
 </div>
 <p>Fix it using string methods, so that it is the string below:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;**The British are coming** is a phrase misattributed to [Paul Revere&#39;s Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"**The British are coming** is a phrase misattributed to [Paul Revere's Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."</span>
 </pre></div>
 </div>
 <p>Save your answer in a the <code class="docutils literal notranslate"><span class="pre">wiki_text</span></code> variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wiki_text</span>  <span class="o">=</span> <span class="s2">&quot;##The British are coming## is a phrase misattributed to &lt;Paul Revere&#39;s Midnight Ride&gt;(http//en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wiki_text</span>  <span class="o">=</span> <span class="s2">"##The British are coming## is a phrase misattributed to &lt;Paul Revere's Midnight Ride&gt;(http//en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."</span>
 
 <span class="c1"># Show the value.</span>
 <span class="n">wiki_text</span>
@@ -976,7 +1023,7 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;##The British are coming## is a phrase misattributed to &lt;Paul Revere&#39;s Midnight Ride&gt;(http//en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>"##The British are coming## is a phrase misattributed to &lt;Paul Revere's Midnight Ride&gt;(http//en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."
 </pre></div>
 </div>
 </div>
@@ -987,9 +1034,9 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE!</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">wiki_text</span><span class="p">,</span> 
-            <span class="s2">&quot;**The British are coming** is a phrase misattributed to [Paul Revere&#39;s Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span><span class="p">,</span>
-            <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 9&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;wiki_text&quot;</span><span class="p">)</span>
+            <span class="s2">"**The British are coming** is a phrase misattributed to [Paul Revere's Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."</span><span class="p">,</span>
+            <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 9"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"wiki_text"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1005,36 +1052,36 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span> <span class="s2">&quot;Introduction to Computer Programming&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 1&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;answer_1&quot;</span><span class="p">)</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">pres_title</span><span class="p">,</span> <span class="s2">&quot;Presentation on Climate Change&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 2&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;pres_title&quot;</span><span class="p">)</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">text_reply</span><span class="p">,</span> <span class="s2">&quot;omg i cannot believe you did that!!!!!!&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 3&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;text_reply&quot;</span><span class="p">)</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">essay_title</span><span class="p">,</span> <span class="s2">&quot;Essay on the Roman Republic&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 4&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;essay_title&quot;</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">answer_1</span><span class="p">,</span> <span class="s2">"Introduction to Computer Programming"</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 1"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"answer_1"</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">pres_title</span><span class="p">,</span> <span class="s2">"Presentation on Climate Change"</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 2"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"pres_title"</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">text_reply</span><span class="p">,</span> <span class="s2">"omg i cannot believe you did that!!!!!!"</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 3"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"text_reply"</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">essay_title</span><span class="p">,</span> <span class="s2">"Essay on the Roman Republic"</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 4"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"essay_title"</span><span class="p">)</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">count_alien</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> 
              <span class="n">correct_is_string</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 5&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;count_alien&quot;</span><span class="p">)</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 5"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"count_alien"</span><span class="p">)</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">count_alien_and_technology</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span>
             <span class="n">correct_is_string</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 6&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;count_alien_and_technology&quot;</span><span class="p">)</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 6"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"count_alien_and_technology"</span><span class="p">)</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">correct_summary</span><span class="p">,</span> <span class="n">homer</span><span class="p">(),</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 7&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;correct_summary&quot;</span><span class="p">)</span>
-<span class="n">check_answer</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;The Business Case For A.I.&quot;</span><span class="p">,</span>
-             <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 8&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;project_name&quot;</span><span class="p">)</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 7"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"correct_summary"</span><span class="p">)</span>
+<span class="n">check_answer</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">"The Business Case For A.I."</span><span class="p">,</span>
+             <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 8"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"project_name"</span><span class="p">)</span>
 <span class="n">check_answer</span><span class="p">(</span><span class="n">wiki_text</span><span class="p">,</span> 
-            <span class="s2">&quot;**The British are coming** is a phrase misattributed to [Paul Revere&#39;s Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere&#39;s_Midnight_Ride &#39;Paul Revere&#39;s Midnight Ride&#39;).&quot;</span><span class="p">,</span>
-            <span class="n">question_name</span><span class="o">=</span><span class="s2">&quot;Question 9&quot;</span><span class="p">,</span>
-             <span class="n">answer_name</span><span class="o">=</span><span class="s2">&quot;wiki_text&quot;</span><span class="p">)</span>
+            <span class="s2">"**The British are coming** is a phrase misattributed to [Paul Revere's Midnight Ride](https://en.wikipedia.org/wiki/Paul_Revere's_Midnight_Ride 'Paul Revere's Midnight Ride')."</span><span class="p">,</span>
+            <span class="n">question_name</span><span class="o">=</span><span class="s2">"Question 9"</span><span class="p">,</span>
+             <span class="n">answer_name</span><span class="o">=</span><span class="s2">"wiki_text"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1094,15 +1141,17 @@ As a result, his computer got a virus, and his filename has been corrupted!</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-instructions">General Instructions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-your-work">Downloading your work</a></li>
 </ul>
@@ -1196,8 +1245,8 @@ By Peter Rush (partly adapted from material by Matthew Brett, Peter Rush, Ani Ad
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>
