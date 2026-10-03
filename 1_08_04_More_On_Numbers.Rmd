@@ -26,25 +26,22 @@ Computers are very good calculators. However, there are important things that ev
 * Numbers with decimal places are called `float` values (or *floating point values*) in the
   Python language. They can represent whole numbers or numbers with decimal placees. E.g. `10.6`, `1000.0292`, `-17.5` and $\frac{90}{100}$ would all be `float` values in Python, because they all have decimal places. *Note*: decimal places are also called a *fractional component*.
 
-The type of a number can be seen from the way it is displayed: `int` values
-have no decimal point and `float` values always have a decimal point.
-
 Here are some `int` values:
 
 ```{python}
-2
+5
 ```
 
 ```{python}
-1 + 3
+11 + 100
 ```
 
 ```{python}
--1
+-3
 ```
 
 ```{python}
--10
+-25
 ```
 
 ```{python}
@@ -54,66 +51,33 @@ Here are some `int` values:
 Here are some float values:
 
 ```{python}
-1.2
+0.2
 ```
 
 ```{python}
-1.5 + 2
+15.5 + 20
 ```
 
 ```{python}
-3 / 1
+30 / 11
 ```
 
 ```{python}
-# We will talk more about the output of this cell further down the page!
 -12345678900000000000.0
 ```
 
-When a `float` value is combined with an `int` value using a mathematical
-operator, then the result is always a `float` value:
-
-```{python}
-# float + int
-7.5 + 4
-```
-
-```{python}
-# A number with a decimal of 0 is still a `float`!
-# float + int
-8.0 + 2
-```
-
-```{python}
-# int * float
-70 * 102.3
-```
-
-In most cases, two integers put together will make another integer, but any number (`int` or `float`)
-divided by another will be a `float` value: 
-
-```{python}
-# Add two integers.
-6 + 4
-```
-
-```{python}
-# Divide two integers (this returns a `float`).
-100/10
-```
-
-Very large or very small `float` values can be displayed using scientific notation.
+Look at the output of the last cell. This number is very far from 0 in the negative direction. This means it is a very, very *small* number. Very large or very small `float` values can be displayed using scientific notation. The number you see in the output of the cell above (`-1.23456789e+19`) is shown in scientific notation. Let's look at how to read this number...
 
 ## Scientific notation - another way of writing float values
 
-You can also write float values in *exponential* format, like this:
+`float` values in scientific notation are in *exponential* format. We can make a literal in exponential format like this:
 
 ```{python}
 # Two thousand one hundred.
 2.1e3
 ```
 
-This format is called *scientific notation*.
+As mentioned above, this exponential format is called *scientific notation*.
 
 `2.1e3` is written in scientific notation, and it is the same value as:
 
@@ -135,7 +99,7 @@ The `"f"` in the `format()` function tells it that we want [*fixed-point notatio
 format(2.1e3, ".24f")
 ```
 
-Also note that `format()` returns your number as text/string data, not as `float` data.
+Also note that `format()` returns your number as text/string data, not as `float` data - you will get errors if you ignore this!
 
 Ok, back to scientific notation. 
 
@@ -364,25 +328,25 @@ In summary:
 
 Make sure you understand this (it can be confusing, so read it carefully):
 
-Think about `4.2e+05`. This number is positive, and it has a plus sign `+` in it's scientific notation (e.g. `e+05`). This is a *large positive number*:
+Think about `4.2e+05`. This base number (`4.2`) is positive, and it has a plus sign `+` in it's scientific notation (e.g. `e+05`). This is a *positive number far from 0*:
 
 ```{python}
 4.2e+05
 ```
 
-However, the number `-4.2e+05` number is *negative*, it has a minus sign `-` at it's start. But it has a plus sign `+` in it's scientific notation (e.g. `e+05`). This is a *large negative number*:
+However, the number `-4.2e+05` number is *negative*, it has a minus sign `-` at it's start. But it has a plus sign `+` in it's scientific notation (e.g. `e+05`). This is a *negative number far from 0*:
 
 ```{python}
 format(-4.2e+05, "f")
 ```
 
-The number `4.2e-05` is positive, it does NOT have a minus sign at it's start. BUT it does have a minus sign in its scientific notation (e.g. `e-05`). This is a *small positive number*:
+The number `4.2e-05` is positive, it does NOT have a minus sign at it's start. BUT it does have a minus sign in its scientific notation (e.g. `e-05`). So, this is a *positive number close to 0*:
 
 ```{python}
 format(4.2e-05, ".24f")
 ```
 
-In contrast, the number `-4.2e-05` has a minus sign `-` at it's start, AND in it's scientific notation (e.g. `e-05`). This is a *small negative number*:
+In contrast, the number `-4.2e-05` has a minus sign `-` at it's start, AND in it's scientific notation (e.g. `e-05`). This is a *negative number close to 0*:
 
 ```{python}
 format(-4.2e-05, ".24f")
@@ -390,15 +354,31 @@ format(-4.2e-05, ".24f")
 
 So:
 
-- positive number, `+` in scientific notation: LARGE POSITIVE NUMBER e.g. `4.2e+05` equals `420000`
+| Base Number Sign | `e` Sign | Meaning | Example |
+|---|---|---|---|
+| Positive (`+`) | Positive (`+`) | **Positive number far from 0** | `4.2e+05` = `420000` |
+| Negative (`-`) | Positive (`+`) | **Negative number far from 0** | `-4.2e+05` = `-420000` |
+| Positive (`+`) | Negative (`-`) | **Positive number close to 0** | `4.2e-05` = `0.000042` |
+| Negative (`-`) | Negative (`-`) | **Negative number close to 0** | `-4.2e-05` = `-0.000042` |
 
-- negative number, `+` in scientific notation: LARGE NEGATIVE NUMBER e.g. `-4.2e+05` equals `-420000`
+If `e` is POSITIVE (+)  →  move decimal RIGHT  →  number is farther from 0
 
-- positive number, `-` in scientific notation: SMALL POSITIVE NUMBER e.g. `4.2e-05` equals `0.000041999999999999997676`
+If `e` is NEGATIVE (-)  →  move decimal LEFT   →  number is closer to 0
 
-- negatvie number, `-` in scientific notation: SMALL NEGATIVE NUMBER e.g. `-4.2e-05` equals `-0.000041999999999999997676`
+The sign of the base number determines which side of 0 it is on, look at the number line below. The `X`'s show the location of different numbers, along with their scientific notation:
 
-You will need to understand this to do the exercise.
+```
+                                               NEGATIVE                     POSITIVE
+                     ◄────────────────────────────────────────── 0 ──────────────────────────────────────────►
+Location:                     X                                 X X                                X         
+Number:                   -420000                        -0.000042 0.000042                     420000
+Scientific notation:      -4.2e+05                       -4.2e-05  4.2e-05                      4.2e+05
+Distance from 0:          FAR FROM 0                        CLOSE TO 0                         FAR FROM 0
+
+                   
+```
+
+You will need to understand this to do the exercise, so read this section a few times and make sure you understand it. Don't worry if it is confusing at first...
 
 
 ## Exercise - Scientific Notation

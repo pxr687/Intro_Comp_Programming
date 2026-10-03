@@ -1,0 +1,305 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Changing Data Types, using the `int()`, `float()` and `str()` functions
+
+We know that three of the basic data types in Python are:
+
+- `int` : integer/whole number data, with *no* decimal places (e.g. `4`)
+
+- `float` : floating point number data, *with* decimal places (e.g. `4.2`)
+
+- `str` : string/text data (e.g. `"BOY"`, `"GIRL"`)
+
+If you see that your data is the wrong type - and you want to change it to the right type - there a many Python functions to do this. For example, we can use `float()` to change an `int` to a `float`:
+
+```{python}
+# Create a variable containing an `int`.
+my_int = 10
+
+# Show the value of `my_int`
+my_int
+```
+
+```{python}
+# Show the `type()` of `my_int`.
+type(my_int)
+```
+
+To change `my_int` to the `float` data type, we just give it as an argument to the `float()` function:
+
+```{python}
+# Change `my_int` to a `float`.
+float(my_int)
+```
+
+You can see in the output of the cell above that the number now has a decimal place. 
+
+As always, we can store our `float` in a variable:
+
+```{python}
+# Store our `float` in a variable.
+my_float = float(my_int)
+
+# Show the value of `my_float`.
+my_float
+```
+
+```{python}
+# Show the `type()` of `my_float`.
+type(my_float)
+```
+
+We can change our data back to the `int` type using the `int()` function:
+
+```{python}
+int(my_float)
+```
+
+Notice that the decimal place has disappeared...
+
+If we want to change a number (`float` or `int`) to text (`str`), we can do this with the `str()` function:
+
+```{python}
+# Change `my_float` to `str`.
+my_string = str(my_float)
+
+# Show the value of `my_string`.
+my_string
+```
+
+Look closely at the output of the cell above. Notice the quotation marks (`''`) around `'10.0'`. These tell us it is a string, not a number. We can check this with the `type()` function:
+
+```{python}
+# Show the `type()` of `my_string`.
+type(my_string)
+```
+
+Importantly, `str()` (with brackets at the end) is a function to change something into a string. However, `str` (with no brackets at the end) is a Python data type (string/text data). 
+
+Remember earlier I said that a common error is that a number gets changed *by accident* to text?:
+
+```{python}
+# Should be a number, but it is text.
+salary = "1,235"
+```
+
+This causes strange results when we try to do maths with the variable:
+
+```{python}
+# Ouch!
+salary * 10
+```
+
+It will also cause errors when we use the variable with functions that want numbers as their arguments:
+
+```{python tags=c("raises-exception")}
+# Ouch! (again).
+int(salary)
+```
+
+We will talk more about string data on another page. But we can fix this error by doing using *string methods* by removing the `,` from the `salary` variable:
+
+```{python}
+# Re-assign the variable, with no ",".
+salary = "1235"
+
+# Show the value of `salary`.
+salary
+```
+
+`1235` is a string that the `int` function can work with!. Strings like `"1235"` are called *numeric strings* because they are in the right format for Python to change them into the `int` or `float` data types:
+
+```{python}
+int(salary)
+```
+
+Phew! Now it is a number again:
+
+```{python}
+salary_as_int = int(salary)
+type(salary_as_int)
+```
+
+... and we can do maths with it, without errors!:
+
+```{python}
+# Calculate the salary over 10 months.
+salary_as_int * 10
+```
+
+By contrast, the string `"1,235"` is a *non-numeric string* because Python cannot easily change it into a number using the `int()` or `float()` functions - it is not written in the right way for this to work...
+
+The table below shows a summary of the information on this page.
+
+| Function | What it does | Works on | Examples | Result |
+|---|---|---|---|---|
+| `str()` | Changes a value to a **string** | Almost any Python value | `str(123)` | `"123"` |
+| `int()` | Changes a value to an **integer** | Integers, whole-number floats, numeric strings | `int("123")` | `123` |
+| `float()` | Changes a value to a **floating-point (e.g. decimal) number** | Integers, floats, numeric strings | `float("3.14")` | `3.14` |
+
+
+
+## Mini-exercise: Data Types
+
+Launch this page on Binder or Live code:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
+
+...then complete the tasks below. You will need to think about what type of data you are using, and will need to change it using the functions shown above. 
+
+At the moment, you will some error messages. When you pass each task after task 1 you will see a message saying "That is **correct**! Well done!". If you see an `AssertionError` message, it means you still have the wrong answer. 
+
+### Task 1
+
+Make a variable called `name` which returns your name. So for me, it should return the string `"Pete"`.
+
+```{python}
+# Your code here
+name = ...
+
+# Show the value of `name`.
+name
+```
+
+Now, change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this with the `+` operator and by making new strings.**. Do *NOT* just type the right string and re-assign the variable e.g. do **NOT** use `name = Hello Pete!`.
+
+```{python}
+# Your code here
+name = ...
+
+# Show the value of `name`.
+name
+```
+
+### Task 2
+
+Change the variable `eight_seven_nine` to the `int` data type.
+
+```{python}
+eight_seven_nine = "879"
+
+# Show the value of `eight_seven_nine`.
+eight_seven_nine
+```
+
+**Run the cell below to mark your answer**:
+
+```{python tags=c("raises-exception")}
+# DO NOT CHANGE THIS CODE, JUST RUN THE CELL.
+from jupyprint import jupyprint
+assert type(eight_seven_nine) == int, f"Ouch, that's not right, `eight_seven_nine` should be the `int` data type. Right now it is `{type(eight_seven_nine)}`."
+jupyprint("*That is **correct**! Well done!*")
+```
+
+### Task 3
+
+The manager of a theme park is calculating their `total_ticket_revenue`. 
+
+First, they make a `number_of_visitors` variable which should have the value one hundred and eighteen. 
+
+The price of each ticket is ฿250, the manager wants to store this in a variable called `ticket_price`.
+
+The manager wants the `total_ticket_revenue` to be in the `float` data type.
+
+However, the manager is getting a strange result. Can you fix it?
+
+```{python}
+number_of_visitors = 118
+
+ticket_price = "250"
+
+total_ticket_revenue = number_of_visitors * ticket_price
+
+# Show the value of `total_ticket_revenue`.
+total_ticket_revenue
+```
+
+**Run the cell below to mark your answer**:
+
+```{python tags=c("raises-exception")}
+# DO NOT CHANGE THIS CODE, JUST RUN THE CELL.
+assert type(total_ticket_revenue) == float , f"Ouch, that's not right, `total_ticket_revenue` should be the `float` data type. Right now it is `{type(total_ticket_revenue)}`."
+assert total_ticket_revenue == 29500.0,  f"Ouch, that's not right, `total_ticket_revenue` is the wrong value, it should be 29500.0, but right now it is `{total_ticket_revenue}`."
+jupyprint("*That is **correct**! Well done!*")
+```
+
+### Task 4
+
+A biologist is counting the number of cats and lizards that live in Lumpini park in Bangkok.
+
+There are 435 monitor lizards and 121 cats. The biologist puts these values in variables called `number_of_monitor_lizards` and `number_of_cats`.
+
+They want to use `print()` to show this message:
+
+```
+"There are 556 cats and monitor lizards in Lumpini park."
+```
+
+They want to use Python to calculate the number (556) in the message, using the  `number_of_monitor_lizards` and `number_of_cats` variables (e.g. they do **NOT** want to hard-code the number in the message text).
+
+At the moment they are not getting the result they want...can you fix their code?
+
+*Note*: to solve this exercise, you may want to look at this [Stack Overflow answer](https://stackoverflow.com/questions/12018992/print-combining-strings-and-numbers). There is more than one way you can solve this!
+
+```{python}
+number_of_monitor_lizards = 435
+
+number_of_cats = 121
+
+# Add the variables together in the messagee.
+how_many_cats_monitors_message = "There are number_of_cats+number_of_monitor_lizards cats and monitor lizards in Lumpini park."
+
+# Show the message.
+print(how_many_cats_monitors_message)
+```
+
+```{python tags=c("raises-exception")}
+# DO NOT CHANGE THIS CODE, JUST RUN THE CELL.
+assert type(how_many_cats_monitors_message) == str , f"Ouch, that's not right, `how_many_cats_monitors_message` should be the `str` data type. Right now it is `{type(how_many_cats_monitors_message)}`."
+assert how_many_cats_monitors_message == "There are 556 cats and monitor lizards in Lumpini park.",  f"Ouch, that's not right, `how_many_cats_monitors_message` is the wrong value, it should be:\n `'There are 556 cats and monitor lizards in Lumpini park.'`\n ...but right now it is:\n `'{how_many_cats_monitors_message}'`."
+jupyprint("*That is **correct**! Well done!*")
+```
+
+### Task 5
+
+Michael is writing some code. He needs a variable with the value 999.0 - he needs it to be in the `float` data type.
+
+He tries the code below, but he is getting an error message.
+
+*First*, think about *why* he gets the error. His string `"nine_nine_nine"` has three `nine`'s - why can Python not change this to number 999.0?
+
+*Then*, fix his code. Store your answer in a variable called `nine_nine_nine_as_number` which should have the value 999.0.
+
+**Do not hard-code `nine_nine_nine_as_number = 999.0`.** Change the string `nine_nine_nine` instead, so that the next line of code works without an error. E.g. do NOT change the line `nine_nine_nine_as_number = float(nine_nine_nine_as_words)`.
+
+```{python tags=c("raises-exception")}
+nine_nine_nine_as_words = "nine_nine_nine"
+
+# DO NOT CHANGE THE LINE OF CODE BELOW THIS.
+nine_nine_nine_as_number = float(nine_nine_nine_as_words)
+
+# Show the value of `nine_nine_nine_as_number`.
+nine_nine_nine_as_number
+```
+
+```{python tags=c("raises-exception")}
+# DO NOT CHANGE THIS CODE, JUST RUN THE CELL.
+assert type(nine_nine_nine_as_number) == float, f"Ouch, that's not right, `nine_nine_nine_as_number` should be the `float` data type. Right now it is `{type(nine_nine_nine_as_number)}`."
+assert nine_nine_nine_as_number == 999.0, f"Ouch, that's not right, `nine_nine_nine_as_number` is the wrong value, it should be 999.0, but right now it is `{nine_nine_nine_as_number}`."
+jupyprint("*That is **correct**! Well done!*")
+```
+----------------------------------------------------------
+
+[🏡](intro.md).

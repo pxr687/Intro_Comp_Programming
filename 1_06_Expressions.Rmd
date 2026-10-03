@@ -5,14 +5,13 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.17.3
+      jupytext_version: 1.19.5
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
 
-<!-- #region -->
 # Expressions
 
 ```{note}
@@ -40,7 +39,6 @@ Learning the rules of Python grammar rules is very important. Without proper gra
 An expression is like a *recipe that returns a value*.  For example, this is an expression.
 
 In Jupyter Notebooks, when we type an expression into a code cell, Python will show use the *value* of the expression:
-<!-- #endregion -->
 
 ```{python}
 3 * 4
