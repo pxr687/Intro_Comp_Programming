@@ -15,7 +15,7 @@ jupyter:
 <!-- #region -->
 # Extra Data Types Task - Printing a Receipt 
 
-In this task, you will a program to print a paper receipt for the cashier at a small shop.
+In this task, you will write a program to print a paper receipt for the cashier at a small shop. This will test your knowledge about data types...
 
 ![](https://thumbs.dreamstime.com/b/people-shop-small-grocery-store-bangkok-thailand-december-people-shop-small-stand-alone-grocery-store-lumpini-park-134483398.jpg?w=500)
 

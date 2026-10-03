@@ -166,6 +166,9 @@ E.g. does adding two `int`s always return an `int`? Does dividing always return 
 # Test out the rules here.
 ```
 
+After you test out the rules, lets talk more about text (string) data...
+
+
 ----------------------------------------------------------
 
 [🏡](intro.md).

@@ -5,7 +5,7 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.17.3
+      jupytext_version: 1.19.5
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -26,7 +26,7 @@ If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp
 # RUN THIS CELL - DO NOT CHANGE THE CODE.
 import numpy as np
 from jupyprint import jupyprint
-from notch_3 import *
+from notch_4 import *
 # total, number_of_students, test_score, welcome_20, n_forms, savings_after_six_months = pre_define_blanks(6)
 ```
 

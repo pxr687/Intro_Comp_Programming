@@ -22,7 +22,7 @@ def mk_t_2a():
     obs_4 = "43!rr".join("dra3nnn").join("_kc").join("97")[(2 ** 5) // (3 * 5 + 1)]
     return obs_1, obs_2, obs_3, obs_4
 
-def mk_t_3():
+def mk_t_4():
     rndm = np.array([(9 * 40) + (378 * 3) - (40 * 9),
                      (666) * (65000/5) / (666),
                      (10) + (88 * 10**-2) - (10),

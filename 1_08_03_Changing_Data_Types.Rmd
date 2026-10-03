@@ -149,7 +149,32 @@ The table below shows a summary of the information on this page.
 | `int()` | Changes a value to an **integer** | Integers, whole-number floats, numeric strings | `int("123")` | `123` |
 | `float()` | Changes a value to a **floating-point (e.g. decimal) number** | Integers, floats, numeric strings | `float("3.14")` | `3.14` |
 
+## Printing different data types together
 
+Like the `int()` and `float()` function will change data to `int` or `float`, we know that the `str()` function will change data into the `str` data type. Using this function, strings can be put together from more than one value.
+One good thing about this is that it lets you `print()` different data types together:
+
+```{python}
+# Combining different data types into a string.
+"That's " + str(1 + 1) + ' ' + str(True) + " pal!"
+```
+
+```{python}
+# Using the `str()` function again to turn numbers into strings.
+"There are " + str(50) + " districts in Bangkok."
+```
+
+This can be very useful when you are debugging/fixing code, because you can `print()` out that value of a variables from different parts of the code, which can let you find where errors are happening.
+
+We can also put number variables into the string, using the `str()` function:
+
+```{python}
+number_of_students = 22
+```
+
+```{python}
+"There are " + str(number_of_students) + " students in the class."
+```
 
 ## Mini-exercise: Data Types
 

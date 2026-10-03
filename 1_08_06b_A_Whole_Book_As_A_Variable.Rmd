@@ -1,0 +1,62 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# A whole book as a variable
+
+The strings that we store in variables do not have to be simple, short strings.
+
+To show you the power of string variables, I will now show you now how to get *a whole book* from the internet and store it as a Python variable.
+
+For now, do not worry too much about the code to do this, I will explain what it does:
+
+- first it `import`s a Python library which lets us get data from the internet (from a website address)
+
+- next it makes a variable which has a string of a website address (this variable is called `book_url`
+
+- then it gets a book from that web address, and stores it in a Python variable called `book_text`.
+
+- finally, it prints out the first 5000 lines of the book
+
+The book that we will store as a string variable is [Pride and Prejudice, by Jane Austen](https://en.wikipedia.org/wiki/Pride_and_Prejudice)
+
+```{python}
+# Get the text for Pride and Prejudice.
+
+# Import a library to get data from the internet.
+import urllib.request
+
+# Make a string variable which is a website address.
+book_url = 'http://www.gutenberg.org/ebooks/42671.txt.utf-8'
+
+# Get the book from the website.
+book_text = urllib.request.urlopen(book_url).read().decode("utf-8")
+
+# Show the first 5000 lines (do not worry about understanding this code for now).
+print(book_text[:5000])
+```
+
+You can check this is the same as the text you see by opening the URL in your browser: http://www.gutenberg.org/ebooks/42671.txt.utf-8
+
+String data stored in variables like this can be used for lots of different things, including:
+
+- training AI large language models like ChatGPT
+
+- [sentiment analysis](https://www.youtube.com/watch?v=5HQCNAsSO-s), which uses machine learning to learn about the emotions in text. E.g. we could do sentiment analysis with social media posts about a company or product to see if people like or dislike it
+
+- academic research like [Computational Theology](https://www.semanticscholar.org/topic/Computational-theology/3454560) which uses computer science techniques to study religious books
+
+
+----------------------------------------------------------
+
+[🏡](intro.md).
