@@ -12,7 +12,7 @@ jupyter:
     name: python3
 ---
 
-# A whole book as a variable
+# A Whole Book as a Variable
 
 The strings that we store in variables do not have to be simple, short strings.
 
@@ -74,15 +74,27 @@ my_edited_book = book_text
 
 Use some of the string methods we saw [earlier](https://pxr687.github.io/Intro_Comp_Programming/1_08_06_String_Methods.html) to change the `my_edited_book` by doing the following:
 
-- make yourself the Editor of the book 
+- Make yourself the Editor of the book.
 
-- make your best friend the Author of the book
+- Make your best friend the Author of the book.
 
-- change the title of the book to a title of your choice
+- Change the Title of the book to a title of your choice.
 
-- Google search the characters in the book, make yourself one of the characters by changing that character's name to your own name
+    - At the moment:
+    
+    ```
+    """
+    Title: Pride and Prejudice
 
-- edit the book in whatever other ways you want, to practice using string methods
+    Author: Jane Austen
+
+    Editor: R. W. Chapman
+    """
+    ```
+
+- Google search the characters in the book, make yourself one of the characters by changing that character's name to your own name.
+
+- Edit the book in whatever other ways you want, to practice using string methods.
 
 ```{python}
 # Your code here.

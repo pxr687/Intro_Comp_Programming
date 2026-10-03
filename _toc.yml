@@ -19,6 +19,7 @@ parts:
       - file: 1_07_Summary_Literals_Variables_Expressions_Functions # ADD SELF EXERCISE
       - file: 1_07b_Class_Quiz_Literals_Variables_Expressions_Functions # CHECKED, EXERCISE CHECKED, USE AS IN CLASS ASSIGNMENT
 
+# WEEK 5 + 6
   - caption: Data Types
     chapters:
       - file: 1_08_00_Data_Types  # CHECKED, EXERCISE CHECKED
@@ -29,31 +30,44 @@ parts:
       - file: 1_08_04_More_On_Numbers
       - file: 1_08_05_More_On_Strings
       - file: 1_08_05b_Fix_My_Data_Exercise
-      - file: 1_08_06_String_Methods
-      - file: 1_08_06b_A_Whole_Book_As_A_Variable
-      - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
+      # - file: 1_08_06_String_Methods
+      # - file: 1_08_06b_A_Whole_Book_As_A_Variable
+      # - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
+      # - file: 1_08_07_Comparison_Operators
+      # - file: 1_08_08_Lists
 
-# WEEK 3 ---- ADD IN BASIC CHAT BOT AFTER YOU SHOW INPUT()
-      #  - file: 1_08_03_Strings_and_Variables 
-      #  - file: 1_08_04_String_Methods
-      # - file: 1_08_02c_Extra_Data_Types_Task_Two
-  #     - file: 1_08_05_Comparison_Operators   ### EXERCISE DONE
-  #     - file: 1_08_05b_Getting_Keyboard_Input ### ADD IN EXERCISE
-  #     - file: 1_08_06_Lists                  ### ADD IN EXCERCISE
-  #     - file: 1_09_Statements
-  #     - file: 1_10_Summary_Variables_Literals_Expressions_Statements_Functions  ### ADD IN QUIZ, ALREADY HAS AN EXERCISE, ADD MORE Qs
+# # WEEK 7
+#   - caption: Statements and Conditionals
+#     chapters:
+#       - file: 1_09_01_Statements_and_Keywords
+#       - file: 1_09_02_Conditional_Statements
+#       - file: 1_09_03_Getting_Keyboard_Input
 
-# WEEK 4
-# Test on first three weeks.
+# Week 8 (mid-term)
 
-# WEEK 5
-  # - caption: More Python Elements and Grammar
-  #   chapters:
-      # - file: 1_11_More_Functions_Methods
-      # - file: 1_12_Writing_Your_Own_Functions
-      # - file: 1_13_More_Data_Types
-      # - file: 1_14_More_Keywords
-      # - file: 1_15_Numpy_Arrays
+# Week 9 + 10 
+# Caption: Numpy and Iteration for Data Analysis
+# Numpy Arrays, Iteration + Plotting Graphs (three girls simulation)
+# Caption: Numpy and Iteration for Image Processing
+# Then include while loops at end, with computer science context (e.g. making files
+# from Numpy arrays, of images, e.g. introduce image processing, get images
+# from image API, use while loop to get certain number of files).
+# Show `break` etc.
+
+# Week 11 
+# Captions: (More Data Types [None, Dictionaries, Tuples] - say this is just so they are aware of them)
+# Captions: (Writing your own functions) (Pandas and Object Oriented Programming)
+# Pandas and OOP (dataframe, series, data cleaning)
+# Writing own functions (more data analysis with permutation test - write functions that work with any dataframe)
+# Generate data in class for permutation test (male, female - prefer action movies or drama?)
+# Also write functions for image processing (e.g. binarize any image)
+
+# Week 12 - Test 2 (Data Analysis) + Teaching = Modules and scripts (e.g. after test)
+
+# Week 13 and 14
+# Modules and scripts (computer science functions, make a HTML CV using user input and data validation)
+# Python OOP and Very Basic Java (making Zoo management webpage, maybe play audio files, and show images of 
+# animals also)
 
   - caption: Scratchpad
     chapters:
