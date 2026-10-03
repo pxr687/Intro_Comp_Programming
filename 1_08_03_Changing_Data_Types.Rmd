@@ -46,7 +46,13 @@ float(my_int)
 
 You can see in the output of the cell above that the number now has a decimal place. 
 
-As always, we can store our `float` in a variable:
+Note: the proper name for changing the type of a variable in Python is [*casting*](https://www.w3schools.com/python/python_casting.asp). You will see this name in error message, so it is important to know. So, these two sentences have exactly the same meaning:
+
+> the cell above changes the variable `my_int` to the `float` data type, by using the `float()` function.
+
+> the cell above *casts* the variable `my_int` to the `float` data type, by using the `float()` function.
+
+As always, we can store our new `float` in a variable:
 
 ```{python}
 # Store our `float` in a variable.

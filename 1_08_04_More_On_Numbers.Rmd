@@ -18,7 +18,7 @@ jupyter:
 This page is adpted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/Numbers.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
-This page will go into more detail about *numbers*, and things every programmer needs to know abou them...
+This page will go into more detail about *numbers*, and things every programmer needs to know about them...
 
 Computers are very good calculators. However, there are important things that every programmer working with numbers needs to know. Python (and most other programming languages) uses two *different types of numbers*. We have seen both of them on the [Data Types](1_08_00_Data_Types) page:
 

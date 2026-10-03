@@ -52,7 +52,7 @@ Experiment with strings yourself in the code cell above, before you read the pag
 
 .......
 
-If you did experiment with strings, you will have found that `+` and `*` operators work with string literals, in expressions. All the other arithmetic operators (`*`, `/`, `%`) cause an error.
+If you did experiment with strings in the code cell above, you will have found that only the `+` and `*` operators work with string literals, in expressions. All the other arithmetic operators (`*`, `/`, `%`) cause an error.
 
 ```{python}
 # This works.
@@ -66,13 +66,26 @@ If you did experiment with strings, you will have found that `+` and `*` operato
 
 ```{python tags=c("raises-exception")}
 # This does NOT work.
+"It is just one string" - " after another."
+```
+
+```{python tags=c("raises-exception")}
+# This does NOT work.
 "It is just one string" / " after another."
+```
+
+```{python tags=c("raises-exception")}
+# This does NOT work.
+"It is just one string" % " after another."
 ```
 
 ```{python tags=c("raises-exception")}
 # This does NOT work.
 "It is just one string" ** " after another."
 ```
+
+You will often encounter these errors when doing data analysis...
+
 
 ## Multi-line strings
 
