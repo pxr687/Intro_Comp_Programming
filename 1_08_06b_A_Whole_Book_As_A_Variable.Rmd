@@ -50,15 +50,44 @@ You can check this is the same as the text you see by opening the URL in your br
 
 String data stored in variables like this can be used for lots of different things, including:
 
-- training AI large language models like ChatGPT
+- Training AI large language models like ChatGPT.
 
-- [sentiment analysis](https://www.youtube.com/watch?v=5HQCNAsSO-s), which uses machine learning to learn about the emotions in text. E.g. we could do sentiment analysis with social media posts about a company or product to see if people like or dislike it
+- [Sentiment analysis](https://www.youtube.com/watch?v=5HQCNAsSO-s), which uses machine learning to learn about the emotions in text. E.g. we could do sentiment analysis with social media posts about a company or product to see if people like or dislike it.
 
-- academic research like [Computational Theology](https://www.semanticscholar.org/topic/Computational-theology/3454560) which uses computer science techniques to study religious books
+- Academic research like [Computational Theology](https://www.semanticscholar.org/topic/Computational-theology/3454560) which uses computer science techniques to study religious books.
 
 
-## Mini-exericse: Edit the Book!
+## Mini-exericse: Book Editor
 
+Launch this page on Binder and then follow the instructions below:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
+
+### Task 1
+
+Run the cell below.
+
+```{python}
+# DO NOT CHANGE THIS CODE. It copies the book text, so we do not overwrite the original `book_text` variable.
+my_edited_book = book_text
+```
+
+Use some of the string methods we saw [earlier](https://pxr687.github.io/Intro_Comp_Programming/1_08_06_String_Methods.html) to change the `my_edited_book` by doing the following:
+
+- make yourself the Editor of the book 
+
+- make your best friend the Author of the book
+
+- change the title of the book to a title of your choice
+
+- Google search the characters in the book, make yourself one of the characters by changing that character's name to your own name
+
+- edit the book in whatever other ways you want, to practice using string methods
+
+```{python}
+# Your code here.
+print(my_edited_book)
+```
 
 ----------------------------------------------------------
 
