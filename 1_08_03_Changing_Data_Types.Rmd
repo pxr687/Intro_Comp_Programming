@@ -48,9 +48,9 @@ You can see in the output of the cell above that the number now has a decimal pl
 
 Note: the proper name for changing the type of a variable in Python is [*casting*](https://www.w3schools.com/python/python_casting.asp). You will see this name in error message, so it is important to know. So, these two sentences have exactly the same meaning:
 
-> the cell above changes the variable `my_int` to the `float` data type, by using the `float()` function.
+> 1. The cell above changes the variable `my_int` to the `float` data type, by using the `float()` function.
 
-> the cell above *casts* the variable `my_int` to the `float` data type, by using the `float()` function.
+> 2. The cell above *casts* the variable `my_int` to the `float` data type, by using the `float()` function.
 
 As always, we can store our new `float` in a variable:
 
@@ -182,155 +182,12 @@ number_of_students = 22
 "There are " + str(number_of_students) + " students in the class."
 ```
 
-## Mini-exercise: Data Types
+## Exercise: Data Types
 
-Launch this page on Binder or Live code:
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
-![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_2b_data_types.ipynb) to launch the exercise on Binder..
 
-...then complete the tasks below. You will need to think about what type of data you are using, and will need to change it using the functions shown above. 
-
-At the moment, you will some error messages. When you pass each task after task 1 you will see a message saying "That is **correct**! Well done!". If you see an `AssertionError` message, it means you still have the wrong answer. 
-
-### Task 1
-
-Make a variable called `name` which returns your name. So for me, it should return the string `"Pete"`.
-
-```{python}
-# Your code here
-name = ...
-
-# Show the value of `name`.
-name
-```
-
-Now, change your `name` variable so that it returns the string `"Hello Pete!"`. **Do this with the `+` operator and by making new strings.**. Do *NOT* just type the right string and re-assign the variable e.g. do **NOT** use `name = Hello Pete!`.
-
-```{python}
-# Your code here
-name = ...
-
-# Show the value of `name`.
-name
-```
-
-### Task 2
-
-Change the variable `eight_seven_nine` to the `int` data type.
-
-```{python}
-eight_seven_nine = "879"
-
-# Show the value of `eight_seven_nine`.
-eight_seven_nine
-```
-
-**Run the cell below to mark your answer**:
-
-```{python tags=c("raises-exception")}
-# DO NOT CHANGE THIS CODE, JUST RUN THE CELL.
-from jupyprint import jupyprint
-assert type(eight_seven_nine) == int, f"Ouch, that's not right, `eight_seven_nine` should be the `int` data type. Right now it is `{type(eight_seven_nine)}`."
-jupyprint("*That is **correct**! Well done!*")
-```
-
-### Task 3
-
-The manager of a theme park is calculating their `total_ticket_revenue`. 
-
-First, they make a `number_of_visitors` variable which should have the value one hundred and eighteen. 
-
-The price of each ticket is ฿250, the manager wants to store this in a variable called `ticket_price`.
-
-The manager wants the `total_ticket_revenue` to be in the `float` data type.
-
-However, the manager is getting a strange result. Can you fix it?
-
-```{python}
-number_of_visitors = 118
-
-ticket_price = "250"
-
-total_ticket_revenue = number_of_visitors * ticket_price
-
-# Show the value of `total_ticket_revenue`.
-total_ticket_revenue
-```
-
-**Run the cell below to mark your answer**:
-
-```{python tags=c("raises-exception")}
-# DO NOT CHANGE THIS CODE, JUST RUN THE CELL.
-assert type(total_ticket_revenue) == float , f"Ouch, that's not right, `total_ticket_revenue` should be the `float` data type. Right now it is `{type(total_ticket_revenue)}`."
-assert total_ticket_revenue == 29500.0,  f"Ouch, that's not right, `total_ticket_revenue` is the wrong value, it should be 29500.0, but right now it is `{total_ticket_revenue}`."
-jupyprint("*That is **correct**! Well done!*")
-```
-
-### Task 4
-
-A biologist is counting the number of cats and lizards that live in Lumpini park in Bangkok.
-
-There are 435 monitor lizards and 121 cats. The biologist puts these values in variables called `number_of_monitor_lizards` and `number_of_cats`.
-
-They want to use `print()` to show this message:
-
-```
-"There are 556 cats and monitor lizards in Lumpini park."
-```
-
-They want to use Python to calculate the number (556) in the message, using the  `number_of_monitor_lizards` and `number_of_cats` variables (e.g. they do **NOT** want to hard-code the number in the message text).
-
-At the moment they are not getting the result they want...can you fix their code?
-
-*Note*: to solve this exercise, you may want to look at this [Stack Overflow answer](https://stackoverflow.com/questions/12018992/print-combining-strings-and-numbers). There is more than one way you can solve this!
-
-```{python}
-number_of_monitor_lizards = 435
-
-number_of_cats = 121
-
-# Add the variables together in the messagee.
-how_many_cats_monitors_message = "There are number_of_cats+number_of_monitor_lizards cats and monitor lizards in Lumpini park."
-
-# Show the message.
-print(how_many_cats_monitors_message)
-```
-
-```{python tags=c("raises-exception")}
-# DO NOT CHANGE THIS CODE, JUST RUN THE CELL.
-assert type(how_many_cats_monitors_message) == str , f"Ouch, that's not right, `how_many_cats_monitors_message` should be the `str` data type. Right now it is `{type(how_many_cats_monitors_message)}`."
-assert how_many_cats_monitors_message == "There are 556 cats and monitor lizards in Lumpini park.",  f"Ouch, that's not right, `how_many_cats_monitors_message` is the wrong value, it should be:\n `'There are 556 cats and monitor lizards in Lumpini park.'`\n ...but right now it is:\n `'{how_many_cats_monitors_message}'`."
-jupyprint("*That is **correct**! Well done!*")
-```
-
-### Task 5
-
-Michael is writing some code. He needs a variable with the value 999.0 - he needs it to be in the `float` data type.
-
-He tries the code below, but he is getting an error message.
-
-*First*, think about *why* he gets the error. His string `"nine_nine_nine"` has three `nine`'s - why can Python not change this to number 999.0?
-
-*Then*, fix his code. Store your answer in a variable called `nine_nine_nine_as_number` which should have the value 999.0.
-
-**Do not hard-code `nine_nine_nine_as_number = 999.0`.** Change the string `nine_nine_nine` instead, so that the next line of code works without an error. E.g. do NOT change the line `nine_nine_nine_as_number = float(nine_nine_nine_as_words)`.
-
-```{python tags=c("raises-exception")}
-nine_nine_nine_as_words = "nine_nine_nine"
-
-# DO NOT CHANGE THE LINE OF CODE BELOW THIS.
-nine_nine_nine_as_number = float(nine_nine_nine_as_words)
-
-# Show the value of `nine_nine_nine_as_number`.
-nine_nine_nine_as_number
-```
-
-```{python tags=c("raises-exception")}
-# DO NOT CHANGE THIS CODE, JUST RUN THE CELL.
-assert type(nine_nine_nine_as_number) == float, f"Ouch, that's not right, `nine_nine_nine_as_number` should be the `float` data type. Right now it is `{type(nine_nine_nine_as_number)}`."
-assert nine_nine_nine_as_number == 999.0, f"Ouch, that's not right, `nine_nine_nine_as_number` is the wrong value, it should be 999.0, but right now it is `{nine_nine_nine_as_number}`."
-jupyprint("*That is **correct**! Well done!*")
-```
 ----------------------------------------------------------
 
 [🏡](intro.md).

@@ -57,6 +57,9 @@ String data stored in variables like this can be used for lots of different thin
 - academic research like [Computational Theology](https://www.semanticscholar.org/topic/Computational-theology/3454560) which uses computer science techniques to study religious books
 
 
+## Mini-exericse: Edit the Book!
+
+
 ----------------------------------------------------------
 
 [🏡](intro.md).

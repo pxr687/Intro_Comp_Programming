@@ -15,7 +15,7 @@ jupyter:
 # Data Types and the `type()` function
 
 ```{note}
-This page is partly adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/intro_to_functions.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+This page is partly adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/data_types.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
 > Some advice before you read the pages in this section: 
@@ -104,6 +104,8 @@ We can see that when we use `*` with text, it does something different. It *repe
 We need to know what type of data we are using, so that we know what our function will do. 
 
 **Using the function or operation with the wrong data type will break your code!**
+
+## Data type errors
 
 A very common problem in data analysis is that data that should be *numbers* gets changed to *text* by accident.
 

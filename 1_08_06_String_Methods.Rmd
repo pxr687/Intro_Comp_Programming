@@ -5,14 +5,13 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.17.3
+      jupytext_version: 1.19.5
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
     name: python3
 ---
 
-<!-- #region -->
 # String methods
 
 ```{note}
@@ -22,7 +21,6 @@ This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](http
 When you have a string, you can make new strings from it using string methods. String methods are *functions* that *work on strings*. These methods are used by putting a dot after the string, then calling the function.
 
 For example, the following method generates an uppercase (all capitals) version of a string.
-<!-- #endregion -->
 
 ```{python}
 # Use the `.upper()` string method with the string `loud`.
@@ -90,13 +88,13 @@ first_word
 
 Methods are not only used with strings.  As we will see on other pages, other types of objects can have them.
 
-## Exercise 4 - String Methods
+## Exercise - String Methods
 
 We will now do another exercise!
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4_string_methods.ipynb) to launch the exercise on Binder.
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_3_string_methods.ipynb) to launch the exercise on Binder.
 
 ----------------------------------------------------------
 
