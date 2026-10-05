@@ -35,6 +35,7 @@ parts:
       - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
       # - file: 1_08_07_Comparison_Operators
       # - file: 1_08_08_Lists
+      # - file: 1_08_09_Dictionaries
 
 # # WEEK 7
 #   - caption: Statements and Conditionals

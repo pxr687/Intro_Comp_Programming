@@ -27,7 +27,7 @@ Statements *do* something.
 x = 10
 ```
 
-`x` is the variable name, `10` is the value *of the variable `x`*.
+`x` is the variable *name*, `10` is the *value* of the variable `x`.
 
 But the statement `x = 10` does not return a value.
 
@@ -53,7 +53,7 @@ https://realpython.com/ref/glossary/statement/
 y = 2 * 2
 ```
 
-## Import statements
+## Import statements (and keywords)
 
 [Already seen some built-in Python functions:
 
@@ -64,8 +64,20 @@ y = 2 * 2
 - `type()`
 
 ```{python}
+"import"
+```
+
+```{python}
+import
+```
+
+[NumPy](https://numpy.org/)
+
+```{python}
 import numpy
 ```
+
+[`as` keyword]
 
 ```{python}
 import numpy as np
@@ -138,14 +150,46 @@ result = stupid
 ```
 
 ```{python}
+result = stupid
+print('We will only see this print statement if the code runs this line...')
+```
+
+```{python}
 try:
     result = stupid
 except NameError:
     print("This made an error!")
+print('We will only see this print statement if the code runs this line...')
 ```
 
 ## With statements
 
+```{python}
+url = "https://www.google.com/"
+
+from urllib.request import urlopen
+
+urlopen(url)
+```
+
+```{python}
+type(urlopen(url))
+```
+
+[`with` automatically opens and closes a file]
+
+```{python}
+with urlopen(url) as webpage:
+    # Read the content and decode it from bytes to text
+    webpage_as_text = webpage.read().decode('utf-8')
+print(webpage_as_text[:2000])
+```
+
+```{python}
+from IPython.display import display, HTML
+
+display(HTML(webpage_as_text))
+```
 
 ## Exercise 4 - Statements and Data Validation
 
