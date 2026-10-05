@@ -130,7 +130,7 @@ assert type(password) == str, "Password is the wrong dtype!"
 ```
 
 <!-- #region tags=["raises-exception"] -->
-## Try, Except statments
+## Try, Except statements
 <!-- #endregion -->
 
 ```{python}

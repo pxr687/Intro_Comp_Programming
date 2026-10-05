@@ -36,10 +36,9 @@ In the cellow, try these out with different strings. See what happens, see which
 "We already know that we can" + " add strings together!"
 ```
 
-Experiment with strings yourself in the code cell above, before you read the page below...
+Experiment with strings yourself in the code cell above. Try out the different operators and see what happens before you read the page below...
 
 ....
-
 
 
 .....
@@ -108,6 +107,23 @@ This string...
 """)
 ```
 
+Note, that if we don't use the `print()` function, we see something different:
+
+```{python}
+"""       
+This string...
+
+...can go over...
+
+...as many lines...
+
+...as I want...
+"""
+```
+
+The `\n` that we see means "new line", it is a special character sequence we can put in a string. The `print()` function knows to display this as a new line.
+
+
 ## F-strings
 
 We have already seen how to put numbers and text together using lots of `+` symbols and the `str` function.
@@ -151,7 +167,7 @@ my_variable = 10
 print(f"Here is an example f-string. I can use square brackets to show a variable, like this variable: {my_variable}")
 ```
 
-## Mini-exercise: Strings
+## Mini-exercise: Strings, Multi-line Strings and F-strings
 
 If you have not already, then launch this page on Binder or Live code:
 
@@ -159,7 +175,7 @@ If you have not already, then launch this page on Binder or Live code:
 
 Now complete the following exercise.
 
-### Task 1
+### Task 1 - Long, long string
 
 The cell below makes lots of strings, and stores them in variables.
 
@@ -208,10 +224,87 @@ too_long
 
 **Run the cell below to mark your answer:**
 
-```{python}
+```{python tags=c("raises-exception")}
 # DO NOT CHANGE THIS CODE
 assert too_long == "The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all.", f"That is not correct! Your string does not match!"
 jupyprint('*Great work! That is correct.*')
+```
+
+## Task 2 - ZenQuotes API and a multi-line F-string
+
+"API" means "Application Programming Interface". APIs are used to let different pieces of software "talk" to each other by sending data. 
+
+The code cell below "talks" to the [ZenQuotes API](https://docs.zenquotes.io/category/guides/). It sends a request for data (e.g. it asks ZenQuotes "please send me a quote!" over the internet) and receives data back. We will use this API again later in the course. 
+
+At the moment, it gets one `quote` and one `author`, both as Python strings. The comments explain what the code is doing. Read the comments and then run the cell:
+
+```{python}
+# DO NOT CHANGE THIS CODE. READ THE COMMENTS AND THEN RUN THE CELL.
+
+# Importing some built-in Python libraries for sending
+# requests to websites (`urllib`) and also for processing
+# json (`json`) files.
+import urllib.request
+import json
+
+# Store the URL of the ZenQuotes API, as a Python string.
+api_web_address = "https://zenquotes.io/api/random"
+
+# Use `urllib` to request data from ZenQuotes.
+with urllib.request.urlopen(api_web_address) as response:
+    
+    # This part is quite hard to understand. The first line
+    # converts the data into a Python list (we will learn
+    # more about these later)
+    full = json.loads(response.read().decode('utf-8'))
+    
+    # Then these lines "grab" the quote and the author
+    # from the list (it is actually a dictionary inside
+    # a list, but we will talk about this in a later class).
+    quote = full[0]['q']
+    author = full[0]['a']
+    
+# Then we show the quote, and the author.
+print(quote)
+print(author)
+```
+
+If you want a different quote, just re-run the cell. However, if you do this too much within a minute, you will hit the API [rate limit](https://blog.postman.com/what-is-api-rate-limiting/) which stops users from overloading the server with too many requests. You'll see an error if this happens, just wait a minute or two and you'll be able to send a new request.
+
+Now, in the code cell below, use F-strings to put the `quote` and the `author` into a multi-line string which says:
+
+```
+"""
+Hello.
+
+Here is a quote I just got from ZenQuotes API: <`quote`>
+
+This quote was said by: <`author`>.
+"""
+```
+
+But replace "<`quote`>" and " <`author`>" with the values from your `quote` and `author` variables.
+
+So if your `quote` is `"Very little is needed to make a happy life;
+it is all within yourself, in your way of thinking."` and your `author` is `"Marcus Aurelius"` then your string should say:
+
+```
+"""
+Hello.
+
+Here is a quote I just got from ZenQuotes API: "Very little is needed to make a happy life;
+it is all within yourself, in your way of thinking."
+
+This quote was said by: Marcus Aurelius.
+"""
+```
+
+Look at the quotation marks, try to match this in your quote.
+
+*Note*: do NOT hard-code your `quote` and `author`, use F-strings to put the values of the `quote` and `author` variables inside your multi-line string.
+
+```{python}
+# Your code here.
 ```
 
 ----------------------------------------------------------

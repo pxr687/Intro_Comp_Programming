@@ -86,6 +86,14 @@ which is still "many".
 first_word
 ```
 
+A function which is useful here is `dir()`. We can use this function to tell us all the commands we can use with a Python object.
+
+If we use `dir()` with a string, it will show us all of the string methods we can use. The cell below gives the string variable `first_word` to the `dir()` function. It will show use a list of things. Ignore anything that starts with double underscores (`__`). Everything else that does not start with `___` is a string method:
+
+```{python}
+dir(first_word)
+```
+
 Methods are not only used with strings.  As we will see on other pages, other types of objects can have them.
 
 ## Exercise - String Methods

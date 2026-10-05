@@ -26,13 +26,13 @@ parts:
       - file: 1_08_01_Numbers
       - file: 1_08_02_Strings
       - file: 1_08_03_Changing_Data_Types
-      - file: 1_08_03b_Extra_Data_Types_Task
       - file: 1_08_04_More_On_Numbers
       - file: 1_08_05_More_On_Strings
+      - file: 1_08_05b_Extra_Data_Types_Task
       - file: 1_08_05b_Fix_My_Data_Exercise
-      # - file: 1_08_06_String_Methods
-      # - file: 1_08_06b_A_Whole_Book_As_A_Variable
-      # - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
+      - file: 1_08_06_String_Methods
+      - file: 1_08_06b_A_Whole_Book_As_A_Variable
+      - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
       # - file: 1_08_07_Comparison_Operators
       # - file: 1_08_08_Lists
 

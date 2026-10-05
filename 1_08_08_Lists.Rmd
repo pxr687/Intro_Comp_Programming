@@ -97,6 +97,12 @@ my_numbers = [1, 2, 3]
 my_numbers
 ```
 
+As always, we can check the data type of `my_numbers` using the `type()` function:
+
+```{python}
+type(my_numbers)
+```
+
 More formally, you define a list like this:
 
 1. the open square bracket character `[`, followed by
@@ -135,6 +141,65 @@ A list can have any kind of value as its elements.  For example, here is a list 
 ```{python}
 some_strings = ["Chris", "Andre", "Jessica", "Luke"]
 some_strings
+```
+
+## Getting things out of a list
+
+Each thing in a Python list is called a *list element*.
+
+We can get a list element out of a list by using *list indexing*.
+
+"Indexing" just means using Python commands to get data out of a *collection*. A *collection* is a Python object that can hold more than one thing (e.g. more than one text literal, more than one variable etc).
+
+**This is important:** in Python when we count the elements in a collection, **we start counting from 0, not from 1**. 
+
+So, to get the *first* element from the `some_strings` list we use this command:
+
+```{python}
+# Get the first element of `some_strings`.
+some_strings[0]
+```
+
+Here we have the name of the list (`some_strings`) then we use square brackets (`[]`) with a number inside them. The number is the *list index*. The list index `[0]` gets the first piece of data from the list.
+
+To get the *second* list element, we use:
+
+```{python}
+# Get the second element of `some_strings`.
+some_strings[1]
+```
+
+To get the *third* list element we use:
+
+```{python}
+# Get the third element of `some_strings`.
+some_strings[2]
+```
+
+To get the *fourth* list element we use:
+
+```{python}
+# Get the fourth element of `some_strings`.
+some_strings[3]
+```
+
+Look again at the whole list to see that this is correct:
+
+```{python}
+some_strings
+```
+
+The rule to remember this is:
+
+> Take the number of the data you want (e.g. the third element of the list), then subtract 1 to get the correct list index.
+
+So if you want the *fourth* element, this is at list index 3:
+
+```{python}
+# Get the fourth element of `some_strings`.
+print(f'Here is the whole `some_strings` list {some_strings}')
+print('The line of code below gets the *fourth* element of the list:')
+some_strings[3]
 ```
 
 ## Functions and lists

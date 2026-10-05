@@ -19,7 +19,7 @@ In lots of programs you write, you will want to get a user to give data to your 
 
 ## Exercise - Getting User `input()`
 
-We will now do another exercise! [Deeper data validation, using statements, comparisions, API calls etc. some ideas are below]
+We will now do another exercise! [Deeper data validation, using statements, comparisons, API calls etc. some ideas are below]
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 

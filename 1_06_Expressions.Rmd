@@ -204,7 +204,7 @@ The CR of 12 is the value returned from the expression.  The notebook turns
 that into something that humans can read easily - the HR of 12 - which is
 `12`.
 
-`3 * 4` is an expression. Rememember that `3` by itself is also an expression, because it returns a value:
+`3 * 4` is an expression. Remember that `3` by itself is also an expression, because it returns a value:
 
 ```{python}
 3

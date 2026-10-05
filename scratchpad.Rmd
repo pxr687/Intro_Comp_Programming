@@ -5,7 +5,7 @@ jupyter:
       extension: .Rmd
       format_name: rmarkdown
       format_version: '1.2'
-      jupytext_version: 1.17.3
+      jupytext_version: 1.19.5
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -20,4 +20,9 @@ This page is for you to launch on Binder or Live code, so that you can play with
 
 ```{python}
 # Your code here.
+
+```
+
+```{python}
+
 ```

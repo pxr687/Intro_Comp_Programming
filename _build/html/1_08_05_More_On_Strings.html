@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -66,7 +66,7 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Exercise - Fix my Data" href="1_08_05b_Fix_My_Data_Exercise.html" />
+    <link rel="next" title="Extra Data Types Task - Printing a Receipt" href="1_08_05b_Extra_Data_Types_Task.html" />
     <link rel="prev" title="More on Numbers" href="1_08_04_More_On_Numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -244,10 +244,13 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_01_Numbers.html">Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_02_Strings.html">Strings (text)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_03_Changing_Data_Types.html">Changing Data Types, using the <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code> and <code class="docutils literal notranslate"><span class="pre">str()</span></code> functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_03b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_04_More_On_Numbers.html">More on Numbers</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06_String_Methods.html">String Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -449,10 +452,11 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators-and-strings">Arithmetic operators and strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-strings">Multi-line strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings-multi-line-strings-and-f-strings">Mini-exercise: Strings, Multi-line Strings and F-strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-long-long-string">Task 1 - Long, long string</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-zenquotes-api-and-a-multi-line-f-string">Task 2 - ZenQuotes API and a multi-line F-string</a></li>
 </ul>
             </nav>
         </div>
@@ -526,7 +530,7 @@
 </div>
 </div>
 </div>
-<p>Experiment with strings yourself in the code cell above, before you read the page below…</p>
+<p>Experiment with strings yourself in the code cell above. Try out the different operators and see what happens before you read the page below…</p>
 <p>….</p>
 <p>…..</p>
 <p>……</p>
@@ -679,6 +683,28 @@ This string...
 </div>
 </div>
 </div>
+<p>Note, that if we don’t use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, we see something different:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">"""       </span>
+<span class="sd">This string...</span>
+
+<span class="sd">...can go over...</span>
+
+<span class="sd">...as many lines...</span>
+
+<span class="sd">...as I want...</span>
+<span class="sd">"""</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'       \nThis string...\n\n...can go over...\n\n...as many lines...\n\n...as I want...\n'
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">\n</span></code> that we see means “new line”, it is a special character sequence we can put in a string. The <code class="docutils literal notranslate"><span class="pre">print()</span></code> function knows to display this as a new line.</p>
 </section>
 <section id="f-strings">
 <h2>F-strings<a class="headerlink" href="#f-strings" title="Link to this heading">#</a></h2>
@@ -739,7 +765,7 @@ This string...
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="n">e</span><span class="s2">"This is not allowed!"</span>
      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -764,13 +790,13 @@ This string...
 </div>
 </div>
 </section>
-<section id="mini-exercise-strings">
-<h2>Mini-exercise: Strings<a class="headerlink" href="#mini-exercise-strings" title="Link to this heading">#</a></h2>
+<section id="mini-exercise-strings-multi-line-strings-and-f-strings">
+<h2>Mini-exercise: Strings, Multi-line Strings and F-strings<a class="headerlink" href="#mini-exercise-strings-multi-line-strings-and-f-strings" title="Link to this heading">#</a></h2>
 <p>If you have not already, then launch this page on Binder or Live code:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG" /></p>
 <p>Now complete the following exercise.</p>
-<section id="task-1">
-<h3>Task 1<a class="headerlink" href="#task-1" title="Link to this heading">#</a></h3>
+<section id="task-1-long-long-string">
+<h3>Task 1 - Long, long string<a class="headerlink" href="#task-1-long-long-string" title="Link to this heading">#</a></h3>
 <p>The cell below makes lots of strings, and stores them in variables.</p>
 <p>Run the cell, without changing any of the code, then follow the instructions below the cell.</p>
 <div class="cell docutils container">
@@ -822,7 +848,7 @@ This string...
 </div>
 </div>
 <p><strong>Run the cell below to mark your answer:</strong></p>
-<div class="cell docutils container">
+<div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE</span>
 <span class="k">assert</span> <span class="n">too_long</span> <span class="o">==</span> <span class="s2">"The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all."</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"That is not correct! Your string does not match!"</span>
@@ -833,7 +859,7 @@ This string...
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># DO NOT CHANGE THIS CODE</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">assert</span> <span class="n">too_long</span> <span class="o">==</span> <span class="s2">"The representatives of the French people, organized as a National Assembly, believing that the ignorance, neglect, or contempt of the rights of man are the sole cause of public calamities and of the corruption of governments, have determined to set forth in a solemn declaration the natural, unalienable, and sacred rights of man, in order that this declaration, being constantly before all the members of the Social body, shall remind them continually of their rights and duties; in order that the acts of the legislative power, as well as those of the executive power, may be compared at any moment with the objects and purposes of all political institutions and may thus be more respected, and, lastly, in order that the grievances of the citizens, based hereafter upon simple and incontestable principles, shall tend to the maintenance of the constitution and redound to the happiness of all."</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"That is not correct! Your string does not match!"</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">jupyprint</span><span class="p">(</span><span class="s1">'*Great work! That is correct.*'</span><span class="p">)</span>
@@ -843,9 +869,87 @@ This string...
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="task-2-zenquotes-api-and-a-multi-line-f-string">
+<h2>Task 2 - ZenQuotes API and a multi-line F-string<a class="headerlink" href="#task-2-zenquotes-api-and-a-multi-line-f-string" title="Link to this heading">#</a></h2>
+<p>“API” means “Application Programming Interface”. APIs are used to let different pieces of software “talk” to each other by sending data.</p>
+<p>The code cell below “talks” to the <a class="reference external" href="https://docs.zenquotes.io/category/guides/">ZenQuotes API</a>. It sends a request for data (e.g. it asks ZenQuotes “please send me a quote!” over the internet) and receives data back. We will use this API again later in the course.</p>
+<p>At the moment, it gets one <code class="docutils literal notranslate"><span class="pre">quote</span></code> and one <code class="docutils literal notranslate"><span class="pre">author</span></code>, both as Python strings. The comments explain what the code is doing. Read the comments and then run the cell:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE. READ THE COMMENTS AND THEN RUN THE CELL.</span>
+
+<span class="c1"># Importing some built-in Python libraries for sending</span>
+<span class="c1"># requests to websites (`urllib`) and also for processing</span>
+<span class="c1"># json (`json`) files.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="c1"># Store the URL of the ZenQuotes API, as a Python string.</span>
+<span class="n">api_web_address</span> <span class="o">=</span> <span class="s2">"https://zenquotes.io/api/random"</span>
+
+<span class="c1"># Use `urllib` to request data from ZenQuotes.</span>
+<span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">api_web_address</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+    
+    <span class="c1"># This part is quite hard to understand. The first line</span>
+    <span class="c1"># converts the data into a Python list (we will learn</span>
+    <span class="c1"># more about these later)</span>
+    <span class="n">full</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span>
+    
+    <span class="c1"># Then these lines "grab" the quote and the author</span>
+    <span class="c1"># from the list (it is actually a dictionary inside</span>
+    <span class="c1"># a list, but we will talk about this in a later class).</span>
+    <span class="n">quote</span> <span class="o">=</span> <span class="n">full</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'q'</span><span class="p">]</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">full</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'a'</span><span class="p">]</span>
+    
+<span class="c1"># Then we show the quote, and the author.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quote</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Heaven is right where you are standing.
+Morihei Ueshiba
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you want a different quote, just re-run the cell. However, if you do this too much within a minute, you will hit the API <a class="reference external" href="https://blog.postman.com/what-is-api-rate-limiting/">rate limit</a> which stops users from overloading the server with too many requests. You’ll see an error if this happens, just wait a minute or two and you’ll be able to send a new request.</p>
+<p>Now, in the code cell below, use F-strings to put the <code class="docutils literal notranslate"><span class="pre">quote</span></code> and the <code class="docutils literal notranslate"><span class="pre">author</span></code> into a multi-line string which says:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">"""</span>
+<span class="sd">Hello.</span>
+
+<span class="sd">Here is a quote I just got from ZenQuotes API: &lt;`quote`&gt;</span>
+
+<span class="sd">This quote was said by: &lt;`author`&gt;.</span>
+<span class="sd">"""</span>
+</pre></div>
+</div>
+<p>But replace “&lt;<code class="docutils literal notranslate"><span class="pre">quote</span></code>&gt;” and “ &lt;<code class="docutils literal notranslate"><span class="pre">author</span></code>&gt;” with the values from your <code class="docutils literal notranslate"><span class="pre">quote</span></code> and <code class="docutils literal notranslate"><span class="pre">author</span></code> variables.</p>
+<p>So if your <code class="docutils literal notranslate"><span class="pre">quote</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;Very</span> <span class="pre">little</span> <span class="pre">is</span> <span class="pre">needed</span> <span class="pre">to</span> <span class="pre">make</span> <span class="pre">a</span> <span class="pre">happy</span> <span class="pre">life;</span> <span class="pre">it</span> <span class="pre">is</span> <span class="pre">all</span> <span class="pre">within</span> <span class="pre">yourself,</span> <span class="pre">in</span> <span class="pre">your</span> <span class="pre">way</span> <span class="pre">of</span> <span class="pre">thinking.&quot;</span></code> and your <code class="docutils literal notranslate"><span class="pre">author</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;Marcus</span> <span class="pre">Aurelius&quot;</span></code> then your string should say:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">"""</span>
+<span class="sd">Hello.</span>
+
+<span class="sd">Here is a quote I just got from ZenQuotes API: "Very little is needed to make a happy life;</span>
+<span class="sd">it is all within yourself, in your way of thinking."</span>
+
+<span class="sd">This quote was said by: Marcus Aurelius.</span>
+<span class="sd">"""</span>
+</pre></div>
+</div>
+<p>Look at the quotation marks, try to match this in your quote.</p>
+<p><em>Note</em>: do NOT hard-code your <code class="docutils literal notranslate"><span class="pre">quote</span></code> and <code class="docutils literal notranslate"><span class="pre">author</span></code>, use F-strings to put the values of the <code class="docutils literal notranslate"><span class="pre">quote</span></code> and <code class="docutils literal notranslate"><span class="pre">author</span></code> variables inside your multi-line string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
-</section>
 </section>
 </section>
 
@@ -889,11 +993,11 @@ This string...
       </div>
     </a>
     <a class="right-next"
-       href="1_08_05b_Fix_My_Data_Exercise.html"
+       href="1_08_05b_Extra_Data_Types_Task.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercise - Fix my Data</p>
+        <p class="prev-next-title">Extra Data Types Task - Printing a Receipt</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -918,10 +1022,11 @@ This string...
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators-and-strings">Arithmetic operators and strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-line-strings">Multi-line strings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings">F-strings</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings">Mini-exercise: Strings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1">Task 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-strings-multi-line-strings-and-f-strings">Mini-exercise: Strings, Multi-line Strings and F-strings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-long-long-string">Task 1 - Long, long string</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-zenquotes-api-and-a-multi-line-f-string">Task 2 - ZenQuotes API and a multi-line F-string</a></li>
 </ul>
   </nav></div>
 

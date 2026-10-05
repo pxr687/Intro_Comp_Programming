@@ -25,6 +25,7 @@ def comparison_guesser():
         passed = False
         # Seek user input until correct number is guessed.
         while passed == False:
+            jupyprint("### Time to make a comparison...")
             jupyprint(f"Type Python code in the box below. Use comparison operators to work out what number `variable_{i+1}` is.")
             jupyprint(f"For example you can type `variable_{i+1} <= {variables.max() - 1}` and Python will tell you if this is `True` or `False`.")
             sleep(1)
@@ -42,9 +43,12 @@ def comparison_guesser():
             else:
                 print(eval(usr_input))
                 sleep(1)
+                jupyprint("### Time to guess the number...")
                 jupyprint(f"Type your guess! What number do you think `variable_{i+1}` is?")
                 usr_guess = input()
-                if int(usr_guess) == variables[i]:
+                if any(op in usr_guess for op in ["==", "!=", ">=", "<=", ">", "<"]):
+                    jupyprint("That is NOT correct, you should guess a number. It looks like you typed an expression with a comparison operator in it...")
+                elif int(usr_guess) == variables[i]:
                     passed = True
                     jupyprint(f"Well done! That is **CORRECT**. You guessed `{usr_guess}` and `variable_{i+1} == {variables[i]}!`")
                 else:
