@@ -108,10 +108,10 @@ You can use the `format()` function to make Python show you the number NOT in sc
 format(2.1e3, "f")
 ```
 
-The `"f"` in the `format()` function tells it that we want [*fixed-point notation*](https://docs.python.org/3/library/string.html). You can think of this as just meaning "NOT scientific notation"! **Note**: this will only show you 6 decimal places, unless you change other settings...(e.g. you can change `"f"` to `".24f"` to show 24 decimal places...).
+The `"f"` in the `format()` function tells it that we want [*fixed-point notation*](https://docs.python.org/3/library/string.html). You can think of this as just meaning "NOT scientific notation"! **Note**: this will only show you 6 decimal places, unless you change other settings...(e.g. you can change `"f"` to `".10f"` to show 10 decimal places..., or change `"f"` to `".24f"` to show 24 decimal places and so on...).
 
 ```{python}
-# Make Python show us 24 decimal places.
+# Make Python show us 10 decimal places.
 format(2.1e3, ".10f")
 ```
 

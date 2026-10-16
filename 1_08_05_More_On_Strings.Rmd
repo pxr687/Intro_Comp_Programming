@@ -128,6 +128,12 @@ The `\n` that we see means "new line", it is a special character sequence we can
 
 We have already seen how to put numbers and text together using lots of `+` symbols and the `str` function.
 
+```{python}
+number_10 = 10
+
+print('This is printing a variable, the variable name is `number_10`, the value of the variable is: ' + str(number_10))
+```
+
 A better way to do this is to use *f-strings*. F-strings are *very* useful. They take some time to get used to, but you will find them very helpful for showing results and debugging your code.
 
 To use a f-string, just put at "f" at the start of your string!:
