@@ -1034,6 +1034,21 @@ arithmetic is calculated.</p>
 </div>
 </div>
 </div>
+<p>We can make this easier to see by using the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function. Look closely at the digits in the calculation (the <code class="docutils literal notranslate"><span class="pre">6</span></code>s and the other digits):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our very small digits are NOT lost.</span>
+<span class="nb">format</span><span class="p">(</span><span class="mf">0.666666</span> <span class="o">-</span> <span class="mf">0.666666123456789</span><span class="p">,</span>
+       <span class="s2">".15f"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'-0.000000123456789'
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our very small digits ARE lost :(</span>
@@ -1043,6 +1058,21 @@ arithmetic is calculated.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can again make it easier to see what is happening using the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The digits at the end --------------------&gt; HERE are getting thrown away.</span>
+<span class="nb">format</span><span class="p">(</span><span class="mf">0.6666666666666666</span> <span class="o">-</span> <span class="mf">0.6666666666666666123456789</span><span class="p">,</span>
+       <span class="s2">".15f"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'0.000000000000000'
 </pre></div>
 </div>
 </div>
@@ -1071,7 +1101,7 @@ make 2.</p>
 <p>So, the answer to these - based on the maths - <em>should</em> be 2, with no decimals. But the result we actually get is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2∗square root of 2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2 multiplied by the square root of 2</span>
 <span class="mf">1.4142135623730951</span> <span class="o">*</span> <span class="mf">1.4142135623730951</span>
 </pre></div>
 </div>
@@ -1084,7 +1114,7 @@ make 2.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2∗square root of 2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2 multiplied by the square root of 2 (another way).</span>
 <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1123,7 +1153,7 @@ languages.</p>
 <p>In summary:</p>
 <ul class="simple">
 <li><p>Doing calculations with very big or very small numbers can lead to floating point errors.</p></li>
-<li><p><strong>These erros are <em>normally</em> not a problem, because they are so small</strong>.</p></li>
+<li><p><strong>These errors are <em>normally</em> not a problem, because they are so small</strong>.</p></li>
 </ul>
 </section>
 <section id="before-you-do-the-exercise">
