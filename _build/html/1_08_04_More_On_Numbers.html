@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -249,9 +249,6 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">More on Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05_More_On_Strings.html">More on Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_06_String_Methods.html">String Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
@@ -1037,6 +1034,21 @@ arithmetic is calculated.</p>
 </div>
 </div>
 </div>
+<p>We can make this easier to see by using the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function. Look closely at the digits in the calculation (the <code class="docutils literal notranslate"><span class="pre">6</span></code>s and the other digits):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our very small digits are NOT lost.</span>
+<span class="nb">format</span><span class="p">(</span><span class="mf">0.666666</span> <span class="o">-</span> <span class="mf">0.666666123456789</span><span class="p">,</span>
+       <span class="s2">".15f"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'-0.000000123456789'
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our very small digits ARE lost :(</span>
@@ -1050,6 +1062,22 @@ arithmetic is calculated.</p>
 </div>
 </div>
 </div>
+<p>We can again make it easier to see what is happening using the <code class="docutils literal notranslate"><span class="pre">format()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The digits at the end --------------------&gt; HERE are getting thrown away.</span>
+<span class="nb">format</span><span class="p">(</span><span class="mf">0.6666666666666666</span> <span class="o">-</span> <span class="mf">0.6666666666666666123456789</span><span class="p">,</span>
+       <span class="s2">".25f"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'0.0000000000000000000000000'
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are 25 decimal places in the number <code class="docutils literal notranslate"><span class="pre">0.6666666666666666123456789</span></code>, but the last digits <code class="docutils literal notranslate"><span class="pre">123456789</span></code> disappear from the result of our calculation…</p>
 <p>The third limit can be seen when calculating the difference between two
 expressions that should have the same result. For example, the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">0.5</span></code>
 computes the square root of 2, but squaring this value does not exactly
@@ -1074,7 +1102,7 @@ make 2.</p>
 <p>So, the answer to these - based on the maths - <em>should</em> be 2, with no decimals. But the result we actually get is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2∗square root of 2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2 multiplied by the square root of 2</span>
 <span class="mf">1.4142135623730951</span> <span class="o">*</span> <span class="mf">1.4142135623730951</span>
 </pre></div>
 </div>
@@ -1087,7 +1115,7 @@ make 2.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2∗square root of 2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The square root of 2 multiplied by the square root of 2 (another way).</span>
 <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1126,7 +1154,7 @@ languages.</p>
 <p>In summary:</p>
 <ul class="simple">
 <li><p>Doing calculations with very big or very small numbers can lead to floating point errors.</p></li>
-<li><p><strong>These erros are <em>normally</em> not a problem, because they are so small</strong>.</p></li>
+<li><p><strong>These errors are <em>normally</em> not a problem, because they are so small</strong>.</p></li>
 </ul>
 </section>
 <section id="before-you-do-the-exercise">
