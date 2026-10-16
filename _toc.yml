@@ -36,12 +36,13 @@ parts:
       # - file: 1_08_07_Comparison_Operators
       # - file: 1_08_08_Lists
       # - file: 1_08_09_Dictionaries
+      # - file: 1_08_09_NumPy_Arrays
 
 # # WEEK 7
 #   - caption: Statements and Conditionals
 #     chapters:
-#       - file: 1_09_01_Statements_and_Keywords
-#       - file: 1_09_02_Conditional_Statements
+#       - file: 1_09_01_Conditional_Statements
+#       - file: 1_09_02_More_Statements_and_Keywords
 #       - file: 1_09_03_Getting_Keyboard_Input
 
 # Week 8 (mid-term)

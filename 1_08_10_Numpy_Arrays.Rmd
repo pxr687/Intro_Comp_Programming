@@ -67,12 +67,6 @@ np.random.choice(['HEADS', 'TAILS'], p = [0.5, 0.5])
 ```
 
 ```{python}
-coin_flip = np.random.choice(['HEADS', 'TAILS'])
-
-if coin
-```
-
-```{python}
 np.random.randint(0, 2)
 ```
 
@@ -133,8 +127,40 @@ my_array.sum()
 my_array.mean()
 ```
 
-```{python}
+## Boolean Arrays
 
+```{python tags=c("raises-exception")}
+my_list > 10
+```
+
+```{python}
+my_array > 10
+```
+
+## Filtering NumPy Arrays
+
+```{python}
+my_array
+```
+
+```{python}
+my_array > 10
+```
+
+```{python}
+my_array[my_array > 10]
+```
+
+```{python}
+my_array
+```
+
+```{python}
+my_array > 12
+```
+
+```{python}
+my_array[my_array > 12]
 ```
 
 ## Exercise - NumPy and NumPy arrays
