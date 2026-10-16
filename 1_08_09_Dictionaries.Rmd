@@ -63,7 +63,7 @@ print("Student 1 = ", student_dict['Name'][0], ", their grade is", student_dict[
 
 [Lots of API calls return data that is best used as a dictionary]
 
-```{python}
+
 from urllib.request import urlopen
 import json
 
@@ -73,15 +73,13 @@ with urlopen(flip_a_coin_API) as response:
     coin_flip_from_API = json.loads(response.read().decode("utf-8"))
 
 coin_flip_from_API
-```
 
-```{python}
+
 coin_flip_from_API['data']
-```
 
-```{python}
+
 coin_flip_from_API['data']['result']
-```
+
 
 ## Exercise - Dictionaries
 

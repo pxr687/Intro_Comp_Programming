@@ -28,13 +28,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import = 10
+import
 ------------------
 
 
-  [36mCell[39m[36m [39m[32mIn[9][39m[32m, line 1[39m
-[31m    [39m[31mimport = 10[39m
-           ^
-[31mSyntaxError[39m[31m:[39m invalid syntax
+  [36mCell[39m[36m [39m[32mIn[7][39m[32m, line 1[39m
+[31m    [39m[31mimport[39m
+          ^
+[31mSyntaxError[39m[31m:[39m Expected one or more names after 'import'
 
 

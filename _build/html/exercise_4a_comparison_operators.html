@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -244,9 +244,9 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_01_Numbers.html">Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_02_Strings.html">Strings (text)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_03_Changing_Data_Types.html">Changing Data Types, using the <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code> and <code class="docutils literal notranslate"><span class="pre">str()</span></code> functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_03b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_04_More_On_Numbers.html">More on Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06_String_Methods.html">String Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
@@ -553,9 +553,10 @@
 <div class="cell_output docutils container">
 <p><em>Making questions…</em></p>
 <h2 class="rubric" id="question-1">Question 1</h2>
-<p>A number has been selected between 0 and 7. This number is stored in a variable called <code class="docutils literal notranslate"><span class="pre">variable_1</span></code>.</p>
+<p>A number has been selected between 0 and 8. This number is stored in a variable called <code class="docutils literal notranslate"><span class="pre">variable_1</span></code>.</p>
+<h3 class="rubric" id="time-to-make-a-comparison">Time to make a comparison…</h3>
 <p>Type Python code in the box below. Use comparison operators to work out what number <code class="docutils literal notranslate"><span class="pre">variable_1</span></code> is.</p>
-<p>For example you can type <code class="docutils literal notranslate"><span class="pre">variable_1</span> <span class="pre">&lt;=</span> <span class="pre">6</span></code> and Python will tell you if this is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>For example you can type <code class="docutils literal notranslate"><span class="pre">variable_1</span> <span class="pre">&lt;=</span> <span class="pre">7</span></code> and Python will tell you if this is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
@@ -563,12 +564,12 @@
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">mk_comparisons_guesser</span><span class="w"> </span><span class="kn">import</span> <span class="n">comparison_guesser</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">comparison_guesser</span><span class="p">()</span>
 
-<span class="nn">File ~\Intro_Comp_Programming\mk_comparisons_guesser.py:31,</span> in <span class="ni">comparison_guesser</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="n">jupyprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">"For example you can type `variable_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> &lt;= </span><span class="si">{</span><span class="n">variables</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">` and Python will tell you if this is `True` or `False`."</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">31</span> <span class="n">usr_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="c1"># Stop user directly accessing variable values, or printing them.</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="k">if</span> <span class="p">(</span><span class="n">usr_input</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">in</span> <span class="n">illegal_moves_array</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="s2">"print"</span> <span class="ow">in</span> <span class="n">usr_input</span><span class="p">):</span>
+<span class="nn">File ~\Intro_Comp_Programming\mk_comparisons_guesser.py:32,</span> in <span class="ni">comparison_guesser</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="n">jupyprint</span><span class="p">(</span><span class="sa">f</span><span class="s2">"For example you can type `variable_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> &lt;= </span><span class="si">{</span><span class="n">variables</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">` and Python will tell you if this is `True` or `False`."</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">32</span> <span class="n">usr_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="c1"># Stop user directly accessing variable values, or printing them.</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="k">if</span> <span class="p">(</span><span class="n">usr_input</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">in</span> <span class="n">illegal_moves_array</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="s2">"print"</span> <span class="ow">in</span> <span class="n">usr_input</span><span class="p">):</span>
 
 <span class="nn">File ~\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py:1402,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1400</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>

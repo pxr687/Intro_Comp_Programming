@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -244,9 +244,9 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_01_Numbers.html">Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_02_Strings.html">Strings (text)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_03_Changing_Data_Types.html">Changing Data Types, using the <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code> and <code class="docutils literal notranslate"><span class="pre">str()</span></code> functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_03b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_04_More_On_Numbers.html">More on Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06_String_Methods.html">String Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
@@ -449,13 +449,24 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Statements and keywords</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-assignment-statements">Variable assignment statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import statements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#no-output-this-is-a-statement-it-does-not-return-a-value">No output. This is a statement, it does not return a value.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#show-the-value-of-x">Show the value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-if-expression-is-one-number-like-this-it-is-also-called-a-literal">Expression (if expression is one number like this, it is also called a “literal”).</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expression">Expression.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-no-value-returned">Statement (no value returned).</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements-and-keywords">Import statements (and keywords)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-statements">Assert statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-except-statements">Try, Except statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-statements">With statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-statements-and-data-validation">Exercise 4 - Statements and Data Validation</a></li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -473,243 +484,90 @@
 <section id="variable-assignment-statements">
 <h2>Variable assignment statements<a class="headerlink" href="#variable-assignment-statements" title="Link to this heading">#</a></h2>
 <p>[Have seen variable assignment statements]</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># No output. This is a statement, it does not return a value.</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">x</span></code> is the variable name, <code class="docutils literal notranslate"><span class="pre">10</span></code> is the value <em>of the variable <code class="docutils literal notranslate"><span class="pre">x</span></code></em>.</p>
-<p>But the statement <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span></code> does not return a value.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the value of `x`.</span>
-<span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<p><a class="reference external" href="https://realpython.com/ref/glossary/statement/">https://realpython.com/ref/glossary/statement/</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Expression (if expression is one number like this, it is also called a "literal").</span>
-<span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Expression.</span>
-<span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Statement (no value returned).</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
-<section id="import-statements">
-<h2>Import statements<a class="headerlink" href="#import-statements" title="Link to this heading">#</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="no-output-this-is-a-statement-it-does-not-return-a-value">
+<h1>No output. This is a statement, it does not return a value.<a class="headerlink" href="#no-output-this-is-a-statement-it-does-not-return-a-value" title="Link to this heading">#</a></h1>
+<p>x = 10</p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> is the variable <em>name</em>, <code class="docutils literal notranslate"><span class="pre">10</span></code> is the <em>value</em> of the variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>But the statement <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span></code> does not return a value.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="show-the-value-of-x">
+<h1>Show the value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.<a class="headerlink" href="#show-the-value-of-x" title="Link to this heading">#</a></h1>
+<p>x</p>
+<p><a class="reference external" href="https://realpython.com/ref/glossary/statement/">https://realpython.com/ref/glossary/statement/</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="expression-if-expression-is-one-number-like-this-it-is-also-called-a-literal">
+<h1>Expression (if expression is one number like this, it is also called a “literal”).<a class="headerlink" href="#expression-if-expression-is-one-number-like-this-it-is-also-called-a-literal" title="Link to this heading">#</a></h1>
+<p>2</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="expression">
+<h1>Expression.<a class="headerlink" href="#expression" title="Link to this heading">#</a></h1>
+<p>2 * 2</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="statement-no-value-returned">
+<h1>Statement (no value returned).<a class="headerlink" href="#statement-no-value-returned" title="Link to this heading">#</a></h1>
+<p>y = 2 * 2</p>
+<section id="import-statements-and-keywords">
+<h2>Import statements (and keywords)<a class="headerlink" href="#import-statements-and-keywords" title="Link to this heading">#</a></h2>
 <p>[Already seen some built-in Python functions:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">help()</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code></p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(12)
-</pre></div>
-</div>
-</div>
-</div>
+<p>“import”</p>
+<p>import</p>
+<p><a class="reference external" href="https://numpy.org/">NumPy</a></p>
+<p>import numpy</p>
+<p>[<code class="docutils literal notranslate"><span class="pre">as</span></code> keyword]</p>
+<p>import numpy as np</p>
+<p>np.sum([10, 2])</p>
 <p>[Notice colours, this is a <em>keyword</em>]</p>
 <p>[CANNOT USE KEYWORDS IN VARIABLE NAMES]</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="kn">import</span><span class="w"> </span><span class="o">=</span> <span class="mi">10</span>
-           <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">"Hello!"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>import = 10</p>
+<p>numpy.repeat(“Hello!”, 10)</p>
 <p>[Refer to collections page - introduce numpy arrays as the smarter, more attractive brother of lists]</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>import numpy as np</p>
+<p>np.repeat(“Hello”, 10)</p>
+<p>help(np.repeat)</p>
 <p><code class="docutils literal notranslate"><span class="pre">dir()</span></code> and <code class="docutils literal notranslate"><span class="pre">dir(np)</span></code>(too messy to show on the page!).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'ROCK'</span><span class="p">,</span> <span class="s1">'PAPER'</span><span class="p">,</span> <span class="s1">'SCISSORS'</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('PAPER')
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
-</pre></div>
-</div>
-</div>
-</div>
+<p>np.random.choice([‘ROCK’, ‘PAPER’, ‘SCISSORS’])</p>
+<p>np.random.randint(10)</p>
 </section>
 <section id="assert-statements">
 <h2>Assert statements<a class="headerlink" href="#assert-statements" title="Link to this heading">#</a></h2>
 <p>[Importance in software testing]</p>
 <p>[Link this to data analysis also e.g. not just important for software devs!]</p>
-<div class="cell tag_raises-exception docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">password</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">2</span>
-
-<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">password</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span>
-
-<span class="ne">AssertionError</span>: 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_raises-exception docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">password</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">2</span>
-
-<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">,</span> <span class="s2">"Password is the wrong dtype!"</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>password = 10 + 2</p>
+<p>assert type(password) == str</p>
+<p>password = 10 + 2</p>
+<p>assert type(password) == str, “Password is the wrong dtype!”</p>
 </section>
 <section id="try-except-statements">
 <h2>Try, Except statements<a class="headerlink" href="#try-except-statements" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">stupid</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">result</span> <span class="o">=</span> <span class="n">stupid</span>
-
-<span class="ne">NameError</span>: name 'stupid' is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">stupid</span>
-<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"This made an error!"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This made an error!
-</pre></div>
-</div>
-</div>
-</div>
+<p>result = stupid</p>
+<p>result = stupid
+print(‘We will only see this print statement if the code runs this line…’)</p>
+<p>try:
+result = stupid
+except NameError:
+print(“This made an error!”)
+print(‘We will only see this print statement if the code runs this line…’)</p>
 </section>
 <section id="with-statements">
 <h2>With statements<a class="headerlink" href="#with-statements" title="Link to this heading">#</a></h2>
+<p>url = “<a class="reference external" href="https://www.google.com/">https://www.google.com/</a>”</p>
+<p>from urllib.request import urlopen</p>
+<p>urlopen(url)</p>
+<p>type(urlopen(url))</p>
+<p>[<code class="docutils literal notranslate"><span class="pre">with</span></code> automatically opens and closes a file]</p>
+<p>with urlopen(url) as webpage:
+# Read the content and decode it from bytes to text
+webpage_as_text = webpage.read().decode(‘utf-8’)
+print(webpage_as_text[:2000])</p>
+<p>from IPython.display import display, HTML</p>
+<p>display(HTML(webpage_as_text))</p>
 </section>
 <section id="exercise-4-statements-and-data-validation">
 <h2>Exercise 4 - Statements and Data Validation<a class="headerlink" href="#exercise-4-statements-and-data-validation" title="Link to this heading">#</a></h2>
@@ -769,13 +627,24 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Statements and keywords</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-assignment-statements">Variable assignment statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import statements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#no-output-this-is-a-statement-it-does-not-return-a-value">No output. This is a statement, it does not return a value.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#show-the-value-of-x">Show the value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-if-expression-is-one-number-like-this-it-is-also-called-a-literal">Expression (if expression is one number like this, it is also called a “literal”).</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expression">Expression.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-no-value-returned">Statement (no value returned).</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements-and-keywords">Import statements (and keywords)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-statements">Assert statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-except-statements">Try, Except statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-statements">With statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-statements-and-data-validation">Exercise 4 - Statements and Data Validation</a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
