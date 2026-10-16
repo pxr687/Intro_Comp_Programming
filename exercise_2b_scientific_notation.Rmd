@@ -14,7 +14,7 @@ jupyter:
 
 # Exercise - Scientific Notation Practice
 
-If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_08_01_More_On_Numbers.html)_ for this exercise.
+If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_08_04_More_On_Numbers.html)_ for this exercise.
 
 ## Instructions
 
@@ -44,4 +44,4 @@ test_me()
 
 ## Go back to the textbook:
 
-Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_08_01_More_On_Numbers.html)_ to go back to the course textbook.
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_08_04_More_On_Numbers.html)_ to go back to the course textbook.
