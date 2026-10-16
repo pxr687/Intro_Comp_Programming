@@ -31,23 +31,33 @@ Computers are very good calculators. However, there are important things that ev
 Here are some `int` values:
 
 ```{python}
-5
+# A positive integer, close to 0.
+8
 ```
 
 ```{python}
+# Two integers added together, this will give another integer.
 11 + 100
 ```
 
 ```{python}
+# `int`s can be negative. This one is negative and  close to 0.
 -3
 ```
 
 ```{python}
+# Another negative `int`, also close to 0.
 -25
 ```
 
 ```{python}
+# `int`s can be negative and far from 0.
 -1234567890000000000
+```
+
+```{python}
+# `int`s can be positive and far from 0.
+1234567890000000000
 ```
 
 Here are some float values:
@@ -62,6 +72,10 @@ Here are some float values:
 
 ```{python}
 30 / 11
+```
+
+```{python}
+12345678900000000000.0
 ```
 
 ```{python}
@@ -98,7 +112,7 @@ The `"f"` in the `format()` function tells it that we want [*fixed-point notatio
 
 ```{python}
 # Make Python show us 24 decimal places.
-format(2.1e3, ".24f")
+format(2.1e3, ".10f")
 ```
 
 Also note that `format()` returns your number as text/string data, not as `float` data - you will get errors if you ignore this!
@@ -112,10 +126,14 @@ So we say `2.1e3` as "2.1 times 10 to the power of 3".
 We can also use negative powers to represent small numbers:
 
 ```{python}
+2.1e-3
+```
+
+```{python}
 1e-3
 ```
 
-Read `1e-3` as $1 x 10^-3$, or "1, but move the decimal point 3 spaces to the
+Read `1e-3` as $1 * 10^-3$ (1 times 10 to the power of minus 3) or "1, but move the decimal point 3 spaces to the
 left", or:
 
 ```{python}
@@ -194,7 +212,7 @@ Change the value of the variable `try_it_with` in the cell below, to use any num
 
 ```{python}
 # Change this number yourself. 
-try_it_with = 4.2
+try_it_with = 2
 
 # DO NOT CHANGE THE CODE BELOW THIS POINT.
 from mk_scientific_notation_table import scientific_notation_table
@@ -224,17 +242,16 @@ This is exactly the same value as:
 
 ## The limits of float values
 
-> Limit, *noun*, ["the greatest or smallest amount of something that is allowed."](https://www.oxfordlearnersdictionaries.com/definition/english/limit_1)
+> Limit, *noun*, ["the biggest or smallest amount of something that is allowed."](https://www.oxfordlearnersdictionaries.com/definition/english/limit_1)
 
 Float values are very flexible, but they do have limits.
 
 1. A `float` can represent very large and very small numbers. There
-   are limits, but you will rarely encounter them.
+   are limits, and sometimes you will hit the limits.
 2. A `float` only represents 15 or 16 significant digits for any number; the
    remaining digits are lost. This limited precision is enough for most uses.
-3. After putting together `float` values with mathematical operators, the last few digits may be
-   incorrect. Small rounding errors are often confusing when first
-   encountered.
+3. After putting together `float` values with mathematical operators, **the last few digits may be
+   incorrect**. Small rounding errors are often confusing when you first see them.
 
 The first limit can be seen in two ways. If the result of a calculation is
 a very large number, then it is represented as infinite. If the result is a
@@ -262,7 +279,7 @@ very small number, then it is represented as zero.
 
 The second limit can be seen by an expression that involves numbers with
 more than 15 significant digits. These extra digits are thrown away before any
-arithmetic is carried out.
+arithmetic is calculated.
 
 ```{python}
 # Our very small digits are NOT lost.
@@ -275,13 +292,14 @@ arithmetic is carried out.
 ```
 
 The third limit can be seen when calculating the difference between two
-expressions that should be equivalent. For example, the expression `2 ** 0.5`
+expressions that should have the same result. For example, the expression `2 ** 0.5`
 computes the square root of 2, but squaring this value does not exactly
 make 2. 
 
 Here we `import` the function `math.sqrt()`, which returns the square root of numbers it is given as arguments.
 
 ```{python}
+# Import the `math` library, and use the `math.sqrt()` function.
 import math
 math.sqrt(2)
 ```
@@ -289,6 +307,8 @@ math.sqrt(2)
 Remember that the square root of 2 is the number that we can multiply by itself to get 2 e.g. 
 
 $\text{square root of 2} * \text{square root of 2} = 2$
+
+So, the answer to these - based on the maths - *should* be 2, with no decimals. But the result we actually get is:
 
 ```{python}
 # The square root of 2∗square root of 2
@@ -319,18 +339,20 @@ happen because of floating point numbers.
 
 Although `float` values are not always exact, they are predictable and work
 in the same way across all different kinds of computers and programming
-languages.
+languages. 
 
 In summary: 
 
-- doing calculations with very big or very small numbers can lead to floating point errors.
+- Doing calculations with very big or very small numbers can lead to floating point errors.
+
+- **These erros are *normally* not a problem, because they are so small**.
 
 
 ## Before you do the exercise
 
 Make sure you understand this (it can be confusing, so read it carefully):
 
-Think about `4.2e+05`. This base number (`4.2`) is positive, and it has a plus sign `+` in it's scientific notation (e.g. `e+05`). This is a *positive number far from 0*:
+Think about `4.2e+05`. This base number (`4.2`) is positive, and it has a plus sign `+` in it's scientific notation (e.g. `e+05`). If the number to the right of the `e` is large, then this is a *positive number far from 0*:
 
 ```{python}
 4.2e+05

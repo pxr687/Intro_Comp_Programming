@@ -20,9 +20,4 @@ This page is for you to launch on Binder or Live code, so that you can play with
 
 ```{python}
 # Your code here.
-
-```
-
-```{python}
-
 ```
