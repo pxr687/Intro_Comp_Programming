@@ -1067,16 +1067,17 @@ arithmetic is calculated.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The digits at the end --------------------&gt; HERE are getting thrown away.</span>
 <span class="nb">format</span><span class="p">(</span><span class="mf">0.6666666666666666</span> <span class="o">-</span> <span class="mf">0.6666666666666666123456789</span><span class="p">,</span>
-       <span class="s2">".15f"</span><span class="p">)</span>
+       <span class="s2">".25f"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'0.000000000000000'
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'0.0000000000000000000000000'
 </pre></div>
 </div>
 </div>
 </div>
+<p>There are 25 decimal places in the number <code class="docutils literal notranslate"><span class="pre">0.6666666666666666123456789</span></code>, but the last digits <code class="docutils literal notranslate"><span class="pre">123456789</span></code> disappear from the result of our calculation…</p>
 <p>The third limit can be seen when calculating the difference between two
 expressions that should have the same result. For example, the expression <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">0.5</span></code>
 computes the square root of 2, but squaring this value does not exactly
