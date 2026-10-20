@@ -29,21 +29,24 @@ parts:
       - file: 1_08_04_More_On_Numbers
       - file: 1_08_05_More_On_Strings
       - file: 1_08_05b_Extra_Data_Types_Task
-      # - file: 1_08_05b_Fix_My_Data_Exercise
-      # - file: 1_08_06_String_Methods
-      # - file: 1_08_06b_A_Whole_Book_As_A_Variable
+      - file: 1_08_06_String_Methods
+      - file: 1_08_06b_A_Whole_Book_As_A_Variable
       - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
-      # - file: 1_08_07_Comparison_Operators
+      - file: 1_08_07_Comparison_Operators
+      - file: 1_08_05b_Fix_My_Data_Exercise
+
+# # WEEK 7
+  - caption: Statements and Conditionals
+    chapters:
+      - file: 1_09_00_Conditional_Statements
+#      - file: 1_09_02_More_Statements_and_Keywords
+#      - file: 1_09_03_Getting_Keyboard_Input
+
+#   - caption: Collections
+#     chapters:
       # - file: 1_08_08_Lists
       # - file: 1_08_09_Dictionaries
       # - file: 1_08_09_NumPy_Arrays
-
-# # WEEK 7
-#   - caption: Statements and Conditionals
-#     chapters:
-#       - file: 1_09_01_Conditional_Statements
-#       - file: 1_09_02_More_Statements_and_Keywords
-#       - file: 1_09_03_Getting_Keyboard_Input
 
 # Week 8 (mid-term)
 

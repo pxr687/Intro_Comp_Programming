@@ -86,7 +86,9 @@ which is still "many".
 first_word
 ```
 
-A function which is useful here is `dir()`. We can use this function to tell us all the commands we can use with a Python object.
+## Using the `dir()` function to see what methods an object has
+
+A function which is useful here is `dir()`. We can use this function to tell us all the commands we can use with a Python object. In this case our object is a string.
 
 If we use `dir()` with a string, it will show us all of the string methods we can use. The cell below gives the string variable `first_word` to the `dir()` function. It will show use a list of things. Ignore anything that starts with double underscores (`__`). Everything else that does not start with `___` is a string method:
 
@@ -95,6 +97,71 @@ dir(first_word)
 ```
 
 Methods are not only used with strings.  As we will see on other pages, other types of objects can have them.
+
+## Practical Uses of String Methods
+
+Strings methods have many uses. One common use is to make sure that your text data is *consistent*.
+
+E.g. maybe you want all of your filenames to be in the same format, with no blank spaces:
+
+```{python}
+# Original filename (has spaces in).
+filename = "My Summer Photo.JPG"
+```
+
+```{python}
+# Using string methods to "clean" the filename, so that it does not have any spaces in.
+filename_clean = filename.replace(' ', '_')
+
+filename_clean
+```
+
+For another example, think about if a user entered this email address, into an online form:
+
+```{python}
+email = "  Jack.Jones@CrazyMail.COM  "
+
+email
+```
+
+Maybe you want to write a program which will send marketing emails for your company. The email address, the way it is now, will need to be changed so that a program can use it properly. 
+
+It has space, and capital letters in random places. We can make it consistent using string methods:
+
+```{python}
+# Clean the email address.
+email_clean = email.strip()
+email_clean = email_clean.lower()
+email_clean = email_clean.replace(" ", "")
+email_clean
+```
+
+The cell above *re-assigns* the `email_clean` variable each time a new string method is used. We can do this more efficiently by *chaining* string methods together...
+
+
+## Chaining String Methods 
+
+You can also *chain* string methods together, one after the other. Think about this string:
+
+```{python}
+"this sentence looks bad. there should be more capital letters!"
+```
+
+If we want to alter it to `"This sentence no longer looks bad. There are enough capital letters!"` we can chain multiple string methods together:
+
+```{python}
+# Chaining string methods together...
+"this sentence looks bad. there should be more capital letters!".capitalize().replace('. t', '. T').replace('looks', 'no longer looks').replace('should be more', 'are enough')
+```
+
+We can make that same operation easier (for a human) to read, but placing it over more than one line:
+
+```{python}
+"this sentence looks bad. there should be more capital letters!".capitalize().replace('. t',
+                                                                                      '. T').replace('looks',
+                                                                                                     'no longer looks').replace('should be more',
+                                                                                                                                'are enough')
+```
 
 ## Exercise - String Methods
 
