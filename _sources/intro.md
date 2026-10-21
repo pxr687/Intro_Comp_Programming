@@ -13,6 +13,8 @@ You can run or edit the code in this textbook, and also write your own code, by 
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
 
+**Note**: using the textbook interactively works best on [Google Chrome](https://www.google.com/chrome/).
+
 You can also download any page, to use on your own computer, by clicking this icon at the top of the page: 
 
 ![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download.JPG)

@@ -66,6 +66,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="A Whole Book as a Variable" href="1_08_06b_A_Whole_Book_As_A_Variable.html" />
+    <link rel="prev" title="Extra Data Types Task - Printing a Receipt" href="1_08_05b_Extra_Data_Types_Task.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -239,7 +239,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_07b_Class_Quiz_Literals_Variables_Expressions_Functions.html">Class Quiz: Literals, Variables, Expressions and Functions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types and the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_01_Numbers.html">Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_02_Strings.html">Strings (text)</a></li>
@@ -247,7 +247,17 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_04_More_On_Numbers.html">More on Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05_More_On_Strings.html">More on Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">String Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task.html">Extra Conditional Statements Task - Data Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -446,6 +456,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-dir-function-to-see-what-methods-an-object-has">Using the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function to see what methods an object has</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-uses-of-string-methods">Practical Uses of String Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chaining-string-methods">Chaining String Methods</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-string-methods">Exercise - String Methods</a></li>
 </ul>
             </nav>
@@ -597,7 +610,9 @@ which is still “many”.</p>
 </div>
 </div>
 </div>
-<p>A function which is useful here is <code class="docutils literal notranslate"><span class="pre">dir()</span></code>. We can use this function to tell us all the commands we can use with a Python object.</p>
+<section id="using-the-dir-function-to-see-what-methods-an-object-has">
+<h2>Using the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function to see what methods an object has<a class="headerlink" href="#using-the-dir-function-to-see-what-methods-an-object-has" title="Link to this heading">#</a></h2>
+<p>A function which is useful here is <code class="docutils literal notranslate"><span class="pre">dir()</span></code>. We can use this function to tell us all the commands we can use with a Python object. In this case our object is a string.</p>
 <p>If we use <code class="docutils literal notranslate"><span class="pre">dir()</span></code> with a string, it will show us all of the string methods we can use. The cell below gives the string variable <code class="docutils literal notranslate"><span class="pre">first_word</span></code> to the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function. It will show use a list of things. Ignore anything that starts with double underscores (<code class="docutils literal notranslate"><span class="pre">__</span></code>). Everything else that does not start with <code class="docutils literal notranslate"><span class="pre">___</span></code> is a string method:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -692,6 +707,115 @@ which is still “many”.</p>
 </div>
 </div>
 <p>Methods are not only used with strings.  As we will see on other pages, other types of objects can have them.</p>
+</section>
+<section id="practical-uses-of-string-methods">
+<h2>Practical Uses of String Methods<a class="headerlink" href="#practical-uses-of-string-methods" title="Link to this heading">#</a></h2>
+<p>Strings methods have many uses. One common use is to make sure that your text data is <em>consistent</em>.</p>
+<p>E.g. maybe you want all of your filenames to be in the same format, with no blank spaces:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Original filename (has spaces in).</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">"My Summer Photo.JPG"</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using string methods to "clean" the filename, so that it does not have any spaces in.</span>
+<span class="n">filename_clean</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">'_'</span><span class="p">)</span>
+
+<span class="n">filename_clean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'My_Summer_Photo.JPG'
+</pre></div>
+</div>
+</div>
+</div>
+<p>For another example, think about if a user entered this email address, into an online form:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">email</span> <span class="o">=</span> <span class="s2">"  Jack.Jones@CrazyMail.COM  "</span>
+
+<span class="n">email</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'  Jack.Jones@CrazyMail.COM  '
+</pre></div>
+</div>
+</div>
+</div>
+<p>Maybe you want to write a program which will send marketing emails for your company. The email address, the way it is now, will need to be changed so that a program can use it properly.</p>
+<p>It has space, and capital letters in random places. We can make it consistent using string methods:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clean the email address.</span>
+<span class="n">email_clean</span> <span class="o">=</span> <span class="n">email</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">email_clean</span> <span class="o">=</span> <span class="n">email_clean</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">email_clean</span> <span class="o">=</span> <span class="n">email_clean</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">" "</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+<span class="n">email_clean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'jack.jones@crazymail.com'
+</pre></div>
+</div>
+</div>
+</div>
+<p>The cell above <em>re-assigns</em> the <code class="docutils literal notranslate"><span class="pre">email_clean</span></code> variable each time a new string method is used. We can do this more efficiently by <em>chaining</em> string methods together…</p>
+</section>
+<section id="chaining-string-methods">
+<h2>Chaining String Methods<a class="headerlink" href="#chaining-string-methods" title="Link to this heading">#</a></h2>
+<p>You can also <em>chain</em> string methods together, one after the other. Think about this string:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">"this sentence looks bad. there should be more capital letters!"</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'this sentence looks bad. there should be more capital letters!'
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to alter it to <code class="docutils literal notranslate"><span class="pre">&quot;This</span> <span class="pre">sentence</span> <span class="pre">no</span> <span class="pre">longer</span> <span class="pre">looks</span> <span class="pre">bad.</span> <span class="pre">There</span> <span class="pre">are</span> <span class="pre">enough</span> <span class="pre">capital</span> <span class="pre">letters!&quot;</span></code> we can chain multiple string methods together:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chaining string methods together...</span>
+<span class="s2">"this sentence looks bad. there should be more capital letters!"</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'. t'</span><span class="p">,</span> <span class="s1">'. T'</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'looks'</span><span class="p">,</span> <span class="s1">'no longer looks'</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'should be more'</span><span class="p">,</span> <span class="s1">'are enough'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'This sentence no longer looks bad. There are enough capital letters!'
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can make that same operation easier (for a human) to read, but placing it over more than one line:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">"this sentence looks bad. there should be more capital letters!"</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'. t'</span><span class="p">,</span>
+                                                                                      <span class="s1">'. T'</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'looks'</span><span class="p">,</span>
+                                                                                                     <span class="s1">'no longer looks'</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'should be more'</span><span class="p">,</span>
+                                                                                                                                <span class="s1">'are enough'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'This sentence no longer looks bad. There are enough capital letters!'
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="exercise-string-methods">
 <h2>Exercise - String Methods<a class="headerlink" href="#exercise-string-methods" title="Link to this heading">#</a></h2>
 <p>We will now do another exercise!</p>
@@ -732,6 +856,24 @@ which is still “many”.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_08_05b_Extra_Data_Types_Task.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Extra Data Types Task - Printing a Receipt</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_08_06b_A_Whole_Book_As_A_Variable.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">A Whole Book as a Variable</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -750,6 +892,9 @@ which is still “many”.</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-dir-function-to-see-what-methods-an-object-has">Using the <code class="docutils literal notranslate"><span class="pre">dir()</span></code> function to see what methods an object has</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-uses-of-string-methods">Practical Uses of String Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chaining-string-methods">Chaining String Methods</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-string-methods">Exercise - String Methods</a></li>
 </ul>
   </nav></div>

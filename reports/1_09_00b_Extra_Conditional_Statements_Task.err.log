@@ -1,0 +1,107 @@
+Traceback (most recent call last):
+  File "C:\Users\WIN11\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\WIN11\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\nbclient\client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\WIN11\AppData\Roaming\Python\Python314\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\WIN11\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\WIN11\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "C:\Users\WIN11\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\WIN11\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# DO NOT CHANGE THIS CODE, JUST RUN IT. The comments
+# explain what is happening.
+
+# Import the `requests` and `numpy` libraries.
+import requests
+import numpy as np
+
+# A string variable with the URL of the API we will use.
+url = "https://random-word-api.herokuapp.com/word?number=1"
+
+# This code just gets our word, and makes sure it is just one string.
+response = requests.get(url)
+username = response.json()[0]
+# Add some randomness to the word (users often break rules)!
+if np.random.choice([True, False]):
+    username = np.random.choice([username.capitalize(), username.upper(),
+                                 username+str(np.random.randint(0, 2000)),
+                                 username[:3], username[:4], username[:5]])
+
+# Show the word.
+print(username)
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mJSONDecodeError[39m                           Traceback (most recent call last)
+[36mFile [39m[32m~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\models.py:1116[39m, in [36mResponse.json[39m[34m(self, **kwargs)[39m
+[32m   1115[39m [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m1116[39m     [38;5;28;01mreturn[39;00m [30;43mcomplexjson[39;49m[30;43m.[39;49m[30;43mloads[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mtext[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[32m   1117[39m [38;5;28;01mexcept[39;00m JSONDecodeError [38;5;28;01mas[39;00m e:
+[32m   1118[39m     [38;5;66;03m# Catch JSON-related errors and raise as requests.JSONDecodeError[39;00m
+[32m   1119[39m     [38;5;66;03m# This aliases json.JSONDecodeError and simplejson.JSONDecodeError[39;00m
+
+[36mFile [39m[32m~\AppData\Local\Python\pythoncore-3.14-64\Lib\json\__init__.py:352[39m, in [36mloads[39m[34m(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)[39m
+[32m    349[39m [38;5;28;01mif[39;00m ([38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m object_hook [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m
+[32m    350[39m         parse_int [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m parse_float [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m
+[32m    351[39m         parse_constant [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m object_pairs_hook [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mand[39;00m [38;5;129;01mnot[39;00m kw):
+[32m--> [39m[32m352[39m     [38;5;28;01mreturn[39;00m [30;43m_default_decoder[39;49m[30;43m.[39;49m[30;43mdecode[39;49m[30;43m([39;49m[30;43ms[39;49m[30;43m)[39;49m
+[32m    353[39m [38;5;28;01mif[39;00m [38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+
+[36mFile [39m[32m~\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py:345[39m, in [36mJSONDecoder.decode[39m[34m(self, s, _w)[39m
+[32m    341[39m [38;5;250m[39m[33;03m"""Return the Python representation of ``s`` (a ``str`` instance[39;00m
+[32m    342[39m [33;03mcontaining a JSON document).[39;00m
+[32m    343[39m 
+[32m    344[39m [33;03m"""[39;00m
+[32m--> [39m[32m345[39m obj, end = [30;43mself[39;49m[30;43m.[39;49m[30;43mraw_decode[39;49m[30;43m([39;49m[30;43ms[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43midx[39;49m[30;43m=[39;49m[30;43m_w[39;49m[30;43m([39;49m[30;43ms[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m0[39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mend[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m)[39;49m
+[32m    346[39m end = _w(s, end).end()
+
+[36mFile [39m[32m~\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py:363[39m, in [36mJSONDecoder.raw_decode[39m[34m(self, s, idx)[39m
+[32m    362[39m [38;5;28;01mexcept[39;00m [38;5;167;01mStopIteration[39;00m [38;5;28;01mas[39;00m err:
+[32m--> [39m[32m363[39m     [38;5;28;01mraise[39;00m JSONDecodeError([33m"[39m[33mExpecting value[39m[33m"[39m, s, err.value) [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;28;01mNone[39;00m
+[32m    364[39m [38;5;28;01mreturn[39;00m obj, end
+
+[31mJSONDecodeError[39m: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+[31mJSONDecodeError[39m                           Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 13[39m
+[32m      9[39m url = [33m"https://random-word-api.herokuapp.com/word?number=1"[39m
+[32m     10[39m 
+[32m     11[39m [38;5;66;03m# This code just gets our word, and makes sure it is just one string.[39;00m
+[32m     12[39m response = requests.get(url)
+[32m---> [39m[32m13[39m username = response.json()[[32m0[39m]
+[32m     14[39m [38;5;66;03m# Add some randomness to the word (users often break rules)![39;00m
+[32m     15[39m [38;5;28;01mif[39;00m np.random.choice([[38;5;28;01mTrue[39;00m, [38;5;28;01mFalse[39;00m]):
+[32m     16[39m     username = np.random.choice([username.capitalize(), username.upper(),
+
+[36mFile [39m[32m~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\models.py:1120[39m, in [36mResponse.json[39m[34m(self, **kwargs)[39m
+[32m   1116[39m     [38;5;28;01mreturn[39;00m complexjson.loads([38;5;28mself[39m.text, **kwargs)
+[32m   1117[39m [38;5;28;01mexcept[39;00m JSONDecodeError [38;5;28;01mas[39;00m e:
+[32m   1118[39m     [38;5;66;03m# Catch JSON-related errors and raise as requests.JSONDecodeError[39;00m
+[32m   1119[39m     [38;5;66;03m# This aliases json.JSONDecodeError and simplejson.JSONDecodeError[39;00m
+[32m-> [39m[32m1120[39m     [38;5;28;01mraise[39;00m RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+
+[31mJSONDecodeError[39m: Expecting value: line 1 column 1 (char 0)
+
