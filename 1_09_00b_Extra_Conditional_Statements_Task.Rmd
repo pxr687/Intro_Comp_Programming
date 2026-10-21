@@ -62,9 +62,9 @@ Your job is to write a program to check the random username against these rules:
 
 - If the word contains numbers, display `"Numbers are NOT allowed in usernames!"`.
 
-- If the word contains only lowercase letters and has between 6 and 11 characters, display `"Great username word!"`.
+- If the word contains only lowercase letters and has between 6 and 11 characters, display `"Great username!"`.
 
-- Otherwise, display `"Word format is invalid!"`.
+- Otherwise, display `"Username format is invalid!"`.
 
 Use `if`, `elif`, and `else` statements to implement your solution. You may use string methods to help you make sure the rules are followed.
 
