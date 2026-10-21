@@ -39,6 +39,8 @@ parts:
   - caption: Statements and Conditionals
     chapters:
       - file: 1_09_00_Conditional_Statements
+      - file: 1_09_00b_Extra_Conditional_Statements_Task
+      - file: 1_09_00b_Extra_Conditional_Statements_Task_Two
 #      - file: 1_09_02_More_Statements_and_Keywords
 #      - file: 1_09_03_Getting_Keyboard_Input
 

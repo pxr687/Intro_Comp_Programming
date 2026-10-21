@@ -34,13 +34,13 @@ The book that we will store as a string variable is [Pride and Prejudice, by Jan
 # Get the text for Pride and Prejudice.
 
 # Import a library to get data from the internet.
-import urllib.request
+import requests
 
 # Make a string variable which is a website address.
 book_url = 'http://www.gutenberg.org/ebooks/42671.txt.utf-8'
 
 # Get the book from the website.
-book_text = urllib.request.urlopen(book_url).read().decode("utf-8")
+book_text = requests.get(book_url).content.decode("utf-8")
 
 # Show the first 5000 lines (do not worry about understanding this code for now).
 print(book_text[:5000])

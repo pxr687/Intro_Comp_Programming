@@ -1,0 +1,78 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+  orphan: true
+---
+
+# Extra Conditional Statements Task - Data Validation
+
+[Data validation](https://en.wikipedia.org/wiki/Data_validation) means:
+> "We check that data is 'clean' and in the right format before using it". 
+
+Data validation is important in business, computing and research, and to do data validation, we often use conditional statements.
+
+Imagine you work for a company that provides an app. When users create an account, they enter a `username`. Company policy is that usernames must be in this format:
+
+- Usernames must contain at least 6 characters and no more than 11 characters.
+
+- Usernames must contain only lowercase letters (a–z). No numbers, no other symbols.
+
+The cell below simulates a user entering a `username` as they try to make a new account. The cell will print out the `username`.
+
+*Note*: (This cell uses an [API](https://aws.amazon.com/what-is/api/) to get a random word sent to us over the internet. But we can imagine it is a user entering the data)...
+
+```{python}
+# DO NOT CHANGE THIS CODE, JUST RUN IT. The comments
+# explain what is happening.
+
+# Import the `requests` and `numpy` libraries.
+import requests
+import numpy as np
+
+# A string variable with the URL of the API we will use.
+url = "https://random-word-api.herokuapp.com/word?number=1"
+
+# This code just gets our word, and makes sure it is just one string.
+username = requests.get(url)
+username = username.json()[0]
+# Add some randomness to the word (users often break rules)!
+if np.random.choice([True, False]):
+    username = np.random.choice([username.capitalize(), username.upper(),
+                                 username+str(np.random.randint(0, 2000)),
+                                 username[:3], username[:4], username[:5]])
+
+# Show the word.
+print(username)
+```
+
+Your job is to write a program to check the random username against these rules:
+
+- If the word has fewer than 6 characters, display `"Your username is too short!"`.
+
+- If the word has more than 11 characters, display `"Your username is too long!"`.
+
+- If the word contains numbers, display `"Numbers are NOT allowed in usernames!"`.
+
+- If the word contains only lowercase letters and has between 4 and 8 characters, display `"Great username word!"`.
+
+- Otherwise, display `"Word format is invalid!"`.
+
+Use `if`, `elif`, and `else` statements to implement your solution. You may use string methods to help you make sure the rules are followed.
+
+You can run the first cell again at any time to get a new `username` to test your code with.
+
+```{python}
+# Your code here.
+
+if username == ...:
+    ...
+```

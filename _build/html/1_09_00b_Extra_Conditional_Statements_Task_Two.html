@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Statements and keywords &#8212; Introduction to Computer Programming</title>
+    <title>Extra Conditional Statements Task - Simple Code for a Video Game &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -60,12 +60,14 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1_09_01_Statements_and_Keywords';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_09_00b_Extra_Conditional_Statements_Task_Two';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_09_01_Statements_and_Keywords.html" />
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_09_00b_Extra_Conditional_Statements_Task_Two.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Scratchpad" href="scratchpad.html" />
+    <link rel="prev" title="Extra Conditional Statements Task - Data Validation" href="1_09_00b_Extra_Conditional_Statements_Task.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -247,7 +247,17 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_04_More_On_Numbers.html">More on Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05_More_On_Strings.html">More on Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06_String_Methods.html">String Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task.html">Extra Conditional Statements Task - Data Validation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -311,7 +321,7 @@
       
       
       
-      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_09_01_Statements_and_Keywords.ipynb" target="_blank"
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_09_00b_Extra_Conditional_Statements_Task_Two.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -360,7 +370,7 @@
       
       
       
-      <li><a href="_sources/1_09_01_Statements_and_Keywords.ipynb" target="_blank"
+      <li><a href="_sources/1_09_00b_Extra_Conditional_Statements_Task_Two.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -436,7 +446,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Statements and keywords</h1>
+    <h1>Extra Conditional Statements Task - Simple Code for a Video Game</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -446,24 +456,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Statements and keywords</a><ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-assignment-statements">Variable assignment statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#game-rules">Game Rules</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#no-output-this-is-a-statement-it-does-not-return-a-value">No output. This is a statement, it does not return a value.</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#show-the-value-of-x">Show the value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-if-expression-is-one-number-like-this-it-is-also-called-a-literal">Expression (if expression is one number like this, it is also called a “literal”).</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expression">Expression.</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-no-value-returned">Statement (no value returned).</a><ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements-and-keywords">Import statements (and keywords)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-statements">Assert statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-except-statements">Try, Except statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-statements">With statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-statements-and-data-validation">Exercise 4 - Statements and Data Validation</a></li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -474,105 +468,101 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="statements-and-keywords">
-<h1>Statements and keywords<a class="headerlink" href="#statements-and-keywords" title="Link to this heading">#</a></h1>
-<p>Expressions evaluate to return a value.</p>
-<p>Statements <em>do</em> something.</p>
-<section id="variable-assignment-statements">
-<h2>Variable assignment statements<a class="headerlink" href="#variable-assignment-statements" title="Link to this heading">#</a></h2>
-<p>[Have seen variable assignment statements]</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="no-output-this-is-a-statement-it-does-not-return-a-value">
-<h1>No output. This is a statement, it does not return a value.<a class="headerlink" href="#no-output-this-is-a-statement-it-does-not-return-a-value" title="Link to this heading">#</a></h1>
-<p>x = 10</p>
-<p><code class="docutils literal notranslate"><span class="pre">x</span></code> is the variable <em>name</em>, <code class="docutils literal notranslate"><span class="pre">10</span></code> is the <em>value</em> of the variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-<p>But the statement <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10</span></code> does not return a value.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="show-the-value-of-x">
-<h1>Show the value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.<a class="headerlink" href="#show-the-value-of-x" title="Link to this heading">#</a></h1>
-<p>x</p>
-<p><a class="reference external" href="https://realpython.com/ref/glossary/statement/">https://realpython.com/ref/glossary/statement/</a></p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="expression-if-expression-is-one-number-like-this-it-is-also-called-a-literal">
-<h1>Expression (if expression is one number like this, it is also called a “literal”).<a class="headerlink" href="#expression-if-expression-is-one-number-like-this-it-is-also-called-a-literal" title="Link to this heading">#</a></h1>
-<p>2</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="expression">
-<h1>Expression.<a class="headerlink" href="#expression" title="Link to this heading">#</a></h1>
-<p>2 * 2</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="statement-no-value-returned">
-<h1>Statement (no value returned).<a class="headerlink" href="#statement-no-value-returned" title="Link to this heading">#</a></h1>
-<p>y = 2 * 2</p>
-<section id="import-statements-and-keywords">
-<h2>Import statements (and keywords)<a class="headerlink" href="#import-statements-and-keywords" title="Link to this heading">#</a></h2>
-<p>[Already seen some built-in Python functions:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="extra-conditional-statements-task-simple-code-for-a-video-game">
+<h1>Extra Conditional Statements Task - Simple Code for a Video Game<a class="headerlink" href="#extra-conditional-statements-task-simple-code-for-a-video-game" title="Link to this heading">#</a></h1>
+<p>You will write some simple code for a video game.</p>
+<p>In the game, the player has to stop a bomb exploding, by choosing the correct wire.</p>
+<p>Write a Python program that uses conditional statements (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code>) to control the game and track the player’s health.</p>
+<section id="game-rules">
+<h2>Game Rules<a class="headerlink" href="#game-rules" title="Link to this heading">#</a></h2>
+<p>The player starts with 3 health points (HP) and gets a maximum of three tries to stop the bomb exploding. The player can guess a different wire on each try, so they get three guesses in total.</p>
+<p>There are three possible wire colors: <code class="docutils literal notranslate"><span class="pre">&quot;red&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;blue&quot;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&quot;green&quot;</span></code>.</p>
+<p>The correct wire to stop the bomb exploding is <code class="docutils literal notranslate"><span class="pre">&quot;blue&quot;</span></code>.</p>
+<p>If the player chooses the correct wire, print <code class="docutils literal notranslate"><span class="pre">&quot;Bomb</span> <span class="pre">defused!</span> <span class="pre">You</span> <span class="pre">win!&quot;</span></code>.</p>
+<p>If the player chooses the wrong wire, subtract 1 from their health and print the health they have left.</p>
+<p>If the player’s health reaches 1, print <code class="docutils literal notranslate"><span class="pre">&quot;Critical</span> <span class="pre">health!&quot;</span></code>.</p>
+<p>If the player chooses the wrong wire on all three attempts, their health reaches 0, and the bomb explodes :(</p>
+<p>Run the code cell below to simulate the player making three choices of wire.</p>
+<p>Use these variables <code class="docutils literal notranslate"><span class="pre">player_wire_choice_1</span></code>, <code class="docutils literal notranslate"><span class="pre">player_wire_choice_2</span></code> and <code class="docutils literal notranslate"><span class="pre">player_wire_choice_3</span></code> for your program:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE, JUST RUN IT.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">player_wire_choice_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">])</span>
+<span class="n">player_wire_choice_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">])</span>
+<span class="n">player_wire_choice_3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'The player chose this wire on their first try:'</span><span class="p">,</span> <span class="n">player_wire_choice_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'The player chose this wire on their second try:'</span><span class="p">,</span> <span class="n">player_wire_choice_2</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">'The player chose this wire on their third try:'</span><span class="p">,</span> <span class="n">player_wire_choice_3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The player chose this wire on their first try: blue
+The player chose this wire on their second try: blue
+The player chose this wire on their third try: blue
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>You can run the cell above at any time to simulate a new player playing the game, and check your program is working correctly.</strong> So, each time you run the cell you will get three new variables:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">help()</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">player_wire_choice_1</span></code>: is the wire color chosen by the player on the first attempt.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">player_wire_choice_2</span></code>: is the wire color chosen by the player on the second attempt, if the first attempt fails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">player_wire_choice_3</span></code>: is the wire color chosen by the player on the third attempt, if the first two attempts fail.</p></li>
 </ul>
-<p>“import”</p>
-<p>import</p>
-<p><a class="reference external" href="https://numpy.org/">NumPy</a></p>
-<p>import numpy</p>
-<p>[<code class="docutils literal notranslate"><span class="pre">as</span></code> keyword]</p>
-<p>import numpy as np</p>
-<p>np.sum([10, 2])</p>
-<p>[Notice colours, this is a <em>keyword</em>]</p>
-<p>[CANNOT USE KEYWORDS IN VARIABLE NAMES]</p>
-<p>import = 10</p>
-<p>numpy.repeat(“Hello!”, 10)</p>
-<p>[Refer to collections page - introduce numpy arrays as the smarter, more attractive brother of lists]</p>
-<p>import numpy as np</p>
-<p>np.repeat(“Hello”, 10)</p>
-<p>help(np.repeat)</p>
-<p><code class="docutils literal notranslate"><span class="pre">dir()</span></code> and <code class="docutils literal notranslate"><span class="pre">dir(np)</span></code>(too messy to show on the page!).</p>
-<p>np.random.choice([‘ROCK’, ‘PAPER’, ‘SCISSORS’])</p>
-<p>np.random.randint(10)</p>
-</section>
-<section id="assert-statements">
-<h2>Assert statements<a class="headerlink" href="#assert-statements" title="Link to this heading">#</a></h2>
-<p>[Importance in software testing]</p>
-<p>[Link this to data analysis also e.g. not just important for software devs!]</p>
-<p>password = 10 + 2</p>
-<p>assert type(password) == str</p>
-<p>password = 10 + 2</p>
-<p>assert type(password) == str, “Password is the wrong dtype!”</p>
-</section>
-<section id="try-except-statements">
-<h2>Try, Except statements<a class="headerlink" href="#try-except-statements" title="Link to this heading">#</a></h2>
-<p>result = stupid</p>
-<p>result = stupid
-print(‘We will only see this print statement if the code runs this line…’)</p>
-<p>try:
-result = stupid
-except NameError:
-print(“This made an error!”)
-print(‘We will only see this print statement if the code runs this line…’)</p>
-</section>
-<section id="with-statements">
-<h2>With statements<a class="headerlink" href="#with-statements" title="Link to this heading">#</a></h2>
-<p>url = “<a class="reference external" href="https://www.google.com/">https://www.google.com/</a>”</p>
-<p>from urllib.request import urlopen</p>
-<p>urlopen(url)</p>
-<p>type(urlopen(url))</p>
-<p>[<code class="docutils literal notranslate"><span class="pre">with</span></code> automatically opens and closes a file]</p>
-<p>with urlopen(url) as webpage:
-# Read the content and decode it from bytes to text
-webpage_as_text = webpage.read().decode(‘utf-8’)
-print(webpage_as_text[:2000])</p>
-<p>from IPython.display import display, HTML</p>
-<p>display(HTML(webpage_as_text))</p>
-</section>
-<section id="exercise-4-statements-and-data-validation">
-<h2>Exercise 4 - Statements and Data Validation<a class="headerlink" href="#exercise-4-statements-and-data-validation" title="Link to this heading">#</a></h2>
-<p>Exericse with <code class="docutils literal notranslate"><span class="pre">np.random.choice([10,</span> <span class="pre">10.0,</span> <span class="pre">&quot;Leroy</span> <span class="pre">Jenkins&quot;])</span></code> to simulate user input for data validation. <code class="docutils literal notranslate"><span class="pre">with</span></code> statements for opening a text file?</p>
-<p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
-<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4d_statements.ipynb">here 🚀</a> to launch the exercise.</p>
-<hr class="docutils" />
-<p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
+<p><em>Think carefully about what the code should do, before writing your program.</em></p>
+<p>If you want to, you can try to write the program yourself, using only your own code, in the cell below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or, if you want, there is some template code below, but you will need to fix it and add the missing parts to make it run correctly.</p>
+<p><em>Think carefully about what the code should do. You might need to re-write a lot of the code, to make it work correctly.</em></p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the player's `health` and the `correct_wire`.</span>
+<span class="n">health</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">correct_wire</span> <span class="o">=</span> <span class="s2">"blue"</span>
+
+<span class="c1"># First try...</span>
+<span class="k">if</span> <span class="n">player_wire_choice_1</span> <span class="o">==</span> <span class="n">correct_wire</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Bomb defused!"</span><span class="p">)</span>
+<span class="k">else</span>
+    <span class="n">health</span> <span class="o">=</span> <span class="n">health</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Wrong wire! Health:"</span><span class="p">,</span> <span class="n">health</span><span class="p">)</span>
+
+<span class="c1"># Second try...</span>
+<span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">"Bomb defused!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="n">health</span> <span class="o">=</span> <span class="n">health</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Wrong wire! Health:"</span><span class="p">,</span> <span class="n">health</span><span class="p">)</span>
+
+<span class="c1"># Third try...</span>
+<span class="k">if</span> <span class="o">...</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Bomb defused!"</span><span class="p">)</span>
+<span class="s2">"else"</span>
+    <span class="n">health</span> <span class="o">=</span> <span class="n">health</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"BOOM! Health:"</span><span class="p">,</span> <span class="n">health</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Final health:"</span><span class="p">,</span> <span class="n">health</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Bomb defused!"</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block after 'if' statement on line 6
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -606,6 +596,24 @@ print(webpage_as_text[:2000])</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_09_00b_Extra_Conditional_Statements_Task.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Extra Conditional Statements Task - Data Validation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="scratchpad.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Scratchpad</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -624,24 +632,8 @@ print(webpage_as_text[:2000])</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Statements and keywords</a><ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-assignment-statements">Variable assignment statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#game-rules">Game Rules</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#no-output-this-is-a-statement-it-does-not-return-a-value">No output. This is a statement, it does not return a value.</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#show-the-value-of-x">Show the value of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-if-expression-is-one-number-like-this-it-is-also-called-a-literal">Expression (if expression is one number like this, it is also called a “literal”).</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#expression">Expression.</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statement-no-value-returned">Statement (no value returned).</a><ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements-and-keywords">Import statements (and keywords)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-statements">Assert statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-except-statements">Try, Except statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-statements">With statements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4-statements-and-data-validation">Exercise 4 - Statements and Data Validation</a></li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
