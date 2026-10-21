@@ -13,122 +13,236 @@ jupyter:
   orphan: true
 ---
 
-# Conditional Statements
+# Conditional Statements - `if` this happens → then that happens
 
 ```{note}
 This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/https://odsti.github.io/cfd-textbook/conditional_statements.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
-In many situations, actions and results depends on a specific set of
-conditions being satisfied. For example, individuals in randomized
-controlled trials receive the treatment if they have been assigned to
-the treatment group. A gambler makes money if she wins her bet.
+In lots of situations, for something to happen, something else has to be true. 
+Another way of saying this is that a condition has to be met.For example:
+- If an app user has an account, then they can login to the app.
+- People in [randomized controlled trials](https://en.wikipedia.org/wiki/Randomized_controlled_trial) get a drug treatment if they have been randomly put in the treatment group. 
+- A gambler makes money if she wins her bet.
 
-In this section we will learn how to describe such situations using
-code. A *conditional statement* is a multi-line statement that allows
-Python to choose among different alternatives based on the truth value
-of an expression. While conditional statements can appear anywhere,
-they appear most often within the body of a function in order to
-express alternative behavior depending on argument values.
+The structure of all these situations is:
 
-A conditional statement always begins with an `if` header, which is a single
-line followed by an indented body. The body is only executed if the expression
-directly following `if` (called the *if expression*) evaluates to a true value.
-If the *if expression* evaluates to a false value, then the body of the `if` is
-skipped.
+> IF this happens → THEN that happens.
 
-Let us start by a conditional that sets the variable `result` to the string
-`'Positive'`  for a positive number:
+On this page we will learn how to talk about these situations using
+code. A *conditional statement* is a multi-line statement that lets
+Python choose among different options based on the truth value
+of an expression. 
+
+Conditional statements can appear anywhere,
+but they often appear inside functions - they can make a function do something different to different variable types (more on this later)!
+
+A conditional statement always begins with an *`if` header*, which is a single
+line followed by an indented body. To show this, let's use NumPy to simulate a 
+[coin flip](https://en.wikipedia.org/wiki/Coin_flipping). Run the cell a few times
+to see a few different coin flips. The code which does the coin flip is `np.random.choice(['HEADS', 'TAILS'])`.
+Each time we run this, it has a 50% chance of giving us the string `'HEADS'` and a 50% chance of 
+giving us the string `'TAILS'` - just like flipping a real coin!:
+
+```{python}
+# Import the NumPy library.
+import numpy as np
+
+# Simulate a coin flip.
+coinflip = np.random.choice(['HEADS', 'TAILS'])
+
+coinflip
+```
+
+Imagine you and friend are making bets about our coin flip.
+
+You bet ฿20 it will land on `'HEADS'` and your friend bets ฿35 it will land on `'TAILS'`.
+
+We can get a `True` or `False` value to see who one, using comparison operators:
+
+```{python}
+# Did you win?
+coinflip == 'HEADS'
+```
+
+```{python}
+# Did you friend win?
+coinflip == 'TAILS'
+```
+
+Re-run the three cells above a few times to see a few new bets, and whether you or your friend won them.
+
+We can represent the full structure of these bets in code using conditional statements and comparison operators together, so that we do not need to use more than one cell.
+
+To show this, remember I said that a conditional statement always begins with an *`if` header*, which is a single line followed by an indented body? These are shown in the cell below, read the comments carefully.
+
+```{python}
+# The line below this comment is the conditional header:
+if coinflip == 'HEADS':
+    
+    # This next line of code is the indented body. 
+    # You press the ⭾ key at the start of the line, to make the indent.
+    print('You win ฿20!')
+```
+
+We can read this conditional statement in English as:
+
+> If the `coinflip` variable has the value `'HEADS'`, then print the string `'You win ฿20!'`.
+
+Go back and run the cell where the `coinflip` variable is made. Then run the cell with the conditional statement.
+
+If you do this a few times, you will see that there are two things that can happen:
+
+- You see the message `'You win ฿20!'`.
+- Nothing happens.
+
+You see the message if the code in the first cell `coinflip = np.random.choice(['HEADS', 'TAILS'])` randomly gave us the string `'HEADS'`. You see nothing if it gave us `'TAILS'`.
+
+The reason for this is that the code in the indented body is *only run* if the expression
+directly following `if` (called the *if expression*) evaluates `True`. If the *if expression* evaluates to a `False`, then the body of the `if` will not run.
+
+If you want to cheat your friend, you could write the code as:
+
+```{python}
+if True:
+    print('You win ฿20!')
+```
+
+In this code you will always win ฿20 because we are hard-coding the *if expression* to be `True`. Perfect, but your friend may not be happy...
+
+In contrast, this code will *never* let you win ฿20:
+
+```{python}
+if False:
+    print('You win ฿20!')
+```
+
+You can run that infinite times, and you will never win :( because we are hard-coding the *if expression* to be `False`.
+
+To see this another way, let's use some random integer values, instead of strings. We will now write the code so that you see an output every time, even if the *if expression* is not `True`.
+
+The NumPy function `np.random.randint()` can make random integers for us. This type of random number making is used inside video games, apps, simulation in scientific studies, and many other things. 
+
+We can tell `np.random.randint()` the `low`est integer and the `high`est integer we want - note that for the `high` value, if we want our highest value to be $x$ we have to make `high` equal $x + 1$:
+
+```{python}
+# Get a random integer between -10 and 10.
+np.random.randint(low = -10, high = 11)
+```
+
+Let look conditional that makes a variable called `result`. This variable will be the string
+`'Positive'` if our random integer is positive:
 
 ```python
-x = 3
+x = np.random.randint(low = -10, high = 11)
 result = 'Not sure yet'
 if x > 0:
     result = 'Positive'
-result
+print(x)
+print(result)
 ```
 
 Let us work through what Python will do when we evaluate the code above
 (repeated in the cell below):
 
-1. `x` gets the value CR of int 3.
+1. `x` gets the value from `np.random.randint(low = -10, high = 11)`. This is a random `int` between -10 and +10.
 2.   Python evaluates the assignment statement `result = 'Not sure yet'`. The
-     `result` variable has the value: CR of "Not sure yet".
+     `result` variable has the value of `"Not sure yet"`.
 3.   Python evaluates the *if expression* `x > 0`.  The result is the
-     CR of `True`.  This is a true value, so Python will execute the body of
+     CR of `True`.  This is a true value, so Python will run the body of
      the if statement.
 4.   The body of the if statement is the single line `result = 'Positive'`.
      Python reassigns the `result` variable to have the value: CR of
-     "Positive".
-1.   `result` first evaluates `result` to get the CR of "Positive", and, as
+     `"Positive"`.
+1.   `result` first evaluates `result` to get the CR of `"Positive"`, and, as
      this is an *expression*, Jupyter shows us the result.
 
-Here's the code as a code cell:
+Here's the code as a code cell - run it a few times to see what happens:
 
 ```{python}
-x = 3
+x = np.random.randint(low = -10, high = 11)
+
 result = 'Not sure yet'
+
 if x > 0:
     result = 'Positive'
-result
+
+print(x)
+print(result)
 ```
 
 The cell shows `'Positive'` if `x` is a positive number, like `3`. But if `x`
 is not a positive number, such as `-3`, then this happens:
 
-1. `x` has the value CR of int -3.
-1. `result` gets the value: CR of "Not sure yet".  So far this is the same as
+1. `x` has the value of -3.
+1. `result` gets the value: `"Not sure yet"`.  So far this is the same as
    for the case of `x` equal to 3 above.
-1. `x > 0` evaluates to `False`, so Python *skips the body of the if
+1. `x > 0` evaluates to `False`, so Python *DOES NOT RUN the body of the if
    statement*.
-1. `result` evaluates `result` to get the CR of "Not sure yet" (because this
+1. `result` evaluates `result` to get the value `"Not sure yet"` (because this
    hasn't changed), and Jupyter shows us the result.
 
-```{python}
-x = -3
-result = 'Not sure yet'
-if x > 0:
-    result = 'Positive'
-result
-```
 
-Let us refine our cell to give `Not positive` if `x` is a negative number. We
-can do this by adding an `else` clause.  If the *if expression* evaluates to a
-true value, then Python executes the first clause, after the if expression, as
-before.  If it evaluates to a false value, Python executes the clause following
+## `else` statements
+
+Let us improve our code to give `Not positive` if `x` is a negative number. We
+can do this by adding an `else` clause.  
+
+If the *if expression* evaluates to a
+`True` value, then Python runs the first clause, after the if expression, as
+before.  
+
+If it evaluates to a `False` value, Python runs the clause following
 the `else`, instead.
 
 ```{python}
-x = -3
+x = np.random.randint(low = -10, high = 11)
+
 result = 'Not sure yet'
+
 if x > 0:
     result = 'Positive'
+    
 else:
     result = 'Not positive'
-result
+    
+print(x)
+print(result)
 ```
 
-Python sets `x` to have the value CR of int -3.  It checks `x > 0` and finds a
-false value, so it skips the first clause, and executes the clause following
-`else:`. This show `'Not positive'`.  If you set `x` above to 3, you get
+Python sets `x` to have the value from `np.random.randint(low = -10, high = 11)`.
+
+It checks `x > 0` if finds a
+`False` value, then it skips the first clause, and runs the clause after
+`else:`. This shows `'Not positive'`.  
+
+If you set `x` has a positive value, then `result` will get the value
 `Positive`, because Python will evaluate the `result = 'Positive'` body, and
 not the `result = 'Not positive` body.
 
 Notice that the `if` statement now deals with all possible values of `x`.
 Whatever the value of `x` we with either execute `result = 'Positive'` or we
-will execute `result = 'Not positive'`.  We can now get rid of the first line
+will execute `result = 'Not positive'`.  
+
+We can now get rid of the first line
 in the function `result = 'Not sure yet'` because we will always change
 `result` from that value, in the `if` statement:
 
 ```{python}
 # Classify without the unnecessary first assignment.
-x = -3
+x = np.random.randint(low = -10, high = 11)
+
 if x > 0:
     result = 'Positive'
+    
 else:
     result = 'Not positive'
-result
+
+print(x)
+print(result)
 ```
+
+## `elif` statements
 
 Now imagine we prefer our cell to show `'Negative` for negative values and
 `Zero` if the input value is 0.  It seems like we need three clauses, one each
@@ -138,17 +252,22 @@ We can do this by adding an `elif` clause, where `elif` is Python's
 shorthand for the phrase "else if".
 
 ```{python}
-x = -3
+x = np.random.randint(low = -10, high = 11)
+
 if x > 0:
     result = 'Positive'
+    
 elif x == 0:  # elif short for "else if"
     result = 'Zero'
+    
 else:
     result = 'Negative'
-result
+    
+print(x)
+print(result)
 ```
 
-Now the cell returns the correct answer when the input is -3, 0, or 3:
+Now the cell returns the correct answer when the input is `-3`, `0`, or `3`:
 
 ```{python}
 x = 3
@@ -158,7 +277,8 @@ elif x == 0:  # elif short for "else if"
     result = 'Zero'
 else:
     result = 'Negative'
-result
+print(x)
+print(result)
 ```
 
 ```{python}
@@ -169,26 +289,33 @@ elif x == 0:  # elif short for "else if"
     result = 'Zero'
 else:
     result = 'Negative'
-result
+print(x)
+print(result)
 ```
 
+This helpful diagram (from [here](https://learnlearn.uk/python/wp-content/uploads/sites/4/2016/01/if..elif_...else-decision-flowchart-python.png)) shows what is happening:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/if_elif_else_flowchat.PNG)
+
 If `x` is equal to 3, Python evaluates the if expression `x < 0`.  The
-expression gives a `True` value, so Python executes the first clause, sets
+expression gives a `True` value, so Python runs the first clause, sets
 `result` to equal "Positive" and skips to the end of the `if` statement.
 Finally it evaluates `result` to show "Positive".
 
 If `x` equals 0, evaluates the if expression `x < 0`.  The expression is a
 `False` value, so Python moves on to the next clause, which is `elif x == 0:`.
 This has another *if expression* `x == 0`.  It is a `True` value, so Python
-executes this clause, and sets `result` equal to "Zero".  Then it skips to the
+runs this clause, and sets `result` equal to "Zero".  Then it skips to the
 end of the `if` statement, and shows `result`.
 
 If `x` equals -3, evaluates the if expression `x < 0`.  The expression is a
 false value, so Python moves on to the next clause, which is `elif x == 0`.
 This expression is also a `False` value so Python moves to the next clause,
-which is the `else:` clause, and executes that, setting `result` to be
+which is the `else:` clause, and runs that, setting `result` to be
 "Negative". Now we are at the end of the `if` statement, and we evaluate and
 show `result`.
+
+### We can have as many `elif` statements as we want
 
 We can have as many `elif` clauses as we want.  For example, imagine we
 want to classify the number into one of the following categories:
@@ -198,7 +325,6 @@ want to classify the number into one of the following categories:
 1. exactly 0 (`'Zero'`)
 1. from (not including) 0 through -10 (`'Small negative'`)
 1. below -10 (`'Large negative'`)
-
 
 ```{python}
 x = -100
