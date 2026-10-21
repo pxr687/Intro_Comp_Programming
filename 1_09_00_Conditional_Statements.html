@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -69,7 +69,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Extra Conditional Statements Task - Data Validation" href="1_09_00b_Extra_Conditional_Statements_Task.html" />
-    <link rel="prev" title="Exercise - Fix my Data" href="1_08_05b_Fix_My_Data_Exercise.html" />
+    <link rel="prev" title="Comparison Operators and Boolean data" href="1_08_07_Comparison_Operators.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -253,7 +253,6 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
 <ul class="current nav bd-sidenav">
@@ -519,7 +518,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('HEADS')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
 </pre></div>
 </div>
 </div>
@@ -535,7 +534,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>
@@ -548,7 +547,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -564,11 +563,6 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
     <span class="c1"># This next line of code is the indented body. </span>
     <span class="c1"># You press the ⭾ key at the start of the line, to make the indent.</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'You win ฿20!'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You win ฿20!
 </pre></div>
 </div>
 </div>
@@ -597,7 +591,7 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('HEADS')
 </pre></div>
 </div>
 </div>
@@ -611,6 +605,11 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You win ฿20!
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -618,11 +617,6 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 <span class="k">if</span> <span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'TAILS'</span><span class="p">:</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Your friend wins ฿20!'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your friend wins ฿20!
 </pre></div>
 </div>
 </div>
@@ -669,7 +663,7 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-7
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-8
 </pre></div>
 </div>
 </div>
@@ -715,8 +709,8 @@ this is an <em>expression</em>, Jupyter shows us the result.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
-Positive
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2
+Not sure yet
 </pre></div>
 </div>
 </div>
@@ -760,8 +754,8 @@ the <code class="docutils literal notranslate"><span class="pre">else</span></co
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2
-Not positive
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+Positive
 </pre></div>
 </div>
 </div>
@@ -796,8 +790,8 @@ in the function <code class="docutils literal notranslate"><span class="pre">res
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2
-Not positive
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+Positive
 </pre></div>
 </div>
 </div>
@@ -829,8 +823,8 @@ shorthand for the phrase “else if”.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-Positive
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1
+Negative
 </pre></div>
 </div>
 </div>
@@ -928,7 +922,7 @@ want to classify the number into one of the following categories:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Large positive
-38
+81
 </pre></div>
 </div>
 </div>
@@ -998,12 +992,12 @@ all).</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1_08_05b_Fix_My_Data_Exercise.html"
+       href="1_08_07_Comparison_Operators.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercise - Fix my Data</p>
+        <p class="prev-next-title">Comparison Operators and Boolean data</p>
       </div>
     </a>
     <a class="right-next"
