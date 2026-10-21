@@ -33,7 +33,7 @@ parts:
       - file: 1_08_06b_A_Whole_Book_As_A_Variable
       - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
       - file: 1_08_07_Comparison_Operators
-      - file: 1_08_05b_Fix_My_Data_Exercise
+     # - file: 1_08_05b_Fix_My_Data_Exercise
 
 # # WEEK 7
   - caption: Statements and Conditionals
