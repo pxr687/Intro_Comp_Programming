@@ -16,113 +16,161 @@ jupyter:
     run: false
 ---
 
-# Conditional Statements Exercises
+<!-- #region -->
+# Conditional Statements Exercise
 
-For background, please read the [conditional statements]({{ site.baseurl
-}}/functions-conditionals/conditional_statements) introduction.
+If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_09_00_Conditional_Statements.html)_ for this exercise.
 
+## Instructions
 
-This *if statement* is not properly defined, and will give a `SyntaxError`.
-Fix it, so that `y` gets set to "That's right".
+**IMPORTANT**: If you see a comment which says `# DO NOT CHANGE THIS CODE` then **DO NOT CHANGE THAT CODE**. You will probably break the exercise if you do...
+
+**First, run the code cell below**. Click on the cell, then press `Shift + Enter`:
+<!-- #endregion -->
 
 ```{python}
-#<--
-x = 10
-#<- x > 4:
-if x > 4:
-#<--
-    y = "That's right"
-#<-
-# Show the value of y
-y
-#<-
+# RUN THIS CELL - DO NOT CHANGE THE CODE.
+import numpy as np
+from notch_conditionals_1 import *
+from jupyprint import jupyprint
 ```
 
+## Question 1
+
+An online shopping website gives customers free shipping when their order total is more than 500 baht. A developer writes the following Python code, but it contains a `SyntaxError`.
+
+Your job is to fix the `SyntaxError` so the program runs correctly. When it runs correctly, it should ask:
+
+- is `order_total` over 500 baht? Then:
+    - if yes, show the message `"Free shipping!"` and make `shipping_fee` equal 0 baht
+    - if no, show the message `"Shipping fee applies."` and make `shipping_fee` equal 40 baht
+    
+The variable `order_total` should equal 650 baht.
+
 ```{python}
-_ = ok.grade('q_1_y')
+order_total = 650
+
+if order_total > 500
+    print("Free shipping!")
+    shipping_fee = 0
+    
+else
+    print("Shipping fee applies.")
+    shipping_fee = 40
+```
+
+### Run the cell below to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert (shipping_fee == 0) & (order_total == 650), 'Hmmm, it looks like your code is not doing the right thing...Either `shipping_fee` or `order_total` is not correct...'
+jupyprint('You passed this question! Well done!')
 ```
 
 
-This `if` statement also gives a `SyntaxError`. Fix and run. It
-should set `p` to have the value -8.
+## Question 2
+
+A Physics student is doing some calculations. However, their `if` statement also gives a `SyntaxError`. Fix it for them. When it runs correctly, the variable `p` should have the value -8. Do not hard-code the answer, you do NOT have to change any of the numbers for this to work correctly. You just have to fix the grammar of the code...
 
 ```{python}
-#<--
 p = -2
-#<- if p < 0
-if p < 0:
-    p = p * 4
-#<--
+if p < 0
+p = p * 4
 p
 ```
 
+### Run the cell below to mark your answer.
+
 ```{python}
-_ = ok.grade('q_2_p')
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert p == -8, 'Hmmm, it looks like your code is not doing the right thing...'
+jupyprint('You passed this question! Well done!')
 ```
 
 
-Another `SyntaxError`; fix and run.  It should show `a divided
-by 6 is 4`
+## Question 3
+
+The Physics student has another `SyntaxError`; please fix it for them.  It should show `"x divided by 6 is 4"`
 
 ```{python}
-#<-
-a = 24
-if a / 6 == 4:
-#<-
-#<- result = 'a divided by 6 is 4'
-    result = 'a divided by 6 is 4'
-#<--
+x = 24
+"if" x / 6 == 4:
+    result = 'x divided by 6 is 4'
 result
 ```
 
+### Run the cell below to mark your answer.
+
 ```{python}
-_ = ok.grade('q_3_result')
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert result == "x divided by 6 is 4", 'Hmmm, it looks like your code is not doing the right thing...'
+jupyprint('You passed this question! Well done!')
 ```
 
-We want an algorithm to choose a newspaper for someone to read
-in the dentist's waiting room, given what we know about their
-views on Brexit.
 
-Complete the cell below.   At the top, you set `posh_voter` to be one of `'Hard
-Brexit'`, `'Soft Brexit'`, `'No-deal Brexit`,  or `'Remain'`, or something
-else.  Complete the cell so that it displays `'Times'` if `posh_voter` has the
-value `'Soft Brexit'`, otherwise shows `'Telegraph'` if `posh_voter` has the
-value `'Hard Brexit'` otherwise shows `'Daily Express'` if voter is `'No-deal
-Brexit'` otherwise shows `'Guardian'` if voter has value `'Remain'`, otherwise
-shows `'Eclectic / internet?'`.
+## Question 4
 
-Run the cell with each of the possible `posh_voter` values to check your code
-gives the right answer.
+A Thai news website wants to recommend a newspaper to a website visitor based on their political interests. The program should choose a newspaper based on the reader’s preferred topic.
+
+A developer has written the code below, but it contains errors. Your task is to fix the code so that it runs correctly and recommends the right newspaper for each topic.
+
+Complete the code so that it displays:
+
+- `'Thai Rath'` if `reader_interest` is 'General News'
+
+- `'Bangkok Post'` if `reader_interest` is 'Business'
+
+- `'Matichon'` if `reader_interest` is 'Politics'
+
+- `'Daily News'` if `reader_interest` is 'Entertainment'
+
+- `'Online News / Other'` for any other value
+
+Run the program with each possible `reader_interest` value to check that your code gives the correct result.
+
+**Before you fix the code**: think carefully about what it should do. If you have a pen and paper, write out the code first, then fix the code below. 
+
+Or if you want to, you can write your own code from new, as long as you use the right variable names and logic.
 
 ```{python}
-#<-
-posh_voter = 'Hard Brexit'
-# You can uncomment these lines to set the voter type.
-# Uncomment by removing the #  at the beginning of the line.
-# Remember to comment the other voter types.
-# Comment by adding #  at the beginning of the line.
-# posh_voter = 'Remain'
-# posh_voter = 'Hard Brexit'
-# posh_voter = 'No-deal Brexit'
-# posh_voter = 'Remain'
-# posh_voter = 'Undecided'
+reader_interest = 'Business'
 
-paper = 'Eclectic / internet?'
-#<-
-#<- if posh_voter ...
-#<-     ...
-#<- ...
-if posh_voter == 'Soft Brexit':
-    paper =  'Times'
-if posh_voter == 'Hard Brexit':
-    paper =  'Telegraph'
-if posh_voter == 'No-deal Brexit':
-    paper =  'Daily Express'
-if posh_voter == 'Remain':
-    paper =  'Guardian'
-#<-
+# You can test other values by changing reader_interest:
+# 'General News'
+# 'Business'
+# 'Politics'
+# 'Entertainment'
+# 'Sports'
+
+newspaper = 'Online News / Other'
+
+if reader_interest = 'General News'
+    newspaper = 'Thai Rath'
+
+elseif reader_interest == 'Business'
+    newspaper = 'Bangkok Post'
+
+else reader_interest == 'Politics':
+    newspaper = 'Matichon'
+
+elif reader_interest == 'Entertainment':
+    newspaper = 'Daily News'
 
 # Show the result
-paper
-#<-
+print(newspaper)
 ```
+
+### Run the cell below to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+check_final_ans(reader_interest, newspaper)
+```
+
+## Go back to the textbook:
+
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/1_09_00_Conditional_Statements.html)_ to go back to the course textbook.

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Conditional Statements &#8212; Introduction to Computer Programming</title>
+    <title>Conditional Statements - if this happens → then that happens &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -60,6 +60,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '1_09_00_Conditional_Statements';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_09_00_Conditional_Statements.html" />
@@ -255,7 +257,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Conditional Statements</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -444,7 +446,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Conditional Statements</h1>
+    <h1>Conditional Statements - if this happens → then that happens</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -454,7 +456,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-form">The General Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statments-with-random-numbers">Conditional Statments with Random Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-statements"><code class="docutils literal notranslate"><span class="pre">else</span></code> statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elif-statements"><code class="docutils literal notranslate"><span class="pre">elif</span></code> statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-can-have-as-many-elif-statements-as-we-want">We can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements as we want</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-structure-of-conditional-statements">The General Structure of Conditional Statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-conditional-statements">Exercise - Conditional Statements</a></li>
 </ul>
             </nav>
@@ -467,64 +475,241 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="conditional-statements">
-<h1>Conditional Statements<a class="headerlink" href="#conditional-statements" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="conditional-statements-if-this-happens-then-that-happens">
+<h1>Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens<a class="headerlink" href="#conditional-statements-if-this-happens-then-that-happens" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/https://odsti.github.io/cfd-textbook/conditional_statements.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
-<p>In many situations, actions and results depends on a specific set of
-conditions being satisfied. For example, individuals in randomized
-controlled trials receive the treatment if they have been assigned to
-the treatment group. A gambler makes money if she wins her bet.</p>
-<p>In this section we will learn how to describe such situations using
-code. A <em>conditional statement</em> is a multi-line statement that allows
-Python to choose among different alternatives based on the truth value
-of an expression. While conditional statements can appear anywhere,
-they appear most often within the body of a function in order to
-express alternative behavior depending on argument values.</p>
-<p>A conditional statement always begins with an <code class="docutils literal notranslate"><span class="pre">if</span></code> header, which is a single
-line followed by an indented body. The body is only executed if the expression
-directly following <code class="docutils literal notranslate"><span class="pre">if</span></code> (called the <em>if expression</em>) evaluates to a true value.
-If the <em>if expression</em> evaluates to a false value, then the body of the <code class="docutils literal notranslate"><span class="pre">if</span></code> is
-skipped.</p>
-<p>Let us start by a conditional that sets the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> to the string
-<code class="docutils literal notranslate"><span class="pre">'Positive'</span></code>  for a positive number:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<p>In lots of situations, for something to happen, something else has to be true.
+Another way of saying this is that a condition has to be met.For example:</p>
+<ul class="simple">
+<li><p>If an app user has an account, then they can login to the app.</p></li>
+<li><p>People in <a class="reference external" href="https://en.wikipedia.org/wiki/Randomized_controlled_trial">randomized controlled trials</a> get a drug treatment if they have been randomly put in the treatment group.</p></li>
+<li><p>A gambler makes money if she wins her bet.</p></li>
+</ul>
+<p>The structure of all these situations is:</p>
+<blockquote>
+<div><p>IF this happens → THEN that happens.</p>
+</div></blockquote>
+<p>On this page we will learn how to talk about these situations using
+code. A <em>conditional statement</em> is a multi-line statement that lets
+Python choose among different options based on the truth value
+of an expression.</p>
+<p>Conditional statements can appear anywhere,
+but they often appear inside functions - they can make a function do something different to different variable types (more on this later)!</p>
+<p>A conditional statement always begins with an <em><code class="docutils literal notranslate"><span class="pre">if</span></code> header</em>, which is a single
+line followed by an indented body. To show this, let’s use NumPy to simulate a
+<a class="reference external" href="https://en.wikipedia.org/wiki/Coin_flipping">coin flip</a>. Run the cell a few times
+to see a few different coin flips. The code which does the coin flip is <code class="docutils literal notranslate"><span class="pre">np.random.choice(['HEADS',</span> <span class="pre">'TAILS'])</span></code>.
+Each time we run this, it has a 50% chance of giving us the string <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code> and a 50% chance of
+giving us the string <code class="docutils literal notranslate"><span class="pre">'TAILS'</span></code> - just like flipping a real coin!:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the NumPy library.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Simulate a coin flip.</span>
+<span class="n">coinflip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'HEADS'</span><span class="p">,</span> <span class="s1">'TAILS'</span><span class="p">])</span>
+
+<span class="n">coinflip</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
+</pre></div>
+</div>
+</div>
+</div>
+<p>Imagine you and friend are making bets about our coin flip.</p>
+<p>You bet ฿20 it will land on <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code> and your friend bets ฿20 it will land on <code class="docutils literal notranslate"><span class="pre">'TAILS'</span></code>.</p>
+<p>We can get a <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> value to see who one, using comparison operators:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Did you win?</span>
+<span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'HEADS'</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Did you friend win?</span>
+<span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'TAILS'</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Re-run the three cells above a few times to see a few new bets, and whether you or your friend won them.</p>
+<p>We can represent the full structure of these bets in code using conditional statements and comparison operators together, so that we do not need to use more than one cell.</p>
+<p>To show this, remember I said that a conditional statement always begins with an <em><code class="docutils literal notranslate"><span class="pre">if</span></code> header</em>, which is a single line followed by an indented body? These are shown in the cell below, read the comments carefully.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The line below this comment is the conditional header:</span>
+<span class="k">if</span> <span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'HEADS'</span><span class="p">:</span> <span class="c1"># &lt;------ You MUST end the statment with a colon symbol (:)</span>
+    
+    <span class="c1"># This next line of code is the indented body. </span>
+    <span class="c1"># You press the ⭾ key at the start of the line, to make the indent.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'You win ฿20!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can read this conditional statement in English as:</p>
+<blockquote>
+<div><p>If the <code class="docutils literal notranslate"><span class="pre">coinflip</span></code> variable has the value <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code>, then print the string <code class="docutils literal notranslate"><span class="pre">'You</span> <span class="pre">win</span> <span class="pre">฿20!'</span></code>.</p>
+</div></blockquote>
+<p>Go back and run the cell where the <code class="docutils literal notranslate"><span class="pre">coinflip</span></code> variable is made. Then run the cell with the conditional statement.</p>
+<p>If you do this a few times, you will see that there are two things that can happen:</p>
+<ul class="simple">
+<li><p>You see the message <code class="docutils literal notranslate"><span class="pre">'You</span> <span class="pre">win</span> <span class="pre">฿20!'</span></code>.</p></li>
+<li><p>Nothing happens.</p></li>
+</ul>
+<p>You see the message if the code in the first cell <code class="docutils literal notranslate"><span class="pre">coinflip</span> <span class="pre">=</span> <span class="pre">np.random.choice(['HEADS',</span> <span class="pre">'TAILS'])</span></code> randomly gave us the string <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code>. You see nothing if it gave us <code class="docutils literal notranslate"><span class="pre">'TAILS'</span></code>.</p>
+<p>The reason for this is that the code in the indented body is <em>only run</em> if the expression
+directly following <code class="docutils literal notranslate"><span class="pre">if</span></code> (called the <em>if expression</em>) evaluates <code class="docutils literal notranslate"><span class="pre">True</span></code>. If the <em>if expression</em> evaluates to a <code class="docutils literal notranslate"><span class="pre">False</span></code>, then the body of the <code class="docutils literal notranslate"><span class="pre">if</span></code> will not run.</p>
+<p>Your friend might complain that this is not fair, because it only says when <em>you</em> win. So let’s make two conditional statements, one for you winning, and one for your friend winning. The first cell makes a new <code class="docutils literal notranslate"><span class="pre">coinflip</span></code> variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simulate a coin flip.</span>
+<span class="n">coinflip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'HEADS'</span><span class="p">,</span> <span class="s1">'TAILS'</span><span class="p">])</span>
+
+<span class="n">coinflip</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conditional statment 1.</span>
+<span class="k">if</span> <span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'HEADS'</span><span class="p">:</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'You win ฿20!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conditional statment 2.</span>
+<span class="k">if</span> <span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'TAILS'</span><span class="p">:</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Your friend wins ฿20!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your friend wins ฿20!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Run these three cells in order a few times. You’ll notice that <em>only one</em> of the conditional statements will show an output each time. This is because:</p>
+<blockquote>
+<div><p>The the <em>if expression</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, Python does NOT run the code in the indented body of that statement.</p>
+</div></blockquote>
+<p>The code in the body is only run if the <em>if expression</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>If you want to cheat your friend, you could write the code as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'You win ฿20!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You win ฿20!
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this code you will always win ฿20 because we are hard-coding the <em>if expression</em> to be <code class="docutils literal notranslate"><span class="pre">True</span></code>. Perfect, but your friend may not be happy…</p>
+<p>In contrast, this code will <em>never</em> let you win ฿20:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'You win ฿20!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can run that infinite times, and you will never win :( because we are hard-coding the <em>if expression</em> to be <code class="docutils literal notranslate"><span class="pre">False</span></code>. To see this another way, let’s use some random integer values, instead of strings. We will now write the code so that you see an output every time, even if the <em>if expression</em> is not <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<section id="conditional-statments-with-random-numbers">
+<h2>Conditional Statments with Random Numbers<a class="headerlink" href="#conditional-statments-with-random-numbers" title="Link to this heading">#</a></h2>
+<p>The NumPy function <code class="docutils literal notranslate"><span class="pre">np.random.randint()</span></code> can make random integers for us. This type of random number making is used inside video games, apps, simulation in scientific studies, and many other things.</p>
+<p>We can tell <code class="docutils literal notranslate"><span class="pre">np.random.randint()</span></code> the <code class="docutils literal notranslate"><span class="pre">low</span></code>est integer and the <code class="docutils literal notranslate"><span class="pre">high</span></code>est integer we want - note that for the <code class="docutils literal notranslate"><span class="pre">high</span></code> value, if we want our highest value to be <span class="math notranslate nohighlight">\(x\)</span> we have to make <code class="docutils literal notranslate"><span class="pre">high</span></code> equal <span class="math notranslate nohighlight">\(x + 1\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get a random integer between -10 and 10.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let look conditional that makes a variable called <code class="docutils literal notranslate"><span class="pre">result</span></code>. This variable will be the string
+<code class="docutils literal notranslate"><span class="pre">'Positive'</span></code> if our random integer is positive:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="s1">'Not sure yet'</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Positive'</span>
-<span class="n">result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Let us work through what Python will do when we evaluate the code above
 (repeated in the cell below):</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> gets the value CR of int 3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> gets the value from <code class="docutils literal notranslate"><span class="pre">np.random.randint(low</span> <span class="pre">=</span> <span class="pre">-10,</span> <span class="pre">high</span> <span class="pre">=</span> <span class="pre">11)</span></code>. This is a random <code class="docutils literal notranslate"><span class="pre">int</span></code> between -10 and +10.</p></li>
 <li><p>Python evaluates the assignment statement <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">'Not</span> <span class="pre">sure</span> <span class="pre">yet'</span></code>. The
-<code class="docutils literal notranslate"><span class="pre">result</span></code> variable has the value: CR of “Not sure yet”.</p></li>
+<code class="docutils literal notranslate"><span class="pre">result</span></code> variable has the value of <code class="docutils literal notranslate"><span class="pre">&quot;Not</span> <span class="pre">sure</span> <span class="pre">yet&quot;</span></code>.</p></li>
 <li><p>Python evaluates the <em>if expression</em> <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>.  The result is the
-CR of <code class="docutils literal notranslate"><span class="pre">True</span></code>.  This is a true value, so Python will execute the body of
+CR of <code class="docutils literal notranslate"><span class="pre">True</span></code>.  This is a true value, so Python will run the body of
 the if statement.</p></li>
 <li><p>The body of the if statement is the single line <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">'Positive'</span></code>.
 Python reassigns the <code class="docutils literal notranslate"><span class="pre">result</span></code> variable to have the value: CR of
-“Positive”.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code> first evaluates <code class="docutils literal notranslate"><span class="pre">result</span></code> to get the CR of “Positive”, and, as
+<code class="docutils literal notranslate"><span class="pre">&quot;Positive&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code> first evaluates <code class="docutils literal notranslate"><span class="pre">result</span></code> to get the CR of <code class="docutils literal notranslate"><span class="pre">&quot;Positive&quot;</span></code>, and, as
 this is an <em>expression</em>, Jupyter shows us the result.</p></li>
 </ol>
-<p>Here’s the code as a code cell:</p>
+<p>Here’s the code as a code cell - run it a few times to see what happens:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
+
 <span class="n">result</span> <span class="o">=</span> <span class="s1">'Not sure yet'</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Positive'</span>
-<span class="n">result</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Positive'
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+Not sure yet
 </pre></div>
 </div>
 </div>
@@ -532,81 +717,87 @@ this is an <em>expression</em>, Jupyter shows us the result.</p></li>
 <p>The cell shows <code class="docutils literal notranslate"><span class="pre">'Positive'</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a positive number, like <code class="docutils literal notranslate"><span class="pre">3</span></code>. But if <code class="docutils literal notranslate"><span class="pre">x</span></code>
 is not a positive number, such as <code class="docutils literal notranslate"><span class="pre">-3</span></code>, then this happens:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> has the value CR of int -3.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code> gets the value: CR of “Not sure yet”.  So far this is the same as
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> has the value of -3.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code> gets the value: <code class="docutils literal notranslate"><span class="pre">&quot;Not</span> <span class="pre">sure</span> <span class="pre">yet&quot;</span></code>.  So far this is the same as
 for the case of <code class="docutils literal notranslate"><span class="pre">x</span></code> equal to 3 above.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code>, so Python <em>skips the body of the if
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code>, so Python <em>DOES NOT RUN the body of the if
 statement</em>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code> evaluates <code class="docutils literal notranslate"><span class="pre">result</span></code> to get the CR of “Not sure yet” (because this
+<li><p><code class="docutils literal notranslate"><span class="pre">result</span></code> evaluates <code class="docutils literal notranslate"><span class="pre">result</span></code> to get the value <code class="docutils literal notranslate"><span class="pre">&quot;Not</span> <span class="pre">sure</span> <span class="pre">yet&quot;</span></code> (because this
 hasn’t changed), and Jupyter shows us the result.</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
-<span class="n">result</span> <span class="o">=</span> <span class="s1">'Not sure yet'</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="s1">'Positive'</span>
-<span class="n">result</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Not sure yet'
-</pre></div>
-</div>
-</div>
-</div>
-<p>Let us refine our cell to give <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">positive</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a negative number. We
-can do this by adding an <code class="docutils literal notranslate"><span class="pre">else</span></code> clause.  If the <em>if expression</em> evaluates to a
-true value, then Python executes the first clause, after the if expression, as
-before.  If it evaluates to a false value, Python executes the clause following
+</section>
+<section id="else-statements">
+<h2><code class="docutils literal notranslate"><span class="pre">else</span></code> statements<a class="headerlink" href="#else-statements" title="Link to this heading">#</a></h2>
+<p>Let us improve our code to give <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">positive</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a negative number. We
+can do this by adding an <code class="docutils literal notranslate"><span class="pre">else</span></code> clause.</p>
+<p>If the <em>if expression</em> evaluates to a
+<code class="docutils literal notranslate"><span class="pre">True</span></code> value, then Python runs the first clause, after the if expression, as
+before.</p>
+<p>If it evaluates to a <code class="docutils literal notranslate"><span class="pre">False</span></code> value, Python runs the clause following
 the <code class="docutils literal notranslate"><span class="pre">else</span></code>, instead.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
+
 <span class="n">result</span> <span class="o">=</span> <span class="s1">'Not sure yet'</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Positive'</span>
+    
 <span class="k">else</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Not positive'</span>
-<span class="n">result</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Not positive'
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2
+Not positive
 </pre></div>
 </div>
 </div>
 </div>
-<p>Python sets <code class="docutils literal notranslate"><span class="pre">x</span></code> to have the value CR of int -3.  It checks <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> and finds a
-false value, so it skips the first clause, and executes the clause following
-<code class="docutils literal notranslate"><span class="pre">else:</span></code>. This show <code class="docutils literal notranslate"><span class="pre">'Not</span> <span class="pre">positive'</span></code>.  If you set <code class="docutils literal notranslate"><span class="pre">x</span></code> above to 3, you get
+<p>Python sets <code class="docutils literal notranslate"><span class="pre">x</span></code> to have the value from <code class="docutils literal notranslate"><span class="pre">np.random.randint(low</span> <span class="pre">=</span> <span class="pre">-10,</span> <span class="pre">high</span> <span class="pre">=</span> <span class="pre">11)</span></code>.</p>
+<p>It checks <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> if finds a
+<code class="docutils literal notranslate"><span class="pre">False</span></code> value, then it skips the first clause, and runs the clause after
+<code class="docutils literal notranslate"><span class="pre">else:</span></code>. This shows <code class="docutils literal notranslate"><span class="pre">'Not</span> <span class="pre">positive'</span></code>.</p>
+<p>If you set <code class="docutils literal notranslate"><span class="pre">x</span></code> has a positive value, then <code class="docutils literal notranslate"><span class="pre">result</span></code> will get the value
 <code class="docutils literal notranslate"><span class="pre">Positive</span></code>, because Python will evaluate the <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">'Positive'</span></code> body, and
 not the <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">'Not</span> <span class="pre">positive</span></code> body.</p>
 <p>Notice that the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement now deals with all possible values of <code class="docutils literal notranslate"><span class="pre">x</span></code>.
 Whatever the value of <code class="docutils literal notranslate"><span class="pre">x</span></code> we with either execute <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">'Positive'</span></code> or we
-will execute <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">'Not</span> <span class="pre">positive'</span></code>.  We can now get rid of the first line
+will execute <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">'Not</span> <span class="pre">positive'</span></code>.</p>
+<p>We can now get rid of the first line
 in the function <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">'Not</span> <span class="pre">sure</span> <span class="pre">yet'</span></code> because we will always change
 <code class="docutils literal notranslate"><span class="pre">result</span></code> from that value, in the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Classify without the unnecessary first assignment.</span>
-<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Positive'</span>
+    
 <span class="k">else</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Not positive'</span>
-<span class="n">result</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Not positive'
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+Positive
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="elif-statements">
+<h2><code class="docutils literal notranslate"><span class="pre">elif</span></code> statements<a class="headerlink" href="#elif-statements" title="Link to this heading">#</a></h2>
 <p>Now imagine we prefer our cell to show <code class="docutils literal notranslate"><span class="pre">'Negative</span></code> for negative values and
 <code class="docutils literal notranslate"><span class="pre">Zero</span></code> if the input value is 0.  It seems like we need three clauses, one each
 for positive, negative and 0 values.</p>
@@ -614,24 +805,30 @@ for positive, negative and 0 values.</p>
 shorthand for the phrase “else if”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">11</span><span class="p">)</span>
+
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Positive'</span>
+    
 <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># elif short for "else if"</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Zero'</span>
+    
 <span class="k">else</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Negative'</span>
-<span class="n">result</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Negative'
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+Zero
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now the cell returns the correct answer when the input is -3, 0, or 3:</p>
+<p>Now the cell returns the correct answer when the input is <code class="docutils literal notranslate"><span class="pre">-3</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, or <code class="docutils literal notranslate"><span class="pre">3</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
@@ -641,12 +838,14 @@ shorthand for the phrase “else if”.</p>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Zero'</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Negative'</span>
-<span class="n">result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Positive'
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+Positive
 </pre></div>
 </div>
 </div>
@@ -660,31 +859,37 @@ shorthand for the phrase “else if”.</p>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Zero'</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Negative'</span>
-<span class="n">result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Zero'
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+Zero
 </pre></div>
 </div>
 </div>
 </div>
+<p>This helpful diagram (from <a class="reference external" href="https://learnlearn.uk/python/wp-content/uploads/sites/4/2016/01/if..elif_...else-decision-flowchart-python.png">here</a>) shows what is happening - the colour red means a condition is <code class="docutils literal notranslate"><span class="pre">False</span></code>, green means it is <code class="docutils literal notranslate"><span class="pre">True</span></code>:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/if_elif_else_flowchart.png" /></p>
 <p>If <code class="docutils literal notranslate"><span class="pre">x</span></code> is equal to 3, Python evaluates the if expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>.  The
-expression gives a <code class="docutils literal notranslate"><span class="pre">True</span></code> value, so Python executes the first clause, sets
+expression gives a <code class="docutils literal notranslate"><span class="pre">True</span></code> value, so Python runs the first clause, sets
 <code class="docutils literal notranslate"><span class="pre">result</span></code> to equal “Positive” and skips to the end of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.
 Finally it evaluates <code class="docutils literal notranslate"><span class="pre">result</span></code> to show “Positive”.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">x</span></code> equals 0, evaluates the if expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>.  The expression is a
 <code class="docutils literal notranslate"><span class="pre">False</span></code> value, so Python moves on to the next clause, which is <code class="docutils literal notranslate"><span class="pre">elif</span> <span class="pre">x</span> <span class="pre">==</span> <span class="pre">0:</span></code>.
 This has another <em>if expression</em> <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">0</span></code>.  It is a <code class="docutils literal notranslate"><span class="pre">True</span></code> value, so Python
-executes this clause, and sets <code class="docutils literal notranslate"><span class="pre">result</span></code> equal to “Zero”.  Then it skips to the
+runs this clause, and sets <code class="docutils literal notranslate"><span class="pre">result</span></code> equal to “Zero”.  Then it skips to the
 end of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, and shows <code class="docutils literal notranslate"><span class="pre">result</span></code>.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">x</span></code> equals -3, evaluates the if expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">0</span></code>.  The expression is a
 false value, so Python moves on to the next clause, which is <code class="docutils literal notranslate"><span class="pre">elif</span> <span class="pre">x</span> <span class="pre">==</span> <span class="pre">0</span></code>.
 This expression is also a <code class="docutils literal notranslate"><span class="pre">False</span></code> value so Python moves to the next clause,
-which is the <code class="docutils literal notranslate"><span class="pre">else:</span></code> clause, and executes that, setting <code class="docutils literal notranslate"><span class="pre">result</span></code> to be
+which is the <code class="docutils literal notranslate"><span class="pre">else:</span></code> clause, and runs that, setting <code class="docutils literal notranslate"><span class="pre">result</span></code> to be
 “Negative”. Now we are at the end of the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, and we evaluate and
 show <code class="docutils literal notranslate"><span class="pre">result</span></code>.</p>
+<section id="we-can-have-as-many-elif-statements-as-we-want">
+<h3>We can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements as we want<a class="headerlink" href="#we-can-have-as-many-elif-statements-as-we-want" title="Link to this heading">#</a></h3>
 <p>We can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> clauses as we want.  For example, imagine we
 want to classify the number into one of the following categories:</p>
 <ol class="arabic simple">
@@ -694,9 +899,10 @@ want to classify the number into one of the following categories:</p>
 <li><p>from (not including) 0 through -10 (<code class="docutils literal notranslate"><span class="pre">'Small</span> <span class="pre">negative'</span></code>)</p></li>
 <li><p>below -10 (<code class="docutils literal notranslate"><span class="pre">'Large</span> <span class="pre">negative'</span></code>)</p></li>
 </ol>
+<p>Notice that I have changed the <code class="docutils literal notranslate"><span class="pre">low</span></code> and <code class="docutils literal notranslate"><span class="pre">high</span></code> values for <code class="docutils literal notranslate"><span class="pre">np.random.randinit()</span></code>, so that it will now get integers between -100 and 100:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">101</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Large positive'</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -707,41 +913,23 @@ want to classify the number into one of the following categories:</p>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Small negative'</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s1">'Large negative'</span>
-<span class="n">result</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Large negative'
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Large negative
+-28
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="s1">'Large positive'</span>
-<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="s1">'Small positive'</span>
-<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="s1">'Zero'</span>
-<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mi">10</span><span class="p">:</span>  <span class="c1"># Greater than or equal to</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="s1">'Small negative'</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="s1">'Large negative'</span>
-<span class="n">result</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Zero'
-</pre></div>
-</div>
-</div>
-</div>
-<section id="the-general-form">
-<h2>The General Form<a class="headerlink" href="#the-general-form" title="Link to this heading">#</a></h2>
+</section>
+</section>
+<section id="the-general-structure-of-conditional-statements">
+<h2>The General Structure of Conditional Statements<a class="headerlink" href="#the-general-structure-of-conditional-statements" title="Link to this heading">#</a></h2>
 <p>A conditional statement can also have multiple clauses with multiple bodies, and only one of those bodies can ever be executed. The general format of a multi-clause conditional statement appears below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">&lt;</span><span class="k">if</span> <span class="n">expression</span><span class="o">&gt;</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="k">if</span> <span class="n">body</span><span class="o">&gt;</span>
@@ -755,9 +943,11 @@ want to classify the number into one of the following categories:</p>
 </pre></div>
 </div>
 <p>There is always exactly one <code class="docutils literal notranslate"><span class="pre">if</span></code> clause, but there can be any number of <code class="docutils literal notranslate"><span class="pre">elif</span></code>
-clauses. Python will evaluate the <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code> expressions in the headers in
+clauses.</p>
+<p>Python will evaluate the <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">elif</span></code> expressions in the headers in
 order until one is found that is a true value, then execute the corresponding
-body. The <code class="docutils literal notranslate"><span class="pre">else</span></code> clause is optional. When an <code class="docutils literal notranslate"><span class="pre">else</span></code> header is provided, its
+body. The <code class="docutils literal notranslate"><span class="pre">else</span></code> clause is optional.</p>
+<p>When an <code class="docutils literal notranslate"><span class="pre">else</span></code> header is provided, its
 <em>else body</em> is executed only if none of the header expressions of the previous
 clauses are true. The <code class="docutils literal notranslate"><span class="pre">else</span></code> clause must always come at the end (or not at
 all).</p>
@@ -836,7 +1026,13 @@ all).</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-form">The General Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statments-with-random-numbers">Conditional Statments with Random Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-statements"><code class="docutils literal notranslate"><span class="pre">else</span></code> statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elif-statements"><code class="docutils literal notranslate"><span class="pre">elif</span></code> statements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-can-have-as-many-elif-statements-as-we-want">We can have as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements as we want</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-structure-of-conditional-statements">The General Structure of Conditional Statements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-conditional-statements">Exercise - Conditional Statements</a></li>
 </ul>
   </nav></div>

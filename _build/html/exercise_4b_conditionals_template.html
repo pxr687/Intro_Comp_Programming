@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Conditional Statements Exercises &#8212; Introduction to Computer Programming</title>
+    <title>Conditional Statements Exercise &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -153,6 +153,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -251,7 +255,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -427,7 +431,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -438,11 +444,36 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Conditional Statements Exercises</h1>
+    <h1>Conditional Statements Exercise</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-cell-below-to-mark-your-answer">Run the cell below to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Run the cell below to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Run the cell below to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Run the cell below to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#go-back-to-the-textbook">Go back to the textbook:</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -452,139 +483,199 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="conditional-statements-exercises">
-<h1>Conditional Statements Exercises<a class="headerlink" href="#conditional-statements-exercises" title="Link to this heading">#</a></h1>
-<p>For background, please read the [conditional statements](/functions-conditionals/conditional_statements) introduction.</p>
-<p>This <em>if statement</em> is not properly defined, and will give a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>.
-Fix it, so that <code class="docutils literal notranslate"><span class="pre">y</span></code> gets set to “That’s right”.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="conditional-statements-exercise">
+<h1>Conditional Statements Exercise<a class="headerlink" href="#conditional-statements-exercise" title="Link to this heading">#</a></h1>
+<p>If you need help, open the <em><a class="reference external" href="https://pxr687.github.io//Intro_Comp_Programming/1_09_00_Conditional_Statements.html">textbook page</a></em> for this exercise.</p>
+<section id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
+<p><strong>IMPORTANT</strong>: If you see a comment which says <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">DO</span> <span class="pre">NOT</span> <span class="pre">CHANGE</span> <span class="pre">THIS</span> <span class="pre">CODE</span></code> then <strong>DO NOT CHANGE THAT CODE</strong>. You will probably break the exercise if you do…</p>
+<p><strong>First, run the code cell below</strong>. Click on the cell, then press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&lt;--</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="c1">#&lt;- x &gt; 4:</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
-<span class="c1">#&lt;--</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="s2">"That's right"</span>
-<span class="c1">#&lt;-</span>
-<span class="c1"># Show the value of y</span>
-<span class="n">y</span>
-<span class="c1">#&lt;-</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>"That's right"
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># RUN THIS CELL - DO NOT CHANGE THE CODE.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">notch_conditionals_1</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">jupyprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">jupyprint</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Link to this heading">#</a></h2>
+<p>An online shopping website gives customers free shipping when their order total is more than 500 baht. A developer writes the following Python code, but it contains a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>.</p>
+<p>Your job is to fix the <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> so the program runs correctly. When it runs correctly, it should ask:</p>
+<ul class="simple">
+<li><p>is <code class="docutils literal notranslate"><span class="pre">order_total</span></code> over 500 baht? Then:</p>
+<ul>
+<li><p>if yes, show the message <code class="docutils literal notranslate"><span class="pre">&quot;Free</span> <span class="pre">shipping!&quot;</span></code> and make <code class="docutils literal notranslate"><span class="pre">shipping_fee</span></code> equal 0 baht</p></li>
+<li><p>if no, show the message <code class="docutils literal notranslate"><span class="pre">&quot;Shipping</span> <span class="pre">fee</span> <span class="pre">applies.&quot;</span></code> and make <code class="docutils literal notranslate"><span class="pre">shipping_fee</span></code> equal 40 baht</p></li>
+</ul>
+</li>
+</ul>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">order_total</span></code> should equal 650 baht.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">ok</span><span class="o">.</span><span class="n">grade</span><span class="p">(</span><span class="s1">'q_1_y'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">_</span> <span class="o">=</span> <span class="n">ok</span><span class="o">.</span><span class="n">grade</span><span class="p">(</span><span class="s1">'q_1_y'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">order_total</span> <span class="o">=</span> <span class="mi">650</span>
 
-<span class="ne">NameError</span>: name 'ok' is not defined
+<span class="k">if</span> <span class="n">order_total</span> <span class="o">&gt;</span> <span class="mi">500</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Free shipping!"</span><span class="p">)</span>
+    <span class="n">shipping_fee</span> <span class="o">=</span> <span class="mi">0</span>
+    
+<span class="k">else</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Shipping fee applies."</span><span class="p">)</span>
+    <span class="n">shipping_fee</span> <span class="o">=</span> <span class="mi">40</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+    <span class="k">if</span> <span class="n">order_total</span> <span class="o">&gt;</span> <span class="mi">500</span>
+                        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: expected ':'
 </pre></div>
 </div>
 </div>
 </div>
-<p>This <code class="docutils literal notranslate"><span class="pre">if</span></code> statement also gives a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>. Fix and run. It
-should set <code class="docutils literal notranslate"><span class="pre">p</span></code> to have the value -8.</p>
+<section id="run-the-cell-below-to-mark-your-answer">
+<h3>Run the cell below to mark your answer.<a class="headerlink" href="#run-the-cell-below-to-mark-your-answer" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&lt;--</span>
-<span class="n">p</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-<span class="c1">#&lt;- if p &lt; 0</span>
-<span class="k">if</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">4</span>
-<span class="c1">#&lt;--</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
+<span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
+<span class="k">assert</span> <span class="p">(</span><span class="n">shipping_fee</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">order_total</span> <span class="o">==</span> <span class="mi">650</span><span class="p">),</span> <span class="s1">'Hmmm, it looks like your code is not doing the right thing...Either `shipping_fee` or `order_total` is not correct...'</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s1">'You passed this question! Well done!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Link to this heading">#</a></h2>
+<p>A Physics student is doing some calculations. However, their <code class="docutils literal notranslate"><span class="pre">if</span></code> statement also gives a <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>. Fix it for them. When it runs correctly, the variable <code class="docutils literal notranslate"><span class="pre">p</span></code> should have the value -8. Do not hard-code the answer, you do NOT have to change any of the numbers for this to work correctly. You just have to fix the grammar of the code…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+<span class="k">if</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="mi">0</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">4</span>
 <span class="n">p</span>
 </pre></div>
 </div>
 </div>
 </div>
+<section id="id1">
+<h3>Run the cell below to mark your answer.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">ok</span><span class="o">.</span><span class="n">grade</span><span class="p">(</span><span class="s1">'q_2_p'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
+<span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
+<span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="s1">'Hmmm, it looks like your code is not doing the right thing...'</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s1">'You passed this question! Well done!'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Another <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>; fix and run.  It should show <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">divided</span> <span class="pre">by</span> <span class="pre">6</span> <span class="pre">is</span> <span class="pre">4</span></code></p>
+</section>
+</section>
+<section id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Link to this heading">#</a></h2>
+<p>The Physics student has another <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>; please fix it for them.  It should show <code class="docutils literal notranslate"><span class="pre">&quot;x</span> <span class="pre">divided</span> <span class="pre">by</span> <span class="pre">6</span> <span class="pre">is</span> <span class="pre">4&quot;</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&lt;-</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">24</span>
-<span class="k">if</span> <span class="n">a</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-<span class="c1">#&lt;-</span>
-<span class="c1">#&lt;- result = 'a divided by 6 is 4'</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="s1">'a divided by 6 is 4'</span>
-<span class="c1">#&lt;--</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="s2">"if"</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s1">'x divided by 6 is 4'</span>
 <span class="n">result</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">ok</span><span class="o">.</span><span class="n">grade</span><span class="p">(</span><span class="s1">'q_3_result'</span><span class="p">)</span>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="s2">"if"</span> <span class="n">a</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+         <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
 </div>
-<p>We want an algorithm to choose a newspaper for someone to read
-in the dentist’s waiting room, given what we know about their
-views on Brexit.</p>
-<p>Complete the cell below.   At the top, you set <code class="docutils literal notranslate"><span class="pre">posh_voter</span></code> to be one of <code class="docutils literal notranslate"><span class="pre">'Hard</span> <span class="pre">Brexit'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Soft</span> <span class="pre">Brexit'</span></code>, <code class="docutils literal notranslate"><span class="pre">'No-deal</span> <span class="pre">Brexit</span></code>,  or <code class="docutils literal notranslate"><span class="pre">'Remain'</span></code>, or something
-else.  Complete the cell so that it displays <code class="docutils literal notranslate"><span class="pre">'Times'</span></code> if <code class="docutils literal notranslate"><span class="pre">posh_voter</span></code> has the
-value <code class="docutils literal notranslate"><span class="pre">'Soft</span> <span class="pre">Brexit'</span></code>, otherwise shows <code class="docutils literal notranslate"><span class="pre">'Telegraph'</span></code> if <code class="docutils literal notranslate"><span class="pre">posh_voter</span></code> has the
-value <code class="docutils literal notranslate"><span class="pre">'Hard</span> <span class="pre">Brexit'</span></code> otherwise shows <code class="docutils literal notranslate"><span class="pre">'Daily</span> <span class="pre">Express'</span></code> if voter is <code class="docutils literal notranslate"><span class="pre">'No-deal</span> <span class="pre">Brexit'</span></code> otherwise shows <code class="docutils literal notranslate"><span class="pre">'Guardian'</span></code> if voter has value <code class="docutils literal notranslate"><span class="pre">'Remain'</span></code>, otherwise
-shows <code class="docutils literal notranslate"><span class="pre">'Eclectic</span> <span class="pre">/</span> <span class="pre">internet?'</span></code>.</p>
-<p>Run the cell with each of the possible <code class="docutils literal notranslate"><span class="pre">posh_voter</span></code> values to check your code
-gives the right answer.</p>
+<section id="id2">
+<h3>Run the cell below to mark your answer.<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#&lt;-</span>
-<span class="n">posh_voter</span> <span class="o">=</span> <span class="s1">'Hard Brexit'</span>
-<span class="c1"># You can uncomment these lines to set the voter type.</span>
-<span class="c1"># Uncomment by removing the #  at the beginning of the line.</span>
-<span class="c1"># Remember to comment the other voter types.</span>
-<span class="c1"># Comment by adding #  at the beginning of the line.</span>
-<span class="c1"># posh_voter = 'Remain'</span>
-<span class="c1"># posh_voter = 'Hard Brexit'</span>
-<span class="c1"># posh_voter = 'No-deal Brexit'</span>
-<span class="c1"># posh_voter = 'Remain'</span>
-<span class="c1"># posh_voter = 'Undecided'</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
+<span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
+<span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">"x divided by 6 is 4"</span><span class="p">,</span> <span class="s1">'Hmmm, it looks like your code is not doing the right thing...'</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s1">'You passed this question! Well done!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Link to this heading">#</a></h2>
+<p>A Thai news website wants to recommend a newspaper to a website visitor based on their political interests. The program should choose a newspaper based on the reader’s preferred topic.</p>
+<p>A developer has written the code below, but it contains errors. Your task is to fix the code so that it runs correctly and recommends the right newspaper for each topic.</p>
+<p>Complete the code so that it displays:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'Thai</span> <span class="pre">Rath'</span></code> if <code class="docutils literal notranslate"><span class="pre">reader_interest</span></code> is ‘General News’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'Bangkok</span> <span class="pre">Post'</span></code> if <code class="docutils literal notranslate"><span class="pre">reader_interest</span></code> is ‘Business’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'Matichon'</span></code> if <code class="docutils literal notranslate"><span class="pre">reader_interest</span></code> is ‘Politics’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'Daily</span> <span class="pre">News'</span></code> if <code class="docutils literal notranslate"><span class="pre">reader_interest</span></code> is ‘Entertainment’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'Online</span> <span class="pre">News</span> <span class="pre">/</span> <span class="pre">Other'</span></code> for any other value</p></li>
+</ul>
+<p>Run the program with each possible <code class="docutils literal notranslate"><span class="pre">reader_interest</span></code> value to check that your code gives the correct result.</p>
+<p><strong>Before you fix the code</strong>: think carefully about what it should do. If you have a pen and paper, write out the code first, then fix the code below.</p>
+<p>Or if you want to, you can write your own code from new, as long as you use the right variable names and logic.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reader_interest</span> <span class="o">=</span> <span class="s1">'Business'</span>
 
-<span class="n">paper</span> <span class="o">=</span> <span class="s1">'Eclectic / internet?'</span>
-<span class="c1">#&lt;-</span>
-<span class="c1">#&lt;- if posh_voter ...</span>
-<span class="c1">#&lt;-     ...</span>
-<span class="c1">#&lt;- ...</span>
-<span class="k">if</span> <span class="n">posh_voter</span> <span class="o">==</span> <span class="s1">'Soft Brexit'</span><span class="p">:</span>
-    <span class="n">paper</span> <span class="o">=</span>  <span class="s1">'Times'</span>
-<span class="k">if</span> <span class="n">posh_voter</span> <span class="o">==</span> <span class="s1">'Hard Brexit'</span><span class="p">:</span>
-    <span class="n">paper</span> <span class="o">=</span>  <span class="s1">'Telegraph'</span>
-<span class="k">if</span> <span class="n">posh_voter</span> <span class="o">==</span> <span class="s1">'No-deal Brexit'</span><span class="p">:</span>
-    <span class="n">paper</span> <span class="o">=</span>  <span class="s1">'Daily Express'</span>
-<span class="k">if</span> <span class="n">posh_voter</span> <span class="o">==</span> <span class="s1">'Remain'</span><span class="p">:</span>
-    <span class="n">paper</span> <span class="o">=</span>  <span class="s1">'Guardian'</span>
-<span class="c1">#&lt;-</span>
+<span class="c1"># You can test other values by changing reader_interest:</span>
+<span class="c1"># 'General News'</span>
+<span class="c1"># 'Business'</span>
+<span class="c1"># 'Politics'</span>
+<span class="c1"># 'Entertainment'</span>
+<span class="c1"># 'Sports'</span>
+
+<span class="n">newspaper</span> <span class="o">=</span> <span class="s1">'Online News / Other'</span>
+
+<span class="k">if</span> <span class="n">reader_interest</span> <span class="o">=</span> <span class="s1">'General News'</span>
+    <span class="n">newspaper</span> <span class="o">=</span> <span class="s1">'Thai Rath'</span>
+
+<span class="n">elseif</span> <span class="n">reader_interest</span> <span class="o">==</span> <span class="s1">'Business'</span>
+    <span class="n">newspaper</span> <span class="o">=</span> <span class="s1">'Bangkok Post'</span>
+
+<span class="k">else</span> <span class="n">reader_interest</span> <span class="o">==</span> <span class="s1">'Politics'</span><span class="p">:</span>
+    <span class="n">newspaper</span> <span class="o">=</span> <span class="s1">'Matichon'</span>
+
+<span class="k">elif</span> <span class="n">reader_interest</span> <span class="o">==</span> <span class="s1">'Entertainment'</span><span class="p">:</span>
+    <span class="n">newspaper</span> <span class="o">=</span> <span class="s1">'Daily News'</span>
 
 <span class="c1"># Show the result</span>
-<span class="n">paper</span>
-<span class="c1">#&lt;-</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">newspaper</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<section id="id3">
+<h3>Run the cell below to mark your answer.<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
+<span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
+<span class="n">check_final_ans</span><span class="p">(</span><span class="n">reader_interest</span><span class="p">,</span> <span class="n">newspaper</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="go-back-to-the-textbook">
+<h2>Go back to the textbook:<a class="headerlink" href="#go-back-to-the-textbook" title="Link to this heading">#</a></h2>
+<p>Click <em><a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_09_00_Conditional_Statements.html">here</a></em> to go back to the course textbook.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -623,6 +714,40 @@ gives the right answer.</p>
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-cell-below-to-mark-your-answer">Run the cell below to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Run the cell below to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Run the cell below to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Run the cell below to mark your answer.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#go-back-to-the-textbook">Go back to the textbook:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

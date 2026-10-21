@@ -56,7 +56,7 @@ coinflip
 
 Imagine you and friend are making bets about our coin flip.
 
-You bet ฿20 it will land on `'HEADS'` and your friend bets ฿35 it will land on `'TAILS'`.
+You bet ฿20 it will land on `'HEADS'` and your friend bets ฿20 it will land on `'TAILS'`.
 
 We can get a `True` or `False` value to see who one, using comparison operators:
 
@@ -78,7 +78,7 @@ To show this, remember I said that a conditional statement always begins with an
 
 ```{python}
 # The line below this comment is the conditional header:
-if coinflip == 'HEADS':
+if coinflip == 'HEADS': # <------ You MUST end the statment with a colon symbol (:)
     
     # This next line of code is the indented body. 
     # You press the ⭾ key at the start of the line, to make the indent.
@@ -101,6 +101,35 @@ You see the message if the code in the first cell `coinflip = np.random.choice([
 The reason for this is that the code in the indented body is *only run* if the expression
 directly following `if` (called the *if expression*) evaluates `True`. If the *if expression* evaluates to a `False`, then the body of the `if` will not run.
 
+Your friend might complain that this is not fair, because it only says when *you* win. So let's make two conditional statements, one for you winning, and one for your friend winning. The first cell makes a new `coinflip` variable.
+
+```{python}
+# Simulate a coin flip.
+coinflip = np.random.choice(['HEADS', 'TAILS'])
+
+coinflip
+```
+
+```{python}
+# Conditional statment 1.
+if coinflip == 'HEADS':
+    
+    print('You win ฿20!')
+```
+
+```{python}
+# Conditional statment 2.
+if coinflip == 'TAILS':
+    
+    print('Your friend wins ฿20!')
+```
+
+Run these three cells in order a few times. You'll notice that *only one* of the conditional statements will show an output each time. This is because:
+
+> The the *if expression* is `False`, Python does NOT run the code in the indented body of that statement.
+
+The code in the body is only run if the *if expression* is `True`.
+
 If you want to cheat your friend, you could write the code as:
 
 ```{python}
@@ -117,9 +146,10 @@ if False:
     print('You win ฿20!')
 ```
 
-You can run that infinite times, and you will never win :( because we are hard-coding the *if expression* to be `False`.
+You can run that infinite times, and you will never win :( because we are hard-coding the *if expression* to be `False`. To see this another way, let's use some random integer values, instead of strings. We will now write the code so that you see an output every time, even if the *if expression* is not `True`.
 
-To see this another way, let's use some random integer values, instead of strings. We will now write the code so that you see an output every time, even if the *if expression* is not `True`.
+
+## Conditional Statments with Random Numbers
 
 The NumPy function `np.random.randint()` can make random integers for us. This type of random number making is used inside video games, apps, simulation in scientific studies, and many other things. 
 
@@ -293,9 +323,9 @@ print(x)
 print(result)
 ```
 
-This helpful diagram (from [here](https://learnlearn.uk/python/wp-content/uploads/sites/4/2016/01/if..elif_...else-decision-flowchart-python.png)) shows what is happening:
+This helpful diagram (from [here](https://learnlearn.uk/python/wp-content/uploads/sites/4/2016/01/if..elif_...else-decision-flowchart-python.png)) shows what is happening - the colour red means a condition is `False`, green means it is `True`:
 
-![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/if_elif_else_flowchat.PNG)
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/if_elif_else_flowchart.png)
 
 If `x` is equal to 3, Python evaluates the if expression `x < 0`.  The
 expression gives a `True` value, so Python runs the first clause, sets
@@ -326,8 +356,10 @@ want to classify the number into one of the following categories:
 1. from (not including) 0 through -10 (`'Small negative'`)
 1. below -10 (`'Large negative'`)
 
+Notice that I have changed the `low` and `high` values for `np.random.randinit()`, so that it will now get integers between -100 and 100:
+
 ```{python}
-x = -100
+x = np.random.randint(low = -100, high = 101)
 if x > 10:
     result = 'Large positive'
 elif x > 0:
@@ -338,25 +370,12 @@ elif x >= -10:  # Greater than or equal to
     result = 'Small negative'
 else:
     result = 'Large negative'
-result
+    
+print(result)
+print(x)
 ```
 
-```{python}
-x = 0
-if x > 10:
-    result = 'Large positive'
-elif x > 0:
-    result = 'Small positive'
-elif x == 0:
-    result = 'Zero'
-elif x >= -10:  # Greater than or equal to
-    result = 'Small negative'
-else:
-    result = 'Large negative'
-result
-```
-
-## The General Form
+## The General Structure of Conditional Statements
 
 A conditional statement can also have multiple clauses with multiple bodies, and only one of those bodies can ever be executed. The general format of a multi-clause conditional statement appears below:
 
@@ -373,9 +392,13 @@ else:
 ```
 
 There is always exactly one `if` clause, but there can be any number of `elif`
-clauses. Python will evaluate the `if` and `elif` expressions in the headers in
+clauses. 
+
+Python will evaluate the `if` and `elif` expressions in the headers in
 order until one is found that is a true value, then execute the corresponding
-body. The `else` clause is optional. When an `else` header is provided, its
+body. The `else` clause is optional. 
+
+When an `else` header is provided, its
 *else body* is executed only if none of the header expressions of the previous
 clauses are true. The `else` clause must always come at the end (or not at
 all).

@@ -28,14 +28,21 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-_ = ok.grade('q_1_y')
+order_total = 650
+
+if order_total > 500
+    print("Free shipping!")
+    shipping_fee = 0
+    
+else
+    print("Shipping fee applies.")
+    shipping_fee = 40
 ------------------
 
 
-[31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m _ = ok.grade([33m'q_1_y'[39m)
+  [36mCell[39m[36m [39m[32mIn[2][39m[32m, line 3[39m
+[31m    [39m[31mif order_total > 500[39m
+                        ^
+[31mSyntaxError[39m[31m:[39m expected ':'
 
-[31mNameError[39m: name 'ok' is not defined
 
