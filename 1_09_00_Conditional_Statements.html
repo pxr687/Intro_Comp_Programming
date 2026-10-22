@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -567,6 +567,16 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 </div>
+<p>Let’s show the conditional statement again, without the comments, so it is cleaner (the code is exactly the same):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'HEADS'</span><span class="p">:</span> 
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'You win ฿20!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>We can read this conditional statement in English as:</p>
 <blockquote>
 <div><p>If the <code class="docutils literal notranslate"><span class="pre">coinflip</span></code> variable has the value <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code>, then print the string <code class="docutils literal notranslate"><span class="pre">'You</span> <span class="pre">win</span> <span class="pre">฿20!'</span></code>.</p>
@@ -583,7 +593,7 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 <p>Your friend might complain that this is not fair, because it only says when <em>you</em> win. So let’s make two conditional statements, one for you winning, and one for your friend winning. The first cell makes a new <code class="docutils literal notranslate"><span class="pre">coinflip</span></code> variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simulate a coin flip.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simulate a new coin flip.</span>
 <span class="n">coinflip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'HEADS'</span><span class="p">,</span> <span class="s1">'TAILS'</span><span class="p">])</span>
 
 <span class="n">coinflip</span>
@@ -663,7 +673,7 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-9
 </pre></div>
 </div>
 </div>
@@ -709,7 +719,7 @@ this is an <em>expression</em>, Jupyter shows us the result.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
 Positive
 </pre></div>
 </div>
@@ -790,7 +800,7 @@ in the function <code class="docutils literal notranslate"><span class="pre">res
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4
 Not positive
 </pre></div>
 </div>
@@ -823,8 +833,8 @@ shorthand for the phrase “else if”.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3
-Negative
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+Positive
 </pre></div>
 </div>
 </div>
@@ -921,8 +931,8 @@ want to classify the number into one of the following categories:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Large positive
-29
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Large negative
+-88
 </pre></div>
 </div>
 </div>
