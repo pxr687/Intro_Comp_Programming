@@ -85,6 +85,14 @@ if coinflip == 'HEADS': # <------ You MUST end the statment with a colon symbol 
     print('You win ฿20!')
 ```
 
+Let's show the conditional statement again, without the comments, so it is cleaner (the code is exactly the same):
+
+```{python}
+if coinflip == 'HEADS': 
+    
+    print('You win ฿20!')
+```
+
 We can read this conditional statement in English as:
 
 > If the `coinflip` variable has the value `'HEADS'`, then print the string `'You win ฿20!'`.
@@ -104,7 +112,7 @@ directly following `if` (called the *if expression*) evaluates `True`. If the *i
 Your friend might complain that this is not fair, because it only says when *you* win. So let's make two conditional statements, one for you winning, and one for your friend winning. The first cell makes a new `coinflip` variable.
 
 ```{python}
-# Simulate a coin flip.
+# Simulate a new coin flip.
 coinflip = np.random.choice(['HEADS', 'TAILS'])
 
 coinflip

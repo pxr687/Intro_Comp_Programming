@@ -60,9 +60,9 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1_08_08_Lists';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_10_01_Lists';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_08_08_Lists.html" />
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_10_01_Lists.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -244,8 +244,8 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_01_Numbers.html">Numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_02_Strings.html">Strings (text)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_03_Changing_Data_Types.html">Changing Data Types, using the <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code> and <code class="docutils literal notranslate"><span class="pre">str()</span></code> functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_04_More_On_Numbers.html">More on Numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_08_05_More_On_Strings.html">More on Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_04_More_On_Numbers.html">More on Numbers - Scientific Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05_More_On_Strings.html">More on Strings -  Multi-line Strings &amp; F-Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_05b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06_String_Methods.html">String Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
@@ -320,7 +320,7 @@
       
       
       
-      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_08_08_Lists.ipynb" target="_blank"
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_10_01_Lists.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,7 +369,7 @@
       
       
       
-      <li><a href="_sources/1_08_08_Lists.ipynb" target="_blank"
+      <li><a href="_sources/1_10_01_Lists.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -456,7 +456,7 @@
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-list">Making a list</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-things-out-of-a-list">Getting things out of a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-things-out-of-a-list-list-indexing">Getting things out of a list - (list indexing)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-lists">Functions and lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-half-solution-for-three-girls">A half-solution for three girls</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-lists">Exercise - Lists</a></li>
@@ -485,11 +485,12 @@
 <li><p>boolean (True or False value) - <code class="docutils literal notranslate"><span class="pre">bool</span></code>.</p></li>
 </ul>
 <p>For computing and data analysis, we often want to put together several numbers, or
-strings, into a <em>group</em> or <em>collection</em>.  This allows us to collect values together into one
-place, and refer to all the values with a single name.  Now that we can refer
-to all the values with a single name, we can write code that works on the whole
-group at once.</p>
-<p>For example, remember our <a class="reference internal" href="#1_04_A_Simple_Problem."><span class="xref myst">problem of the three girls in a family of four</span></a>?</p>
+strings, into a <em>group</em> or <em>collection</em>.  This allows us to put values together into one
+place with one name.  Now that we can call all the values a single name, we can write code that works on the whole group at once.</p>
+<p>For example, remember our <a class="reference internal" href="#1_04_A_Simple_Problem."><span class="xref myst">problem of the three girls in a family of four</span></a>?:</p>
+<blockquote>
+<div><p>Imagine a family with four children. What is the probability that the family will have three girls?</p>
+</div></blockquote>
 <p>You have seen that we can make four random values, that can be <code class="docutils literal notranslate"><span class="pre">&quot;BOY&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;GIRL&quot;</span></code>, like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -525,7 +526,7 @@ group at once.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('GIRL')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('BOY')
 </pre></div>
 </div>
 </div>
@@ -549,7 +550,7 @@ group at once.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('BOY')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('GIRL')
 </pre></div>
 </div>
 </div>
@@ -558,10 +559,10 @@ group at once.</p>
 <p>Now imagine that we were trying to simulate a family of 12 children.  We would
 have to give each child their own variable <code class="docutils literal notranslate"><span class="pre">a</span></code> through <code class="docutils literal notranslate"><span class="pre">l</span></code> (small L), and then
 type 12 lines of code to see the value of the variables.</p>
-<p>That would be annoying, and impractical when we have to simulate
-larger numbers, such as the 100 families.</p>
+<p>That would be annoying when we have to simulate
+larger numbers, such as 100 families.</p>
 <p>Groups are part of the solution to this problem. Groups (also called
-<em>sequences</em> or <em>collections</em> can store lots of other values/variables.
+<em>sequences</em> or <em>collections</em>) can store lots of other values/variables.
 There are two main types of collection, in Python:</p>
 <ul class="simple">
 <li><p>Lists - <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
@@ -674,8 +675,8 @@ a value that is a list).  We confirm it is an expression by showing that the not
 </div>
 </div>
 </section>
-<section id="getting-things-out-of-a-list">
-<h2>Getting things out of a list<a class="headerlink" href="#getting-things-out-of-a-list" title="Link to this heading">#</a></h2>
+<section id="getting-things-out-of-a-list-list-indexing">
+<h2>Getting things out of a list - (list indexing)<a class="headerlink" href="#getting-things-out-of-a-list-list-indexing" title="Link to this heading">#</a></h2>
 <p>Each thing in a Python list is called a <em>list element</em>.</p>
 <p>We can get a list element out of a list by using <em>list indexing</em>.</p>
 <p>“Indexing” just means using Python commands to get data out of a <em>collection</em>. A <em>collection</em> is a Python object that can hold more than one thing (e.g. more than one text literal, more than one variable etc).</p>
@@ -780,7 +781,7 @@ The line of code below gets the *fourth* element of the list:
 <p>Python has some built-in functions that operate on sequences, like lists.</p>
 <p>A built-in function is a function that we can use in any Python session,
 without <code class="docutils literal notranslate"><span class="pre">import</span></code>ing it from a library.</p>
-<p>One of these built-in functions is <code class="docutils literal notranslate"><span class="pre">len</span></code>.  Here is a <em>call expression</em>, using
+<p>One of these built-in functions is <code class="docutils literal notranslate"><span class="pre">len</span></code> - <code class="docutils literal notranslate"><span class="pre">len</span></code> means <em>length</em>.  Here is a <em>call expression</em>, using
 the function <code class="docutils literal notranslate"><span class="pre">len</span></code> on our list:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -790,6 +791,19 @@ the function <code class="docutils literal notranslate"><span class="pre">len</s
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the values in the list.</span>
+<span class="n">my_numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3]
 </pre></div>
 </div>
 </div>
@@ -829,7 +843,7 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_('BOY'), np.str_('GIRL'), np.str_('BOY'), np.str_('BOY')]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_('BOY'), np.str_('GIRL'), np.str_('BOY'), np.str_('GIRL')]
 </pre></div>
 </div>
 </div>
@@ -844,7 +858,7 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
@@ -866,7 +880,7 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_('BOY'), np.str_('GIRL'), np.str_('BOY'), np.str_('BOY')]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_('GIRL'), np.str_('BOY'), np.str_('BOY'), np.str_('BOY')]
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
@@ -936,7 +950,7 @@ family simulated every time:</p>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-list">Making a list</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-things-out-of-a-list">Getting things out of a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-things-out-of-a-list-list-indexing">Getting things out of a list - (list indexing)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-lists">Functions and lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-half-solution-for-three-girls">A half-solution for three girls</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-lists">Exercise - Lists</a></li>

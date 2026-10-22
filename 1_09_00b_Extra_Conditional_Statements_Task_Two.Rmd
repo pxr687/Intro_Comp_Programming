@@ -72,7 +72,7 @@ If you want to, you can try to write the program yourself, using only your own c
 
 Or, if you want, there is some template code below, but you will need to fix it and add the missing parts to make it run correctly.
 
-*Think carefully about what the code should do. You might need to re-write a lot of the code, to make it work correctly.*
+*But again, think carefully about what the code should do. You might need to re-write a lot of the code, to make it work correctly.*
 
 ```{python tags=c("raises-exception")}
 # Set the player's `health` and the `correct_wire`.

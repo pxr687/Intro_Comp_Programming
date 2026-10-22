@@ -12,7 +12,7 @@ jupyter:
     name: python3
 ---
 
-# More on Strings
+# More on Strings -  Multi-line Strings & F-Strings
 
 This page will go into more detail about string data, with some useful tips and tricks for handling it in your programs...
 

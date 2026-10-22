@@ -44,11 +44,13 @@ parts:
 #      - file: 1_09_02_More_Statements_and_Keywords
 #      - file: 1_09_03_Getting_Keyboard_Input
 
-#   - caption: Collections
-#     chapters:
-      # - file: 1_08_08_Lists
-      # - file: 1_08_09_Dictionaries
-      # - file: 1_08_09_NumPy_Arrays
+  # - caption: Collections
+  #   chapters:
+  #     - file: 1_10_01_Lists
+  #     - file: 1_10_01b_List_Methods
+  #     - file: 1_10_02_Dictionaries
+  #     - file: 1_10_02b_Dictionary_Methods
+  #     - file: 1_10_03_NumPy_Arrays
 
 # Week 8 (mid-term)
 

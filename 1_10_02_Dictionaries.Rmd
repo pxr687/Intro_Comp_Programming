@@ -1,0 +1,213 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Dictionaries
+
+Dictionaries are another important type of Python collection. Dictionaries do not just have values in they, them also have *names* for these values.
+
+[SINGLE KEY/VALUE PAIRING]
+
+
+Look at the data below. It is a list of student names, and a list of the grades for each student.
+
+```{python}
+student_names = ['Limmy', 'Jen', 'Greg', 'Joseph']
+
+student_grades = [90, 87, 66, 78]
+```
+
+Each *index location* over the two lists has the data for one student.
+
+So, the data at index location 0 is the the data for the student `"Limmy"`, and his grade is `90`:
+
+```{python}
+# Show the 0 index value for `student_names`.
+student_names[0]
+```
+
+```{python}
+# Show the 0 index value for `student_grades`.
+student_grades[0]
+```
+
+Likewise, the data at index location 1 in each list is the data for a another, single student - this is the data for `"Jen"` and her grade is `87`:
+
+```{python}
+# Show the 1 index value for `student_names`.
+student_names[1]
+```
+
+```{python}
+# Show the 1 index value for `student_grades`.
+student_grades[1]
+```
+
+A dictionary let's us put all of this information in a bigger collection.
+
+To make a dictionary we:
+
+- the open curly brace character {, followed by
+
+- a sequence of zero or more key-value pairs, separated by commas, where each key-value pair consists of a key, followed by a colon :, followed by a value, followed by
+
+- the close curly brace character }.
+
+The key-value pairs are what makes dictionaries different. The cell below makes a dictionary (`student_dict`) the first key-value pair is:
+
+- `'Name' : student_names`
+
+`'Name'` is the *key* and `student_names` is the value.
+
+```{python}
+student_dict = {'Name' : student_names,
+                'Grade': student_grades}
+
+student_dict
+```
+
+The `type()` function will tell us what type of collection this is, which is a dictionary (in Python this shows as `dict`):
+
+```{python}
+type(student_dict)
+```
+
+To get data out of a dictionary, we can use the *keys* to get the *values* for that key. So if we want to see the student names we use:
+
+```{python}
+student_dict['Name']
+```
+
+...e.g. we use the name of the dictionary (`student_dict`) followed by square brackets, with the key (`Name`) inside them. We can use the same syntax to view the `Grade` values:
+
+```{python}
+student_dict['Grade']
+```
+
+Every dictionary has *methods* (like *string methods*, but for dictionaries) that can let us see the keys and values for that dictionary.
+
+We can use the `.keys()` method to see the keys:
+
+```{python}
+student_dict.keys()
+```
+
+And the `.values()` method to see the values:
+
+```{python}
+student_dict.values()
+```
+
+We can use integer indexes with dicitonaries, like we can with lists, but we need to use different syntax. Remember that our first student is called `'Limmy'`? If we try to get his data in the same way as we would for a list, we get an error:
+
+```{python tags=c("raises-exception")}
+student_dict[0]
+```
+
+We get a `KeyError` because the keys for this dictionary are `'Name'` and `'Grades'`. We tried to use the integer `0`, which is NOT a key for this dictionary.
+
+To index a dictionary, we need another pair of square brackets (`[]`) with a key in:
+
+```{python}
+# To index this, we need one square bracket with
+# the key, and one with the integer index.
+student_dict['Name'][0]
+```
+
+This is very useful because it puts all of the data in one collection, instead of having it stored in different lists. So we can get the first student's data, from the one dictionary, using:
+
+```{python}
+student_dict['Name'][0]
+```
+
+```{python}
+student_dict['Grade'][0]
+```
+
+Read the following printout closely, it gets the data for one student, and shows it in an F-string:
+
+```{python}
+print(f"Student 1 = {student_dict['Name'][0]}, their grade is {student_dict['Grade'][0]}.")
+```
+
+## Common uses of Dictionaries
+
+Dictionaries are very useful for storing data, but a time you often see them is when using [APIs](https://aws.amazon.com/what-is/api/). When you send a request to an API, often the data you get back will be a dictionary.
+
+For example, the API [JSONPlaceholder](https://jsonplaceholder.typicode.com/) can be used to generate fake data about a person. This is useful for testing software; here is a description of the API:
+
+> JSONPlaceholder is a free online REST API that you can use whenever you need some fake data: in documentation and tutorials, in code examples, in a quick prototype, or simply to test things locally.
+
+[JSON](https://en.wikipedia.org/wiki/JSON) is a type of file you will find a lot in Computer Science. JSONs are very like Python dictionaries. If you make a API call in Python, you very often get back a JSON file - the best way for Python to show the information in the JSON is as a dictionary.
+
+The cell below gets some fake data from JSONPlaceholder. The comments explain what the code is doing:
+
+```{python}
+# Import the `requests` library for talking to APIs.
+import requests
+
+# Make a string variable with the website address of the API.
+fake_data_url = "https://jsonplaceholder.typicode.com/users/1"
+
+# Send the request to the API.
+with requests.get(fake_data_url) as response:
+    fake_data_from_API = response.json() # This changes the file from JSON to a Python `dict`.
+
+# Show the data we got from the API.
+fake_data_from_API
+```
+
+And, just to show you that this is a `dict`:
+
+```{python}
+type(free_dictionary_from_API)
+```
+
+This dictionary has lots of key/value pairs. As we know from above, we can look at all the keys using the `.keys()` method:
+
+```{python}
+fake_data_from_API.keys()
+```
+
+Then we can view all of the values with the `.values()` method:
+
+```{python}
+fake_data_from_API.values()
+```
+
+## Mini-exercise:
+
+Practice indexing the dictionary that we just got from the API. You should:
+
+Get the user's name. When you do this correctly, you should see `'Leanne Graham'`.
+
+Get the user's email address. When you do this correctly, you should see `'Sincere@april.biz'`.
+
+Get the user's phone number. When you do this correctly, you should see `'1-770-736-8031 x56442'`
+
+```{python}
+# Your code here.
+```
+
+## Exercise - Dictionaries
+
+We will now do another exercise!
+
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4d_dictionaries.ipynb) to launch the exercise on Binder.
+
+
+----------------------------------------------------------
+
+[🏡](intro.md).

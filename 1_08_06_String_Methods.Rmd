@@ -132,7 +132,6 @@ It has space, and capital letters in random places. We can make it consistent us
 # Clean the email address.
 email_clean = email.strip()
 email_clean = email_clean.lower()
-email_clean = email_clean.replace(" ", "")
 email_clean
 ```
 
