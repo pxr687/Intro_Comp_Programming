@@ -1,0 +1,95 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+  orphan: true
+---
+
+# The `NoneType` Data Type
+
+There is another slightly strange data type you should know about. It can often cause confusing results. It is the `NoneType` data type.
+
+The variable `strange_datatype` is given the value `None` in the cell below:
+
+```{python}
+strange_datatype = None
+```
+
+As always look at the *colours* in the cell above. The word `None` in the cell above is green. It is not a string; for comparison, here is the string `"None"` in the cell below:
+
+```{python}
+"None"
+```
+
+The string `"None"` is red, the normal colour of text data in Python syntax.
+
+The reason that the `NoneType` data is odd is shown in the cell below:
+
+```{python}
+# Show the value of `strange_datatype`.
+strange_datatype
+```
+
+If we run that cell a few times, we see no output. This is weird, because our variable `strange_datatype` exists. We know it exists because we can use the `type()` function with it:
+
+```{python}
+type(strange_datatype)
+```
+
+We see that it does exist, and it is `NoneType` data. But when we try to view its *value* we see nothing:
+
+```{python}
+# Show the value of `strange_datatype` (again).
+strange_datatype
+```
+
+This is because the meaning of the `NoneType` is "there is no value at all!".
+
+Python uses `None` to represent *no value*. 
+
+Think of `None` as being like a ghost, *something* is there but it is not a value.
+
+If you get confusing results from some code, this can sometimes be because something has got assigned to be `None`.
+
+This can happen sometimes when we use a variable assignment statement with the `print()` function:
+
+```{python}
+wtf = print('Hello World!')
+```
+
+When we run the cell above, we see the string we expect (`'Hello World!'`), but we get something strange when we try to look at the value of the `wtf` variable:
+
+```{python}
+wtf
+```
+
+We don't see anything! This is because `wtf` is `None`:
+
+```{python}
+type(wtf)
+```
+
+We will talk more about why this happens when we start to write our own functions. But for now think about it like this:
+
+- `print()` *shows* us whatever we give it as input...
+-...it does not *return* a value to us.
+
+So, when we use `print()` in a variable assignment, we see the input we give to print, but it does not give us a *value* to store in our variable. BUT we used a variable assignment statement, but because our variable has no value, it gets set to `None`.
+
+We can get the result we expected by using this code:
+
+```{python}
+wtf = 'Hello World!'
+
+print(wtf)
+```
+
+So, lookout for `None` if you get a confusing result!

@@ -1,0 +1,230 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Lists Exercise
+
+If you need help, open the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_10_01b_List_Methods.html)_ for this exercise.
+
+## Instructions
+
+**IMPORTANT**: If you see a comment which says `# DO NOT CHANGE THIS CODE` then **DO NOT CHANGE THAT CODE**. You will probably break the exercise if you do...
+
+**First, run the code cell below**. Click on the cell, then press `Shift + Enter`:
+
+```{python}
+# RUN THIS CELL - DO NOT CHANGE THE CODE.
+import numpy as np
+from jupyprint import jupyprint
+```
+
+**ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers.
+
+If the question says "make a variable called `answer_1`" you **MUST** call you variable `answer_1` or you will **NOT** get a mark.
+
+If the question says "make a variable called `me_and_my_cat`" you **MUST** call you variable `me_and_my_cat` or you will **NOT** get a mark.
+
+### Downloading your work
+
+*Binder will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file, by clicking the button shown below:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
+
+When you download your work, you can view it by uploading the file here: https://code-format.com/ipynb-viewer
+
+Later in the course we will install Python on your own laptop...
+
+
+# Section 1 - Basic List Indexing
+
+## Question 1
+
+A software developer is organizing files for a website project. The filenames are stored in a Python list called `filenames`. Run the cell below to make the list.
+
+```{python}
+# Do not change this cell, just run it.
+filenames = ["index.html",
+             "style.css",
+             "script.js",
+             "logo.png",
+             "contact_form.py",
+             "user_guide.pdf"]
+```
+
+Write a Python statement that uses list indexing to display the first filename in the list. Save your answer in a variable called `first_element`:
+
+```{python}
+# Type your answer below.
+first_element = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert first_element == 'index.html', "That is not correct. Remeber we start counting from 0 for list indexes."
+jupyprint('Well done, that is correct!')
+```
+
+
+## Question 2
+
+Using the `filenames` list from the last question, get the *second* element of the list, and store it in a variable called `second_element`.
+
+```{python}
+# Type your answer below.
+second_element = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert second_element == 'style.css', "That is not correct. Remeber we start counting from 0 for list indexes."
+jupyprint('Well done, that is correct!')
+```
+
+
+## Question 3
+
+Again, using the `filenames` list from the last question, get the *last* element of the list, and store it in a variable called `last_element`.
+
+```{python}
+# Type your answer below.
+last_element = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert last_element == 'user_guide.pdf', "That is not correct. Remeber, you can use negative numbers to get numbers from the end of a list."
+jupyprint('Well done, that is correct!')
+```
+
+
+## Question 4
+
+Again, using the `filenames` list from the last question, get the *second from last* element of the list, and store it in a variable called `second_last_element`.
+
+```{python}
+# Type your answer below.
+second_last_element = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert second_last_element == 'contact_form.py', "That is not correct. Remeber, you can use negative numbers to get numbers from the end of a list."
+jupyprint('Well done, that is correct! Your list indexing skills are S-tier <3')
+```
+
+
+# Section 2 - List Methods
+
+## Question 5
+
+The developer creates a new file called `"database_config.py"` to store the website's database configuration.
+
+Have a look at the table of list methods from the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_10_01b_List_Methods.html)_:
+
+| Method | Description |
+| --- | --- |
+| `append()` | Adds an element at the end of the list. |
+| `clear()` | Removes all the elements from the list. |
+| `copy()` | Returns a copy of the list. |
+| `count()` | Returns the number of elements with the specified value. |
+| `extend()` | Adds the elements of a list (or any iterable) to the end of the current list. |
+| `index()` | Returns the index of the first element with the specified value. |
+| `insert()` | Adds an element at the specified position. |
+| `pop()` | Removes the element at the specified position. |
+| `remove()` | Removes the item with the specified value. |
+| `reverse()` | Reverses the order of the list. |
+| `sort()` | Sorts the list. |
+
+Write a Python statement using an appropriate list method to add this filename to the end of the `filenames` list. **Save your new list in a variable called `bigger_filenames`**.
+
+After adding the filename, display the updated list.
+
+```{python}
+# Type your answer below.
+bigger_filenames = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert bigger_filenames[-1] == 'database_config.py', "That is not correct. The last element of `bigger_filenames` should be 'database_config.py'.
+jupyprint('Well done, that is correct!')
+```
+
+
+## Question 6
+
+The developer notices that the filename `"script.js"` does not clearly say what the file is for. The file contains JavaScript code that validates user input in a contact form, so the developer wants to rename it to `"contact_form_validation.js"`.
+
+Renmae `"script.js"` in the `bigger_filenames` list to be `"contact_form_validation.js"`
+
+```{python}
+# Type your answer below.
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert bigger_filenames[2] == "contact_form_validation.js", "That is not correct. The third element of `bigger_filenames` should be 'contact_form_validation.js'."
+jupyprint('Well done, that is correct!')
+```
+
+
+## Question 7
+
+Three `new_filenames` are stored in a new list in the cell below:
+
+```{python}
+new_filenames = ["homepage_banner.jpg",
+                 "login.html",
+                 "payment_handler.py"]
+
+new_filenames
+```
+
+In the cell below, **use one line of code** to add these to the `bigger_filenames` list. You **must** do this using **list methods**. Store your answer in a variable called `even_bigger_filenames`:
+
+```{python}
+# Type your answer below.
+even_bigger_filenames = ...
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert even_bigger_filenames == ['index.html', 'style.css', 'script.js', 'logo.png', 'contact_form.py', 'user_guide.pdf', 'database_config.py', 'homepage_banner.jpg', 'login.html', 'payment_handler.py'], "That is not correct! ` even_bigger_filenames` has the wrong elements!"
+jupyprint('Well done, that is correct!')
+```
+
+
+## Go back to the textbook:
+
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/index.html)_ to go back to the course textbook.

@@ -33,6 +33,7 @@ parts:
       - file: 1_08_06b_A_Whole_Book_As_A_Variable
       - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
       - file: 1_08_07_Comparison_Operators
+      - file: 1_09_00b_None
      # - file: 1_08_05b_Fix_My_Data_Exercise
 
 # # WEEK 7
@@ -41,7 +42,7 @@ parts:
       - file: 1_09_00_Conditional_Statements
       - file: 1_09_00b_Extra_Conditional_Statements_Task
       - file: 1_09_00b_Extra_Conditional_Statements_Task_Two
-#      - file: 1_09_02_More_Statements_and_Keywords
+#      - file: 1_09_02_More_Statements_and_Keywords # import, assert, or, in , not
 #      - file: 1_09_03_Getting_Keyboard_Input
 
   # - caption: Collections

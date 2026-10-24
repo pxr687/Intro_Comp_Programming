@@ -14,10 +14,85 @@ jupyter:
 
 # List Methods
 
+Remember that a *function* is something we give an input to, it does something to that input, and gives us the result.
 
-## Exercise - List Methods
+So, the `sum()` function adds up whatever we give it:
 
-We will now do another exercise!
+```{python}
+sum([10, 2])
+```
+
+Remember also that a *method* is a *function attached to an object*. 
+
+*List methods* are methods that are attached to lists. The cell below shows a list method:
+
+```{python}
+list_of_names = ['Pete', 'Pedro', 'Pascal', 'Pedro']
+
+# This line uses the list method.
+list_of_names.count('Pedro')
+```
+
+The `.count()` part of the last line is the list method. This is the *count* method. It counts how many times something is in the list:
+
+```{python}
+list_of_names.count('Pete')
+```
+
+`list_of_names` is our object, and our method `.count()` is attached to that object.
+
+The table below shows some other list methods.
+
+| Method | Description |
+| --- | --- |
+| `append()` | Adds an element at the end of the list. |
+| `clear()` | Removes all the elements from the list. |
+| `copy()` | Returns a copy of the list. |
+| `count()` | Returns the number of elements with the specified value. |
+| `extend()` | Adds the elements of a list (or any iterable) to the end of the current list. |
+| `index()` | Returns the index of the first element with the specified value. |
+| `insert()` | Adds an element at the specified position. |
+| `pop()` | Removes the element at the specified position. |
+| `remove()` | Removes the item with the specified value. |
+| `reverse()` | Reverses the order of the list. |
+| `sort()` | Sorts the list. |
+
+Table adapted from [here](https://www.w3schools.com/python/python_lists_methods.asp).
+
+There are some important things to know about list methods (these can be confusing).
+
+Let's use the `.reverse()` method, which puts the elements of the list in the reverse order:
+
+```{python}
+list_of_names.reverse()
+```
+
+We don't see anything when we run the cell above. Why not?
+
+This is because some of the Python list methods change a list *in-place*.
+
+All this means is that they change the original list **without using a new variable assignment statement**.
+
+We did **not** use a variable assignment statement in the cell above, but the values in our original `list_of_names` list have changed order:
+
+```{python}
+list_of_names
+```
+
+When we made the list, it as shown below:
+
+```
+list_of_names = ['Pete', 'Pedro', 'Pascal', 'Pedro']
+```
+
+The `.reverse()` method changed the values *in-place*.
+
+If you forget that some list methods work this way, it can lead to strange results! Think about this as you do the exercise below.
+
+
+## Exercise - Lists & List Methods
+
+We will now do another exercise.
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 

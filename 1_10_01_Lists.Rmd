@@ -49,28 +49,34 @@ c = np.random.choice(['GIRL', 'BOY'])
 d = np.random.choice(['GIRL', 'BOY'])
 ```
 
-Here, each child number gets their own variable.
+Here, each child number gets their own variable. 
+
+*Note:* `np.str_` just tells us these are Numpy's version of `str` data...
 
 ```{python}
+# Child number 1
 a
 ```
 
 ```{python}
+# Child number 2
 b
 ```
 
 ```{python}
+# Child number 3
 c
 ```
 
 ```{python}
+# Child number 4
 d
 ```
 
 This gave us one simulated family.
 
 Now imagine that we were trying to simulate a family of 12 children.  We would
-have to give each child their own variable `a` through `l` (small L), and then
+have to give each child their own variable from `a` to `l` (small L), and then
 type 12 lines of code to see the value of the variables.
 
 That would be annoying when we have to simulate
@@ -198,8 +204,41 @@ So if you want the *fourth* element, this is at list index 3:
 ```{python}
 # Get the fourth element of `some_strings`.
 print(f'Here is the whole `some_strings` list {some_strings}')
+
+
 print('The line of code below gets the *fourth* element of the list:')
 some_strings[3]
+```
+
+We can get the last element of the list using it's integer index, counting from 0 - (we just did this in the cell above).
+
+Another way to do this is to count backwards from 0, where the last element of the list is at index -1:
+
+```{python}
+some_strings[-1]
+```
+
+We can keep counting backwards from 0 to go along the list from the end to the start. Remember that the `some_strings` list has these elements:
+
+```
+['Chris', 'Andre', 'Jessica', 'Luke']
+
+```
+
+```{python}
+some_strings[-1]
+```
+
+```{python}
+some_strings[-2]
+```
+
+```{python}
+some_strings[-3]
+```
+
+```{python}
+some_strings[-4]
 ```
 
 ## Functions and lists
@@ -247,8 +286,6 @@ family =  [np.random.choice(['GIRL', 'BOY']),
 family
 ```
 
-*Note:* `np.str_` just tells us these are Numpy's version of `str` data...
-
 We can use the *list method* `.count()` to count the number of girls in this family. Remember a method is a function attached to an object, like a list:
 
 ```{python}
@@ -274,15 +311,6 @@ family.count('GIRL')
 We *could* run this code lots of times and write down the number of girls in each family. That would answer our question "what is the probability of a family of 4 having 3 girls?".
 
 That would take a long time. On the next textbook pages, we will learn some more Python tools to make this process faster and more efficient...
-
-
-## Exercise - Lists
-
-We will now do another exercise!
-
-*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
-
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4c_lists.ipynb) to launch the exercise on Binder.
 
 
 ----------------------------------------------------------
