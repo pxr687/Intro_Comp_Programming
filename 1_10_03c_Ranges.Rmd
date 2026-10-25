@@ -1,0 +1,102 @@
+---
+jupyter:
+  anaconda-cloud: {}
+  jupytext:
+    notebook_metadata_filter: anaconda-cloud,language_info
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+  language_info:
+    codemirror_mode:
+      name: ipython
+      version: 3
+    file_extension: .py
+    mimetype: text/x-python
+    name: python
+    nbconvert_exporter: python
+    pygments_lexer: ipython3
+    version: 3.14.7
+---
+
+# Ranges
+
+```{note}
+This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/Ranges.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
+
+A *range* is an array of numbers which go up or down by the same amount. 
+
+Ranges are useful in a surprisingly large number of situations, so it is important to
+learn about them.
+
+We will use the Numpy package to make ranges.  When we load the Numpy package,
+we always rename it as `np`, like this (so we have to type less to use it)!:
+
+```{python}
+# Load the Numpy package.
+import numpy as np
+```
+
+Ranges are defined  using the `np.arange` function, which takes either
+one, two, or three arguments: a `start`, and `stop` (end), and a `step`.
+
+We can tell it exactly what we want with:
+```{python}
+np.arange(start = 1, stop = 10, step = 2)
+```
+
+If you give one input to `np.arange`, this becomes the `stop` value.  
+
+Two inputs give the `start` and`stop`, and Numpy will use a `step=1` unless you tell it to do something different.
+
+Three inputs give the `start`, `stop` and `step` explicitly.
+
+A range always includes its `start` value, but does not include its
+`stop` value.  It counts up by `step`, and it stops before it gets to
+the `stop`.
+
+Here is what `np.arange` does when you pass only one argument:
+
+    np.arange(stop): An array starting with 0, going up by 1 each step, stopping before end.
+
+
+```{python}
+np.arange(5)
+```
+
+Notice how the array starts at 0 and goes only up to 4, not to the `stop` value
+of 5.
+
+Put another way, `np.arange(stop)` makes an array of increasing
+integers starting at 0 up to *but not including* the `end` value.
+
+If you pass two arguments to `np.arange`:
+
+    np.arange(start, stop): An array of consecutive increasing integers from start, stopping before end.
+
+```{python}
+np.arange(3, 9)
+```
+
+If you pass three arguments:
+
+    np.arange(start, end, step): A range with a difference of step between each pair of consecutive values, starting from start and stopping before end.
+
+```{python}
+np.arange(3, 10, 2)
+```
+
+This array starts at 3, then takes a step of 2 to get to 8 until you get to the `stop` value of 10 - remember the `stop` value is NOT included in the array.
+
+When you tell Numpy to use a step, the start, end, and step can all be either positive
+or negative and may be whole numbers or fractions.
+
+```{python}
+np.arange(1.5, -2, -0.5)
+```

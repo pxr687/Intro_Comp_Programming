@@ -73,7 +73,7 @@ first_element = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-assert first_element == 'index.html', "That is not correct. Remeber we start counting from 0 for list indexes."
+assert first_element == 'index.html', "That is not correct. Remember we start counting from 0 for list indexes."
 jupyprint('Well done, that is correct!')
 ```
 
@@ -92,7 +92,7 @@ second_element = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-assert second_element == 'style.css', "That is not correct. Remeber we start counting from 0 for list indexes."
+assert second_element == 'style.css', "That is not correct. Remember we start counting from 0 for list indexes."
 jupyprint('Well done, that is correct!')
 ```
 
@@ -111,7 +111,7 @@ last_element = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-assert last_element == 'user_guide.pdf', "That is not correct. Remeber, you can use negative numbers to get numbers from the end of a list."
+assert last_element == 'user_guide.pdf', "That is not correct. Remember, you can use negative numbers to get numbers from the end of a list."
 jupyprint('Well done, that is correct!')
 ```
 
@@ -130,7 +130,7 @@ second_last_element = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-assert second_last_element == 'contact_form.py', "That is not correct. Remeber, you can use negative numbers to get numbers from the end of a list."
+assert second_last_element == 'contact_form.py', "That is not correct. Remember, you can use negative numbers to get numbers from the end of a list."
 jupyprint('Well done, that is correct! Your list indexing skills are S-tier <3')
 ```
 

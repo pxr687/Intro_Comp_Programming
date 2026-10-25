@@ -12,13 +12,11 @@ jupyter:
     name: python3
 ---
 
-<!-- #region -->
 # Lists
 
 ```{note}
 This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/lists.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
-
 
 Thus far we have seen the following data types:
 
@@ -36,7 +34,6 @@ For example, remember our [problem of the three girls in a family of four](1_04_
 > Imagine a family with four children. What is the probability that the family will have three girls?
 
 You have seen that we can make four random values, that can be `"BOY"` or `"GIRL"`, like this:
-<!-- #endregion -->
 
 ```{python}
 # Load the Numpy package, and rename to "np"

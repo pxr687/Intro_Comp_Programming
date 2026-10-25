@@ -16,8 +16,31 @@ jupyter:
 
 Dictionaries are another important type of Python collection. Dictionaries do not just have values in they, them also have *names* for these values.
 
-[SINGLE KEY/VALUE PAIRING]
+Here is how we make a dictionary:
 
+```{python}
+name_dict = {'Name' : 'Mary'}
+
+name_dict
+```
+
+So, to make a dictionary we:
+
+- start with a curly bracket `{`
+- put a *key* next to the `{` (our key here is `Name`)
+- put a colon (`:`) in the middle
+- put a *value* after the colon (our value here is `Mary`)
+- end with a curly bracket `}`
+
+The key and value together are called a key/value pair. Dictionaries are made of key/value pairs.
+
+The key is used to get the value which goes with it. So, we can use the key `"Name"` to get the value `"Mary"` from our dictionary. We do this by typing the name of the dictionary, then putting the key in between square brackets (`[]`):
+
+```{python}
+name_dict['Name']
+```
+
+Normally, dictionaries will have more than one key/value pair.
 
 Look at the data below. It is a list of student names, and a list of the grades for each student.
 
@@ -55,13 +78,13 @@ student_grades[1]
 
 A dictionary let's us put all of this information in a bigger collection.
 
-To make a dictionary we:
+So, again, we to make a dictionary with *more than one* key/value pair we type:
 
-- the open curly brace character {, followed by
+- the open curly brace character `{`, followed by...
 
-- a sequence of zero or more key-value pairs, separated by commas, where each key-value pair consists of a key, followed by a colon :, followed by a value, followed by
+- ...a sequence of zero or **more key-value pairs, with commas in between them**, where each key-value pair consists of a key, followed by a colon (`:`), followed by a value, followed by...
 
-- the close curly brace character }.
+- the close curly brace character `}`.
 
 The key-value pairs are what makes dictionaries different. The cell below makes a dictionary (`student_dict`) the first key-value pair is:
 
@@ -82,7 +105,7 @@ The `type()` function will tell us what type of collection this is, which is a d
 type(student_dict)
 ```
 
-To get data out of a dictionary, we can use the *keys* to get the *values* for that key. So if we want to see the student names we use:
+To get data out of a dictionary, we use the *keys* to get the *values* for that key. So if we want to see the student names we use:
 
 ```{python}
 student_dict['Name']
@@ -108,7 +131,7 @@ And the `.values()` method to see the values:
 student_dict.values()
 ```
 
-We can use integer indexes with dicitonaries, like we can with lists, but we need to use different syntax. Remember that our first student is called `'Limmy'`? If we try to get his data in the same way as we would for a list, we get an error:
+We can use integer indexes with dictionaries, like we can with lists, but we need to use different syntax. Remember that our first student is called `'Limmy'`? If we try to get his data in the same way as we would for a list, we get an error:
 
 ```{python tags=c("raises-exception")}
 student_dict[0]
@@ -138,6 +161,28 @@ Read the following printout closely, it gets the data for one student, and shows
 
 ```{python}
 print(f"Student 1 = {student_dict['Name'][0]}, their grade is {student_dict['Grade'][0]}.")
+```
+
+## Mini-exercise 1:
+
+Make a dictionary which has one key/value pair - your `"Name"` and your `"Age"`. Then index your dictionary to get just your age.
+
+```{python}
+# Your code here.
+```
+
+## Mini-exercise 2:
+
+Make a dictionary which has three key/value pairs:
+
+- the `"Name"`s of three of your classmates
+- the `"Age"`s of three of your classmates
+- the `"Nationality"` of three of your classmates
+
+Then index your dictionary to get the age of the *second* classmate.
+
+```{python}
+# Your code here.
 ```
 
 ## Common uses of Dictionaries
@@ -185,7 +230,7 @@ Then we can view all of the values with the `.values()` method:
 fake_data_from_API.values()
 ```
 
-## Mini-exercise:
+## Mini-exercise 3:
 
 Practice indexing the dictionary that we just got from the API. You should:
 
@@ -198,15 +243,6 @@ Get the user's phone number. When you do this correctly, you should see `'1-770-
 ```{python}
 # Your code here.
 ```
-
-## Exercise - Dictionaries
-
-We will now do another exercise!
-
-*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
-
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4d_dictionaries.ipynb) to launch the exercise on Binder.
-
 
 ----------------------------------------------------------
 

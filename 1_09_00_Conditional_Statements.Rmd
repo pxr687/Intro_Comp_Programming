@@ -78,7 +78,7 @@ To show this, remember I said that a conditional statement always begins with an
 
 ```{python}
 # The line below this comment is the conditional header:
-if coinflip == 'HEADS': # <------ You MUST end the statment with a colon symbol (:)
+if coinflip == 'HEADS': # <------ You MUST end the statement with a colon symbol (:)
     
     # This next line of code is the indented body. 
     # You press the ⭾ key at the start of the line, to make the indent.
@@ -119,14 +119,14 @@ coinflip
 ```
 
 ```{python}
-# Conditional statment 1.
+# Conditional statement 1.
 if coinflip == 'HEADS':
     
     print('You win ฿20!')
 ```
 
 ```{python}
-# Conditional statment 2.
+# Conditional statement 2.
 if coinflip == 'TAILS':
     
     print('Your friend wins ฿20!')
@@ -157,7 +157,7 @@ if False:
 You can run that infinite times, and you will never win :( because we are hard-coding the *if expression* to be `False`. To see this another way, let's use some random integer values, instead of strings. We will now write the code so that you see an output every time, even if the *if expression* is not `True`.
 
 
-## Conditional Statments with Random Numbers
+## Conditional Statements with Random Numbers
 
 The NumPy function `np.random.randint()` can make random integers for us. This type of random number making is used inside video games, apps, simulation in scientific studies, and many other things. 
 

@@ -51,7 +51,11 @@ parts:
   #     - file: 1_10_01b_List_Methods
   #     - file: 1_10_02_Dictionaries
   #     - file: 1_10_02b_Dictionary_Methods
-  #     - file: 1_10_03_NumPy_Arrays
+  #     - file: 1_10_02c_List_Dict_Constructors
+  #     - file: 1_10_03_NumPy_Arrays_1
+  #     - file: 1_10_03b_Ranges
+  #     - file: 1_10_03c_More_On_Arrays
+  #     - file: 1_10_03_NumPy_Arrays_2
 
 # Week 8 (mid-term)
 
