@@ -100,3 +100,5 @@ or negative and may be whole numbers or fractions.
 ```{python}
 np.arange(1.5, -2, -0.5)
 ```
+
+So, that is ranges, let's look now at how to do maths with Numpy arrays...

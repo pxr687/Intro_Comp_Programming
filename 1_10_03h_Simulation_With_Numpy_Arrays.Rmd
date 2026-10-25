@@ -21,10 +21,8 @@ problem](three_girls).
 We have more of the building blocks we need.
 
 ```{python}
-# Load the Numpy package, and rename to "np"
+# Load the Numpy package, and rename to "np".
 import numpy as np
-# Make random number generator.
-rng = np.random.default_rng()
 ```
 
 We are going to simulate 10000 families, each with four children.
@@ -49,7 +47,7 @@ simulates a family of four children, and count the number of girls.
 ```{python}
 # Make an array of four random choices from 0 or 1.
 # 1 means a girl.
-children = rng.choice([0, 1], size=4)
+children = np.random.choice([0, 1], size=4)
 # Add up the integers to count the number of girls.
 count = np.sum(children)
 count
@@ -68,7 +66,7 @@ Here that is again, in a single cell:
 
 ```{python}
 # Our first simulated family
-children = rng.choice([0, 1], size=4)
+children = np.random.choice([0, 1], size=4)
 counts[0] = np.sum(children)
 counts[:10]
 ```
@@ -78,7 +76,7 @@ To add another family, we just repeat the same, but storing the result as the
 
 ```{python}
 # Our second simulated family
-children = rng.choice([0, 1], size=4)
+children = np.random.choice([0, 1], size=4)
 counts[1] = np.sum(children)
 counts[:10]
 ```
@@ -93,12 +91,12 @@ soon](iteration).  You will recognize nearly all the code below, from the single
 
 ```{python}
 # Reset the counts array to 10000 zeros.
-counts = np.zeros(10000)
+counts = np.zeros(10_000)
 
 # Repeat the indented stuff 10000 times.
-for i in np.arange(10000):
+for i in np.arange(10_000):
     # The procedure for one family.
-    children = rng.choice([0, 1], size=4)
+    children = np.random.choice([0, 1], size=4)
     count = np.sum(children)
     # Store the count at position i in the counts array.
     counts[i] = count
@@ -165,5 +163,4 @@ n_3_girls / 10000
 
 ## For loops.
 
-The new part of this story is the *for loop*.  On to [iteration with for
-loops](iteration).
+The new part of this story is the *for loop* - we use these when we want to do something over and over and over and over and over again...  We will look at these soon...

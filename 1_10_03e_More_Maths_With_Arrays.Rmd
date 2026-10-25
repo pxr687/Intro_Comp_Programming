@@ -24,7 +24,7 @@ jupyter:
     version: 3.14.7
 ---
 
-# Maths with Arrays
+# More Maths with Arrays
 
 ```{note}
 This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/More_on_Arrays.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
@@ -107,7 +107,7 @@ array2 = np.array([6, 10, 2])
 array1 * array2
 ```
 
-This is one big advantage of Numpy arrays over Python lists, for using numeric data. This is why Numpy arrays are used a lot in data science and scientific computing.
+This is *another* big advantage of Numpy arrays over Python lists, for using numeric data. This is why Numpy arrays are used a lot in data science and scientific computing.
 
 If we try the same thing with lists, we get an error:
 

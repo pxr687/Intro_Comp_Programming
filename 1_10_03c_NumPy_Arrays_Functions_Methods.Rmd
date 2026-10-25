@@ -12,9 +12,9 @@ jupyter:
     name: python3
 ---
 
-#  NumPy (and NumPy Arrays) 2
+# NumPy Functions and Numpy Array Methods
 
-Let's look a bit deeper at some of the things we can do with Numpy arrays, Numpy array methods and Numpy functions.
+Let's look a bit deeper at some of the things we can do with Numpy arrays, Numpy functions and Numpy array methods.
 
 The main purpose of this page is to show you that *arrays are better than lists* for several reasons. You can think of Numpy arrays like the smarter, more attractive brother/sister of lists :) 
 
@@ -121,9 +121,11 @@ array_of_ages.sum()
 This is another advantage of Numpy arrays other Python lists - arrays have lots more mathematical/statistical methods, and is one of the reasons arrays are used more often than lists in data science.
 
 
-## NumPy functions for Simulation
+## NumPy functions for Randomness and Simulation
 
 **NOTE:** these functions are important for the mid-term, so pay attention ;)
+
+"Random" is an adjective which means ["happening, done, or chosen by chance"](https://dictionary.cambridge.org/dictionary/english/random#google_vignette).
 
 Numpy also has a lot of functions that are useful for *randomly selecting things* or *randomly making things*.
 
@@ -165,42 +167,8 @@ np.random.randint(low = 0, high = 2)
 
 For most simulations, it is faster to use number data instead of strings. 
 
+Now we will look at *ranges* using Numpy - we use these when we need a series of numbers that goes up or down by some amount between each number...
 
-## Boolean Arrays
-
-```{python tags=c("raises-exception")}
-my_list > 10
-```
-
-```{python}
-my_array > 10
-```
-
-## Filtering NumPy Arrays
-
-```{python}
-my_array
-```
-
-```{python}
-my_array > 10
-```
-
-```{python}
-my_array[my_array > 10]
-```
-
-```{python}
-my_array
-```
-
-```{python}
-my_array > 12
-```
-
-```{python}
-my_array[my_array > 12]
-```
 
 ----------------------------------------------------------
 

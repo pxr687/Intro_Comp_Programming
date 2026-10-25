@@ -34,7 +34,7 @@ parts:
       - file: 1_08_06b_Extra_Strings_Task_ASCII_Art
       - file: 1_08_07_Comparison_Operators
       - file: 1_09_00b_None
-     # - file: 1_08_05b_Fix_My_Data_Exercise
+      - file: 1_08_05b_Fix_My_Data_Exercise
 
 # # WEEK 7
   - caption: Statements and Conditionals
@@ -45,17 +45,22 @@ parts:
 #      - file: 1_09_02_More_Statements_and_Keywords # import, assert, or, in , not
 #      - file: 1_09_03_Getting_Keyboard_Input
 
-  # - caption: Collections
-  #   chapters:
-  #     - file: 1_10_01_Lists
-  #     - file: 1_10_01b_List_Methods
-  #     - file: 1_10_02_Dictionaries
-  #     - file: 1_10_02b_Dictionary_Methods
-  #     - file: 1_10_02c_List_Dict_Constructors
-  #     - file: 1_10_03_NumPy_Arrays_1
-  #     - file: 1_10_03b_Ranges
-  #     - file: 1_10_03c_More_On_Arrays
-  #     - file: 1_10_03_NumPy_Arrays_2
+  - caption: Collections
+    chapters:
+      - file: 1_10_01_Lists
+      - file: 1_10_01b_List_Methods
+      - file: 1_10_02_Dictionaries
+      - file: 1_10_02b_Dictionary_Methods
+      - file: 1_10_02c_List_Dict_Constructors
+      - file: 1_10_03_NumPy_Arrays_1
+      - file: 1_10_03b_Array_Indexing
+      - file: 1_10_03c_NumPy_Arrays_Functions_Methods
+      - file: 1_10_03d_Ranges
+      - file: 1_10_03e_More_Maths_With_Arrays
+      - file: 1_10_03_NumPy_Arrays_2
+      - file: 1_10_03f_Filling_Arrays
+      - file: 1_10_03g_Boolean_Arrays_Boolean_Indexing
+      - file: 1_10_03h_Simulation_With_Numpy_Arrays
 
 # Week 8 (mid-term)
 
