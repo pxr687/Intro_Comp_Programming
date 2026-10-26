@@ -66,6 +66,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="List Methods" href="1_10_01b_List_Methods.html" />
+    <link rel="prev" title="Extra Conditional Statements Task - Simple Code for a Video Game" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -251,12 +251,25 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_None.html">The <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> Data Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task.html">Extra Conditional Statements Task - Data Validation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Collections</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -459,7 +472,6 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-things-out-of-a-list-list-indexing">Getting things out of a list - (list indexing)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-lists">Functions and lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-half-solution-for-three-girls">A half-solution for three girls</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-lists">Exercise - Lists</a></li>
 </ul>
             </nav>
         </div>
@@ -507,9 +519,11 @@ place with one name.  Now that we can call all the values a single name, we can 
 </div>
 </div>
 <p>Here, each child number gets their own variable.</p>
+<p><em>Note:</em> <code class="docutils literal notranslate"><span class="pre">np.str_</span></code> just tells us these are Numpy’s version of <code class="docutils literal notranslate"><span class="pre">str</span></code> data…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Child number 1</span>
+<span class="n">a</span>
 </pre></div>
 </div>
 </div>
@@ -521,19 +535,8 @@ place with one name.  Now that we can call all the values a single name, we can 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('BOY')
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Child number 2</span>
+<span class="n">b</span>
 </pre></div>
 </div>
 </div>
@@ -545,7 +548,21 @@ place with one name.  Now that we can call all the values a single name, we can 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Child number 3</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('GIRL')
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Child number 4</span>
+<span class="n">d</span>
 </pre></div>
 </div>
 </div>
@@ -557,7 +574,7 @@ place with one name.  Now that we can call all the values a single name, we can 
 </div>
 <p>This gave us one simulated family.</p>
 <p>Now imagine that we were trying to simulate a family of 12 children.  We would
-have to give each child their own variable <code class="docutils literal notranslate"><span class="pre">a</span></code> through <code class="docutils literal notranslate"><span class="pre">l</span></code> (small L), and then
+have to give each child their own variable from <code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">l</span></code> (small L), and then
 type 12 lines of code to see the value of the variables.</p>
 <p>That would be annoying when we have to simulate
 larger numbers, such as 100 families.</p>
@@ -760,6 +777,8 @@ a value that is a list).  We confirm it is an expression by showing that the not
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the fourth element of `some_strings`.</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Here is the whole `some_strings` list </span><span class="si">{</span><span class="n">some_strings</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+
+
 <span class="nb">print</span><span class="p">(</span><span class="s1">'The line of code below gets the *fourth* element of the list:'</span><span class="p">)</span>
 <span class="n">some_strings</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
@@ -771,6 +790,73 @@ The line of code below gets the *fourth* element of the list:
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Luke'
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can get the last element of the list using it’s integer index, counting from 0 - (we just did this in the cell above).</p>
+<p>Another way to do this is to count backwards from 0, where the last element of the list is at index -1:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_strings</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Luke'
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can keep counting backwards from 0 to go along the list from the end to the start. Remember that the <code class="docutils literal notranslate"><span class="pre">some_strings</span></code> list has these elements:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">'Chris'</span><span class="p">,</span> <span class="s1">'Andre'</span><span class="p">,</span> <span class="s1">'Jessica'</span><span class="p">,</span> <span class="s1">'Luke'</span><span class="p">]</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_strings</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Luke'
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_strings</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Jessica'
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_strings</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Andre'
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_strings</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Chris'
 </pre></div>
 </div>
 </div>
@@ -848,7 +934,6 @@ family simulated every time:</p>
 </div>
 </div>
 </div>
-<p><em>Note:</em> <code class="docutils literal notranslate"><span class="pre">np.str_</span></code> just tells us these are Numpy’s version of <code class="docutils literal notranslate"><span class="pre">str</span></code> data…</p>
 <p>We can use the <em>list method</em> <code class="docutils literal notranslate"><span class="pre">.count()</span></code> to count the number of girls in this family. Remember a method is a function attached to an object, like a list:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -890,12 +975,6 @@ family simulated every time:</p>
 </div>
 <p>We <em>could</em> run this code lots of times and write down the number of girls in each family. That would answer our question “what is the probability of a family of 4 having 3 girls?”.</p>
 <p>That would take a long time. On the next textbook pages, we will learn some more Python tools to make this process faster and more efficient…</p>
-</section>
-<section id="exercise-lists">
-<h2>Exercise - Lists<a class="headerlink" href="#exercise-lists" title="Link to this heading">#</a></h2>
-<p>We will now do another exercise!</p>
-<p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
-<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4c_lists.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
 </section>
@@ -931,6 +1010,24 @@ family simulated every time:</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_09_00b_Extra_Conditional_Statements_Task_Two.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Extra Conditional Statements Task - Simple Code for a Video Game</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_10_01b_List_Methods.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">List Methods</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -953,7 +1050,6 @@ family simulated every time:</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-things-out-of-a-list-list-indexing">Getting things out of a list - (list indexing)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-and-lists">Functions and lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-half-solution-for-three-girls">A half-solution for three girls</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-lists">Exercise - Lists</a></li>
 </ul>
   </nav></div>
 

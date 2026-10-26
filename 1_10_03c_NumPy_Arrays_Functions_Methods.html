@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NumPy (and NumPy Arrays) - A Quick Introduction &#8212; Introduction to Computer Programming</title>
+    <title>NumPy Functions and Numpy Array Methods &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -60,12 +60,14 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1_10_03_NumPy_Arrays';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_10_03c_NumPy_Arrays_Functions_Methods';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_10_03_NumPy_Arrays.html" />
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_10_03c_NumPy_Arrays_Functions_Methods.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Scratchpad" href="scratchpad.html" />
+    <link rel="prev" title="Selecting Values from Numpy Arrays" href="1_10_03b_Array_Indexing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -251,12 +251,25 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_None.html">The <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> Data Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task.html">Extra Conditional Statements Task - Data Validation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Collections</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">NumPy Functions and Numpy Array Methods</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -320,7 +333,7 @@
       
       
       
-      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_10_03_NumPy_Arrays.ipynb" target="_blank"
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_10_03c_NumPy_Arrays_Functions_Methods.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,7 +382,7 @@
       
       
       
-      <li><a href="_sources/1_10_03_NumPy_Arrays.ipynb" target="_blank"
+      <li><a href="_sources/1_10_03c_NumPy_Arrays_Functions_Methods.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -445,7 +458,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>NumPy (and NumPy Arrays) - A Quick Introduction</h1>
+    <h1>NumPy Functions and Numpy Array Methods</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -455,12 +468,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-functions">NumPy functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-functions-for-simulation">NumPy functions for Simulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays">NumPy Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-arrays">Boolean Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-numpy-arrays">Filtering NumPy Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-numpy-and-numpy-arrays">Exercise - NumPy and NumPy arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-functions-for-statistics-maths">NumPy functions for statistics/maths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-functions-for-randomness-and-simulation">NumPy functions for Randomness and Simulation</a></li>
 </ul>
             </nav>
         </div>
@@ -472,18 +481,24 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="numpy-and-numpy-arrays-a-quick-introduction">
-<h1>NumPy (and NumPy Arrays) - A Quick Introduction<a class="headerlink" href="#numpy-and-numpy-arrays-a-quick-introduction" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="numpy-functions-and-numpy-array-methods">
+<h1>NumPy Functions and Numpy Array Methods<a class="headerlink" href="#numpy-functions-and-numpy-array-methods" title="Link to this heading">#</a></h1>
+<p>Let’s look a bit deeper at some of the things we can do with Numpy arrays, Numpy functions and Numpy array methods.</p>
+<p>The main purpose of this page is to show you that <em>arrays are better than lists</em> for several reasons. You can think of Numpy arrays like the smarter, more attractive brother/sister of lists :)</p>
+<p><strong>NOTE:</strong> the functions on this page are important for the mid-term, so pay attention :)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the Numpy package, and call it "np".</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>“Repeat” means to do the same thing more than once.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">np.repeat()</span></code> function will do this with strings or numbers. This is useful if we need to make lots of labels for something, or lots of numbers. Later, we will look at <a class="reference external" href="https://en.wikipedia.org/wiki/Simulation">simulation</a>, where this function can be very useful.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="n">repeats</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -494,31 +509,45 @@
 </div>
 </div>
 </div>
+<p>So, in the cell above:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">np</span></code> is the name we are using to get the Numpy library, and the code in it</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.repeat()</span></code> is the name of the Numpy function we want to use</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'Hello'</span></code> is the string we want to repeat</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">repeats</span> <span class="pre">=</span> </code> argument sets the number of repeats.</p></li>
+</ul>
+<p>If we want to repeat something 100 times then we use:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="n">repeats</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
-       'Hello', 'Hello', 'Hello'], dtype='&lt;U5')
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello', 'Hello',
+       'Hello', 'Hello'], dtype='&lt;U5')
 </pre></div>
 </div>
 </div>
 </div>
-<section id="numpy-functions">
-<h2>NumPy functions<a class="headerlink" href="#numpy-functions" title="Link to this heading">#</a></h2>
+<p>We can also use lists as an input to this function (and lots of other Numpy functions too):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Pete'</span><span class="p">,</span> <span class="s1">'Paul'</span><span class="p">,</span> <span class="s1">'John'</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a list of names.</span>
+<span class="n">list_of_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Pete'</span><span class="p">,</span> <span class="s1">'Paul'</span><span class="p">,</span> <span class="s1">'John'</span><span class="p">]</span>
 
 <span class="n">list_of_names</span>
 </pre></div>
@@ -532,40 +561,133 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">list_of_names</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Repeat the values in the list, 10 times.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">list_of_names</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Pete', 'Pete', 'Pete', 'Pete', 'Pete', 'Pete', 'Pete', 'Pete',
-       'Pete', 'Pete', 'Pete', 'Pete', 'Pete', 'Pete', 'Pete', 'Pete',
-       'Pete', 'Pete', 'Pete', 'Pete', 'Paul', 'Paul', 'Paul', 'Paul',
-       'Paul', 'Paul', 'Paul', 'Paul', 'Paul', 'Paul', 'Paul', 'Paul',
-       'Paul', 'Paul', 'Paul', 'Paul', 'Paul', 'Paul', 'Paul', 'Paul',
-       'John', 'John', 'John', 'John', 'John', 'John', 'John', 'John',
-       'John', 'John', 'John', 'John', 'John', 'John', 'John', 'John',
-       'John', 'John', 'John', 'John'], dtype='&lt;U4')
+       'Pete', 'Pete', 'Paul', 'Paul', 'Paul', 'Paul', 'Paul', 'Paul',
+       'Paul', 'Paul', 'Paul', 'Paul', 'John', 'John', 'John', 'John',
+       'John', 'John', 'John', 'John', 'John', 'John'], dtype='&lt;U4')
 </pre></div>
 </div>
 </div>
 </div>
+<p>Notice that this has not repeated the three names one after the other, like would happen if we use the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator with the <code class="docutils literal notranslate"><span class="pre">list_of_names</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">76</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">43</span><span class="p">]</span>
-
-<span class="n">list_of_ages</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_names</span> <span class="o">*</span> <span class="mi">10</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[76, 23, 43]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John',
+ 'Pete',
+ 'Paul',
+ 'John']
 </pre></div>
 </div>
 </div>
 </div>
+<p>Numpy is very flexible. If we want to repeat the names the way the <code class="docutils literal notranslate"><span class="pre">*</span></code> operator does with a list, then we can use the <code class="docutils literal notranslate"><span class="pre">np.tile()</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">list_of_ages</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Repeat the values in the list, 10 times.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">list_of_names</span><span class="p">,</span> <span class="n">reps</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Pete', 'Paul', 'John', 'Pete', 'Paul', 'John', 'Pete', 'Paul',
+       'John', 'Pete', 'Paul', 'John', 'Pete', 'Paul', 'John', 'Pete',
+       'Paul', 'John', 'Pete', 'Paul', 'John', 'Pete', 'Paul', 'John',
+       'Pete', 'Paul', 'John', 'Pete', 'Paul', 'John'], dtype='&lt;U4')
+</pre></div>
+</div>
+</div>
+</div>
+<p>Look at the <a class="reference external" href="https://numpy.org/doc/2.3/reference/generated/numpy.repeat.html">documentation for <code class="docutils literal notranslate"><span class="pre">np.repeat()</span></code></a> and the <a class="reference external" href="https://numpy.org/doc/2.3/reference/generated/numpy.tile.html">documentation for <code class="docutils literal notranslate"><span class="pre">np.tile()</span></code></a>.</p>
+<p>We control the number of repeats using <code class="docutils literal notranslate"><span class="pre">repeats</span> <span class="pre">=</span> </code> for <code class="docutils literal notranslate"><span class="pre">np.repeat()</span></code> and <code class="docutils literal notranslate"><span class="pre">reps</span> <span class="pre">=</span> </code> for <code class="docutils literal notranslate"><span class="pre">np.tile()</span></code> even though each one does the same thing! Always check the documentation if you forget what the commands are for any function.</p>
+<p><strong>So</strong>, Numpy gives us two different ways to repeat the list, depending on which output we want for whatever task we are doing.</p>
+<section id="numpy-functions-for-statistics-maths">
+<h2>NumPy functions for statistics/maths<a class="headerlink" href="#numpy-functions-for-statistics-maths" title="Link to this heading">#</a></h2>
+<p><strong>NOTE:</strong> these functions are important for the mid-term, so pay attention :)</p>
+<p>Numpy also has a lot of functions for statistics and maths, which is why Numpy is a major Python data science library. Many of these statistics/maths functions can also be used as <em>methods</em>.</p>
+<p>Imagine this is some data on student ages:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array_of_ages</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">76</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">43</span><span class="p">])</span>
+
+<span class="n">array_of_ages</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([76, 23, 43])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can calculate the average age of these students using the <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">array_of_ages</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(47.333333333333336)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can get the total age (all of the ages added together) using the <code class="docutils literal notranslate"><span class="pre">np.sum()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">array_of_ages</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(142)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember that a <em>method</em> is a function which attached to an object.</p>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">.mean()</span></code> and <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> as Numpy methods but putting them <em>after</em> the name of our array:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `.mean()` method.</span>
+<span class="n">array_of_ages</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -577,7 +699,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">list_of_ages</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The `.sum()` method.</span>
+<span class="n">array_of_ages</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -587,24 +710,78 @@
 </div>
 </div>
 </div>
+<p>This is another advantage of Numpy arrays other Python lists - arrays have lots more mathematical/statistical methods, and is one of the reasons arrays are used more often than lists in data science.</p>
 </section>
-<section id="numpy-functions-for-simulation">
-<h2>NumPy functions for Simulation<a class="headerlink" href="#numpy-functions-for-simulation" title="Link to this heading">#</a></h2>
+<section id="numpy-functions-for-randomness-and-simulation">
+<h2>NumPy functions for Randomness and Simulation<a class="headerlink" href="#numpy-functions-for-randomness-and-simulation" title="Link to this heading">#</a></h2>
+<p><strong>NOTE:</strong> these functions are important for the mid-term, so pay attention :)</p>
+<p>“Random” is an adjective which means <a class="reference external" href="https://dictionary.cambridge.org/dictionary/english/random#google_vignette">“happening, done, or chosen by chance”</a>.</p>
+<p>Numpy also has a lot of functions that are useful for <em>randomly selecting things</em> or <em>randomly making things</em>.</p>
+<p>This randomness is useful in data science, for doing <em>simulations</em> (e.g. making a model of something in the word, to test out ideas about the world). But it is also useful in lots of other areas of computing, let’s talk about some of thos in the table below:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Application</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Simulation and modeling</strong></p></td>
+<td><p>Represent uncertainty and random events in real-world systems.</p></td>
+<td><p>Simulating customer arrivals or traffic flow.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Data science</strong></p></td>
+<td><p>Generate random samples for data analysis and experimentation.</p></td>
+<td><p>Selecting a random sample from a large dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Machine learning</strong></p></td>
+<td><p>Initialize model parameters and shuffle training data.</p></td>
+<td><p>Randomly splitting data into training and testing sets.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Software testing</strong></p></td>
+<td><p>Generate random inputs to test program behavior and discover bugs.</p></td>
+<td><p>Testing a function with random numbers and strings.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Gaming</strong></p></td>
+<td><p>Create unpredictable game events and outcomes.</p></td>
+<td><p>Generating dice rolls, enemy behavior, or random maps.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Cryptography and security</strong></p></td>
+<td><p>Generate unpredictable values for security-related operations.</p></td>
+<td><p>Creating secure tokens and cryptographic keys.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Optimization algorithms</strong></p></td>
+<td><p>Explore possible solutions to complex problems.</p></td>
+<td><p>Using random search to find better model parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Statistics and probability</strong></p></td>
+<td><p>Generate samples from probability distributions.</p></td>
+<td><p>Sampling from normal, uniform, or exponential distributions.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Computer graphics</strong></p></td>
+<td><p>Introduce randomness into visual effects and procedural content.</p></td>
+<td><p>Generating particles, textures, or natural-looking landscapes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Networking and distributed systems</strong></p></td>
+<td><p>Randomize delays or retry intervals to reduce synchronized requests.</p></td>
+<td><p>Adding random backoff when reconnecting to a server.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Privacy and anonymization</strong></p></td>
+<td><p>Add controlled randomness to certain data-processing methods.</p></td>
+<td><p>Applying noise in differential privacy.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Artificial data generation</strong></p></td>
+<td><p>Create synthetic data for development and testing.</p></td>
+<td><p>Generating sample customer ages, incomes, or transaction amounts.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We have already use <code class="docutils literal notranslate"><span class="pre">np.random.choice()</span></code>. We use this function by giving it a list or array as it’s input. It then randomly selects elements from that list.</p>
+<p>For instance, we can do a simulated coin flip with:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'HEADS'</span><span class="p">,</span> <span class="s1">'TAILS'</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'HEADS'</span><span class="p">,</span> <span class="s1">'TAILS'</span><span class="p">],</span> <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -614,9 +791,13 @@
 </div>
 </div>
 </div>
+<p>Unless we tell it to use different probabilities, each element in the list has an equal chance of being selected. So in the cell above <code class="docutils literal notranslate"><span class="pre">&quot;HEADS&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;TAILS&quot;</span></code> have a 50% chance each of being chosen.</p>
+<p>We can get random integers in the same way using <code class="docutils literal notranslate"><span class="pre">np.random.randint()</span></code>. We tell it what the lowest integer we want is using the <code class="docutils literal notranslate"><span class="pre">low</span> <span class="pre">=</span> </code> argument.</p>
+<p>We tell it the highest integer we want using the <code class="docutils literal notranslate"><span class="pre">high</span> <span class="pre">=</span> </code> argument (note: we have to go one above the highest, so if the highest we want is 10, we should use <code class="docutils literal notranslate"><span class="pre">high</span> <span class="pre">=</span> <span class="pre">11</span></code>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select a random integer betwee 0 and 1.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -626,271 +807,43 @@
 </div>
 </div>
 </div>
-</section>
-<section id="numpy-arrays">
-<h2>NumPy Arrays<a class="headerlink" href="#numpy-arrays" title="Link to this heading">#</a></h2>
-<p>NumPy arrays are like the smarter, better-looking version of lists.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
-
-<span class="n">my_list</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[10, 11, 35]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
-
-<span class="n">my_array</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10, 11, 35])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(10)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(11)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(35)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(56)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">my_array</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(18.666666666666668)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(56)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(18.666666666666668)
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="boolean-arrays">
-<h2>Boolean Arrays<a class="headerlink" href="#boolean-arrays" title="Link to this heading">#</a></h2>
-<div class="cell tag_raises-exception docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">&gt;</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">my_list</span> <span class="o">&gt;</span> <span class="mi">10</span>
-
-<span class="ne">TypeError</span>: '&gt;' not supported between instances of 'list' and 'int'
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">&gt;</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True,  True])
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="filtering-numpy-arrays">
-<h2>Filtering NumPy Arrays<a class="headerlink" href="#filtering-numpy-arrays" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10, 11, 35])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">&gt;</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True,  True])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span><span class="p">[</span><span class="n">my_array</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([11, 35])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10, 11, 35])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">&gt;</span> <span class="mi">12</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span><span class="p">[</span><span class="n">my_array</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([35])
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercise-numpy-and-numpy-arrays">
-<h2>Exercise - NumPy and NumPy arrays<a class="headerlink" href="#exercise-numpy-and-numpy-arrays" title="Link to this heading">#</a></h2>
-<p>We will now do another exercise!</p>
-<p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
-<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_NumPy.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
+<p>For most simulations, it is faster to use number data instead of strings.</p>
+<p>The table below shows some of the functions from the NumPy random library:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Function</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.random.rand</span></code></p></td>
+<td><p>Generate random floats between 0 and 1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.random.random</span></code></p></td>
+<td><p>Generate random floats between 0 and 1</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.random.randint</span></code></p></td>
+<td><p>Generate random integers within a specified range</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.random.choice</span></code></p></td>
+<td><p>Randomly select elements from an array</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.random.shuffle</span></code></p></td>
+<td><p>Shuffle an array in place</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.random.permutation</span></code></p></td>
+<td><p>Return a randomly shuffled array or sequence</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.random.seed</span></code></p></td>
+<td><p>Set the random seed for reproducible results</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.random.uniform</span></code></p></td>
+<td><p>Generate random floats within a specified range</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Now we will look at <em>ranges</em> using Numpy - we use these when we need a series of numbers that goes up or down by some amount between each number…</p>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
 </section>
@@ -926,6 +879,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_10_03b_Array_Indexing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Selecting Values from Numpy Arrays</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="scratchpad.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Scratchpad</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -944,12 +915,8 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-functions">NumPy functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-functions-for-simulation">NumPy functions for Simulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-arrays">NumPy Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-arrays">Boolean Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-numpy-arrays">Filtering NumPy Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-numpy-and-numpy-arrays">Exercise - NumPy and NumPy arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-functions-for-statistics-maths">NumPy functions for statistics/maths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-functions-for-randomness-and-simulation">NumPy functions for Randomness and Simulation</a></li>
 </ul>
   </nav></div>
 

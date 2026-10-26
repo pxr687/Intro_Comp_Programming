@@ -66,6 +66,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The list() and dict() constructors" href="1_10_02c_List_Dict_Constructors.html" />
+    <link rel="prev" title="Dictionaries" href="1_10_02_Dictionaries.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -251,12 +251,25 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_None.html">The <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> Data Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task.html">Extra Conditional Statements Task - Data Validation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Collections</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -455,7 +468,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-dictionary-methods">Exercise - Dictionary Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-methods-practice">Dictionary methods practice</a></li>
 </ul>
             </nav>
         </div>
@@ -469,11 +482,59 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="dictionary-methods">
 <h1>Dictionary Methods<a class="headerlink" href="#dictionary-methods" title="Link to this heading">#</a></h1>
-<section id="exercise-dictionary-methods">
-<h2>Exercise - Dictionary Methods<a class="headerlink" href="#exercise-dictionary-methods" title="Link to this heading">#</a></h2>
-<p>We will now do another exercise!</p>
-<p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
-<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4d_dictionaries.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
+<p>Like lists, dictionaries also have lots of methods:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">clear()</span></code></p></td>
+<td><p>Removes all the elements from the dictionary</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">copy()</span></code></p></td>
+<td><p>Returns a copy of the dictionary</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fromkeys()</span></code></p></td>
+<td><p>Returns a dictionary with the specified keys and value</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">get()</span></code></p></td>
+<td><p>Returns the value of the specified key</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">items()</span></code></p></td>
+<td><p>Returns a list containing a tuple for each key-value pair</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">keys()</span></code></p></td>
+<td><p>Returns a list containing the dictionary’s keys</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pop()</span></code></p></td>
+<td><p>Removes the element with the specified key</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">popitem()</span></code></p></td>
+<td><p>Removes the last inserted key-value pair</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">setdefault()</span></code></p></td>
+<td><p>Returns the value of the specified key. If the key does not exist, inserts the key with the specified value</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">update()</span></code></p></td>
+<td><p>Updates the dictionary with the specified key-value pairs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table adapted from <a class="reference external" href="https://www.w3schools.com/python/python_ref_dictionary.asp">here</a>.</p>
+<section id="dictionary-methods-practice">
+<h2>Dictionary methods practice<a class="headerlink" href="#dictionary-methods-practice" title="Link to this heading">#</a></h2>
+<p>These are similar to list methods, so we will not practice them with a full exercise.</p>
+<p>However, you can practice making a new dictionary, and using the dictionary methods, in the cell below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
 </section>
@@ -509,6 +570,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_10_02_Dictionaries.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dictionaries</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_10_02c_List_Dict_Constructors.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -527,7 +606,7 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-dictionary-methods">Exercise - Dictionary Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary-methods-practice">Dictionary methods practice</a></li>
 </ul>
   </nav></div>
 

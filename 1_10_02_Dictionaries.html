@@ -66,6 +66,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dictionary Methods" href="1_10_02b_Dictionary_Methods.html" />
+    <link rel="prev" title="List Methods" href="1_10_01b_List_Methods.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -251,12 +251,25 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_None.html">The <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> Data Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task.html">Extra Conditional Statements Task - Data Validation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Collections</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -455,9 +468,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-1">Mini-exercise 1:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-2">Mini-exercise 2:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-uses-of-dictionaries">Common uses of Dictionaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise">Mini-exercise:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-dictionaries">Exercise - Dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-3">Mini-exercise 3:</a></li>
 </ul>
             </nav>
         </div>
@@ -472,7 +486,44 @@
   <section class="tex2jax_ignore mathjax_ignore" id="dictionaries">
 <h1>Dictionaries<a class="headerlink" href="#dictionaries" title="Link to this heading">#</a></h1>
 <p>Dictionaries are another important type of Python collection. Dictionaries do not just have values in they, them also have <em>names</em> for these values.</p>
-<p>[SINGLE KEY/VALUE PAIRING]</p>
+<p>Here is how we make a dictionary:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Name'</span> <span class="p">:</span> <span class="s1">'Mary'</span><span class="p">}</span>
+
+<span class="n">name_dict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'Name': 'Mary'}
+</pre></div>
+</div>
+</div>
+</div>
+<p>So, to make a dictionary we:</p>
+<ul class="simple">
+<li><p>start with a curly bracket <code class="docutils literal notranslate"><span class="pre">{</span></code></p></li>
+<li><p>put a <em>key</em> next to the <code class="docutils literal notranslate"><span class="pre">{</span></code> (our key here is <code class="docutils literal notranslate"><span class="pre">Name</span></code>)</p></li>
+<li><p>put a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) in the middle</p></li>
+<li><p>put a <em>value</em> after the colon (our value here is <code class="docutils literal notranslate"><span class="pre">Mary</span></code>)</p></li>
+<li><p>end with a curly bracket <code class="docutils literal notranslate"><span class="pre">}</span></code></p></li>
+</ul>
+<p>The key and value together are called a key/value pair. Dictionaries are made of key/value pairs.</p>
+<p>The key is used to get the value which goes with it. So, we can use the key <code class="docutils literal notranslate"><span class="pre">&quot;Name&quot;</span></code> to get the value <code class="docutils literal notranslate"><span class="pre">&quot;Mary&quot;</span></code> from our dictionary. We do this by typing the name of the dictionary, then putting the key in between square brackets (<code class="docutils literal notranslate"><span class="pre">[]</span></code>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name_dict</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'Mary'
+</pre></div>
+</div>
+</div>
+</div>
+<p>Normally, dictionaries will have more than one key/value pair.</p>
 <p>Look at the data below. It is a list of student names, and a list of the grades for each student.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -539,11 +590,11 @@
 </div>
 </div>
 <p>A dictionary let’s us put all of this information in a bigger collection.</p>
-<p>To make a dictionary we:</p>
+<p>So, again, we to make a dictionary with <em>more than one</em> key/value pair we type:</p>
 <ul class="simple">
-<li><p>the open curly brace character {, followed by</p></li>
-<li><p>a sequence of zero or more key-value pairs, separated by commas, where each key-value pair consists of a key, followed by a colon :, followed by a value, followed by</p></li>
-<li><p>the close curly brace character }.</p></li>
+<li><p>the open curly brace character <code class="docutils literal notranslate"><span class="pre">{</span></code>, followed by…</p></li>
+<li><p>…a sequence of zero or <strong>more key-value pairs, with commas in between them</strong>, where each key-value pair consists of a key, followed by a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>), followed by a value, followed by…</p></li>
+<li><p>the close curly brace character <code class="docutils literal notranslate"><span class="pre">}</span></code>.</p></li>
 </ul>
 <p>The key-value pairs are what makes dictionaries different. The cell below makes a dictionary (<code class="docutils literal notranslate"><span class="pre">student_dict</span></code>) the first key-value pair is:</p>
 <ul class="simple">
@@ -578,7 +629,7 @@
 </div>
 </div>
 </div>
-<p>To get data out of a dictionary, we can use the <em>keys</em> to get the <em>values</em> for that key. So if we want to see the student names we use:</p>
+<p>To get data out of a dictionary, we use the <em>keys</em> to get the <em>values</em> for that key. So if we want to see the student names we use:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">student_dict</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">]</span>
@@ -631,7 +682,7 @@
 </div>
 </div>
 </div>
-<p>We can use integer indexes with dicitonaries, like we can with lists, but we need to use different syntax. Remember that our first student is called <code class="docutils literal notranslate"><span class="pre">'Limmy'</span></code>? If we try to get his data in the same way as we would for a list, we get an error:</p>
+<p>We can use integer indexes with dictionaries, like we can with lists, but we need to use different syntax. Remember that our first student is called <code class="docutils literal notranslate"><span class="pre">'Limmy'</span></code>? If we try to get his data in the same way as we would for a list, we get an error:</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">student_dict</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -641,7 +692,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">student_dict</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="ne">KeyError</span>: 0
@@ -703,6 +754,34 @@
 </div>
 </div>
 </div>
+<section id="mini-exercise-1">
+<h2>Mini-exercise 1:<a class="headerlink" href="#mini-exercise-1" title="Link to this heading">#</a></h2>
+<p>Make a dictionary which has one key/value pair - your <code class="docutils literal notranslate"><span class="pre">&quot;Name&quot;</span></code> and your <code class="docutils literal notranslate"><span class="pre">&quot;Age&quot;</span></code>. Then index your dictionary to get just your age.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mini-exercise-2">
+<h2>Mini-exercise 2:<a class="headerlink" href="#mini-exercise-2" title="Link to this heading">#</a></h2>
+<p>Make a dictionary which has three key/value pairs:</p>
+<ul class="simple">
+<li><p>the <code class="docutils literal notranslate"><span class="pre">&quot;Name&quot;</span></code>s of three of your classmates</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">&quot;Age&quot;</span></code>s of three of your classmates</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">&quot;Nationality&quot;</span></code> of three of your classmates</p></li>
+</ul>
+<p>Then index your dictionary to get the age of the <em>second</em> classmate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="common-uses-of-dictionaries">
 <h2>Common uses of Dictionaries<a class="headerlink" href="#common-uses-of-dictionaries" title="Link to this heading">#</a></h2>
 <p>Dictionaries are very useful for storing data, but a time you often see them is when using <a class="reference external" href="https://aws.amazon.com/what-is/api/">APIs</a>. When you send a request to an API, often the data you get back will be a dictionary.</p>
@@ -758,7 +837,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">type</span><span class="p">(</span><span class="n">free_dictionary_from_API</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name 'free_dictionary_from_API' is not defined
@@ -773,11 +852,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys(['id', 'name', 'username', 'email', 'address', 'phone', 'website', 'company'])
-</pre></div>
-</div>
-</div>
 </div>
 <p>Then we can view all of the values with the <code class="docutils literal notranslate"><span class="pre">.values()</span></code> method:</p>
 <div class="cell docutils container">
@@ -786,15 +860,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([1, 'Leanne Graham', 'Bret', 'Sincere@april.biz', {'street': 'Kulas Light', 'suite': 'Apt. 556', 'city': 'Gwenborough', 'zipcode': '92998-3874', 'geo': {'lat': '-37.3159', 'lng': '81.1496'}}, '1-770-736-8031 x56442', 'hildegard.org', {'name': 'Romaguera-Crona', 'catchPhrase': 'Multi-layered client-server neural-net', 'bs': 'harness real-time e-markets'}])
-</pre></div>
-</div>
-</div>
 </div>
 </section>
-<section id="mini-exercise">
-<h2>Mini-exercise:<a class="headerlink" href="#mini-exercise" title="Link to this heading">#</a></h2>
+<section id="mini-exercise-3">
+<h2>Mini-exercise 3:<a class="headerlink" href="#mini-exercise-3" title="Link to this heading">#</a></h2>
 <p>Practice indexing the dictionary that we just got from the API. You should:</p>
 <p>Get the user’s name. When you do this correctly, you should see <code class="docutils literal notranslate"><span class="pre">'Leanne</span> <span class="pre">Graham'</span></code>.</p>
 <p>Get the user’s email address. When you do this correctly, you should see <code class="docutils literal notranslate"><span class="pre">'Sincere&#64;april.biz'</span></code>.</p>
@@ -806,12 +875,6 @@
 </div>
 </div>
 </div>
-</section>
-<section id="exercise-dictionaries">
-<h2>Exercise - Dictionaries<a class="headerlink" href="#exercise-dictionaries" title="Link to this heading">#</a></h2>
-<p>We will now do another exercise!</p>
-<p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
-<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4d_dictionaries.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
 </section>
@@ -847,6 +910,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_10_01b_List_Methods.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">List Methods</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_10_02b_Dictionary_Methods.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dictionary Methods</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -865,9 +946,10 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-1">Mini-exercise 1:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-2">Mini-exercise 2:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-uses-of-dictionaries">Common uses of Dictionaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise">Mini-exercise:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-dictionaries">Exercise - Dictionaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mini-exercise-3">Mini-exercise 3:</a></li>
 </ul>
   </nav></div>
 
