@@ -66,6 +66,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dictionaries" href="1_10_02_Dictionaries.html" />
+    <link rel="prev" title="Lists" href="1_10_01_Lists.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -251,12 +251,25 @@
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_None.html">The <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> Data Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task.html">Extra Conditional Statements Task - Data Validation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Collections</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">List Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -455,7 +468,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-list-methods">Exercise - List Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-methods-and-the-nonetype">List Methods and the <code class="docutils literal notranslate"><span class="pre">NoneType</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-lists-list-methods">Exercise - Lists &amp; List Methods</a></li>
 </ul>
             </nav>
         </div>
@@ -469,9 +483,200 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="list-methods">
 <h1>List Methods<a class="headerlink" href="#list-methods" title="Link to this heading">#</a></h1>
-<section id="exercise-list-methods">
-<h2>Exercise - List Methods<a class="headerlink" href="#exercise-list-methods" title="Link to this heading">#</a></h2>
-<p>We will now do another exercise!</p>
+<p>Remember that a <em>function</em> is something we give an input to, it does something to that input, and gives us the result.</p>
+<p>So, the <code class="docutils literal notranslate"><span class="pre">sum()</span></code> function adds up whatever we give it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember also that a <em>method</em> is a <em>function attached to an object</em>.</p>
+<p><em>List methods</em> are methods that are attached to lists. The cell below shows a list method:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Pete'</span><span class="p">,</span> <span class="s1">'Pedro'</span><span class="p">,</span> <span class="s1">'Pascal'</span><span class="p">,</span> <span class="s1">'Pedro'</span><span class="p">]</span>
+
+<span class="c1"># This line uses the list method.</span>
+<span class="n">list_of_names</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'Pedro'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.count()</span></code> part of the last line is the list method. This is the <em>count</em> method. It counts how many times something is in the list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_names</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'Pete'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">list_of_names</span></code> is our object, and our method <code class="docutils literal notranslate"><span class="pre">.count()</span></code> is attached to that object.</p>
+<p>The table below shows some other list methods.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">append()</span></code></p></td>
+<td><p>Adds an element at the end of the list.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">clear()</span></code></p></td>
+<td><p>Removes all the elements from the list.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">copy()</span></code></p></td>
+<td><p>Returns a copy of the list.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">count()</span></code></p></td>
+<td><p>Returns the number of elements with the specified value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extend()</span></code></p></td>
+<td><p>Adds the elements of a list (or any iterable) to the end of the current list.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">index()</span></code></p></td>
+<td><p>Returns the index of the first element with the specified value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code></p></td>
+<td><p>Adds an element at the specified position.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pop()</span></code></p></td>
+<td><p>Removes the element at the specified position.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">remove()</span></code></p></td>
+<td><p>Removes the item with the specified value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">reverse()</span></code></p></td>
+<td><p>Reverses the order of the list.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sort()</span></code></p></td>
+<td><p>Sorts the list.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table adapted from <a class="reference external" href="https://www.w3schools.com/python/python_lists_methods.asp">here</a>.</p>
+<p>There are some important things to know about list methods (these can be confusing).</p>
+<p>Let’s use the <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> method, which puts the elements of the list in the reverse order:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_names</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We don’t see anything when we run the cell above. Why not?</p>
+<p>This is because some of the Python list methods change a list <em>in-place</em>.</p>
+<p>All this means is that they change the original list <strong>without using a new variable assignment statement</strong>.</p>
+<p>We did <strong>not</strong> use a variable assignment statement in the cell above, but the values in our original <code class="docutils literal notranslate"><span class="pre">list_of_names</span></code> list have changed order:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['Pedro', 'Pascal', 'Pedro', 'Pete']
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we made the list, it as shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Pete'</span><span class="p">,</span> <span class="s1">'Pedro'</span><span class="p">,</span> <span class="s1">'Pascal'</span><span class="p">,</span> <span class="s1">'Pedro'</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> method changed the values <em>in-place</em>.</p>
+<p>If you forget that some list methods work this way, it can lead to strange results! Think about this as you do the exercise at the end of the page. We’ll look at one possible strange result in the next section…</p>
+<section id="list-methods-and-the-nonetype">
+<h2>List Methods and the <code class="docutils literal notranslate"><span class="pre">NoneType</span></code><a class="headerlink" href="#list-methods-and-the-nonetype" title="Link to this heading">#</a></h2>
+<p>Because lots of the list methods work in-place, this can make the <code class="docutils literal notranslate"><span class="pre">None</span></code> data type.</p>
+<p>Most often, this happens in variable assignment statements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_list_of_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Jane'</span><span class="p">,</span> <span class="s1">'James'</span><span class="p">,</span> <span class="s1">'Julian'</span><span class="p">]</span>
+
+<span class="n">new_list_of_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['Jane', 'James', 'Julian']
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s say we want to <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> this list, and save the result in a new variable caleld <code class="docutils literal notranslate"><span class="pre">reversed_new_list_of_names</span></code>. We do NOT want to change the <code class="docutils literal notranslate"><span class="pre">new_list_of_names</span></code> list, we want a new variable. We might try this code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reversed_new_list_of_names</span> <span class="o">=</span> <span class="n">new_list_of_names</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>That <em>looks</em> like it worked, that <em>feels</em> like it worked. But when we try to view the new list, something weird happens:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reversed_new_list_of_names</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nothing happens. Our new variable <code class="docutils literal notranslate"><span class="pre">reversed_new_list_of_names</span></code> doesn’t show an output. Remember from the <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_09_00b_None.html"><code class="docutils literal notranslate"><span class="pre">None</span></code> page</a> that if you get this weird result, it is often because some variable is <code class="docutils literal notranslate"><span class="pre">None</span></code> by accident?</p>
+<p>That is what has happened here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">reversed_new_list_of_names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NoneType
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is because the <code class="docutils literal notranslate"><span class="pre">.reverse()</span></code> method works in-place on the original list that we used it on:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_list_of_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['Julian', 'James', 'Jane']
+</pre></div>
+</div>
+</div>
+</div>
+<p>The original <code class="docutils literal notranslate"><span class="pre">new_list_of_names</span></code> was in this order: <code class="docutils literal notranslate"><span class="pre">['Jane',</span> <span class="pre">'James',</span> <span class="pre">'Julian']</span></code>.</p>
+<p><strong>Warning</strong>: think about what has happened here:</p>
+<ul class="simple">
+<li><p>we tried to reverse the list and store it in <code class="docutils literal notranslate"><span class="pre">reversed_new_list_of_names</span></code>, we did not want to change the <code class="docutils literal notranslate"><span class="pre">new_list_of_names_variable</span></code></p></li>
+<li><p>we tried to do this with a variable assignment statement: <code class="docutils literal notranslate"><span class="pre">reversed_new_list_of_names</span> <span class="pre">=</span> <span class="pre">new_list_of_names.reverse()</span></code></p></li>
+<li><p>what has happened is that we have accidentally reversed our first variable <code class="docutils literal notranslate"><span class="pre">new_list_of_names</span></code>, and our new variable <code class="docutils literal notranslate"><span class="pre">reversed_list_of_names</span></code> is <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>. This is NOT what we wanted to happen.</p></li>
+</ul>
+<p>It is important to know about this when using list methods, to stop your code becoming a total mess full of variables with the wrong values and lots of <code class="docutils literal notranslate"><span class="pre">None</span></code>s!</p>
+</section>
+<section id="exercise-lists-list-methods">
+<h2>Exercise - Lists &amp; List Methods<a class="headerlink" href="#exercise-lists-list-methods" title="Link to this heading">#</a></h2>
+<p>We will now do another exercise.</p>
 <p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
 <p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4c_lists.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
 <hr class="docutils" />
@@ -509,6 +714,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_10_01_Lists.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lists</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_10_02_Dictionaries.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dictionaries</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -527,7 +750,8 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-list-methods">Exercise - List Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-methods-and-the-nonetype">List Methods and the <code class="docutils literal notranslate"><span class="pre">NoneType</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-lists-list-methods">Exercise - Lists &amp; List Methods</a></li>
 </ul>
   </nav></div>
 

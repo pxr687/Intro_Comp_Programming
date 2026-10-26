@@ -211,7 +211,7 @@ You can omit the first number, if you mean to start at offset 0:
 disciplines[:4]
 ```
 
-You can omit the last number if you mean to end at the last element of the array:
+You can leave out the last number if you mean to end at the last element of the array:
 
 ```{python}
 disciplines[4:]

@@ -18,6 +18,8 @@ Let's look a bit deeper at some of the things we can do with Numpy arrays, Numpy
 
 The main purpose of this page is to show you that *arrays are better than lists* for several reasons. You can think of Numpy arrays like the smarter, more attractive brother/sister of lists :) 
 
+**NOTE:** the functions on this page are important for the mid-term, so pay attention :)
+
 ```{python}
 # Load the Numpy package, and call it "np".
 import numpy as np
@@ -82,6 +84,8 @@ We control the number of repeats using `repeats = ` for `np.repeat()` and `reps 
 
 ## NumPy functions for statistics/maths
 
+**NOTE:** these functions are important for the mid-term, so pay attention :)
+
 Numpy also has a lot of functions for statistics and maths, which is why Numpy is a major Python data science library. Many of these statistics/maths functions can also be used as *methods*.
 
 Imagine this is some data on student ages:
@@ -123,7 +127,7 @@ This is another advantage of Numpy arrays other Python lists - arrays have lots 
 
 ## NumPy functions for Randomness and Simulation
 
-**NOTE:** these functions are important for the mid-term, so pay attention ;)
+**NOTE:** these functions are important for the mid-term, so pay attention :)
 
 "Random" is an adjective which means ["happening, done, or chosen by chance"](https://dictionary.cambridge.org/dictionary/english/random#google_vignette).
 
@@ -166,6 +170,19 @@ np.random.randint(low = 0, high = 2)
 ```
 
 For most simulations, it is faster to use number data instead of strings. 
+
+The table below shows some of the functions from the NumPy random library:
+
+| **Function** | **Description** |
+|---|---|
+| `np.random.rand` | Generate random floats between 0 and 1 |
+| `np.random.random` | Generate random floats between 0 and 1 |
+| `np.random.randint` | Generate random integers within a specified range |
+| `np.random.choice` | Randomly select elements from an array |
+| `np.random.shuffle` | Shuffle an array in place |
+| `np.random.permutation` | Return a randomly shuffled array or sequence |
+| `np.random.seed` | Set the random seed for reproducible results |
+| `np.random.uniform` | Generate random floats within a specified range |
 
 Now we will look at *ranges* using Numpy - we use these when we need a series of numbers that goes up or down by some amount between each number...
 

@@ -34,7 +34,7 @@ type(free_dictionary_from_API)
 
 [31m---------------------------------------------------------------------------[39m
 [31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[18][39m[32m, line 1[39m
+[36mCell[39m[36m [39m[32mIn[22][39m[32m, line 1[39m
 [32m----> [39m[32m1[39m type(free_dictionary_from_API)
 
 [31mNameError[39m: name 'free_dictionary_from_API' is not defined
