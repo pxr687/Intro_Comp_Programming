@@ -184,7 +184,7 @@ The table below shows some of the functions from the NumPy random library:
 | `np.random.seed` | Set the random seed for reproducible results |
 | `np.random.uniform` | Generate random floats within a specified range |
 
-Now we will look at *ranges* using Numpy - we use these when we need a series of numbers that goes up or down by some amount between each number...
+After the exercise, we will look at *ranges* using Numpy - we use these when we need a series of numbers that goes up or down by some amount between each number...
 
 
 ----------------------------------------------------------

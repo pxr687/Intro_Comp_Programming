@@ -14,12 +14,30 @@ jupyter:
 
 # Getting `input()` from a user
 
-In lots of programs you write, you will want to get a user to give data to your program.
+In a lot of programs you write, you will want a user to give you some data to use.
 
+The most fundamental way to do this in Python is with the `input()` function.
 
-## Exercise - Getting User `input()`
+I will show you how to use this function live in class, because it will break the textbook build if I put `input()` in code cells. (If you are interested in why this happens, it is because the book runs the Python code, then it is converted to HTML, then sent to the website. When the Python code runs, if `input()` is in it, it will hang forever waiting for input, and the HTML will not build!).
 
-We will now do another exercise! [Deeper data validation, using statements, comparisons, API calls etc. some ideas are below]
+The most basic way to use the `input()` function is just to use:
+
+```
+input()
+```
+
+When this code runs, an input box will appear. A user can type into this box.
+
+Try this out in the cell below (the code is commented out so that the textbook build):
+
+```{python}
+# input()
+input()
+```
+
+## Exercise - Getting User `input()` Data Validation Exercise
+
+This exercise will get you to experiment with the `input()` function, and it will test your knowledge of comparison operators.
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
@@ -40,7 +58,6 @@ message_text = f"""
 display(HTML(message_text))
 ```
 
-```{python}
 import webbrowser
 import tempfile
 
@@ -83,7 +100,7 @@ display(HTML(message_text))
 #     filename = f.name
 
 # webbrowser.open_new_tab("file://" + filename)
-```
+
 
 ----------------------------------------------------------
 

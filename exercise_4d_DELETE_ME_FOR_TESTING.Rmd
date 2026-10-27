@@ -1,0 +1,351 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Exercise NumPy Arrays 1
+
+If you need help, open the _[textbook page](file:///C:/Users/WIN11/Intro_Comp_Programming/_build/html/1_10_03_NumPy_Arrays_1.html)_ for this exercise.
+
+## Instructions
+
+**IMPORTANT**: If you see a comment which says `# DO NOT CHANGE THIS CODE` then **DO NOT CHANGE THAT CODE**. You will probably break the exercise if you do...
+
+**First, run the code cell below**. Click on the cell, then press `Shift + Enter`:
+
+```{python}
+# DO NOT CHANGE THIS CODE, JUST RUN IT.
+from jupyprint import jupyprint
+def soft_assert(ans_name, dir_output=dir()):
+    if ans_name in dir_output:
+        print('Check passed!')
+    else:
+        print(f'You have not made a variable called `{ans_name}`! Your answer **must** be stored in a variable with this name to get a mark.')
+```
+
+**ALSO IMPORTANT**: in **ALL** exercises, and **ALL** assignments/tests/exams. You **MUST** use the right variable names in your answers.
+
+If the question says "make a variable called `answer_1`" you **MUST** call you variable `answer_1` or you will **NOT** get a mark.
+
+If the question says "make a variable called `me_and_my_cat`" you **MUST** call you variable `me_and_my_cat` or you will **NOT** get a mark.
+
+### Downloading your work
+
+*Binder will NOT save your work*. If you are working on Binder, when you finish all of the questions, you can download your work as an `.ipynb` file, by clicking the button shown below:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/download_your_work.png)
+
+When you download your work, you can view it by uploading the file here: https://code-format.com/ipynb-viewer
+
+Later in the course we will install Python on your own laptop...
+
+
+# Section 1 - Arrays and Array Indexing
+
+## Question 1
+
+Import `numpy` in the cell below, remember to rename it `np`.
+
+```{python}
+# Your code here.
+import numpy as np
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+soft_assert("np", dir_output=dir())
+```
+
+
+## Question 2
+
+In the cell below, make a *list* with these values:
+
+```
+[10, 14, -1]
+```
+
+Save your list in a variable called `not_an_array_yet`.
+
+```{python}
+# Type your answer below.
+not_an_array_yet = [10, 14, -1]
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert not_an_array_yet == [10, 14, -1], "Your list does not have the right values!"
+jupyprint('Correct, well done!')
+```
+
+
+## Question 3
+
+Now, use the correct Numpy function to convert your list into an array.
+
+Save your answer in a variable called `now_it_is_an_array`.
+
+```{python}
+# Type your answer below.
+now_it_is_an_array = np.array(not_an_array_yet)
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert isinstance(now_it_is_an_array, np.ndarray), "Your variable is not a Numpy array..."
+assert now_it_is_an_array.sum() == 23, "It looks like your array does not have the right values in..."
+jupyprint('Correct, well done!')
+```
+
+
+## Question 4
+
+**DO NOT HARD CODE ANY ANSWERS IN THIS SECTION** - you **must** use array indexing to get your answers.
+
+Using array indexing get the *first* value out of `now_it_is_an_array`.
+
+Store the first value in a variable called `first_value`.
+
+```{python}
+# Type your answer below.
+first_value = now_it_is_an_array[0]
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert first_value == 10, "That is not the right value!"
+jupyprint('Correct, well done!')
+```
+
+
+## Question 5
+
+Get the *last* value out of `now_it_is_an_array`.
+
+Store this in a variable called `last_value`.
+
+```{python}
+# Type your answer below.
+last_value = now_it_is_an_array[-1]
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert last_value == -1, "Your variable is not the right value!"
+jupyprint('Correct, well done!')
+```
+
+
+## Question 6
+
+The cell below makes a Numpy array which has the amount in Thai Baht that customers spent in a convenience store in one hour. The first element of the array is how much the customer spent, the second element is how much the second customer spent, the third element is how much the third customer spent, and so on.
+
+Run the cell to make the array.
+
+```{python}
+# Do not change this code, just run it.
+customer_spend = np.array([125, 252, 135, 327, 122, 142, 165, 299, 210, 318, 179, 358, 93,
+                             91, 299,  12, 275,  53, 350, 290])
+
+customer_spend
+```
+
+Make a variable called `first_three_customers` which has the data for the first three customers.
+
+```{python}
+# Type your answer below.
+first_three_customers = customer_spend[:3]
+first_three_customers
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert first_three_customers.sum() == 512, "It looks like your array does not have the right values in!"
+jupyprint('Correct, well done!')
+```
+
+
+## Question 7
+
+Make a variable called `last_three_customers` which has the data for the last three customers.
+
+```{python}
+customer_spend
+```
+
+```{python}
+# Type your answer below.
+last_three_customers = customer_spend[-3:]
+last_three_customers
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert last_three_customers.sum() == 693, "It looks like your array does not have the right values in!"
+jupyprint('Correct, well done!')
+```
+
+
+## Question 8
+
+Now make a variable called `fourth_to_seventh` which has the data for the 4th customer up to the 7th customer, including the customers in between.
+
+If you do this right, your variable should have the value `array([327, 122, 142, 165])`.
+
+```{python}
+customer_spend
+```
+
+```{python}
+# Type your answer below.
+fourth_to_seventh = customer_spend[3:7]
+fourth_to_seventh
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert fourth_to_seventh.sum() == 756, "It looks like your array does not have the right values in!"
+jupyprint('Correct, well done!')
+```
+
+
+<!-- #region -->
+# Section 2 - Maths with Arrays, Array Methods and Functions
+
+
+## Question 9
+
+Find a Numpy array method to calculate the *total* spent by all the customers whose data is in the `customer_spend` array.
+
+Save your answer in a variable called `customer_spend_total`:
+<!-- #endregion -->
+
+```{python}
+# Type your answer below.
+customer_spend_total = customer_spend.sum()
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert customer_spend_total == 4095, "Your total is NOT correct!"
+jupyprint('Correct, well done!')
+```
+
+
+## Question 10
+
+Find a Numpy function or method that will make an array which tells you the *difference* between what each of the customers spent. So, what one customer spent should be subtracted from the amount that the next customer spent.
+
+So, the first value of your answer array should be:
+
+(*amount spent by **second** customer*) minus (*amount spent by **first** customer*)
+
+The second value of your answer array should be:
+
+(*amount spent by **third** customer*) minus (*amount spent by **second** customer*)
+
+The third value of your answer array should be:
+
+(*amount spent by **fourth** customer*) minus (*amount spent by **third** customer*)
+
+...and so on.
+
+Store your answer in a variable called `customer_diffs`.
+
+```{python}
+# Type your answer below.
+customer_diff = np.diff(customer_spend)
+
+customer_diff
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert customer_diff.sum() == 165, "It looks like your `customer_diffs` array does not have the right values in!"
+jupyprint('Correct, well done!')
+```
+## Question 11
+
+Calculate the value of the *biggest value* in the array minus the *smallest value in the array*.
+
+In statistics, this is called the *range* of the data.
+
+Use Numpy methods or functions to find the biggest and smallest values first, then do your calculation.
+
+Save your answer in a variable called `customer_range`:
+
+```{python}
+# Type your answer below.
+customer_range = customer_spend.max() - customer_spend.min()
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert customer_range == 346, "Your range is not correct! Did you subtract the smallest value from the biggest value?"
+jupyprint('Correct, well done!')
+```
+## Question 12
+
+Use Numpy methods or functionst to calculate the *average* spent by the customers.
+
+Save your answer in a variable called `average_spend`:
+
+```{python}
+# Type your answer below.
+average_spend = customer_spend.mean()
+```
+
+### Run the next cell to mark your answer.
+
+```{python}
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert average_spend == 204.75, "Your average is not correct!"
+jupyprint('Correct, well done!')
+```
+## Go back to the textbook:
+
+Click _[here](https://pxr687.github.io/Intro_Comp_Programming/index.html)_ to go back to the course textbook.
