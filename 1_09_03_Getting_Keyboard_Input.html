@@ -267,6 +267,18 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c_NumPy_Arrays_Exercise_1.html">NumPy Arrays Exercise 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_1.html">NumPy Arrays Extra Task 1 - Study Routine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_2.html">NumPy Arrays Extra Task 2 - Dice Betting Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_3.html">NumPy Arrays Extra Task 3 - More Simple Video Game Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_4.html">NumPy Arrays Extra Task 4 - More Advanced Study Routine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03d_Ranges.html">Ranges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03e_More_Maths_With_Arrays.html">More Maths with Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03f_Filling_Arrays.html">Making and filling arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Boolean_Indexing.html">Boolean Arrays and Boolean Indexing</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_10_03h_Simulation_With_Numpy_Arrays.html">More Simulation with NumPy Arrays</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -465,8 +477,21 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-getting-user-input">Exercise - Getting User <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Getting <code class="docutils literal notranslate"><span class="pre">input()</span></code> from a user</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-getting-user-input-data-validation-exercise">Exercise - Getting User <code class="docutils literal notranslate"><span class="pre">input()</span></code> Data Validation Exercise</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#with-tempfile-namedtemporaryfile">with tempfile.NamedTemporaryFile(</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-w">mode=”w”,</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#suffix-html">suffix=”.html”,</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-false">delete=False,</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#encoding-utf-8">encoding=”utf-8”</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#as-f">) as f:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#f-write-html">f.write(html)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filename-f-name">filename = f.name</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#webbrowser-open-new-tab-file-filename">webbrowser.open_new_tab(“file://” + filename)</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -479,10 +504,48 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="getting-input-from-a-user">
 <h1>Getting <code class="docutils literal notranslate"><span class="pre">input()</span></code> from a user<a class="headerlink" href="#getting-input-from-a-user" title="Link to this heading">#</a></h1>
-<p>In lots of programs you write, you will want to get a user to give data to your program.</p>
-<section id="exercise-getting-user-input">
-<h2>Exercise - Getting User <code class="docutils literal notranslate"><span class="pre">input()</span></code><a class="headerlink" href="#exercise-getting-user-input" title="Link to this heading">#</a></h2>
-<p>We will now do another exercise! [Deeper data validation, using statements, comparisons, API calls etc. some ideas are below]</p>
+<p>In a lot of programs you write, you will want a user to give you some data to use.</p>
+<p>The most fundamental way to do this in Python is with the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function.</p>
+<p>I will show you how to use this function live in class, because it will break the textbook build if I put <code class="docutils literal notranslate"><span class="pre">input()</span></code> in code cells. (If you are interested in why this happens, it is because the book runs the Python code, then it is converted to HTML, then sent to the website. When the Python code runs, if <code class="docutils literal notranslate"><span class="pre">input()</span></code> is in it, it will hang forever waiting for input, and the HTML will not build!).</p>
+<p>The most basic way to use the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function is just to use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>When this code runs, an input box will appear. A user can type into this box.</p>
+<p>Try this out in the cell below (the code is commented out so that the textbook build):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># input()</span>
+<span class="nb">input</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># input()</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="nn">File ~\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py:1402,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1400</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1401</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">"raw_input was called, but this frontend does not support input requests."</span>
+<span class="ne">-&gt; </span><span class="mi">1402</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1403</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1405</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_get_shell_context_var</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_shell_parent_ident</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1406</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">"shell"</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1407</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1408</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exercise-getting-user-input-data-validation-exercise">
+<h2>Exercise - Getting User <code class="docutils literal notranslate"><span class="pre">input()</span></code> Data Validation Exercise<a class="headerlink" href="#exercise-getting-user-input-data-validation-exercise" title="Link to this heading">#</a></h2>
+<p>This exercise will get you to experiment with the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function, and it will test your knowledge of comparison operators.</p>
 <p><em>Remember</em>: your <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html">assignments, tests and exams</a> will also be a bit like this.</p>
 <p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4b_input.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
 <div class="cell docutils container">
@@ -505,89 +568,66 @@
 <div class="cell_output docutils container">
 <div class="output text_html">
 <h2 style="color: green;">
-🎲 The dice rolled a 6!
+🎲 The dice rolled a 4!
 </h2>
 </div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">webbrowser</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
-
-<span class="n">roll</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-
-<span class="n">bet</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Make your bet!:'</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">roll</span> <span class="o">==</span> <span class="n">bet</span><span class="p">:</span>
-    <span class="n">emoji</span> <span class="o">=</span> <span class="s2">":)"</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">emoji</span> <span class="o">=</span> <span class="s2">":("</span>
-
-<span class="n">message_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
-<span class="s2">&lt;!DOCTYPE html&gt;</span>
-<span class="s2">&lt;html&gt;</span>
-<span class="s2">&lt;body&gt;</span>
-<span class="s2">&lt;h1 style="color: green;"&gt;</span>
-<span class="s2">🎲 Dice Roll</span>
-<span class="s2">&lt;/h1&gt;</span>
-<span class="s2">&lt;p style="color: red;"&gt;</span>
-<span class="s2">The dice rolled a </span><span class="si">{</span><span class="n">roll</span><span class="si">}</span><span class="s2">.</span>
-<span class="s2">&lt;/p&gt;</span>
-<span class="s2">&lt;p style="color: green;"&gt;</span>
-<span class="s2">You bet it would roll </span><span class="si">{</span><span class="n">bet</span><span class="si">}</span><span class="s2">.</span>
-<span class="s2">Your bet is </span><span class="si">{</span><span class="n">bet</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">roll</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">emoji</span><span class="si">}</span>
-<span class="s2">&lt;/p&gt;</span>
-<span class="s2">&lt;/body&gt;</span>
-<span class="s2">&lt;/html&gt;</span>
-<span class="s2">"""</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">message_text</span><span class="p">))</span>
-
-<span class="c1"># with tempfile.NamedTemporaryFile(</span>
-<span class="c1">#     mode="w",</span>
-<span class="c1">#     suffix=".html",</span>
-<span class="c1">#     delete=False,</span>
-<span class="c1">#     encoding="utf-8"</span>
-<span class="c1"># ) as f:</span>
-<span class="c1">#     f.write(html)</span>
-<span class="c1">#     filename = f.name</span>
-
-<span class="c1"># webbrowser.open_new_tab("file://" + filename)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">roll</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">bet</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Make your bet!:'</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> 
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">if</span> <span class="n">roll</span> <span class="o">==</span> <span class="n">bet</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">emoji</span> <span class="o">=</span> <span class="s2">":)"</span>
-
-<span class="nn">File ~\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py:1402,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1400</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1401</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ne">-&gt; </span><span class="mi">1402</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1403</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1405</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_get_shell_context_var</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_shell_parent_ident</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1406</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">"shell"</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1407</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1408</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
+<p>import webbrowser
+import tempfile</p>
+<p>roll = np.random.randint(1, 7)</p>
+<p>bet = input(‘Make your bet!:’)</p>
+<p>if roll == bet:
+emoji = “:)”
+else:
+emoji = “:(”</p>
+<p>message_text = f”””</p>
+<!DOCTYPE html>
+<html>
+<body>
+<h1 style="color: green;">
+🎲 Dice Roll
+</h1>
+<p style="color: red;">
+The dice rolled a {roll}.
+</p>
+<p style="color: green;">
+You bet it would roll {bet}.
+Your bet is {bet == roll} {emoji}
+</p>
+</body>
+</html>
+"""
+<p>display(HTML(message_text))</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="with-tempfile-namedtemporaryfile">
+<h1>with tempfile.NamedTemporaryFile(<a class="headerlink" href="#with-tempfile-namedtemporaryfile" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mode-w">
+<h1>mode=”w”,<a class="headerlink" href="#mode-w" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="suffix-html">
+<h1>suffix=”.html”,<a class="headerlink" href="#suffix-html" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="delete-false">
+<h1>delete=False,<a class="headerlink" href="#delete-false" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="encoding-utf-8">
+<h1>encoding=”utf-8”<a class="headerlink" href="#encoding-utf-8" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="as-f">
+<h1>) as f:<a class="headerlink" href="#as-f" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="f-write-html">
+<h1>f.write(html)<a class="headerlink" href="#f-write-html" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="filename-f-name">
+<h1>filename = <a class="reference external" href="http://f.name">f.name</a><a class="headerlink" href="#filename-f-name" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="webbrowser-open-new-tab-file-filename">
+<h1>webbrowser.open_new_tab(“file://” + filename)<a class="headerlink" href="#webbrowser-open-new-tab-file-filename" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <p><a class="reference internal" href="intro.html"><span class="std std-doc">🏡</span></a>.</p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -638,8 +678,21 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-getting-user-input">Exercise - Getting User <code class="docutils literal notranslate"><span class="pre">input()</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Getting <code class="docutils literal notranslate"><span class="pre">input()</span></code> from a user</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-getting-user-input-data-validation-exercise">Exercise - Getting User <code class="docutils literal notranslate"><span class="pre">input()</span></code> Data Validation Exercise</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#with-tempfile-namedtemporaryfile">with tempfile.NamedTemporaryFile(</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mode-w">mode=”w”,</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#suffix-html">suffix=”.html”,</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-false">delete=False,</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#encoding-utf-8">encoding=”utf-8”</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#as-f">) as f:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#f-write-html">f.write(html)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filename-f-name">filename = f.name</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#webbrowser-open-new-tab-file-filename">webbrowser.open_new_tab(“file://” + filename)</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
