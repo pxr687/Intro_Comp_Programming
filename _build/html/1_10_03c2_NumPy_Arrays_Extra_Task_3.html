@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -264,13 +264,10 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03c_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03c_NumPy_Arrays_Exercise_1.html">NumPy Arrays Exercise 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c0_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c1_NumPy_Arrays_Exercise_1.html">NumPy Arrays Exercise 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_1.html">NumPy Arrays Extra Task 1 - Study Routine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_2.html">NumPy Arrays Extra Task 2 - Dice Betting Game</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">NumPy Arrays Extra Task 3 - More Simple Video Game Code</a></li>
@@ -279,6 +276,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03e_More_Maths_With_Arrays.html">More Maths with Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03f_Filling_Arrays.html">Making and filling arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Boolean_Indexing.html">Boolean Arrays and Boolean Indexing</a></li>
+
 
 <li class="toctree-l1"><a class="reference internal" href="1_10_03h_Simulation_With_Numpy_Arrays.html">More Simulation with NumPy Arrays</a></li>
 </ul>
@@ -493,21 +491,21 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="numpy-arrays-extra-task-3-more-simple-video-game-code">
 <h1>NumPy Arrays Extra Task 3 - More Simple Video Game Code<a class="headerlink" href="#numpy-arrays-extra-task-3-more-simple-video-game-code" title="Link to this heading">#</a></h1>
-<p>You will now write some a program using random Numpy functions. First, launch this page on Live Code or Binder:</p>
+<p>You will now write some a program using Numpy random functions. First, launch this page on Live Code or Binder:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG" /></p>
 <section id="instructions">
 <h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
-<p>You are creating code for a video game where a player flips a coin to decide whether they win a reward.</p>
+<p>You are creating code for a video game where a player flips a coin to decide whether they win a points.</p>
 <p>Write a Python program which does these things:</p>
 <ul class="simple">
-<li><p>Set the player’s starting score (<code class="docutils literal notranslate"><span class="pre">player_score</span></code>) to 0 points and print a message saying its value.</p></li>
+<li><p>Set the player’s starting score (<code class="docutils literal notranslate"><span class="pre">current_score</span></code>) to 0 points and print a message saying its value.</p></li>
 <li><p>Print a message telling the player they are about to flip a coin.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">np.random.choice()</span></code> to randomly decide whether the coin lands on <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code> or <code class="docutils literal notranslate"><span class="pre">'TAILS'</span></code>.</p></li>
 </ul>
 <p>If the coin lands on <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code>, the program should:</p>
 <ul class="simple">
 <li><p>Randomly generate a reward between 5 and 15 points, you can use <code class="docutils literal notranslate"><span class="pre">np.random.randint()</span></code> to do this.</p></li>
-<li><p>Add the reward to <code class="docutils literal notranslate"><span class="pre">player_score</span></code>.</p></li>
+<li><p>Add the reward to <code class="docutils literal notranslate"><span class="pre">current_score</span></code>.</p></li>
 <li><p>Print a message saying how many points the player won.</p></li>
 <li><p>Print a message saying the player’s new total score.</p></li>
 </ul>
