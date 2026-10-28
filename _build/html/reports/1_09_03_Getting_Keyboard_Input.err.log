@@ -28,62 +28,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import webbrowser
-import tempfile
-
-roll = np.random.randint(1, 7)
-
-bet = input('Make your bet!:')
-
-if roll == bet:
-    emoji = ":)"
-else:
-    emoji = ":("
-
-message_text = f"""
-<!DOCTYPE html>
-<html>
-<body>
-<h1 style="color: green;">
-🎲 Dice Roll
-</h1>
-<p style="color: red;">
-The dice rolled a {roll}.
-</p>
-<p style="color: green;">
-You bet it would roll {bet}.
-Your bet is {bet == roll} {emoji}
-</p>
-</body>
-</html>
-"""
-
-display(HTML(message_text))
-
-# with tempfile.NamedTemporaryFile(
-#     mode="w",
-#     suffix=".html",
-#     delete=False,
-#     encoding="utf-8"
-# ) as f:
-#     f.write(html)
-#     filename = f.name
-
-# webbrowser.open_new_tab("file://" + filename)
+# input()
+input()
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mStdinNotImplementedError[39m                  Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 6[39m
-[32m      2[39m [38;5;28;01mimport[39;00m tempfile
-[32m      3[39m 
-[32m      4[39m roll = np.random.randint([32m1[39m, [32m7[39m)
-[32m      5[39m 
-[32m----> [39m[32m6[39m bet = input([33m'Make your bet!:'[39m)
-[32m      7[39m 
-[32m      8[39m [38;5;28;01mif[39;00m roll == bet:
-[32m      9[39m     emoji = [33m":)"[39m
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
+[32m      1[39m [38;5;66;03m# input()[39;00m
+[32m----> [39m[32m2[39m input()
 
 [36mFile [39m[32m~\AppData\Roaming\Python\Python314\site-packages\ipykernel\kernelbase.py:1402[39m, in [36mKernel.raw_input[39m[34m(self, prompt)[39m
 [32m   1400[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._allow_stdin:

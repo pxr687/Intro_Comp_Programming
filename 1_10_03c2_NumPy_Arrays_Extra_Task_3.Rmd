@@ -1,0 +1,72 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# NumPy Arrays Extra Task 3 - More Simple Video Game Code
+
+You will now write some a program using Numpy random functions. First, launch this page on Live Code or Binder:
+
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG)
+
+## Instructions
+
+You are creating code for a video game where a player flips a coin to decide whether they win a points.
+
+Write a Python program which does these things:
+
+- Set the player's starting score (`current_score`) to 0 points and print a message saying its value.
+
+- Print a message telling the player they are about to flip a coin.
+
+- Use `np.random.choice()` to randomly decide whether the coin lands on `'HEADS'` or `'TAILS'`.
+
+If the coin lands on `'HEADS'`, the program should:
+
+- Randomly generate a reward between 5 and 15 points, you can use `np.random.randint()` to do this.
+
+- Add the reward to `current_score`.
+
+- Print a message saying how many points the player won.
+
+- Print a message saying the player's new total score.
+
+If the coin lands on '`TAILS'`, the program should:
+
+- Print a message saying the player did not win any points.
+
+So, if the coin lands on `"HEADS"` the player should see something like:
+
+```
+You have 0 points.
+You are about to flip a coin!
+The coin landed on HEADS!
+You won 11 points!
+You now have 11 points.
+```
+
+If it lands on `"TAILS"` the player should see something like:
+
+```
+You have 0 points.
+You are about to flip a coin!
+The coin landed on TAILS!
+:( You did not win any points.
+```
+
+```{python}
+# Write your program here.
+```
+
+----------------------------------------------------------
+
+[🏡](intro.md).

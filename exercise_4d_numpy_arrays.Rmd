@@ -89,7 +89,7 @@ not_an_array_yet = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert not_an_array_yet == [10, 14, -1], "Your list does not have the right values!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 
 
@@ -111,7 +111,7 @@ now_it_is_an_array = ...
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert isinstance(now_it_is_an_array, np.ndarray), "Your variable is not a Numpy array..."
 assert now_it_is_an_array.sum() == 23, "It looks like your array does not have the right values in..."
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 
 
@@ -134,7 +134,7 @@ first_value = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert first_value == 10, "That is not the right value!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 
 
@@ -155,7 +155,7 @@ last_value = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert last_value == -1, "Your variable is not the right value!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 
 
@@ -186,7 +186,7 @@ first_three_customers = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert first_three_customers.sum() == 512, "It looks like your array does not have the right values in!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 
 
@@ -206,7 +206,7 @@ last_three_customers = ...
 # RUN THIS CELL TO MARK YOUR ANSWER.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert last_three_customers.sum() == 693, "It looks like your array does not have the right values in!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 
 
@@ -227,7 +227,7 @@ fourth_to_seventh = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert fourth_to_seventh.sum() == 756, "It looks like your array does not have the right values in!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 
 
@@ -253,7 +253,7 @@ customer_spend_total = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert customer_spend_total == 4095, "Your total is NOT correct!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 
 
@@ -288,7 +288,7 @@ customer_diff = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert customer_diff.sum() == 165, "It looks like your `customer_diffs` array does not have the right values in!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 ## Question 11
 
@@ -311,7 +311,7 @@ customer_range = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert customer_range == 346, "Your range is not correct! Did you subtract the smallest value from the biggest value?"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 ## Question 12
 
@@ -330,7 +330,7 @@ average_spend = ...
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
 assert average_spend == 204.75, "Your average is not correct!"
-jupyprint('Correct, well done!')
+jupyprint('*Correct, well done!*')
 ```
 ## Go back to the textbook:
 

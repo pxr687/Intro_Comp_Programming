@@ -49,21 +49,23 @@ parts:
     chapters:
       - file: 1_10_01_Lists
       - file: 1_10_01b_List_Methods
-      - file: 1_10_02_Dictionaries
-      - file: 1_10_02b_Dictionary_Methods
-      - file: 1_10_02c_List_Dict_Constructors
+      # - file: 1_10_02_Dictionaries
+      # - file: 1_10_02b_Dictionary_Methods
+      # - file: 1_10_02c_List_Dict_Constructors
       - file: 1_10_03_NumPy_Arrays_1
       - file: 1_10_03b_Array_Indexing
       - file: 1_10_03c_NumPy_Arrays_Functions_Methods
-      # Array construction and indexing exercise
-      # Array functions and methods
+      - file: 1_10_03c_NumPy_Arrays_Exercise_1
+      - file: 1_10_03c2_NumPy_Arrays_Extra_Task_1
+      - file: 1_10_03c2_NumPy_Arrays_Extra_Task_2
+      - file: 1_10_03c2_NumPy_Arrays_Extra_Task_3
+      - file: 1_10_03c2_NumPy_Arrays_Extra_Task_4
       - file: 1_10_03d_Ranges
       - file: 1_10_03e_More_Maths_With_Arrays
       - file: 1_10_03f_Filling_Arrays
       - file: 1_10_03g_Boolean_Arrays_Boolean_Indexing
-      # Boolean indexing exercise
       - file: 1_10_03h_Simulation_With_Numpy_Arrays
-      # - file: 1_10_03c2_NumPy_Arrays_Extra_Task_1 # Exercise
+      
       # - file: 1_10_03c2_NumPy_Arrays_Extra_Task_2 # Exercise
 
 

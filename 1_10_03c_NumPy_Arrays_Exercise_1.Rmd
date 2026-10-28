@@ -14,7 +14,7 @@ jupyter:
 
 # NumPy Arrays Exercise 1
 
-This will check that your understand:
+We will now practice using Numpy arrays. This will check that your understand:
 
 - how to make Numpy arrays
 - how to get data out of Numpy arrays
@@ -28,7 +28,3 @@ Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?
 ----------------------------------------------------------
 
 [🏡](intro.md).
-
-```{python}
-
-```
