@@ -1,0 +1,75 @@
+---
+jupyter:
+  jupytext:
+    split_at_heading: true
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# `break` and `continue` - ways to control your `for` loop
+
+Sometimes we might want to stop our loop, if something is `True` or `False`.
+
+For this purpose, we can use the `break` keyword inside the body of the loop.
+
+First, let's make a loop without a `break`  keyword in it:
+
+```{python}
+import numpy as np
+
+for name in ["Yan", "Emily", "Riley", "Pooh", "Ryan"]:
+    print(name)
+```
+
+So far so good, we just loop through all of the names in the list.
+
+Let's randomly select one name from the *middle* three names in the list:
+
+```{python}
+random_name = np.random.choice(["Emily", "Riley", "Pooh"])
+random_name
+```
+
+We chose only the middle three names to make it easier to see how the `break` keyword works.
+
+Now we can add an `if` statement to our loop, with a `break` keyword indented under it:
+
+`    if name == random_name:
+        break`
+        
+This means when we get to our randomly selected person, we will *exit* the loop:
+
+```{python}
+for name in ["Yan", "Emily", "Riley", "Pooh", "Ryan"]:
+    if name == random_name:
+        break
+    print(name)
+
+print("End of loop!")
+```
+
+You can see that we got to the randomly selected name, and then stopped the loop.
+
+Run the cell which randomly selects a name, and then run the loop a few times to see this in action.
+
+Another option is to *skip* a name in the list.
+
+We can do this by using the `continue` keyword, instead of `break`:
+
+```{python}
+for name in ["Yan", "Emily", "Riley", "Pooh", "Ryan"]:
+    if name == random_name:
+        continue
+    print(name)
+
+print("End of loop!")
+```
+
+Now, when we get to the `random_name` we just skip it, and `continue` the loop from the next name in the list...

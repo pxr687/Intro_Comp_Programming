@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Scratchpad &#8212; Introduction to Computer Programming</title>
+    <title>Simulation to solve a real problem - The Supreme Court &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -60,12 +60,14 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'TEMP_scratchpad';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_10_03_j2_Simulation_to_Solve_a_Real_Problem';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/TEMP_scratchpad.html" />
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_10_03_j2_Simulation_to_Solve_a_Real_Problem.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="break and continue - ways to control your for loop" href="1_10_03l_Break_and_Continue.html" />
+    <link rel="prev" title="Indentation, indentation, indentation" href="1_10_03j_Indentation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -264,6 +264,9 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c0_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
@@ -272,6 +275,22 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_2.html">NumPy Arrays Extra Task 2 - Dice Betting Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_3.html">NumPy Arrays Extra Task 3 - More Simple Video Game Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_4.html">NumPy Arrays Extra Task 4 - More Advanced Study Routine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03d_Ranges.html">Ranges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03e_More_Maths_With_Arrays.html">More Maths with Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03f_Filling_Arrays.html">Making and filling arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Boolean_Indexing.html">Boolean Arrays and Boolean Indexing</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_10_03h_Simulation_With_Numpy_Arrays.html">More Simulation with NumPy Arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration - doing things over and over and over...</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j_Indentation.html">Indentation, indentation, indentation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Simulation to solve a real problem - The Supreme Court</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -335,7 +354,7 @@
       
       
       
-      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/TEMP_scratchpad.ipynb" target="_blank"
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_10_03_j2_Simulation_to_Solve_a_Real_Problem.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -384,7 +403,7 @@
       
       
       
-      <li><a href="_sources/TEMP_scratchpad.ipynb" target="_blank"
+      <li><a href="_sources/1_10_03_j2_Simulation_to_Solve_a_Real_Problem.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -460,7 +479,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Scratchpad</h1>
+    <h1>Simulation to solve a real problem - The Supreme Court</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -470,11 +489,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Scratchpad</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-get-help">How to get help</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#you-can-take-notes-into-the-exam">You can take notes into the exam</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-world">The ideal world</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulations-with-the-ideal-model">Simulations with the ideal model</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -485,286 +502,273 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="scratchpad">
-<h1>Scratchpad<a class="headerlink" href="#scratchpad" title="Link to this heading">#</a></h1>
-<p>This page is for you to launch on Binder or Live code, so that you can play with Python code whenever you want, in your web browser.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/launch.JPG" /></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="simulation-to-solve-a-real-problem-the-supreme-court">
+<h1>Simulation to solve a real problem - The Supreme Court<a class="headerlink" href="#simulation-to-solve-a-real-problem-the-supreme-court" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/reply_supreme.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information</p>
+</div></blockquote>
+<p>Her is a real, serious problem:</p>
+<blockquote>
+<div><p>In 1963, a court in Talladega County, Alabama sentenced a young black man called Robert Swain to death <a class="reference external" href="https://en.wikipedia.org/wiki/Furman_v._Georgia">1</a>. All 12 jurors in his trial were white. He appealed his sentence, citing, among other factors, evidence of bias in the process by which his jury was selected. At the time, only men aged 21 or older were allowed to serve on juries in Talladega County. In the county, 26% of the eligible jurors were black. (Quote from <a class="reference external" href="https://odsti.github.io/cfd-textbook/sampling_problem.html">here</a>).</p>
+</div></blockquote>
+<p>His trial jury of 12 people had no Black members.</p>
+<p>The local population of people who could be jurors was 26% Black.</p>
+<p>If the jury had been representative of the whole population, we would expect about 26 of 100 people to
+be Black.  That’s around 1 in 4 (25%), so we would expect about one in four
+jurors to be Black - so around 3 of 12.</p>
+<p>The Supreme Court was not convinced that there was evidence of systematic bias.  But, to start with the jurors - is it surprising that we expected around 3 Black jurors, but we got 0.  Is the value 0 surprising, if each juror has 26% chance of being Black?</p>
+<p>To answer this, we are going to go through a couple of steps.</p>
+<p>The first is to build an <em>ideal model</em> of the world, where it <em>is true</em> that
+each juror has a 26% of being Black.  We sometimes call this our <em>ideal world</em>.
+If you are used to statistical terms, this ideal model is our <em>null
+hypothesis</em>.</p>
+<p>Then we can <em>simulate</em> making many juries in this ideal world.</p>
+<p>Finally we ask whether our simulated juries, from the ideal world, often give
+us a count of zero Black jurors.  If they don’t, then we can say that we are
+<em>surprised</em> by the value of 0, if the jury did arise from that real world.  If
+the value 0 is sufficiently unusual, we become suspicious that the real world
+is rather different from our ideal world.  We consider <em>rejecting</em> the ideal
+world as a good model of the real world.</p>
+<section id="the-ideal-world">
+<h2>The ideal world<a class="headerlink" href="#the-ideal-world" title="Link to this heading">#</a></h2>
+<p>Our <em>ideal model</em> (or null hypothesis) is a world where each juror has been
+truly randomly selected from the eligible population. That is, for any one
+juror, there is a 0.26 probability that they are Black.</p>
+</section>
+<section id="simulations-with-the-ideal-model">
+<h2>Simulations with the ideal model<a class="headerlink" href="#simulations-with-the-ideal-model" title="Link to this heading">#</a></h2>
+<p>To do a <em>simulation</em> with this ideal model, we will start by making one jury,
+of 12 people, where it is really true that each juror has a 26% of being Black.
+Not to pun, but we will call one simulation of a jury of 12 - <em>one trial</em>.</p>
+<p>Then we simulate 10 juries of 12 people (do 10 trials), to get warmed up.</p>
+<p>Finally we make 10000 juries, each of 12 people, and see what we get.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make an array (names).</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the array library</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we use <code class="docutils literal notranslate"><span class="pre">np.random.choice()</span></code> to simulate one
+jury, and count the number of Black people in the simulated jury.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Choose 12 jurors, where "Black" has probability 0.26</span>
+<span class="n">jurors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+                          <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">],</span>
+                          <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="c1"># np.count_nonzero counts the number of 1 values:</span>
+<span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">jurors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(4)
+</pre></div>
+</div>
+</div>
+</div>
+<p>That is one estimate, for the number of Black people we can expect, if our
+model is correct.  Call this one <em>trial</em>. We can run that a few times to get a
+range of values.   If we run it only a few times, we might be unlucky, and get
+some results that are not representative.  It is safer to run it a huge number
+of times, to make sure we’ve got an idea of the variation.</p>
+<p>To start with, we will run 10 trials.</p>
+<p>We get ready to store the results of each estimate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make an array of 10 zeros, to store the results.</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We repeat the code from the cell above, but now, we store each trial result
+(count) in the <code class="docutils literal notranslate"><span class="pre">counts</span></code> array:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jurors</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">jurors</span><span class="p">)</span>
+<span class="n">counts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
+<span class="n">counts</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">jurors</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">jurors</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">counts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">counts</span>
 
-<span class="n">names_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">"Emily"</span><span class="p">,</span> <span class="s2">"Yan"</span><span class="p">,</span> <span class="s2">"Lucas"</span><span class="p">,</span> <span class="s2">"Pooh"</span><span class="p">])</span>
-
-<span class="n">names_arr</span>
+<span class="ne">NameError</span>: name 'rng' is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Run the cell above a few times, perhaps with Control-Enter, to see the first value in the <code class="docutils literal notranslate"><span class="pre">counts</span></code> array changing.</p>
+<p>Now we collect the result of 10 trials, by using a for loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a new counts array of zeros to store the results.</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="c1"># This code is the same as the cell above, but indented,</span>
+    <span class="c1"># so we run it all, for each time through the for loop.</span>
+    <span class="n">jurors</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+                          <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">],</span>
+                          <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">jurors</span><span class="p">)</span>
+    <span class="c1"># Store the result at position i</span>
+    <span class="n">counts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
+<span class="n">counts</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Emily', 'Yan', 'Lucas', 'Pooh'], dtype='&lt;U5')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 3., 6., 4., 4., 2., 4., 1., 5., 4.])
 </pre></div>
 </div>
 </div>
 </div>
+<p>Each of these values is one estimate for how many Black jurors we should
+expect, if our model is right.  Already we get the feeling that 0 is rather
+unlikely, if our model is correct.  But - how unlikely?</p>
+<p>To get a better estimate, let us do the same thing, but with 10000 juries, and
+therefore, 10000 estimates.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">names_arr</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a new counts array of zeros to store the results.</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+    <span class="c1"># This code is the same as the cell above, but indented,</span>
+    <span class="c1"># so we run it all, for each time through the for loop.</span>
+    <span class="n">jurors</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> 
+                          <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">],</span>
+                          <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">jurors</span><span class="p">)</span>
+    <span class="c1"># Store the result at position i</span>
+    <span class="n">counts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
+<span class="n">counts</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5., 4., 1., ..., 3., 3., 5.], shape=(10000,))
 </pre></div>
 </div>
 </div>
 </div>
+<p>If you ran this cell yourself, you will notice that it runs very fast, in much
+less than a second, on any reasonable computer.</p>
+<p>We now have 10000 estimates, one for each row in the original array, and
+therefore, one for each simulated jury.</p>
+<p>Remember, the function <code class="docutils literal notranslate"><span class="pre">len</span></code> shows us the length of the array, and therefore,
+the number of values in this one-dimensional array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Index an array (first value).</span>
-<span class="n">names_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('Emily')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000
 </pre></div>
 </div>
 </div>
 </div>
+<p>Next we want to have a look at the spread of these values.  To do this, we plot
+a histogram.  Here is how to do that, in Python.  Don’t worry about the details, we will go into this more soon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Index an array (second value).</span>
-<span class="n">names_arr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import `matplotlib`.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now show the histogram.  Don’t worry about the details of this command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do the histogram of our 10000 estimates.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">13</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('Yan')
-</pre></div>
+<img alt="_images/84e888daf6b79e295c660f38d29fbd406cff2f316922ce7531ecd5b81b90e936.png" src="_images/84e888daf6b79e295c660f38d29fbd406cff2f316922ce7531ecd5b81b90e936.png" />
 </div>
 </div>
-</div>
+<p>The histogram above is called the <em>sampling distribution</em>.  The sampling distribution is the distribution of thing we are interested in (the number of Black jurors) given the ideal model, of completely random selection of jurors from a 26% Black population.</p>
+<p>It looks as if 0 is a relatively uncommon value among our simulations. How many
+times did we get a value of 0, in all our 10000 estimates?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names_arr</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts_of_0</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="n">n_zeros</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">counts_of_0</span><span class="p">)</span>
+<span class="n">n_zeros</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Emily', 'Yan', 'Lucas', 'Pooh'], dtype='&lt;U5')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(248)
 </pre></div>
 </div>
 </div>
 </div>
+<p>What <em>proportion</em> of jury simulations give a value of 0?  We just divide the
+number of times we see 0 by the number trials we made:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Index an array (last value).</span>
-<span class="n">names_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">n_zeros</span> <span class="o">/</span> <span class="mi">10000</span>
+<span class="n">p</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('Pooh')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0248)
 </pre></div>
 </div>
 </div>
 </div>
+<p>We have run an analysis assuming that the jurors were selected at random.  On
+that assumption, a count of 0 jurors in 12 is fairly uncommon, in the sense
+that the proportion of times we see that result is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names_arr</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('Pooh')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0248)
 </pre></div>
 </div>
 </div>
 </div>
+<p>In other words, our <em>estimate</em> of the <em>probability</em> of getting 0 Black people
+in a jury of 12, is</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First two values (slicing).</span>
-<span class="n">names_arr</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Emily', 'Yan'], dtype='&lt;U5')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0248)
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names_arr</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Emily', 'Yan', 'Lucas', 'Pooh'], dtype='&lt;U5')
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a new array (ages).</span>
-<span class="n">ages_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">17</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">18</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Average age.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ages_arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(20.75)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the .mean() method.</span>
-<span class="n">ages_arr</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(20.75)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Total age.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ages_arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(83)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ages_arr</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(83)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Biggest age.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">ages_arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(26)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ages_arr</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(26)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Smallest age.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">ages_arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(17)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ages_arr</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(17)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select a random name from the array.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">names_arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('Emily')
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make random integers (money for each person? :P )</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">41</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Note</strong>: structure of exam and what to revise. Most important things to practice today:</p>
-<ul class="simple">
-<li><p>Numpy Exercise &amp; Extra Task 1</p></li>
-<li><p>Fix My Data Exercise</p></li>
-<li><p>Other Numpy Extra Tasks</p></li>
-</ul>
-<p>Show me or Santy all of your solutions before moving to the next task…</p>
-<p>…if everyone finishes, we will look at some new topics (BUT you do not need these for the mid-term)</p>
-<p><strong>Note 2:</strong> go to computer lab at end of class to check Jupyterlab (must import and use Numpy inside the folder you made for Test 1)</p>
+<p>What can we conclude?  Only this: that in our ideal model world, where each
+juror has a 26% chance of being Black, 0 is uncommon.  This surprising result,
+of 0, gives us some cause to wonder if our ideal model of the world is wrong.
+One way it could be wrong, is if there was bias in jury selection, so it was
+not true that each juror had a 26% of being Black.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="how-to-get-help">
-<h1>How to get help<a class="headerlink" href="#how-to-get-help" title="Link to this heading">#</a></h1>
-<p>…also called “looking at the documentation”.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>print
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="you-can-take-notes-into-the-exam">
-<h1>You can take notes into the exam<a class="headerlink" href="#you-can-take-notes-into-the-exam" title="Link to this heading">#</a></h1>
-<p>Three A4 pages of handwritten notes, 2 sided (= 6 sides total) – no photocopies</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -797,6 +801,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_10_03j_Indentation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Indentation, indentation, indentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_10_03l_Break_and_Continue.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -815,11 +837,9 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Scratchpad</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-get-help">How to get help</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#you-can-take-notes-into-the-exam">You can take notes into the exam</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ideal-world">The ideal world</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulations-with-the-ideal-model">Simulations with the ideal model</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

@@ -66,6 +66,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="More Simulation with NumPy Arrays" href="1_10_03h_Simulation_With_Numpy_Arrays.html" />
+    <link rel="prev" title="Making and filling arrays" href="1_10_03f_Filling_Arrays.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -261,9 +261,12 @@
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Collections</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c0_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
@@ -272,6 +275,22 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_2.html">NumPy Arrays Extra Task 2 - Dice Betting Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_3.html">NumPy Arrays Extra Task 3 - More Simple Video Game Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_4.html">NumPy Arrays Extra Task 4 - More Advanced Study Routine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03d_Ranges.html">Ranges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03e_More_Maths_With_Arrays.html">More Maths with Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03f_Filling_Arrays.html">Making and filling arrays</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Boolean Arrays and Boolean Indexing</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_10_03h_Simulation_With_Numpy_Arrays.html">More Simulation with NumPy Arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration - doing things over and over and over...</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j_Indentation.html">Indentation, indentation, indentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_j2_Simulation_to_Solve_a_Real_Problem.html">Simulation to solve a real problem - The Supreme Court</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -472,6 +491,7 @@
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Boolean Arrays and Boolean Indexing</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-numpy-arrays-with-boolean-arrays">Filtering NumPy Arrays with Boolean Arrays</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-sum-will-count-the-number-of-true-values-in-an-array">Using <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> will count the number of <code class="docutils literal notranslate"><span class="pre">True</span></code> values in an array</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exericse-boolean-indexing">Exericse - Boolean Indexing</a></li>
 </ul>
 
@@ -512,19 +532,14 @@
 <p>On the other hands, this works if our collection is an array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">2000</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">2000</span><span class="p">])</span>
 <span class="n">my_array</span> <span class="o">&gt;</span> <span class="mi">10</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">my_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">2000</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">my_array</span> <span class="o">&gt;</span> <span class="mi">10</span>
-
-<span class="ne">NameError</span>: name 'np' is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True,  True])
 </pre></div>
 </div>
 </div>
@@ -577,6 +592,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([   1,    5,   19, 2000])
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can make the Boolean array using a simple comparison expression:</p>
 <div class="cell docutils container">
@@ -587,11 +607,21 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True,  True])
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can then do something callen <em>Boolean indexing</em> - this is where we use the Boolean array to index another array, like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_array</span><span class="p">[</span><span class="n">my_boolean_array</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  19, 2000])
 </pre></div>
 </div>
 </div>
@@ -610,6 +640,11 @@
 
 <span class="c1"># Use the Boolean array to index `my_array`.</span>
 <span class="n">my_array</span><span class="p">[</span><span class="n">my_boolean_array</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  19, 2000])
 </pre></div>
 </div>
 </div>
@@ -648,6 +683,82 @@
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">False</span></code> values act as “switches” which switch off the values in <code class="docutils literal notranslate"><span class="pre">my_array</span></code> which are less than 10.</p>
 <p>So the last array we get only has the values from <code class="docutils literal notranslate"><span class="pre">my_array</span></code> which are bigger than 10.</p>
+</section>
+<section id="using-sum-will-count-the-number-of-true-values-in-an-array">
+<h1>Using <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> will count the number of <code class="docutils literal notranslate"><span class="pre">True</span></code> values in an array<a class="headerlink" href="#using-sum-will-count-the-number-of-true-values-in-an-array" title="Link to this heading">#</a></h1>
+<p>It is important to know that Python will treat <code class="docutils literal notranslate"><span class="pre">True</span></code> values as being equal to 1:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>And <code class="docutils literal notranslate"><span class="pre">False</span></code> values as being equal to 0:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>This means that when we use a comparison operator, and it gives us a Boolean array, we can easily count the number of times something is <code class="docutils literal notranslate"><span class="pre">True</span></code> just by using addition.</p>
+<p>Imagine we have some data on the ages of students in a class:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ages_of_students</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
+
+<span class="n">ages_of_students</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([18, 24, 22, 19, 28, 19])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Imagine we want to contact students over the age of 20, to get them to apply for an internship which only people older than 20 can apply for.</p>
+<p>So, we want to ask Python <em>“how many students are older than 20?”</em> so we know how many people we need to contact?</p>
+<p>We can do this easily with a comparison operator and <code class="docutils literal notranslate"><span class="pre">np.sum()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A Boolean array.</span>
+<span class="n">ages_of_students</span> <span class="o">&gt;</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True,  True, False,  True, False])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can give this Boolean array straight to the <code class="docutils literal notranslate"><span class="pre">np.sum()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The number of students older than 20.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ages_of_students</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see the number 3 because Python has counted the <code class="docutils literal notranslate"><span class="pre">True</span></code> values - this means 3 students are older than 20.</p>
 </section>
 <section id="exericse-boolean-indexing">
 <h1>Exericse - Boolean Indexing<a class="headerlink" href="#exericse-boolean-indexing" title="Link to this heading">#</a></h1>
@@ -712,6 +823,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_10_03f_Filling_Arrays.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Making and filling arrays</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_10_03h_Simulation_With_Numpy_Arrays.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">More Simulation with NumPy Arrays</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -732,6 +861,7 @@
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Boolean Arrays and Boolean Indexing</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-numpy-arrays-with-boolean-arrays">Filtering NumPy Arrays with Boolean Arrays</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-sum-will-count-the-number-of-true-values-in-an-array">Using <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> will count the number of <code class="docutils literal notranslate"><span class="pre">True</span></code> values in an array</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exericse-boolean-indexing">Exericse - Boolean Indexing</a></li>
 </ul>
 

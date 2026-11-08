@@ -1,0 +1,1454 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Iteration - for loops &#8212; Introduction to Computer Programming</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_10_03i_Iteration_For_Loops';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_10_03i_Iteration_For_Loops.html" />
+    <link rel="icon" href="_static/logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Indentation, indentation, indentation" href="1_10_03j_Indentation.html" />
+    <link rel="prev" title="More Simulation with NumPy Arrays" href="1_10_03h_Simulation_With_Numpy_Arrays.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Introduction to Computer Programming - Home"/>
+    <img src="_static/logo.jpg" class="logo__image only-dark pst-js-only" alt="Introduction to Computer Programming - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction to Computer Programming
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Class Rules and Assessments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_01_Class_Rules.html">Class Rules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02_Class_Grades_Assignments_Exams.html">How this class is graded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_02b_Asking_For_Help.html">Helping each other learn, and asking for help</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic Python Elements and Grammar</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_03_Introduction_to_Python_and_Jupyter.html">Introduction to Python and Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_04_0_More_Jupyter_Notebooks.html">More on Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_04_A_Simple_Problem.html">A simple probability problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_05_Variables.html">Variables - thinking like a computer (scientist)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_05b_Extra_Variables_Task.html">Extra Variables Task - Python Budget</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_06_Expressions.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07_Summary_Literals_Variables_Expressions_Functions.html">Summary: Literals, Variables, Expressions and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_07b_Class_Quiz_Literals_Variables_Expressions_Functions.html">Class Quiz: Literals, Variables, Expressions and Functions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Types</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_08_00_Data_Types.html">Data Types and the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_01_Numbers.html">Numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_02_Strings.html">Strings (text)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_03_Changing_Data_Types.html">Changing Data Types, using the <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code> and <code class="docutils literal notranslate"><span class="pre">str()</span></code> functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_04_More_On_Numbers.html">More on Numbers - Scientific Notation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05_More_On_Strings.html">More on Strings -  Multi-line Strings &amp; F-Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Extra_Data_Types_Task.html">Extra Data Types Task - Printing a Receipt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06_String_Methods.html">String Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06b_A_Whole_Book_As_A_Variable.html">A Whole Book as a Variable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_06b_Extra_Strings_Task_ASCII_Art.html">Extra Strings Task - ASCII Art</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_07_Comparison_Operators.html">Comparison Operators and Boolean data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_None.html">The <code class="docutils literal notranslate"><span class="pre">NoneType</span></code> Data Type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_08_05b_Fix_My_Data_Exercise.html">Exercise - Fix my Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statements and Conditionals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_09_00_Conditional_Statements.html">Conditional Statements - <code class="docutils literal notranslate"><span class="pre">if</span></code> this happens → then that happens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task.html">Extra Conditional Statements Task - Data Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Collections</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c0_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c1_NumPy_Arrays_Exercise_1.html">NumPy Arrays Exercise 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_1.html">NumPy Arrays Extra Task 1 - Study Routine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_2.html">NumPy Arrays Extra Task 2 - Dice Betting Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_3.html">NumPy Arrays Extra Task 3 - More Simple Video Game Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_4.html">NumPy Arrays Extra Task 4 - More Advanced Study Routine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03d_Ranges.html">Ranges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03e_More_Maths_With_Arrays.html">More Maths with Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03f_Filling_Arrays.html">Making and filling arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Boolean_Indexing.html">Boolean Arrays and Boolean Indexing</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="1_10_03h_Simulation_With_Numpy_Arrays.html">More Simulation with NumPy Arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration - doing things over and over and over...</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j_Indentation.html">Indentation, indentation, indentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_j2_Simulation_to_Solve_a_Real_Problem.html">Simulation to solve a real problem - The Supreme Court</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="scratchpad.html">Scratchpad</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_10_03i_Iteration_For_Loops.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/1_10_03i_Iteration_For_Loops.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Iteration - for loops</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-idea-behind-a-for-loop">The idea behind a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unrolling-the-loop">Unrolling the loop</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-counting-the-number-of-heads">Example: Counting the Number of Heads</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-number-of-heads-in-100-tosses">Example: Number of Heads in 100 Tosses</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="iteration-for-loops">
+<h1>Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops<a class="headerlink" href="#iteration-for-loops" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/iteration.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the Numpy package, and rename to "np"</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is often the case in programming – especially when using randomness
+— that we want to do something many times.</p>
+<p>We know <code class="docutils literal notranslate"><span class="pre">np.random.choice()</span></code> randomly chooses between things in an array or list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+<span class="n">coin</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('HEADS')
+</pre></div>
+</div>
+</div>
+</div>
+<p>We might want to check this really does in fact choose <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code> or <code class="docutils literal notranslate"><span class="pre">'TAILS'</span></code> with about the same
+probability.</p>
+<p>To do that, we could start by running the following cell many
+times to see if we get roughly equal numbers of <code class="docutils literal notranslate"><span class="pre">'HEADS'</span></code> and <code class="docutils literal notranslate"><span class="pre">'TAILS'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
+</pre></div>
+</div>
+</div>
+</div>
+<p>We might want to re-run code with slightly different input or other slightly
+different behavior. We could copy-paste the code multiple times, but that’s
+annoying and likely we’ll make errors. And if we wanted to do it a thousand times or
+a million times, forget it, nobody has time for that.</p>
+<p>A better solution is to use a <code class="docutils literal notranslate"><span class="pre">for</span></code> statement to loop over a list or array. This is called <em>iteration</em>.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> statement begins with the word <code class="docutils literal notranslate"><span class="pre">for</span></code>, followed by a name we want to give each item in the
+sequence, followed by the word <code class="docutils literal notranslate"><span class="pre">in</span></code>, and ending with a collection (e.g. list or array).</p>
+<p>The indented body of the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement is executed once <em>for each item in that sequence</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"HELLO CLASS!"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HELLO CLASS!
+HELLO CLASS!
+HELLO CLASS!
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">v</span></code> in the code above is called the <em>loop variable</em>.</p>
+<p>We can give it any name we want, I chose <code class="docutils literal notranslate"><span class="pre">v</span></code> for “variable”.</p>
+<p>We can also use the loop variable in the body of the loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each time the loop runs, <code class="docutils literal notranslate"><span class="pre">v</span></code> gets the value of an element in the collection after the <code class="docutils literal notranslate"><span class="pre">in</span></code> keyword.</p>
+<p>So on the <em>first</em> loop <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">0</span></code>, then on the <em>second</em> loop <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">1</span></code>, on the <em>third</em> loop <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">2</span></code>, because these are the elements in <code class="docutils literal notranslate"><span class="pre">np.arange(3)</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2])
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">np.arange(3)</span></code> is not special. We can use any list or array to do this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"Yan"</span><span class="p">,</span> <span class="s2">"Emily"</span><span class="p">,</span> <span class="s2">"Riley"</span><span class="p">,</span> <span class="s2">"Pooh"</span><span class="p">,</span> <span class="s2">"Ryan"</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yan
+Emily
+Riley
+Pooh
+Ryan
+</pre></div>
+</div>
+</div>
+</div>
+<section id="the-idea-behind-a-for-loop">
+<h2>The idea behind a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#the-idea-behind-a-for-loop" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop takes a sequence of things (in our case, the sequence 0, 1, 2), and, for each element in the sequence, it does some task.  The task is the indented part of the for loop, also called the <em>body</em> of the for loop.</p>
+<p>This is a common pattern where we take a series of things, and perform the
+same steps on each.</p>
+<p>For example, imagine a librarian describing the sequence
+of steps that he goes through, in sorting a stack of books.  He might say
+something like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Get the stack of books to issue from the reader
+ Put stack of books to issue on my left
+ For each *book* in [the stack of books on my left]:
+     Open *book* to first page
+     Stamp first page of *book*
+     Close *book*
+     Put *book* onto stack on my right
+ (Now I have finished processing all the books)
+ Hand stack of books on my right to reader
+</pre></div>
+</div>
+<p>Imagine a passport control officer describing their procedure at work:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Sign into computer at immigration station
+Open immigration station
+For each *person* of [the people in the immigration line]:
+    Ask *person* for their passport.
+    Check passport photo against face of *person*.
+    Scan passport to check against database.
+    Return passport to *person*.
+    Allow *person* through to customs.
+(Now I have finished processing all the people in the line)
+Close immigration station
+Sign out of computer at immigration station
+</pre></div>
+</div>
+<p>In either case, we take a sequence of things (books, people), and for each
+element in that sequence (each book, each person) we perform a task (sorting
+the books, checking the person’s passport).</p>
+<p>We have indented the steps of
+the task that we perform for each (book, person); this is the <em>task
+definition</em>.  In the for loop, the task definition is also called the <em>body</em>
+of the for loop.</p>
+<p>In the loops above, we did something with each element in the sequence.  For
+the first loop, the element is one book. The librarian opened, stamped, moved
+the book.  In the second loop, the element is a person in the immigration
+line; the officer takes their passport and checks it, and then allows them
+through.</p>
+<p>This is not always the case - sometimes we just want to repeat some action a
+set amount of times.  For example, when you go on a flight, you may see a
+member of the cabin crew going through the cabin, clicking a clicker once for
+each passenger.  This is to count the number of passengers.  That loop might
+be:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Get clicker from equipment cupboard
+For each *passenger* of the [passengers in the aircraft]:
+    Press the clicker
+(Now I have finished counting the passengers)
+Report number on clicker to ground staff
+Put clicker back in cuboard
+</pre></div>
+</div>
+<p>Notice that the body of the loop is “Press the clicker”, but that doesn’t involve the particular <strong>passenger</strong>.  The loop, here, is just a way of repeating the same action multiple times.</p>
+</section>
+<section id="unrolling-the-loop">
+<h2>Unrolling the loop<a class="headerlink" href="#unrolling-the-loop" title="Link to this heading">#</a></h2>
+<p>Here is the actual Python for loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can read that as:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>For each value in the sequence "np.arange(3)":
+    Put the value into the variable "v"
+    Execute the statement "print(v)"
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> is the <em>loop variable</em>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.arange(3)</span></code> is the <em>sequence</em>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print(v)</span></code> is the <em>body</em> of the loop.</p></li>
+</ul>
+<p>It is instructive to imagine code that exactly replicates the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement
+without the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement.  (This is called <em>unrolling</em> the loop.)  A <code class="docutils literal notranslate"><span class="pre">for</span></code>
+statement simply replicates the code inside it, but before each iteration, it
+assigns a new value from the given sequence to the name we chose.  For
+example, here is an unrolled version of the loop above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that the name <code class="docutils literal notranslate"><span class="pre">v</span></code> is arbitrary, just like any name we assign with <code class="docutils literal notranslate"><span class="pre">=</span></code>.
+For example, the following <code class="docutils literal notranslate"><span class="pre">for</span></code> loop works in just the same way as the <code class="docutils literal notranslate"><span class="pre">for</span></code>
+loop above:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">my_variable</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_variable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">my_variable</span></code> is the <em>loop variable</em>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.arange(3)</span></code> is the <em>sequence</em>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print(my_variable)</span></code> is the <em>body</em> of the loop.</p></li>
+</ul>
+<p>As in the examples above, the body of the loop need not use the loop variable.  We might just use the loop to repeat something several times.  Here is an old-school comedy policeman:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
+Hello
+Hello
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span></code> is the <em>loop variable</em>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.arange(3)</span></code> is the <em>sequence</em>;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print(&quot;Hello&quot;)</span></code> is the <em>body</em> of the loop.  It does not use the loop
+variable.</p></li>
+</ul>
+<p>In the next example, we use a <code class="docutils literal notranslate"><span class="pre">for</span></code> statement in a more realistic way: we
+print the results of five random choices:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TAILS
+TAILS
+HEADS
+TAILS
+TAILS
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this case, we simply perform exactly the same (random) action several
+times, so the code inside our <code class="docutils literal notranslate"><span class="pre">for</span></code> statement does not actually refer to the
+variable <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<section id="example-counting-the-number-of-heads">
+<h3>Example: Counting the Number of Heads<a class="headerlink" href="#example-counting-the-number-of-heads" title="Link to this heading">#</a></h3>
+<p>We can now simulate five tosses of a coin and place the results into an array.
+We will start by creating an array of zeros then filling up the array with the
+result of each toss.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An empty array, to put our coin flips in.</span>
+<span class="n">tosses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> 
+                  <span class="n">dtype</span><span class="o">=</span><span class="s1">'object'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">tosses</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+
+<span class="n">tosses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS')], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us rewrite the cell with the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement unrolled:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An empty array.</span>
+<span class="n">tosses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> 
+                  <span class="n">dtype</span><span class="o">=</span><span class="s1">'object'</span><span class="p">)</span> <span class="c1"># Notice the `dtype` here. Experiment to see why this is different to `str`.</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">tosses</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tosses</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">tosses</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">tosses</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">tosses</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+
+<span class="n">tosses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS')], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we have an array, we can use <code class="docutils literal notranslate"><span class="pre">np.sum</span></code> on a Boolean array to count the
+number of heads in the five tosses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">tosses</span><span class="o">==</span><span class="s2">"HEADS"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Iteration is a powerful technique. For example, by running exactly the
+same code for 1000 tosses instead of 5, we can count the number of
+heads in 1000 tosses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An empty array.</span>
+<span class="n">tosses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> 
+                  <span class="n">dtype</span><span class="o">=</span><span class="s1">'object'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">tosses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">])</span>
+
+<span class="n">tosses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('HEADS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('HEADS'), np.str_('HEADS'),
+       np.str_('HEADS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('TAILS'), np.str_('TAILS'), np.str_('TAILS'),
+       np.str_('HEADS')], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-number-of-heads-in-100-tosses">
+<h3>Example: Number of Heads in 100 Tosses<a class="headerlink" href="#example-number-of-heads-in-100-tosses" title="Link to this heading">#</a></h3>
+<p>It is natural to expect that in 100 tosses of a coin, there will be 50
+heads, give or take a few.</p>
+<p>But how many is “a few”? What’s the chance of getting exactly 50
+heads? Questions like these matter in data science not only because
+they are about interesting aspects of randomness, but also because
+they can be used in analyzing experiments where assignments to
+treatment and control groups are decided by the toss of a coin.</p>
+<p>In this example we will simulate 10,000 repetitions of the following
+experiment:</p>
+<ul class="simple">
+<li><p>Toss a coin 100 times and record the number of heads.</p></li>
+</ul>
+<p>The histogram of our results will give us some insight into how many
+heads are likely.</p>
+<p>We have already seen that <code class="docutils literal notranslate"><span class="pre">choice</span></code> can take another <code class="docutils literal notranslate"><span class="pre">size</span></code> argument.  The
+following call returns an array length 10 of random choices from 0 and 1:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['HEADS', 'HEADS', 'HEADS', 'HEADS', 'HEADS', 'HEADS', 'HEADS',
+       'HEADS', 'TAILS', 'HEADS'], dtype='&lt;U5')
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s study 100 tosses. We will start by creating an empty array
+called <code class="docutils literal notranslate"><span class="pre">heads</span></code>. Then, in each of the 10,000 repetitions, we will toss
+a coin 100 times, count the number of heads, and append it to <code class="docutils literal notranslate"><span class="pre">heads</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">head_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'object'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">tosses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"HEADS"</span><span class="p">,</span> <span class="s2">"TAILS"</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">n_heads</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">tosses</span> <span class="o">==</span> <span class="s2">"HEADS"</span><span class="p">)</span>
+    <span class="n">head_counts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">n_heads</span>
+
+<span class="n">head_counts</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([np.int64(46), np.int64(49), np.int64(46), ..., np.int64(51),
+       np.int64(58), np.int64(56)], shape=(10000,), dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is a histogram of the data, with bins of width 1 centered at each value of
+the number of heads. This graph is made with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> which we used on the last page:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import `matplotlib`.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we do the histogram:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a histogram, with some custom options.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">head_counts</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">30.5</span><span class="p">,</span> <span class="mf">69.6</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Number of Heads'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Count'</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/80871b329485adbea017cde4d6e678d81df2b987f3d6758d7985497bf39b1a40.png" src="_images/80871b329485adbea017cde4d6e678d81df2b987f3d6758d7985497bf39b1a40.png" />
+</div>
+</div>
+<p>Not surprisingly, the histogram looks roughly symmetric around 50 heads. The
+height of the bar at 50 is about 8% per unit. Since each bin is 1 unit wide,
+this is the same as saying that about 8% of the repetitions produced exactly 50
+heads. That’s not a huge percent, but it’s the largest compared to the percent
+at every other number of heads.</p>
+<p>The histogram also shows that in almost all of the repetitions, the number of
+heads in 100 tosses was somewhere between 35 and 65. Indeed, the bulk of the
+repetitions produced numbers of heads in the range 45 to 55.</p>
+<p>While in theory it is <em>possible</em> that the number of heads can be
+anywhere between 0 and 100, the simulation shows that the range of
+<em>probable</em> values is much smaller.</p>
+<p>This is an instance of a more general phenomenon about the variability
+in coin tossing, as we will see later in the course.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "pxr687/Intro_Comp_Programming",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1_10_03h_Simulation_With_Numpy_Arrays.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">More Simulation with NumPy Arrays</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_10_03j_Indentation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Indentation, indentation, indentation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-idea-behind-a-for-loop">The idea behind a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unrolling-the-loop">Unrolling the loop</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-counting-the-number-of-heads">Example: Counting the Number of Heads</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-number-of-heads-in-100-tosses">Example: Number of Heads in 100 Tosses</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Peter Rush (partly adapted from material by Matthew Brett, Peter Rush, Ani Adhikari, John Denero and David Wagner)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

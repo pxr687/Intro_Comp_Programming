@@ -28,16 +28,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-my_array = np.array([1, 5, 19, 2000])
-my_array > 10
+jurors = rng.choice([1, 0], p=[0.26, 0.74], size=12)
+count = np.count_nonzero(jurors)
+counts[0] = count
+counts
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
 [31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m my_array = np.array([[32m1[39m, [32m5[39m, [32m19[39m, [32m2000[39m])
-[32m      2[39m my_array > [32m10[39m
+[36mCell[39m[36m [39m[32mIn[4][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m jurors = rng.choice([[32m1[39m, [32m0[39m], p=[[32m0.26[39m, [32m0.74[39m], size=[32m12[39m)
+[32m      2[39m count = np.count_nonzero(jurors)
+[32m      3[39m counts[[32m0[39m] = count
+[32m      4[39m counts
 
-[31mNameError[39m: name 'np' is not defined
+[31mNameError[39m: name 'rng' is not defined
 

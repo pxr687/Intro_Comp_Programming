@@ -66,6 +66,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Iteration - for loops" href="1_10_03i_Iteration_For_Loops.html" />
+    <link rel="prev" title="Boolean Arrays and Boolean Indexing" href="1_10_03g_Boolean_Arrays_Boolean_Indexing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -167,8 +169,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -261,9 +261,12 @@
 <li class="toctree-l1"><a class="reference internal" href="1_09_00b_Extra_Conditional_Statements_Task_Two.html">Extra Conditional Statements Task - Simple Code for a Video Game</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Collections</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_10_01_Lists.html">Lists</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_01b_List_Methods.html">List Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02b_Dictionary_Methods.html">Dictionary Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_02c_List_Dict_Constructors.html">The <code class="docutils literal notranslate"><span class="pre">list()</span></code> and <code class="docutils literal notranslate"><span class="pre">dict()</span></code> constructors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03_NumPy_Arrays_1.html">NumPy and NumPy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03b_Array_Indexing.html">Selecting Values from Numpy Arrays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c0_NumPy_Arrays_Functions_Methods.html">NumPy Functions and Numpy Array Methods</a></li>
@@ -272,6 +275,22 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_2.html">NumPy Arrays Extra Task 2 - Dice Betting Game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_3.html">NumPy Arrays Extra Task 3 - More Simple Video Game Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03c2_NumPy_Arrays_Extra_Task_4.html">NumPy Arrays Extra Task 4 - More Advanced Study Routine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03d_Ranges.html">Ranges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03e_More_Maths_With_Arrays.html">More Maths with Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03f_Filling_Arrays.html">Making and filling arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Boolean_Indexing.html">Boolean Arrays and Boolean Indexing</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">More Simulation with NumPy Arrays</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration - doing things over and over and over...</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j_Indentation.html">Indentation, indentation, indentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03_j2_Simulation_to_Solve_a_Real_Problem.html">Simulation to solve a real problem - The Supreme Court</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -471,6 +490,7 @@
             <nav aria-label="Page">
                 <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-whole-thing">The whole thing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quick-introduction-to-data-visualization-in-python">A Quick Introduction to Data Visualization in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops.</a></li>
 </ul>
             </nav>
@@ -485,9 +505,16 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="more-simulation-with-numpy-arrays">
 <h1>More Simulation with NumPy Arrays<a class="headerlink" href="#more-simulation-with-numpy-arrays" title="Link to this heading">#</a></h1>
-<p>We are still building up to a solution for the <a class="reference internal" href="#three_girls"><span class="xref myst">three girls
-problem</span></a>.</p>
-<p>We have more of the building blocks we need.</p>
+<blockquote>
+<div><p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/leaping_ahead.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information</p>
+</div></blockquote>
+<p>We are still building up to a solution for the <a class="reference external" href="https://pxr687.github.io/Intro_Comp_Programming/1_04_A_Simple_Problem.html">three girls
+problem</a>.</p>
+<p>Remember that this simple probability problem is:</p>
+<blockquote>
+<div><p>Imagine a family with four children. What is the probability that the family will have three girls?</p>
+</div></blockquote>
+<p>We have more of the building blocks we need to give an accurate answer, using computer simulation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the Numpy package, and rename to "np".</span>
@@ -522,15 +549,19 @@ simulates a family of four children, and count the number of girls.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make an array of four random choices from 0 or 1.</span>
 <span class="c1"># 1 means a girl.</span>
-<span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"BOY"</span><span class="p">,</span> <span class="s2">"GIRL"</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
 <span class="c1"># Add up the integers to count the number of girls.</span>
-<span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span> <span class="o">==</span> <span class="s2">"GIRL"</span><span class="p">)</span>
 <span class="n">count</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['GIRL' 'BOY' 'GIRL' 'GIRL']
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
 </pre></div>
 </div>
 </div>
@@ -546,7 +577,7 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -555,14 +586,14 @@ simulates a family of four children, and count the number of girls.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our first simulated family</span>
-<span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">counts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+<span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"BOY"</span><span class="p">,</span> <span class="s2">"GIRL"</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">counts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span> <span class="o">==</span> <span class="s2">"GIRL"</span><span class="p">)</span>
 <span class="n">counts</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -572,14 +603,14 @@ simulates a family of four children, and count the number of girls.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Our second simulated family</span>
-<span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">counts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+<span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"BOY"</span><span class="p">,</span> <span class="s2">"GIRL"</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">counts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span> <span class="o">==</span> <span class="s2">"GIRL"</span><span class="p">)</span>
 <span class="n">counts</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 1., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 1., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -597,8 +628,8 @@ soon</span></a>.  You will recognize nearly all the code below, from the single 
 <span class="c1"># Repeat the indented stuff 10000 times.</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10_000</span><span class="p">):</span>
     <span class="c1"># The procedure for one family.</span>
-    <span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+    <span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"BOY"</span><span class="p">,</span> <span class="s2">"GIRL"</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span> <span class="o">==</span> <span class="s2">"GIRL"</span><span class="p">)</span>
     <span class="c1"># Store the count at position i in the counts array.</span>
     <span class="n">counts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
 <span class="c1"># Show the first 10 counts</span>
@@ -607,7 +638,7 @@ soon</span></a>.  You will recognize nearly all the code below, from the single 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 4., 1., 1., 1., 1., 3., 1., 2., 2.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 3., 1., 2., 3., 1., 3., 3., 2., 1.])
 </pre></div>
 </div>
 </div>
@@ -630,6 +661,12 @@ soon</span></a>.  You will recognize nearly all the code below, from the single 
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The Boolean array</span>
 <span class="n">has_3_girls</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">==</span> <span class="mi">3</span>
+<span class="n">has_3_girls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True, False, ...,  True, False,  True], shape=(10000,))
 </pre></div>
 </div>
 </div>
@@ -644,7 +681,7 @@ soon</span></a>.  You will recognize nearly all the code below, from the single 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2433)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2439)
 </pre></div>
 </div>
 </div>
@@ -659,7 +696,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2433)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2439)
 </pre></div>
 </div>
 </div>
@@ -676,8 +713,8 @@ the number of trials:</p>
 <span class="c1"># Repeat the indented stuff 10000 times.</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
     <span class="c1"># The procedure for one family.</span>
-    <span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+    <span class="n">children</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"BOY"</span><span class="p">,</span> <span class="s2">"GIRL"</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">children</span> <span class="o">==</span> <span class="s2">"GIRL"</span><span class="p">)</span>
     <span class="c1"># Store the count at position i in the counts array.</span>
     <span class="n">counts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span>
 
@@ -693,11 +730,88 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2504)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2572)
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="a-quick-introduction-to-data-visualization-in-python">
+<h2>A Quick Introduction to Data Visualization in Python<a class="headerlink" href="#a-quick-introduction-to-data-visualization-in-python" title="Link to this heading">#</a></h2>
+<p>The number that was output from the last code cell is a probability.</p>
+<p>Humans are very visual creatures. Sometimes patterns in data can be easily to see when we put them on a graph.</p>
+<p>To do this, we will use the <a class="reference external" href="https://matplotlib.org/">matplotlib</a> visualization library.</p>
+<p>This library is basic, but very flexible.</p>
+<p>To import the functions from it, we use this import statement:</p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code></p>
+<p>We will plot the <code class="docutils literal notranslate"><span class="pre">counts</span></code> array as a <a class="reference external" href="https://en.wikipedia.org/wiki/Histogram">histogram</a>. To do this we use the helpfully named <code class="docutils literal notranslate"><span class="pre">plt.hist()</span></code> function. The other functions in the cell make the graph easier to read/look nicer:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import `matplotlib`.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Make a histogram, and add labels to the x-axis and y-axis.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Number of Girls in Family'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Count'</span><span class="p">)</span>
+<span class="c1"># Make the x-axis show only integer values.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> 
+                     <span class="n">counts</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0da3325396761f7fb21005e4d219119af3df5c69880f853afe7347bd36c0eab5.png" src="_images/0da3325396761f7fb21005e4d219119af3df5c69880f853afe7347bd36c0eab5.png" />
+</div>
+</div>
+<p>Each bar on this histogram show us the <em>number</em> of families, in our simulation, who had a specific number of girls.</p>
+<p>To get the probabiliy, we can look at the height of a bar and divide it by the number of families in the simulation.</p>
+<p>We can do this using the <code class="docutils literal notranslate"><span class="pre">weights</span> <span class="pre">=</span></code> argument of the <code class="docutils literal notranslate"><span class="pre">plt.hist()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a histogram, and add labels to the x-axis and y-axis (show probabilities instead of counts).</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Number of Girls in Family'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Probability'</span><span class="p">)</span>
+<span class="c1"># Make the x-axis show only integer values.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> 
+                     <span class="n">counts</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/81475f38f0d3685bc7f99ce7718cf6c97d039420386d37e19a975c38aced3d16.png" src="_images/81475f38f0d3685bc7f99ce7718cf6c97d039420386d37e19a975c38aced3d16.png" />
+</div>
+</div>
+<p>Look at the y-axis height of the bar for 3 girls you can see it is around 0.25 (which means 25% probability).</p>
+<p>In fact, it is exactly the same probability that we got from our simulation!:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_3_girls</span> <span class="o">/</span> <span class="mi">10000</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2572)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can multiply this by 100 to show it as a percentage:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_3_girls</span> <span class="o">/</span> <span class="mi">10000</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(25.72)
+</pre></div>
+</div>
+</div>
+</div>
+<p>So to answer our three girls problem using simulation, the probability of a family of 4 having 3 girls is around 24%.</p>
 </section>
 <section id="for-loops">
 <h2>For loops.<a class="headerlink" href="#for-loops" title="Link to this heading">#</a></h2>
@@ -735,6 +849,24 @@ the number of trials:</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_10_03g_Boolean_Arrays_Boolean_Indexing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Boolean Arrays and Boolean Indexing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1_10_03i_Iteration_For_Loops.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -754,6 +886,7 @@ the number of trials:</p>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-whole-thing">The whole thing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-quick-introduction-to-data-visualization-in-python">A Quick Introduction to Data Visualization in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops.</a></li>
 </ul>
   </nav></div>
