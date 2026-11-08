@@ -15,7 +15,7 @@ jupyter:
 
 # Making and filling arrays
 
-This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/filling_arrays.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information
+> This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/filling_arrays.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information
 
 We often to need to make an array and fill it with values *before* we do something else with that array. We will see some uses of this later on. First, let's import Numpy:
 
@@ -47,6 +47,10 @@ np.zeros(5)
 
 ```{python}
 np.ones(5)
+```
+
+```{python}
+np.empty(5, dtype='str')
 ```
 
 These arrays aren't very useful at the moment; usually, we will want to fill in the elements of these arrays with other values.
@@ -119,4 +123,4 @@ When you use array indexing on the LHS, it means *specify the elements to assign
 So we can read `my_array[1] = 99` as "Make the location 'my_array[5]' point to
 the value 99.".
 
-We will use this kind of assignment to get a little closer to a good solution to the three girl problem, in [leaping ahead](leaping_ahead).
+We will use this kind of assignment later in the course, to do some data science simulations...

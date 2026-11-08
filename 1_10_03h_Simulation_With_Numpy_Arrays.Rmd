@@ -15,10 +15,16 @@ jupyter:
 
 # More Simulation with NumPy Arrays
 
-We are still building up to a solution for the [three girls
-problem](three_girls).
+> This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/leaping_ahead.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information
 
-We have more of the building blocks we need.
+We are still building up to a solution for the [three girls
+problem](https://pxr687.github.io/Intro_Comp_Programming/1_04_A_Simple_Problem.html).
+
+Remember that this simple probability problem is:
+
+> Imagine a family with four children. What is the probability that the family will have three girls?
+
+We have more of the building blocks we need to give an accurate answer, using computer simulation.
 
 ```{python}
 # Load the Numpy package, and rename to "np".
@@ -47,9 +53,10 @@ simulates a family of four children, and count the number of girls.
 ```{python}
 # Make an array of four random choices from 0 or 1.
 # 1 means a girl.
-children = np.random.choice([0, 1], size=4)
+children = np.random.choice(["BOY", "GIRL"], size=4)
+print(children)
 # Add up the integers to count the number of girls.
-count = np.sum(children)
+count = np.sum(children == "GIRL")
 count
 ```
 
@@ -66,8 +73,8 @@ Here that is again, in a single cell:
 
 ```{python}
 # Our first simulated family
-children = np.random.choice([0, 1], size=4)
-counts[0] = np.sum(children)
+children = np.random.choice(["BOY", "GIRL"], size=4)
+counts[0] = np.sum(children == "GIRL")
 counts[:10]
 ```
 
@@ -76,8 +83,8 @@ To add another family, we just repeat the same, but storing the result as the
 
 ```{python}
 # Our second simulated family
-children = np.random.choice([0, 1], size=4)
-counts[1] = np.sum(children)
+children = np.random.choice(["BOY", "GIRL"], size=4)
+counts[1] = np.sum(children == "GIRL")
 counts[:10]
 ```
 
@@ -96,8 +103,8 @@ counts = np.zeros(10_000)
 # Repeat the indented stuff 10000 times.
 for i in np.arange(10_000):
     # The procedure for one family.
-    children = np.random.choice([0, 1], size=4)
-    count = np.sum(children)
+    children = np.random.choice(["BOY", "GIRL"], size=4)
+    count = np.sum(children == "GIRL")
     # Store the count at position i in the counts array.
     counts[i] = count
 # Show the first 10 counts
@@ -115,6 +122,7 @@ We use [Boolean arrays](boolean_arrays) to make an array of 10000 elements, wher
 ```{python}
 # The Boolean array
 has_3_girls = counts == 3
+has_3_girls
 ```
 
 `np.count_nonzero` counts the number of True values (and therefore, the number of `counts` equal to 3).
@@ -146,8 +154,8 @@ counts = np.zeros(10000)
 # Repeat the indented stuff 10000 times.
 for i in np.arange(10000):
     # The procedure for one family.
-    children = np.random.choice([0, 1], size=4)
-    count = np.sum(children)
+    children = np.random.choice(["BOY", "GIRL"], size=4)
+    count = np.sum(children == "GIRL")
     # Store the count at position i in the counts array.
     counts[i] = count
 
@@ -160,6 +168,68 @@ n_3_girls = np.count_nonzero(has_3_girls)
 # Estimate and show probability of 3 girls.
 n_3_girls / 10000
 ```
+
+## A Quick Introduction to Data Visualization in Python
+
+The number that was output from the last code cell is a probability.
+
+Humans are very visual creatures. Sometimes patterns in data can be easily to see when we put them on a graph.
+
+To do this, we will use the [matplotlib](https://matplotlib.org/) visualization library.
+
+This library is basic, but very flexible.
+
+To import the functions from it, we use this import statement:
+
+`import matplotlib.pyplot as plt`
+
+We will plot the `counts` array as a [histogram](https://en.wikipedia.org/wiki/Histogram). To do this we use the helpfully named `plt.hist()` function. The other functions in the cell make the graph easier to read/look nicer:
+
+```{python}
+# Import `matplotlib`.
+import matplotlib.pyplot as plt
+
+# Make a histogram, and add labels to the x-axis and y-axis.
+plt.hist(counts)
+plt.xlabel('Number of Girls in Family')
+plt.ylabel('Count')
+# Make the x-axis show only integer values.
+plt.xticks(np.arange(counts.min(), 
+                     counts.max()+1));
+```
+
+Each bar on this histogram show us the *number* of families, in our simulation, who had a specific number of girls.
+
+To get the probabiliy, we can look at the height of a bar and divide it by the number of families in the simulation.
+
+We can do this using the `weights =` argument of the `plt.hist()` function:
+
+```{python}
+# Make a histogram, and add labels to the x-axis and y-axis (show probabilities instead of counts).
+weights = np.ones_like(counts)/len(counts)
+plt.hist(counts, weights=weights)
+plt.xlabel('Number of Girls in Family')
+plt.ylabel('Probability')
+# Make the x-axis show only integer values.
+plt.xticks(np.arange(counts.min(), 
+                     counts.max()+1));
+```
+
+Look at the y-axis height of the bar for 3 girls you can see it is around 0.25 (which means 25% probability).
+
+In fact, it is exactly the same probability that we got from our simulation!:
+
+```{python}
+n_3_girls / 10000
+```
+
+We can multiply this by 100 to show it as a percentage:
+
+```{python}
+n_3_girls / 10000 * 100
+```
+
+So to answer our three girls problem using simulation, the probability of a family of 4 having 3 girls is around 24%.
 
 ## For loops.
 

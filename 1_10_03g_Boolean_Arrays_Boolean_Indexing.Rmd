@@ -29,6 +29,7 @@ my_list > 10
 On the other hands, this works if our collection is an array:
 
 ```{python}
+import numpy as np
 my_array = np.array([1, 5, 19, 2000])
 my_array > 10
 ```
@@ -106,6 +107,50 @@ The table shows what has happened here:
 The `False` values act as "switches" which switch off the values in `my_array` which are less than 10.
 
 So the last array we get only has the values from `my_array` which are bigger than 10.
+
+## Using `.sum()` will count the number of `True` values in an array
+
+It is important to know that Python will treat `True` values as being equal to 1:
+
+```{python}
+True == 1
+```
+
+And `False` values as being equal to 0:
+
+```{python}
+False == 0
+```
+
+This means that when we use a comparison operator, and it gives us a Boolean array, we can easily count the number of times something is `True` just by using addition.
+
+Imagine we have some data on the ages of students in a class:
+
+```{python}
+ages_of_students = np.array([18, 24, 22, 19, 28, 19])
+
+ages_of_students
+```
+
+Imagine we want to contact students over the age of 20, to get them to apply for an internship which only people older than 20 can apply for.
+
+So, we want to ask Python *"how many students are older than 20?"* so we know how many people we need to contact?
+
+We can do this easily with a comparison operator and `np.sum()`:
+
+```{python}
+# A Boolean array.
+ages_of_students > 20
+```
+
+We can give this Boolean array straight to the `np.sum()` function:
+
+```{python}
+# The number of students older than 20.
+np.sum(ages_of_students > 20)
+```
+
+We see the number 3 because Python has counted the `True` values - this means 3 students are older than 20.
 
 ## Exericse - Boolean Indexing
 
