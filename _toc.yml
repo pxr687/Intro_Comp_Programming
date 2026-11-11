@@ -64,13 +64,14 @@ parts:
       - file: 1_10_03e_More_Maths_With_Arrays
       - file: 1_10_03f_Filling_Arrays
       - file: 1_10_03g_Boolean_Arrays_Boolean_Indexing
-      - file: 1_10_03h_Simulation_With_Numpy_Arrays
+      - file: 1_10_03g_Boolean_Arrays_Extra_Task
 
   - caption: Iteration - doing things over and over and over...
     chapters:
     - file: 1_10_03i_Iteration_For_Loops
-    - file: 1_10_03j_Indentation
-    - file: 1_10_03_j2_Simulation_to_Solve_a_Real_Problem
+    - file: 1_10_03j0_Indentation
+    - file: 1_10_03j2_Simulation_With_Numpy_Arrays
+    - file: 1_10_03j3_Simulation_to_Solve_a_Real_Problem
     - file: 1_10_03l_Break_and_Continue
     - file: 1_10_03k_Simulation_Task
 

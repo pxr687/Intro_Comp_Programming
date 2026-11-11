@@ -66,7 +66,7 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="More Simulation with NumPy Arrays" href="1_10_03h_Simulation_With_Numpy_Arrays.html" />
+    <link rel="next" title="Boolean Arrays and Boolean Indexing" href="1_10_03g_Boolean_Arrays_Extra_Task.html" />
     <link rel="prev" title="Making and filling arrays" href="1_10_03f_Filling_Arrays.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -282,13 +282,14 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="1_10_03h_Simulation_With_Numpy_Arrays.html">More Simulation with NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays and Boolean Indexing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration - doing things over and over and over...</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03j_Indentation.html">Indentation, indentation, indentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03_j2_Simulation_to_Solve_a_Real_Problem.html">Simulation to solve a real problem - The Supreme Court</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j0_Indentation.html">Indentation, indentation, indentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j2_Simulation_With_Numpy_Arrays.html">Statistical Simulation with NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_Simulation_to_Solve_a_Real_Problem.html">Statistical Simulation to Solve a Real-world Problem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
 </ul>
@@ -492,7 +493,7 @@
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Boolean Arrays and Boolean Indexing</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-numpy-arrays-with-boolean-arrays">Filtering NumPy Arrays with Boolean Arrays</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-sum-will-count-the-number-of-true-values-in-an-array">Using <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> will count the number of <code class="docutils literal notranslate"><span class="pre">True</span></code> values in an array</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exericse-boolean-indexing">Exericse - Boolean Indexing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-boolean-arrays-boolean-indexing">Exercise - Boolean Arrays &amp; Boolean Indexing</a></li>
 </ul>
 
             </nav>
@@ -760,37 +761,10 @@
 </div>
 <p>We see the number 3 because Python has counted the <code class="docutils literal notranslate"><span class="pre">True</span></code> values - this means 3 students are older than 20.</p>
 </section>
-<section id="exericse-boolean-indexing">
-<h1>Exericse - Boolean Indexing<a class="headerlink" href="#exericse-boolean-indexing" title="Link to this heading">#</a></h1>
-<p>You will now collect some real data and do some simple data analysis.</p>
-<p>The data you should collect is from your classmates.</p>
-<ul class="simple">
-<li><p>Ask at least 6 of your classmates:</p>
-<ul>
-<li><p>What is your name? Store these values in an array called <code class="docutils literal notranslate"><span class="pre">names</span></code></p></li>
-<li><p>What is your age? Store these values in an array called <code class="docutils literal notranslate"><span class="pre">ages</span></code></p></li>
-<li><p>What is your nationality? Store these values in an array called <code class="docutils literal notranslate"><span class="pre">Nationality</span></code></p></li>
-</ul>
-</li>
-</ul>
-<p>Then complete these tasks (you can launch this page on Binder and do each task in a separate code cell, by making new cells using the menu at the top of the page):</p>
-<ul class="simple">
-<li><p>Search for a NumPy method or function to calculate the average age of the classmates.</p></li>
-<li><p>Search for a NumPy method or function to find the median age.</p></li>
-<li><p>Search for a NumPy method or function to find the maximum age.</p></li>
-<li><p>Search for a NumPy method or function to find the minimum age.</p></li>
-<li><p>Calculate the range of ages by subtracting the minimum age from the maximum age.</p></li>
-<li><p>Use Boolean indexing to show the names of classmates who are 20 years old or older.</p></li>
-<li><p>Use Boolean indexing to show the names of classmates of a particular nationality.</p></li>
-<li><p>Write some code to find to two most common nationalities. Use Boolean indexing to store the <code class="docutils literal notranslate"><span class="pre">ages</span></code> data for each nationality, in two different arrays. Then calculate the average age for each nationality, are they are different?</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here.</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="exercise-boolean-arrays-boolean-indexing">
+<h1>Exercise - Boolean Arrays &amp; Boolean Indexing<a class="headerlink" href="#exercise-boolean-arrays-boolean-indexing" title="Link to this heading">#</a></h1>
+<p>Let’s do an exercise.</p>
+<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4g_boolean_arrays.ipynb">here 🚀</a> to launch the exercise on Binder.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -833,11 +807,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="1_10_03h_Simulation_With_Numpy_Arrays.html"
+       href="1_10_03g_Boolean_Arrays_Extra_Task.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">More Simulation with NumPy Arrays</p>
+        <p class="prev-next-title">Boolean Arrays and Boolean Indexing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -862,7 +836,7 @@
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Boolean Arrays and Boolean Indexing</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-numpy-arrays-with-boolean-arrays">Filtering NumPy Arrays with Boolean Arrays</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-sum-will-count-the-number-of-true-values-in-an-array">Using <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> will count the number of <code class="docutils literal notranslate"><span class="pre">True</span></code> values in an array</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exericse-boolean-indexing">Exericse - Boolean Indexing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-boolean-arrays-boolean-indexing">Exercise - Boolean Arrays &amp; Boolean Indexing</a></li>
 </ul>
 
   </nav></div>

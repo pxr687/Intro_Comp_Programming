@@ -124,3 +124,9 @@ So we can read `my_array[1] = 99` as "Make the location 'my_array[5]' point to
 the value 99.".
 
 We will use this kind of assignment later in the course, to do some data science simulations...
+
+## Exercise  - Ranges & Filling Arrays
+
+Let's do an exercise.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4f2_ranges_filling_arrays.ipynb) to launch the exercise on Binder.

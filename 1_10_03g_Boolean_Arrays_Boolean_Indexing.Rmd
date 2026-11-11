@@ -152,35 +152,8 @@ np.sum(ages_of_students > 20)
 
 We see the number 3 because Python has counted the `True` values - this means 3 students are older than 20.
 
-## Exericse - Boolean Indexing
+## Exercise - Boolean Arrays & Boolean Indexing
 
-You will now collect some real data and do some simple data analysis.
+Let's do an exercise.
 
-The data you should collect is from your classmates.
-
-- Ask at least 6 of your classmates:
-    - What is your name? Store these values in an array called `names`
-    - What is your age? Store these values in an array called `ages`
-    - What is your nationality? Store these values in an array called `Nationality`
-    
-Then complete these tasks (you can launch this page on Binder and do each task in a separate code cell, by making new cells using the menu at the top of the page):
-
-- Search for a NumPy method or function to calculate the average age of the classmates.
-
-- Search for a NumPy method or function to find the median age.
-
-- Search for a NumPy method or function to find the maximum age.
-
-- Search for a NumPy method or function to find the minimum age.
-
-- Calculate the range of ages by subtracting the minimum age from the maximum age.
-
-- Use Boolean indexing to show the names of classmates who are 20 years old or older.
-
-- Use Boolean indexing to show the names of classmates of a particular nationality.
-
-- Write some code to find to two most common nationalities. Use Boolean indexing to store the `ages` data for each nationality, in two different arrays. Then calculate the average age for each nationality, are they are different?
-
-```{python}
-# Your code here.
-```
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4g_boolean_arrays.ipynb) to launch the exercise on Binder.
