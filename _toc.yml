@@ -76,7 +76,7 @@ parts:
     - file: 1_10_03i_Iteration_For_Loops
     - file: 1_10_03j0_Indentation
     - file: 1_10_03j2_Simulation_With_Numpy_Arrays
-    - file: 1_10_03j3_Simulation_to_Solve_a_Real_Problem
+    - file: 1_10_03j3_More_Statistical_Simulation_Supreme_Court
     - file: 1_10_03l_Break_and_Continue
     - file: 1_10_03k_Simulation_Task
 
@@ -86,8 +86,7 @@ parts:
 # Introduce scripts via Jupyterlite repo + practice writing functions inside scripts
 # Getting keyboard input
 
-
-# Week 12 - Test 2 (Data Analysis) + Teaching = Modules and scripts (e.g. after test)
+# Week 12 - Teaching = Modules and scripts (e.g. before test on writing functions to do basic analysis tasks)
 
 # Week 13 and 14
 # Modules and scripts (computer science functions, make a HTML CV using user input and data validation)

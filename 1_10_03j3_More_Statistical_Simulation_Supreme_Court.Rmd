@@ -23,7 +23,7 @@ jupyter:
     version: 3.14.7
 ---
 
-# Statistical Simulation to Solve a Real-world Problem
+# More Statistical Simulation - The Supreme Court
 
 > This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/reply_supreme.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information
 
@@ -31,6 +31,8 @@ jupyter:
 Her is a real, serious problem:
 
 > In 1963, a court in Talladega County, Alabama sentenced a young black man called Robert Swain to death [1](https://en.wikipedia.org/wiki/Furman_v._Georgia). All 12 jurors in his trial were white. He appealed his sentence, citing, among other factors, evidence of bias in the process by which his jury was selected. At the time, only men aged 21 or older were allowed to serve on juries in Talladega County. In the county, 26% of the eligible jurors were black. (Quote from [here](https://odsti.github.io/cfd-textbook/sampling_problem.html)).
+
+A *juror* is someone on a jury - the group of people who decides if someone is guilty or not in a court case.
 
 His trial jury of 12 people had no Black members.
 
@@ -40,7 +42,7 @@ If the jury had been representative of the whole population, we would expect abo
 be Black.  That's around 1 in 4 (25%), so we would expect about one in four
 jurors to be Black - so around 3 of 12.
 
-The Supreme Court was not convinced that there was evidence of systematic bias.  But, to start with the jurors - is it surprising that we expected around 3 Black jurors, but we got 0.  Is the value 0 surprising, if each juror has 26% chance of being Black?
+The Supreme Court was not convinced that there was evidence of unfairness.  But, to start with the jurors - is it surprising that we expected around 3 Black jurors, but we got 0.  Is the value 0 surprising, if each juror has 26% chance of being Black?
 
 
 To answer this, we are going to go through a couple of steps.
@@ -54,10 +56,12 @@ Then we can *simulate* making many juries in this ideal world.
 
 Finally we ask whether our simulated juries, from the ideal world, often give
 us a count of zero Black jurors.  If they don't, then we can say that we are
-*surprised* by the value of 0, if the jury did arise from that real world.  If
+*surprised* by the value of 0, if the jury did arise from that real world.  
+
+If
 the value 0 is sufficiently unusual, we become suspicious that the real world
-is rather different from our ideal world.  We consider *rejecting* the ideal
-world as a good model of the real world.
+is rather different from our ideal world.  We consider saying that the the ideal
+world is NOT a good model of the real world - this is called *rejecting* the model of the ideal world.
 
 ## The ideal world
 
@@ -121,7 +125,7 @@ counts[0] = count
 counts
 ```
 
-Run the cell above a few times, perhaps with Control-Enter, to see the first value in the `counts` array changing.
+Run the cell above a few times, perhaps with `Control + Enter`, to see the first value in the `counts` array changing.
 
 
 Now we collect the result of 10 trials, by using a for loop.
@@ -187,7 +191,7 @@ a histogram.  Here is how to do that, in Python.  Don't worry about the details,
 import matplotlib.pyplot as plt
 ```
 
-Now show the histogram.  Don't worry about the details of this command.
+Now show the histogram. This shows how many times we got each number of Black jurors, in our simulation:
 
 ```{python}
 # Do the histogram of our 10000 estimates.

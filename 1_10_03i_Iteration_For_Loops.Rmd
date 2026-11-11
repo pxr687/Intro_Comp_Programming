@@ -23,10 +23,10 @@ jupyter:
 import numpy as np
 ```
 
-It is often the case in programming – especially when using randomness
-— that we want to do something many times.
+Ofte when we are programming – especially when using randomness
+— we will want to do something many times.
 
-We know `np.random.choice()` randomly chooses between things in an array or list:
+We know `np.random.choice()` randomly chooses between things in an array or list. So we can simulate a coin flip with:
 
 ```{python}
 coin = np.random.choice(["HEADS", "TAILS"])
@@ -43,9 +43,13 @@ times to see if we get roughly equal numbers of `'HEADS'` and `'TAILS'`.
 np.random.choice(["HEADS", "TAILS"])
 ```
 
-We might want to re-run code with slightly different input or other slightly
-different behavior. We could copy-paste the code multiple times, but that's
-annoying and likely we'll make errors. And if we wanted to do it a thousand times or
+We might want to re-run code with different input or other
+different behavior. 
+
+We could copy-paste the code multiple times, but that's
+annoying and likely we'll make errors. 
+
+And if we wanted to do it a thousand times or
 a million times, forget it, nobody has time for that.
 
 A better solution is to use a `for` statement to loop over a list or array. This is called *iteration*. 
@@ -53,7 +57,7 @@ A better solution is to use a `for` statement to loop over a list or array. This
 A `for` statement begins with the word `for`, followed by a name we want to give each item in the
 sequence, followed by the word `in`, and ending with a collection (e.g. list or array). 
 
-The indented body of the `for` statement is executed once *for each item in that sequence*.
+The code in the indented body of the `for` statement is run once *for each item in that sequence*.
 
 ```{python}
 for v in np.arange(3):
@@ -88,26 +92,12 @@ for v in ["Yan", "Emily", "Riley", "Pooh", "Ryan"]:
 
 ## The idea behind a `for` loop
 
-The `for` loop takes a sequence of things (in our case, the sequence 0, 1, 2), and, for each element in the sequence, it does some task.  The task is the indented part of the for loop, also called the *body* of the for loop.
+The `for` loop takes a sequence of things (in our case, the sequence 0, 1, 2), and, for each element in the sequence, it does some task.  The task is the code in the indented part of the for loop, also called the *body* of the for loop.
 
 This is a common pattern where we take a series of things, and perform the
 same steps on each.  
 
-For example, imagine a librarian describing the sequence
-of steps that he goes through, in sorting a stack of books.  He might say
-something like:
-
-     Get the stack of books to issue from the reader
-     Put stack of books to issue on my left
-     For each *book* in [the stack of books on my left]:
-         Open *book* to first page
-         Stamp first page of *book*
-         Close *book*
-         Put *book* onto stack on my right
-     (Now I have finished processing all the books)
-     Hand stack of books on my right to reader
-
-Imagine a passport control officer describing their procedure at work:
+For example, imagine a passport control officer describing their procedure at work:
 
     Sign into computer at immigration station
     Open immigration station
@@ -121,7 +111,7 @@ Imagine a passport control officer describing their procedure at work:
     Close immigration station
     Sign out of computer at immigration station
 
-In either case, we take a sequence of things (books, people), and for each
+In this case we take a sequence of things (books, people), and for each
 element in that sequence (each book, each person) we perform a task (sorting
 the books, checking the person's passport).  
 
@@ -153,7 +143,7 @@ Notice that the body of the loop is "Press the clicker", but that doesn't involv
 
 ## Unrolling the loop
 
-Here is the actual Python for loop.
+Here is an actual Python `for` loop.
 
 ```{python}
 for v in np.arange(3):
@@ -170,9 +160,10 @@ We can read that as:
 * `np.arange(3)` is the *sequence*;
 * `print(v)` is the *body* of the loop.
 
-It is instructive to imagine code that exactly replicates the `for` statement
-without the `for` statement.  (This is called *unrolling* the loop.)  A `for`
-statement simply replicates the code inside it, but before each iteration, it
+It is useful e to imagine code that does the same thing as the `for` statement
+without the `for` statement.  (This is called *unrolling* the loop.)  
+
+A `for` statement simply repeats the code inside it, but before each iteration, it
 assigns a new value from the given sequence to the name we chose.  For
 example, here is an unrolled version of the loop above:
 
@@ -185,9 +176,9 @@ v = 2
 print(v)
 ```
 
-Notice that the name `v` is arbitrary, just like any name we assign with `=`.
-For example, the following `for` loop works in just the same way as the `for`
-loop above:
+We can use any name we want for the loop variable, which in the cell above is called `v`, just like any name we assign with `=`.
+
+For example, the following `for` loop works in just the same way as the `for` loop above but uses a different loop variable name:
 
 ```{python}
 for my_variable in np.arange(3):
@@ -233,6 +224,7 @@ result of each toss.
 tosses = np.empty(5, 
                   dtype='object')
 
+# Do five coin flips, using a `for` loop.
 for v in np.arange(5):
     tosses[v] = np.random.choice(["HEADS", "TAILS"])
 
@@ -284,7 +276,7 @@ tosses
 
 ### Example: Number of Heads in 100 Tosses
 
-It is natural to expect that in 100 tosses of a coin, there will be 50
+It is normal to think that in 100 tosses of a coin, there will be 50
 heads, give or take a few.
 
 But how many is "a few"? What's the chance of getting exactly 50
@@ -327,14 +319,14 @@ head_counts
 ```
 
 Here is a histogram of the data, with bins of width 1 centered at each value of
-the number of heads. This graph is made with `matplotlib` which we used on the last page:
+the number of heads. This graph is made with `matplotlib`, which we will look at more on a later page.
 
 ```{python}
 # Import `matplotlib`.
 import matplotlib.pyplot as plt
 ```
 
-Now we do the histogram:
+Now we make a histogram of our `head_counts` array. This shows us how many elements in the array have a certain value:
 
 ```{python}
 # Make a histogram, with some custom options.
@@ -349,7 +341,7 @@ this is the same as saying that about 8% of the repetitions produced exactly 50
 heads. That's not a huge percent, but it's the largest compared to the percent
 at every other number of heads.
 
-The histogram also shows that in almost all of the repetitions, the number of
+The histogram also shows that in almost all of the repeats, the number of
 heads in 100 tosses was somewhere between 35 and 65. Indeed, the bulk of the
 repetitions produced numbers of heads in the range 45 to 55.
 

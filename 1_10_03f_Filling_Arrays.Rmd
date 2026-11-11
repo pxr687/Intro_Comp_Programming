@@ -17,39 +17,44 @@ jupyter:
 
 > This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/filling_arrays.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information
 
-We often to need to make an array and fill it with values *before* we do something else with that array. We will see some uses of this later on. First, let's import Numpy:
+We often to need to make an array and fill it with values *before* we do something else with that array. We will see some uses of this later on, but imagine you want to put loads of stuff in a box...first you need to build the box. That is what we are doing here, we make an array of a certain size *before* we put the stuff we want in it...
+
+First, let's import Numpy:
 
 ```{python}
 import numpy as np
 ```
 
-You have seen how to create arrays from a sequence of values:
+You have seen how to make arrays from a sequence of values (like a list):
 
 ```{python}
 np.array([1, 2, 3])
 ```
 
-You have also seen how to create arrays that are sequential integers, using `np.arange`:
+You have also seen how to create arrays that are *ranges*, using `np.arange`:
 
 ```{python}
 np.arange(5)
 ```
 
-We often find that we want to create an empty or default array, that we will fill later.
+As said above, we often find that we want to create an empty or default array, that we will fill later.
 
-Numpy has routines for that.  The main ones we will use are `np.zeros` and `np.ones`.
+Numpy can easily do that.  The main ways we will use are `np.zeros` and `np.ones`.
 
 You can guess what they do:
 
 ```{python}
+# Make an array with 5 zeros in it.
 np.zeros(5)
 ```
 
 ```{python}
+# Make an array with 5 ones in it.
 np.ones(5)
 ```
 
 ```{python}
+# Make an array with 5 empty strings in it.
 np.empty(5, dtype='str')
 ```
 
@@ -124,6 +129,26 @@ So we can read `my_array[1] = 99` as "Make the location 'my_array[5]' point to
 the value 99.".
 
 We will use this kind of assignment later in the course, to do some data science simulations...
+
+Everything on the page above lets me do stuff like this:
+
+```{python}
+# Make an array of zeros.
+zeros = np.zeros(5)
+
+# Show the array.
+zeros
+```
+
+```{python}
+# Using indexing and assignment to put other numbers in my array (like putting stuff in a box).
+zeros[0] = 1020
+
+zeros[-1] = 1040
+
+# Show the array.
+zeros
+```
 
 ## Exercise  - Ranges & Filling Arrays
 

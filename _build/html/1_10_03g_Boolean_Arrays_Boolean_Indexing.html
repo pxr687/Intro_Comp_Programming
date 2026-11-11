@@ -292,7 +292,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j0_Indentation.html">Indentation, indentation, indentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j2_Simulation_With_Numpy_Arrays.html">Statistical Simulation with NumPy Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_Simulation_to_Solve_a_Real_Problem.html">Statistical Simulation to Solve a Real-world Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_More_Statistical_Simulation_Supreme_Court.html">More Statistical Simulation - The Supreme Court</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
 </ul>
@@ -511,7 +511,7 @@
                   
   <section id="boolean-arrays-and-boolean-indexing">
 <h1>Boolean Arrays and Boolean Indexing<a class="headerlink" href="#boolean-arrays-and-boolean-indexing" title="Link to this heading">#</a></h1>
-<p>Another advantage of Numpy arrays is that we can use them in expressions with comparison operators.</p>
+<p>Another advantage of Numpy arrays is that we can use them in expressions with comparison operators (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code> etc).</p>
 <p>Let’s say we want to ask Python “which elements in this collection are bigger than 10?”.</p>
 <p>If we try the following code with a list, we get a nasty error message:</p>
 <div class="cell tag_raises-exception docutils container">
@@ -533,7 +533,7 @@
 </div>
 </div>
 </div>
-<p>On the other hands, this works if our collection is an array:</p>
+<p>On the other hand, this works if our collection is an array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -763,6 +763,20 @@
 </div>
 </div>
 <p>We see the number 3 because Python has counted the <code class="docutils literal notranslate"><span class="pre">True</span></code> values - this means 3 students are older than 20.</p>
+<p>We can also do this with the <code class="docutils literal notranslate"><span class="pre">np.count_nonzero()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The number of students older than 20 (another way).</span>
+<span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">ages_of_students</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="exercise-boolean-arrays-boolean-indexing">
 <h1>Exercise - Boolean Arrays &amp; Boolean Indexing<a class="headerlink" href="#exercise-boolean-arrays-boolean-indexing" title="Link to this heading">#</a></h1>

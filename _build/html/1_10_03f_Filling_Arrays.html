@@ -292,7 +292,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j0_Indentation.html">Indentation, indentation, indentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j2_Simulation_With_Numpy_Arrays.html">Statistical Simulation with NumPy Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_Simulation_to_Solve_a_Real_Problem.html">Statistical Simulation to Solve a Real-world Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_More_Statistical_Simulation_Supreme_Court.html">More Statistical Simulation - The Supreme Court</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
 </ul>
@@ -516,7 +516,8 @@
 <blockquote>
 <div><p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/filling_arrays.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information</p>
 </div></blockquote>
-<p>We often to need to make an array and fill it with values <em>before</em> we do something else with that array. We will see some uses of this later on. First, let’s import Numpy:</p>
+<p>We often to need to make an array and fill it with values <em>before</em> we do something else with that array. We will see some uses of this later on, but imagine you want to put loads of stuff in a box…first you need to build the box. That is what we are doing here, we make an array of a certain size <em>before</em> we put the stuff we want in it…</p>
+<p>First, let’s import Numpy:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -524,7 +525,7 @@
 </div>
 </div>
 </div>
-<p>You have seen how to create arrays from a sequence of values:</p>
+<p>You have seen how to make arrays from a sequence of values (like a list):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -537,7 +538,7 @@
 </div>
 </div>
 </div>
-<p>You have also seen how to create arrays that are sequential integers, using <code class="docutils literal notranslate"><span class="pre">np.arange</span></code>:</p>
+<p>You have also seen how to create arrays that are <em>ranges</em>, using <code class="docutils literal notranslate"><span class="pre">np.arange</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -550,12 +551,13 @@
 </div>
 </div>
 </div>
-<p>We often find that we want to create an empty or default array, that we will fill later.</p>
-<p>Numpy has routines for that.  The main ones we will use are <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> and <code class="docutils literal notranslate"><span class="pre">np.ones</span></code>.</p>
+<p>As said above, we often find that we want to create an empty or default array, that we will fill later.</p>
+<p>Numpy can easily do that.  The main ways we will use are <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> and <code class="docutils literal notranslate"><span class="pre">np.ones</span></code>.</p>
 <p>You can guess what they do:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make an array with 5 zeros in it.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -567,7 +569,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make an array with 5 ones in it.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -579,7 +582,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'str'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make an array with 5 empty strings in it.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'str'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -697,6 +701,41 @@
 <p>So we can read <code class="docutils literal notranslate"><span class="pre">my_array[1]</span> <span class="pre">=</span> <span class="pre">99</span></code> as “Make the location ‘my_array[5]’ point to
 the value 99.”.</p>
 <p>We will use this kind of assignment later in the course, to do some data science simulations…</p>
+<p>Everything on the page above lets me do stuff like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make an array of zeros.</span>
+<span class="n">zeros</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Show the array.</span>
+<span class="n">zeros</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 0., 0., 0., 0.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using indexing and assignment to put other numbers in my array (like putting stuff in a box).</span>
+<span class="n">zeros</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1020</span>
+
+<span class="n">zeros</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1040</span>
+
+<span class="c1"># Show the array.</span>
+<span class="n">zeros</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1020.,    0.,    0.,    0., 1040.])
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="exercise-ranges-filling-arrays">
 <h2>Exercise  - Ranges &amp; Filling Arrays<a class="headerlink" href="#exercise-ranges-filling-arrays" title="Link to this heading">#</a></h2>

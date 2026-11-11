@@ -15,7 +15,7 @@ jupyter:
 
 ## Boolean Arrays and Boolean Indexing
 
-Another advantage of Numpy arrays is that we can use them in expressions with comparison operators.
+Another advantage of Numpy arrays is that we can use them in expressions with comparison operators (`<`, `>`, `!=` etc).
 
 Let's say we want to ask Python "which elements in this collection are bigger than 10?".
 
@@ -26,7 +26,7 @@ my_list = [1, 5, 19, 2000]
 my_list > 10
 ```
 
-On the other hands, this works if our collection is an array:
+On the other hand, this works if our collection is an array:
 
 ```{python}
 import numpy as np
@@ -151,6 +151,14 @@ np.sum(ages_of_students > 20)
 ```
 
 We see the number 3 because Python has counted the `True` values - this means 3 students are older than 20.
+
+
+We can also do this with the `np.count_nonzero()` function:
+
+```{python}
+# The number of students older than 20 (another way).
+np.count_nonzero(ages_of_students > 20)
+```
 
 ## Exercise - Boolean Arrays & Boolean Indexing
 

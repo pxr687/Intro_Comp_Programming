@@ -292,7 +292,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j0_Indentation.html">Indentation, indentation, indentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j2_Simulation_With_Numpy_Arrays.html">Statistical Simulation with NumPy Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_Simulation_to_Solve_a_Real_Problem.html">Statistical Simulation to Solve a Real-world Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_More_Statistical_Simulation_Supreme_Court.html">More Statistical Simulation - The Supreme Court</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
 </ul>
@@ -511,10 +511,10 @@
 <p class="admonition-title">Note</p>
 <p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/More_on_Arrays.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
 </div>
-<p>We often need to calculate something that involves data from more than one
+<p>We often need to calculate something with data from more than one
 array. If two arrays are the same size, Python makes it easy to do
-calculations involving both arrays.</p>
-<p>For our first example, we return once more to the temperature data.  This time,
+calculations using both arrays.</p>
+<p>For our first example, we will some data about temperature.  This time,
 we create arrays of average daily
 <a class="reference external" href="http://berkeleyearth.lbl.gov/auto/Regional/TMAX/Text/global-land-TMAX-Trend.txt">high</a>
 and
@@ -528,7 +528,7 @@ temperatures for the decades around 1850, 1900, 1950, and 2000.</p>
 </div>
 </div>
 </div>
-<p>Next we create the array:</p>
+<p>Next we create the array - each element is a temperature value:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">highs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">13.6</span><span class="p">,</span> <span class="mf">14.387</span><span class="p">,</span> <span class="mf">14.585</span><span class="p">,</span> <span class="mf">15.164</span><span class="p">])</span>
@@ -591,14 +591,14 @@ Python gives a much cleaner way to write this:</p>
 </div>
 </div>
 <p><img alt="" src="_images/array_subtraction.png" /></p>
-<p>What we’ve seen in these examples are special cases of a general feature of arrays.</p>
+<p>What we’ve seen in these examples are special cases of a general feature of arrays (e.g. all arrays of the same size can be used in calculations like this).</p>
 <section id="elementwise-arithmetic-on-two-numeric-arrays">
 <h2>Elementwise arithmetic on two numeric arrays<a class="headerlink" href="#elementwise-arithmetic-on-two-numeric-arrays" title="Link to this heading">#</a></h2>
 <p>If an arithmetic operator is used on two arrays of the same size, then the
 operation is performed on each matching pair of elements in the two
 arrays. The result is an array.</p>
 <p>For example, if <code class="docutils literal notranslate"><span class="pre">array1</span></code> and <code class="docutils literal notranslate"><span class="pre">array2</span></code> have the same number of elements, then
-the value of <code class="docutils literal notranslate"><span class="pre">array1</span> <span class="pre">*</span> <span class="pre">array2</span></code> is an array. Its first element is the first
+the value of <code class="docutils literal notranslate"><span class="pre">array1</span> <span class="pre">*</span> <span class="pre">array2</span></code> is also an array. Its first element is the first
 element of <code class="docutils literal notranslate"><span class="pre">array</span></code> times the first element of <code class="docutils literal notranslate"><span class="pre">array2</span></code>, its second element is
 the second element of <code class="docutils literal notranslate"><span class="pre">array1</span></code> times the second element of <code class="docutils literal notranslate"><span class="pre">array2</span></code>, and so
 on.</p>
@@ -606,14 +606,14 @@ on.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 
-<span class="n">array2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">array2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 
 <span class="n">array1</span> <span class="o">*</span> <span class="n">array2</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 6, 20,  6])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 6, 20, 12])
 </pre></div>
 </div>
 </div>

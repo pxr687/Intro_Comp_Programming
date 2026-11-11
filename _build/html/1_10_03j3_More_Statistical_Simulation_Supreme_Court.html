@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Statistical Simulation to Solve a Real-world Problem &#8212; Introduction to Computer Programming</title>
+    <title>More Statistical Simulation - The Supreme Court &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -60,9 +60,9 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1_10_03j3_Simulation_to_Solve_a_Real_Problem';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1_10_03j3_More_Statistical_Simulation_Supreme_Court';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_10_03j3_Simulation_to_Solve_a_Real_Problem.html" />
+    <link rel="canonical" href="https://github.com/pxr687/Intro_Comp_Programming/1_10_03j3_More_Statistical_Simulation_Supreme_Court.html" />
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -292,7 +292,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j0_Indentation.html">Indentation, indentation, indentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j2_Simulation_With_Numpy_Arrays.html">Statistical Simulation with NumPy Arrays</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Statistical Simulation to Solve a Real-world Problem</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">More Statistical Simulation - The Supreme Court</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
 </ul>
@@ -358,7 +358,7 @@
       
       
       
-      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_10_03j3_Simulation_to_Solve_a_Real_Problem.ipynb" target="_blank"
+      <li><a href="https:///mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/1_10_03j3_More_Statistical_Simulation_Supreme_Court.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -407,7 +407,7 @@
       
       
       
-      <li><a href="_sources/1_10_03j3_Simulation_to_Solve_a_Real_Problem.ipynb" target="_blank"
+      <li><a href="_sources/1_10_03j3_More_Statistical_Simulation_Supreme_Court.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -483,7 +483,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Statistical Simulation to Solve a Real-world Problem</h1>
+    <h1>More Statistical Simulation - The Supreme Court</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -507,8 +507,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="statistical-simulation-to-solve-a-real-world-problem">
-<h1>Statistical Simulation to Solve a Real-world Problem<a class="headerlink" href="#statistical-simulation-to-solve-a-real-world-problem" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="more-statistical-simulation-the-supreme-court">
+<h1>More Statistical Simulation - The Supreme Court<a class="headerlink" href="#more-statistical-simulation-the-supreme-court" title="Link to this heading">#</a></h1>
 <blockquote>
 <div><p>This page is adapted from <a class="reference external" href="https://odsti.github.io/cfd-textbook/reply_supreme.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information</p>
 </div></blockquote>
@@ -516,12 +516,13 @@
 <blockquote>
 <div><p>In 1963, a court in Talladega County, Alabama sentenced a young black man called Robert Swain to death <a class="reference external" href="https://en.wikipedia.org/wiki/Furman_v._Georgia">1</a>. All 12 jurors in his trial were white. He appealed his sentence, citing, among other factors, evidence of bias in the process by which his jury was selected. At the time, only men aged 21 or older were allowed to serve on juries in Talladega County. In the county, 26% of the eligible jurors were black. (Quote from <a class="reference external" href="https://odsti.github.io/cfd-textbook/sampling_problem.html">here</a>).</p>
 </div></blockquote>
+<p>A <em>juror</em> is someone on a jury - the group of people who decides if someone is guilty or not in a court case.</p>
 <p>His trial jury of 12 people had no Black members.</p>
 <p>The local population of people who could be jurors was 26% Black.</p>
 <p>If the jury had been representative of the whole population, we would expect about 26 of 100 people to
 be Black.  That’s around 1 in 4 (25%), so we would expect about one in four
 jurors to be Black - so around 3 of 12.</p>
-<p>The Supreme Court was not convinced that there was evidence of systematic bias.  But, to start with the jurors - is it surprising that we expected around 3 Black jurors, but we got 0.  Is the value 0 surprising, if each juror has 26% chance of being Black?</p>
+<p>The Supreme Court was not convinced that there was evidence of unfairness.  But, to start with the jurors - is it surprising that we expected around 3 Black jurors, but we got 0.  Is the value 0 surprising, if each juror has 26% chance of being Black?</p>
 <p>To answer this, we are going to go through a couple of steps.</p>
 <p>The first is to build an <em>ideal model</em> of the world, where it <em>is true</em> that
 each juror has a 26% of being Black.  We sometimes call this our <em>ideal world</em>.
@@ -530,10 +531,11 @@ hypothesis</em>.</p>
 <p>Then we can <em>simulate</em> making many juries in this ideal world.</p>
 <p>Finally we ask whether our simulated juries, from the ideal world, often give
 us a count of zero Black jurors.  If they don’t, then we can say that we are
-<em>surprised</em> by the value of 0, if the jury did arise from that real world.  If
+<em>surprised</em> by the value of 0, if the jury did arise from that real world.</p>
+<p>If
 the value 0 is sufficiently unusual, we become suspicious that the real world
-is rather different from our ideal world.  We consider <em>rejecting</em> the ideal
-world as a good model of the real world.</p>
+is rather different from our ideal world.  We consider saying that the the ideal
+world is NOT a good model of the real world - this is called <em>rejecting</em> the model of the ideal world.</p>
 <section id="the-ideal-world">
 <h2>The ideal world<a class="headerlink" href="#the-ideal-world" title="Link to this heading">#</a></h2>
 <p>Our <em>ideal model</em> (or null hypothesis) is a world where each juror has been
@@ -569,7 +571,7 @@ jury, and count the number of Black people in the simulated jury.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
 </pre></div>
 </div>
 </div>
@@ -604,12 +606,12 @@ of times, to make sure we’ve got an idea of the variation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
 </div>
-<p>Run the cell above a few times, perhaps with Control-Enter, to see the first value in the <code class="docutils literal notranslate"><span class="pre">counts</span></code> array changing.</p>
+<p>Run the cell above a few times, perhaps with <code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">+</span> <span class="pre">Enter</span></code>, to see the first value in the <code class="docutils literal notranslate"><span class="pre">counts</span></code> array changing.</p>
 <p>Now we collect the result of 10 trials, by using a for loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -629,7 +631,7 @@ of times, to make sure we’ve got an idea of the variation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 5., 3., 1., 2., 2., 2., 1., 4., 3.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 3., 4., 3., 4., 6., 3., 4., 2., 0.])
 </pre></div>
 </div>
 </div>
@@ -657,7 +659,7 @@ therefore, 10000 estimates.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 3., 2., ..., 2., 1., 6.], shape=(10000,))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 3., 2., ..., 3., 1., 3.], shape=(10000,))
 </pre></div>
 </div>
 </div>
@@ -690,7 +692,7 @@ a histogram.  Here is how to do that, in Python.  Don’t worry about the detail
 </div>
 </div>
 </div>
-<p>Now show the histogram.  Don’t worry about the details of this command.</p>
+<p>Now show the histogram. This shows how many times we got each number of Black jurors, in our simulation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do the histogram of our 10000 estimates.</span>
@@ -700,7 +702,7 @@ a histogram.  Here is how to do that, in Python.  Don’t worry about the detail
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8a30043e58a0f9080d2306bead2439a87f9ad0c77fe954665f500ca4ec5f9c86.png" src="_images/8a30043e58a0f9080d2306bead2439a87f9ad0c77fe954665f500ca4ec5f9c86.png" />
+<img alt="_images/3a69409deb1142633c4eb710cbb33880153edd1bbb82b371fa1348000365c68d.png" src="_images/3a69409deb1142633c4eb710cbb33880153edd1bbb82b371fa1348000365c68d.png" />
 </div>
 </div>
 <p>The histogram above is called the <em>sampling distribution</em>.  The sampling distribution is the distribution of thing we are interested in (the number of Black jurors) given the ideal model, of completely random selection of jurors from a 26% Black population.</p>
@@ -717,7 +719,7 @@ times did we get a value of 0, in all our 10000 estimates?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/00712d52dca98f596542ea11b93ab5d33dfa0c10a0d3a8d8dccef1dd176ea692.png" src="_images/00712d52dca98f596542ea11b93ab5d33dfa0c10a0d3a8d8dccef1dd176ea692.png" />
+<img alt="_images/6b8fbfff394fed3cc0f2dcd5c8bca8d6a2c19fdde6c025d80b308d05a994028d.png" src="_images/6b8fbfff394fed3cc0f2dcd5c8bca8d6a2c19fdde6c025d80b308d05a994028d.png" />
 </div>
 </div>
 <p>It looks like <em>most</em> of the simulated trials had more than 0 black jurors…</p>
@@ -731,7 +733,7 @@ times did we get a value of 0, in all our 10000 estimates?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(265)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(276)
 </pre></div>
 </div>
 </div>
@@ -746,7 +748,7 @@ number of times we see 0 by the number trials we made:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0265)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0276)
 </pre></div>
 </div>
 </div>
@@ -761,7 +763,7 @@ that the proportion of times we see that result is:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0265)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0276)
 </pre></div>
 </div>
 </div>
@@ -775,7 +777,7 @@ in a jury of 12, is</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0265)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0276)
 </pre></div>
 </div>
 </div>
@@ -788,7 +790,7 @@ in a jury of 12, is</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.65)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.76)
 </pre></div>
 </div>
 </div>

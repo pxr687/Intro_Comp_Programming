@@ -26,17 +26,21 @@ Remember that this simple probability problem is:
 
 We have more of the building blocks we need to give an accurate answer, using computer simulation.
 
+Remember that *simulation* is a noun which means:
+
+> A simulation is the representation of a real-world process, system, or situation over time using a model, often using a computer.
+
 ```{python}
 # Load the Numpy package, and rename to "np".
 import numpy as np
 ```
 
-We are going to simulate 10000 families, each with four children.
+We are going to simulate 10000 families, each with four children. This will let us calculate the probability of having three girls in one family.
 
 Call one family *one trial*.  Each *trial* involves the simulation of four
 children.
 
-Here we put together what we have up until now.  We are creating a Numpy array that has 10000 values, each of which is 0
+Here we put together what we have up until now.  We are creating a Numpy array that has 10000 values, each of which is 0:
 
 ```{python}
 # Make an array of zeros to store the counts for each of the 10000 families.
@@ -140,6 +144,15 @@ the number of trials:
 n_3_girls / 10000
 ```
 
+At the moment the probability is a decimal number; we can convert it to a percentage (%) by multiplying it by 100:
+
+```{python}
+# Estimate probability of 3 girls (as a percentage).
+n_3_girls / 10000 * 100
+```
+
+So that's around a 25% probability of having three girls in a family with four children...
+
 ## The whole thing
 
 Here then is the whole solution to three girl problem.
@@ -222,13 +235,13 @@ In fact, it is exactly the same probability that we got from our simulation!:
 n_3_girls / 10000
 ```
 
-We can multiply this by 100 to show it as a percentage:
+Remember, we can multiply this by 100 to show it as a percentage:
 
 ```{python}
 n_3_girls / 10000 * 100
 ```
 
-So to answer our three girls problem using simulation, the probability of a family of 4 having 3 girls is around 24%.
+So to answer our three girls problem using simulation, the probability of a family of 4 having 3 girls is around 25%.
 
 ## Exercise - Statistical Simulation
 

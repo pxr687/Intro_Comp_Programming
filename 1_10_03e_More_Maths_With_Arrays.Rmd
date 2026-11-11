@@ -30,11 +30,11 @@ jupyter:
 This page is adapted from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/More_on_Arrays.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
 ```
 
-We often need to calculate something that involves data from more than one
+We often need to calculate something with data from more than one
 array. If two arrays are the same size, Python makes it easy to do
-calculations involving both arrays.
+calculations using both arrays.
 
-For our first example, we return once more to the temperature data.  This time,
+For our first example, we will some data about temperature.  This time,
 we create arrays of average daily
 [high](http://berkeleyearth.lbl.gov/auto/Regional/TMAX/Text/global-land-TMAX-Trend.txt)
 and
@@ -47,7 +47,7 @@ First we get Numpy, renamed as `np`:
 import numpy as np
 ```
 
-Next we create the array:
+Next we create the array - each element is a temperature value:
 
 ```{python}
 highs = np.array([13.6, 14.387, 14.585, 15.164])
@@ -84,7 +84,7 @@ highs - lows
 ![](images/array_subtraction.png)
 
 
-What we've seen in these examples are special cases of a general feature of arrays.
+What we've seen in these examples are special cases of a general feature of arrays (e.g. all arrays of the same size can be used in calculations like this).
 
 
 ## Elementwise arithmetic on two numeric arrays
@@ -94,7 +94,7 @@ operation is performed on each matching pair of elements in the two
 arrays. The result is an array.
 
 For example, if `array1` and `array2` have the same number of elements, then
-the value of `array1 * array2` is an array. Its first element is the first
+the value of `array1 * array2` is also an array. Its first element is the first
 element of `array` times the first element of `array2`, its second element is
 the second element of `array1` times the second element of `array2`, and so
 on.
@@ -102,7 +102,7 @@ on.
 ```{python}
 array1 = np.array([1, 2, 3])
 
-array2 = np.array([6, 10, 2])
+array2 = np.array([6, 10, 4])
 
 array1 * array2
 ```
