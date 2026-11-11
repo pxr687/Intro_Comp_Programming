@@ -31,7 +31,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 # Do not change this cell, just run it to check your answer.
 assert 0.09 <= p_2_boys <= 0.13, "Hmmm your probability value looks wrong!"
 from jupyprint import jupyprint
-jupyprint("*Well done, that looks **CORRECT**!")
+jupyprint("*Well done, that looks **CORRECT***!")
 ------------------
 
 
@@ -41,7 +41,7 @@ jupyprint("*Well done, that looks **CORRECT**!")
 [32m      1[39m [38;5;66;03m# Do not change this cell, just run it to check your answer.[39;00m
 [32m----> [39m[32m2[39m [38;5;28;01massert[39;00m [32m0.09[39m <= p_2_boys <= [32m0.13[39m, [33m"Hmmm your probability value looks wrong!"[39m
 [32m      3[39m [38;5;28;01mfrom[39;00m jupyprint [38;5;28;01mimport[39;00m jupyprint
-[32m      4[39m jupyprint([33m"*Well done, that looks **CORRECT**!"[39m)
+[32m      4[39m jupyprint([33m"*Well done, that looks **CORRECT***!"[39m)
 
 [31mNameError[39m: name 'p_2_boys' is not defined
 

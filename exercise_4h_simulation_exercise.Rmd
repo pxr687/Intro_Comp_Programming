@@ -73,7 +73,7 @@ After you finish your simulation, try to use `matplotlib` to plot the results of
 # Do not change this cell, just run it to check your answer.
 assert 0.09 <= p_2_boys <= 0.13, "Hmmm your probability value looks wrong!"
 from jupyprint import jupyprint
-jupyprint("*Well done, that looks **CORRECT**!")
+jupyprint("*Well done, that looks **CORRECT***!")
 ```
 
 <!-- #region -->

@@ -13,7 +13,7 @@ jupyter:
     name: python3
 ---
 
-## Boolean Arrays and Boolean Indexing
+## Boolean Arrays Extra Task
 
 You will now collect some real data and do some simple data analysis.
 
