@@ -285,7 +285,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays and Boolean Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays Extra Task</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration &amp; Statistical Simulation</span></p>
 <ul class="current nav bd-sidenav">
@@ -604,7 +604,7 @@ of times, to make sure we’ve got an idea of the variation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -629,7 +629,7 @@ of times, to make sure we’ve got an idea of the variation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 3., 3., 4., 2., 2., 4., 3., 0., 1.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 5., 3., 1., 2., 2., 2., 1., 4., 3.])
 </pre></div>
 </div>
 </div>
@@ -657,7 +657,7 @@ therefore, 10000 estimates.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 5., 5., ..., 0., 4., 6.], shape=(10000,))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 3., 2., ..., 2., 1., 6.], shape=(10000,))
 </pre></div>
 </div>
 </div>
@@ -700,7 +700,7 @@ a histogram.  Here is how to do that, in Python.  Don’t worry about the detail
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/79fe991db5ee8078f2ff735496a4d200a3f3b716c8b6c1226d96efdd647e244e.png" src="_images/79fe991db5ee8078f2ff735496a4d200a3f3b716c8b6c1226d96efdd647e244e.png" />
+<img alt="_images/8a30043e58a0f9080d2306bead2439a87f9ad0c77fe954665f500ca4ec5f9c86.png" src="_images/8a30043e58a0f9080d2306bead2439a87f9ad0c77fe954665f500ca4ec5f9c86.png" />
 </div>
 </div>
 <p>The histogram above is called the <em>sampling distribution</em>.  The sampling distribution is the distribution of thing we are interested in (the number of Black jurors) given the ideal model, of completely random selection of jurors from a 26% Black population.</p>
@@ -717,7 +717,7 @@ times did we get a value of 0, in all our 10000 estimates?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/15bb148b799272d6258df54715b2333da8564b56f5986745c1348fe972708060.png" src="_images/15bb148b799272d6258df54715b2333da8564b56f5986745c1348fe972708060.png" />
+<img alt="_images/00712d52dca98f596542ea11b93ab5d33dfa0c10a0d3a8d8dccef1dd176ea692.png" src="_images/00712d52dca98f596542ea11b93ab5d33dfa0c10a0d3a8d8dccef1dd176ea692.png" />
 </div>
 </div>
 <p>It looks like <em>most</em> of the simulated trials had more than 0 black jurors…</p>
@@ -731,7 +731,7 @@ times did we get a value of 0, in all our 10000 estimates?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(270)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(265)
 </pre></div>
 </div>
 </div>
@@ -746,7 +746,7 @@ number of times we see 0 by the number trials we made:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.027)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0265)
 </pre></div>
 </div>
 </div>
@@ -761,7 +761,7 @@ that the proportion of times we see that result is:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.027)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0265)
 </pre></div>
 </div>
 </div>
@@ -775,7 +775,7 @@ in a jury of 12, is</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.027)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0265)
 </pre></div>
 </div>
 </div>
@@ -788,7 +788,7 @@ in a jury of 12, is</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.7)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.65)
 </pre></div>
 </div>
 </div>

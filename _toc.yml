@@ -63,6 +63,8 @@ parts:
       - file: 1_10_03c2_NumPy_Arrays_Extra_Task_2
       - file: 1_10_03c2_NumPy_Arrays_Extra_Task_3
       - file: 1_10_03c2_NumPy_Arrays_Extra_Task_4
+
+# Week 10
       - file: 1_10_03d_Ranges
       - file: 1_10_03e_More_Maths_With_Arrays
       - file: 1_10_03f_Filling_Arrays
@@ -78,25 +80,12 @@ parts:
     - file: 1_10_03l_Break_and_Continue
     - file: 1_10_03k_Simulation_Task
 
+# Week 11 - next in-class assignment
+# Introduce Pandas + Matplotlib plotting (show difference between functions vs OOP)
+# Writing your own functions vs OOP writing your own classes - use image processing as example here
+# Introduce scripts via Jupyterlite repo + practice writing functions inside scripts
+# Getting keyboard input
 
-# Week 8 (mid-term)
-
-# Week 9 + 10 
-# Caption: Numpy and Iteration for Data Analysis
-# Numpy Arrays, Iteration + Plotting Graphs (three girls simulation)
-# Caption: Numpy and Iteration for Image Processing
-# Then include while loops at end, with computer science context (e.g. making files
-# from Numpy arrays, of images, e.g. introduce image processing, get images
-# from image API, use while loop to get certain number of files).
-# Show `break` etc.
-
-# Week 11 
-# Captions: (More Data Types [None, Dictionaries, Tuples] - say this is just so they are aware of them)
-# Captions: (Writing your own functions) (Pandas and Object Oriented Programming)
-# Pandas and OOP (dataframe, series, data cleaning)
-# Writing own functions (more data analysis with permutation test - write functions that work with any dataframe)
-# Generate data in class for permutation test (male, female - prefer action movies or drama?)
-# Also write functions for image processing (e.g. binarize any image)
 
 # Week 12 - Test 2 (Data Analysis) + Teaching = Modules and scripts (e.g. after test)
 
