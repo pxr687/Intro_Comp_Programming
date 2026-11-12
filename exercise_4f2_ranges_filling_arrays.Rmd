@@ -212,17 +212,17 @@ jupyprint('*That is **CORRECT**, well done!*')
 
 ## Question 6
 
-Make an array that goes from 1 to 997 in steps of 3.
+Make an array that goes from 2 to 998 in steps of 3.
 
 So the first four numbers should be: 
 
-`1,   4,   7,  10`
+`2,   5,   8,  11`
 
 and the last four numbers should be:
 
-`991,  994,  997, 1000`
+`989, 992, 995, 998`
 
-If you do this right, your array should have 334 values in it.
+If you do this right, your array should have 333 values in it.
 
 Save your array in a variable called `answer_6`:
 
@@ -236,10 +236,11 @@ answer_6 = ...
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-assert len(answer_6) == 334, "Your array has the wrong number of values in it!"
-assert answer_6[0] == 1, "Your array has the wrong first value!"
-assert answer_6[-1] == 1000, "Your array has the wrong last value!"
+assert len(answer_6) == 333, "Your array has the wrong number of values in it!"
+assert answer_6[0] == 2, "Your array has the wrong first value!"
+assert answer_6[-1] == 998, "Your array has the wrong last value!"
 assert all(np.diff(answer_6) == 3), "Your array does not always go up by 3!"
+jupyprint('*That is **CORRECT**, well done!*')
 ```
 
 

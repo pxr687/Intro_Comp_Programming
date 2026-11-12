@@ -25,7 +25,7 @@ Your friend says:
 
 > "I beat everyone at rock, paper, scissors. That's because everyone else chooses "rock", "paper" or "scissors" randomly, but I only ever choose "rock" or "scissors". It's the way to win!
 
-Is your friend correct? Make a simulation to test his strategy against a normal player, who is chossing randomly.
+Is your friend correct? Make a simulation to test his strategy against a normal player, who is choosing randomly.
 
 Before you do this **think hard** about what your simulation should do. Write out the steps on paper. Discuss it with other people.
 
