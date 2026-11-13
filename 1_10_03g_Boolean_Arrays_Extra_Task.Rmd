@@ -13,13 +13,13 @@ jupyter:
     name: python3
 ---
 
-## Boolean Arrays Extra Task
+## Boolean Arrays Extra Task - Building a Dataset for Analysis
 
 You will now collect some real data and do some simple data analysis.
 
 The data you should collect is from your classmates.
 
-- Ask at least 6 of your classmates:
+- Ask at least 6 of your classmates - more data is better here, but use *at least* 6 student's data:
     - What is your name? Store these values in an array called `names`
     - What is your age? Store these values in an array called `ages`
     - What is your nationality? Store these values in an array called `Nationality`
@@ -40,7 +40,18 @@ Then complete these tasks (you can launch this page on Binder and do each task i
 
 - Use Boolean indexing to show the names of classmates of a particular nationality.
 
-- Write some code to find to two most common nationalities. Use Boolean indexing to store the `ages` data for each nationality, in two different arrays. Then calculate the average age for each nationality, are they are different?
+- Write some code to find to two most common nationalities - to do this, there are a few options:
+
+    * you can count the different nationalities using comparison operators and `np.sum()`, this is the simplest way, which will work for this small dataset.
+        
+    * or you can check out [`Counter(<numpy.array>).most_common()` from the `collections` library](https://www.geeksforgeeks.org/python/python-most_common-function/). Here you will have to use some fancy indexing, but this way works better for larger datasets.
+        
+  Finally, use Boolean indexing to store the `ages` data for each of the two most common nationalities, in two different arrays. Then calculate the average age for each nationality, are they are different?
+
+Prepare your answer like a data report. To do this you can add markdown cells to explain what your code cells are doing.
+
+You can launch the page on Binder or LiveCode **or** if you want to be able to save your code use this link: https://pxr687.github.io/scratchpad/ You can paste the instructions into the notebook on this link.
+*Note*: you have to use the same browswer for your work to be saved, and it will be deleted if you delete your browsing data. 
 
 ```{python tags=c("raises-exception")}
 # Your code here.

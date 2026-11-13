@@ -47,6 +47,8 @@ Later in the course we will install Python on your own laptop...
 
 ## Doing your own statistical simulation
 
+**DO NOT** copy/paste code from the textbook page. Try to write the code yourself, you will learn a lot more. You can read the code on the page, but try to not look at it as your write your code, unless you get really stuck. This will improve your understanding of the process of statistical simulation, as well as how to do it in code.
+
 Here is your problem:
 
 > In a family with 8 children, what is the probability of having exactly 2 boys?

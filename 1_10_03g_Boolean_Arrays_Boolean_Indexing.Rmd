@@ -108,6 +108,90 @@ The `False` values act as "switches" which switch off the values in `my_array` w
 
 So the last array we get only has the values from `my_array` which are bigger than 10.
 
+**This works exactly the same way with string/text data**.
+
+For example, an array of the names of the biggest cities in Thailand:
+
+```{python}
+cities = np.array(["Bangkok", "Chiang Mai", "Nakhon Ratchasima", "Khon Kaen", "Hat Yai"])
+cities
+```
+
+We can make Boolean arrays using any of the comparison operators:
+
+```{python}
+is_it_BKK = cities == "Bangkok"
+
+is_it_BKK
+```
+
+...then use the Boolean array to index the original array, to filter the `cities`. Remember, that the `True` values act as ON switches, and the `False` values act as OFF switches:
+
+```{python}
+cities[is_it_BKK]
+```
+
+We can use a different comparison operator, to do a different filtering operation - for instance, to get all of the `cities` which are NOT Bangkok:
+
+```{python}
+is_it_NOT_BKK = cities != "Bangkok"
+
+is_it_NOT_BKK
+```
+
+...then, use the new `is_it_NOT_BKK` to get all of the other cities:
+
+```{python}
+cities[is_it_NOT_BKK]
+```
+
+These Boolean arrays can be used to filter other arrays **which come from the same data**.
+
+This is **important**: the data must *line up* between arrays.
+
+So here is our `cities` array:
+
+```{python}
+cities
+```
+
+Here is another array representing the `population` of each city:
+
+```{python}
+population = np.array([10539000, 1198000, 470000, 418000, 407000])
+
+population
+```
+
+The data at each index location is for one city:
+
+```{python}
+# Bangkok data.
+print(cities[0], population[0])
+```
+
+```{python}
+# Chiang Mai data.
+print(cities[1], population[1])
+```
+
+So we can use Boolean indexing *on the `cities` array* to get the `population` of any city we want:
+
+```{python}
+is_it_BKK
+```
+
+```{python}
+# Get the `population` of Bangkok.
+population[is_it_BKK]
+```
+
+This is a very important concept:
+
+ > If your arrays get "out of line", then **your data will become meaningless**.
+ 
+As your write more complex data analysis programs, this can easily happen, so always check back to your *original data*.
+
 ## Using `.sum()` will count the number of `True` values in an array
 
 It is important to know that Python will treat `True` values as being equal to 1:

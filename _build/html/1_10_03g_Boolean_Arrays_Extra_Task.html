@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Boolean Arrays Extra Task &#8212; Introduction to Computer Programming</title>
+    <title>Boolean Arrays Extra Task - Building a Dataset for Analysis &#8212; Introduction to Computer Programming</title>
   
   
   
@@ -281,7 +281,7 @@
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Boolean Arrays Extra Task</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Boolean Arrays Extra Task - Building a Dataset for Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration &amp; Statistical Simulation</span></p>
 <ul class="nav bd-sidenav">
@@ -477,7 +477,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Boolean Arrays Extra Task</h1>
+    <h1>Boolean Arrays Extra Task - Building a Dataset for Analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -491,12 +491,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="boolean-arrays-extra-task">
-<h1>Boolean Arrays Extra Task<a class="headerlink" href="#boolean-arrays-extra-task" title="Link to this heading">#</a></h1>
+  <section id="boolean-arrays-extra-task-building-a-dataset-for-analysis">
+<h1>Boolean Arrays Extra Task - Building a Dataset for Analysis<a class="headerlink" href="#boolean-arrays-extra-task-building-a-dataset-for-analysis" title="Link to this heading">#</a></h1>
 <p>You will now collect some real data and do some simple data analysis.</p>
 <p>The data you should collect is from your classmates.</p>
 <ul class="simple">
-<li><p>Ask at least 6 of your classmates:</p>
+<li><p>Ask at least 6 of your classmates - more data is better here, but use <em>at least</em> 6 student’s data:</p>
 <ul>
 <li><p>What is your name? Store these values in an array called <code class="docutils literal notranslate"><span class="pre">names</span></code></p></li>
 <li><p>What is your age? Store these values in an array called <code class="docutils literal notranslate"><span class="pre">ages</span></code></p></li>
@@ -505,7 +505,7 @@
 </li>
 </ul>
 <p>Then complete these tasks (you can launch this page on Binder and do each task in a separate code cell, by making new cells using the menu at the top of the page):</p>
-<ul class="simple">
+<ul>
 <li><p>Search for a NumPy method or function to calculate the average age of the classmates.</p></li>
 <li><p>Search for a NumPy method or function to find the median age.</p></li>
 <li><p>Search for a NumPy method or function to find the maximum age.</p></li>
@@ -513,8 +513,17 @@
 <li><p>Calculate the range of ages by subtracting the minimum age from the maximum age.</p></li>
 <li><p>Use Boolean indexing to show the names of classmates who are 20 years old or older.</p></li>
 <li><p>Use Boolean indexing to show the names of classmates of a particular nationality.</p></li>
-<li><p>Write some code to find to two most common nationalities. Use Boolean indexing to store the <code class="docutils literal notranslate"><span class="pre">ages</span></code> data for each nationality, in two different arrays. Then calculate the average age for each nationality, are they are different?</p></li>
+<li><p>Write some code to find to two most common nationalities - to do this, there are a few options:</p>
+<ul class="simple">
+<li><p>you can count the different nationalities using comparison operators and <code class="docutils literal notranslate"><span class="pre">np.sum()</span></code>, this is the simplest way, which will work for this small dataset.</p></li>
+<li><p>or you can check out <a class="reference external" href="https://www.geeksforgeeks.org/python/python-most_common-function/"><code class="docutils literal notranslate"><span class="pre">Counter(&lt;numpy.array&gt;).most_common()</span></code> from the <code class="docutils literal notranslate"><span class="pre">collections</span></code> library</a>. Here you will have to use some fancy indexing, but this way works better for larger datasets.</p></li>
 </ul>
+<p>Finally, use Boolean indexing to store the <code class="docutils literal notranslate"><span class="pre">ages</span></code> data for each of the two most common nationalities, in two different arrays. Then calculate the average age for each nationality, are they are different?</p>
+</li>
+</ul>
+<p>Prepare your answer like a data report. To do this you can add markdown cells to explain what your code cells are doing.</p>
+<p>You can launch the page on Binder or LiveCode <strong>or</strong> if you want to be able to save your code use this link: <a class="reference external" href="https://pxr687.github.io/scratchpad/">https://pxr687.github.io/scratchpad/</a> You can paste the instructions into the notebook on this link.
+<em>Note</em>: you have to use the same browswer for your work to be saved, and it will be deleted if you delete your browsing data.</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your code here.</span>

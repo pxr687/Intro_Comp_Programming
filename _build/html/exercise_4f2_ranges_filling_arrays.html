@@ -285,7 +285,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays Extra Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays Extra Task - Building a Dataset for Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration &amp; Statistical Simulation</span></p>
 <ul class="nav bd-sidenav">
@@ -755,12 +755,12 @@
 </section>
 <section id="question-6">
 <h2>Question 6<a class="headerlink" href="#question-6" title="Link to this heading">#</a></h2>
-<p>Make an array that goes from 1 to 997 in steps of 3.</p>
+<p>Make an array that goes from 2 to 998 in steps of 3.</p>
 <p>So the first four numbers should be:</p>
-<p><code class="docutils literal notranslate"><span class="pre">1,</span>&#160;&#160; <span class="pre">4,</span>&#160;&#160; <span class="pre">7,</span>&#160; <span class="pre">10</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">2,</span>&#160;&#160; <span class="pre">5,</span>&#160;&#160; <span class="pre">8,</span>&#160; <span class="pre">11</span></code></p>
 <p>and the last four numbers should be:</p>
-<p><code class="docutils literal notranslate"><span class="pre">991,</span>&#160; <span class="pre">994,</span>&#160; <span class="pre">997,</span> <span class="pre">1000</span></code></p>
-<p>If you do this right, your array should have 334 values in it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">989,</span> <span class="pre">992,</span> <span class="pre">995,</span> <span class="pre">998</span></code></p>
+<p>If you do this right, your array should have 333 values in it.</p>
 <p>Save your array in a variable called <code class="docutils literal notranslate"><span class="pre">answer_6</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -776,10 +776,11 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT CHANGE THIS CODE.</span>
 <span class="c1"># RUN THIS CELL TO MARK YOUR ANSWER.</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">answer_6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">334</span><span class="p">,</span> <span class="s2">"Your array has the wrong number of values in it!"</span>
-<span class="k">assert</span> <span class="n">answer_6</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"Your array has the wrong first value!"</span>
-<span class="k">assert</span> <span class="n">answer_6</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">"Your array has the wrong last value!"</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">answer_6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">333</span><span class="p">,</span> <span class="s2">"Your array has the wrong number of values in it!"</span>
+<span class="k">assert</span> <span class="n">answer_6</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"Your array has the wrong first value!"</span>
+<span class="k">assert</span> <span class="n">answer_6</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">998</span><span class="p">,</span> <span class="s2">"Your array has the wrong last value!"</span>
 <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">answer_6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">),</span> <span class="s2">"Your array does not always go up by 3!"</span>
+<span class="n">jupyprint</span><span class="p">(</span><span class="s1">'*That is **CORRECT**, well done!*'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

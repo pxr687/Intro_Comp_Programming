@@ -66,7 +66,7 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Boolean Arrays Extra Task" href="1_10_03g_Boolean_Arrays_Extra_Task.html" />
+    <link rel="next" title="Boolean Arrays Extra Task - Building a Dataset for Analysis" href="1_10_03g_Boolean_Arrays_Extra_Task.html" />
     <link rel="prev" title="Making and filling arrays" href="1_10_03f_Filling_Arrays.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -285,7 +285,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays Extra Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays Extra Task - Building a Dataset for Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration &amp; Statistical Simulation</span></p>
 <ul class="nav bd-sidenav">
@@ -687,6 +687,168 @@
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">False</span></code> values act as “switches” which switch off the values in <code class="docutils literal notranslate"><span class="pre">my_array</span></code> which are less than 10.</p>
 <p>So the last array we get only has the values from <code class="docutils literal notranslate"><span class="pre">my_array</span></code> which are bigger than 10.</p>
+<p><strong>This works exactly the same way with string/text data</strong>.</p>
+<p>For example, an array of the names of the biggest cities in Thailand:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">"Bangkok"</span><span class="p">,</span> <span class="s2">"Chiang Mai"</span><span class="p">,</span> <span class="s2">"Nakhon Ratchasima"</span><span class="p">,</span> <span class="s2">"Khon Kaen"</span><span class="p">,</span> <span class="s2">"Hat Yai"</span><span class="p">])</span>
+<span class="n">cities</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Bangkok', 'Chiang Mai', 'Nakhon Ratchasima', 'Khon Kaen',
+       'Hat Yai'], dtype='&lt;U17')
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can make Boolean arrays using any of the comparison operators:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_it_BKK</span> <span class="o">=</span> <span class="n">cities</span> <span class="o">==</span> <span class="s2">"Bangkok"</span>
+
+<span class="n">is_it_BKK</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False, False, False, False])
+</pre></div>
+</div>
+</div>
+</div>
+<p>…then use the Boolean array to index the original array, to filter the <code class="docutils literal notranslate"><span class="pre">cities</span></code>. Remember, that the <code class="docutils literal notranslate"><span class="pre">True</span></code> values act as ON switches, and the <code class="docutils literal notranslate"><span class="pre">False</span></code> values act as OFF switches:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span><span class="p">[</span><span class="n">is_it_BKK</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Bangkok'], dtype='&lt;U17')
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use a different comparison operator, to do a different filtering operation - for instance, to get all of the <code class="docutils literal notranslate"><span class="pre">cities</span></code> which are NOT Bangkok:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_it_NOT_BKK</span> <span class="o">=</span> <span class="n">cities</span> <span class="o">!=</span> <span class="s2">"Bangkok"</span>
+
+<span class="n">is_it_NOT_BKK</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True,  True,  True,  True])
+</pre></div>
+</div>
+</div>
+</div>
+<p>…then, use the new <code class="docutils literal notranslate"><span class="pre">is_it_NOT_BKK</span></code> to get all of the other cities:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span><span class="p">[</span><span class="n">is_it_NOT_BKK</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Chiang Mai', 'Nakhon Ratchasima', 'Khon Kaen', 'Hat Yai'],
+      dtype='&lt;U17')
+</pre></div>
+</div>
+</div>
+</div>
+<p>These Boolean arrays can be used to filter other arrays <strong>which come from the same data</strong>.</p>
+<p>This is <strong>important</strong>: the data must <em>line up</em> between arrays.</p>
+<p>So here is our <code class="docutils literal notranslate"><span class="pre">cities</span></code> array:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['Bangkok', 'Chiang Mai', 'Nakhon Ratchasima', 'Khon Kaen',
+       'Hat Yai'], dtype='&lt;U17')
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is another array representing the <code class="docutils literal notranslate"><span class="pre">population</span></code> of each city:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">population</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10539000</span><span class="p">,</span> <span class="mi">1198000</span><span class="p">,</span> <span class="mi">470000</span><span class="p">,</span> <span class="mi">418000</span><span class="p">,</span> <span class="mi">407000</span><span class="p">])</span>
+
+<span class="n">population</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10539000,  1198000,   470000,   418000,   407000])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data at each index location is for one city:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bangkok data.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cities</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">population</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bangkok 10539000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Chiang Mai data.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cities</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">population</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chiang Mai 1198000
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we can use Boolean indexing <em>on the <code class="docutils literal notranslate"><span class="pre">cities</span></code> array</em> to get the <code class="docutils literal notranslate"><span class="pre">population</span></code> of any city we want:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_it_BKK</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False, False, False, False])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the `population` of Bangkok.</span>
+<span class="n">population</span><span class="p">[</span><span class="n">is_it_BKK</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10539000])
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is a very important concept:</p>
+<blockquote>
+<div><p>If your arrays get “out of line”, then <strong>your data will become meaningless</strong>.</p>
+</div></blockquote>
+<p>As your write more complex data analysis programs, this can easily happen, so always check back to your <em>original data</em>.</p>
 </section>
 <section id="using-sum-will-count-the-number-of-true-values-in-an-array">
 <h1>Using <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> will count the number of <code class="docutils literal notranslate"><span class="pre">True</span></code> values in an array<a class="headerlink" href="#using-sum-will-count-the-number-of-true-values-in-an-array" title="Link to this heading">#</a></h1>
@@ -828,7 +990,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Boolean Arrays Extra Task</p>
+        <p class="prev-next-title">Boolean Arrays Extra Task - Building a Dataset for Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
