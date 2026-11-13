@@ -57,7 +57,7 @@ np.random.choice(['ROCK', 'PAPER', 'SCISSORS'],
                  p = [50/100, 25/100, 25/100])
 ```
 
-The list of probabilites *must add up to 1* - otherwise mathematicians will come and fight with you.
+The list of probabilties *must add up to 1* - otherwise mathematicians will come and fight with you.
 
 Remember your friend's idea is that:
 

@@ -133,7 +133,7 @@ This is another advantage of Numpy arrays other Python lists - arrays have lots 
 
 Numpy also has a lot of functions that are useful for *randomly selecting things* or *randomly making things*.
 
-This randomness is useful in data science, for doing *simulations* (e.g. making a model of something in the word, to test out ideas about the world). But it is also useful in lots of other areas of computing, let's talk about some of thos in the table below:
+This randomness is useful in data science, for doing *simulations* (e.g. making a model of something in the word, to test out ideas about the world). But it is also useful in lots of other areas of computing, let's talk about some of those in the table below:
 
 | Application | Description | Example |
 |---|---|---|
@@ -165,7 +165,7 @@ We can get random integers in the same way using `np.random.randint()`. We tell 
 We tell it the highest integer we want using the `high = ` argument (note: we have to go one above the highest, so if the highest we want is 10, we should use `high = 11`):
 
 ```{python}
-# Select a random integer betwee 0 and 1.
+# Select a random integer between 0 and 1.
 np.random.randint(low = 0, high = 2)
 ```
 

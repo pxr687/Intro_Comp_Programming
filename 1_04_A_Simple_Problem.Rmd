@@ -45,7 +45,7 @@ Flipping a coin is a takes a long time. Your computer can do this in a more effi
 To make random numbers, and do other random things, we need the Numpy *Random
 Library*. 
 
-A [Python library](https://www.geeksforgeeks.org/python/libraries-in-python/) is code that is written to do a specific thing. We can re-use the code lots of times without needing to write new code to do that thing.
+A [Python library](https://www.geeksforgeeks.org/python/libraries-in-python/) is code that is written to do a specific thing. We can reuse the code lots of times without needing to write new code to do that thing.
 
 Here is how we get the [Numpy library](https://numpy.org). ("Numpy" means "Numerical Python"):
 

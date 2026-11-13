@@ -47,7 +47,7 @@ Later in the course we will install Python on your own laptop...
 
 ## Questions
 
-**This exercise will not always mark your answers...BUT you can see if your answers are correct, each question will tell you what you shoud see when your code runs correctly...**
+**This exercise will not always mark your answers...BUT you can see if your answers are correct, each question will tell you what you should see when your code runs correctly...**
 
 All the cells below have errors in syntax or in logic. 
 

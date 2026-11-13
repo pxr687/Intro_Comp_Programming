@@ -51,7 +51,7 @@ Then complete these tasks (you can launch this page on Binder and do each task i
 Prepare your answer like a data report. To do this you can add markdown cells to explain what your code cells are doing.
 
 You can launch the page on Binder or LiveCode **or** if you want to be able to save your code use this link: https://pxr687.github.io/scratchpad/ You can paste the instructions into the notebook on this link.
-*Note*: you have to use the same browswer for your work to be saved, and it will be deleted if you delete your browsing data. 
+*Note*: you have to use the same browser for your work to be saved, and it will be deleted if you delete your browsing data. 
 
 ```{python tags=c("raises-exception")}
 # Your code here.
