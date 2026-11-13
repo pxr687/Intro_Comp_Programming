@@ -28,16 +28,22 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-my_array = np.array([1, 5, 19, 2000])
-my_array > 10
+# DO NOT CHANGE THIS CODE.
+# RUN THIS CELL TO MARK YOUR ANSWER.
+assert len(answer_1) == 10_000, "Your array has the wrong number of values!"
+assert all(answer_1 == 0), "Your array contains somethng that is not 0!"
+jupyprint('*That is **CORRECT**, well done!*')
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mNameError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m my_array = np.array([[32m1[39m, [32m5[39m, [32m19[39m, [32m2000[39m])
-[32m      2[39m my_array > [32m10[39m
+[31mTypeError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 3[39m
+[32m      1[39m [38;5;66;03m# DO NOT CHANGE THIS CODE.[39;00m
+[32m      2[39m [38;5;66;03m# RUN THIS CELL TO MARK YOUR ANSWER.[39;00m
+[32m----> [39m[32m3[39m [38;5;28;01massert[39;00m len(answer_1) == [32m10_000[39m, [33m"Your array has the wrong number of values!"[39m
+[32m      4[39m [38;5;28;01massert[39;00m all(answer_1 == [32m0[39m), [33m"Your array contains somethng that is not 0!"[39m
+[32m      5[39m jupyprint([33m'*That is **CORRECT**, well done!*'[39m)
 
-[31mNameError[39m: name 'np' is not defined
+[31mTypeError[39m: object of type 'ellipsis' has no len()
 
