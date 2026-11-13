@@ -76,9 +76,9 @@ parts:
     - file: 1_10_03i_Iteration_For_Loops
     - file: 1_10_03j0_Indentation
     - file: 1_10_03j2_Simulation_With_Numpy_Arrays
-    - file: 1_10_03j3_More_Statistical_Simulation_Supreme_Court
-    - file: 1_10_03l_Break_and_Continue
-    - file: 1_10_03k_Simulation_Task
+    # - file: 1_10_03j3_More_Statistical_Simulation_Supreme_Court
+    # - file: 1_10_03l_Break_and_Continue
+    # - file: 1_10_03k_Simulation_Task
 
 # Week 11 - next in-class assignment
 # Introduce Pandas + Matplotlib plotting (show difference between functions vs OOP)
