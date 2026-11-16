@@ -90,6 +90,11 @@ parts:
     - file: 1_11_00_Data_Visualization # EXERCISE
     - file: 1_11_01_Pandas # EXERCISE
 
+  - caption: Functions & Classes
+    chapters:
+    - file: 1_11_03_Writing_Your_Own_Functions # EXERCISE
+    - file: 1_11_03_Writing_Your_Own_Classes_and_Methods # EXERCISE
+
 
 # Week 11 - next in-class assignment
 # Introduce Pandas + Matplotlib plotting (show difference between functions vs OOP)
