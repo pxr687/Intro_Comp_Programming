@@ -1,0 +1,379 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Writing Your Own Classes and Methods (Object Oriented Programming Style)
+
+Ok, so we have seen how to write our own functions. We know that functions are *procedures* that take some input, do something to it, and (normally) give us back some output. These are the fundamentals of the Procedural Programming Style.
+
+Lets look now at the fundamentals of the Object Oriented Programming style: *classes* and *methods*.
+
+Whereas Procedural Programming "thinks" in steps and procedures, Object Oriented Programming "thinks" in *classes* and *objects*.
+
+We have used classes and objects made my other programmers a lot already. A NumPy array is a class:
+
+```{python}
+import numpy as np
+
+arr = np.array([1, 2, 3])
+
+type(arr)
+```
+
+The `arr` array is an *object* - which is one example of a general class - the `numpy.ndarray` is the name for the whole class.
+
+This is same ideas as "person" is a class, *you* are one example of a person, so you are a specific case of the general class "person".
+
+Let's imagine we run a business together, and then lets think about using some object oriented programming to make a system for storing our customer data.
+
+We will want *customer* to be our class. Then, for each of our customers we can make an *instance* of that class (e.g. one "customer" object) to store their data:
+
+We make a class using this [general structure](https://www.halvorsen.blog/documents/programming/software_engineering/resources/Software%20Development.pdf):
+
+```
+class ClassName :
+    <statement −1>
+    .
+    .
+    .
+    <statement−N>
+```
+
+So we:
+
+- start with the `class` keyword
+- give our class a name (it is good practice to use Capital Letters) for class names
+- then, like a function or a `for` loop (etc.) we *indent* the body of the class
+- inside the indented body we can give the class the ability to have data. This is an *attribute*.
+- inside the indented body we can we can give the class the ability to *do* things. This is a *method*.
+
+The **important** definitions here are:
+
+- **class** - a *general category* of object (like "person", "customer", "car")
+- **object** - a *specific example* of a class of object (like "Pete", "Danielle", "Porsche")
+- **attribute** - data which is *attached* to an class of object. Specific objects have specific data (e.g. every *person* has a *name*. I am one example of a *person*, my *name* is Pete). 
+- **method** - something which a class can *do*. E.g. the NumPy array can calculate the `.mean()` of the data inside it.
+
+Our first pass at the `Customer` class will have just one attribute, `name`:
+
+```{python}
+class Customer:
+    name = "PUT_NAME_HERE"
+```
+
+I used the string `"PUT_NAME_HERE"` as a *default value*. Each time we make a new example of our `Customer` class, we can tell it what the name of *that* customer is.
+
+When we ran that cell above, making our class, nothing happens! But, if we use the `dir()` function, we can see `Customer` is now in our *namespace* (e.g. the variables and objects that we have defined in this Python session):
+
+```{python}
+dir()
+```
+
+Remember that the `Customer` class is a *general category* (like "person"). For each customer, we want to make an *instance* or *example* of the class (like "Pete").
+
+We do this by using the class name, followed by brackets:
+
+```{python}
+Customer()
+```
+
+Hmmm, pretty weird output! All this means is that our `.Customer` class is defined inside our `__main__` Python session.
+
+To view the customer data, we need look at its `name` attribute:
+
+```{python}
+Customer.name
+```
+
+Remember that `"PUT_NAME_HERE"` is just the default data that the class comes with. We want to put actual data in here, for each customer.
+
+To do this, we can put our new example/instance of our `Customer` class in a variable assignment statement:
+
+```{python}
+new_customer = Customer()
+
+new_customer.name
+```
+
+Now we can *reassign* the default `"PUT_NAME_HERE"` value using an *attribute assignment statement* - this is basically just a variable assignment statement, only because it is assigning a new value to an *attribute* we use a different name:
+
+```{python}
+new_customer.name = "Cole"
+new_customer.name
+```
+
+We can create as many new instances of our class as we want, and give each of them different data:
+
+```{python}
+one_more_new_customer = Customer()
+
+one_more_new_customer.name = "Christine"
+
+one_more_new_customer.name
+```
+
+## Comparison of our `Customer` class and a NumPy array
+
+
+`Customer` is an object, just like a NumPy array is an object. Here is the NumPy array we made earlier:
+
+```{python}
+arr
+```
+
+Here is one of the *attributes* of the NumPy array:
+
+```{python}
+arr.size
+```
+
+`.size` is just how many elements this specific array has. Every array we make has a `.size` attribute, but the exact number depends on what is in that specific array.
+
+We cannot do attribute assignment statements with every attribute on every object, e.g. if we try to give a new value to `.size`, we get an error:
+
+```{python tags=c("raises-exception")}
+arr.size = 10_000
+```
+
+For once this error is very understandable! We are not allowed to change the `.size` attribute. 
+
+But why can we give a new value to our `.name` attribute for our `Customer` class, but we cannot for `.size` for a NumPy array?
+
+This is because we can customise specific attributes, so that they cannot be changed for a specific instance of a class. We will look at this in more detail in the next few classes.
+
+
+## Functions vs Methods vs Attributes
+
+Before we add more detail to our `Customer` class, take a moment to make sure you can see the difference between the syntax of how we use functions or methods, and how we view attributes:
+
+```{python}
+# Using a function. We put the *function* first (`np.mean()`), and we give it an object (`arr`) to work on.
+np.mean(arr)
+```
+
+```{python}
+# Using a method. We put the *object* first (`arr`).
+arr.mean()
+```
+
+```{python}
+# Viewing an attribute. We put the *object* first (`arr`).
+arr.size
+```
+
+## Writing methods for your classes
+
+We saw on the last page how to define functions. We know that the syntax for using a function is:
+
+```
+function_name(object)
+```
+
+So, we *give* an object to a function; for example in `np.mean(arr)` we give the `arr` object to the `np.mean()` function.
+
+```{python}
+np.mean(arr)
+```
+
+With methods, we do it the other way around, we put the object first:
+
+```
+object.method_name()
+```
+
+This is like `arr.mean()`, where we use the `.mean()` method *from* our `arr` object.
+
+```{python}
+arr.mean()
+```
+
+How do we make methods for our `Customer` class?
+
+Well, we can use the same syntax we saw for function definitions, but **inside of a class definition**. Then our function becomes a method! (E.g. it becomes *attached* to this specific class, then when we make an example of that class, we can use the `object.method_name()` syntax).
+
+Lets say we want our `Customer` class to have a method called `.show_data()`. To achieve this, we just put a function definition inside the class definition:
+
+```{python}
+class Customer:
+    
+    # Here we are making an *attribute* e.g. letting our class have some data.
+    name = "PUT_NAME_HERE"
+    
+    # Here we are making a method - we use `self` to "talk" about the *instance* of the class we are inside.
+    def show_data(self):
+        print(f"Name = {self.name}")
+```
+
+We definied the `show_data()` function in the indented body of the class, so now it is a method of the `Customer` class.
+
+Lets see how this works with the new customer, called Pauline:
+
+```{python}
+extra_new_customer = Customer()
+extra_new_customer.name = 'Pauline'
+```
+
+We can then use the `object.method_name()` syntax to use our `show_data()` method:
+
+```{python}
+extra_new_customer.show_data()
+```
+
+### The importance of `self`
+
+```{python}
+class Customer:
+    
+    # Here we are making an *attribute* e.g. letting our class have some data.
+    name = "PUT_NAME_HERE"
+    
+    # Here we are making a method - we use `self` to "talk" about the class we are inside.
+    def show_data(): # <-------------------------------------`self` was removed
+        print(f"Name = {name}") # <-------------------------------------`self.name` was removed
+```
+
+```{python}
+extra_new_customer = Customer()
+extra_new_customer.name = 'Pauline'
+```
+
+```{python tags=c("raises-exception")}
+extra_new_customer.show_data()
+```
+
+## Using `__init__` so our classes are nicer to make
+
+```{python}
+class Customer:
+    
+    def __init__(self, name_of_THIS_customer):
+        self.name = name_of_THIS_customer
+    
+    # Here we are making a method.
+    def show_data(self):
+        print(f"Name = {self.name}")
+```
+
+```{python}
+next_new_customer = Customer("Patrick")
+
+next_new_customer.show_data()
+```
+
+## The `object` object and inheritance
+
+**LOOK AT THE FIRST LINE IN EACH CELL**: https://stackoverflow.com/questions/10044321/class-classnameobject-what-sort-of-word-is-object-in-python 
+
+```{python}
+class Customer:
+    
+    def __init__(self, name_of_THIS_customer):
+        self.name = name_of_THIS_customer
+    
+    # Here we are making a method.
+    def show_data(self):
+        print(f"Name = {self.name}")
+        
+# Test out this class.
+another_extra_new_customer = Customer("Phil")
+another_extra_new_customer.show_data()
+```
+
+```{python}
+class Customer():
+    
+    def __init__(self, name_of_THIS_customer):
+        self.name = name_of_THIS_customer
+    
+    # Here we are making a method.
+    def show_data(self):
+        print(f"Name = {self.name}")
+        
+# Test out this class.
+new_extra_new_customer = Customer("Roberta")
+new_extra_new_customer.show_data()
+```
+
+```{python}
+class Customer(object):
+    
+    def __init__(self, name_of_THIS_customer):
+        self.name = name_of_THIS_customer
+    
+    # Here we are making a method.
+    def show_data(self):
+        print(f"Name = {self.name}")
+        
+# Test out this class.
+a_further_extra_new_customer = Customer("Ying")
+a_further_extra_new_customer.show_data()
+```
+
+```{python}
+class SillyMessage:
+    
+    def show_message(self):
+        self.message = "67!"
+        print(self.message)
+```
+
+```{python}
+instance_of_message = SillyMessage()
+
+instance_of_message.show_message()
+```
+
+```{python}
+class Customer(object):
+    
+    def __init__(self, name_of_THIS_customer):
+        self.name = name_of_THIS_customer
+    
+    # Here we are making a method.
+    def show_data(self):
+        print(f"Name = {self.name}")
+        
+# Test out this class.
+a_further_extra_new_customer = Customer("Ying")
+a_further_extra_new_customer.show_data()
+```
+
+```{python}
+class Customer(SillyMessage):
+    
+    def __init__(self, name_of_THIS_customer):
+        self.name = name_of_THIS_customer
+    
+    # Here we are making a method.
+    def show_data(self):
+        print(f"Name = {self.name}")
+        
+# Test out this class.
+a_further_extra_new_customer = Customer("Ying")
+a_further_extra_new_customer.show_data()
+```
+
+```{python}
+a_further_extra_new_customer.show_message()
+```
+
+## Exercise - Writing Classes & Methods
+
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_6_writing_functions.ipynb) to launch the exercise.
+
+
+----------------------------------------------------------
+
+[🏡](intro.md).

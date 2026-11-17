@@ -135,7 +135,7 @@ Here is how we will look further at both these coding styles on the next pages:
 
 - we will look at important Python libraries for Data Science (`matplotlib` and `pandas`). Like NumPy, both of these have examples of the Procedural Programming style AND the OOP style.
 
-- we will then learn how to write our own functions (procedural programming) and also we will learn how to make our own classes (OOP). 
+- we will also learn how to write our own functions (procedural programming) and also we will learn how to make our own classes (OOP). 
 
 
 ----------------------------------------------------------

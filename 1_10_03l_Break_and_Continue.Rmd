@@ -73,3 +73,7 @@ print("End of loop!")
 ```
 
 Now, when we get to the `random_name` we just skip it, and `continue` the loop from the next name in the list...
+
+## Exercise - Going Loopy
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_6_writing_functions.ipynb) to launch the exercise.

@@ -34,9 +34,9 @@ Her is a real, serious problem:
 
 A *juror* is one person on a *jury* - the group of people who decides if someone is guilty or not in a court case.
 
-![](![image.png](attachment:image.png)
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/jury.png)
 
-His trial jury of 12 people had no Black members.
+Robert Swain's trial jury of 12 people had no Black members.
 
 The local population of people who could be jurors was 26% Black.
 
