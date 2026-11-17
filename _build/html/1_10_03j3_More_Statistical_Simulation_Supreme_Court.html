@@ -512,37 +512,43 @@
 <blockquote>
 <div><p>In 1963, a court in Talladega County, Alabama sentenced a young black man called Robert Swain to death <a class="reference external" href="https://en.wikipedia.org/wiki/Furman_v._Georgia">1</a>. All 12 jurors in his trial were white. He appealed his sentence, citing, among other factors, evidence of bias in the process by which his jury was selected. At the time, only men aged 21 or older were allowed to serve on juries in Talladega County. In the county, 26% of the eligible jurors were black. (Quote from <a class="reference external" href="https://odsti.github.io/cfd-textbook/sampling_problem.html">here</a>).</p>
 </div></blockquote>
-<p>A <em>juror</em> is someone on a jury - the group of people who decides if someone is guilty or not in a court case.</p>
-<p>His trial jury of 12 people had no Black members.</p>
+<p>A <em>juror</em> is one person on a <em>jury</em> - the group of people who decides if someone is guilty or not in a court case.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/jury.png" /></p>
+<p>Robert Swain’s trial jury of 12 people had no Black members.</p>
 <p>The local population of people who could be jurors was 26% Black.</p>
 <p>If the jury had been representative of the whole population, we would expect about 26 of 100 people to
 be Black.  That’s around 1 in 4 (25%), so we would expect about one in four
 jurors to be Black - so around 3 of 12.</p>
 <p>The Supreme Court was not convinced that there was evidence of unfairness.  But, to start with the jurors - is it surprising that we expected around 3 Black jurors, but we got 0.  Is the value 0 surprising, if each juror has 26% chance of being Black?</p>
+<p><img alt="" src="https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/Swain_Jury.png" /></p>
 <p>To answer this, we are going to go through a couple of steps.</p>
 <p>The first is to build an <em>ideal model</em> of the world, where it <em>is true</em> that
 each juror has a 26% of being Black.  We sometimes call this our <em>ideal world</em>.
-If you are used to statistical terms, this ideal model is our <em>null
-hypothesis</em>.</p>
+If you are used to statistical language, this ideal model is our <em>null
+hypothesis</em>. <em>Hypothesis</em> means idea, model or theory. We want to test which one of these
+two hypothesis is more likely to be true:</p>
+<blockquote>
+<div><p>Null Hypothesis: the jury was chosen randomly.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Alternative Hypothesis: the jury was NOT chosen randomly.</p>
+</div></blockquote>
 <p>Then we can <em>simulate</em> making many juries in this ideal world.</p>
 <p>Finally we ask whether our simulated juries, from the ideal world, often give
 us a count of zero Black jurors.  If they don’t, then we can say that we are
 <em>surprised</em> by the value of 0, if the jury did arise from that real world.</p>
-<p>If
-the value 0 is sufficiently unusual, we become suspicious that the real world
-is rather different from our ideal world.  We consider saying that the the ideal
-world is NOT a good model of the real world - this is called <em>rejecting</em> the model of the ideal world.</p>
+<p>If the value of zero black jurors is very unusual in our simulation, then this gives us evidence that the ideal world model might be wrong. We think about saying that the the ideal world is NOT a good model of the real world - this is called <em>rejecting</em> the model of the ideal world.</p>
 <section id="the-ideal-world">
 <h2>The ideal world<a class="headerlink" href="#the-ideal-world" title="Link to this heading">#</a></h2>
 <p>Our <em>ideal model</em> (or null hypothesis) is a world where each juror has been
 truly randomly selected from the eligible population. That is, for any one
-juror, there is a 0.26 probability that they are Black.</p>
+juror, there is a 26% probability that they are Black.</p>
 </section>
 <section id="simulations-with-the-ideal-model">
 <h2>Simulations with the ideal model<a class="headerlink" href="#simulations-with-the-ideal-model" title="Link to this heading">#</a></h2>
 <p>To do a <em>simulation</em> with this ideal model, we will start by making one jury,
-of 12 people, where it is really true that each juror has a 26% of being Black.
-Not to pun, but we will call one simulation of a jury of 12 - <em>one trial</em>.</p>
+of 12 people, where it is really true that each juror has a 26% of being Black.</p>
+<p>We can each run of the simulation one <em>trial</em> of the simulation.</p>
 <p>Then we simulate 10 juries of 12 people (do 10 trials), to get warmed up.</p>
 <p>Finally we make 10000 juries, each of 12 people, and see what we get.</p>
 <div class="cell docutils container">
@@ -561,13 +567,22 @@ jury, and count the number of Black people in the simulated jury.</p>
 <span class="n">jurors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"BLACK"</span><span class="p">,</span> <span class="s2">"NOT_BLACK"</span><span class="p">],</span> 
                           <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.26</span><span class="p">,</span> <span class="mf">0.74</span><span class="p">],</span>
                           <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Show the jury.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Here is the jury we just simulatied</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">jurors</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+
 <span class="c1"># np.count_nonzero counts the number of 1 values:</span>
 <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">jurors</span> <span class="o">==</span> <span class="s2">"BLACK"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(6)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here is the jury we just simulatied
+ ['NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK'
+ 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'BLACK' 'NOT_BLACK' 'NOT_BLACK'].
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(1)
 </pre></div>
 </div>
 </div>
@@ -602,7 +617,7 @@ of times, to make sure we’ve got an idea of the variation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -627,7 +642,7 @@ of times, to make sure we’ve got an idea of the variation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 2., 3., 5., 4., 4., 6., 0., 3., 2.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 2., 5., 3., 3., 2., 1., 4., 4., 4.])
 </pre></div>
 </div>
 </div>
@@ -655,7 +670,7 @@ therefore, 10000 estimates.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 2., 3., ..., 6., 1., 3.], shape=(10000,))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 3., 3., ..., 8., 3., 3.], shape=(10000,))
 </pre></div>
 </div>
 </div>
@@ -698,7 +713,7 @@ a histogram.  Here is how to do that, in Python.  Don’t worry about the detail
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5a3773712fdcba151c880bfcea9e9ae03e3edde03957df71064c62ec790f6423.png" src="_images/5a3773712fdcba151c880bfcea9e9ae03e3edde03957df71064c62ec790f6423.png" />
+<img alt="_images/aa436ea7ca531b823327387e571d0963cf534c0d2b3ed4277739bac56076747f.png" src="_images/aa436ea7ca531b823327387e571d0963cf534c0d2b3ed4277739bac56076747f.png" />
 </div>
 </div>
 <p>The histogram above is called the <em>sampling distribution</em>.  The sampling distribution is the distribution of thing we are interested in (the number of Black jurors) given the ideal model, of completely random selection of jurors from a 26% Black population.</p>
@@ -715,7 +730,7 @@ times did we get a value of 0, in all our 10000 estimates?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/e6edac815afd9289dac43f6378912e3d3519097f7499e70e95d20c1056833538.png" src="_images/e6edac815afd9289dac43f6378912e3d3519097f7499e70e95d20c1056833538.png" />
+<img alt="_images/f9ee54dd76efef19693bb36173766563e7e06c5d78de0a726ad90eda489ac1c9.png" src="_images/f9ee54dd76efef19693bb36173766563e7e06c5d78de0a726ad90eda489ac1c9.png" />
 </div>
 </div>
 <p>It looks like <em>most</em> of the simulated trials had more than 0 black jurors…</p>
@@ -729,7 +744,7 @@ times did we get a value of 0, in all our 10000 estimates?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(271)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(248)
 </pre></div>
 </div>
 </div>
@@ -744,13 +759,13 @@ number of times we see 0 by the number trials we made:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0271)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0248)
 </pre></div>
 </div>
 </div>
 </div>
-<p>We have run an analysis assuming that the jurors were selected at random.  On
-that assumption, a count of 0 jurors in 12 is fairly uncommon, in the sense
+<p>We did this analysis simulating that jurors were selected at random.  On
+that assumption, a count of 0 jurors in 12 is uncommon, in the sense
 that the proportion of times we see that result is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -759,7 +774,7 @@ that the proportion of times we see that result is:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0271)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0248)
 </pre></div>
 </div>
 </div>
@@ -773,7 +788,7 @@ in a jury of 12, is</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0271)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0248)
 </pre></div>
 </div>
 </div>
@@ -786,15 +801,16 @@ in a jury of 12, is</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.71)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.48)
 </pre></div>
 </div>
 </div>
 </div>
-<p>So, we only got 0 black jurors 2.63% of the time…</p>
-<p>What can we conclude?  Only this: that in our ideal model world, where each
-juror has a 26% chance of being Black, 0 is uncommon.  This surprising result,
-of 0, gives us some cause to wonder if our ideal model of the world is wrong.
+<p>So, we only got 0 black jurors around 2.6% of the time…</p>
+<p>What does this tell us?  Only this: that in our ideal model world, where each
+juror has a 26% chance of being Black, 0 is uncommon.</p>
+<p>This surprising result,
+of 0, gives us a reason to wonder if our ideal model of the world is wrong.
 One way it could be wrong, is if there was bias in jury selection, so it was
 not true that each juror had a 26% of being Black.</p>
 </section>

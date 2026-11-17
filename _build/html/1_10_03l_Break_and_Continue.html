@@ -153,6 +153,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -462,7 +466,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -478,6 +484,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-going-loopy">Exercise - Going Loopy</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -489,9 +503,10 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="break-and-continue-ways-to-control-your-for-loop">
 <h1><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#break-and-continue-ways-to-control-your-for-loop" title="Link to this heading">#</a></h1>
-<p>Sometimes we might want to stop our loop, if something is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>For this purpose, we can use the <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword inside the body of the loop.</p>
-<p>First, let’s make a loop without a <code class="docutils literal notranslate"><span class="pre">break</span></code>  keyword in it:</p>
+<p>As we’ve seen with <code class="docutils literal notranslate"><span class="pre">while</span></code> loops, we sometimes want our loop to stop running becuase of a conditional statement.</p>
+<p>But what if we want to stop a loop when a different condition is met?</p>
+<p>We can do this by using the <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword inside the body of the loop.</p>
+<p>First, let’s make a loop <em>without</em> a <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword in it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -528,7 +543,10 @@ Ryan
 </div>
 <p>We chose only the middle three names to make it easier to see how the <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword works.</p>
 <p>Now we can add an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to our loop, with a <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword indented under it:</p>
-<p><code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">if</span> <span class="pre">name</span> <span class="pre">==</span> <span class="pre">random_name:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">break</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="n">random_name</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
 <p>This means when we get to our randomly selected person, we will <em>exit</em> the loop:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -575,6 +593,10 @@ End of loop!
 </div>
 </div>
 <p>Now, when we get to the <code class="docutils literal notranslate"><span class="pre">random_name</span></code> we just skip it, and <code class="docutils literal notranslate"><span class="pre">continue</span></code> the loop from the next name in the list…</p>
+<section id="exercise-going-loopy">
+<h2>Exercise - Going Loopy<a class="headerlink" href="#exercise-going-loopy" title="Link to this heading">#</a></h2>
+<p>Click <a class="reference external" href="https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/eexercise_5_going_loopy.ipynb">here 🚀</a> to launch the exercise.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -613,6 +635,23 @@ End of loop!
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-going-loopy">Exercise - Going Loopy</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

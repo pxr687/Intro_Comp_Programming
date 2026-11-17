@@ -239,8 +239,8 @@ Just for completeness, here is how you make these two plots using the `matplotli
 fig, ax = plt.subplots()
 
 # Make the scatterplot.
-ax.scatter(x=df['Month'],
-           y=df['Thousands of Passengers'])
+ax.scatter(x = df['Month'],
+           y = df['Thousands of Passengers'])
 
 # Add axis labels.
 ax.set_xlabel('Month')
@@ -274,9 +274,7 @@ plt.show()
 
 ## Exercise - Plotting Practice
 
-*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
-
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4_statements.ipynb) to launch the exercise.
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_6c_plotting.ipynb) to launch the exercise.
 
 
 ----------------------------------------------------------
