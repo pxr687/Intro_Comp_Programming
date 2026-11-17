@@ -66,7 +66,7 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="More Statistical Simulation - The Supreme Court" href="1_10_03j3_More_Statistical_Simulation_Supreme_Court.html" />
+    <link rel="next" title="Scratchpad" href="scratchpad.html" />
     <link rel="prev" title="Indentation, indentation, indentation" href="1_10_03j0_Indentation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -292,27 +292,6 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j0_Indentation.html">Indentation, indentation, indentation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Statistical Simulation with NumPy Arrays</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_More_Statistical_Simulation_Supreme_Court.html">More Statistical Simulation - The Supreme Court</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_10_03l2_While_Loops.html"><code class="docutils literal notranslate"><span class="pre">while</span></code> loops</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Principles of Software Development</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_10_10_Dont_Repeat_Yourself_Procedural_OOP.html">Don’t Repeat Yourself</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functions &amp; Classes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_11_00a_Writing_Your_Own_Functions.html">Writing Your Own Functions (Procedural Programming Style)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_11_00b_Writing_Your_Own_Classes_and_Methods.html">Writing Your Own Classes and Methods (Object Oriented Programming Style)</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation with`matplotlib`</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pandas Data Science Library</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_11_03_Pandas_Data_Science.html">Pandas for Data Science - Data Visualisation &amp; More Statistical Simulation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -584,10 +563,10 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['BOY' 'BOY' 'BOY' 'GIRL']
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['GIRL' 'GIRL' 'BOY' 'GIRL']
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(1)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
 </pre></div>
 </div>
 </div>
@@ -603,7 +582,7 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -619,7 +598,7 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -636,7 +615,7 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 2., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 3., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -663,7 +642,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 1., 1., 1., 3., 1., 1., 1., 4., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 1., 2., 1., 1., 2., 4., 1., 1., 2.])
 </pre></div>
 </div>
 </div>
@@ -691,7 +670,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False, ..., False, False, False], shape=(10000,))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False, ..., False,  True, False], shape=(10000,))
 </pre></div>
 </div>
 </div>
@@ -706,7 +685,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2534)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2502)
 </pre></div>
 </div>
 </div>
@@ -721,7 +700,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2534)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2502)
 </pre></div>
 </div>
 </div>
@@ -735,7 +714,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(25.34)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(25.019999999999996)
 </pre></div>
 </div>
 </div>
@@ -770,7 +749,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2545)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2458)
 </pre></div>
 </div>
 </div>
@@ -801,7 +780,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/dd2ce403e32721347456807fd14f8e221e4821f8c4391dc46d265d99a7dd0034.png" src="_images/dd2ce403e32721347456807fd14f8e221e4821f8c4391dc46d265d99a7dd0034.png" />
+<img alt="_images/5a27498bee3a6f892dbc5a5106688d975d188ac5a32143f67ae197e8dcb93600.png" src="_images/5a27498bee3a6f892dbc5a5106688d975d188ac5a32143f67ae197e8dcb93600.png" />
 </div>
 </div>
 <p>Each bar on this histogram show us the <em>number</em> of families, in our simulation, who had a specific number of girls.</p>
@@ -821,7 +800,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/00602f6f85a5a636b9eb6f0554b16904c792b1ccbbb6d4123eb15e015e34a3fe.png" src="_images/00602f6f85a5a636b9eb6f0554b16904c792b1ccbbb6d4123eb15e015e34a3fe.png" />
+<img alt="_images/cce7e708014db0cb9a2ed62cec4a2a01d8845eccb159a7685f412b5940620303.png" src="_images/cce7e708014db0cb9a2ed62cec4a2a01d8845eccb159a7685f412b5940620303.png" />
 </div>
 </div>
 <p>Look at the y-axis height of the bar for 3 girls you can see it is around 0.25 (which means 25% probability).</p>
@@ -833,7 +812,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2545)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2458)
 </pre></div>
 </div>
 </div>
@@ -846,7 +825,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(25.45)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(24.58)
 </pre></div>
 </div>
 </div>
@@ -900,11 +879,11 @@ the number of trials:</p>
       </div>
     </a>
     <a class="right-next"
-       href="1_10_03j3_More_Statistical_Simulation_Supreme_Court.html"
+       href="scratchpad.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">More Statistical Simulation - The Supreme Court</p>
+        <p class="prev-next-title">Scratchpad</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
