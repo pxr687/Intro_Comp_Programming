@@ -1,0 +1,284 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# Introduction to Data Visualisation with `matplotlib`
+
+On this page we will look at two things:
+
+- data visualisation
+
+- procedural programming vs object oriented programming *from the point of view of using a Python package that you did not write*. E.g. you will see the "user side" of a library that allows both a procedural and object oriented approach.
+
+Data visualisation means showing data *visually*. Our brains are very good at seeing the relationship between variables when we look at the data as *graphs* instead of looking at numbers in a table.
+
+We explore data visualisation with the `matplotlib` library. I want to show you a real world use case of Procedural Programming AND Object Oriented Programming. `matplotlib` has a Procedural Programming interface, where we make our plots step-by-step with functions. It also as Object Oriented interface, where we create instances of graph classes and then use these to make our visualisations.
+
+First, we will import some data. We will use the `pandas` libary to do this. We will use this library more in the next class, for now, just think of it like a really really really advanced Microsoft Excel.
+
+Here is how we read in a dataset as a *Pandas DataFrame*. This dataset shows how many airline passengers there were worldwide between 1949 and 1960.
+
+```{python}
+# Import `pandas`.
+import pandas as pd
+
+# This reads in the file and stores it as a variable.
+df = pd.read_csv('data/airline_passengers.csv')
+
+df
+```
+
+The simplest way to get data out of data out of a dataframe is to use the name of the columns:
+
+```{python}
+df['Thousands of Passengers']
+```
+
+```{python}
+df['Month']
+```
+
+We can also do Boolean indexing, just like on a NumPy array:
+
+```{python}
+# Make a Boolean array.
+bigger_than_400_boolean_arr = df['Thousands of Passengers'] > 400
+
+# Use Boolean indexing.
+df[bigger_than_400_boolean_arr]
+```
+
+As a quick aside, Pandas dataframes are objects, written in their source code in the Object Oriented Programming style. 
+
+They have attributes and methods. For instance we can get just the `name` of each column using:
+
+```{python}
+df['Thousands of Passengers'].name
+```
+
+## Procedural Plotting with `matplotlib`
+
+We have already seen `plt.hist()` - this is great when we want to look at how *one* variable is distributed:
+
+```{python}
+# Import `matplotlib`, rename it as `plt`.
+import matplotlib.pyplot as plt
+
+plt.hist(df['Thousands of Passengers'])
+```
+
+A few things are pretty ugly about this - we see lots of junk above the plot, and our plot has not title or labels on the axes.
+
+Let's fix this:
+
+```{python}
+plt.hist(df['Thousands of Passengers'])
+
+# Add some axis labels.
+plt.xlabel('Thousands of Passengers')
+plt.ylabel('Count')
+
+# Add a title.
+plt.title('Thousands of Passengers')
+
+# This stops the junk at the top of the plot.
+plt.show()
+```
+
+Nice!
+
+You'll notice here that we are using *functions*. You can read the code in the cell like this:
+
+`plt.hist()` → Draw a histogram.
+
+`plt.xlabel()` → Set the X-axis label.
+
+`plt.ylabel()` → Set the Y-axis label.
+
+`plt.title()` → Set the plot title.
+
+`plt.show()` → Display the plot.
+
+Using `matplotlib` this way is in the *procedural programming style*.
+
+
+## Object Oriented Plotting with `matplotlib`
+
+Let's have a look at the same plot, but made using `matplotlib`'s Object Oriented Style:
+
+```{python}
+# Create a figure and axes. These are instances of classes.
+# This line of conde makes the instances.
+fig, ax = plt.subplots()
+
+# Plot the histogram (notice that now we are using *methods* of the axes objects, instead of functions).
+ax.hist(df['Thousands of Passengers'])
+
+# Add axis labels (notice that now we are using *methods* of the axes objects, instead of functions).
+ax.set_xlabel('Thousands of Passengers')
+ax.set_ylabel('Count')
+
+# Add a title (notice that now we are using *methods* of the axes objects, instead of functions).
+ax.set_title('Thousands of Passengers')
+
+# Display the plot.
+plt.show()
+```
+
+As the comments in the cell above say - this approach uses *objects* and *methods* instead of functions. Here is how to read the code in the cell above:
+
+`fig` → An instance of the `Figure` class (the entire canvas).
+
+`ax` → An instance of the `Axes` class (the plotting area).
+
+`ax.hist()` → Ask the `Axes` object to draw a histogram.
+
+`ax.set_xlabel()` → Set the X-axis label of that `Axes` object.
+
+`ax.set_title()` → Set the title of that `Axes` object.
+
+Notice that we still use `plt.show()` (e.g. the function) in the last line of the cell above, even though the rest of the code is Object Oriented. In `matplotlib`, but also in Python in general, we can mix and match the Procedural and Object Oriented Coding styles - do whatever works best for a specific context!
+
+
+## Other Types of Graph
+
+Looking at one variable is useful - we need to do it before we do any statistical analysis! But we also get useful information from plotting many variables together. This makes it possible to see **trends**, **patterns** and **relationships** between the variables.
+
+A simple way to look at how two variables are related is to use a *scatter plot*.
+
+We can do this in the procedural style, with the following code:
+
+```{python}
+# Make the scatterplot.
+plt.scatter(x = df['Month'],
+            y = df['Thousands of Passengers'])
+
+# Add axis labels.
+plt.xlabel('Month')
+plt.ylabel('Thousands of Passengers')
+
+# Show the plot.
+plt.show()
+```
+
+The x-axis looks weird - there are too many labels to show on the plot. 
+
+To fix this, we can slice the dataframe column, just we can with a NumPy array (actually Pandas dataframes are built *from* NumPy arrays!):
+
+```{python}
+df['Month'][::20]
+```
+
+We can use this slice of the data, with the `plt.xticks()` function, to make the x-axis show less labels:
+
+```{python}
+# Make the scatterplot.
+plt.scatter(x = df['Month'],
+            y = df['Thousands of Passengers'])
+
+# Add axis labels.
+plt.xlabel('Month')
+plt.ylabel('Thousands of Passengers')
+
+# Tidy up the x-axis.
+plt.xticks(df['Month'][::20])
+
+# Show the plot.
+plt.show()
+```
+
+This makes it much easier to read the graph, and nicer to look at!
+
+What do you think the graph shows?
+
+It is possible to see a clear trend on this plot - I guess here would could use the phrase ["number go up"](https://en.wikipedia.org/wiki/Number_Go_Up).
+
+But right now each point on the graph shows the data for one month. The trend *between* the years is easy to see, but the relationship between months that are close to each other is a bit messy.
+
+A better way to show this data is to use the `plt.plot()` function. This will try to plot the data we give it as a continuous line:
+
+```{python}
+# Make the line plot.
+plt.plot(df['Month'],
+         df['Thousands of Passengers'])
+
+# Add axis labels.
+plt.xlabel('Month')
+plt.ylabel('Thousands of Passengers')
+
+# Tidy up the x-axis.
+plt.xticks(df['Month'][::20])
+
+# Show the plot.
+plt.show()
+```
+
+<!-- #region -->
+Now we can see that overall the number of passengers goes up, but also the *fluctuations* get bigger in later years.
+
+**Take a moment to think**: what do you think those fluctuations are? What is the real life explanation here?
+
+
+### Making the same scatterplot and lineplot, using OOP
+
+Just for completeness, here is how you make these two plots using the `matplotlib` OOP style:
+<!-- #endregion -->
+
+```{python}
+# Create a Figure and Axes.
+fig, ax = plt.subplots()
+
+# Make the scatterplot.
+ax.scatter(x=df['Month'],
+           y=df['Thousands of Passengers'])
+
+# Add axis labels.
+ax.set_xlabel('Month')
+ax.set_ylabel('Thousands of Passengers')
+
+# Tidy up the x-axis.
+ax.set_xticks(df['Month'][::20])
+
+# Show the plot.
+plt.show()
+```
+
+```{python}
+# Create a Figure and Axes.
+fig, ax = plt.subplots()
+
+# Make the line plot.
+ax.plot(df['Month'],
+        df['Thousands of Passengers'])
+
+# Add axis labels.
+ax.set_xlabel('Month')
+ax.set_ylabel('Thousands of Passengers')
+
+# Tidy up the x-axis.
+ax.set_xticks(df['Month'][::20])
+
+# Show the plot.
+plt.show()
+```
+
+## Exercise - Plotting Practice
+
+*Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
+
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_4_statements.ipynb) to launch the exercise.
+
+
+----------------------------------------------------------
+
+[🏡](intro.md).
