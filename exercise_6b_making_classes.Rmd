@@ -169,6 +169,7 @@ Make an instance called `lion` and give its `species` attribute the value: `"pan
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
+assert isinstance(lion, Animal), "Hmmm, something is wrong there..."
 assert lion.species = "panthera leo", "Hmmm, something is wrong there..."
 
 jupyprint('*Well done! That is correct!*')
@@ -177,6 +178,15 @@ jupyprint('*Well done! That is correct!*')
 
 ### Question 2
 
+Now, paste over your `Animal` class definition from the last question.
+
+Give it the following extra attributes:
+
+`age`
+
+`habitat`
+
+Make a new instance of the `Animal` class called `tiger`. Make its `species` attribute equal `"panthera tigris"`. Give its `age` the value 10 and set its `habitat` to `"jungle"`.
 
 ```{python}
 # Define your class below.
@@ -191,7 +201,10 @@ jupyprint('*Well done! That is correct!*')
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-
+assert isinstance(tiger, Animal), "Hmmm, something is wrong there..."
+assert tiger.species == "panthera tigris", "Hmmm, something is wrong there..."
+assert tiger.age == 10, "Hmmm, something is wrong there..."
+assert tiger.habitat == "jungle", "Hmmm, something is wrong there..."
 
 jupyprint('*Well done! That is correct!*')
 ```
@@ -199,6 +212,11 @@ jupyprint('*Well done! That is correct!*')
 
 ### Question 3
 
+Now make a class called `Staff`.
+
+Give it the attributes `name`, `age` and `department`.
+
+Make an instance of the class called `zookeeper`. His `name` should be `John`, his `age` should be `29` and his `department` should be `primates`.
 
 ```{python}
 # Define your class below.
@@ -213,55 +231,23 @@ jupyprint('*Well done! That is correct!*')
 ```{python}
 # DO NOT CHANGE THIS CODE.
 # RUN THIS CELL TO MARK YOUR ANSWER.
-
-
-jupyprint('*Well done! That is correct!*')
-```
-
-
-### Question 4
-
-
-```{python}
-# Define your class below.
-```
-
-```{python}
-# Test your class out.
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-
+assert isinstance(zookeeper, Staff), "Hmmm, something is wrong there..."
+assert zookeeper.name == "John", "Hmmm, something is wrong there..."
+assert zookeeper.age == 29, "Hmmm, something is wrong there..."
+assert zookeeper.department == "primates", "Hmmm, something is wrong there..."
 
 jupyprint('*Well done! That is correct!*')
 ```
 
 
-### Question 5
+## Question 4
+
+Go back to all of the class definitions in this exercise, and add a method to each one. The method should show all of the data for the class in a message (probably you will want to use F-strings to do this).
 
 
-```{python}
-# Define your class below.
-```
+## Done.
 
-```{python}
-# Test your class out.
-```
-
-### Run the next cell to mark your answer.
-
-```{python}
-# DO NOT CHANGE THIS CODE.
-# RUN THIS CELL TO MARK YOUR ANSWER.
-
-
-jupyprint('*Well done! That is correct!*')
-```
-
+You finished the exercise.
 
 ## Go back to the textbook:
 

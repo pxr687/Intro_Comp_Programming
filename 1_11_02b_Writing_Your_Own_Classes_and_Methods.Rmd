@@ -229,7 +229,7 @@ We can then use the `object.method_name()` syntax to use our `show_data()` metho
 extra_new_customer.show_data()
 ```
 
-### The importance of `self`
+## The importance of `self`
 
 Notice that when we want to refer to the *class* we use the name `self`.
 
@@ -494,11 +494,11 @@ a_further_extra_new_customer.show_message() # <-------------------- LOOK HERE.
 Look at the last class definition - **notice that we did not define a `show_message()` method**. This was **inherited** from the `SillyMessage` class.
 
 
-## Exercise - Writing Classes & Methods
+## Exercise - Writing Classes
 
 *Remember*: your [assignments, tests and exams](https://pxr687.github.io/Intro_Comp_Programming/1_02_Class_Grades_Assignments_Exams.html) will also be a bit like this.
 
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_6_writing_functions.ipynb) to launch the exercise.
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_6b_making_classes.ipynb) to launch the exercise.
 
 
 ----------------------------------------------------------
