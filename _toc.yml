@@ -69,7 +69,7 @@ parts:
       - file: 1_10_03e_More_Maths_With_Arrays
       - file: 1_10_03f_Filling_Arrays
       - file: 1_10_03g_Boolean_Arrays_Boolean_Indexing
-      - file: 1_10_03g_Boolean_Arrays_Extra_Task  # THIS CLASS
+      - file: 1_10_03g_Boolean_Arrays_Extra_Task  # THIS CLASS AT END
 
   - caption: Iteration & Statistical Simulation
     chapters:
@@ -77,23 +77,26 @@ parts:
     - file: 1_10_03j0_Indentation
     - file: 1_10_03j2_Simulation_With_Numpy_Arrays
     - file: 1_10_03j3_More_Statistical_Simulation_Supreme_Court # THIS HAS EXERCISE (START HERE GO SEQUENTIALLY)
+    - file: 1_10_03k_Simulation_Task # THIS CLASS AT END
     - file: 1_10_03l_Break_and_Continue # THIS CLASS
-    - file: 1_10_03l2_While_Loops # THIS CLASS - more loops exercise (break, continue, while)
-    - file: 1_10_03k_Simulation_Task
+    - file: 1_10_03l2_While_Loops # THIS CLASS - more loops exercise (break, continue, while) EX DONE
 
   - caption: Principles of Software Development
     chapters:
     - file: 1_10_10_Dont_Repeat_Yourself_Procedural_OOP
 
-  - caption: Data (Visualisation) with `pandas` and `matplotlib`
+  - caption: Data Visualisation with`matplotlib`
     chapters:
-    - file: 1_11_00_Data_Visualization # EXERCISE
-    - file: 1_11_01_Pandas # EXERCISE
+    - file: 1_11_00_Data_Visualization # EXERCISE NY 0
 
   - caption: Functions & Classes
     chapters:
-    - file: 1_11_03_Writing_Your_Own_Functions # EXERCISE
-    - file: 1_11_03_Writing_Your_Own_Classes_and_Methods # EXERCISE
+    - file: 1_11_03_Writing_Your_Own_Functions # EXERCISE DONE
+    - file: 1_11_03_Writing_Your_Own_Classes_and_Methods # EXERCISE NY 0
+
+  - caption: Pandas Data Science Library
+    chapters:
+    - file: 1_11_01_Pandas # EXERCISE NY 0
 
 
 # Week 11 - next in-class assignment

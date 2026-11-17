@@ -15,11 +15,13 @@ jupyter:
 
 # `break` and `continue` - ways to control your `for` loop
 
-Sometimes we might want to stop our loop, if something is `True` or `False`.
+As we've seen with `while` loops, we sometimes want our loop to stop running becuase of a conditional statement.
 
-For this purpose, we can use the `break` keyword inside the body of the loop.
+But what if we want to stop a loop when a different condition is met?
 
-First, let's make a loop without a `break`  keyword in it:
+We can do this by using the `break` keyword inside the body of the loop.
+
+First, let's make a loop *without* a `break` keyword in it:
 
 ```{python}
 import numpy as np
@@ -40,9 +42,10 @@ random_name
 We chose only the middle three names to make it easier to see how the `break` keyword works.
 
 Now we can add an `if` statement to our loop, with a `break` keyword indented under it:
-
-`    if name == random_name:
-        break`
+```
+    if name == random_name:
+        break
+```
         
 This means when we get to our randomly selected person, we will *exit* the loop:
 
@@ -76,4 +79,4 @@ Now, when we get to the `random_name` we just skip it, and `continue` the loop f
 
 ## Exercise - Going Loopy
 
-Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/exercise_6_writing_functions.ipynb) to launch the exercise.
+Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/eexercise_5_going_loopy.ipynb) to launch the exercise.

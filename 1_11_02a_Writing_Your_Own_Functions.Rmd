@@ -248,6 +248,53 @@ for cel in np.arange(10, 21):
     print(celsius_to_farenheit(cel))
 ```
 
+## Data Validation
+
+Often, we will want to check our function is getting the right *type* of data.
+
+For example, if we give a string to our `celsius_to_farenheit` function, we will get an error:
+
+```{python tags=c("raises-exception")}
+celsius_to_farenheit("HELLO!")
+```
+
+But this error happens because of the rules of Python - we tried to divide a string!
+
+A (usually) better option is to write our own code to make sure our function gets what it needs, and to tell a user if they give the wrong input. E.g. we do this instead of waiting for Python to give an error.
+
+To code cell below adds some data validation to our `celsius_to_farenheit` function. "Data validation" just means "checking our data is the right type before we try to do anything with it".
+
+The comments explain how the validation works:
+
+```{python}
+def celsius_to_farenheit(celsius):
+    
+    # Test if the input is a string and...
+    if type(celsius) == str:
+        
+        # ...if it is, give the user a message, but don't run the calculation.
+        return 'Input should be a number!'
+    
+    # Else, if the data is the correct dtype...
+    elif type(celsius) in [int, float]:
+        
+        # ...do the calculation.
+        farenheit = (celsius * 9/5) + 32
+        return farenheit
+```
+
+We can test our function still works as expected with number input:
+
+```{python}
+celsius_to_farenheit(0)
+```
+
+But now we avoid the nasty error if it gets the wrong input (at least if the wrong input is a string!):
+
+```{python}
+celsius_to_farenheit("HELLO!")
+```
+
 ## Advantages of using functions
 
 You might be able to see some advantages of using functions, through this example:

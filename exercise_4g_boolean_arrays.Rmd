@@ -150,7 +150,7 @@ jupyprint('*That is **CORRECT**, well done!*')
 
 ## Question 4
 
-Use [Boolean indexing](1_10_03g_Boolean_Arrays_Boolean_Indexing) to find
+Use [Boolean indexing](https://pxr687.github.io//Intro_Comp_Programming/1_10_03g_Boolean_Arrays_Boolean_Indexing.html) to find
 the film titles for films with gross earnings over 500% of their budget.  Store
 these film titles in the array `big_earner_titles`.
 

@@ -15,6 +15,8 @@ jupyter:
 
 # `while` loops 
 
+Before we move on to writing our own functions (and classes!) will we look at another way to repeat things in our code.
+
 `for` loops are one way we can do something lots and lots of time.
 
 We know *exactly* how many times a `for` loop will do something ... because we tell it how many times to do something!.
@@ -71,7 +73,7 @@ n_times = 10
 while n_times > 0:
     
     # This is the indented body of the `while` loop.
-    print(f"{n_times}                                               `n_times > 0` = {n_times > 0}")
+    print(f"Countdown: {n_times}                                               `n_times > 0` = {n_times > 0}")
                                 
     n_times = n_times - 1
     sleep(0.5) # This just adds a pause, of 0.5 seconds.
@@ -96,15 +98,69 @@ n_times = 10
 while n_times > 5: # <--------------------------LOOK HERE!
     
     # This is the indented body of the `while` loop.
-    print(f"{n_times}                                               `n_times > 0` = {n_times > 5}")
+    print(f"Countdown: {n_times}                                               `n_times > 0` = {n_times > 5}")
                                 
     n_times = n_times - 1
     sleep(0.5) # This just adds a pause, of 0.5 seconds.
 
 # These `print()` statements are outside of the `while` loop. (The extra `print()` function is the same
 # as the one in the body of the `while` loop).
-print(f"{n_times}                                               `n_times > 0` = {n_times > 5}") 
+print(f"Condition is now false at: {n_times}                               `n_times > 0` = {n_times > 5}") 
 print('BOOM!')
 ```
 
+<!-- #region -->
 Now, the `while` loop ends *as soon as the condition is `False`* (e.g. when `n_times` equals 5).
+
+## `while` loops and user input
+
+One time that `while` loops are very useful is when getting input (like a password) from a user. We can keep asking a question until the user gives the correct input.
+
+We haven't used this before, but to get user input we use the helpfully named `input()` function.
+
+We put a string inside the `()` after the function name, and this is shown to the user. We can also assign the the user input to a variable.
+
+Try running this code in the cell below (it will break the textbook if it is left in a code cell!):
+
+```
+name = input("What is your name?")
+
+print(f"Your name is: {name}.")
+
+```
+<!-- #endregion -->
+
+```{python}
+# Paste the code here.
+```
+
+Then in the cell below, make the `my_name` variable be your name.
+
+```{python}
+# Save your name as a string.
+my_name = "YOUR NAME HERE"
+```
+
+Now, paste this code into the cell below:
+
+```
+name = ""
+
+while name != my_name:
+
+    name = input("What is your name?")
+
+print(f"Your name is: {name}.")
+```
+
+This code will keep asking your for your name *until the condition in the `while` loop header (`name != my_name`) becomes `False`*. 
+
+This means ONLY typing your actual name will exit the `while` loop.
+
+```{python}
+# Paste the code here.
+```
+
+You will need this to do the next exercise...
+
+We will now look at some other ways we can control our loops...

@@ -46,13 +46,21 @@ jurors to be Black - so around 3 of 12.
 
 The Supreme Court was not convinced that there was evidence of unfairness.  But, to start with the jurors - is it surprising that we expected around 3 Black jurors, but we got 0.  Is the value 0 surprising, if each juror has 26% chance of being Black?
 
+<!-- #region -->
+![](https://raw.githubusercontent.com/pxr687/Intro_Comp_Programming/refs/heads/main/images/Swain_Jury.png)
+
 
 To answer this, we are going to go through a couple of steps.
 
 The first is to build an *ideal model* of the world, where it *is true* that
 each juror has a 26% of being Black.  We sometimes call this our *ideal world*.
-If you are used to statistical terms, this ideal model is our *null
-hypothesis*.
+If you are used to statistical language, this ideal model is our *null
+hypothesis*. *Hypothesis* means idea, model or theory. We want to test which one of these
+two hypothesis is more likely to be true:
+
+> Null Hypothesis: the jury was chosen randomly.
+
+> Alternative Hypothesis: the jury was NOT chosen randomly.
 
 Then we can *simulate* making many juries in this ideal world.
 
@@ -60,26 +68,25 @@ Finally we ask whether our simulated juries, from the ideal world, often give
 us a count of zero Black jurors.  If they don't, then we can say that we are
 *surprised* by the value of 0, if the jury did arise from that real world.  
 
-If
-the value 0 is sufficiently unusual, we become suspicious that the real world
-is rather different from our ideal world.  We consider saying that the the ideal
-world is NOT a good model of the real world - this is called *rejecting* the model of the ideal world.
+If the value of zero black jurors is very unusual in our simulation, then this gives us evidence that the ideal world model might be wrong. We think about saying that the the ideal world is NOT a good model of the real world - this is called *rejecting* the model of the ideal world.
 
 ## The ideal world
 
 Our *ideal model* (or null hypothesis) is a world where each juror has been
 truly randomly selected from the eligible population. That is, for any one
-juror, there is a 0.26 probability that they are Black.
+juror, there is a 26% probability that they are Black.
 
 ## Simulations with the ideal model
 
 To do a *simulation* with this ideal model, we will start by making one jury,
 of 12 people, where it is really true that each juror has a 26% of being Black.
-Not to pun, but we will call one simulation of a jury of 12 - *one trial*.
+
+We can each run of the simulation one *trial* of the simulation.
 
 Then we simulate 10 juries of 12 people (do 10 trials), to get warmed up.
 
 Finally we make 10000 juries, each of 12 people, and see what we get.
+<!-- #endregion -->
 
 ```{python}
 # Import the array library
@@ -94,6 +101,10 @@ jury, and count the number of Black people in the simulated jury.
 jurors = np.random.choice(["BLACK", "NOT_BLACK"], 
                           p=[0.26, 0.74],
                           size=12)
+
+# Show the jury.
+print(f"Here is the jury we just simulatied\n {jurors}.")
+
 # np.count_nonzero counts the number of 1 values:
 np.count_nonzero(jurors == "BLACK")
 ```
@@ -233,8 +244,8 @@ p = n_zeros / 10000
 p
 ```
 
-We have run an analysis assuming that the jurors were selected at random.  On
-that assumption, a count of 0 jurors in 12 is fairly uncommon, in the sense
+We did this analysis simulating that jurors were selected at random.  On
+that assumption, a count of 0 jurors in 12 is uncommon, in the sense
 that the proportion of times we see that result is:
 
 ```{python}
@@ -254,11 +265,13 @@ We can convert this to a percentage (%) by multiplying it by 100:
 p * 100
 ```
 
-So, we only got 0 black jurors 2.63% of the time...
+So, we only got 0 black jurors around 2.6% of the time...
 
-What can we conclude?  Only this: that in our ideal model world, where each
-juror has a 26% chance of being Black, 0 is uncommon.  This surprising result,
-of 0, gives us some cause to wonder if our ideal model of the world is wrong.
+What does this tell us?  Only this: that in our ideal model world, where each
+juror has a 26% chance of being Black, 0 is uncommon.  
+
+This surprising result,
+of 0, gives us a reason to wonder if our ideal model of the world is wrong.
 One way it could be wrong, is if there was bias in jury selection, so it was
 not true that each juror had a 26% of being Black.
 
