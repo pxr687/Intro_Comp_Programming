@@ -71,9 +71,9 @@ data = ...
 
 This dataset has data from the [Titanic](https://en.wikipedia.org/wiki/Titanic) - a famous ship which sank. It has data on features of the passengers, and whether they survived or not.
 
-Now, over to you. Building on the code on the textbook page, make all of the following graphs, and try to do each one in the Procedural Programming *and* the OOP style, in different code cells.
+Now, over to you. Building on the code on the _[textbook page](https://pxr687.github.io//Intro_Comp_Programming/1_12_00_Data_Visualization.html)_, make all of the following graphs, and try to do each one in the Procedural Programming *and* the OOP style, in different code cells.
 
-## 1. Scatterplots
+## Scatterplots
 
 | Plot | Procedural (`plt`) | OOP (`ax`) |
 |---|---|---|
@@ -87,7 +87,7 @@ Remember to always add labels to each axis and to give your plot a title!
 # Your code here.
 ```
 
-## 2. Histograms
+## Histograms
 
 | Plot | Procedural (`plt`) | OOP (`ax`) |
 |---|---|---|
@@ -100,7 +100,7 @@ Remember to always add labels to each axis and to give your plot a title!
 # Your code here.
 ```
 
-## 4. Boxplots
+## Boxplots
 
 | Plot | Procedural (`plt`) | OOP (`ax`) |
 |---|---|---|
