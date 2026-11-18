@@ -287,12 +287,32 @@
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays Extra Task - Building a Dataset for Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration &amp; Statistical Simulation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_10_03i_Iteration_For_Loops.html">Iteration - <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j0_Indentation.html">Indentation, indentation, indentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03j2_Simulation_With_Numpy_Arrays.html">Statistical Simulation with NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03j3_More_Statistical_Simulation_Supreme_Court.html">More Statistical Simulation - The Supreme Court</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03k_Simulation_Task.html">Simulation with NumPy Arrays Task: Rock, Paper, Scissors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03l2_While_Loops.html"><code class="docutils literal notranslate"><span class="pre">while</span></code> loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - extra ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03m_In_Class_Assignment.html">In-Class Assignment: More <code class="docutils literal notranslate"><span class="pre">for</span></code> You</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03n_Extra_Looping_Task.html">Extra Looping Task : Branching <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Principles of Software Development</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_10_10_Dont_Repeat_Yourself_Procedural_OOP.html">Don’t Repeat Yourself</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functions &amp; Classes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_11_00a_Writing_Your_Own_Functions.html">Writing Your Own Functions (Procedural Programming Style)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_11_00b_Writing_Your_Own_Classes_and_Methods.html">Writing Your Own Classes and Methods (Object Oriented Programming Style)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation with`matplotlib`</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -552,7 +572,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('HEADS')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
 </pre></div>
 </div>
 </div>
@@ -568,7 +588,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>
@@ -581,7 +601,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -600,11 +620,6 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You win ฿20!
-</pre></div>
-</div>
-</div>
 </div>
 <p>Let’s show the conditional statement again, without the comments, so it is cleaner (the code is exactly the same):</p>
 <div class="cell docutils container">
@@ -612,11 +627,6 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'HEADS'</span><span class="p">:</span> 
     
     <span class="nb">print</span><span class="p">(</span><span class="s1">'You win ฿20!'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You win ฿20!
 </pre></div>
 </div>
 </div>
@@ -717,7 +727,7 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-8
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-6
 </pre></div>
 </div>
 </div>
@@ -763,8 +773,8 @@ this is an <em>expression</em>, Jupyter shows us the result.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4
-Not sure yet
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+Positive
 </pre></div>
 </div>
 </div>
@@ -808,8 +818,8 @@ the <code class="docutils literal notranslate"><span class="pre">else</span></co
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-Positive
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-6
+Not positive
 </pre></div>
 </div>
 </div>
@@ -844,7 +854,7 @@ in the function <code class="docutils literal notranslate"><span class="pre">res
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-7
 Not positive
 </pre></div>
 </div>
@@ -877,7 +887,7 @@ shorthand for the phrase “else if”.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3
 Negative
 </pre></div>
 </div>
@@ -975,8 +985,8 @@ want to classify the number into one of the following categories:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Large negative
--97
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Large positive
+72
 </pre></div>
 </div>
 </div>
