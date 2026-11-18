@@ -13,7 +13,7 @@ jupyter:
     name: python3
 ---
 
-# `break` and `continue` - ways to control your `for` loop
+# `break` and `continue` - extra ways to control your `for` loop
 
 As we've seen with `while` loops, we sometimes want our loop to stop running becuase of a conditional statement.
 
@@ -75,8 +75,10 @@ for name in ["Yan", "Emily", "Riley", "Pooh", "Ryan"]:
 print("End of loop!")
 ```
 
+<!-- #region -->
 Now, when we get to the `random_name` we just skip it, and `continue` the loop from the next name in the list...
 
 ## Exercise - Going Loopy
 
 Click [here 🚀](https://mybinder.org/v2/gh/pxr687/Intro_Comp_Programming/main?urlpath=tree/eexercise_5_going_loopy.ipynb) to launch the exercise.
+<!-- #endregion -->

@@ -1,0 +1,62 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+# In-Class Assignment: More `for` You
+
+As always, do **NOT** use an AI to do this, you will get a lot better practice (and it is a lot better for your brain) to write this yourself. You **can**, however, look at the [documentation](https://numpy.org/doc/) for the functions you are using.
+
+### Instructions
+
+First, create these variables:
+
+- `customer_results` — NumPy array containing `"satisfied"` and `"dissatisfied"`.
+- `satisfied_count` — a counter variable starting at 0.
+
+### Your task
+
+1. Write a `for` loop that repeats 300 times using `np.arange(300)`.
+2. Use `np.random.choice()` to randomly select a customer result.
+3. Set the probabilities so that:
+- `"satisfied"` has an 80% probability.
+- `"dissatisfied"` has a 20% probability.
+- To work out how to set the probabilities, you can check the online NumPy documentation.
+4. Use an `if` statement to check the result:
+- If the customer is satisfied, increase `satisfied_count` by 1 and print `"Customer satisfied!"`.
+- Otherwise, print `"Customer dissatisfied!"`.
+
+Print the final *total* value of `satisfied_count`.
+
+If you do this right, then the end of the output below your code cell should look something like this:
+
+```
+Customer dissatisfied!
+Customer satisfied!
+Customer satisfied!
+Customer satisfied!
+Customer satisfied!
+Customer satisfied!
+Customer satisfied!
+Customer satisfied!
+Customer satisfied!
+Customer satisfied!
+Customer dissatisfied!
+Customer satisfied!
+Customer satisfied!
+Customer satisfied!
+Final satisfied count: 250
+```
+
+```{python}
+# Your code here.
+```

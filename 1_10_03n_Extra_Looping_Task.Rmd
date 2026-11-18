@@ -1,0 +1,85 @@
+---
+jupyter:
+  jupytext:
+    split_at_heading: true
+    text_representation:
+      extension: .Rmd
+      format_name: rmarkdown
+      format_version: '1.2'
+      jupytext_version: 1.19.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+<!-- #region -->
+## Extra Looping Task : Branching `for` loop
+
+This is a "coding gym" type task. As always, do **NOT** use an AI to do this, you will get a lot better practice (and it is a lot better for your brain) to write this yourself. You **can**, however, look at the [documentation](https://numpy.org/doc/) for the functions you are using.
+
+Here is what you should do...
+
+### Instructions
+
+First, make these variables, with these values:
+
+- `outcomes` — NumPy array containing `"red"`, `"blue"` and `"green"`.
+- `succes_or_fail` — NumPy array containing `"success"` and `"failure"`.
+- `red_count` - an array of 700 zeros.
+- `blue_count` - an array of 700 zeros.
+- `green_count` - an array of 700 zeros.
+
+1. Write a for loop that repeats 700 times.
+2. On each repeat, randomly select one item from `outcomes`. All three options should have an equal probability of being selected. Store the result of this random selection in a variable called `outcome_this_repeat`.
+3. For each possible outcome (`"red"`, `"blue"` or `"green"`) perform a **biased** random sample from the `results` array (e.g. from the array has `"success"` and `"failure"`in it) - store the result of this in a variable called `biased_success_failure`. A "biased random sample" here means that each string does **NOT** have an equal probability of being selected). Here are the probabilities you should use - you should change the probabilities based on the value of `outcome_this_repeat`:
+
+| Three-way outcome | Success probability | Failure probability |
+|---|---:|---:|
+| red | 0.8 | 0.2 |
+|blue | 0.3 | 0.7 |
+| green| 0.6 | 0.4 |
+
+So, if `outcome_this_repeat` is `red`, then your biased random sample (`biased_success_failure`) should have a 0.8 probability of `success` and a 0.2 probability of `failure`. Then, here is what should happen, if:
+- `success`: increase `red_count` by 1. Print a message saying `'Red Count + 1!'.
+- `failure`: print `"Red failed!"`.
+
+If `outcome_this_repeat` is `blue`, then your biased random sample (`biased_success_failure`) should have a 0.3 probability of `success` and a 0.7 probability of `failure`. Then, here is what should happen, if:
+- `success`: increase `blue_count` by 1. Print a message saying `'Blue Count + 1!'.
+- `failure`: print `"Blue failed!"`.
+
+If `outcome_this_repeat` is `green`, then your biased random sample (`biased_success_failure`) should have a 0.6 probability of `success` and a 0.4 probability of `failure`. Then, here is what should happen, if:
+- `success`: increase `green_count` by 1. Print a message saying `'Green Count + 1!'.
+- `failure`: print `"Green failed!"`
+
+Then, at the end `print()` the final *total* values of `red_count`, `blue_count` and `green_count`.
+
+If you do this right you will see something like this in the output of the cell:
+
+```
+Red Count + 1!
+Blue failed!
+Blue failed!
+Green Count + 1!
+Blue Count + 1!
+Red Count + 1!
+Red Count + 1!
+Red failed!
+Green Count + 1!
+Red Count + 1!
+Blue failed!
+Green failed!
+Blue failed!
+Red failed!
+Red Count + 1!
+Final Red Count: 208.0
+Final Blue Count: 55.0
+Final Green Count: 142.0
+```
+
+Remember to write comments explaining what your code does!
+<!-- #endregion -->
+
+```{python}
+# Your code here.
+```

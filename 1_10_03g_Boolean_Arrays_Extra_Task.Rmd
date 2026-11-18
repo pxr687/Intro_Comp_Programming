@@ -48,7 +48,7 @@ Then complete these tasks (you can launch this page on Binder and do each task i
         
   Finally, use Boolean indexing to store the `ages` data for each of the two most common nationalities, in two different arrays. Then calculate the average age for each nationality, are they are different?
 
-Prepare your answer like a data report. To do this you can add markdown cells to explain what your code cells are doing.
+Prepare your answer like a data report. To do this you can add markdown cells to explain what your code cells are doing. If you want to, you can try to plot a histogram of the the `age` of each `nationality` (you can do this with Boolean indexing).
 
 You can launch the page on Binder or LiveCode **or** if you want to be able to save your code use this link: https://pxr687.github.io/scratchpad/ You can paste the instructions into the notebook on this link.
 *Note*: you have to use the same browser for your work to be saved, and it will be deleted if you delete your browsing data. 
