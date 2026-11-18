@@ -312,6 +312,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Permutation Testing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="population_permutation.html">Population and permutation</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="scratchpad.html">Scratchpad</a></li>
@@ -582,10 +586,10 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['GIRL' 'BOY' 'BOY' 'BOY']
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['GIRL' 'GIRL' 'BOY' 'BOY']
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(1)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2)
 </pre></div>
 </div>
 </div>
@@ -601,7 +605,7 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -634,7 +638,7 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 1., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -661,7 +665,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 1., 2., 0., 4., 0., 3., 2., 3., 3.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 2., 1., 2., 2., 3., 2., 2., 1., 3.])
 </pre></div>
 </div>
 </div>
@@ -689,7 +693,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False, False, ...,  True,  True, False], shape=(10000,))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False, ..., False,  True, False], shape=(10000,))
 </pre></div>
 </div>
 </div>
@@ -704,7 +708,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2466)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2491)
 </pre></div>
 </div>
 </div>
@@ -719,7 +723,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2466)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2491)
 </pre></div>
 </div>
 </div>
@@ -733,7 +737,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(24.66)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(24.91)
 </pre></div>
 </div>
 </div>
@@ -768,7 +772,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2451)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.253)
 </pre></div>
 </div>
 </div>
@@ -799,7 +803,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/84074b80c47095f24ea36b68dfd5eb9e47fd5ab74a13388abae531e809828912.png" src="_images/84074b80c47095f24ea36b68dfd5eb9e47fd5ab74a13388abae531e809828912.png" />
+<img alt="_images/274c4e70c3248c25b9a13e8fd496486c5f7e7ab8d698b99d37cd0118c0973808.png" src="_images/274c4e70c3248c25b9a13e8fd496486c5f7e7ab8d698b99d37cd0118c0973808.png" />
 </div>
 </div>
 <p>Each bar on this histogram show us the <em>number</em> of families, in our simulation, who had a specific number of girls.</p>
@@ -819,7 +823,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3743550e710b34cad95b77598a74651a4a922655089ef35e5d3ccd84e088c710.png" src="_images/3743550e710b34cad95b77598a74651a4a922655089ef35e5d3ccd84e088c710.png" />
+<img alt="_images/108bc7185bda545fde765c600b25e1a35b9e1629fb96a9f4bd0fc235eda1ec92.png" src="_images/108bc7185bda545fde765c600b25e1a35b9e1629fb96a9f4bd0fc235eda1ec92.png" />
 </div>
 </div>
 <p>Look at the y-axis height of the bar for 3 girls you can see it is around 0.25 (which means 25% probability).</p>
@@ -831,7 +835,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2451)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.253)
 </pre></div>
 </div>
 </div>
@@ -844,7 +848,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(24.51)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(25.3)
 </pre></div>
 </div>
 </div>

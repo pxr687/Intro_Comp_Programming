@@ -312,6 +312,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Permutation Testing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="population_permutation.html">Population and permutation</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="scratchpad.html">Scratchpad</a></li>
@@ -569,7 +573,7 @@ place with one name.  Now that we can call all the values a single name, we can 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('BOY')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('GIRL')
 </pre></div>
 </div>
 </div>
@@ -595,7 +599,7 @@ place with one name.  Now that we can call all the values a single name, we can 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('BOY')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('GIRL')
 </pre></div>
 </div>
 </div>
@@ -970,7 +974,7 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_('GIRL'), np.str_('GIRL'), np.str_('GIRL'), np.str_('BOY')]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_('BOY'), np.str_('BOY'), np.str_('BOY'), np.str_('BOY')]
 </pre></div>
 </div>
 </div>
@@ -984,7 +988,7 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -1006,10 +1010,10 @@ family simulated every time:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_('BOY'), np.str_('BOY'), np.str_('GIRL'), np.str_('BOY')]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.str_('BOY'), np.str_('GIRL'), np.str_('GIRL'), np.str_('BOY')]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>

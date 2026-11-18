@@ -312,6 +312,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Permutation Testing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="population_permutation.html">Population and permutation</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="scratchpad.html">Scratchpad</a></li>
@@ -598,11 +602,11 @@ jury, and count the number of Black people in the simulated jury.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here is the jury we just simulatied
- ['NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK'
- 'NOT_BLACK' 'NOT_BLACK' 'BLACK' 'NOT_BLACK' 'NOT_BLACK' 'BLACK'].
+ ['NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'BLACK' 'BLACK' 'NOT_BLACK'
+ 'NOT_BLACK' 'BLACK' 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK' 'NOT_BLACK'].
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
 </pre></div>
 </div>
 </div>
@@ -637,7 +641,7 @@ of times, to make sure we’ve got an idea of the variation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -662,7 +666,7 @@ of times, to make sure we’ve got an idea of the variation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 3., 5., 5., 0., 2., 3., 3., 2., 5.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 5., 4., 1., 2., 4., 4., 2., 2., 3.])
 </pre></div>
 </div>
 </div>
@@ -690,7 +694,7 @@ therefore, 10000 estimates.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 3., 3., ..., 3., 1., 4.], shape=(10000,))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2., 5., 0., ..., 1., 2., 3.], shape=(10000,))
 </pre></div>
 </div>
 </div>
@@ -733,7 +737,7 @@ a histogram.  Here is how to do that, in Python.  Don’t worry about the detail
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/064534c96dca4de2b6c1818df43b0482ee1b092eac8e8a93eac91d5e4e3b56a0.png" src="_images/064534c96dca4de2b6c1818df43b0482ee1b092eac8e8a93eac91d5e4e3b56a0.png" />
+<img alt="_images/07f2a0d5627ca236ec3ad25e63f7757e083a3d77a3391f77d147aa97b9d47355.png" src="_images/07f2a0d5627ca236ec3ad25e63f7757e083a3d77a3391f77d147aa97b9d47355.png" />
 </div>
 </div>
 <p>The histogram above is called the <em>sampling distribution</em>.  The sampling distribution is the distribution of thing we are interested in (the number of Black jurors) given the ideal model, of completely random selection of jurors from a 26% Black population.</p>
@@ -750,7 +754,7 @@ times did we get a value of 0, in all our 10000 estimates?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/ea3ead887cdd6e40da66c60e6c1651615e900819c0d0847d472ff7cf6f8b6a97.png" src="_images/ea3ead887cdd6e40da66c60e6c1651615e900819c0d0847d472ff7cf6f8b6a97.png" />
+<img alt="_images/f1b2aef036d04a00793dde02f8c64cd16e22de527965d1cbdd2e4f0f505d41bc.png" src="_images/f1b2aef036d04a00793dde02f8c64cd16e22de527965d1cbdd2e4f0f505d41bc.png" />
 </div>
 </div>
 <p>It looks like <em>most</em> of the simulated trials had more than 0 black jurors…</p>
@@ -764,7 +768,7 @@ times did we get a value of 0, in all our 10000 estimates?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(288)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(268)
 </pre></div>
 </div>
 </div>
@@ -779,7 +783,7 @@ number of times we see 0 by the number trials we made:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0288)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0268)
 </pre></div>
 </div>
 </div>
@@ -794,7 +798,7 @@ that the proportion of times we see that result is:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0288)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0268)
 </pre></div>
 </div>
 </div>
@@ -808,7 +812,7 @@ in a jury of 12, is</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0288)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0268)
 </pre></div>
 </div>
 </div>
@@ -821,7 +825,7 @@ in a jury of 12, is</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.88)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.68)
 </pre></div>
 </div>
 </div>
