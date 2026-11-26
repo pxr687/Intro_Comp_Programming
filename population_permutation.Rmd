@@ -16,6 +16,10 @@ jupyter:
 
 # Population and permutation
 
+```{note}
+This page is from [Brett, Rush, Adhikari, Denero and Wagner (2023)](https://odsti.github.io/cfd-textbook/population_permutation.html). See the [license](https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md) page for more information.
+```
+
 The idea of permutation is fundamental to a wide range of statistical tests.
 
 Permutation allows us to simulate data in many more situations than we have
@@ -43,13 +47,9 @@ rng = np.random.default_rng()
 
 # Data frame library, to load the survey data.
 import pandas as pd
-pd.set_option('mode.copy_on_write', True)
 
 # Plotting
 import matplotlib.pyplot as plt
-
-# Fancy plots
-plt.style.use('fivethirtyeight')
 ```
 
 If you are running on your laptop, first
@@ -292,9 +292,9 @@ Our question now is, is the difference we actually saw, a likely value, given th
 # and adds some labels to the histogram.
 plt.hist(example_diffs, label = 'simulated differences')
 fontsize = {'fontsize': 10}
-plt.plot(actual_difference, 20 , 'o',
-         markersize = 10,color = 'red',
-         label = 'actual difference')
+plt.axvline(actual_difference, 
+            color = 'red',
+            label = 'actual difference')
 plt.xlabel('Difference between the mean ages of leavers and remainers', **fontsize)
 plt.ylabel('Number of times obtained in simulation', **fontsize)
 plt.legend(**fontsize);

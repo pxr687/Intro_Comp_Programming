@@ -285,6 +285,7 @@
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays Extra Task - Building a Dataset for Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration &amp; Statistical Simulation</span></p>
 <ul class="current nav bd-sidenav">
@@ -296,6 +297,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l2_While_Loops.html"><code class="docutils literal notranslate"><span class="pre">while</span></code> loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - extra ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03m_In_Class_Assignment.html">In-Class Assignment: More <code class="docutils literal notranslate"><span class="pre">for</span></code> You</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03n_Extra_Looping_Task.html">Extra Looping Task : Branching <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Principles of Software Development</span></p>
 <ul class="nav bd-sidenav">
@@ -304,6 +306,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functions &amp; Classes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_11_00a_Writing_Your_Own_Functions.html">Writing Your Own Functions (Procedural Programming Style)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_11_00b_Writing_Your_Own_Classes_and_Methods.html">Writing Your Own Classes and Methods (Object Oriented Programming Style)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation with`matplotlib`</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">More Permutation Testing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="population_permutation.html">Population and permutation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -575,7 +586,7 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['BOY' 'GIRL' 'GIRL' 'GIRL']
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['GIRL' 'GIRL' 'BOY' 'GIRL']
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
@@ -627,7 +638,7 @@ simulates a family of four children, and count the number of girls.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 1., 0., 0., 0., 0., 0., 0., 0., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 4., 0., 0., 0., 0., 0., 0., 0., 0.])
 </pre></div>
 </div>
 </div>
@@ -654,7 +665,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4., 2., 1., 0., 3., 3., 2., 2., 2., 1.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3., 1., 4., 2., 2., 2., 3., 4., 3., 2.])
 </pre></div>
 </div>
 </div>
@@ -682,7 +693,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False, False, ..., False,  True, False], shape=(10000,))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ True, False, False, ..., False, False, False], shape=(10000,))
 </pre></div>
 </div>
 </div>
@@ -697,7 +708,7 @@ better.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2474)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(2533)
 </pre></div>
 </div>
 </div>
@@ -712,7 +723,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2474)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2533)
 </pre></div>
 </div>
 </div>
@@ -726,7 +737,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(24.740000000000002)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(25.330000000000002)
 </pre></div>
 </div>
 </div>
@@ -761,7 +772,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2478)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2539)
 </pre></div>
 </div>
 </div>
@@ -792,7 +803,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/90c1c2c00e03e764cde7344ff0481d49e30f7c1db6f0afc741af2f5bf7d62965.png" src="_images/90c1c2c00e03e764cde7344ff0481d49e30f7c1db6f0afc741af2f5bf7d62965.png" />
+<img alt="_images/c2aa82f8fb6ac7f50a570a1bef4c34d209d3c4c8e847984ac55c4218eb906292.png" src="_images/c2aa82f8fb6ac7f50a570a1bef4c34d209d3c4c8e847984ac55c4218eb906292.png" />
 </div>
 </div>
 <p>Each bar on this histogram show us the <em>number</em> of families, in our simulation, who had a specific number of girls.</p>
@@ -812,7 +823,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/ed0293c7f0f9616f2c109fb501c4fc9b017ff80e6c11eee8cef9d31b411bfaa7.png" src="_images/ed0293c7f0f9616f2c109fb501c4fc9b017ff80e6c11eee8cef9d31b411bfaa7.png" />
+<img alt="_images/1ec255775121037ef4992ab850449395fdbfbe69cd750d3029da91a5ee74b5c7.png" src="_images/1ec255775121037ef4992ab850449395fdbfbe69cd750d3029da91a5ee74b5c7.png" />
 </div>
 </div>
 <p>Look at the y-axis height of the bar for 3 girls you can see it is around 0.25 (which means 25% probability).</p>
@@ -824,7 +835,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2478)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.2539)
 </pre></div>
 </div>
 </div>
@@ -837,7 +848,7 @@ the number of trials:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(24.779999999999998)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(25.39)
 </pre></div>
 </div>
 </div>
