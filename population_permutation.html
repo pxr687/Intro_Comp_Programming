@@ -66,6 +66,8 @@
     <link rel="icon" href="_static/logo.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Scratchpad" href="scratchpad.html" />
+    <link rel="prev" title="Introduction to Data Visualisation with matplotlib" href="1_12_00_Data_Visualization.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -166,8 +168,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -285,6 +285,7 @@
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="1_10_03g_Boolean_Arrays_Extra_Task.html">Boolean Arrays Extra Task - Building a Dataset for Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Iteration &amp; Statistical Simulation</span></p>
 <ul class="nav bd-sidenav">
@@ -296,6 +297,7 @@
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l2_While_Loops.html"><code class="docutils literal notranslate"><span class="pre">while</span></code> loops</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03l_Break_and_Continue.html"><code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> - extra ways to control your <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_10_03m_In_Class_Assignment.html">In-Class Assignment: More <code class="docutils literal notranslate"><span class="pre">for</span></code> You</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_10_03n_Extra_Looping_Task.html">Extra Looping Task : Branching <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Principles of Software Development</span></p>
 <ul class="nav bd-sidenav">
@@ -304,6 +306,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functions &amp; Classes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_11_00a_Writing_Your_Own_Functions.html">Writing Your Own Functions (Procedural Programming Style)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_11_00b_Writing_Your_Own_Classes_and_Methods.html">Writing Your Own Classes and Methods (Object Oriented Programming Style)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation with`matplotlib`</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">More Permutation Testing</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Population and permutation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -517,6 +528,10 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="population-and-permutation">
 <h1>Population and permutation<a class="headerlink" href="#population-and-permutation" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page is from <a class="reference external" href="https://odsti.github.io/cfd-textbook/population_permutation.html">Brett, Rush, Adhikari, Denero and Wagner (2023)</a>. See the <a class="reference external" href="https://github.com/pxr687/Intro_Comp_Programming/blob/main/license.md">license</a> page for more information.</p>
+</div>
 <p>The idea of permutation is fundamental to a wide range of statistical tests.</p>
 <p>Permutation allows us to simulate data in many more situations than we have
 seen thus far.</p>
@@ -538,19 +553,9 @@ referendum.  Another, <code class="docutils literal notranslate"><span class="pr
 
 <span class="c1"># Data frame library, to load the survey data.</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">'mode.copy_on_write'</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Plotting</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="c1"># Fancy plots</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'fivethirtyeight'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\WIN11\AppData\Local\Temp\ipykernel_23020\867608254.py:8: Pandas4Warning: The 'mode.copy_on_write' option is deprecated. Copy-on-Write can no longer be disabled (it is always enabled with pandas &gt;= 3.0), and setting the option has no impact. This option will be removed in pandas 4.0.
-  pd.set_option('mode.copy_on_write', True)
 </pre></div>
 </div>
 </div>
@@ -711,7 +716,7 @@ voters:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2ced4973e46ad839c3796bc2b4eaf8240350a7309511f37b8e417769d0cb0525.png" src="_images/2ced4973e46ad839c3796bc2b4eaf8240350a7309511f37b8e417769d0cb0525.png" />
+<img alt="_images/e319266e00e3e3bd7c6e0a808ec8a2b1130368d4929aa91fbf2f7392248ece2f.png" src="_images/e319266e00e3e3bd7c6e0a808ec8a2b1130368d4929aa91fbf2f7392248ece2f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -721,7 +726,7 @@ voters:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/ba872d262f44b3821625ef6ec0cfadaaa75601d5bf3d5490dc5c0c9c469ad8e4.png" src="_images/ba872d262f44b3821625ef6ec0cfadaaa75601d5bf3d5490dc5c0c9c469ad8e4.png" />
+<img alt="_images/70e023b056a9af0ed69a53fa2c8899fb44e295209f4e56af98120d6b50d66fcf.png" src="_images/70e023b056a9af0ed69a53fa2c8899fb44e295209f4e56af98120d6b50d66fcf.png" />
 </div>
 </div>
 <p>These certainly look like different distributions.</p>
@@ -841,7 +846,7 @@ random permutation of the values.  It works like this:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['cat', 'dog', 'rabbit'], dtype='&lt;U6')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['cat', 'rabbit', 'dog'], dtype='&lt;U6')
 </pre></div>
 </div>
 </div>
@@ -867,7 +872,7 @@ random permutation of the values.  It works like this:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([63, 33, 63, ..., 42, 71, 41], shape=(1315,))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([43, 52, 73, ..., 36, 53, 43], shape=(1315,))
 </pre></div>
 </div>
 </div>
@@ -900,7 +905,7 @@ and Remain ages.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.04125053136358048)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.42752200681100305)
 </pre></div>
 </div>
 </div>
@@ -917,7 +922,7 @@ us new random samples of fake Remainers and fake Leavers.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.17857876360649527)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.9919471549957706)
 </pre></div>
 </div>
 </div>
@@ -950,7 +955,7 @@ recognize the code in the <code class="docutils literal notranslate"><span class
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/b270a3a763892ad4d59b8562b35c7b559bd956bd0c05103aac012f16a13e8de5.png" src="_images/b270a3a763892ad4d59b8562b35c7b559bd956bd0c05103aac012f16a13e8de5.png" />
+<img alt="_images/d0039ff2b7cfb1d1087b6d5afdacdd67f07423f5b4d4d400724776decdfad919.png" src="_images/d0039ff2b7cfb1d1087b6d5afdacdd67f07423f5b4d4d400724776decdfad919.png" />
 </div>
 </div>
 <p>This is called the <em>sampling distribution</em>.  In our case, this is the
@@ -964,9 +969,9 @@ see, when taking random <em>samples</em> from the same underlying population.</p
 <span class="c1"># and adds some labels to the histogram.</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">example_diffs</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">'simulated differences'</span><span class="p">)</span>
 <span class="n">fontsize</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'fontsize'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">actual_difference</span><span class="p">,</span> <span class="mi">20</span> <span class="p">,</span> <span class="s1">'o'</span><span class="p">,</span>
-         <span class="n">markersize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s1">'red'</span><span class="p">,</span>
-         <span class="n">label</span> <span class="o">=</span> <span class="s1">'actual difference'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">actual_difference</span><span class="p">,</span> 
+            <span class="n">color</span> <span class="o">=</span> <span class="s1">'red'</span><span class="p">,</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="s1">'actual difference'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Difference between the mean ages of leavers and remainers'</span><span class="p">,</span> <span class="o">**</span><span class="n">fontsize</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Number of times obtained in simulation'</span><span class="p">,</span> <span class="o">**</span><span class="n">fontsize</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="o">**</span><span class="n">fontsize</span><span class="p">);</span>
@@ -974,7 +979,7 @@ see, when taking random <em>samples</em> from the same underlying population.</p
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2c293c0aad2dd517a5c0200d2941938e5a1fed469e3e1faa87afa0e50b1fdeb3.png" src="_images/2c293c0aad2dd517a5c0200d2941938e5a1fed469e3e1faa87afa0e50b1fdeb3.png" />
+<img alt="_images/db3dd10f5ebb16a49a6b8b7dcb751a5443adf897b36413988aad3d7d3610c2e1.png" src="_images/db3dd10f5ebb16a49a6b8b7dcb751a5443adf897b36413988aad3d7d3610c2e1.png" />
 </div>
 </div>
 <p>Looking at the distribution above - what do you think?</p>
@@ -990,7 +995,7 @@ distribution are as large, or larger than the value we actually saw.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(3)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(1)
 </pre></div>
 </div>
 </div>
@@ -1007,7 +1012,7 @@ that is as high, or higher.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0003)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0001)
 </pre></div>
 </div>
 </div>
@@ -1049,6 +1054,24 @@ value</em>.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="1_12_00_Data_Visualization.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="scratchpad.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Scratchpad</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
