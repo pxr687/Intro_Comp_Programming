@@ -302,15 +302,6 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functions &amp; Classes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_11_00a_Writing_Your_Own_Functions.html">Writing Your Own Functions (Procedural Programming Style)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_11_00b_Writing_Your_Own_Classes_and_Methods.html">Writing Your Own Classes and Methods (Object Oriented Programming Style)</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation with`matplotlib`</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">More Permutation Testing</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="population_permutation.html">Population and permutation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -552,58 +543,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="nn">File ~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\models.py:1116,</span> in <span class="ni">Response.json</span><span class="nt">(self, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1115</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1116</span>     <span class="k">return</span> <span class="n">complexjson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1117</span> <span class="k">except</span> <span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1118</span>     <span class="c1"># Catch JSON-related errors and raise as requests.JSONDecodeError</span>
-<span class="g g-Whitespace">   </span><span class="mi">1119</span>     <span class="c1"># This aliases json.JSONDecodeError and simplejson.JSONDecodeError</span>
-
-<span class="nn">File ~\AppData\Local\Python\pythoncore-3.14-64\Lib\json\__init__.py:352,</span> in <span class="ni">loads</span><span class="nt">(s, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">349</span> <span class="k">if</span> <span class="p">(</span><span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
-<span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
-<span class="g g-Whitespace">    </span><span class="mi">351</span>         <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">352</span>     <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">353</span> <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File ~\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py:345,</span> in <span class="ni">JSONDecoder.decode</span><span class="nt">(self, s, _w)</span>
-<span class="g g-Whitespace">    </span><span class="mi">341</span><span class="w"> </span><span class="sd">"""Return the Python representation of ``s`` (a ``str`` instance</span>
-<span class="g g-Whitespace">    </span><span class="mi">342</span><span class="sd"> containing a JSON document).</span>
-<span class="g g-Whitespace">    </span><span class="mi">343</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">344</span><span class="sd"> """</span>
-<span class="ne">--&gt; </span><span class="mi">345</span> <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_decode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="n">_w</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">end</span><span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">346</span> <span class="n">end</span> <span class="o">=</span> <span class="n">_w</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
-
-<span class="nn">File ~\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py:363,</span> in <span class="ni">JSONDecoder.raw_decode</span><span class="nt">(self, s, idx)</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span> <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">363</span>     <span class="k">raise</span> <span class="n">JSONDecodeError</span><span class="p">(</span><span class="s2">"Expecting value"</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">err</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span> <span class="k">return</span> <span class="n">obj</span><span class="p">,</span> <span class="n">end</span>
-
-<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://random-word-api.herokuapp.com/word?number=1"</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># This code just gets our word, and makes sure it is just one string.</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">username</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">username</span> <span class="o">=</span> <span class="n">username</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="c1"># Add some randomness to the word (users often break rules)!</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">username</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="n">username</span><span class="o">.</span><span class="n">capitalize</span><span class="p">(),</span> <span class="n">username</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span>
-
-<span class="nn">File ~\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\requests\models.py:1120,</span> in <span class="ni">Response.json</span><span class="nt">(self, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1116</span>     <span class="k">return</span> <span class="n">complexjson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1117</span> <span class="k">except</span> <span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1118</span>     <span class="c1"># Catch JSON-related errors and raise as requests.JSONDecodeError</span>
-<span class="g g-Whitespace">   </span><span class="mi">1119</span>     <span class="c1"># This aliases json.JSONDecodeError and simplejson.JSONDecodeError</span>
-<span class="ne">-&gt; </span><span class="mi">1120</span>     <span class="k">raise</span> <span class="n">RequestsJSONDecodeError</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">msg</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">doc</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">pos</span><span class="p">)</span>
-
-<span class="ne">JSONDecodeError</span>: Expecting value: line 1 column 1 (char 0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sinuslike1898
 </pre></div>
 </div>
 </div>

@@ -308,15 +308,6 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Functions &amp; Classes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1_11_00a_Writing_Your_Own_Functions.html">Writing Your Own Functions (Procedural Programming Style)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_11_00b_Writing_Your_Own_Classes_and_Methods.html">Writing Your Own Classes and Methods (Object Oriented Programming Style)</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Visualisation with`matplotlib`</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_12_00_Data_Visualization.html">Introduction to Data Visualisation with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">More Permutation Testing</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="population_permutation.html">Population and permutation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Scratchpad</span></p>
 <ul class="nav bd-sidenav">
@@ -576,7 +567,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('HEADS')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
 </pre></div>
 </div>
 </div>
@@ -592,7 +583,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
 </pre></div>
 </div>
 </div>
@@ -605,7 +596,7 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -624,11 +615,6 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You win ฿20!
-</pre></div>
-</div>
-</div>
 </div>
 <p>Let’s show the conditional statement again, without the comments, so it is cleaner (the code is exactly the same):</p>
 <div class="cell docutils container">
@@ -636,11 +622,6 @@ giving us the string <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'HEADS'</span><span class="p">:</span> 
     
     <span class="nb">print</span><span class="p">(</span><span class="s1">'You win ฿20!'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You win ฿20!
 </pre></div>
 </div>
 </div>
@@ -669,7 +650,7 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('HEADS')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.str_('TAILS')
 </pre></div>
 </div>
 </div>
@@ -683,11 +664,6 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You win ฿20!
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -695,6 +671,11 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 <span class="k">if</span> <span class="n">coinflip</span> <span class="o">==</span> <span class="s1">'TAILS'</span><span class="p">:</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Your friend wins ฿20!'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your friend wins ฿20!
 </pre></div>
 </div>
 </div>
@@ -741,7 +722,7 @@ directly following <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -832,8 +813,8 @@ the <code class="docutils literal notranslate"><span class="pre">else</span></co
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-6
-Not positive
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+Positive
 </pre></div>
 </div>
 </div>
@@ -901,8 +882,8 @@ shorthand for the phrase “else if”.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-Zero
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+Positive
 </pre></div>
 </div>
 </div>
@@ -999,8 +980,8 @@ want to classify the number into one of the following categories:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Large negative
--25
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Large positive
+20
 </pre></div>
 </div>
 </div>
